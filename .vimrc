@@ -167,7 +167,7 @@ set showmatch                   "高亮显示匹配的括号
 set matchtime=1                 "匹配括号高亮的时间（单位是十分之一秒）
 set noeb                        "关闭错误的提示
 set nocompatible                "不兼容原始vi模式
-set cmdheight=2                 "命令行的高度
+set cmdheight=1                 "命令行的高度
 set showcmd                     "select模式下显示选中的行数
 set whichwrap+=<,>,h,l          "光标键跨行
 set ttimeoutlen=0               "<ESC>键响应时间
