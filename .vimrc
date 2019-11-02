@@ -38,6 +38,10 @@ Plug 'mbbill/undotree'                 " 文件版本回溯
 call plug#end()
 
 
+" ------ sillybun/vim-repl
+"  调试:REPLDebug 断点:REPLDebugStopAtCurrentLine 运行代码:REPLPDBC
+"  单步执行:REPLPDBN 进入函数:REPLPDBS 进入上一个栈:REPLPDBU
+let g:repl_position = 3
 let g:repl_program = {
             \   'python': 'python',
             \   'default': 'zsh'
@@ -47,14 +51,9 @@ let g:repl_predefine_python = {
             \   'matplotlib': 'from matplotlib import pyplot as plt'
             \   }
 nnoremap <leader>rl :REPLToggle<Cr>
-autocmd Filetype python nnoremap <F12> <Esc>:REPLDebugStopAtCurrentLine<Cr>
-autocmd Filetype python nnoremap <F10> <Esc>:REPLPDBN<Cr>
-autocmd Filetype python nnoremap <F11> <Esc>:REPLPDBS<Cr>
-let g:repl_position = 3
-tnoremap <C-h> <C-w><C-h>
-tnoremap <C-j> <C-w><C-j>
-tnoremap <C-k> <C-w><C-k>
-tnoremap <C-l> <C-w><C-l>
+autocmd Filetype python nnoremap <Leader>rld <Esc>:REPLDebugStopAtCurrentLine<Cr>
+autocmd Filetype python nnoremap <Leader>rln <Esc>:REPLPDBN<Cr>
+autocmd Filetype python nnoremap <Leader>rlb <Esc>:REPLPDBS<Cr>
 
 " ------ junegunn/vim-easy-align
 xmap ga <Plug>(EasyAlign)
