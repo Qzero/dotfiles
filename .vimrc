@@ -23,6 +23,8 @@ Plug 'jiangmiao/auto-pairs'            " 自动补全引号、圆括号、花括
 Plug 'itchyny/vim-cursorword'          " 变量下划线
 Plug 'Shougo/neocomplcache.vim'        " 补全工具
 Plug 'junegunn/vim-easy-align'         " 文本对齐
+
+Plug 'sillybun/vim-repl'
 " 文件搜索
 Plug 'dyng/ctrlsf.vim'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
@@ -34,6 +36,25 @@ Plug 'airblade/vim-gitgutter'          " 显示git更改标示
 Plug 'junegunn/gv.vim'                 " git提交树
 Plug 'mbbill/undotree'                 " 文件版本回溯
 call plug#end()
+
+
+let g:repl_program = {
+            \   'python': 'python',
+            \   'default': 'zsh'
+            \   }
+let g:repl_predefine_python = {
+            \   'numpy': 'import numpy as np',
+            \   'matplotlib': 'from matplotlib import pyplot as plt'
+            \   }
+nnoremap <leader>rl :REPLToggle<Cr>
+autocmd Filetype python nnoremap <F12> <Esc>:REPLDebugStopAtCurrentLine<Cr>
+autocmd Filetype python nnoremap <F10> <Esc>:REPLPDBN<Cr>
+autocmd Filetype python nnoremap <F11> <Esc>:REPLPDBS<Cr>
+let g:repl_position = 3
+tnoremap <C-h> <C-w><C-h>
+tnoremap <C-j> <C-w><C-j>
+tnoremap <C-k> <C-w><C-k>
+tnoremap <C-l> <C-w><C-l>
 
 " ------ junegunn/vim-easy-align
 xmap ga <Plug>(EasyAlign)
