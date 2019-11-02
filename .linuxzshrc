@@ -41,6 +41,5 @@ if ! zplug check; then
 fi
 
 zplug load
-
 # source your own shrc file if exists
 [ -f ~/.env.sh ] && source ~/.env.sh
