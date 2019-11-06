@@ -38,11 +38,12 @@ Plug 'mbbill/undotree'                 " 文件版本回溯
 call plug#end()
 
 " ------ pacha/vem-tabline
-set hidden
+" set hidden
+let g:vem_tabline_show = 2
 nmap <leader>tbl <Plug>vem_move_buffer_left-
 nmap <leader>tbr <Plug>vem_move_buffer_right-
-nmap <leader>p <Plug>vem_prev_buffer-
-nmap <leader>n <Plug>vem_next_buffer-
+nmap <leader>pp <Plug>vem_prev_buffer-
+nmap <leader>nn <Plug>vem_next_buffer-
 
 " ------ sillybun/vim-repl
 "  调试:REPLDebug 断点:REPLDebugStopAtCurrentLine 运行代码:REPLPDBC
