@@ -23,7 +23,7 @@ Plug 'jiangmiao/auto-pairs'            " 自动补全引号、圆括号、花括
 Plug 'itchyny/vim-cursorword'          " 变量下划线
 Plug 'Shougo/neocomplcache.vim'        " 补全工具
 Plug 'junegunn/vim-easy-align'         " 文本对齐
-
+Plug 'pacha/vem-tabline'
 Plug 'sillybun/vim-repl'
 " 文件搜索
 Plug 'dyng/ctrlsf.vim'
@@ -37,6 +37,12 @@ Plug 'junegunn/gv.vim'                 " git提交树
 Plug 'mbbill/undotree'                 " 文件版本回溯
 call plug#end()
 
+" ------ pacha/vem-tabline
+set hidden
+nmap <leader>tbl <Plug>vem_move_buffer_left-
+nmap <leader>tbr <Plug>vem_move_buffer_right-
+nmap <leader>p <Plug>vem_prev_buffer-
+nmap <leader>n <Plug>vem_next_buffer-
 
 " ------ sillybun/vim-repl
 "  调试:REPLDebug 断点:REPLDebugStopAtCurrentLine 运行代码:REPLPDBC
@@ -187,7 +193,7 @@ set showmatch                   "高亮显示匹配的括号
 set matchtime=1                 "匹配括号高亮的时间（单位是十分之一秒）
 set noeb                        "关闭错误的提示
 set nocompatible                "不兼容原始vi模式
-set cmdheight=1                 "命令行的高度
+set cmdheight=2                 "命令行的高度
 set showcmd                     "select模式下显示选中的行数
 set whichwrap+=<,>,h,l          "光标键跨行
 set ttimeoutlen=0               "<ESC>键响应时间
@@ -229,6 +235,7 @@ noremap <Leader>jj <C-w>j
 noremap <Leader>kk <C-w>k
 noremap <Leader>ll <C-w>l
 noremap <Leader>vw <C-w>w
+noremap <Leader>tc :tabc<CR>
 map sr :set splitright<CR>:vsplit<CR>
 map sl :set nosplitright<CR>:vsplit<CR>
 map sk :set nosplitbelow<CR>:split<CR>
@@ -245,7 +252,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 vnoremap <Leader>y "+y              "设置快捷键将选中文本块复制至系统剪贴板
 nnoremap <Leader>p "+p              "设置快捷键将系统剪贴板内容粘贴至vim
-nnoremap <Leader>w :w!<CR>           "保存当前窗口内容
+nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>rn :set relativenumber!<CR>                    "显示相对行号
 nnoremap <Leader>vc :edit $MYVIMRC<CR>                          "编辑vimrc文件
