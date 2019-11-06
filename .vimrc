@@ -98,9 +98,8 @@ nnoremap <silent><leader>gu :Gpush<cr>
 nnoremap <silent><leader>gl :Glog<cr>
 nnoremap <Leader>gv :GV<CR>
 " vim-gitgutter
-nmap [c <Plug>GitGutterPrevHunk
-nmap ]c <Plug>GitGutterNextHunk
 let g:gitgutter_max_signs = 800     "更改显示标示行数限制
+
 
 " ------ mbbill/undotree
 nnoremap <Leader>ut :UndotreeToggle<cr>
@@ -108,6 +107,7 @@ if has("persistent_undo")
     set undodir=$HOME."/.undodir"
         set undofile
     endif
+
 
 " ------ lfv89/vim-interestingwords
 nnoremap <silent> <leader>k :call InterestingWords('n')<CR>
