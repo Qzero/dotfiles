@@ -1,4 +1,5 @@
 let mapleader=";"                               "定义Leader键
+" ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtlciL/F5GkJ/QytYFganA7h0BpOVi3KZs+/wz1DYHeRr5dBvoFShsRCJSLVb3E6OYdfXTYB8cqEPtNO0WSWhw50YQlZ9zsAgKHp9iikff4zs49AB7pwkTaRNCuIaD8alI0qsrf21nHvmjAiOjNEqKX8SCKnHzWHtZTZCkQht+gOfVDdJd9so9X7BHL72AxJrDO0fUgOkv6Pq0SPRLa6ToAx8GyC2CqcQv6e+61QEZmJ1h6KDqIrlNjsR8Llnsz9V6u/GntKyqfsO3paUhP6zLSnoIG/qIhT3wnFMvPiFZuUNkVjd6zbs7GfNNcFGj7D9L2OnllsUUc9ZhYr2Fp/lb ‘heqijie@126.com’
 filetype on                                     "侦测文件类型
 filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
@@ -236,7 +237,6 @@ noremap <Leader>jj <C-w>j
 noremap <Leader>kk <C-w>k
 noremap <Leader>ll <C-w>l
 noremap <Leader>vw <C-w>w
-noremap <Leader>tc :tabc<CR>
 map sr :set splitright<CR>:vsplit<CR>
 map sl :set nosplitright<CR>:vsplit<CR>
 map sk :set nosplitbelow<CR>:split<CR>
