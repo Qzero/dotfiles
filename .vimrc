@@ -249,9 +249,6 @@ map svh <C-w>t<C-w>K
 "使用tab补全
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-" inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
-vnoremap <Leader>y "+y              "设置快捷键将选中文本块复制至系统剪贴板
-nnoremap <Leader>p "+p              "设置快捷键将系统剪贴板内容粘贴至vim
 map <Leader>w :w<CR>
 map <Leader>q :q<CR>
 nnoremap <Leader>rn :set relativenumber!<CR>                    "显示相对行号
