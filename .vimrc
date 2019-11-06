@@ -23,11 +23,11 @@ Plug 'jiangmiao/auto-pairs'            " 自动补全引号、圆括号、花括
 Plug 'itchyny/vim-cursorword'          " 变量下划线
 Plug 'Shougo/neocomplcache.vim'        " 补全工具
 Plug 'junegunn/vim-easy-align'         " 文本对齐
-Plug 'pacha/vem-tabline'
-Plug 'sillybun/vim-repl'
+Plug 'pacha/vem-tabline'               " 显示标签
+Plug 'sillybun/vim-repl'               " 调试插件
 " 文件搜索
 Plug 'dyng/ctrlsf.vim'
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+" Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " Git
@@ -72,12 +72,12 @@ nnoremap <Leader>fb :Buffers<CR>
 nnoremap <Leader>fle :Lines<Space>
 
 " ------ Yggdroot/LeaderF
-let g:Lf_ReverseOrder = 1   "自下而上显示
-nnoremap <leader>lf :LeaderfFile<CR>
-nnoremap <leader>lb :LeaderfBuffer<CR>
-nnoremap <leader>lm :LeaderfMru<CR>
-nnoremap <leader>lft :LeaderfFunction<CR>
-nnoremap <leader>le :LeaderfLine<CR>
+" let g:Lf_ReverseOrder = 1   "自下而上显示
+" nnoremap <leader>lf :LeaderfFile<CR>
+" nnoremap <leader>lb :LeaderfBuffer<CR>
+" nnoremap <leader>lm :LeaderfMru<CR>
+" nnoremap <leader>lft :LeaderfFunction<CR>
+" nnoremap <leader>le :LeaderfLine<CR>
 
 " ------ dyng/ctrlsf  #install -y ack-grep 依赖ack/ag/pt/rg之一
 nnoremap <Leader>cf :CtrlSF<Space>
@@ -253,11 +253,11 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 vnoremap <Leader>y "+y              "设置快捷键将选中文本块复制至系统剪贴板
 nnoremap <Leader>p "+p              "设置快捷键将系统剪贴板内容粘贴至vim
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :q<CR>
+map <Leader>w :w<CR>
+map <Leader>q :q<CR>
 nnoremap <Leader>rn :set relativenumber!<CR>                    "显示相对行号
 nnoremap <Leader>vc :edit $MYVIMRC<CR>                          "编辑vimrc文件
-nnoremap <Leader>s :source $MYVIMRC<CR>                         "重新加载vimrc文件
+map <Leader>s :source $MYVIMRC<CR>                         "重新加载vimrc文件
 " 插件与调试
 nnoremap <Leader><Leader>i :PlugInstall<CR>     "安装插件
 nnoremap <Leader><Leader>u :PlugUpdate<CR>      "更新插件
