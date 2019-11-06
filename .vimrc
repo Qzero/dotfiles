@@ -96,7 +96,7 @@ nnoremap <silent><leader>gs :Gstatus<cr>
 nnoremap <silent><leader>gl :Gpull<cr>
 nnoremap <silent><leader>gm :Gmerge<cr>
 nnoremap <silent><leader>gu :Gpush<cr>
-nnoremap <silent><leader>glog :Glog<cr>
+nnoremap <silent><leader>ggl :Glog<cr>
 nnoremap <Leader>gv :GV<CR>
 let g:gitgutter_max_signs = 800     "更改显示标示行数限制
 
