@@ -3,6 +3,8 @@ filetype on                                     "侦测文件类型
 filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
+
+
 call plug#begin('~/.vim/plugged')
 Plug 'levelone/tequila-sunrise.vim'    " 主题
 Plug 'mhinz/vim-startify'              " 首页
