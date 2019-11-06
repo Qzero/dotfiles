@@ -99,6 +99,7 @@ nnoremap <silent><leader>gl :Glog<cr>
 nnoremap <Leader>gv :GV<CR>
 let g:gitgutter_max_signs = 800     "更改显示标示行数限制
 
+
 " ------ mbbill/undotree
 nnoremap <Leader>ut :UndotreeToggle<cr>
 if has("persistent_undo")
