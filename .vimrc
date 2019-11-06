@@ -97,6 +97,9 @@ nnoremap <silent><leader>gm :Gmerge<cr>
 nnoremap <silent><leader>gu :Gpush<cr>
 nnoremap <silent><leader>gl :Glog<cr>
 nnoremap <Leader>gv :GV<CR>
+" vim-gitgutter
+nmap [c <Plug>GitGutterPrevHunk
+nmap ]c <Plug>GitGutterNextHunk
 let g:gitgutter_max_signs = 800     "更改显示标示行数限制
 
 " ------ mbbill/undotree
