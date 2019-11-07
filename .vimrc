@@ -43,13 +43,11 @@ let g:repl_position = 3
 let g:repl_program = {
             \   'python': 'python',
             \   'default': 'zsh'
-            \   
-}
+            \   }
 let g:repl_predefine_python = {
             \   'numpy': 'import numpy as np',
             \   'matplotlib': 'from matplotlib import pyplot as plt'
-            \   
-}
+            \   }
 nnoremap <leader>rl :REPLToggle<Cr>
 autocmd Filetype python nnoremap <Leader>rld <Esc>:REPLDebugStopAtCurrentLine<Cr>
 autocmd Filetype python nnoremap <Leader>rln <Esc>:REPLPDBN<Cr>
