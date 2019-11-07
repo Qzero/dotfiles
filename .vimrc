@@ -24,6 +24,7 @@ Plug 'itchyny/vim-cursorword'          " 变量下划线
 Plug 'Shougo/neocomplcache.vim'        " 补全工具
 Plug 'junegunn/vim-easy-align'         " 文本对齐
 Plug 'pacha/vem-tabline'               " 显示标签
+Plug 'sillybun/vim-repl'
 " 文件搜索
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -34,6 +35,25 @@ Plug 'airblade/vim-gitgutter'          " 显示git更改标示
 Plug 'junegunn/gv.vim'                 " git提交树
 Plug 'mbbill/undotree'                 " 文件版本回溯
 call plug#end()
+
+" ------ sillybun/vim-repl
+"  调试:REPLDebug 断点:REPLDebugStopAtCurrentLine 运行代码:REPLPDBC
+"  单步执行:REPLPDBN 进入函数:REPLPDBS 进入上一个栈:REPLPDBU
+let g:repl_position = 3
+let g:repl_program = {
+            \   'python': 'python',
+            \   'default': 'zsh'
+            \   
+}
+let g:repl_predefine_python = {
+            \   'numpy': 'import numpy as np',
+            \   'matplotlib': 'from matplotlib import pyplot as plt'
+            \   
+}
+nnoremap <leader>rl :REPLToggle<Cr>
+autocmd Filetype python nnoremap <Leader>rld <Esc>:REPLDebugStopAtCurrentLine<Cr>
+autocmd Filetype python nnoremap <Leader>rln <Esc>:REPLPDBN<Cr>
+autocmd Filetype python nnoremap <Leader>rlb <Esc>:REPLPDBS<Cr>
 
 " ------ pacha/vem-tabline
 let g:vem_tabline_show = 2
