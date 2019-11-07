@@ -24,10 +24,8 @@ Plug 'itchyny/vim-cursorword'          " 变量下划线
 Plug 'Shougo/neocomplcache.vim'        " 补全工具
 Plug 'junegunn/vim-easy-align'         " 文本对齐
 Plug 'pacha/vem-tabline'               " 显示标签
-Plug 'sillybun/vim-repl'               " 调试插件
 " 文件搜索
 Plug 'dyng/ctrlsf.vim'
-" Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " Git
@@ -45,23 +43,6 @@ nmap <leader>tbr <Plug>vem_move_buffer_right-
 nmap <leader>pp <Plug>vem_prev_buffer-
 nmap <leader>nn <Plug>vem_next_buffer-
 
-" ------ sillybun/vim-repl
-"  调试:REPLDebug 断点:REPLDebugStopAtCurrentLine 运行代码:REPLPDBC
-"  单步执行:REPLPDBN 进入函数:REPLPDBS 进入上一个栈:REPLPDBU
-let g:repl_position = 3
-let g:repl_program = {
-            \   'python': 'python',
-            \   'default': 'zsh'
-            \   }
-let g:repl_predefine_python = {
-            \   'numpy': 'import numpy as np',
-            \   'matplotlib': 'from matplotlib import pyplot as plt'
-            \   }
-nnoremap <leader>rl :REPLToggle<Cr>
-autocmd Filetype python nnoremap <Leader>rld <Esc>:REPLDebugStopAtCurrentLine<Cr>
-autocmd Filetype python nnoremap <Leader>rln <Esc>:REPLPDBN<Cr>
-autocmd Filetype python nnoremap <Leader>rlb <Esc>:REPLPDBS<Cr>
-
 " ------ junegunn/vim-easy-align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
@@ -70,14 +51,6 @@ nmap ga <Plug>(EasyAlign)
 nnoremap <Leader>fl :Files<CR>
 nnoremap <Leader>fb :Buffers<CR>
 nnoremap <Leader>fle :Lines<Space>
-
-" ------ Yggdroot/LeaderF
-" let g:Lf_ReverseOrder = 1   "自下而上显示
-" nnoremap <leader>lf :LeaderfFile<CR>
-" nnoremap <leader>lb :LeaderfBuffer<CR>
-" nnoremap <leader>lm :LeaderfMru<CR>
-" nnoremap <leader>lft :LeaderfFunction<CR>
-" nnoremap <leader>le :LeaderfLine<CR>
 
 " ------ dyng/ctrlsf  #install -y ack-grep 依赖ack/ag/pt/rg之一
 nnoremap <Leader>cf :CtrlSF<Space>
