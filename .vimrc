@@ -11,6 +11,7 @@ Plug 'scrooloose/nerdtree'             " 资源管理树
 Plug 'vim-airline/vim-airline'         " 状态栏
 Plug 'vim-airline/vim-airline-themes'  " 状态栏主题
 " 效率
+
 Plug 'easymotion/vim-easymotion'       " 超级跳转
 Plug 't9md/vim-choosewin'              " 窗口选择
 Plug 'luochen1990/rainbow'             " 彩虹括号
