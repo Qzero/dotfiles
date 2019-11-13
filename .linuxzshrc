@@ -41,8 +41,3 @@ if ! zplug check; then
 fi
 
 zplug load
-# source your own shrc file if exists
-[ -f ~/.env.sh ] && source ~/.env.sh
-
-
-[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
