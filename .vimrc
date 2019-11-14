@@ -4,26 +4,26 @@ filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
-Plug 'levelone/tequila-sunrise.vim'    " 主题
-Plug 'mhinz/vim-startify'              " 首页
-Plug 'majutsushi/tagbar'               " 文件大纲工具
-Plug 'scrooloose/nerdtree'             " 资源管理树
-Plug 'vim-airline/vim-airline'         " 状态栏
-Plug 'vim-airline/vim-airline-themes'  " 状态栏主题
+Plug 'levelone/tequila-sunrise.vim'             " 主题
+Plug 'mhinz/vim-startify'                       " 首页
+Plug 'majutsushi/tagbar'                        " 文件大纲工具
+Plug 'scrooloose/nerdtree'                      " 资源管理树
+Plug 'vim-airline/vim-airline'                  " 状态栏
+Plug 'vim-airline/vim-airline-themes'           " 状态栏主题
 " 效率
-Plug 'easymotion/vim-easymotion'       " 超级跳转
-Plug 't9md/vim-choosewin'              " 窗口选择
-Plug 'luochen1990/rainbow'             " 彩虹括号
-Plug 'ybian/smartim'                   " 解决中文输入法无法输入命令
-Plug 'lfv89/vim-interestingwords'      " 变量彩色凸显
-Plug 'brooth/far.vim'                  " 替换
-Plug 'nathanaelkane/vim-indent-guides' " 显示缩进
-Plug 'tpope/vim-commentary'            " 注释
-Plug 'jiangmiao/auto-pairs'            " 自动补全引号、圆括号、花括号等
-Plug 'itchyny/vim-cursorword'          " 变量下划线
-" Plug 'Shougo/neocomplcache.vim'        " 补全工具
-Plug 'neoclide/coc.nvim', {'branch': 'release'} "补全工具
-Plug 'junegunn/vim-easy-align'         " 文本对齐
+Plug 'easymotion/vim-easymotion'                " 超级跳转
+Plug 't9md/vim-choosewin'                       " 窗口选择
+Plug 'luochen1990/rainbow'                      " 彩虹括号
+Plug 'ybian/smartim'                            " 解决中文输入法无法输入命令
+Plug 'lfv89/vim-interestingwords'               " 变量彩色凸显
+Plug 'brooth/far.vim'                           " 替换
+Plug 'nathanaelkane/vim-indent-guides'          " 显示缩进
+Plug 'tpope/vim-commentary'                     " 注释
+Plug 'jiangmiao/auto-pairs'                     " 自动补全引号、圆括号、花括号等
+Plug 'itchyny/vim-cursorword'                   " 变量下划线
+" Plug 'Shougo/neocomplcache.vim'                 " 补全工具
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全工具
+Plug 'junegunn/vim-easy-align'                  " 文本对齐
 Plug 'sillybun/vim-repl'
 " 文件搜索
 Plug 'dyng/ctrlsf.vim'
@@ -31,10 +31,10 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh'  }
 " Git
-Plug 'tpope/vim-fugitive'              " git命令封装
-Plug 'airblade/vim-gitgutter'          " 显示git更改标示
-Plug 'junegunn/gv.vim'                 " git提交树
-Plug 'mbbill/undotree'                 " 文件版本回溯
+Plug 'tpope/vim-fugitive'                       " git命令封装
+Plug 'airblade/vim-gitgutter'                   " 显示git更改标示
+Plug 'junegunn/gv.vim'                          " git提交树
+Plug 'mbbill/undotree'                          " 文件版本回溯
 call plug#end()
 
 " ------ neoclide/coc.nvim
