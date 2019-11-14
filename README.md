@@ -1,16 +1,19 @@
-## 安装命令
+#使用方法
+‘’‘
+必装：git vim zsh ohmyzsh tmux
+’‘’
+### vim
 
 ### zsh & oh my zsh
+curl: 
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-curl: sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+wget:
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
-wget: sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
-### zplug
-
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-
----
+### tmux & tpm
+github:
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ## 备份&还原
 ---
