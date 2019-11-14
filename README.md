@@ -1,4 +1,5 @@
 #使用方法
+
 必装：git vim zsh ohmyzsh tmux
 
 ### vim
