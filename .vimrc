@@ -29,6 +29,7 @@ Plug 'sillybun/vim-repl'
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh'  }
 " Git
 Plug 'tpope/vim-fugitive'              " git命令封装
 Plug 'airblade/vim-gitgutter'          " 显示git更改标示
@@ -76,7 +77,15 @@ nmap <silent><leader>cfs <Plug>CtrlSFCCwordPath<CR>
 let g:ctrlsf_ackprg = 'ack'     " 搜索引擎
 let g:ctrlsf_position = "right" " 左右打开Linux用let g:ctrlsf_open_left = 0
 
-"------ Git相关
+" ------ Yggdroot/LeaderF
+let g:Lf_ReverseOrder = 1   "自下而上显示
+nnoremap <leader>lf :LeaderfFile<CR>
+nnoremap <leader>lb :LeaderfBuffer<CR>
+nnoremap <leader>lm :LeaderfMru<CR>
+nnoremap <leader>lft :LeaderfFunction<CR>
+nnoremap <leader>le :LeaderfLine<CR>
+
+" ------ Git相关
 " vim-fugitive
 nnoremap <silent><leader>gw :Gwrite<cr>
 nnoremap <silent><leader>gc :Gcommit<cr>
