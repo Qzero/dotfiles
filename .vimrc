@@ -35,7 +35,20 @@ Plug 'tpope/vim-fugitive'              " git命令封装
 Plug 'airblade/vim-gitgutter'          " 显示git更改标示
 Plug 'junegunn/gv.vim'                 " git提交树
 Plug 'mbbill/undotree'                 " 文件版本回溯
+
+Plug 'iamcco/markdown-preview.vim'
 call plug#end()
+
+" ------ iamcco/markdown-preview.vim
+let g:mkdp_path_to_chrome = "chrome"
+let g:mkdp_browserfunc = 'MKDP_browserfunc_default'
+let g:mkdp_auto_start = 1
+let g:mkdp_auto_open = 1
+let g:mkdp_auto_close = 1
+let g:mkdp_refresh_slow = 0
+let g:mkdp_command_for_global = 0
+let g:mkdp_open_to_the_world = 0
+nmap <silent> <Leader>md <Plug>MarkdownPreview
 
 " ------ neoclide/coc.nvim
 set hidden
