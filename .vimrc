@@ -146,12 +146,14 @@ let g:neocomplcache_enable_auto_select = 1 " 默认选择第一个选项,设置�
 let g:neocomplcache_min_keyword_length = 3 " 从第三个字符开始语法提示
 
 " ------ vim-airline/vim-airline
-let g:airline_powerline_fonts = 0                 " 这个是安装字体后必须设置此项
-let g:airline_theme='ubaryd'                      " luna,term,tomorrow,zenburn
-let g:airline#extensions#tabline#buffer_nr_show=0 " 显示buffer编号
+nnoremap <C-N> :bn<CR>
+nnoremap <C-P> :bp<CR>
+let g:airline_powerline_fonts = 1                 " 这个是安装字体后必须设置此项
+let g:airline_theme='ubaryd'                      " luna,term,tomorrow,ubaryd,zenburn
 let g:airline#extensions#tabline#enabled=1        " 用顶部tabline
-let g:airline#extensions#tabline#left_sep = ' '   " 顶部tabline显示方式
-let g:airline#extensions#tabline#left_alt_sep = '|'"
+let g:airline#extensions#tabline#buffer_nr_show=0 " 显示buffer编号
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#whitespace#symbol = '!'
 
 " ------ Tagbar 安装依赖 : install ctags
 nnoremap <Leader>tb :TagbarToggle<CR>
