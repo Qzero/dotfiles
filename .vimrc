@@ -21,7 +21,8 @@ Plug 'nathanaelkane/vim-indent-guides' " 显示缩进
 Plug 'tpope/vim-commentary'            " 注释
 Plug 'jiangmiao/auto-pairs'            " 自动补全引号、圆括号、花括号等
 Plug 'itchyny/vim-cursorword'          " 变量下划线
-Plug 'Shougo/neocomplcache.vim'        " 补全工具
+" Plug 'Shougo/neocomplcache.vim'        " 补全工具
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/vim-easy-align'         " 文本对齐
 Plug 'sillybun/vim-repl'
 " 文件搜索
@@ -35,6 +36,16 @@ Plug 'airblade/vim-gitgutter'          " 显示git更改标示
 Plug 'junegunn/gv.vim'                 " git提交树
 Plug 'mbbill/undotree'                 " 文件版本回溯
 call plug#end()
+
+" ------ neoclide/coc.nvim
+set hidden
+set cmdheight=2
+set shortmess+=c
+set signcolumn=yes
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 
 " ------ sillybun/vim-repl
 "  调试:REPLDebug 断点:REPLDebugStopAtCurrentLine 运行代码:REPLPDBC
@@ -101,8 +112,8 @@ if has("persistent_undo")
     endif
 
 " ------ lfv89/vim-interestingwords
-nnoremap <silent> <leader>k :call InterestingWords('n')<CR>
-nnoremap <silent> <leader>K :call UncolorAllWords()<CR>
+nnoremap <silent> <leader>kw :call InterestingWords('n')<CR>
+nnoremap <silent> <leader>KW :call UncolorAllWords()<CR>
 nnoremap <silent> n :call WordNavigation('forward')<CR>
 nnoremap <silent> N :call WordNavigation('backward')<CR>
 
