@@ -4,6 +4,7 @@ filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
+Plug 'skywind3000/asyncrun.vim'
 Plug 'levelone/tequila-sunrise.vim'    " 主题
 Plug 'mhinz/vim-startify'              " 首页
 Plug 'majutsushi/tagbar'               " 文件大纲工具
@@ -35,20 +36,7 @@ Plug 'tpope/vim-fugitive'              " git命令封装
 Plug 'airblade/vim-gitgutter'          " 显示git更改标示
 Plug 'junegunn/gv.vim'                 " git提交树
 Plug 'mbbill/undotree'                 " 文件版本回溯
-
-Plug 'iamcco/markdown-preview.vim'
 call plug#end()
-
-" ------ iamcco/markdown-preview.vim
-let g:mkdp_path_to_chrome = "chrome"
-let g:mkdp_browserfunc = 'MKDP_browserfunc_default'
-let g:mkdp_auto_start = 1
-let g:mkdp_auto_open = 1
-let g:mkdp_auto_close = 1
-let g:mkdp_refresh_slow = 0
-let g:mkdp_command_for_global = 0
-let g:mkdp_open_to_the_world = 0
-nmap <silent> <Leader>md <Plug>MarkdownPreview
 
 " ------ neoclide/coc.nvim
 set hidden
@@ -109,7 +97,7 @@ nnoremap <silent><leader>gb :Gblame<cr>
 nnoremap <silent><leader>gd :Gvdiff<cr>
 nnoremap <silent><leader>gs :Gstatus<cr>
 nnoremap <silent><leader>gm :Gmerge<cr>
-nnoremap <silent><leader>gu :Gpush<cr>
+nnoremap <silent><leader>gu :AsyncRun Gpush<cr>
 nnoremap <silent><leader>gl :Glog<cr>
 nnoremap <Leader>gv :GV<CR>
 " vim-gitgutter
