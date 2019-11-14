@@ -4,7 +4,6 @@ filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
-Plug 'skywind3000/asyncrun.vim'
 Plug 'levelone/tequila-sunrise.vim'    " 主题
 Plug 'mhinz/vim-startify'              " 首页
 Plug 'majutsushi/tagbar'               " 文件大纲工具
@@ -23,7 +22,7 @@ Plug 'tpope/vim-commentary'            " 注释
 Plug 'jiangmiao/auto-pairs'            " 自动补全引号、圆括号、花括号等
 Plug 'itchyny/vim-cursorword'          " 变量下划线
 " Plug 'Shougo/neocomplcache.vim'        " 补全工具
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "补全工具
 Plug 'junegunn/vim-easy-align'         " 文本对齐
 Plug 'sillybun/vim-repl'
 " 文件搜索
@@ -97,7 +96,7 @@ nnoremap <silent><leader>gb :Gblame<cr>
 nnoremap <silent><leader>gd :Gvdiff<cr>
 nnoremap <silent><leader>gs :Gstatus<cr>
 nnoremap <silent><leader>gm :Gmerge<cr>
-nnoremap <silent><leader>gu :AsyncRun Gpush<cr>
+nnoremap <silent><leader>gu :Gpush<cr>
 nnoremap <silent><leader>gl :Glog<cr>
 nnoremap <Leader>gv :GV<CR>
 " vim-gitgutter
