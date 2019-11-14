@@ -71,7 +71,7 @@ nmap ga <Plug>(EasyAlign)
 " ----- junegunn/fzf
 nnoremap <Leader>fl :Files<CR>
 nnoremap <Leader>fb :Buffers<CR>
-nnoremap <Leader>fle :Lines<Space>
+nnoremap <Leader>fe :Lines<Space>
 
 " ------ dyng/ctrlsf  #install -y ack-grep 依赖ack/ag/pt/rg之一
 nnoremap <Leader>cf :CtrlSF<Space>
