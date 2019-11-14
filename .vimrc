@@ -230,10 +230,6 @@ map sr :set splitright<CR>:vsplit<CR>
 map sl :set nosplitright<CR>:vsplit<CR>
 map sk :set nosplitbelow<CR>:split<CR>
 map sj :set splitbelow<CR>:split<CR>
-map <C-k> :res +3<CR>
-map <C-j> :res -5<CR>                                
-map <C-h> :vertical resize+5<CR>                     
-map <C-l> :vertical resize-5<CR>                    
 map svs <C-w>t<C-w>H                                  
 map svh <C-w>t<C-w>K                                  
 "使用tab补全
