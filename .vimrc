@@ -2,7 +2,7 @@ let mapleader=";"                               "定义Leader键
 filetype on                                     "侦测文件类型
 filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
-
+" ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5YHgXUudUmmfMcsvnZ5aiwFIuMNnN+PVcBtMeahUfsNGL9Mu5HnXcIeohk49qRIunDI/ledYuYFohcvkz/6aoNnZ2gmjtcWS28z49m5eD7dZPhQE4mGt+PgCxEmrvxw5ZXQOCtXGwZrLbQ0Vunu0+qGQUP9MSV/cNvue/iF590ko2NBSFcutGT67/NijGyKBGgtSvj2lpmgwLzZuz6KMuYXNFDo0JRktBDGpmHYUkglt5u+lKCkFR39yvWaMtK34PkrHQA21plGj/+ygWxgWq7rJPFRMWoBNoUXMSheYKB8EzPLC587WxXkLAdTZP2TZl0CWCn7MLNM0EQVQRZsOZ heqijie@126.com
 call plug#begin('~/.vim/plugged')
 Plug 'levelone/tequila-sunrise.vim'    " 主题
 Plug 'mhinz/vim-startify'              " 首页
