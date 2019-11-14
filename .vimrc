@@ -217,7 +217,6 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 "快捷键 ------ 
 "" 窗口选择与移动
 imap kj <esc>
-imap KJ <esc>
 noremap H ^
 noremap L $
 noremap <Leader>cc <C-w>c
