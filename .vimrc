@@ -23,7 +23,7 @@ Plug 'jiangmiao/auto-pairs'            " 自动补全引号、圆括号、花括
 Plug 'itchyny/vim-cursorword'          " 变量下划线
 Plug 'Shougo/neocomplcache.vim'        " 补全工具
 Plug 'junegunn/vim-easy-align'         " 文本对齐
-Plug 'pacha/vem-tabline'               " 显示标签
+" Plug 'pacha/vem-tabline'               " 显示标签
 Plug 'sillybun/vim-repl'
 " 文件搜索
 Plug 'dyng/ctrlsf.vim'
@@ -55,11 +55,11 @@ autocmd Filetype python nnoremap <Leader>rln <Esc>:REPLPDBN<Cr>
 autocmd Filetype python nnoremap <Leader>rlb <Esc>:REPLPDBS<Cr>
 
 " ------ pacha/vem-tabline
-let g:vem_tabline_show = 2
-nmap <leader>tbl <Plug>vem_move_buffer_left-
-nmap <leader>tbr <Plug>vem_move_buffer_right-
-nmap <leader>pp <Plug>vem_prev_buffer-
-nmap <leader>nn <Plug>vem_next_buffer-
+" let g:vem_tabline_show = 2
+" nmap <leader>tbl <Plug>vem_move_buffer_left-
+" nmap <leader>tbr <Plug>vem_move_buffer_right-
+" nmap <leader>pp <Plug>vem_prev_buffer-
+" nmap <leader>nn <Plug>vem_next_buffer-
 
 " ------ junegunn/vim-easy-align
 xmap ga <Plug>(EasyAlign)
@@ -98,6 +98,8 @@ nnoremap <silent><leader>gl :Glog<cr>
 nnoremap <Leader>gv :GV<CR>
 " vim-gitgutter
 let g:gitgutter_max_signs = 800     "更改显示标示行数限制
+nmap [c <Plug>GitGutterPrevHunk
+nmap ]c <Plug>GitGutterNextHunk
 
 " ------ mbbill/undotree
 nnoremap <Leader>ut :UndotreeToggle<cr>
@@ -146,6 +148,10 @@ let g:neocomplcache_min_keyword_length = 3 " 从第三个字符开始语法提�
 " ------ vim-airline/vim-airline
 let g:airline_powerline_fonts = 0                 " 这个是安装字体后必须设置此项
 let g:airline_theme='ubaryd'                      " luna,term,tomorrow,zenburn
+let g:airline#extensions#tabline#buffer_nr_show=0 " 显示buffer编号
+let g:airline#extensions#tabline#enabled=1        " 用顶部tabline
+let g:airline#extensions#tabline#left_sep = ' '   " 顶部tabline显示方式
+let g:airline#extensions#tabline#left_alt_sep = '|'"
 
 " ------ Tagbar 安装依赖 : install ctags
 nnoremap <Leader>tb :TagbarToggle<CR>
