@@ -24,7 +24,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ### 还原
 - 1, 克隆git仓库
-- 2，删除机器文件
+- 2，删除隐藏文件
     - rm -rf dotfiles
-- 3，软链接到机器
+- 3，创建软连接
     - ln -s dotfiles/.zshrc .zshrc
