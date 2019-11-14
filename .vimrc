@@ -23,7 +23,6 @@ Plug 'jiangmiao/auto-pairs'            " 自动补全引号、圆括号、花括
 Plug 'itchyny/vim-cursorword'          " 变量下划线
 Plug 'Shougo/neocomplcache.vim'        " 补全工具
 Plug 'junegunn/vim-easy-align'         " 文本对齐
-" Plug 'pacha/vem-tabline'               " 显示标签
 Plug 'sillybun/vim-repl'
 " 文件搜索
 Plug 'dyng/ctrlsf.vim'
@@ -53,13 +52,6 @@ nnoremap <leader>rl :REPLToggle<Cr>
 autocmd Filetype python nnoremap <Leader>rld <Esc>:REPLDebugStopAtCurrentLine<Cr>
 autocmd Filetype python nnoremap <Leader>rln <Esc>:REPLPDBN<Cr>
 autocmd Filetype python nnoremap <Leader>rlb <Esc>:REPLPDBS<Cr>
-
-" ------ pacha/vem-tabline
-" let g:vem_tabline_show = 2
-" nmap <leader>tbl <Plug>vem_move_buffer_left-
-" nmap <leader>tbr <Plug>vem_move_buffer_right-
-" nmap <leader>pp <Plug>vem_prev_buffer-
-" nmap <leader>nn <Plug>vem_next_buffer-
 
 " ------ junegunn/vim-easy-align
 xmap ga <Plug>(EasyAlign)
