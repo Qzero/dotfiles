@@ -231,7 +231,6 @@ map sk :set nosplitbelow<CR>:split<CR>
 map sj :set splitbelow<CR>:split<CR>
 map svs <C-w>t<C-w>H                                  
 map svh <C-w>t<C-w>K                                  
-"使用tab补全
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 map <Leader>w :w<CR>
