@@ -73,7 +73,7 @@ nnoremap <Leader>fle :Lines<Space>
 nnoremap <Leader>cf :CtrlSF<Space>
 nnoremap <Leader>cfc :CtrlSFClose<CR>
 nmap <silent><leader>cfs <Plug>CtrlSFCCwordPath<CR>
-let g:ctrlsf_ackprg = 'ag'     " ag引擎
+let g:ctrlsf_ackprg = 'ack'     " 搜索引擎
 let g:ctrlsf_position = "right" " 左右打开Linux用let g:ctrlsf_open_left = 0
 
 "------ Git相关
