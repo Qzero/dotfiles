@@ -4,6 +4,7 @@ filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
+Plug 'yianwillis/vimcdoc'
 Plug 'levelone/tequila-sunrise.vim'             " 主题
 Plug 'mhinz/vim-startify'                       " 首页
 Plug 'majutsushi/tagbar'                        " 文件大纲工具
@@ -139,7 +140,7 @@ let g:indent_guides_auto_colors = 0           " 自定义关联可视化颜色
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#009A65 ctermbg=4
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#8ECCCB ctermbg=3
 
-" ------ luochen199/rainbow
+" ------ luohen199/rainbow
 let g:rainbow_active = 1
 
 " ------ Shougo/neocomplcache.vim
@@ -186,52 +187,53 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 "通用设置 ------
-set t_Co=256                    "开启256色支持
-set guifont=Monaco:h16    		"默认字体和大小
-set showtabline=0               "隐藏顶部标签栏
-set guioptions-=r               "隐藏右侧滚动条
-set guioptions-=L               "隐藏左侧滚动条
-set guioptions-=b               "隐藏底部滚动条
-set laststatus=2                "显示状态栏
-set ruler                       "显示光标位置
-set background=dark             "背景色
-colorscheme tequila-sunrise     "主题
-set splitbelow               	"允许在下部分割布局
-set splitright               	"允许在右侧分隔布局
-syntax enable                   "开启语法高亮
-syntax on                       "自动语法高亮
-set showmatch                   "高亮显示匹配的括号
-set matchtime=1                 "匹配括号高亮的时间（单位是十分之一秒）
-set noeb                        "关闭错误的提示
-set nocompatible                "不兼容原始vi模式
-set cmdheight=2                 "命令行的高度
-set showcmd                     "select模式下显示选中的行数
-set whichwrap+=<,>,h,l          "光标键跨行
-set ttimeoutlen=0               "<ESC>键响应时间
-set virtualedit=block,onemore   "允许光标出现在最后一个字符的后面
-set magic						"设置魔术
-set clipboard=unnamed           "共享粘贴板
-set numberwidth=5               "默认占据4空间,超过999行时更改
-set smartindent                 "智能的选择对齐方式
-set expandtab                   "将制表符扩展为空格
+set t_Co=256                                            " 开启256色支持
+set guifont=Monaco:h16                                  " 默认字体和大小
+set showtabline=0                                       " 隐藏顶部标签栏
+set guioptions-=r                                       " 隐藏右侧滚动条
+set guioptions-=L                                       " 隐藏左侧滚动条
+set guioptions-=b                                       " 隐藏底部滚动条
+set laststatus=2                                        " 显示状态栏
+set ruler                                               " 显示光标位置
+set cursorline                                          " 高亮行
+set background=dark                                     " 背景色
+colorscheme tequila-sunrise                             " 主题
+set splitbelow                                          " 允许在下部分割布局
+set splitright                                          " 允许在右侧分隔布局
+syntax enable                                           " 开启语法高亮
+syntax on                                               " 自动语法高亮
+set showmatch                                           " 高亮显示匹配的括号
+set matchtime=1                                         " 匹配括号高亮的时间（单位是十分之一秒）
+set noeb                                                " 关闭错误的提示
+set nocompatible                                        " 不兼容原始vi模式
+set cmdheight=2                                         " 命令行的高度
+set showcmd                                             " select模式下显示选中的行数
+set whichwrap+=<,>,h,l                                  " 光标键跨行
+set ttimeoutlen=0                                       " <ESC>键响应时间
+set virtualedit=block,onemore                           " 允许光标出现在最后一个字符的后面
+set magic                                               " 设置魔术
+set clipboard=unnamed                                   " 共享粘贴板
+set numberwidth=5                                       " 默认占据4空间,超过999行时更改
+set smartindent                                         " 智能的选择对齐方式
+set expandtab                                           " 将制表符扩展为空格
 set nu smarttab autoindent sw=4 ts=4 sts=4 et tw=78 shiftwidth=4 tabstop=4 softtabstop=4
-set nowrap                      "禁止折行
-set backspace=2                 "使用回车键正常处理indent,eol,start等
-set sidescroll=10               "向右滚动字符数
-set nobackup                    "备份地址
-set noswapfile                  "禁止生成临时文件
-set confirm                     "在处理未保存或只读文件的时候，弹出确认
+set nowrap                                              " 禁止折行
+set backspace=2                                         " 使用回车键正常处理indent,eol,start等
+set sidescroll=10                                       " 向右滚动字符数
+set nobackup                                            " 备份地址
+set noswapfile                                          " 禁止生成临时文件
+set confirm                                             " 在处理未保存或只读文件的时候，弹出确认
 set langmenu=zh_CN.UTF-8        
 set helplang=cn
-set encoding=utf-8              "新文件的编码为 UTF-8
-set termencoding=utf-8          "只影响普通模式 (非图形界面) 下的 Vim
-set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030     "自动编码依次尝试
-set fileformat=unix             "unix的格式保存文件
-set updatetime=100              "100毫秒更新
-" set belloff=all                         "所有事件下（包括错按esc，错按backspace）不发出声音
-set autoread                            "设置当文件被改动时自动载入
-set completeopt=preview,menu            "代码补全
-set scrolloff=3                         "光标移动到buffer的顶部和底部时保持3行距离
+set encoding=utf-8                                      " 新文件的编码为 UTF-8
+set termencoding=utf-8                                  " 只影响普通模式 (非图形界面) 下的 Vim
+set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030 " 自动编码依次尝试
+set fileformat=unix                                     " unix的格式保存文件
+set updatetime=100                                      " 100毫秒更新
+set belloff=all                                         " 所有事件下（包括错按esc，错按backspace）不发出声音
+set autoread                                            " 设置当文件被改动时自动载入
+set completeopt=preview,menu                            " 代码补全
+set scrolloff=3                                         " 光标移动到buffer的顶部和底部时保持3行距离
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
 "快捷键 ------ 
