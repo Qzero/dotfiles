@@ -90,7 +90,7 @@ nnoremap <leader>le :LeaderfLine<CR>
 
 " ------ Git相关
 " vim-fugitive
-nnoremap <silent><leader>gw :Gwrite<cr>
+nnoremap <silent><leader>gw :w!<cr> :Gwrite<cr>
 nnoremap <silent><leader>gc :Gcommit<cr>
 nnoremap <silent><leader>gb :Gblame<cr>
 nnoremap <silent><leader>gd :Gvdiff<cr>
@@ -147,14 +147,13 @@ let g:neocomplcache_enable_auto_select = 1 " 默认选择第一个选项,设置�
 let g:neocomplcache_min_keyword_length = 3 " 从第三个字符开始语法提示
 
 " ------ vim-airline/vim-airline
+nnoremap <C-D> :bprevious<CR>:bdelete #<CR>
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
 let g:airline_powerline_fonts = 1                 " 这个是安装字体后必须设置此项
 let g:airline_theme='ubaryd'                      " luna,term,tomorrow,ubaryd,zenburn
 let g:airline#extensions#tabline#enabled=1        " 用顶部tabline
 let g:airline#extensions#tabline#buffer_nr_show=0 " 显示buffer编号
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#whitespace#symbol = '!'
 
 " ------ Tagbar 安装依赖 : install ctags
 nnoremap <Leader>tb :TagbarToggle<CR>
@@ -253,7 +252,6 @@ map svs <C-w>t<C-w>H
 map svh <C-w>t<C-w>K                                  
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-nnoremap <C-w> :w!<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>rn :set relativenumber!<CR>                    "显示相对行号
 nnoremap <Leader>vc :edit $MYVIMRC<CR>                          "编辑vimrc文件
@@ -264,4 +262,4 @@ nnoremap <Leader><Leader>u :PlugUpdate<CR>      "更新插件
 nnoremap <Leader><Leader>c :PlugClean<CR>       "删除插件
 nnoremap <Leader><Leader>pu :PlugUpgrade<CR>    "更新插件管理器
 nnoremap <Leader>is iimport ipdb; ipdb.set_trace()
-nnoremap <Leader>tm :belowright term<CR>
+nnoremap <Leader>tm :belowright terminal<CR>

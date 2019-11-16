@@ -2,6 +2,7 @@ let SessionLoad = 1
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
 set cpo&vim
+inoremap <silent> <expr> <BS> coc#_insert_key('request', 'fddf5a4b-0884-11ea-89b0-7d2a691f8d3b')
 inoremap <silent> <Plug>(fzf-maps-i) :call fzf#vim#maps('i', 0)
 inoremap <expr> <Plug>(fzf-complete-buffer-line) fzf#vim#complete#buffer_line()
 inoremap <expr> <Plug>(fzf-complete-line) fzf#vim#complete#line()
@@ -12,9 +13,9 @@ inoremap <expr> <Plug>(fzf-complete-word) fzf#vim#complete#word()
 inoremap <silent> <Plug>CocRefresh =coc#_complete()
 inoremap <silent> <SNR>51_AutoPairsReturn =AutoPairsReturn()
 inoremap <expr> <S-Tab> pumvisible() ? "\" : "\<S-Tab>"
+nnoremap  :bprevious:bdelete #
 nnoremap  :bn
 nnoremap  :bp
-nnoremap  :w!
 nnoremap <silent>  c :CocList commands
 nnoremap <silent>  e :CocList extensions
 nnoremap <silent>  a :CocList diagnostics
@@ -27,7 +28,7 @@ nnoremap <silent> ;K :call UncolorAllWords()
 vnoremap <silent> ;k :call InterestingWords('v')
 nnoremap <silent> ;k :call InterestingWords('n')
 map ;; <Plug>(easymotion-prefix)
-nnoremap ;tm :belowright term
+nnoremap ;tm :belowright terminal
 nnoremap ;is iimport ipdb; ipdb.set_trace()
 nnoremap ;;pu :PlugUpgrade    "更新插件管理器
 nnoremap ;;c :PlugClean       "删除插件
@@ -63,7 +64,7 @@ nnoremap <silent> ;gs :Gstatus
 nnoremap <silent> ;gd :Gvdiff
 nnoremap <silent> ;gb :Gblame
 nnoremap <silent> ;gc :Gcommit
-nnoremap <silent> ;gw :Gwrite
+nnoremap <silent> ;gw :w! :Gwrite
 nnoremap ;le :LeaderfLine
 nnoremap ;lft :LeaderfFunction
 nnoremap ;lm :LeaderfMru
@@ -96,7 +97,7 @@ map sk :set nosplitbelow:split
 map sl :set nosplitright:vsplit
 map sr :set splitright:vsplit
 map ss <Plug>(easymotion-s2)
-nnoremap <SNR>126_: :=v:count ? v:count : ''
+nnoremap <SNR>131_: :=v:count ? v:count : ''
 xnoremap <silent> <Plug>(coc-git-chunk-outer) :call coc#rpc#request('doKeymap', ['git-chunk-outer'])
 onoremap <silent> <Plug>(coc-git-chunk-outer) :call coc#rpc#request('doKeymap', ['git-chunk-outer'])
 xnoremap <silent> <Plug>(coc-git-chunk-inner) :call coc#rpc#request('doKeymap', ['git-chunk-inner'])
@@ -572,18 +573,18 @@ snoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 onoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 nnoremap <silent> <Plug>(startify-open-buffers) :call startify#open_buffers()
 inoremap <expr> 	 pumvisible() ? "\" : "\	"
-inoremap <silent> <expr> " coc#_insert_key('request', 'e83aaae9-087b-11ea-8aee-fdfd6f4f3916')
-inoremap <silent> <expr> ' coc#_insert_key('request', 'e83aaae8-087b-11ea-8aee-fdfd6f4f3916')
-inoremap <silent> <expr> ( coc#_insert_key('request', 'e83aaae0-087b-11ea-8aee-fdfd6f4f3916')
-inoremap <silent> <expr> ) coc#_insert_key('request', 'e83aaae1-087b-11ea-8aee-fdfd6f4f3916')
-inoremap <silent> <expr> < coc#_insert_key('request', 'e83aaae6-087b-11ea-8aee-fdfd6f4f3916')
-inoremap <silent> <expr> > coc#_insert_key('request', 'e83aaae7-087b-11ea-8aee-fdfd6f4f3916')
-inoremap <silent> <expr> [ coc#_insert_key('request', 'e83aaae2-087b-11ea-8aee-fdfd6f4f3916')
-inoremap <silent> <expr> ] coc#_insert_key('request', 'e83aaae3-087b-11ea-8aee-fdfd6f4f3916')
-inoremap <silent> <expr> ` coc#_insert_key('request', 'e83aaaea-087b-11ea-8aee-fdfd6f4f3916')
+inoremap <silent> <expr> " coc#_insert_key('request', 'fddf5a49-0884-11ea-89b0-7d2a691f8d3b')
+inoremap <silent> <expr> ' coc#_insert_key('request', 'fddf5a48-0884-11ea-89b0-7d2a691f8d3b')
+inoremap <silent> <expr> ( coc#_insert_key('request', 'fddf5a40-0884-11ea-89b0-7d2a691f8d3b')
+inoremap <silent> <expr> ) coc#_insert_key('request', 'fddf5a41-0884-11ea-89b0-7d2a691f8d3b')
+inoremap <silent> <expr> < coc#_insert_key('request', 'fddf5a46-0884-11ea-89b0-7d2a691f8d3b')
+inoremap <silent> <expr> > coc#_insert_key('request', 'fddf5a47-0884-11ea-89b0-7d2a691f8d3b')
+inoremap <silent> <expr> [ coc#_insert_key('request', 'fddf5a42-0884-11ea-89b0-7d2a691f8d3b')
+inoremap <silent> <expr> ] coc#_insert_key('request', 'fddf5a43-0884-11ea-89b0-7d2a691f8d3b')
+inoremap <silent> <expr> ` coc#_insert_key('request', 'fddf5a4a-0884-11ea-89b0-7d2a691f8d3b')
 imap kj 
-inoremap <silent> <expr> { coc#_insert_key('request', 'e83aaae4-087b-11ea-8aee-fdfd6f4f3916')
-inoremap <silent> <expr> } coc#_insert_key('request', 'e83aaae5-087b-11ea-8aee-fdfd6f4f3916')
+inoremap <silent> <expr> { coc#_insert_key('request', 'fddf5a44-0884-11ea-89b0-7d2a691f8d3b')
+inoremap <silent> <expr> } coc#_insert_key('request', 'fddf5a45-0884-11ea-89b0-7d2a691f8d3b')
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -602,6 +603,7 @@ set langmenu=zh_CN.UTF-8
 set laststatus=2
 set matchtime=1
 set nomodeline
+set operatorfunc=<SNR>50_go
 set ruler
 set runtimepath=~/.vim,~/dotfiles/.vim/pack/git-plugins/start/vista.vim,~/.vim/plugged/tequila-sunrise.vim,~/.vim/plugged/vim-startify,~/.vim/plugged/tagbar,~/.vim/plugged/nerdtree,~/.vim/plugged/vim-airline,~/.vim/plugged/vim-airline-themes,~/.vim/plugged/vim-easymotion,~/.vim/plugged/vim-choosewin,~/.vim/plugged/rainbow,~/.vim/plugged/smartim,~/.vim/plugged/vim-interestingwords,~/.vim/plugged/far.vim,~/.vim/plugged/vim-indent-guides,~/.vim/plugged/vim-commentary,~/.vim/plugged/auto-pairs,~/.vim/plugged/vim-cursorword,~/.vim/plugged/coc.nvim,~/.vim/plugged/vim-easy-align,~/.vim/plugged/vim-repl,~/.vim/plugged/ctrlsf.vim,~/.fzf,~/.vim/plugged/fzf.vim,~/.vim/plugged/LeaderF,~/.vim/plugged/vim-fugitive,~/.vim/plugged/vim-gitgutter,~/.vim/plugged/gv.vim,~/.vim/plugged/undotree,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/plugged/ctrlsf.vim/after,~/.vim/after
 set scrolloff=6
@@ -637,10 +639,10 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 dotfiles/.linuxzshrc
+badd +181 dotfiles/.vimrc
 argglobal
 silent! argdel *
-edit dotfiles/.linuxzshrc
+edit dotfiles/.vimrc
 set splitbelow splitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
@@ -665,7 +667,19 @@ inoremap <buffer> <silent> û =AutoPairsMoveCharacter('{')
 inoremap <buffer> <silent> Ý =AutoPairsMoveCharacter(']')
 inoremap <buffer> <silent> Û =AutoPairsMoveCharacter('[')
 nmap <buffer> [c <Plug>(GitGutterPrevHunk)
+vnoremap <buffer> <silent> [" :exe "normal! gv"|call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
+nnoremap <buffer> <silent> [" :call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
+vnoremap <buffer> <silent> [] m':exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "bW")
+nnoremap <buffer> <silent> [] m':call search('^\s*endf*\%[unction]\>', "bW")
+vnoremap <buffer> <silent> [[ m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "bW")
+nnoremap <buffer> <silent> [[ m':call search('^\s*fu\%[nction]\>', "bW")
 nmap <buffer> ]c <Plug>(GitGutterNextHunk)
+vnoremap <buffer> <silent> ]" :exe "normal! gv"|call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
+nnoremap <buffer> <silent> ]" :call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
+vnoremap <buffer> <silent> ][ m':exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "W")
+nnoremap <buffer> <silent> ][ m':call search('^\s*endf*\%[unction]\>', "W")
+vnoremap <buffer> <silent> ]] m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "W")
+nnoremap <buffer> <silent> ]] m':call search('^\s*fu\%[nction]\>', "W")
 xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)
 omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
 xmap <buffer> ic <Plug>(GitGutterTextObjectInnerVisual)
@@ -701,8 +715,8 @@ setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=:#
-setlocal commentstring=#\ %s
+setlocal comments=sO:\"\ -,mO:\"\ \ ,eO:\"\",:\"
+setlocal commentstring=\"%s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -719,8 +733,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'conf'
-setlocal filetype=conf
+if &filetype != 'vim'
+setlocal filetype=vim
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -742,11 +756,11 @@ setlocal iminsert=0
 setlocal imsearch=-1
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal indentexpr=GetVimIndent()
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,=end,=else,=cat,=fina,=END,0\\
 setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
+setlocal iskeyword=@,48-57,_,192-255,#
+setlocal keywordprg=:help
 setlocal nolinebreak
 setlocal nolisp
 setlocal lispwords=
@@ -785,8 +799,8 @@ setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != 'conf'
-setlocal syntax=conf
+if &syntax != 'vim'
+setlocal syntax=vim
 endif
 setlocal tabstop=4
 setlocal tagcase=
@@ -803,13 +817,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 23 - ((20 * winheight(0) + 13) / 27)
+let s:l = 185 - ((24 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-23
-normal! 0
-lcd ~/dotfiles
+185
+normal! 02|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
