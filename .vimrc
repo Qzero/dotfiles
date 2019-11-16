@@ -43,8 +43,8 @@ set cmdheight=2
 set shortmess+=c
 set signcolumn=yes
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
