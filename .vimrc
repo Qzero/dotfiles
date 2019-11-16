@@ -147,9 +147,9 @@ let g:neocomplcache_enable_auto_select = 1 " 默认选择第一个选项,设置�
 let g:neocomplcache_min_keyword_length = 3 " 从第三个字符开始语法提示
 
 " ------ vim-airline/vim-airline
-nnoremap <C-D> :bprevious<CR>:bdelete #<CR>
-nnoremap <C-N> :bn<CR>
-nnoremap <C-P> :bp<CR>
+nnoremap <Leader>dd :bprevious<CR>:bdelete #<CR>
+nnoremap <Leader>nn :bn<CR>
+nnoremap <Leader>pp :bp<CR>
 let g:airline_powerline_fonts = 1                 " 这个是安装字体后必须设置此项
 let g:airline_theme='ubaryd'                      " luna,term,tomorrow,ubaryd,zenburn
 let g:airline#extensions#tabline#enabled=1        " 用顶部tabline
