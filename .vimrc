@@ -4,7 +4,6 @@ filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
-Plug 'yianwillis/vimcdoc'
 Plug 'levelone/tequila-sunrise.vim'             " 主题
 Plug 'mhinz/vim-startify'                       " 首页
 Plug 'majutsushi/tagbar'                        " 文件大纲工具
@@ -43,6 +42,8 @@ set hidden
 set cmdheight=2
 set shortmess+=c
 set signcolumn=yes
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
@@ -220,8 +221,9 @@ set nu smarttab autoindent sw=4 ts=4 sts=4 et tw=78 shiftwidth=4 tabstop=4 softt
 set nowrap                                              " 禁止折行
 set backspace=2                                         " 使用回车键正常处理indent,eol,start等
 set sidescroll=10                                       " 向右滚动字符数
-set nobackup                                            " 备份地址
-set noswapfile                                          " 禁止生成临时文件
+set nobackup                                            " 不要备份
+set nowritebackup                                       " 不要写入备份
+set noswapfile                                          " 禁止生成临时文件交换文件
 set confirm                                             " 在处理未保存或只读文件的时候，弹出确认
 set langmenu=zh_CN.UTF-8        
 set helplang=cn
@@ -229,7 +231,7 @@ set encoding=utf-8                                      " 新文件的编码为 
 set termencoding=utf-8                                  " 只影响普通模式 (非图形界面) 下的 Vim
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030 " 自动编码依次尝试
 set fileformat=unix                                     " unix的格式保存文件
-set updatetime=100                                      " 100毫秒更新
+set updatetime=30                                       " 30毫秒更新
 set belloff=all                                         " 所有事件下（包括错按esc，错按backspace）不发出声音
 set autoread                                            " 设置当文件被改动时自动载入
 set completeopt=preview,menu                            " 代码补全
@@ -255,8 +257,8 @@ map svs <C-w>t<C-w>H
 map svh <C-w>t<C-w>K                                  
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-map <Leader>w :w<CR>
-map <Leader>q :q<CR>
+nnoremap <Leader>w :w!<CR>
+nnoremap <Leader>q :q<CR>
 nnoremap <Leader>rn :set relativenumber!<CR>                    "显示相对行号
 nnoremap <Leader>vc :edit $MYVIMRC<CR>                          "编辑vimrc文件
 map <Leader>s :source $MYVIMRC<CR>                         "重新加载vimrc文件
