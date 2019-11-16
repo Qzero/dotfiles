@@ -42,9 +42,7 @@ set hidden
 set cmdheight=2
 set shortmess+=c
 set signcolumn=yes
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 nnoremap <silent> K :call <SID>show_documentation()<CR>
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
@@ -103,8 +101,6 @@ nnoremap <silent><leader>gl :Glog<cr>
 nnoremap <Leader>gv :GV<CR>
 " vim-gitgutter
 let g:gitgutter_max_signs = 800     "更改显示标示行数限制
-nmap [c <Plug>GitGutterPrevHunk
-nmap ]c <Plug>GitGutterNextHunk
 
 " ------ mbbill/undotree
 nnoremap <Leader>ut :UndotreeToggle<cr>
@@ -235,7 +231,7 @@ set updatetime=30                                       " 30毫秒更新
 set belloff=all                                         " 所有事件下（包括错按esc，错按backspace）不发出声音
 set autoread                                            " 设置当文件被改动时自动载入
 set completeopt=preview,menu                            " 代码补全
-set scrolloff=3                                         " 光标移动到buffer的顶部和底部时保持3行距离
+set scrolloff=6                                         " 光标移动到buffer的顶部和底部时保持3行距离
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
 "快捷键 ------ 
@@ -257,7 +253,7 @@ map svs <C-w>t<C-w>H
 map svh <C-w>t<C-w>K                                  
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-nnoremap <Leader>w :w!<CR>
+nnoremap <C-w> :w!<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>rn :set relativenumber!<CR>                    "显示相对行号
 nnoremap <Leader>vc :edit $MYVIMRC<CR>                          "编辑vimrc文件
