@@ -2,6 +2,7 @@
 必装：git vim zsh ohmyzsh tmux
 
 ### vim
+install ctags ack
 
 ### zsh & oh my zsh
 curl: 
@@ -9,6 +10,8 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 wget:
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+切换bash：chsh -s /bin/zsh
 
 ### tmux & tpm
 github:
