@@ -2,7 +2,6 @@ let SessionLoad = 1
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
 set cpo&vim
-inoremap <silent> <expr> <BS> coc#_insert_key('request', 'fddf5a4b-0884-11ea-89b0-7d2a691f8d3b')
 inoremap <silent> <Plug>(fzf-maps-i) :call fzf#vim#maps('i', 0)
 inoremap <expr> <Plug>(fzf-complete-buffer-line) fzf#vim#complete#buffer_line()
 inoremap <expr> <Plug>(fzf-complete-line) fzf#vim#complete#line()
@@ -97,7 +96,7 @@ map sk :set nosplitbelow:split
 map sl :set nosplitright:vsplit
 map sr :set splitright:vsplit
 map ss <Plug>(easymotion-s2)
-nnoremap <SNR>131_: :=v:count ? v:count : ''
+nnoremap <SNR>129_: :=v:count ? v:count : ''
 xnoremap <silent> <Plug>(coc-git-chunk-outer) :call coc#rpc#request('doKeymap', ['git-chunk-outer'])
 onoremap <silent> <Plug>(coc-git-chunk-outer) :call coc#rpc#request('doKeymap', ['git-chunk-outer'])
 xnoremap <silent> <Plug>(coc-git-chunk-inner) :call coc#rpc#request('doKeymap', ['git-chunk-inner'])
@@ -573,18 +572,18 @@ snoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 onoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 nnoremap <silent> <Plug>(startify-open-buffers) :call startify#open_buffers()
 inoremap <expr> 	 pumvisible() ? "\" : "\	"
-inoremap <silent> <expr> " coc#_insert_key('request', 'fddf5a49-0884-11ea-89b0-7d2a691f8d3b')
-inoremap <silent> <expr> ' coc#_insert_key('request', 'fddf5a48-0884-11ea-89b0-7d2a691f8d3b')
-inoremap <silent> <expr> ( coc#_insert_key('request', 'fddf5a40-0884-11ea-89b0-7d2a691f8d3b')
-inoremap <silent> <expr> ) coc#_insert_key('request', 'fddf5a41-0884-11ea-89b0-7d2a691f8d3b')
-inoremap <silent> <expr> < coc#_insert_key('request', 'fddf5a46-0884-11ea-89b0-7d2a691f8d3b')
-inoremap <silent> <expr> > coc#_insert_key('request', 'fddf5a47-0884-11ea-89b0-7d2a691f8d3b')
-inoremap <silent> <expr> [ coc#_insert_key('request', 'fddf5a42-0884-11ea-89b0-7d2a691f8d3b')
-inoremap <silent> <expr> ] coc#_insert_key('request', 'fddf5a43-0884-11ea-89b0-7d2a691f8d3b')
-inoremap <silent> <expr> ` coc#_insert_key('request', 'fddf5a4a-0884-11ea-89b0-7d2a691f8d3b')
+inoremap <silent> <expr> " coc#_insert_key('request', '070fc999-0945-11ea-bd2e-9338e051a0ab')
+inoremap <silent> <expr> ' coc#_insert_key('request', '070fc998-0945-11ea-bd2e-9338e051a0ab')
+inoremap <silent> <expr> ( coc#_insert_key('request', '070fc990-0945-11ea-bd2e-9338e051a0ab')
+inoremap <silent> <expr> ) coc#_insert_key('request', '070fc991-0945-11ea-bd2e-9338e051a0ab')
+inoremap <silent> <expr> < coc#_insert_key('request', '070fc996-0945-11ea-bd2e-9338e051a0ab')
+inoremap <silent> <expr> > coc#_insert_key('request', '070fc997-0945-11ea-bd2e-9338e051a0ab')
+inoremap <silent> <expr> [ coc#_insert_key('request', '070fc992-0945-11ea-bd2e-9338e051a0ab')
+inoremap <silent> <expr> ] coc#_insert_key('request', '070fc993-0945-11ea-bd2e-9338e051a0ab')
+inoremap <silent> <expr> ` coc#_insert_key('request', '070fc99a-0945-11ea-bd2e-9338e051a0ab')
 imap kj 
-inoremap <silent> <expr> { coc#_insert_key('request', 'fddf5a44-0884-11ea-89b0-7d2a691f8d3b')
-inoremap <silent> <expr> } coc#_insert_key('request', 'fddf5a45-0884-11ea-89b0-7d2a691f8d3b')
+inoremap <silent> <expr> { coc#_insert_key('request', '070fc994-0945-11ea-bd2e-9338e051a0ab')
+inoremap <silent> <expr> } coc#_insert_key('request', '070fc995-0945-11ea-bd2e-9338e051a0ab')
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -603,7 +602,6 @@ set langmenu=zh_CN.UTF-8
 set laststatus=2
 set matchtime=1
 set nomodeline
-set operatorfunc=<SNR>50_go
 set ruler
 set runtimepath=~/.vim,~/dotfiles/.vim/pack/git-plugins/start/vista.vim,~/.vim/plugged/tequila-sunrise.vim,~/.vim/plugged/vim-startify,~/.vim/plugged/tagbar,~/.vim/plugged/nerdtree,~/.vim/plugged/vim-airline,~/.vim/plugged/vim-airline-themes,~/.vim/plugged/vim-easymotion,~/.vim/plugged/vim-choosewin,~/.vim/plugged/rainbow,~/.vim/plugged/smartim,~/.vim/plugged/vim-interestingwords,~/.vim/plugged/far.vim,~/.vim/plugged/vim-indent-guides,~/.vim/plugged/vim-commentary,~/.vim/plugged/auto-pairs,~/.vim/plugged/vim-cursorword,~/.vim/plugged/coc.nvim,~/.vim/plugged/vim-easy-align,~/.vim/plugged/vim-repl,~/.vim/plugged/ctrlsf.vim,~/.fzf,~/.vim/plugged/fzf.vim,~/.vim/plugged/LeaderF,~/.vim/plugged/vim-fugitive,~/.vim/plugged/vim-gitgutter,~/.vim/plugged/gv.vim,~/.vim/plugged/undotree,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/plugged/ctrlsf.vim/after,~/.vim/after
 set scrolloff=6
@@ -639,7 +637,7 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +181 dotfiles/.vimrc
+badd +0 dotfiles/.vimrc
 argglobal
 silent! argdel *
 edit dotfiles/.vimrc
@@ -817,12 +815,13 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 185 - ((24 * winheight(0) + 15) / 31)
+let s:l = 1 - ((0 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-185
-normal! 02|
+1
+normal! 0
+lcd ~/dotfiles
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
