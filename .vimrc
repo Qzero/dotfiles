@@ -10,6 +10,7 @@ Plug 'majutsushi/tagbar'                        " 文件大纲工具
 Plug 'scrooloose/nerdtree'                      " 资源管理树
 Plug 'vim-airline/vim-airline'                  " 状态栏
 Plug 'vim-airline/vim-airline-themes'           " 状态栏主题
+Plug 'nanotech/jellybeans.vim'
 " 效率
 Plug 'easymotion/vim-easymotion'                " 超级跳转
 Plug 't9md/vim-choosewin'                       " 窗口选择
@@ -23,6 +24,7 @@ Plug 'jiangmiao/auto-pairs'                     " 自动补全引号、圆括号
 Plug 'itchyny/vim-cursorword'                   " 变量下划线
 " Plug 'Shougo/neocomplcache.vim'                 " 补全工具
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全工具
+Plug 'davidhalter/jedi-vim'
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
 Plug 'sillybun/vim-repl'
 " 文件搜索
@@ -193,7 +195,8 @@ set laststatus=2                                        " 显示状态栏
 set ruler                                               " 显示光标位置
 set cursorline                                          " 高亮行
 set background=dark                                     " 背景色
-colorscheme tequila-sunrise                             " 主题
+" colorscheme tequila-sunrise                             " 主题
+colorscheme jellybeans
 set splitbelow                                          " 允许在下部分割布局
 set splitright                                          " 允许在右侧分隔布局
 syntax enable                                           " 开启语法高亮
