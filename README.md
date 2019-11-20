@@ -17,6 +17,7 @@ the fuck命令行纠错工具
 - sudo apt update
 - sudo apt install python3-dev python3-pip python3-setuptools
 - sudo pip3 install thefuck
+- sudo apt-get install tree
 
 ### tmux & tpm
 github:

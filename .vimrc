@@ -22,7 +22,6 @@ Plug 'nathanaelkane/vim-indent-guides'          " 显示缩进
 Plug 'tpope/vim-commentary'                     " 注释
 Plug 'jiangmiao/auto-pairs'                     " 自动补全引号、圆括号、花括号等
 Plug 'itchyny/vim-cursorword'                   " 变量下划线
-" Plug 'Shougo/neocomplcache.vim'                 " 补全工具
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全工具
 Plug 'davidhalter/jedi-vim'                     " python补全工具
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
@@ -40,22 +39,11 @@ Plug 'mbbill/undotree'                          " 文件版本回溯
 call plug#end()
 
 " ------ neoclide/coc.nvim
-set hidden
-set cmdheight=2
-set shortmess+=c
-set signcolumn=yes
 let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
 let g:coc_status_error_sign = '•'
 let g:coc_status_warning_sign = '•'
 let g:coc_global_extensions =['coc-html','coc-css','coc-snippets','coc-prettier','coc-eslint','coc-emmet','coc-tsserver','coc-pairs','coc-json','coc-python','coc-imselect','coc-highlight','coc-git','coc-emoji','coc-lists','coc-post','coc-stylelint','coc-yaml','coc-template','coc-tabnine','coc-marketplace','coc-gitignore','coc-yank','coc-explorer','coc-go']
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-"inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
@@ -148,17 +136,11 @@ let g:indent_guides_start_level = 2           " 第二层缩进开始显示
 let g:indent_guides_guide_size = 1            " 色块宽度
 let g:indent_guides_tab_guides = 1            " 对tab对齐的禁用
 let g:indent_guides_auto_colors = 0           " 自定义关联可视化颜色
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#009A65 ctermbg=4
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#8ECCCB ctermbg=3
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#009A65 ctermbg=4
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#8ECCCB ctermbg=3
 
 " ------ luohen199/rainbow
 let g:rainbow_active = 1
-
-" ------ Shougo/neocomplcache.vim
-set completeopt-=preview                   " 关闭预览
-let g:neocomplcache_enable_at_startup = 1  " 系统启动时自动启动
-let g:neocomplcache_enable_auto_select = 1 " 默认选择第一个选项,设置为0每次就需要自行选择
-let g:neocomplcache_min_keyword_length = 3 " 从第三个字符开始语法提示
 
 " ------ vim-airline/vim-airline
 nnoremap <C-D> :bprevious<CR>:bdelete #<CR>
