@@ -572,18 +572,18 @@ snoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 onoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 nnoremap <silent> <Plug>(startify-open-buffers) :call startify#open_buffers()
 inoremap <expr> 	 pumvisible() ? "\" : "\	"
-inoremap <silent> <expr> " coc#_insert_key('request', '68307c67-0a9e-11ea-bb00-7dbb5472c481')
-inoremap <silent> <expr> ' coc#_insert_key('request', '68307c66-0a9e-11ea-bb00-7dbb5472c481')
-inoremap <silent> <expr> ( coc#_insert_key('request', '68305550-0a9e-11ea-bb00-7dbb5472c481')
-inoremap <silent> <expr> ) coc#_insert_key('request', '68305551-0a9e-11ea-bb00-7dbb5472c481')
-inoremap <silent> <expr> < coc#_insert_key('request', '68307c64-0a9e-11ea-bb00-7dbb5472c481')
-inoremap <silent> <expr> > coc#_insert_key('request', '68307c65-0a9e-11ea-bb00-7dbb5472c481')
-inoremap <silent> <expr> [ coc#_insert_key('request', '68307c60-0a9e-11ea-bb00-7dbb5472c481')
-inoremap <silent> <expr> ] coc#_insert_key('request', '68307c61-0a9e-11ea-bb00-7dbb5472c481')
-inoremap <silent> <expr> ` coc#_insert_key('request', '68307c68-0a9e-11ea-bb00-7dbb5472c481')
+inoremap <silent> <expr> " coc#_insert_key('request', 'fe528779-0b42-11ea-b541-db6e4beeb259')
+inoremap <silent> <expr> ' coc#_insert_key('request', 'fe528778-0b42-11ea-b541-db6e4beeb259')
+inoremap <silent> <expr> ( coc#_insert_key('request', 'fe528770-0b42-11ea-b541-db6e4beeb259')
+inoremap <silent> <expr> ) coc#_insert_key('request', 'fe528771-0b42-11ea-b541-db6e4beeb259')
+inoremap <silent> <expr> < coc#_insert_key('request', 'fe528776-0b42-11ea-b541-db6e4beeb259')
+inoremap <silent> <expr> > coc#_insert_key('request', 'fe528777-0b42-11ea-b541-db6e4beeb259')
+inoremap <silent> <expr> [ coc#_insert_key('request', 'fe528772-0b42-11ea-b541-db6e4beeb259')
+inoremap <silent> <expr> ] coc#_insert_key('request', 'fe528773-0b42-11ea-b541-db6e4beeb259')
+inoremap <silent> <expr> ` coc#_insert_key('request', 'fe52877a-0b42-11ea-b541-db6e4beeb259')
 imap kj 
-inoremap <silent> <expr> { coc#_insert_key('request', '68307c62-0a9e-11ea-bb00-7dbb5472c481')
-inoremap <silent> <expr> } coc#_insert_key('request', '68307c63-0a9e-11ea-bb00-7dbb5472c481')
+inoremap <silent> <expr> { coc#_insert_key('request', 'fe528774-0b42-11ea-b541-db6e4beeb259')
+inoremap <silent> <expr> } coc#_insert_key('request', 'fe528775-0b42-11ea-b541-db6e4beeb259')
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -637,34 +637,25 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +67 dotfiles/.vimrc
+badd +0 dotfiles/.vimrc
 argglobal
 silent! argdel *
+edit dotfiles/.vimrc
 set splitbelow splitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
 argglobal
-enew
-file NERD_tree_1
 let s:cpo_save=&cpo
 set cpo&vim
 inoremap <buffer> <silent> <BS> =AutoPairsDelete()
-nnoremap <buffer> <silent> <NL> :call nerdtree#ui_glue#invokeKeyMap("<C-j>")
-nnoremap <buffer> <silent>  :call nerdtree#ui_glue#invokeKeyMap("<C-k>")
-nnoremap <buffer> <silent>  :call nerdtree#ui_glue#invokeKeyMap("<CR>")
 nmap <buffer> ;hp <Plug>(GitGutterPreviewHunk)
 nmap <buffer> ;hu <Plug>(GitGutterUndoHunk)
 nmap <buffer> ;hs <Plug>(GitGutterStageHunk)
 xmap <buffer> ;hs <Plug>(GitGutterStageHunk)
-nnoremap <buffer> <silent> ? :call nerdtree#ui_glue#invokeKeyMap("?")
-nnoremap <buffer> <silent> A :call nerdtree#ui_glue#invokeKeyMap("A")
-nnoremap <buffer> <silent> B :call nerdtree#ui_glue#invokeKeyMap("B")
 inoremap <buffer> <silent> § =AutoPairsMoveCharacter('''')
 inoremap <buffer> <silent> ¢ =AutoPairsMoveCharacter('"')
 inoremap <buffer> <silent> © =AutoPairsMoveCharacter(')')
 inoremap <buffer> <silent> ¨ =AutoPairsMoveCharacter('(')
-nnoremap <buffer> <silent> C :call nerdtree#ui_glue#invokeKeyMap("C")
-nnoremap <buffer> <silent> CD :call nerdtree#ui_glue#invokeKeyMap("CD")
 inoremap <buffer> <silent> î :call AutoPairsJump()a
 inoremap <buffer> <silent> <expr> ð AutoPairsToggle()
 inoremap <buffer> <silent> â =AutoPairsBackInsert()
@@ -673,42 +664,24 @@ inoremap <buffer> <silent> ý =AutoPairsMoveCharacter('}')
 inoremap <buffer> <silent> û =AutoPairsMoveCharacter('{')
 inoremap <buffer> <silent> Ý =AutoPairsMoveCharacter(']')
 inoremap <buffer> <silent> Û =AutoPairsMoveCharacter('[')
-nnoremap <buffer> <silent> D :call nerdtree#ui_glue#invokeKeyMap("D")
-nnoremap <buffer> <silent> F :call nerdtree#ui_glue#invokeKeyMap("F")
-nnoremap <buffer> <silent> I :call nerdtree#ui_glue#invokeKeyMap("I")
-nnoremap <buffer> <silent> J :call nerdtree#ui_glue#invokeKeyMap("J")
-nnoremap <buffer> <silent> K :call nerdtree#ui_glue#invokeKeyMap("K")
-nnoremap <buffer> <silent> O :call nerdtree#ui_glue#invokeKeyMap("O")
-nnoremap <buffer> <silent> P :call nerdtree#ui_glue#invokeKeyMap("P")
-nnoremap <buffer> <silent> R :call nerdtree#ui_glue#invokeKeyMap("R")
-nnoremap <buffer> <silent> T :call nerdtree#ui_glue#invokeKeyMap("T")
-nnoremap <buffer> <silent> U :call nerdtree#ui_glue#invokeKeyMap("U")
-nnoremap <buffer> <silent> X :call nerdtree#ui_glue#invokeKeyMap("X")
 nmap <buffer> [c <Plug>(GitGutterPrevHunk)
+vnoremap <buffer> <silent> [" :exe "normal! gv"|call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
+nnoremap <buffer> <silent> [" :call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
+vnoremap <buffer> <silent> [] m':exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "bW")
+nnoremap <buffer> <silent> [] m':call search('^\s*endf*\%[unction]\>', "bW")
+vnoremap <buffer> <silent> [[ m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "bW")
+nnoremap <buffer> <silent> [[ m':call search('^\s*fu\%[nction]\>', "bW")
 nmap <buffer> ]c <Plug>(GitGutterNextHunk)
+vnoremap <buffer> <silent> ]" :exe "normal! gv"|call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
+nnoremap <buffer> <silent> ]" :call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
+vnoremap <buffer> <silent> ][ m':exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "W")
+nnoremap <buffer> <silent> ][ m':call search('^\s*endf*\%[unction]\>', "W")
+vnoremap <buffer> <silent> ]] m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "W")
+nnoremap <buffer> <silent> ]] m':call search('^\s*fu\%[nction]\>', "W")
 xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)
 omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
-nnoremap <buffer> <silent> cd :call nerdtree#ui_glue#invokeKeyMap("cd")
-nnoremap <buffer> <silent> e :call nerdtree#ui_glue#invokeKeyMap("e")
-nnoremap <buffer> <silent> f :call nerdtree#ui_glue#invokeKeyMap("f")
-nnoremap <buffer> <silent> go :call nerdtree#ui_glue#invokeKeyMap("go")
-nnoremap <buffer> <silent> gs :call nerdtree#ui_glue#invokeKeyMap("gs")
-nnoremap <buffer> <silent> gi :call nerdtree#ui_glue#invokeKeyMap("gi")
-nnoremap <buffer> <silent> i :call nerdtree#ui_glue#invokeKeyMap("i")
 xmap <buffer> ic <Plug>(GitGutterTextObjectInnerVisual)
 omap <buffer> ic <Plug>(GitGutterTextObjectInnerPending)
-nnoremap <buffer> <silent> m :call nerdtree#ui_glue#invokeKeyMap("m")
-nnoremap <buffer> <silent> o :call nerdtree#ui_glue#invokeKeyMap("o")
-nnoremap <buffer> <silent> p :call nerdtree#ui_glue#invokeKeyMap("p")
-nnoremap <buffer> <silent> q :call nerdtree#ui_glue#invokeKeyMap("q")
-nnoremap <buffer> <silent> r :call nerdtree#ui_glue#invokeKeyMap("r")
-nnoremap <buffer> <silent> s :call nerdtree#ui_glue#invokeKeyMap("s")
-nnoremap <buffer> <silent> t :call nerdtree#ui_glue#invokeKeyMap("t")
-nnoremap <buffer> <silent> u :call nerdtree#ui_glue#invokeKeyMap("u")
-nnoremap <buffer> <silent> x :call nerdtree#ui_glue#invokeKeyMap("x")
-nnoremap <buffer> <silent> <MiddleMouse> :call nerdtree#ui_glue#invokeKeyMap("<MiddleMouse>")
-nnoremap <buffer> <silent> <2-LeftMouse> :call nerdtree#ui_glue#invokeKeyMap("<2-LeftMouse>")
-nnoremap <buffer> <silent> <LeftRelease> <LeftRelease>:call nerdtree#ui_glue#invokeKeyMap("<LeftRelease>")
 inoremap <buffer> <silent>  =AutoPairsDelete()
 inoremap <buffer> <silent>   =AutoPairsSpace()
 inoremap <buffer> <silent> " =AutoPairsInsert('"')
@@ -732,19 +705,19 @@ setlocal balloonexpr=
 setlocal nobinary
 setlocal nobreakindent
 setlocal breakindentopt=
-setlocal bufhidden=hide
-setlocal nobuflisted
-setlocal buftype=nofile
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
 setlocal nocindent
 setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=/*%s*/
+setlocal comments=sO:\"\ -,mO:\"\ \ ,eO:\"\",:\"
+setlocal commentstring=\"%s
 setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=nvic
-setlocal conceallevel=3
+setlocal concealcursor=
+setlocal conceallevel=0
 setlocal completefunc=
 setlocal nocopyindent
 setlocal cryptmethod=
@@ -758,12 +731,12 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'nerdtree'
-setlocal filetype=nerdtree
+if &filetype != 'vim'
+setlocal filetype=vim
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
-setlocal nofoldenable
+setlocal foldenable
 setlocal foldexpr=0
 setlocal foldignore=#
 setlocal foldlevel=0
@@ -773,7 +746,7 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=tcq
+setlocal formatoptions=croql
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal formatprg=
 setlocal grepprg=
@@ -781,11 +754,11 @@ setlocal iminsert=0
 setlocal imsearch=-1
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal indentexpr=GetVimIndent()
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,=end,=else,=cat,=fina,=END,0\\
 setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
+setlocal iskeyword=@,48-57,_,192-255,#
+setlocal keywordprg=:help
 setlocal nolinebreak
 setlocal nolisp
 setlocal lispwords=
@@ -794,10 +767,10 @@ setlocal makeencoding=
 setlocal makeprg=
 setlocal matchpairs=(:),{:},[:]
 setlocal nomodeline
-setlocal nomodifiable
+setlocal modifiable
 setlocal nrformats=bin,octal,hex
 set number
-setlocal nonumber
+setlocal number
 set numberwidth=5
 setlocal numberwidth=5
 setlocal omnifunc=
@@ -805,7 +778,7 @@ setlocal path=
 setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
-setlocal readonly
+setlocal noreadonly
 setlocal norelativenumber
 setlocal norightleft
 setlocal rightleftcmd=search
@@ -824,8 +797,8 @@ setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != 'nerdtree'
-setlocal syntax=nerdtree
+if &syntax != 'vim'
+setlocal syntax=vim
 endif
 setlocal tabstop=4
 setlocal tagcase=
@@ -837,10 +810,17 @@ setlocal thesaurus=
 setlocal undofile
 setlocal undolevels=-123456
 setlocal nowinfixheight
-setlocal winfixwidth
+setlocal nowinfixwidth
 set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 56 - ((23 * winheight(0) + 15) / 30)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+56
+normal! 0
 lcd ~/dotfiles
 tabnext 1
 if exists('s:wipebuf')
