@@ -96,7 +96,7 @@ map sk :set nosplitbelow:split
 map sl :set nosplitright:vsplit
 map sr :set splitright:vsplit
 map ss <Plug>(easymotion-s2)
-nnoremap <SNR>129_: :=v:count ? v:count : ''
+nnoremap <SNR>137_: :=v:count ? v:count : ''
 xnoremap <silent> <Plug>(coc-git-chunk-outer) :call coc#rpc#request('doKeymap', ['git-chunk-outer'])
 onoremap <silent> <Plug>(coc-git-chunk-outer) :call coc#rpc#request('doKeymap', ['git-chunk-outer'])
 xnoremap <silent> <Plug>(coc-git-chunk-inner) :call coc#rpc#request('doKeymap', ['git-chunk-inner'])
@@ -572,18 +572,18 @@ snoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 onoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 nnoremap <silent> <Plug>(startify-open-buffers) :call startify#open_buffers()
 inoremap <expr> 	 pumvisible() ? "\" : "\	"
-inoremap <silent> <expr> " coc#_insert_key('request', 'fe528779-0b42-11ea-b541-db6e4beeb259')
-inoremap <silent> <expr> ' coc#_insert_key('request', 'fe528778-0b42-11ea-b541-db6e4beeb259')
-inoremap <silent> <expr> ( coc#_insert_key('request', 'fe528770-0b42-11ea-b541-db6e4beeb259')
-inoremap <silent> <expr> ) coc#_insert_key('request', 'fe528771-0b42-11ea-b541-db6e4beeb259')
-inoremap <silent> <expr> < coc#_insert_key('request', 'fe528776-0b42-11ea-b541-db6e4beeb259')
-inoremap <silent> <expr> > coc#_insert_key('request', 'fe528777-0b42-11ea-b541-db6e4beeb259')
-inoremap <silent> <expr> [ coc#_insert_key('request', 'fe528772-0b42-11ea-b541-db6e4beeb259')
-inoremap <silent> <expr> ] coc#_insert_key('request', 'fe528773-0b42-11ea-b541-db6e4beeb259')
-inoremap <silent> <expr> ` coc#_insert_key('request', 'fe52877a-0b42-11ea-b541-db6e4beeb259')
+inoremap <silent> <expr> " coc#_insert_key('request', '964b51f9-0b71-11ea-8d5e-b5074bd70754')
+inoremap <silent> <expr> ' coc#_insert_key('request', '964b51f8-0b71-11ea-8d5e-b5074bd70754')
+inoremap <silent> <expr> ( coc#_insert_key('request', '964b51f0-0b71-11ea-8d5e-b5074bd70754')
+inoremap <silent> <expr> ) coc#_insert_key('request', '964b51f1-0b71-11ea-8d5e-b5074bd70754')
+inoremap <silent> <expr> < coc#_insert_key('request', '964b51f6-0b71-11ea-8d5e-b5074bd70754')
+inoremap <silent> <expr> > coc#_insert_key('request', '964b51f7-0b71-11ea-8d5e-b5074bd70754')
+inoremap <silent> <expr> [ coc#_insert_key('request', '964b51f2-0b71-11ea-8d5e-b5074bd70754')
+inoremap <silent> <expr> ] coc#_insert_key('request', '964b51f3-0b71-11ea-8d5e-b5074bd70754')
+inoremap <silent> <expr> ` coc#_insert_key('request', '964b51fa-0b71-11ea-8d5e-b5074bd70754')
 imap kj 
-inoremap <silent> <expr> { coc#_insert_key('request', 'fe528774-0b42-11ea-b541-db6e4beeb259')
-inoremap <silent> <expr> } coc#_insert_key('request', 'fe528775-0b42-11ea-b541-db6e4beeb259')
+inoremap <silent> <expr> { coc#_insert_key('request', '964b51f4-0b71-11ea-8d5e-b5074bd70754')
+inoremap <silent> <expr> } coc#_insert_key('request', '964b51f5-0b71-11ea-8d5e-b5074bd70754')
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -637,10 +637,11 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 dotfiles/.vimrc
+badd +0 .tmux.conf
 argglobal
 silent! argdel *
-edit dotfiles/.vimrc
+$argadd .tmux.conf
+edit .tmux.conf
 set splitbelow splitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
@@ -665,19 +666,7 @@ inoremap <buffer> <silent> û =AutoPairsMoveCharacter('{')
 inoremap <buffer> <silent> Ý =AutoPairsMoveCharacter(']')
 inoremap <buffer> <silent> Û =AutoPairsMoveCharacter('[')
 nmap <buffer> [c <Plug>(GitGutterPrevHunk)
-vnoremap <buffer> <silent> [" :exe "normal! gv"|call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
-nnoremap <buffer> <silent> [" :call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
-vnoremap <buffer> <silent> [] m':exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "bW")
-nnoremap <buffer> <silent> [] m':call search('^\s*endf*\%[unction]\>', "bW")
-vnoremap <buffer> <silent> [[ m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "bW")
-nnoremap <buffer> <silent> [[ m':call search('^\s*fu\%[nction]\>', "bW")
 nmap <buffer> ]c <Plug>(GitGutterNextHunk)
-vnoremap <buffer> <silent> ]" :exe "normal! gv"|call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
-nnoremap <buffer> <silent> ]" :call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
-vnoremap <buffer> <silent> ][ m':exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "W")
-nnoremap <buffer> <silent> ][ m':call search('^\s*endf*\%[unction]\>', "W")
-vnoremap <buffer> <silent> ]] m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "W")
-nnoremap <buffer> <silent> ]] m':call search('^\s*fu\%[nction]\>', "W")
 xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)
 omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
 xmap <buffer> ic <Plug>(GitGutterTextObjectInnerVisual)
@@ -713,8 +702,8 @@ setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=sO:\"\ -,mO:\"\ \ ,eO:\"\",:\"
-setlocal commentstring=\"%s
+setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+setlocal commentstring=#\ %s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -731,8 +720,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'vim'
-setlocal filetype=vim
+if &filetype != 'tmux'
+setlocal filetype=tmux
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -746,7 +735,7 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=croql
+setlocal formatoptions=tcq
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal formatprg=
 setlocal grepprg=
@@ -754,11 +743,11 @@ setlocal iminsert=0
 setlocal imsearch=-1
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=GetVimIndent()
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,=end,=else,=cat,=fina,=END,0\\
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
 setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,#
-setlocal keywordprg=:help
+setlocal iskeyword=@,48-57,_,192-255,-
+setlocal keywordprg=
 setlocal nolinebreak
 setlocal nolisp
 setlocal lispwords=
@@ -797,8 +786,8 @@ setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != 'vim'
-setlocal syntax=vim
+if &syntax != 'tmux'
+setlocal syntax=tmux
 endif
 setlocal tabstop=4
 setlocal tagcase=
@@ -815,13 +804,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 56 - ((23 * winheight(0) + 15) / 30)
+let s:l = 47 - ((22 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-56
-normal! 0
-lcd ~/dotfiles
+47
+normal! 057|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
