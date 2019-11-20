@@ -24,7 +24,7 @@ Plug 'jiangmiao/auto-pairs'                     " 自动补全引号、圆括号
 Plug 'itchyny/vim-cursorword'                   " 变量下划线
 " Plug 'Shougo/neocomplcache.vim'                 " 补全工具
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全工具
-Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim'                     " python补全工具
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
 Plug 'sillybun/vim-repl'
 " 文件搜索
@@ -212,7 +212,7 @@ set ttimeoutlen=0                                       " <ESC>键响应时间
 set virtualedit=block,onemore                           " 允许光标出现在最后一个字符的后面
 set magic                                               " 设置魔术
 set clipboard=unnamed                                   " 共享粘贴板
-set numberwidth=5                                       " 默认占据4空间,超过999行时更改
+set numberwidth=4                                       " 默认占据4空间,超过999行时更改
 set smartindent                                         " 智能的选择对齐方式
 set expandtab                                           " 将制表符扩展为空格
 set nu smarttab autoindent sw=4 ts=4 sts=4 et tw=78 shiftwidth=4 tabstop=4 softtabstop=4
