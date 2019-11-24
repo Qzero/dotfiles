@@ -5,12 +5,12 @@ filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
 Plug 'levelone/tequila-sunrise.vim'             " 主题
+Plug 'nanotech/jellybeans.vim'
 Plug 'mhinz/vim-startify'                       " 首页
 Plug 'majutsushi/tagbar'                        " 文件大纲工具
 Plug 'scrooloose/nerdtree'                      " 资源管理树
 Plug 'vim-airline/vim-airline'                  " 状态栏
 Plug 'vim-airline/vim-airline-themes'           " 状态栏主题
-Plug 'nanotech/jellybeans.vim'
 " 效率
 Plug 'easymotion/vim-easymotion'                " 超级跳转
 Plug 't9md/vim-choosewin'                       " 窗口选择
@@ -39,8 +39,6 @@ Plug 'mbbill/undotree'                          " 文件版本回溯
 call plug#end()
 
 " ------ neoclide/coc.nvim
-let g:coc_snippet_next = '<TAB>'
-let g:coc_snippet_prev = '<S-TAB>'
 let g:coc_status_error_sign = '•'
 let g:coc_status_warning_sign = '•'
 let g:coc_global_extensions =['coc-html','coc-css','coc-snippets','coc-prettier','coc-eslint','coc-emmet','coc-tsserver','coc-pairs','coc-json','coc-python','coc-imselect','coc-highlight','coc-git','coc-emoji','coc-lists','coc-post','coc-stylelint','coc-yaml','coc-template','coc-tabnine','coc-marketplace','coc-gitignore','coc-yank','coc-explorer','coc-go']
@@ -48,23 +46,6 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-
-" ------ sillybun/vim-repl
-"  调试:REPLDebug 断点:REPLDebugStopAtCurrentLine 运行代码:REPLPDBC
-"  单步执行:REPLPDBN 进入函数:REPLPDBS 进入上一个栈:REPLPDBU
-let g:repl_position = 3
-let g:repl_program = {
-            \   'python': 'python',
-            \   'default': 'zsh'
-            \   }
-let g:repl_predefine_python = {
-            \   'numpy': 'import numpy as np',
-            \   'matplotlib': 'from matplotlib import pyplot as plt'
-            \   }
-nnoremap <leader>rl :REPLToggle<Cr>
-autocmd Filetype python nnoremap <Leader>rld <Esc>:REPLDebugStopAtCurrentLine<Cr>
-autocmd Filetype python nnoremap <Leader>rln <Esc>:REPLPDBN<Cr>
-autocmd Filetype python nnoremap <Leader>rlb <Esc>:REPLPDBS<Cr>
 
 " ------ junegunn/vim-easy-align
 xmap ga <Plug>(EasyAlign)
@@ -240,15 +221,12 @@ noremap <Leader>hh <C-w>h
 noremap <Leader>jj <C-w>j
 noremap <Leader>kk <C-w>k
 noremap <Leader>ll <C-w>l
-noremap <Leader>vw <C-w>w
-map sr :set splitright<CR>:vsplit<CR>
-map sl :set nosplitright<CR>:vsplit<CR>
-map sk :set nosplitbelow<CR>:split<CR>
+noremap <Leader>ww <C-w>w
+map sl :set splitright<CR>:vsplit<CR>
 map sj :set splitbelow<CR>:split<CR>
 map svs <C-w>t<C-w>H                                  
 map svh <C-w>t<C-w>K                                  
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>rn :set relativenumber!<CR>                    "显示相对行号
 nnoremap <Leader>vc :edit $MYVIMRC<CR>                          "编辑vimrc文件
