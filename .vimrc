@@ -51,6 +51,9 @@ nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
+
+" 测试
+
 " ----- junegunn/fzf
 nnoremap <Leader>fl :Files<CR>
 nnoremap <Leader>fb :Buffers<CR>
