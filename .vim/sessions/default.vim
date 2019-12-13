@@ -94,7 +94,6 @@ map svs tH
 map sj :set splitbelow:split
 map sl :set splitright:vsplit
 map ss <Plug>(easymotion-s2)
-nnoremap <SNR>131_: :=v:count ? v:count : ''
 vnoremap <silent> <Plug>(coc-explorer-action-v->>) :call coc#rpc#request('doKeymap', ['explorer-action-v->>'])
 nnoremap <silent> <Plug>(coc-explorer-action-n->>) :call coc#rpc#request('doKeymap', ['explorer-action-n->>'])
 vnoremap <silent> <Plug>(coc-explorer-action-v-<<) :call coc#rpc#request('doKeymap', ['explorer-action-v-<<'])
@@ -180,6 +179,7 @@ vnoremap <silent> <Plug>(coc-explorer-action-v-*) :call coc#rpc#request('doKey
 nnoremap <silent> <Plug>(coc-explorer-action-n-*) :call coc#rpc#request('doKeymap', ['explorer-action-n-*'])
 nnoremap <silent> <Plug>(coc-explorer-action-n-j) :call coc#rpc#request('doKeymap', ['explorer-action-n-j'])
 nnoremap <silent> <Plug>(coc-explorer-action-n-k) :call coc#rpc#request('doKeymap', ['explorer-action-n-k'])
+nnoremap <SNR>129_: :=v:count ? v:count : ''
 xnoremap <silent> <Plug>(coc-git-chunk-outer) :call coc#rpc#request('doKeymap', ['git-chunk-outer'])
 onoremap <silent> <Plug>(coc-git-chunk-outer) :call coc#rpc#request('doKeymap', ['git-chunk-outer'])
 xnoremap <silent> <Plug>(coc-git-chunk-inner) :call coc#rpc#request('doKeymap', ['git-chunk-inner'])
@@ -281,7 +281,7 @@ vnoremap <Plug>(coc-codeaction-selected) :call       CocActionAsync('codeActio
 vnoremap <Plug>(coc-format-selected) :call       CocActionAsync('formatSelected',     visualmode())
 nnoremap <Plug>(coc-codelens-action) :call       CocActionAsync('codeLensAction')
 nnoremap <Plug>(coc-range-select) :call       CocAction('rangeSelect',     '', v:true)
-vnoremap <Plug>(coc-range-select-backword) :call       CocAction('rangeSelect',     visualmode(), v:false)
+vnoremap <Plug>(coc-range-select-backward) :call       CocAction('rangeSelect',     visualmode(), v:false)
 vnoremap <Plug>(coc-range-select) :call       CocAction('rangeSelect',     visualmode(), v:true)
 nmap <silent> <Plug>CommentaryUndo :echoerr "Change your <Plug>CommentaryUndo map to <Plug>Commentary<Plug>Commentary"
 nnoremap <silent> <Plug>(choosewin) :call choosewin#start(range(1, winnr('$')))
@@ -659,18 +659,18 @@ snoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 onoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 nnoremap <silent> <Plug>(startify-open-buffers) :call startify#open_buffers()
 inoremap  
-inoremap <silent> <expr> " coc#_insert_key('request', 'd6fa0da9-11a1-11ea-af50-1ffe0be5f637')
-inoremap <silent> <expr> ' coc#_insert_key('request', 'd6fa0da8-11a1-11ea-af50-1ffe0be5f637')
-inoremap <silent> <expr> ( coc#_insert_key('request', 'd6fa0da0-11a1-11ea-af50-1ffe0be5f637')
-inoremap <silent> <expr> ) coc#_insert_key('request', 'd6fa0da1-11a1-11ea-af50-1ffe0be5f637')
-inoremap <silent> <expr> < coc#_insert_key('request', 'd6fa0da6-11a1-11ea-af50-1ffe0be5f637')
-inoremap <silent> <expr> > coc#_insert_key('request', 'd6fa0da7-11a1-11ea-af50-1ffe0be5f637')
-inoremap <silent> <expr> [ coc#_insert_key('request', 'd6fa0da2-11a1-11ea-af50-1ffe0be5f637')
-inoremap <silent> <expr> ] coc#_insert_key('request', 'd6fa0da3-11a1-11ea-af50-1ffe0be5f637')
-inoremap <silent> <expr> ` coc#_insert_key('request', 'd6fa0daa-11a1-11ea-af50-1ffe0be5f637')
+inoremap <silent> <expr> " coc#_insert_key('request', '1f914bf9-1d4b-11ea-8e15-9d41e2febe45')
+inoremap <silent> <expr> ' coc#_insert_key('request', '1f914bf8-1d4b-11ea-8e15-9d41e2febe45')
+inoremap <silent> <expr> ( coc#_insert_key('request', '1f914bf0-1d4b-11ea-8e15-9d41e2febe45')
+inoremap <silent> <expr> ) coc#_insert_key('request', '1f914bf1-1d4b-11ea-8e15-9d41e2febe45')
+inoremap <silent> <expr> < coc#_insert_key('request', '1f914bf6-1d4b-11ea-8e15-9d41e2febe45')
+inoremap <silent> <expr> > coc#_insert_key('request', '1f914bf7-1d4b-11ea-8e15-9d41e2febe45')
+inoremap <silent> <expr> [ coc#_insert_key('request', '1f914bf2-1d4b-11ea-8e15-9d41e2febe45')
+inoremap <silent> <expr> ] coc#_insert_key('request', '1f914bf3-1d4b-11ea-8e15-9d41e2febe45')
+inoremap <silent> <expr> ` coc#_insert_key('request', '1f914bfa-1d4b-11ea-8e15-9d41e2febe45')
 imap kj 
-inoremap <silent> <expr> { coc#_insert_key('request', 'd6fa0da4-11a1-11ea-af50-1ffe0be5f637')
-inoremap <silent> <expr> } coc#_insert_key('request', 'd6fa0da5-11a1-11ea-af50-1ffe0be5f637')
+inoremap <silent> <expr> { coc#_insert_key('request', '1f914bf4-1d4b-11ea-8e15-9d41e2febe45')
+inoremap <silent> <expr> } coc#_insert_key('request', '1f914bf5-1d4b-11ea-8e15-9d41e2febe45')
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -690,7 +690,7 @@ set laststatus=2
 set matchtime=1
 set nomodeline
 set ruler
-set runtimepath=~/.config/coc/extensions/node_modules/coc-snippets,~/.config/coc/extensions/node_modules/coc-explorer,~/.vim,~/dotfiles/.vim/pack/git-plugins/start/vista.vim,~/.vim/plugged/tequila-sunrise.vim,~/.vim/plugged/jellybeans.vim,~/.vim/plugged/vim-startify,~/.vim/plugged/tagbar,~/.vim/plugged/nerdtree,~/.vim/plugged/vim-airline,~/.vim/plugged/vim-airline-themes,~/.vim/plugged/vim-easymotion,~/.vim/plugged/vim-choosewin,~/.vim/plugged/rainbow,~/.vim/plugged/smartim,~/.vim/plugged/vim-interestingwords,~/.vim/plugged/far.vim,~/.vim/plugged/vim-indent-guides,~/.vim/plugged/vim-commentary,~/.vim/plugged/auto-pairs,~/.vim/plugged/vim-cursorword,~/.vim/plugged/coc.nvim,~/.vim/plugged/jedi-vim,~/.vim/plugged/vim-easy-align,~/.vim/plugged/vim-repl,~/.vim/plugged/ctrlsf.vim,~/.fzf,~/.vim/plugged/fzf.vim,~/.vim/plugged/LeaderF,~/.vim/plugged/vim-fugitive,~/.vim/plugged/vim-gitgutter,~/.vim/plugged/gv.vim,~/.vim/plugged/undotree,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/plugged/jedi-vim/after,~/.vim/plugged/ctrlsf.vim/after,~/.vim/after
+set runtimepath=~/.vim,~/.vim/plugged/tequila-sunrise.vim,~/.vim/plugged/jellybeans.vim,~/.vim/plugged/vim-startify,~/.vim/plugged/tagbar,~/.vim/plugged/nerdtree,~/.vim/plugged/vim-airline,~/.vim/plugged/vim-airline-themes,~/.vim/plugged/vim-easymotion,~/.vim/plugged/vim-choosewin,~/.vim/plugged/rainbow,~/.vim/plugged/smartim,~/.vim/plugged/vim-interestingwords,~/.vim/plugged/far.vim,~/.vim/plugged/vim-indent-guides,~/.vim/plugged/vim-commentary,~/.vim/plugged/auto-pairs,~/.vim/plugged/vim-cursorword,~/.vim/plugged/coc.nvim,~/.vim/plugged/jedi-vim,~/.vim/plugged/vim-easy-align,~/.vim/plugged/vim-repl,~/.vim/plugged/ctrlsf.vim,~/.fzf,~/.vim/plugged/fzf.vim,~/.vim/plugged/LeaderF,~/.vim/plugged/vim-fugitive,~/.vim/plugged/vim-gitgutter,~/.vim/plugged/gv.vim,~/.vim/plugged/undotree,~/.config/coc/extensions/node_modules/coc-explorer,~/dotfiles/.vim/pack/git-plugins/start/vista.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.config/coc/extensions/node_modules/coc-snippets,~/.vim/plugged/jedi-vim/after,~/.vim/plugged/ctrlsf.vim/after,~/.vim/after
 set scrolloff=6
 set shiftwidth=4
 set shortmess=filnxtToOI
@@ -715,6 +715,7 @@ set undofile
 set updatetime=30
 set virtualedit=block,onemore
 set whichwrap=b,s,<,>,h,l
+set window=33
 set nowritebackup
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
@@ -901,11 +902,11 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 10 - ((9 * winheight(0) + 15) / 30)
+let s:l = 3 - ((2 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-10
+3
 normal! 0
 lcd ~/dotfiles
 tabnext 1
