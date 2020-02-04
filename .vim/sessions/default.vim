@@ -94,7 +94,6 @@ map svs tH
 map sj :set splitbelow:split
 map sl :set splitright:vsplit
 map ss <Plug>(easymotion-s2)
-nnoremap <SNR>133_: :=v:count ? v:count : ''
 vnoremap <silent> <Plug>(coc-explorer-action-v->>) :call coc#rpc#request('doKeymap', ['explorer-action-v->>'])
 nnoremap <silent> <Plug>(coc-explorer-action-n->>) :call coc#rpc#request('doKeymap', ['explorer-action-n->>'])
 vnoremap <silent> <Plug>(coc-explorer-action-v-<<) :call coc#rpc#request('doKeymap', ['explorer-action-v-<<'])
@@ -190,10 +189,10 @@ nnoremap <silent> <Plug>(coc-git-commit) :call coc#rpc#notify('doKeymap', ['gi
 nnoremap <silent> <Plug>(coc-git-chunkinfo) :call coc#rpc#notify('doKeymap', ['git-chunkinfo'])
 nnoremap <silent> <Plug>(coc-git-prevchunk) :call coc#rpc#notify('doKeymap', ['git-prevchunk'])
 nnoremap <silent> <Plug>(coc-git-nextchunk) :call coc#rpc#notify('doKeymap', ['git-nextchunk'])
+vnoremap <silent> <Plug>(coc-snippets-select) :call coc#rpc#notify('doKeymap', ['snippets-select'])
 nnoremap <silent> <Plug>(coc-template) :call coc#rpc#notify('doKeymap', ['template'])
 nnoremap <silent> <Plug>(coc-template-bottom) :call coc#rpc#notify('doKeymap', ['template-bottom'])
 nnoremap <silent> <Plug>(coc-template-top) :call coc#rpc#notify('doKeymap', ['template-top'])
-vnoremap <silent> <Plug>(coc-snippets-select) :call coc#rpc#notify('doKeymap', ['snippets-select'])
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())
 nnoremap <silent> <Plug>GitGutterPreviewHunk :call gitgutter#utility#warn('please change your map <Plug>GitGutterPreviewHunk to <Plug>(GitGutterPreviewHunk)')
@@ -661,18 +660,18 @@ snoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 onoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 nnoremap <silent> <Plug>(startify-open-buffers) :call startify#open_buffers()
 inoremap  
-inoremap <silent> <expr> " coc#_insert_key('request', '58f90ee7-4704-11ea-adce-271a10badbd2')
-inoremap <silent> <expr> ' coc#_insert_key('request', '58f90ee6-4704-11ea-adce-271a10badbd2')
-inoremap <silent> <expr> ( coc#_insert_key('request', '58f8e7d0-4704-11ea-adce-271a10badbd2')
-inoremap <silent> <expr> ) coc#_insert_key('request', '58f8e7d1-4704-11ea-adce-271a10badbd2')
-inoremap <silent> <expr> < coc#_insert_key('request', '58f90ee4-4704-11ea-adce-271a10badbd2')
-inoremap <silent> <expr> > coc#_insert_key('request', '58f90ee5-4704-11ea-adce-271a10badbd2')
-inoremap <silent> <expr> [ coc#_insert_key('request', '58f90ee0-4704-11ea-adce-271a10badbd2')
-inoremap <silent> <expr> ] coc#_insert_key('request', '58f90ee1-4704-11ea-adce-271a10badbd2')
-inoremap <silent> <expr> ` coc#_insert_key('request', '58f90ee8-4704-11ea-adce-271a10badbd2')
+inoremap <silent> <expr> " coc#_insert_key('request', '9925a092-4705-11ea-a50f-adbf9091389b')
+inoremap <silent> <expr> ' coc#_insert_key('request', '9925a091-4705-11ea-a50f-adbf9091389b')
+inoremap <silent> <expr> ( coc#_insert_key('request', '99255270-4705-11ea-a50f-adbf9091389b')
+inoremap <silent> <expr> ) coc#_insert_key('request', '99255271-4705-11ea-a50f-adbf9091389b')
+inoremap <silent> <expr> < coc#_insert_key('request', '99255276-4705-11ea-a50f-adbf9091389b')
+inoremap <silent> <expr> > coc#_insert_key('request', '9925a090-4705-11ea-a50f-adbf9091389b')
+inoremap <silent> <expr> [ coc#_insert_key('request', '99255272-4705-11ea-a50f-adbf9091389b')
+inoremap <silent> <expr> ] coc#_insert_key('request', '99255273-4705-11ea-a50f-adbf9091389b')
+inoremap <silent> <expr> ` coc#_insert_key('request', '9925a093-4705-11ea-a50f-adbf9091389b')
 imap kj 
-inoremap <silent> <expr> { coc#_insert_key('request', '58f90ee2-4704-11ea-adce-271a10badbd2')
-inoremap <silent> <expr> } coc#_insert_key('request', '58f90ee3-4704-11ea-adce-271a10badbd2')
+inoremap <silent> <expr> { coc#_insert_key('request', '99255274-4705-11ea-a50f-adbf9091389b')
+inoremap <silent> <expr> } coc#_insert_key('request', '99255275-4705-11ea-a50f-adbf9091389b')
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -692,7 +691,7 @@ set laststatus=2
 set matchtime=1
 set nomodeline
 set ruler
-set runtimepath=~/.vim,~/.vim/plugged/tequila-sunrise.vim,~/.vim/plugged/jellybeans.vim,~/.vim/plugged/vim-startify,~/.vim/plugged/tagbar,~/.vim/plugged/nerdtree,~/.vim/plugged/vim-airline,~/.vim/plugged/vim-airline-themes,~/.vim/plugged/vim-easymotion,~/.vim/plugged/vim-choosewin,~/.vim/plugged/rainbow,~/.vim/plugged/smartim,~/.vim/plugged/vim-interestingwords,~/.vim/plugged/far.vim,~/.vim/plugged/vim-indent-guides,~/.vim/plugged/vim-commentary,~/.vim/plugged/auto-pairs,~/.vim/plugged/vim-cursorword,~/.vim/plugged/coc.nvim,~/.vim/plugged/jedi-vim,~/.vim/plugged/vim-easy-align,~/.vim/plugged/vim-repl,~/.vim/plugged/ctrlsf.vim,~/.fzf,~/.vim/plugged/fzf.vim,~/.vim/plugged/LeaderF,~/.vim/plugged/vim-fugitive,~/.vim/plugged/vim-gitgutter,~/.vim/plugged/gv.vim,~/.vim/plugged/undotree,~/.config/coc/extensions/node_modules/coc-explorer,~/dotfiles/.vim/pack/git-plugins/start/vista.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.config/coc/extensions/node_modules/coc-snippets,~/.vim/plugged/jedi-vim/after,~/.vim/plugged/ctrlsf.vim/after,~/.vim/after
+set runtimepath=~/.config/coc/extensions/node_modules/coc-explorer,~/.vim,~/dotfiles/.vim/pack/git-plugins/start/vista.vim,~/.vim/plugged/tequila-sunrise.vim,~/.vim/plugged/jellybeans.vim,~/.vim/plugged/vim-startify,~/.vim/plugged/tagbar,~/.vim/plugged/nerdtree,~/.vim/plugged/vim-airline,~/.vim/plugged/vim-airline-themes,~/.vim/plugged/vim-easymotion,~/.vim/plugged/vim-choosewin,~/.vim/plugged/rainbow,~/.vim/plugged/smartim,~/.vim/plugged/vim-interestingwords,~/.vim/plugged/far.vim,~/.vim/plugged/vim-indent-guides,~/.vim/plugged/vim-commentary,~/.vim/plugged/auto-pairs,~/.vim/plugged/vim-cursorword,~/.vim/plugged/coc.nvim,~/.vim/plugged/jedi-vim,~/.vim/plugged/vim-easy-align,~/.vim/plugged/vim-repl,~/.vim/plugged/ctrlsf.vim,~/.fzf,~/.vim/plugged/fzf.vim,~/.vim/plugged/LeaderF,~/.vim/plugged/vim-fugitive,~/.vim/plugged/vim-gitgutter,~/.vim/plugged/gv.vim,~/.vim/plugged/undotree,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/plugged/jedi-vim/after,~/.vim/plugged/ctrlsf.vim/after,~/.vim/after,~/.config/coc/extensions/node_modules/coc-snippets
 set scrolloff=6
 set shiftwidth=4
 set shortmess=filnxtToOI
@@ -721,15 +720,16 @@ set nowritebackup
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/dotfiles
+cd ~/
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 .vimrc
+badd +0 .zshrc
 argglobal
 silent! argdel *
-edit .vimrc
+$argadd .zshrc
+edit .zshrc
 set splitbelow splitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
@@ -754,19 +754,7 @@ inoremap <buffer> <silent> û =AutoPairsMoveCharacter('{')
 inoremap <buffer> <silent> Ý =AutoPairsMoveCharacter(']')
 inoremap <buffer> <silent> Û =AutoPairsMoveCharacter('[')
 nmap <buffer> [c <Plug>(GitGutterPrevHunk)
-vnoremap <buffer> <silent> [" :exe "normal! gv"|call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
-nnoremap <buffer> <silent> [" :call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
-vnoremap <buffer> <silent> [] m':exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "bW")
-nnoremap <buffer> <silent> [] m':call search('^\s*endf*\%[unction]\>', "bW")
-vnoremap <buffer> <silent> [[ m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "bW")
-nnoremap <buffer> <silent> [[ m':call search('^\s*fu\%[nction]\>', "bW")
 nmap <buffer> ]c <Plug>(GitGutterNextHunk)
-vnoremap <buffer> <silent> ]" :exe "normal! gv"|call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
-nnoremap <buffer> <silent> ]" :call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
-vnoremap <buffer> <silent> ][ m':exe "normal! gv"|call search('^\s*endf*\%[unction]\>', "W")
-nnoremap <buffer> <silent> ][ m':call search('^\s*endf*\%[unction]\>', "W")
-vnoremap <buffer> <silent> ]] m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "W")
-nnoremap <buffer> <silent> ]] m':call search('^\s*fu\%[nction]\>', "W")
 xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)
 omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
 xmap <buffer> ic <Plug>(GitGutterTextObjectInnerVisual)
@@ -802,8 +790,8 @@ setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=sO:\"\ -,mO:\"\ \ ,eO:\"\",:\"
-setlocal commentstring=\"%s
+setlocal comments=:#
+setlocal commentstring=#\ %s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -820,8 +808,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'vim'
-setlocal filetype=vim
+if &filetype != 'zsh'
+setlocal filetype=zsh
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -843,11 +831,11 @@ setlocal iminsert=0
 setlocal imsearch=-1
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=GetVimIndent()
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,=end,=else,=cat,=fina,=END,0\\
+setlocal indentexpr=GetShIndent()
+setlocal indentkeys=0{,0},!^F,o,O,e,0=then,0=do,0=else,0=elif,0=fi,0=esac,0=done,0=end,),0=;;,0=;&,0=fin,0=fil,0=fip,0=fir,0=fix
 setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,#
-setlocal keywordprg=:help
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
 setlocal nolinebreak
 setlocal nolisp
 setlocal lispwords=
@@ -875,7 +863,7 @@ setlocal shiftwidth=4
 setlocal noshortname
 set signcolumn=yes
 setlocal signcolumn=yes
-setlocal smartindent
+setlocal nosmartindent
 setlocal softtabstop=4
 setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
@@ -885,8 +873,8 @@ setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != 'vim'
-setlocal syntax=vim
+if &syntax != 'zsh'
+setlocal syntax=zsh
 endif
 setlocal tabstop=4
 setlocal tagcase=
@@ -903,13 +891,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 55 - ((23 * winheight(0) + 15) / 30)
+let s:l = 1 - ((0 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-55
-normal! 0
-lcd ~/dotfiles
+1
+normal! 04|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
