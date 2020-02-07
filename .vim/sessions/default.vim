@@ -95,6 +95,7 @@ map svs tH
 map sj :set splitbelow:split
 map sl :set splitright:vsplit
 map ss <Plug>(easymotion-s2)
+nnoremap <SNR>130_: :=v:count ? v:count : ''
 vnoremap <silent> <Plug>(coc-explorer-action-v->>) :call coc#rpc#request('doKeymap', ['explorer-action-v->>'])
 nnoremap <silent> <Plug>(coc-explorer-action-n->>) :call coc#rpc#request('doKeymap', ['explorer-action-n->>'])
 vnoremap <silent> <Plug>(coc-explorer-action-v-<<) :call coc#rpc#request('doKeymap', ['explorer-action-v-<<'])
@@ -666,18 +667,18 @@ vmap <D-c> "*y
 vmap <D-v> "-d"*P
 nmap <D-v> "*P
 inoremap  
-inoremap <silent> <expr> " coc#_insert_key('request', 'fa26b6c9-49b9-11ea-966e-9961b5898389')
-inoremap <silent> <expr> ' coc#_insert_key('request', 'fa26b6c8-49b9-11ea-966e-9961b5898389')
-inoremap <silent> <expr> ( coc#_insert_key('request', 'fa26b6c0-49b9-11ea-966e-9961b5898389')
-inoremap <silent> <expr> ) coc#_insert_key('request', 'fa26b6c1-49b9-11ea-966e-9961b5898389')
-inoremap <silent> <expr> < coc#_insert_key('request', 'fa26b6c6-49b9-11ea-966e-9961b5898389')
-inoremap <silent> <expr> > coc#_insert_key('request', 'fa26b6c7-49b9-11ea-966e-9961b5898389')
-inoremap <silent> <expr> [ coc#_insert_key('request', 'fa26b6c2-49b9-11ea-966e-9961b5898389')
-inoremap <silent> <expr> ] coc#_insert_key('request', 'fa26b6c3-49b9-11ea-966e-9961b5898389')
-inoremap <silent> <expr> ` coc#_insert_key('request', 'fa26ddd0-49b9-11ea-966e-9961b5898389')
+inoremap <silent> <expr> " coc#_insert_key('request', '05b3cc19-49bc-11ea-b544-732c72abdd19')
+inoremap <silent> <expr> ' coc#_insert_key('request', '05b3cc18-49bc-11ea-b544-732c72abdd19')
+inoremap <silent> <expr> ( coc#_insert_key('request', '05b3cc10-49bc-11ea-b544-732c72abdd19')
+inoremap <silent> <expr> ) coc#_insert_key('request', '05b3cc11-49bc-11ea-b544-732c72abdd19')
+inoremap <silent> <expr> < coc#_insert_key('request', '05b3cc16-49bc-11ea-b544-732c72abdd19')
+inoremap <silent> <expr> > coc#_insert_key('request', '05b3cc17-49bc-11ea-b544-732c72abdd19')
+inoremap <silent> <expr> [ coc#_insert_key('request', '05b3cc12-49bc-11ea-b544-732c72abdd19')
+inoremap <silent> <expr> ] coc#_insert_key('request', '05b3cc13-49bc-11ea-b544-732c72abdd19')
+inoremap <silent> <expr> ` coc#_insert_key('request', '05b3cc1a-49bc-11ea-b544-732c72abdd19')
 imap kj 
-inoremap <silent> <expr> { coc#_insert_key('request', 'fa26b6c4-49b9-11ea-966e-9961b5898389')
-inoremap <silent> <expr> } coc#_insert_key('request', 'fa26b6c5-49b9-11ea-966e-9961b5898389')
+inoremap <silent> <expr> { coc#_insert_key('request', '05b3cc14-49bc-11ea-b544-732c72abdd19')
+inoremap <silent> <expr> } coc#_insert_key('request', '05b3cc15-49bc-11ea-b544-732c72abdd19')
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -772,6 +773,7 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
+edit .zshrc
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -779,32 +781,13 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-enew
 let s:cpo_save=&cpo
 set cpo&vim
 inoremap <buffer> <silent> <BS> =AutoPairsDelete()
-nnoremap <buffer> <nowait> <silent>  :call startify#open_buffers()
-nnoremap <buffer> <nowait> <silent> 0 :call startify#open_buffers(19)
-nnoremap <buffer> <nowait> <silent> 15 :call startify#open_buffers(37)
-nnoremap <buffer> <nowait> <silent> 14 :call startify#open_buffers(36)
-nnoremap <buffer> <nowait> <silent> 13 :call startify#open_buffers(35)
-nnoremap <buffer> <nowait> <silent> 12 :call startify#open_buffers(34)
-nnoremap <buffer> <nowait> <silent> 11 :call startify#open_buffers(33)
-nnoremap <buffer> <nowait> <silent> 10 :call startify#open_buffers(32)
-nnoremap <buffer> <nowait> <silent> 1 :call startify#open_buffers(20)
-nnoremap <buffer> <nowait> <silent> 2 :call startify#open_buffers(21)
-nnoremap <buffer> <nowait> <silent> 3 :call startify#open_buffers(22)
-nnoremap <buffer> <nowait> <silent> 4 :call startify#open_buffers(23)
-nnoremap <buffer> <nowait> <silent> 5 :call startify#open_buffers(24)
-nnoremap <buffer> <nowait> <silent> 6 :call startify#open_buffers(25)
-nnoremap <buffer> <nowait> <silent> 7 :call startify#open_buffers(26)
-nnoremap <buffer> <nowait> <silent> 8 :call startify#open_buffers(27)
-nnoremap <buffer> <nowait> <silent> 9 :call startify#open_buffers(28)
 nmap <buffer> ;hp <Plug>(GitGutterPreviewHunk)
 nmap <buffer> ;hu <Plug>(GitGutterUndoHunk)
 nmap <buffer> ;hs <Plug>(GitGutterStageHunk)
 xmap <buffer> ;hs <Plug>(GitGutterStageHunk)
-nnoremap <buffer> <nowait> <silent> B :call startify#set_batchmode('B')
 inoremap <buffer> <silent> § =AutoPairsMoveCharacter('''')
 inoremap <buffer> <silent> ¢ =AutoPairsMoveCharacter('"')
 inoremap <buffer> <silent> © =AutoPairsMoveCharacter(')')
@@ -817,27 +800,12 @@ inoremap <buffer> <silent> ý =AutoPairsMoveCharacter('}')
 inoremap <buffer> <silent> û =AutoPairsMoveCharacter('{')
 inoremap <buffer> <silent> Ý =AutoPairsMoveCharacter(']')
 inoremap <buffer> <silent> Û =AutoPairsMoveCharacter('[')
-nnoremap <buffer> <expr> N 'j '[v:searchforward].'N'
-nnoremap <buffer> <nowait> <silent> S :call startify#set_batchmode('S')
-nnoremap <buffer> <nowait> <silent> T :call startify#set_batchmode('T')
-nnoremap <buffer> <nowait> <silent> V :call startify#set_batchmode('V')
 nmap <buffer> [c <Plug>(GitGutterPrevHunk)
 nmap <buffer> ]c <Plug>(GitGutterNextHunk)
 xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)
 omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
-nnoremap <buffer> <nowait> <silent> b :call startify#set_mark('B')
-nnoremap <buffer> <nowait> <silent> e :call startify#open_buffers(15)
-nnoremap <buffer> <nowait> <silent> i :enew | startinsert
 xmap <buffer> ic <Plug>(GitGutterTextObjectInnerVisual)
 omap <buffer> ic <Plug>(GitGutterTextObjectInnerPending)
-nnoremap <buffer> <expr> n ' j'[v:searchforward].'n'
-nnoremap <buffer> <nowait> <silent> q :call startify#open_buffers(39)
-nnoremap <buffer> <nowait> <silent> s :call startify#set_mark('S')
-nnoremap <buffer> <nowait> <silent> t :call startify#set_mark('T')
-nnoremap <buffer> <nowait> <silent> v :call startify#set_mark('V')
-nnoremap <buffer> <nowait> <silent> <MiddleMouse> :enew | execute 'normal! "'.(v:register=='"'?'*':v:register).'gp'
-nnoremap <buffer> <nowait> <silent> <2-LeftMouse> :call startify#open_buffers()
-nnoremap <buffer> <nowait> <silent> <Insert> :enew | startinsert
 inoremap <buffer> <silent>  =AutoPairsDelete()
 inoremap <buffer> <silent>   =AutoPairsSpace()
 inoremap <buffer> <silent> " =AutoPairsInsert('"')
@@ -861,16 +829,16 @@ setlocal balloonexpr=
 setlocal nobinary
 setlocal nobreakindent
 setlocal breakindentopt=
-setlocal bufhidden=wipe
-setlocal nobuflisted
+setlocal bufhidden=
+setlocal buflisted
 setlocal buftype=
 setlocal nocindent
 setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=/*%s*/
+setlocal comments=:#
+setlocal commentstring=#\ %s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -880,15 +848,15 @@ setlocal cryptmethod=
 setlocal nocursorbind
 setlocal nocursorcolumn
 set cursorline
-setlocal nocursorline
+setlocal cursorline
 setlocal define=
 setlocal dictionary=
 setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'startify'
-setlocal filetype=startify
+if &filetype != 'zsh'
+setlocal filetype=zsh
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -902,7 +870,7 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=tcq
+setlocal formatoptions=croql
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal formatprg=
 setlocal grepprg=
@@ -910,8 +878,8 @@ setlocal iminsert=0
 setlocal imsearch=-1
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal indentexpr=GetShIndent()
+setlocal indentkeys=0{,0},0),0],!^F,o,O,e,0=then,0=do,0=else,0=elif,0=fi,0=esac,0=done,0=end,),0=;;,0=;&,0=fin,0=fil,0=fip,0=fir,0=fix
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255
 setlocal keywordprg=
@@ -921,12 +889,12 @@ setlocal lispwords=
 setlocal nolist
 setlocal makeencoding=
 setlocal makeprg=
-setlocal matchpairs=
+setlocal matchpairs=(:),{:},[:]
 setlocal modeline
-setlocal nomodifiable
+setlocal modifiable
 setlocal nrformats=bin,octal,hex
 set number
-setlocal nonumber
+setlocal number
 setlocal numberwidth=4
 setlocal omnifunc=
 setlocal path=
@@ -943,8 +911,8 @@ setlocal shiftwidth=4
 setlocal noshortname
 setlocal sidescrolloff=-1
 set signcolumn=yes
-setlocal signcolumn=no
-setlocal smartindent
+setlocal signcolumn=yes
+setlocal nosmartindent
 setlocal softtabstop=4
 setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
@@ -954,8 +922,8 @@ setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != 'startify'
-setlocal syntax=startify
+if &syntax != 'zsh'
+setlocal syntax=zsh
 endif
 setlocal tabstop=4
 setlocal tagcase=
@@ -974,7 +942,16 @@ setlocal nowinfixwidth
 set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 47 - ((33 * winheight(0) + 20) / 41)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+47
+normal! 015|
+lcd ~/dotfiles
 tabnext 1
+badd +0 ~/dotfiles/.zshrc
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
