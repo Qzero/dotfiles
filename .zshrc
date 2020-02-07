@@ -34,6 +34,7 @@ if [[ ! -d "${ZPLUG_HOME}" ]]; then
   fi
   export ZPLUG_HOME=~/.zplug
 fi
+
 if [[ -d "${ZPLUG_HOME}" ]]; then
   source "${ZPLUG_HOME}/init.zsh"
 fi
