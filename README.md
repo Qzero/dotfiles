@@ -1,10 +1,15 @@
 # 必装
+
 ## git 
+
 ## vim 
 install ctags ack
+
 ## zsh & ohmyzsh & zplug
 Oh-my-zsh:
+
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 ## tmux & tpm
@@ -12,9 +17,11 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ## autojump
 Mac:
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh  ]] && . $(brew
---prefix)/etc/profile.d/autojump.sh
+
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh  ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
 Linux:
+
 . /usr/share/autojump/autojump.sh
 
 # 仓库地址
