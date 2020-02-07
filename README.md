@@ -1,8 +1,13 @@
-# 使用方法
-必装：git vim zsh ohmyzsh tmux
-
-### vim
+# 必装
+## git 
+## vim 
 install ctags ack
+## zsh & ohmyzsh & zplug
+## tmux & tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+
+## autojump
 
 ### zsh & oh my zsh
 
@@ -12,15 +17,11 @@ sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 
 切换bash：chsh -s /bin/zsh
 
-### tmux & tpm
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
 
 # 仓库地址
 https://github.com/junegunn/vim-plug
 
 ## 备份&还原
-
 ### 备份
 - 1，创建目标文件夹
 - 2，移动文件创建软链接
