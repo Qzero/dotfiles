@@ -44,6 +44,7 @@ zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-completions', defer:2
 zplug 'zsh-users/zsh-history-substring-search'
 zplug 'zsh-users/zsh-syntax-highlighting', defer:2
+zplug "rupa/z"
 
 if ! zplug check; then
   zplug install
@@ -54,3 +55,5 @@ zplug load
 # source your own shrc file if exists
 [ -f ~/.env.sh ] && source ~/.env.sh
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
