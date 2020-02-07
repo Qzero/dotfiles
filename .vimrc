@@ -60,20 +60,20 @@ nnoremap <Leader>fl :Files<CR>
 nnoremap <Leader>fb :Buffers<CR>
 nnoremap <Leader>fe :Lines<Space>
 
+" ------ Yggdroot/LeaderF
+let g:Lf_ReverseOrder = 0   "自下而上显示
+nnoremap <leader>lf :LeaderfFile<CR>
+nnoremap <leader>lb :LeaderfBuffer<CR>
+nnoremap <leader>lm :LeaderfMru<CR>
+nnoremap <leader>lft :LeaderfFunction<CR>
+nnoremap <leader>le :LeaderfLine<CR>
+
 " ------ dyng/ctrlsf  #install -y ack-grep 依赖ack/ag/pt/rg之一
 nnoremap <Leader>cf :CtrlSF<Space>
 nnoremap <Leader>cfc :CtrlSFClose<CR>
 nmap <silent><leader>cfs <Plug>CtrlSFCCwordPath<CR>
 let g:ctrlsf_ackprg = 'ack'     " 搜索引擎
 let g:ctrlsf_position = "right" " 左右打开Linux用let g:ctrlsf_open_left = 0
-
-" ------ Yggdroot/LeaderF
-let g:Lf_ReverseOrder = 1   "自下而上显示
-nnoremap <leader>lf :LeaderfFile<CR>
-nnoremap <leader>lb :LeaderfBuffer<CR>
-nnoremap <leader>lm :LeaderfMru<CR>
-nnoremap <leader>lft :LeaderfFunction<CR>
-nnoremap <leader>le :LeaderfLine<CR>
 
 " ------ Git相关
 " vim-fugitive
