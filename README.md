@@ -19,8 +19,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # 仓库地址
 https://github.com/junegunn/vim-plug
 
-----------------------
-
 ## 备份&还原
 
 ### 备份
