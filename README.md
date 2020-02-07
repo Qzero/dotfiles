@@ -5,23 +5,21 @@
 install ctags ack
 
 ### zsh & oh my zsh
-curl: 
+
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-wget:
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 切换bash：chsh -s /bin/zsh
 
-the fuck命令行纠错工具
-- sudo apt update
-- sudo apt install python3-dev python3-pip python3-setuptools
-- sudo pip3 install thefuck
-- sudo apt-get install tree
-
 ### tmux & tpm
-github:
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+
+# 仓库地址
+https://github.com/junegunn/vim-plug
+
+----------------------
 
 ## 备份&还原
 
