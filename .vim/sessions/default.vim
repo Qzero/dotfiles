@@ -661,18 +661,18 @@ snoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 onoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 nnoremap <silent> <Plug>(startify-open-buffers) :call startify#open_buffers()
 inoremap  
-inoremap <silent> <expr> " coc#_insert_key('request', 'bae1a749-49aa-11ea-8f35-0d45d1d506d4')
-inoremap <silent> <expr> ' coc#_insert_key('request', 'bae1a748-49aa-11ea-8f35-0d45d1d506d4')
-inoremap <silent> <expr> ( coc#_insert_key('request', 'bae1a740-49aa-11ea-8f35-0d45d1d506d4')
-inoremap <silent> <expr> ) coc#_insert_key('request', 'bae1a741-49aa-11ea-8f35-0d45d1d506d4')
-inoremap <silent> <expr> < coc#_insert_key('request', 'bae1a746-49aa-11ea-8f35-0d45d1d506d4')
-inoremap <silent> <expr> > coc#_insert_key('request', 'bae1a747-49aa-11ea-8f35-0d45d1d506d4')
-inoremap <silent> <expr> [ coc#_insert_key('request', 'bae1a742-49aa-11ea-8f35-0d45d1d506d4')
-inoremap <silent> <expr> ] coc#_insert_key('request', 'bae1a743-49aa-11ea-8f35-0d45d1d506d4')
-inoremap <silent> <expr> ` coc#_insert_key('request', 'bae1a74a-49aa-11ea-8f35-0d45d1d506d4')
+inoremap <silent> <expr> " coc#_insert_key('request', '9dd127a9-49c0-11ea-a0b1-35d2a596c287')
+inoremap <silent> <expr> ' coc#_insert_key('request', '9dd127a8-49c0-11ea-a0b1-35d2a596c287')
+inoremap <silent> <expr> ( coc#_insert_key('request', '9dd127a0-49c0-11ea-a0b1-35d2a596c287')
+inoremap <silent> <expr> ) coc#_insert_key('request', '9dd127a1-49c0-11ea-a0b1-35d2a596c287')
+inoremap <silent> <expr> < coc#_insert_key('request', '9dd127a6-49c0-11ea-a0b1-35d2a596c287')
+inoremap <silent> <expr> > coc#_insert_key('request', '9dd127a7-49c0-11ea-a0b1-35d2a596c287')
+inoremap <silent> <expr> [ coc#_insert_key('request', '9dd127a2-49c0-11ea-a0b1-35d2a596c287')
+inoremap <silent> <expr> ] coc#_insert_key('request', '9dd127a3-49c0-11ea-a0b1-35d2a596c287')
+inoremap <silent> <expr> ` coc#_insert_key('request', '9dd127aa-49c0-11ea-a0b1-35d2a596c287')
 imap kj 
-inoremap <silent> <expr> { coc#_insert_key('request', 'bae1a744-49aa-11ea-8f35-0d45d1d506d4')
-inoremap <silent> <expr> } coc#_insert_key('request', 'bae1a745-49aa-11ea-8f35-0d45d1d506d4')
+inoremap <silent> <expr> { coc#_insert_key('request', '9dd127a4-49c0-11ea-a0b1-35d2a596c287')
+inoremap <silent> <expr> } coc#_insert_key('request', '9dd127a5-49c0-11ea-a0b1-35d2a596c287')
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -891,12 +891,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 50 - ((39 * winheight(0) + 20) / 40)
+let s:l = 9 - ((8 * winheight(0) + 20) / 40)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-50
-normal! 02|
+9
+normal! 0
 lcd ~/dotfiles
 tabnext 1
 if exists('s:wipebuf')
