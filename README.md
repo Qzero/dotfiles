@@ -6,6 +6,7 @@
 install ctags ack
 
 ## zsh & ohmyzsh & zplug
+
 Oh-my-zsh:
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -13,9 +14,11 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 ## tmux & tpm
+
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ## autojump
+
 Mac:
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh  ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
