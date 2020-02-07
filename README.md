@@ -27,6 +27,8 @@ Linux:
 
 . /usr/share/autojump/autojump.sh
 
+## ranger
+
 # 仓库地址
 https://github.com/junegunn/vim-plug
 

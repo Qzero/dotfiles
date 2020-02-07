@@ -12,8 +12,7 @@ inoremap <expr> <Plug>(fzf-complete-file) fzf#vim#complete#path("find . -path '*
 inoremap <expr> <Plug>(fzf-complete-path) fzf#vim#complete#path("find . -path '*/\.*' -prune -o -print | sed '1d;s:^..::'")
 inoremap <expr> <Plug>(fzf-complete-word) fzf#vim#complete#word()
 inoremap <silent> <Plug>CocRefresh =coc#_complete()
-inoremap <silent> <SNR>49_AutoPairsReturn =AutoPairsReturn()
-map! <D-v> *
+inoremap <silent> <SNR>51_AutoPairsReturn =AutoPairsReturn()
 nnoremap  :bprevious:bdelete #
 nnoremap  :bn
 nnoremap  :bp
@@ -95,7 +94,6 @@ map svs tH
 map sj :set splitbelow:split
 map sl :set splitright:vsplit
 map ss <Plug>(easymotion-s2)
-nnoremap <SNR>130_: :=v:count ? v:count : ''
 vnoremap <silent> <Plug>(coc-explorer-action-v->>) :call coc#rpc#request('doKeymap', ['explorer-action-v->>'])
 nnoremap <silent> <Plug>(coc-explorer-action-n->>) :call coc#rpc#request('doKeymap', ['explorer-action-n->>'])
 vnoremap <silent> <Plug>(coc-explorer-action-v-<<) :call coc#rpc#request('doKeymap', ['explorer-action-v-<<'])
@@ -661,39 +659,19 @@ nnoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 snoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 onoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 nnoremap <silent> <Plug>(startify-open-buffers) :call startify#open_buffers()
-vmap <BS> "-d
-vmap <D-x> "*d
-vmap <D-c> "*y
-vmap <D-v> "-d"*P
-nmap <D-v> "*P
 inoremap  
-<<<<<<< HEAD
-inoremap <silent> <expr> " coc#_insert_key('request', '9dd127a9-49c0-11ea-a0b1-35d2a596c287')
-inoremap <silent> <expr> ' coc#_insert_key('request', '9dd127a8-49c0-11ea-a0b1-35d2a596c287')
-inoremap <silent> <expr> ( coc#_insert_key('request', '9dd127a0-49c0-11ea-a0b1-35d2a596c287')
-inoremap <silent> <expr> ) coc#_insert_key('request', '9dd127a1-49c0-11ea-a0b1-35d2a596c287')
-inoremap <silent> <expr> < coc#_insert_key('request', '9dd127a6-49c0-11ea-a0b1-35d2a596c287')
-inoremap <silent> <expr> > coc#_insert_key('request', '9dd127a7-49c0-11ea-a0b1-35d2a596c287')
-inoremap <silent> <expr> [ coc#_insert_key('request', '9dd127a2-49c0-11ea-a0b1-35d2a596c287')
-inoremap <silent> <expr> ] coc#_insert_key('request', '9dd127a3-49c0-11ea-a0b1-35d2a596c287')
-inoremap <silent> <expr> ` coc#_insert_key('request', '9dd127aa-49c0-11ea-a0b1-35d2a596c287')
+inoremap <silent> <expr> " coc#_insert_key('request', 'adce5238-49cb-11ea-aad4-43379fbd543a')
+inoremap <silent> <expr> ' coc#_insert_key('request', 'adce5237-49cb-11ea-aad4-43379fbd543a')
+inoremap <silent> <expr> ( coc#_insert_key('request', 'adcdb5f0-49cb-11ea-aad4-43379fbd543a')
+inoremap <silent> <expr> ) coc#_insert_key('request', 'adce5230-49cb-11ea-aad4-43379fbd543a')
+inoremap <silent> <expr> < coc#_insert_key('request', 'adce5235-49cb-11ea-aad4-43379fbd543a')
+inoremap <silent> <expr> > coc#_insert_key('request', 'adce5236-49cb-11ea-aad4-43379fbd543a')
+inoremap <silent> <expr> [ coc#_insert_key('request', 'adce5231-49cb-11ea-aad4-43379fbd543a')
+inoremap <silent> <expr> ] coc#_insert_key('request', 'adce5232-49cb-11ea-aad4-43379fbd543a')
+inoremap <silent> <expr> ` coc#_insert_key('request', 'adce5239-49cb-11ea-aad4-43379fbd543a')
 imap kj 
-inoremap <silent> <expr> { coc#_insert_key('request', '9dd127a4-49c0-11ea-a0b1-35d2a596c287')
-inoremap <silent> <expr> } coc#_insert_key('request', '9dd127a5-49c0-11ea-a0b1-35d2a596c287')
-=======
-inoremap <silent> <expr> " coc#_insert_key('request', '05b3cc19-49bc-11ea-b544-732c72abdd19')
-inoremap <silent> <expr> ' coc#_insert_key('request', '05b3cc18-49bc-11ea-b544-732c72abdd19')
-inoremap <silent> <expr> ( coc#_insert_key('request', '05b3cc10-49bc-11ea-b544-732c72abdd19')
-inoremap <silent> <expr> ) coc#_insert_key('request', '05b3cc11-49bc-11ea-b544-732c72abdd19')
-inoremap <silent> <expr> < coc#_insert_key('request', '05b3cc16-49bc-11ea-b544-732c72abdd19')
-inoremap <silent> <expr> > coc#_insert_key('request', '05b3cc17-49bc-11ea-b544-732c72abdd19')
-inoremap <silent> <expr> [ coc#_insert_key('request', '05b3cc12-49bc-11ea-b544-732c72abdd19')
-inoremap <silent> <expr> ] coc#_insert_key('request', '05b3cc13-49bc-11ea-b544-732c72abdd19')
-inoremap <silent> <expr> ` coc#_insert_key('request', '05b3cc1a-49bc-11ea-b544-732c72abdd19')
-imap kj 
-inoremap <silent> <expr> { coc#_insert_key('request', '05b3cc14-49bc-11ea-b544-732c72abdd19')
-inoremap <silent> <expr> } coc#_insert_key('request', '05b3cc15-49bc-11ea-b544-732c72abdd19')
->>>>>>> 8234c869fa71b70a1e3af33b656913f335398e3d
+inoremap <silent> <expr> { coc#_insert_key('request', 'adce5233-49cb-11ea-aad4-43379fbd543a')
+inoremap <silent> <expr> } coc#_insert_key('request', 'adce5234-49cb-11ea-aad4-43379fbd543a')
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -701,7 +679,6 @@ set autoread
 set background=dark
 set backspace=2
 set belloff=all
-set clipboard=unnamed
 set cmdheight=2
 set completeopt=preview,menu
 set confirm
@@ -712,47 +689,9 @@ set hidden
 set langmenu=zh_CN.UTF-8
 set laststatus=2
 set matchtime=1
+set nomodeline
 set ruler
-set runtimepath=
-set runtimepath+=~/.config/coc/extensions/node_modules/coc-explorer
-set runtimepath+=~/.vim
-set runtimepath+=~/.vim/pack/git-plugins/start/vista.vim
-set runtimepath+=~/.vim/plugged/tequila-sunrise.vim
-set runtimepath+=~/.vim/plugged/jellybeans.vim
-set runtimepath+=~/.vim/plugged/vim-startify
-set runtimepath+=~/.vim/plugged/tagbar
-set runtimepath+=~/.vim/plugged/nerdtree
-set runtimepath+=~/.vim/plugged/vim-airline
-set runtimepath+=~/.vim/plugged/vim-airline-themes
-set runtimepath+=~/.vim/plugged/vim-easymotion
-set runtimepath+=~/.vim/plugged/vim-choosewin
-set runtimepath+=~/.vim/plugged/rainbow
-set runtimepath+=~/.vim/plugged/smartim
-set runtimepath+=~/.vim/plugged/vim-interestingwords
-set runtimepath+=~/.vim/plugged/far.vim
-set runtimepath+=~/.vim/plugged/vim-indent-guides
-set runtimepath+=~/.vim/plugged/vim-commentary
-set runtimepath+=~/.vim/plugged/auto-pairs
-set runtimepath+=~/.vim/plugged/vim-cursorword
-set runtimepath+=~/.vim/plugged/coc.nvim
-set runtimepath+=~/.vim/plugged/jedi-vim
-set runtimepath+=~/.vim/plugged/vim-easy-align
-set runtimepath+=~/.vim/plugged/vim-repl
-set runtimepath+=~/.vim/plugged/ctrlsf.vim
-set runtimepath+=~/.fzf
-set runtimepath+=~/.vim/plugged/fzf.vim
-set runtimepath+=~/.vim/plugged/LeaderF
-set runtimepath+=~/.vim/plugged/vim-fugitive
-set runtimepath+=~/.vim/plugged/vim-gitgutter
-set runtimepath+=~/.vim/plugged/gv.vim
-set runtimepath+=~/.vim/plugged/undotree
-set runtimepath+=/usr/local/share/vim/vimfiles
-set runtimepath+=/usr/local/share/vim/vim81
-set runtimepath+=/usr/local/share/vim/vimfiles/after
-set runtimepath+=~/.vim/plugged/jedi-vim/after
-set runtimepath+=~/.vim/plugged/ctrlsf.vim/after
-set runtimepath+=~/.vim/after
-set runtimepath+=~/.config/coc/extensions/node_modules/coc-snippets
+set runtimepath=~/.config/coc/extensions/node_modules/coc-explorer,~/.vim,~/dotfiles/.vim/pack/git-plugins/start/vista.vim,~/.vim/plugged/tequila-sunrise.vim,~/.vim/plugged/jellybeans.vim,~/.vim/plugged/vim-startify,~/.vim/plugged/tagbar,~/.vim/plugged/nerdtree,~/.vim/plugged/vim-airline,~/.vim/plugged/vim-airline-themes,~/.vim/plugged/vim-easymotion,~/.vim/plugged/vim-choosewin,~/.vim/plugged/rainbow,~/.vim/plugged/smartim,~/.vim/plugged/vim-interestingwords,~/.vim/plugged/far.vim,~/.vim/plugged/vim-indent-guides,~/.vim/plugged/vim-commentary,~/.vim/plugged/auto-pairs,~/.vim/plugged/vim-cursorword,~/.vim/plugged/coc.nvim,~/.vim/plugged/jedi-vim,~/.vim/plugged/vim-easy-align,~/.vim/plugged/vim-repl,~/.vim/plugged/ctrlsf.vim,~/.fzf,~/.vim/plugged/fzf.vim,~/.vim/plugged/LeaderF,~/.vim/plugged/vim-fugitive,~/.vim/plugged/vim-gitgutter,~/.vim/plugged/gv.vim,~/.vim/plugged/undotree,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/plugged/jedi-vim/after,~/.vim/plugged/ctrlsf.vim/after,~/.vim/after,~/.config/coc/extensions/node_modules/coc-snippets
 set scrolloff=6
 set shiftwidth=4
 set shortmess=filnxtToOI
@@ -765,13 +704,14 @@ set smarttab
 set softtabstop=4
 set splitbelow
 set splitright
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set noswapfile
 set tabline=%!airline#extensions#tabline#get()
 set tabstop=4
 set termencoding=utf-8
 set textwidth=78
 set ttimeoutlen=0
-set undodir=/Users/jetoo.
+set undodir=/root.
 set undofile
 set updatetime=30
 set virtualedit=block,onemore
@@ -780,21 +720,19 @@ set nowritebackup
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-silent tabonly
-cd ~/dotfiles
+cd ~/.config/ranger
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
+badd +0 scope.sh
 argglobal
-%argdel
-edit .zshrc
+silent! argdel *
+$argadd scope.sh
+edit scope.sh
 set splitbelow splitright
 wincmd t
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
+set winminheight=1 winheight=1 winminwidth=1 winwidth=1
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
@@ -848,12 +786,12 @@ setlocal bufhidden=
 setlocal buflisted
 setlocal buftype=
 setlocal nocindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=:#
-setlocal commentstring=#\ %s
+setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+setlocal commentstring=#%s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -870,8 +808,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'zsh'
-setlocal filetype=zsh
+if &filetype != 'sh'
+setlocal filetype=sh
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -885,7 +823,7 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=croql
+setlocal formatoptions=tcq
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal formatprg=
 setlocal grepprg=
@@ -894,7 +832,7 @@ setlocal imsearch=-1
 setlocal include=
 setlocal includeexpr=
 setlocal indentexpr=GetShIndent()
-setlocal indentkeys=0{,0},0),0],!^F,o,O,e,0=then,0=do,0=else,0=elif,0=fi,0=esac,0=done,0=end,),0=;;,0=;&,0=fin,0=fil,0=fip,0=fir,0=fix
+setlocal indentkeys=0{,0},!^F,o,O,e,0=then,0=do,0=else,0=elif,0=fi,0=esac,0=done,0=end,),0=;;,0=;&,0=fin,0=fil,0=fip,0=fir,0=fix
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255
 setlocal keywordprg=
@@ -905,7 +843,7 @@ setlocal nolist
 setlocal makeencoding=
 setlocal makeprg=
 setlocal matchpairs=(:),{:},[:]
-setlocal modeline
+setlocal nomodeline
 setlocal modifiable
 setlocal nrformats=bin,octal,hex
 set number
@@ -921,10 +859,8 @@ setlocal norelativenumber
 setlocal norightleft
 setlocal rightleftcmd=search
 setlocal noscrollbind
-setlocal scrolloff=-1
 setlocal shiftwidth=4
 setlocal noshortname
-setlocal sidescrolloff=-1
 set signcolumn=yes
 setlocal signcolumn=yes
 setlocal nosmartindent
@@ -937,46 +873,32 @@ setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != 'zsh'
-setlocal syntax=zsh
+if &syntax != 'sh'
+setlocal syntax=sh
 endif
 setlocal tabstop=4
 setlocal tagcase=
 setlocal tags=
-setlocal termwinkey=
-setlocal termwinscroll=10000
-setlocal termwinsize=
+setlocal termkey=
+setlocal termsize=
 setlocal textwidth=78
 setlocal thesaurus=
 setlocal undofile
 setlocal undolevels=-123456
-setlocal varsofttabstop=
-setlocal vartabstop=
 setlocal nowinfixheight
 setlocal nowinfixwidth
 set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-<<<<<<< HEAD
-let s:l = 9 - ((8 * winheight(0) + 20) / 40)
+let s:l = 101 - ((33 * winheight(0) + 20) / 40)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-9
+101
 normal! 0
-=======
-let s:l = 47 - ((33 * winheight(0) + 20) / 41)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-47
-normal! 015|
->>>>>>> 8234c869fa71b70a1e3af33b656913f335398e3d
-lcd ~/dotfiles
 tabnext 1
-badd +0 ~/dotfiles/.zshrc
-if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
+if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
@@ -987,7 +909,6 @@ if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
