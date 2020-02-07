@@ -117,7 +117,7 @@ map <leader>r <Plug>(easymotion-repeat)
 
 " ------ nathanaelkane/vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1 " vim启动时启用
-let g:indent_guides_start_level = 1           " 第二层缩进开始显示
+let g:indent_guides_start_level = 2           " 第二层缩进开始显示
 let g:indent_guides_guide_size = 1            " 色块宽度
 let g:indent_guides_tab_guides = 1            " 对tab对齐的禁用
 let g:indent_guides_auto_colors = 0           " 自定义关联可视化颜色
