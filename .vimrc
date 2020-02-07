@@ -77,7 +77,7 @@ let g:ctrlsf_position = "right" " 左右打开Linux用let g:ctrlsf_open_left = 0
 
 " ------ Git相关
 " vim-fugitive
-nnoremap <silent><leader>gw :w<cr> :q<cr> :Gwrite<cr>
+nnoremap <silent><leader>gw :Gwrite<cr>
 nnoremap <silent><leader>gc :Gcommit<cr>
 nnoremap <silent><leader>gb :Gblame<cr>
 nnoremap <silent><leader>gd :Gvdiff<cr>
