@@ -94,6 +94,10 @@ map svs tH
 map sj :set splitbelow:split
 map sl :set splitright:vsplit
 map ss <Plug>(easymotion-s2)
+<<<<<<< HEAD
+=======
+nnoremap <SNR>135_: :=v:count ? v:count : ''
+>>>>>>> 502d6a9bb2403dee5136fb5f864e0e204f8f76d8
 vnoremap <silent> <Plug>(coc-explorer-action-v->>) :call coc#rpc#request('doKeymap', ['explorer-action-v->>'])
 nnoremap <silent> <Plug>(coc-explorer-action-n->>) :call coc#rpc#request('doKeymap', ['explorer-action-n->>'])
 vnoremap <silent> <Plug>(coc-explorer-action-v-<<) :call coc#rpc#request('doKeymap', ['explorer-action-v-<<'])
@@ -660,6 +664,7 @@ snoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 onoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 nnoremap <silent> <Plug>(startify-open-buffers) :call startify#open_buffers()
 inoremap  
+<<<<<<< HEAD
 inoremap <silent> <expr> " coc#_insert_key('request', 'adce5238-49cb-11ea-aad4-43379fbd543a')
 inoremap <silent> <expr> ' coc#_insert_key('request', 'adce5237-49cb-11ea-aad4-43379fbd543a')
 inoremap <silent> <expr> ( coc#_insert_key('request', 'adcdb5f0-49cb-11ea-aad4-43379fbd543a')
@@ -672,6 +677,20 @@ inoremap <silent> <expr> ` coc#_insert_key('request', 'adce5239-49cb-11ea-aad4-4
 imap kj 
 inoremap <silent> <expr> { coc#_insert_key('request', 'adce5233-49cb-11ea-aad4-43379fbd543a')
 inoremap <silent> <expr> } coc#_insert_key('request', 'adce5234-49cb-11ea-aad4-43379fbd543a')
+=======
+inoremap <silent> <expr> " coc#_insert_key('request', '5ff95e99-49c3-11ea-898e-af8ccb73e5c6')
+inoremap <silent> <expr> ' coc#_insert_key('request', '5ff95e98-49c3-11ea-898e-af8ccb73e5c6')
+inoremap <silent> <expr> ( coc#_insert_key('request', '5ff95e90-49c3-11ea-898e-af8ccb73e5c6')
+inoremap <silent> <expr> ) coc#_insert_key('request', '5ff95e91-49c3-11ea-898e-af8ccb73e5c6')
+inoremap <silent> <expr> < coc#_insert_key('request', '5ff95e96-49c3-11ea-898e-af8ccb73e5c6')
+inoremap <silent> <expr> > coc#_insert_key('request', '5ff95e97-49c3-11ea-898e-af8ccb73e5c6')
+inoremap <silent> <expr> [ coc#_insert_key('request', '5ff95e92-49c3-11ea-898e-af8ccb73e5c6')
+inoremap <silent> <expr> ] coc#_insert_key('request', '5ff95e93-49c3-11ea-898e-af8ccb73e5c6')
+inoremap <silent> <expr> ` coc#_insert_key('request', '5ff95e9a-49c3-11ea-898e-af8ccb73e5c6')
+imap kj 
+inoremap <silent> <expr> { coc#_insert_key('request', '5ff95e94-49c3-11ea-898e-af8ccb73e5c6')
+inoremap <silent> <expr> } coc#_insert_key('request', '5ff95e95-49c3-11ea-898e-af8ccb73e5c6')
+>>>>>>> 502d6a9bb2403dee5136fb5f864e0e204f8f76d8
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -720,16 +739,26 @@ set nowritebackup
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
+<<<<<<< HEAD
 cd ~/.config/ranger
+=======
+silent tabonly
+cd ~/dotfiles/fonts
+>>>>>>> 502d6a9bb2403dee5136fb5f864e0e204f8f76d8
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
 badd +0 scope.sh
 argglobal
+<<<<<<< HEAD
 silent! argdel *
 $argadd scope.sh
 edit scope.sh
+=======
+%argdel
+edit ~/dotfiles/README.md
+>>>>>>> 502d6a9bb2403dee5136fb5f864e0e204f8f76d8
 set splitbelow splitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
@@ -790,8 +819,13 @@ setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
+<<<<<<< HEAD
 setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
 setlocal commentstring=#%s
+=======
+setlocal comments=fb:*,fb:-,fb:+,n:>
+setlocal commentstring=>\ %s
+>>>>>>> 502d6a9bb2403dee5136fb5f864e0e204f8f76d8
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -808,8 +842,13 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
+<<<<<<< HEAD
 if &filetype != 'sh'
 setlocal filetype=sh
+=======
+if &filetype != 'markdown'
+setlocal filetype=markdown
+>>>>>>> 502d6a9bb2403dee5136fb5f864e0e204f8f76d8
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -823,16 +862,26 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
+<<<<<<< HEAD
 setlocal formatoptions=tcq
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+=======
+setlocal formatoptions=tcqln
+setlocal formatlistpat=^\\s*\\d\\+\\.\\s\\+\\|^[-*+]\\s\\+\\|^\\[^\\ze[^\\]]\\+\\]:
+>>>>>>> 502d6a9bb2403dee5136fb5f864e0e204f8f76d8
 setlocal formatprg=
 setlocal grepprg=
 setlocal iminsert=0
 setlocal imsearch=-1
 setlocal include=
 setlocal includeexpr=
+<<<<<<< HEAD
 setlocal indentexpr=GetShIndent()
 setlocal indentkeys=0{,0},!^F,o,O,e,0=then,0=do,0=else,0=elif,0=fi,0=esac,0=done,0=end,),0=;;,0=;&,0=fin,0=fil,0=fip,0=fir,0=fix
+=======
+setlocal indentexpr=
+setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
+>>>>>>> 502d6a9bb2403dee5136fb5f864e0e204f8f76d8
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255
 setlocal keywordprg=
@@ -842,14 +891,19 @@ setlocal lispwords=
 setlocal nolist
 setlocal makeencoding=
 setlocal makeprg=
+<<<<<<< HEAD
 setlocal matchpairs=(:),{:},[:]
 setlocal nomodeline
+=======
+setlocal matchpairs=(:),{:},[:],<:>
+setlocal modeline
+>>>>>>> 502d6a9bb2403dee5136fb5f864e0e204f8f76d8
 setlocal modifiable
 setlocal nrformats=bin,octal,hex
 set number
 setlocal number
 setlocal numberwidth=4
-setlocal omnifunc=
+setlocal omnifunc=htmlcomplete#CompleteTags
 setlocal path=
 setlocal nopreserveindent
 setlocal nopreviewwindow
@@ -863,7 +917,7 @@ setlocal shiftwidth=4
 setlocal noshortname
 set signcolumn=yes
 setlocal signcolumn=yes
-setlocal nosmartindent
+setlocal smartindent
 setlocal softtabstop=4
 setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
@@ -873,8 +927,13 @@ setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
+<<<<<<< HEAD
 if &syntax != 'sh'
 setlocal syntax=sh
+=======
+if &syntax != 'markdown'
+setlocal syntax=markdown
+>>>>>>> 502d6a9bb2403dee5136fb5f864e0e204f8f76d8
 endif
 setlocal tabstop=4
 setlocal tagcase=
@@ -891,6 +950,7 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
+<<<<<<< HEAD
 let s:l = 101 - ((33 * winheight(0) + 20) / 40)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
@@ -899,6 +959,18 @@ normal! zt
 normal! 0
 tabnext 1
 if exists('s:wipebuf')
+=======
+let s:l = 22 - ((19 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+22
+normal! 0
+lcd ~/dotfiles
+tabnext 1
+badd +0 ~/dotfiles/README.md
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
+>>>>>>> 502d6a9bb2403dee5136fb5f864e0e204f8f76d8
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
