@@ -36,14 +36,7 @@ Plug 'tpope/vim-fugitive'                       " git命令封装
 Plug 'airblade/vim-gitgutter'                   " 显示git更改标示
 Plug 'junegunn/gv.vim'                          " git提交树
 Plug 'mbbill/undotree'                          " 文件版本回溯
-
-Plug 'Shougo/defx.nvim'
-Plug 'kristijanhusak/defx-git'
-Plug 'kristijanhusak/defx-icons'
 call plug#end()
-
-" ------ Shougo/defx.nvim'
-
 
 " ------ neoclide/coc.nvim
 set hidden         " 如果没有设置，TextEdit可能失效
