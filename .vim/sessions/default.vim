@@ -95,7 +95,7 @@ map svs tH
 map sj :set splitbelow:split
 map sl :set splitright:vsplit
 map ss <Plug>(easymotion-s2)
-nnoremap <SNR>141_: :=v:count ? v:count : ''
+nnoremap <SNR>135_: :=v:count ? v:count : ''
 vnoremap <silent> <Plug>(coc-explorer-action-v->>) :call coc#rpc#request('doKeymap', ['explorer-action-v->>'])
 nnoremap <silent> <Plug>(coc-explorer-action-n->>) :call coc#rpc#request('doKeymap', ['explorer-action-n->>'])
 vnoremap <silent> <Plug>(coc-explorer-action-v-<<) :call coc#rpc#request('doKeymap', ['explorer-action-v-<<'])
@@ -667,18 +667,18 @@ vmap <D-c> "*y
 vmap <D-v> "-d"*P
 nmap <D-v> "*P
 inoremap  
-inoremap <silent> <expr> " coc#_insert_key('request', '6734eba9-4a97-11ea-b63d-cfe012a755f8')
-inoremap <silent> <expr> ' coc#_insert_key('request', '6734eba8-4a97-11ea-b63d-cfe012a755f8')
-inoremap <silent> <expr> ( coc#_insert_key('request', '6734eba0-4a97-11ea-b63d-cfe012a755f8')
-inoremap <silent> <expr> ) coc#_insert_key('request', '6734eba1-4a97-11ea-b63d-cfe012a755f8')
-inoremap <silent> <expr> < coc#_insert_key('request', '6734eba6-4a97-11ea-b63d-cfe012a755f8')
-inoremap <silent> <expr> > coc#_insert_key('request', '6734eba7-4a97-11ea-b63d-cfe012a755f8')
-inoremap <silent> <expr> [ coc#_insert_key('request', '6734eba2-4a97-11ea-b63d-cfe012a755f8')
-inoremap <silent> <expr> ] coc#_insert_key('request', '6734eba3-4a97-11ea-b63d-cfe012a755f8')
-inoremap <silent> <expr> ` coc#_insert_key('request', '6734ebaa-4a97-11ea-b63d-cfe012a755f8')
+inoremap <silent> <expr> " coc#_insert_key('request', 'a382d909-4a97-11ea-ae3a-3b72e3b52d78')
+inoremap <silent> <expr> ' coc#_insert_key('request', 'a382d908-4a97-11ea-ae3a-3b72e3b52d78')
+inoremap <silent> <expr> ( coc#_insert_key('request', 'a382d900-4a97-11ea-ae3a-3b72e3b52d78')
+inoremap <silent> <expr> ) coc#_insert_key('request', 'a382d901-4a97-11ea-ae3a-3b72e3b52d78')
+inoremap <silent> <expr> < coc#_insert_key('request', 'a382d906-4a97-11ea-ae3a-3b72e3b52d78')
+inoremap <silent> <expr> > coc#_insert_key('request', 'a382d907-4a97-11ea-ae3a-3b72e3b52d78')
+inoremap <silent> <expr> [ coc#_insert_key('request', 'a382d902-4a97-11ea-ae3a-3b72e3b52d78')
+inoremap <silent> <expr> ] coc#_insert_key('request', 'a382d903-4a97-11ea-ae3a-3b72e3b52d78')
+inoremap <silent> <expr> ` coc#_insert_key('request', 'a382d90a-4a97-11ea-ae3a-3b72e3b52d78')
 imap kj 
-inoremap <silent> <expr> { coc#_insert_key('request', '6734eba4-4a97-11ea-b63d-cfe012a755f8')
-inoremap <silent> <expr> } coc#_insert_key('request', '6734eba5-4a97-11ea-b63d-cfe012a755f8')
+inoremap <silent> <expr> { coc#_insert_key('request', 'a382d904-4a97-11ea-ae3a-3b72e3b52d78')
+inoremap <silent> <expr> } coc#_insert_key('request', 'a382d905-4a97-11ea-ae3a-3b72e3b52d78')
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -729,9 +729,6 @@ set runtimepath+=~/.vim/plugged/vim-fugitive
 set runtimepath+=~/.vim/plugged/vim-gitgutter
 set runtimepath+=~/.vim/plugged/gv.vim
 set runtimepath+=~/.vim/plugged/undotree
-set runtimepath+=~/.vim/plugged/defx.nvim
-set runtimepath+=~/.vim/plugged/defx-git
-set runtimepath+=~/.vim/plugged/defx-icons
 set runtimepath+=~/.config/coc/extensions/node_modules/coc-explorer
 set runtimepath+=~/.vim/pack/git-plugins/start/vista.vim
 set runtimepath+=/usr/local/share/vim/vimfiles
@@ -776,6 +773,7 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
+edit ~/.vimrc
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -783,7 +781,6 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-enew
 let s:cpo_save=&cpo
 set cpo&vim
 inoremap <buffer> <silent> <BS> =AutoPairsDelete()
@@ -804,7 +801,19 @@ inoremap <buffer> <silent> û =AutoPairsMoveCharacter('{')
 inoremap <buffer> <silent> Ý =AutoPairsMoveCharacter(']')
 inoremap <buffer> <silent> Û =AutoPairsMoveCharacter('[')
 nmap <buffer> [c <Plug>(GitGutterPrevHunk)
+vnoremap <buffer> <silent> [" :exe "normal! gv"|call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
+nnoremap <buffer> <silent> [" :call search('\%(^\s*".*\n\)\%(^\s*"\)\@!', "bW")
+vnoremap <buffer> <silent> [] m':exe "normal! gv"|call search('^\s*endf\%[unction]\>', "bW")
+nnoremap <buffer> <silent> [] m':call search('^\s*endf\%[unction]\>', "bW")
+vnoremap <buffer> <silent> [[ m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "bW")
+nnoremap <buffer> <silent> [[ m':call search('^\s*fu\%[nction]\>', "bW")
 nmap <buffer> ]c <Plug>(GitGutterNextHunk)
+vnoremap <buffer> <silent> ]" :exe "normal! gv"|call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
+nnoremap <buffer> <silent> ]" :call search('^\(\s*".*\n\)\@<!\(\s*"\)', "W")
+vnoremap <buffer> <silent> ][ m':exe "normal! gv"|call search('^\s*endf\%[unction]\>', "W")
+nnoremap <buffer> <silent> ][ m':call search('^\s*endf\%[unction]\>', "W")
+vnoremap <buffer> <silent> ]] m':exe "normal! gv"|call search('^\s*fu\%[nction]\>', "W")
+nnoremap <buffer> <silent> ]] m':call search('^\s*fu\%[nction]\>', "W")
 xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)
 omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
 xmap <buffer> ic <Plug>(GitGutterTextObjectInnerVisual)
@@ -832,16 +841,16 @@ setlocal balloonexpr=
 setlocal nobinary
 setlocal nobreakindent
 setlocal breakindentopt=
-setlocal bufhidden=hide
+setlocal bufhidden=
 setlocal buflisted
-setlocal buftype=quickfix
+setlocal buftype=
 setlocal nocindent
 setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=/*%s*/
+setlocal comments=sO:\"\ -,mO:\"\ \ ,eO:\"\",:\"
+setlocal commentstring=\"%s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -858,8 +867,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'qf'
-setlocal filetype=qf
+if &filetype != 'vim'
+setlocal filetype=vim
 endif
 setlocal fixendofline
 setlocal foldcolumn=0
@@ -873,7 +882,7 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=tcq
+setlocal formatoptions=croql
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal formatprg=
 setlocal grepprg=
@@ -881,11 +890,11 @@ setlocal iminsert=0
 setlocal imsearch=-1
 setlocal include=
 setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal indentexpr=GetVimIndent()
+setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e,=end,=else,=cat,=fina,=END,0\\,0=\"\\\ 
 setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
+setlocal iskeyword=@,48-57,_,192-255,#
+setlocal keywordprg=:help
 setlocal nolinebreak
 setlocal nolisp
 setlocal lispwords=
@@ -894,7 +903,7 @@ setlocal makeencoding=
 setlocal makeprg=
 setlocal matchpairs=(:),{:},[:]
 setlocal modeline
-setlocal nomodifiable
+setlocal modifiable
 setlocal nrformats=bin,octal,hex
 set number
 setlocal number
@@ -925,8 +934,8 @@ setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
-if &syntax != 'qf'
-setlocal syntax=qf
+if &syntax != 'vim'
+setlocal syntax=vim
 endif
 setlocal tabstop=4
 setlocal tagcase=
@@ -940,14 +949,21 @@ setlocal undofile
 setlocal undolevels=-123456
 setlocal varsofttabstop=
 setlocal vartabstop=
-setlocal winfixheight
+setlocal nowinfixheight
 setlocal nowinfixwidth
 set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 237 - ((33 * winheight(0) + 20) / 41)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+237
+normal! 0
 lcd ~/
 tabnext 1
-badd +41 ~/.vimrc
+badd +0 ~/.vimrc
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
