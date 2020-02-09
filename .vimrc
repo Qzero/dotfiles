@@ -131,6 +131,8 @@ let g:rainbow_active = 1
 nnoremap <C-D> :bprevious<CR>:bdelete #<CR>
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
+map <Leader>te :tabedit<CR>
+map <Leader>tc :tabclose<CR>
 let g:airline_powerline_fonts = 1                 " 这个是安装字体后必须设置此项
 let g:airline_theme='ubaryd'                      " luna,term,tomorrow,ubaryd,zenburn
 let g:airline#extensions#tabline#enabled=1        " 用顶部tabline
