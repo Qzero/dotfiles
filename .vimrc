@@ -4,6 +4,7 @@ filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
+Plug 'voldikss/vim-floaterm'
 Plug 'levelone/tequila-sunrise.vim'             " 主题
 Plug 'nanotech/jellybeans.vim'
 Plug 'mhinz/vim-startify'                       " 首页
@@ -36,6 +37,12 @@ Plug 'tpope/vim-fugitive'                       " git命令封装
 Plug 'airblade/vim-gitgutter'                   " 显示git更改标示
 Plug 'junegunn/gv.vim'                          " git提交树
 Plug 'mbbill/undotree'                          " 文件版本回溯
+
+Plug 'Shougo/defx.nvim'
+Plug 'kristijanhusak/defx-icons'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+
 call plug#end()
 
 " ------ neoclide/coc.nvim
