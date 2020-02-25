@@ -45,6 +45,8 @@ Plug 'roxma/vim-hug-neovim-rpc'
 
 call plug#end()
 
+let g:floaterm_position = 'center'
+
 " ------ neoclide/coc.nvim
 set hidden         " 如果没有设置，TextEdit可能失效
 set cmdheight=2    " 更好显示消息
@@ -251,3 +253,10 @@ nnoremap <Leader><Leader>c :PlugClean<CR>       "删除插件
 nnoremap <Leader><Leader>pu :PlugUpgrade<CR>    "更新插件管理器
 nnoremap <Leader>is iimport ipdb; ipdb.set_trace()
 nnoremap <Leader>tm :belowright terminal<CR>
+
+" InsertMode: move
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+snoremap <C-j> <Down>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
