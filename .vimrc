@@ -45,6 +45,8 @@ Plug 'roxma/vim-hug-neovim-rpc'
 
 call plug#end()
 
+
+" voldikss/vim-floaterm
 let g:floaterm_position = 'center'
 
 " ------ neoclide/coc.nvim
@@ -57,8 +59,9 @@ let g:coc_status_warning_sign = '•'
 let g:coc_global_extensions =['coc-html','coc-css','coc-snippets','coc-prettier','coc-eslint','coc-emmet','coc-tsserver','coc-pairs','coc-json','coc-python','coc-imselect','coc-highlight','coc-git','coc-emoji','coc-lists','coc-post','coc-stylelint','coc-yaml','coc-template','coc-tabnine','coc-marketplace','coc-gitignore','coc-yank','coc-explorer','coc-go']
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent> <space>p  :<C-u>CocList extensions<cr>
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent> <space>e :CocCommand explorer<CR>
 
 " ------ junegunn/vim-easy-align
 xmap ga <Plug>(EasyAlign)
@@ -141,7 +144,6 @@ nnoremap <C-D> :bprevious<CR>:bdelete #<CR>
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
 map <Leader>te :tabedit<CR>
-map <Leader>tc :tabclose<CR>
 let g:airline_powerline_fonts = 1                 " 这个是安装字体后必须设置此项
 let g:airline_theme='ubaryd'                      " luna,term,tomorrow,ubaryd,zenburn
 let g:airline#extensions#tabline#enabled=1        " 用顶部tabline
@@ -158,17 +160,24 @@ let g:tagbar_sort = 0                   "设置标签不排序，默认排序
 let g:tagbar_autoshowtag = 1            "当编辑代码时，在Tagbar自动追踪变量
 let g:tagbar_iconchars = ['+', '-']     "修改默认剪头'▸', '▾'
 
+" ------ startify
+noremap <Leader>si :Startify<CR>
+let g:startify_bookmarks = [
+  \ {'c': '~/dotfiles/.vimrc'},
+  \ ]
+let g:startify_custom_header = [
+  \ '                           ___       ___       ___       ___       ___       ___ ',
+  \ '                            N         E         R         V         E         R  ']
+
 " ------ scrooloose/nerdtree
 nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader>ntf :NERDTreeFind<CR>
-" let NERDTreeWinPos="right"                      "显示位置
 let NERDTreeShowHidden=0                        "是否显示隐藏文件
 let NERDTreeWinSize=25                          "设置宽度
 let NERDTreeShowBookmarks=1                     "显示书签列表
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']      "忽略一下文件的显示
-let g:NERDTreeDirArrowExpandable = '+'          "修改默认箭头'▸' '▾'
-let g:NERDTreeDirArrowCollapsible = '-'
-" autocmd vimenter * NERDTree                   "打开vim时自动打开NERDTree
+let g:NERDTreeDirArrowExpandable = '▸'          "修改默认箭头'▸' '▾'
+let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeAutoDeleteBuffer=1                  "删除文件时自动删除文件对应 buffer
 let NERDTreeMinimalUI=1                         "不显示冗余帮助信息
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   ""当NERDTree为剩下的唯一窗口时自动关闭
@@ -260,3 +269,4 @@ inoremap <C-j> <Down>
 snoremap <C-j> <Down>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
+tnoremap tq <C-\><C-n> :q<CR>

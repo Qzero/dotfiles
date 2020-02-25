@@ -43,12 +43,18 @@
     // coc-explorer
     "explorer.icon.expanded": "▾",
     "explorer.icon.shrinked": "▸",
-    "explorer.width": 30,
+    "explorer.width": 26,
     "explorer.icon.enableNerdfont": true,
+    "explorer.file.showHiddenFiles": true,
     "explorer.keyMappings": {
-        "h" : "gotoParent",
-        "l" : "expandOrShrink"
     },
     // add your languageServer into this list
     "languageserver": {}
+    // coc-git
+    //"git.enableGutters": true,
+    //"git.addedSign.hlGroup": "GitAdd",
+    //"git.removedSign.hlGroup": "GitDeleteBottom",
+    //"git.topRemovedSign.hlGroup": "GitDeleteTop",
+    //"git.changeRemovedSign.hlGroup": "GitDeleteTopAndBottom",
+    //"git.changedSign.hlGroup": "GitModify"
 }
