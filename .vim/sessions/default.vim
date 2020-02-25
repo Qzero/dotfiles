@@ -17,6 +17,7 @@ nnoremap  :bprevious:bdelete #
 snoremap <NL> <Down>
 nnoremap  :bn
 nnoremap  :bp
+tnoremap  
 nnoremap <silent>  c :CocList commands
 nnoremap <silent>  e :CocList extensions
 nnoremap <silent>  a :CocList diagnostics
@@ -25,7 +26,8 @@ nnoremap <silent> ;f :LeaderfFile
 vnoremap <silent> ;w :SendLineToREPL
 nmap <silent> ;ig <Plug>IndentGuidesToggle
 nnoremap <silent> ;K :call UncolorAllWords()
-map ;k <Plug>(easymotion-k)
+vnoremap <silent> ;k :call InterestingWords('v')
+nnoremap <silent> ;k :call InterestingWords('n')
 map ;; <Plug>(easymotion-prefix)
 nnoremap ;tm :belowright terminal
 nnoremap ;is iimport ipdb; ipdb.set_trace()
@@ -37,7 +39,7 @@ map ;s :source $MYVIMRC                         "重新加载vimrc文件
 nnoremap ;vc :edit $MYVIMRC                          "编辑vimrc文件
 nnoremap ;rn :set relativenumber!                    "显示相对行号
 nnoremap ;q :q
-nnoremap ;w :w
+nnoremap <silent> ;w :SendCurrentLine
 noremap ;ww w
 noremap ;ll l
 noremap ;kk k
@@ -52,6 +54,7 @@ map ;te :tabedit
 map ;r <Plug>(easymotion-repeat)
 map ;l <Plug>(easymotion-lineforward)
 map ;h <Plug>(easymotion-linebackward)
+omap ;k <Plug>(easymotion-k)
 map ;j <Plug>(easymotion-j)
 nmap ;vv <Plug>(choosewin)
 nnoremap <silent> ;KW :call UncolorAllWords()
@@ -79,7 +82,7 @@ nnoremap ;fb :Buffers
 nnoremap ;fl :Files
 noremap H ^
 noremap L $
-nnoremap <silent> N :call WordNavigation('backward')
+nnoremap <silent> N :call WordNavigation(0)
 vmap gx <Plug>NetrwBrowseXVis
 nmap gx <Plug>NetrwBrowseX
 nmap gcu <Plug>Commentary<Plug>Commentary
@@ -89,7 +92,7 @@ nmap gc <Plug>Commentary
 xmap gc <Plug>Commentary
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
-nnoremap <silent> n :call WordNavigation('forward')
+nnoremap <silent> n :call WordNavigation(1)
 map svh tK                                  
 map svs tH                                  
 map sj :set splitbelow:split
@@ -684,18 +687,18 @@ inoremap  <Left>
 inoremap <NL> <Down>
 inoremap  <Up>
 inoremap  <Right>
-inoremap <silent> <expr> " coc#_insert_key('request', 'b2ae2709-57bb-11ea-bccf-1b2658f46a79')
-inoremap <silent> <expr> ' coc#_insert_key('request', 'b2ae2708-57bb-11ea-bccf-1b2658f46a79')
-inoremap <silent> <expr> ( coc#_insert_key('request', 'b2ae2700-57bb-11ea-bccf-1b2658f46a79')
-inoremap <silent> <expr> ) coc#_insert_key('request', 'b2ae2701-57bb-11ea-bccf-1b2658f46a79')
-inoremap <silent> <expr> < coc#_insert_key('request', 'b2ae2706-57bb-11ea-bccf-1b2658f46a79')
-inoremap <silent> <expr> > coc#_insert_key('request', 'b2ae2707-57bb-11ea-bccf-1b2658f46a79')
-inoremap <silent> <expr> [ coc#_insert_key('request', 'b2ae2702-57bb-11ea-bccf-1b2658f46a79')
-inoremap <silent> <expr> ] coc#_insert_key('request', 'b2ae2703-57bb-11ea-bccf-1b2658f46a79')
-inoremap <silent> <expr> ` coc#_insert_key('request', 'b2ae270a-57bb-11ea-bccf-1b2658f46a79')
+inoremap <silent> <expr> " coc#_insert_key('request', '8fe08679-57cd-11ea-89ea-9f39f3f954ad')
+inoremap <silent> <expr> ' coc#_insert_key('request', '8fe08678-57cd-11ea-89ea-9f39f3f954ad')
+inoremap <silent> <expr> ( coc#_insert_key('request', '8fe08670-57cd-11ea-89ea-9f39f3f954ad')
+inoremap <silent> <expr> ) coc#_insert_key('request', '8fe08671-57cd-11ea-89ea-9f39f3f954ad')
+inoremap <silent> <expr> < coc#_insert_key('request', '8fe08676-57cd-11ea-89ea-9f39f3f954ad')
+inoremap <silent> <expr> > coc#_insert_key('request', '8fe08677-57cd-11ea-89ea-9f39f3f954ad')
+inoremap <silent> <expr> [ coc#_insert_key('request', '8fe08672-57cd-11ea-89ea-9f39f3f954ad')
+inoremap <silent> <expr> ] coc#_insert_key('request', '8fe08673-57cd-11ea-89ea-9f39f3f954ad')
+inoremap <silent> <expr> ` coc#_insert_key('request', '8fe0867a-57cd-11ea-89ea-9f39f3f954ad')
 imap kj 
-inoremap <silent> <expr> { coc#_insert_key('request', 'b2ae2704-57bb-11ea-bccf-1b2658f46a79')
-inoremap <silent> <expr> } coc#_insert_key('request', 'b2ae2705-57bb-11ea-bccf-1b2658f46a79')
+inoremap <silent> <expr> { coc#_insert_key('request', '8fe08674-57cd-11ea-89ea-9f39f3f954ad')
+inoremap <silent> <expr> } coc#_insert_key('request', '8fe08675-57cd-11ea-89ea-9f39f3f954ad')
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -715,12 +718,13 @@ set laststatus=2
 set matchtime=1
 set nomodeline
 set ruler
-set runtimepath=~/.vim,~/.vim/plugged/vim-floaterm,~/.vim/plugged/tequila-sunrise.vim,~/.vim/plugged/jellybeans.vim,~/.vim/plugged/vim-startify,~/.vim/plugged/tagbar,~/.vim/plugged/nerdtree,~/.vim/plugged/vim-airline,~/.vim/plugged/vim-airline-themes,~/.vim/plugged/vim-easymotion,~/.vim/plugged/vim-choosewin,~/.vim/plugged/rainbow,~/.vim/plugged/smartim,~/.vim/plugged/vim-interestingwords,~/.vim/plugged/far.vim,~/.vim/plugged/vim-indent-guides,~/.vim/plugged/vim-commentary,~/.vim/plugged/auto-pairs,~/.vim/plugged/vim-cursorword,~/.vim/plugged/coc.nvim,~/.vim/plugged/jedi-vim,~/.vim/plugged/vim-easy-align,~/.vim/plugged/vim-repl,~/.vim/plugged/ctrlsf.vim,~/.fzf,~/.vim/plugged/fzf.vim,~/.vim/plugged/LeaderF,~/.vim/plugged/vim-fugitive,~/.vim/plugged/vim-gitgutter,~/.vim/plugged/gv.vim,~/.vim/plugged/undotree,~/.vim/plugged/defx.nvim,~/.vim/plugged/defx-icons,~/.vim/plugged/nvim-yarp,~/.vim/plugged/vim-hug-neovim-rpc,~/.config/coc/extensions/node_modules/coc-explorer,~/dotfiles/.vim/pack/git-plugins/start/vista.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.config/coc/extensions/node_modules/coc-snippets,~/.vim/plugged/jedi-vim/after,~/.vim/plugged/ctrlsf.vim/after,~/.vim/after
+set runtimepath=~/.config/coc/extensions/node_modules/coc-explorer,~/.vim,~/dotfiles/.vim/pack/git-plugins/start/vista.vim,~/.vim/plugged/vim-floaterm,~/.vim/plugged/tequila-sunrise.vim,~/.vim/plugged/jellybeans.vim,~/.vim/plugged/vim-startify,~/.vim/plugged/tagbar,~/.vim/plugged/nerdtree,~/.vim/plugged/vim-airline,~/.vim/plugged/vim-airline-themes,~/.vim/plugged/vim-easymotion,~/.vim/plugged/vim-choosewin,~/.vim/plugged/rainbow,~/.vim/plugged/smartim,~/.vim/plugged/vim-interestingwords,~/.vim/plugged/far.vim,~/.vim/plugged/vim-indent-guides,~/.vim/plugged/vim-commentary,~/.vim/plugged/auto-pairs,~/.vim/plugged/vim-cursorword,~/.vim/plugged/coc.nvim,~/.vim/plugged/jedi-vim,~/.vim/plugged/vim-easy-align,~/.vim/plugged/vim-repl,~/.vim/plugged/ctrlsf.vim,~/.fzf,~/.vim/plugged/fzf.vim,~/.vim/plugged/LeaderF,~/.vim/plugged/vim-fugitive,~/.vim/plugged/vim-gitgutter,~/.vim/plugged/gv.vim,~/.vim/plugged/undotree,~/.vim/plugged/defx.nvim,~/.vim/plugged/defx-icons,~/.vim/plugged/nvim-yarp,~/.vim/plugged/vim-hug-neovim-rpc,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/plugged/jedi-vim/after,~/.vim/plugged/ctrlsf.vim/after,~/.vim/after,~/.config/coc/extensions/node_modules/coc-snippets
 set scrolloff=6
 set shiftwidth=4
+set shortmess=filnxtToOI
 set showcmd
 set showmatch
-set showtabline=0
+set showtabline=2
 set sidescroll=10
 set smartindent
 set smarttab
@@ -743,15 +747,15 @@ set nowritebackup
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/
+cd ~/dotfiles
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 dotfiles/.vimrc
+badd +0 .vimrc
 argglobal
 silent! argdel *
-edit dotfiles/.vimrc
+edit .vimrc
 set splitbelow splitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
@@ -857,7 +861,7 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=tcq
+setlocal formatoptions=croql
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal formatprg=
 setlocal grepprg=
@@ -868,7 +872,7 @@ setlocal includeexpr=
 setlocal indentexpr=GetVimIndent()
 setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,=end,=else,=cat,=fina,=END,0\\
 setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
+setlocal iskeyword=@,48-57,_,192-255,#
 setlocal keywordprg=:help
 setlocal nolinebreak
 setlocal nolisp
@@ -925,11 +929,11 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 256 - ((14 * winheight(0) + 10) / 21)
+let s:l = 16 - ((15 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-256
+16
 normal! 0
 lcd ~/dotfiles
 tabnext 1
@@ -937,7 +941,7 @@ if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
-set winheight=1 winwidth=20 shortmess=filnxtToO
+set winheight=1 winwidth=20 shortmess=filnxtToOI
 set winminheight=1 winminwidth=1
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if file_readable(s:sx)
