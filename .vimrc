@@ -51,12 +51,15 @@ let g:floaterm_position = 'center'
 tnoremap <ESC> <C-\><C-n> :q<CR>
 
 " ------ neoclide/coc.nvim
+"  安装依赖
+"  curl -sL install-node.now.sh | sh
+"  curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 set hidden         " 如果没有设置，TextEdit可能失效
 set cmdheight=2    " 更好显示消息
 set shortmess+=c   " 不要完成菜单消息
 set signcolumn=yes " 始终显示信号
-let g:coc_status_error_sign = '•'
-let g:coc_status_warning_sign = '•'
+let g:coc_status_error_sign = '❌'
+let g:coc_status_warning_sign = '⚠️'
 let g:coc_global_extensions =['coc-html','coc-css','coc-snippets','coc-prettier','coc-eslint','coc-emmet','coc-tsserver','coc-pairs','coc-json','coc-python','coc-imselect','coc-highlight','coc-git','coc-emoji','coc-lists','coc-post','coc-stylelint','coc-yaml','coc-template','coc-tabnine','coc-marketplace','coc-gitignore','coc-yank','coc-explorer','coc-go']
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
