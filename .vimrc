@@ -171,7 +171,10 @@ let g:startify_bookmarks = [
   \ ]
 let g:startify_custom_header = [
   \ '                           ___       ___       ___       ___       ___       ___ ',
-  \ '                            N         E         R         V         E         R  ']
+  \ '                                                                                 ',
+  \ '                            N         E         R         V         E         R  ',
+  \ '                           ___       ___       ___       ___       ___       ___ ']
+
 
 " ------ scrooloose/nerdtree
 nnoremap <Leader>nt :NERDTreeToggle<CR>
