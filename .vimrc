@@ -49,7 +49,7 @@ call plug#end()
 " voldikss/vim-floaterm
 let g:floaterm_position = 'center'
 hi FloatermNF guibg=black
-hi FloatermBorderNF guibg=blue guifg=cyan
+" hi FloatermBorderNF guibg=red guifg=cyan
 tnoremap <ESC> <C-\><C-n> :q<CR>
 nnoremap <Leader>fn :FloatermNew<CR>
 nnoremap <Leader>ft :FloatermToggle<CR>
