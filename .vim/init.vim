@@ -1,1 +1,1 @@
-/root/dotfiles/.vimrc
+/Users/jetoo/dotfiles/.vimrc

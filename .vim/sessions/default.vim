@@ -12,7 +12,8 @@ inoremap <expr> <Plug>(fzf-complete-file) fzf#vim#complete#path("find . -path '*
 inoremap <expr> <Plug>(fzf-complete-path) fzf#vim#complete#path("find . -path '*/\.*' -prune -o -print | sed '1d;s:^..::'")
 inoremap <expr> <Plug>(fzf-complete-word) fzf#vim#complete#word()
 inoremap <silent> <Plug>CocRefresh =coc#_complete()
-inoremap <silent> <SNR>52_AutoPairsReturn =AutoPairsReturn()
+inoremap <silent> <SNR>50_AutoPairsReturn =AutoPairsReturn()
+map! <D-v> *
 nnoremap  :bprevious:bdelete #
 nnoremap  :bn
 nnoremap  :bp
@@ -26,8 +27,7 @@ nnoremap <silent> ;f :LeaderfFile
 vnoremap <silent> ;w :SendLineToREPL
 nmap <silent> ;ig <Plug>IndentGuidesToggle
 nnoremap <silent> ;K :call UncolorAllWords()
-vnoremap <silent> ;k :call InterestingWords('v')
-nnoremap <silent> ;k :call InterestingWords('n')
+map ;k <Plug>(easymotion-k)
 map ;; <Plug>(easymotion-prefix)
 nnoremap ;is iimport ipdb; ipdb.set_trace()
 nnoremap ;;pu :PlugUpgrade    "更新插件管理器
@@ -38,7 +38,7 @@ map ;s :source $MYVIMRC                         "重新加载vimrc文件
 nnoremap ;vc :edit $MYVIMRC                          "编辑vimrc文件
 nnoremap ;rn :set relativenumber!                    "显示相对行号
 nnoremap ;q :q
-nnoremap <silent> ;w :SendCurrentLine
+nnoremap ;w :w
 noremap ;ww w
 noremap ;ll l
 noremap ;kk k
@@ -53,7 +53,6 @@ map ;te :tabedit
 map ;r <Plug>(easymotion-repeat)
 map ;l <Plug>(easymotion-lineforward)
 map ;h <Plug>(easymotion-linebackward)
-omap ;k <Plug>(easymotion-k)
 map ;j <Plug>(easymotion-j)
 nmap ;vv <Plug>(choosewin)
 nnoremap <silent> ;KW :call UncolorAllWords()
@@ -81,7 +80,7 @@ nnoremap ;fb :Buffers
 nnoremap ;fl :Files
 noremap H ^
 noremap L $
-nnoremap <silent> N :call WordNavigation(0)
+nnoremap <silent> N :call WordNavigation('backward')
 vmap gx <Plug>NetrwBrowseXVis
 nmap gx <Plug>NetrwBrowseX
 nmap gcu <Plug>Commentary<Plug>Commentary
@@ -91,12 +90,13 @@ nmap gc <Plug>Commentary
 xmap gc <Plug>Commentary
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
-nnoremap <silent> n :call WordNavigation(1)
+nnoremap <silent> n :call WordNavigation('forward')
 map svh tK                                  
 map svs tH                                  
 map sj :set splitbelow:split
 map sl :set splitright:vsplit
 map ss <Plug>(easymotion-s2)
+nnoremap <SNR>137_: :=v:count ? v:count : ''
 vnoremap <silent> <Plug>(coc-explorer-action-v->>) :call coc#rpc#request('doKeymap', ['explorer-action-v->>'])
 nnoremap <silent> <Plug>(coc-explorer-action-n->>) :call coc#rpc#request('doKeymap', ['explorer-action-n->>'])
 vnoremap <silent> <Plug>(coc-explorer-action-v-<<) :call coc#rpc#request('doKeymap', ['explorer-action-v-<<'])
@@ -161,8 +161,6 @@ vnoremap <silent> <Plug>(coc-explorer-action-v-t) :call coc#rpc#request('doKey
 nnoremap <silent> <Plug>(coc-explorer-action-n-t) :call coc#rpc#request('doKeymap', ['explorer-action-n-t'])
 vnoremap <silent> <Plug>(coc-explorer-action-v-E) :call coc#rpc#request('doKeymap', ['explorer-action-v-E'])
 nnoremap <silent> <Plug>(coc-explorer-action-n-E) :call coc#rpc#request('doKeymap', ['explorer-action-n-E'])
-vnoremap <silent> <Plug>(coc-explorer-action-v-s) :call coc#rpc#request('doKeymap', ['explorer-action-v-s'])
-nnoremap <silent> <Plug>(coc-explorer-action-n-s) :call coc#rpc#request('doKeymap', ['explorer-action-n-s'])
 vnoremap <silent> <Plug>(coc-explorer-action-v-e) :call coc#rpc#request('doKeymap', ['explorer-action-v-e'])
 nnoremap <silent> <Plug>(coc-explorer-action-n-e) :call coc#rpc#request('doKeymap', ['explorer-action-n-e'])
 vnoremap <silent> <Plug>(coc-explorer-action-v-[cr]) :call coc#rpc#request('doKeymap', ['explorer-action-v-[cr]'])
@@ -180,16 +178,12 @@ vnoremap <silent> <Plug>(coc-explorer-action-v-l) :call coc#rpc#request('doKey
 nnoremap <silent> <Plug>(coc-explorer-action-n-l) :call coc#rpc#request('doKeymap', ['explorer-action-n-l'])
 vnoremap <silent> <Plug>(coc-explorer-action-v-h) :call coc#rpc#request('doKeymap', ['explorer-action-v-h'])
 nnoremap <silent> <Plug>(coc-explorer-action-n-h) :call coc#rpc#request('doKeymap', ['explorer-action-n-h'])
-vnoremap <silent> <Plug>(coc-explorer-action-v-gj) :call coc#rpc#request('doKeymap', ['explorer-action-v-gj'])
-nnoremap <silent> <Plug>(coc-explorer-action-n-gj) :call coc#rpc#request('doKeymap', ['explorer-action-n-gj'])
-vnoremap <silent> <Plug>(coc-explorer-action-v-gk) :call coc#rpc#request('doKeymap', ['explorer-action-v-gk'])
-nnoremap <silent> <Plug>(coc-explorer-action-n-gk) :call coc#rpc#request('doKeymap', ['explorer-action-n-gk'])
-nnoremap <silent> <Plug>(coc-explorer-action-n-j) :call coc#rpc#request('doKeymap', ['explorer-action-n-j'])
-nnoremap <silent> <Plug>(coc-explorer-action-n-k) :call coc#rpc#request('doKeymap', ['explorer-action-n-k'])
 vnoremap <silent> <Plug>(coc-explorer-action-v-[tab]) :call coc#rpc#request('doKeymap', ['explorer-action-v-[tab]'])
 nnoremap <silent> <Plug>(coc-explorer-action-n-[tab]) :call coc#rpc#request('doKeymap', ['explorer-action-n-[tab]'])
 vnoremap <silent> <Plug>(coc-explorer-action-v-*) :call coc#rpc#request('doKeymap', ['explorer-action-v-*'])
 nnoremap <silent> <Plug>(coc-explorer-action-n-*) :call coc#rpc#request('doKeymap', ['explorer-action-n-*'])
+nnoremap <silent> <Plug>(coc-explorer-action-n-j) :call coc#rpc#request('doKeymap', ['explorer-action-n-j'])
+nnoremap <silent> <Plug>(coc-explorer-action-n-k) :call coc#rpc#request('doKeymap', ['explorer-action-n-k'])
 xnoremap <silent> <Plug>(coc-git-chunk-outer) :call coc#rpc#request('doKeymap', ['git-chunk-outer'])
 onoremap <silent> <Plug>(coc-git-chunk-outer) :call coc#rpc#request('doKeymap', ['git-chunk-outer'])
 xnoremap <silent> <Plug>(coc-git-chunk-inner) :call coc#rpc#request('doKeymap', ['git-chunk-inner'])
@@ -220,18 +214,6 @@ xnoremap <silent> <Plug>(GitGutterTextObjectOuterVisual) :call gitgutter#hunk#
 xnoremap <silent> <Plug>(GitGutterTextObjectInnerVisual) :call gitgutter#hunk#text_object(1)
 onoremap <silent> <Plug>(GitGutterTextObjectOuterPending) :call gitgutter#hunk#text_object(0)
 onoremap <silent> <Plug>(GitGutterTextObjectInnerPending) :call gitgutter#hunk#text_object(1)
-vnoremap <silent> <Plug>LeaderfGtagsGrep :=leaderf#Gtags#startCmdline(2, 1, 'g')
-vnoremap <silent> <Plug>LeaderfGtagsSymbol :=leaderf#Gtags#startCmdline(2, 1, 's')
-vnoremap <silent> <Plug>LeaderfGtagsReference :=leaderf#Gtags#startCmdline(2, 1, 'r')
-vnoremap <silent> <Plug>LeaderfGtagsDefinition :=leaderf#Gtags#startCmdline(2, 1, 'd')
-nnoremap <Plug>LeaderfGtagsGrep :=leaderf#Gtags#startCmdline(0, 1, 'g')
-onoremap <Plug>LeaderfGtagsGrep :=leaderf#Gtags#startCmdline(0, 1, 'g')
-nnoremap <Plug>LeaderfGtagsSymbol :=leaderf#Gtags#startCmdline(0, 1, 's')
-onoremap <Plug>LeaderfGtagsSymbol :=leaderf#Gtags#startCmdline(0, 1, 's')
-nnoremap <Plug>LeaderfGtagsReference :=leaderf#Gtags#startCmdline(0, 1, 'r')
-onoremap <Plug>LeaderfGtagsReference :=leaderf#Gtags#startCmdline(0, 1, 'r')
-nnoremap <Plug>LeaderfGtagsDefinition :=leaderf#Gtags#startCmdline(0, 1, 'd')
-onoremap <Plug>LeaderfGtagsDefinition :=leaderf#Gtags#startCmdline(0, 1, 'd')
 vnoremap <silent> <Plug>LeaderfRgBangVisualRegexBoundary :=leaderf#Rg#startCmdline(2, 1, 1, 1)
 vnoremap <silent> <Plug>LeaderfRgBangVisualRegexNoBoundary :=leaderf#Rg#startCmdline(2, 1, 1, 0)
 vnoremap <silent> <Plug>LeaderfRgBangVisualLiteralBoundary :=leaderf#Rg#startCmdline(2, 1, 0, 1)
@@ -680,19 +662,24 @@ nnoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 snoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 onoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)
 nnoremap <silent> <Plug>(startify-open-buffers) :call startify#open_buffers()
+vmap <BS> "-d
+vmap <D-x> "*d
+vmap <D-c> "*y
+vmap <D-v> "-d"*P
+nmap <D-v> "*P
 inoremap  
-inoremap <silent> <expr> " coc#_insert_key('request', '9f7c87b9-58a8-11ea-aa3b-67682363a905')
-inoremap <silent> <expr> ' coc#_insert_key('request', '9f7c87b8-58a8-11ea-aa3b-67682363a905')
-inoremap <silent> <expr> ( coc#_insert_key('request', '9f7c87b0-58a8-11ea-aa3b-67682363a905')
-inoremap <silent> <expr> ) coc#_insert_key('request', '9f7c87b1-58a8-11ea-aa3b-67682363a905')
-inoremap <silent> <expr> < coc#_insert_key('request', '9f7c87b6-58a8-11ea-aa3b-67682363a905')
-inoremap <silent> <expr> > coc#_insert_key('request', '9f7c87b7-58a8-11ea-aa3b-67682363a905')
-inoremap <silent> <expr> [ coc#_insert_key('request', '9f7c87b2-58a8-11ea-aa3b-67682363a905')
-inoremap <silent> <expr> ] coc#_insert_key('request', '9f7c87b3-58a8-11ea-aa3b-67682363a905')
-inoremap <silent> <expr> ` coc#_insert_key('request', '9f7c87ba-58a8-11ea-aa3b-67682363a905')
+inoremap <silent> <expr> " coc#_insert_key('request', '7625d262-58b0-11ea-89ed-2b85abba1611')
+inoremap <silent> <expr> ' coc#_insert_key('request', '7625d261-58b0-11ea-89ed-2b85abba1611')
+inoremap <silent> <expr> ( coc#_insert_key('request', '7625ab50-58b0-11ea-89ed-2b85abba1611')
+inoremap <silent> <expr> ) coc#_insert_key('request', '7625ab51-58b0-11ea-89ed-2b85abba1611')
+inoremap <silent> <expr> < coc#_insert_key('request', '7625ab56-58b0-11ea-89ed-2b85abba1611')
+inoremap <silent> <expr> > coc#_insert_key('request', '7625d260-58b0-11ea-89ed-2b85abba1611')
+inoremap <silent> <expr> [ coc#_insert_key('request', '7625ab52-58b0-11ea-89ed-2b85abba1611')
+inoremap <silent> <expr> ] coc#_insert_key('request', '7625ab53-58b0-11ea-89ed-2b85abba1611')
+inoremap <silent> <expr> ` coc#_insert_key('request', '7625d263-58b0-11ea-89ed-2b85abba1611')
 imap kj 
-inoremap <silent> <expr> { coc#_insert_key('request', '9f7c87b4-58a8-11ea-aa3b-67682363a905')
-inoremap <silent> <expr> } coc#_insert_key('request', '9f7c87b5-58a8-11ea-aa3b-67682363a905')
+inoremap <silent> <expr> { coc#_insert_key('request', '7625ab54-58b0-11ea-89ed-2b85abba1611')
+inoremap <silent> <expr> } coc#_insert_key('request', '7625ab55-58b0-11ea-89ed-2b85abba1611')
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -700,6 +687,7 @@ set autoread
 set background=dark
 set backspace=2
 set belloff=all
+set clipboard=unnamed
 set cmdheight=2
 set completeopt=preview,menu
 set confirm
@@ -710,29 +698,70 @@ set hidden
 set langmenu=zh_CN.UTF-8
 set laststatus=2
 set matchtime=1
-set nomodeline
 set ruler
-set runtimepath=~/.config/coc/extensions/node_modules/coc-explorer,~/.vim,~/dotfiles/.vim/pack/git-plugins/start/vista.vim,~/.vim/plugged/vim-floaterm,~/.vim/plugged/tequila-sunrise.vim,~/.vim/plugged/jellybeans.vim,~/.vim/plugged/vim-startify,~/.vim/plugged/tagbar,~/.vim/plugged/nerdtree,~/.vim/plugged/vim-airline,~/.vim/plugged/vim-airline-themes,~/.vim/plugged/vim-easymotion,~/.vim/plugged/vim-choosewin,~/.vim/plugged/rainbow,~/.vim/plugged/smartim,~/.vim/plugged/vim-interestingwords,~/.vim/plugged/far.vim,~/.vim/plugged/vim-indent-guides,~/.vim/plugged/vim-commentary,~/.vim/plugged/auto-pairs,~/.vim/plugged/vim-cursorword,~/.vim/plugged/coc.nvim,~/.vim/plugged/jedi-vim,~/.vim/plugged/vim-easy-align,~/.vim/plugged/vim-repl,~/.vim/plugged/ctrlsf.vim,~/.fzf,~/.vim/plugged/fzf.vim,~/.vim/plugged/LeaderF,~/.vim/plugged/vim-fugitive,~/.vim/plugged/vim-gitgutter,~/.vim/plugged/gv.vim,~/.vim/plugged/undotree,~/.vim/plugged/defx.nvim,~/.vim/plugged/defx-icons,~/.vim/plugged/nvim-yarp,~/.vim/plugged/vim-hug-neovim-rpc,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/plugged/jedi-vim/after,~/.vim/plugged/ctrlsf.vim/after,~/.vim/after,~/.config/coc/extensions/node_modules/coc-snippets
+set runtimepath=
+set runtimepath+=~/.vim
+set runtimepath+=~/.vim/plugged/vim-floaterm
+set runtimepath+=~/.vim/plugged/tequila-sunrise.vim
+set runtimepath+=~/.vim/plugged/jellybeans.vim
+set runtimepath+=~/.vim/plugged/vim-startify
+set runtimepath+=~/.vim/plugged/tagbar
+set runtimepath+=~/.vim/plugged/nerdtree
+set runtimepath+=~/.vim/plugged/vim-airline
+set runtimepath+=~/.vim/plugged/vim-airline-themes
+set runtimepath+=~/.vim/plugged/vim-easymotion
+set runtimepath+=~/.vim/plugged/vim-choosewin
+set runtimepath+=~/.vim/plugged/rainbow
+set runtimepath+=~/.vim/plugged/smartim
+set runtimepath+=~/.vim/plugged/vim-interestingwords
+set runtimepath+=~/.vim/plugged/far.vim
+set runtimepath+=~/.vim/plugged/vim-indent-guides
+set runtimepath+=~/.vim/plugged/vim-commentary
+set runtimepath+=~/.vim/plugged/auto-pairs
+set runtimepath+=~/.vim/plugged/vim-cursorword
+set runtimepath+=~/.vim/plugged/coc.nvim
+set runtimepath+=~/.vim/plugged/jedi-vim
+set runtimepath+=~/.vim/plugged/vim-easy-align
+set runtimepath+=~/.vim/plugged/vim-repl
+set runtimepath+=~/.vim/plugged/ctrlsf.vim
+set runtimepath+=~/.fzf
+set runtimepath+=~/.vim/plugged/fzf.vim
+set runtimepath+=~/.vim/plugged/LeaderF
+set runtimepath+=~/.vim/plugged/vim-fugitive
+set runtimepath+=~/.vim/plugged/vim-gitgutter
+set runtimepath+=~/.vim/plugged/gv.vim
+set runtimepath+=~/.vim/plugged/undotree
+set runtimepath+=~/.vim/plugged/defx.nvim
+set runtimepath+=~/.vim/plugged/defx-icons
+set runtimepath+=~/.vim/plugged/nvim-yarp
+set runtimepath+=~/.vim/plugged/vim-hug-neovim-rpc
+set runtimepath+=~/.config/coc/extensions/node_modules/coc-explorer
+set runtimepath+=~/.vim/pack/git-plugins/start/vista.vim
+set runtimepath+=/usr/local/share/vim/vimfiles
+set runtimepath+=/usr/local/share/vim/vim81
+set runtimepath+=/usr/local/share/vim/vimfiles/after
+set runtimepath+=~/.config/coc/extensions/node_modules/coc-snippets
+set runtimepath+=~/.vim/plugged/jedi-vim/after
+set runtimepath+=~/.vim/plugged/ctrlsf.vim/after
+set runtimepath+=~/.vim/after
 set scrolloff=6
 set shiftwidth=4
-set shortmess=filnxtToOI
 set showcmd
 set showmatch
-set showtabline=2
+set showtabline=0
 set sidescroll=10
 set smartindent
 set smarttab
 set softtabstop=4
 set splitbelow
 set splitright
-set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set noswapfile
 set tabline=%!airline#extensions#tabline#get()
 set tabstop=4
 set termencoding=utf-8
 set textwidth=78
 set ttimeoutlen=0
-set undodir=/root.
+set undodir=/Users/jetoo.
 set undofile
 set updatetime=30
 set virtualedit=block,onemore
@@ -741,225 +770,34 @@ set nowritebackup
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/
+silent tabonly
+cd ~/dotfiles/ranger
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +38 output:///info
 argglobal
-silent! argdel *
+%argdel
 set splitbelow splitright
 wincmd t
-set winminheight=1 winheight=1 winminwidth=1 winwidth=1
-argglobal
-enew
-let s:cpo_save=&cpo
-set cpo&vim
-inoremap <buffer> <silent> <BS> =AutoPairsDelete()
-nnoremap <buffer> <nowait> <silent>  :call startify#open_buffers()
-nnoremap <buffer> <nowait> <silent> 0 :call startify#open_buffers(11)
-nnoremap <buffer> <nowait> <silent> 19 :call startify#open_buffers(33)
-nnoremap <buffer> <nowait> <silent> 18 :call startify#open_buffers(32)
-nnoremap <buffer> <nowait> <silent> 17 :call startify#open_buffers(31)
-nnoremap <buffer> <nowait> <silent> 16 :call startify#open_buffers(30)
-nnoremap <buffer> <nowait> <silent> 15 :call startify#open_buffers(29)
-nnoremap <buffer> <nowait> <silent> 14 :call startify#open_buffers(28)
-nnoremap <buffer> <nowait> <silent> 13 :call startify#open_buffers(27)
-nnoremap <buffer> <nowait> <silent> 12 :call startify#open_buffers(26)
-nnoremap <buffer> <nowait> <silent> 11 :call startify#open_buffers(25)
-nnoremap <buffer> <nowait> <silent> 10 :call startify#open_buffers(24)
-nnoremap <buffer> <nowait> <silent> 1 :call startify#open_buffers(12)
-nnoremap <buffer> <nowait> <silent> 2 :call startify#open_buffers(13)
-nnoremap <buffer> <nowait> <silent> 3 :call startify#open_buffers(14)
-nnoremap <buffer> <nowait> <silent> 4 :call startify#open_buffers(15)
-nnoremap <buffer> <nowait> <silent> 5 :call startify#open_buffers(16)
-nnoremap <buffer> <nowait> <silent> 6 :call startify#open_buffers(17)
-nnoremap <buffer> <nowait> <silent> 7 :call startify#open_buffers(18)
-nnoremap <buffer> <nowait> <silent> 8 :call startify#open_buffers(19)
-nnoremap <buffer> <nowait> <silent> 9 :call startify#open_buffers(20)
-nmap <buffer> ;hp <Plug>(GitGutterPreviewHunk)
-nmap <buffer> ;hu <Plug>(GitGutterUndoHunk)
-nmap <buffer> ;hs <Plug>(GitGutterStageHunk)
-xmap <buffer> ;hs <Plug>(GitGutterStageHunk)
-nnoremap <buffer> <nowait> <silent> B :call startify#set_batchmode('B')
-inoremap <buffer> <silent> § =AutoPairsMoveCharacter('''')
-inoremap <buffer> <silent> ¢ =AutoPairsMoveCharacter('"')
-inoremap <buffer> <silent> © =AutoPairsMoveCharacter(')')
-inoremap <buffer> <silent> ¨ =AutoPairsMoveCharacter('(')
-inoremap <buffer> <silent> î :call AutoPairsJump()a
-inoremap <buffer> <silent> <expr> ð AutoPairsToggle()
-inoremap <buffer> <silent> â =AutoPairsBackInsert()
-inoremap <buffer> <silent> å =AutoPairsFastWrap()
-inoremap <buffer> <silent> ý =AutoPairsMoveCharacter('}')
-inoremap <buffer> <silent> û =AutoPairsMoveCharacter('{')
-inoremap <buffer> <silent> Ý =AutoPairsMoveCharacter(']')
-inoremap <buffer> <silent> Û =AutoPairsMoveCharacter('[')
-nnoremap <buffer> <expr> N 'j '[v:searchforward].'N'
-nnoremap <buffer> <nowait> <silent> S :call startify#set_batchmode('S')
-nnoremap <buffer> <nowait> <silent> T :call startify#set_batchmode('T')
-nnoremap <buffer> <nowait> <silent> V :call startify#set_batchmode('V')
-nmap <buffer> [c <Plug>(GitGutterPrevHunk)
-nmap <buffer> ]c <Plug>(GitGutterNextHunk)
-xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)
-omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
-nnoremap <buffer> <nowait> <silent> b :call startify#set_mark('B')
-nnoremap <buffer> <nowait> <silent> c :call startify#open_buffers(37)
-nnoremap <buffer> <nowait> <silent> e :call startify#open_buffers(7)
-nnoremap <buffer> <nowait> <silent> i :enew | startinsert
-xmap <buffer> ic <Plug>(GitGutterTextObjectInnerVisual)
-omap <buffer> ic <Plug>(GitGutterTextObjectInnerPending)
-nnoremap <buffer> <expr> n ' j'[v:searchforward].'n'
-nnoremap <buffer> <nowait> <silent> q :call startify#open_buffers(39)
-nnoremap <buffer> <nowait> <silent> s :call startify#set_mark('S')
-nnoremap <buffer> <nowait> <silent> t :call startify#set_mark('T')
-nnoremap <buffer> <nowait> <silent> v :call startify#set_mark('V')
-nnoremap <buffer> <nowait> <silent> <MiddleMouse> :enew | execute 'normal! "'.(v:register=='"'?'*':v:register).'gp'
-nnoremap <buffer> <nowait> <silent> <2-LeftMouse> :call startify#open_buffers()
-nnoremap <buffer> <nowait> <silent> <Insert> :enew | startinsert
-inoremap <buffer> <silent>  =AutoPairsDelete()
-inoremap <buffer> <silent>   =AutoPairsSpace()
-inoremap <buffer> <silent> " =AutoPairsInsert('"')
-inoremap <buffer> <silent> ' =AutoPairsInsert('''')
-inoremap <buffer> <silent> ( =AutoPairsInsert('(')
-inoremap <buffer> <silent> ) =AutoPairsInsert(')')
-noremap <buffer> <silent> î :call AutoPairsJump()
-noremap <buffer> <silent> ð :call AutoPairsToggle()
-inoremap <buffer> <silent> [ =AutoPairsInsert('[')
-inoremap <buffer> <silent> ] =AutoPairsInsert(']')
-inoremap <buffer> <silent> ` =AutoPairsInsert('`')
-inoremap <buffer> <silent> { =AutoPairsInsert('{')
-inoremap <buffer> <silent> } =AutoPairsInsert('}')
-let &cpo=s:cpo_save
-unlet s:cpo_save
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=wipe
-setlocal nobuflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=/*%s*/
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-set cursorline
-setlocal nocursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal expandtab
-if &filetype != 'startify'
-setlocal filetype=startify
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal makeencoding=
-setlocal makeprg=
-setlocal matchpairs=
-setlocal nomodeline
-setlocal nomodifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal nonumber
-setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal shiftwidth=4
-setlocal noshortname
-set signcolumn=yes
-setlocal signcolumn=no
-setlocal smartindent
-setlocal softtabstop=4
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=%!airline#statusline(1)
-setlocal suffixesadd=
-setlocal noswapfile
-setlocal synmaxcol=3000
-if &syntax != 'startify'
-setlocal syntax=startify
-endif
-setlocal tabstop=4
-setlocal tagcase=
-setlocal tags=
-setlocal termkey=
-setlocal termsize=
-setlocal textwidth=78
-setlocal thesaurus=
-setlocal undofile
-setlocal undolevels=-123456
-setlocal nowinfixheight
-setlocal nowinfixwidth
-set nowrap
-setlocal nowrap
-setlocal wrapmargin=0
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
 tabnext 1
-if exists('s:wipebuf')
+badd +53 ~/.vimrc
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
-set winheight=1 winwidth=20 shortmess=filnxtToOI
+set winheight=1 winwidth=20 shortmess=filnxtToO
 set winminheight=1 winminwidth=1
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

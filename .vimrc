@@ -48,7 +48,13 @@ call plug#end()
 
 " voldikss/vim-floaterm
 let g:floaterm_position = 'center'
+hi FloatermNF guibg=black
+hi FloatermBorderNF guibg=blue guifg=cyan
 tnoremap <ESC> <C-\><C-n> :q<CR>
+nnoremap <Leader>fn :FloatermNew<CR>
+nnoremap <Leader>ft :FloatermToggle<CR>
+nnoremap <Leader>fnn :FloatermNext<CR>
+nnoremap <Leader>fpp :FloatermPrev<CR>
 
 " ------ neoclide/coc.nvim
 "  安装依赖
@@ -162,7 +168,7 @@ let g:tagbar_width = 25                 "设置tagbar的宽度
 let g:tagbar_autofocus = 1              "tagbar一打开，光标即在tagbar页面内
 let g:tagbar_sort = 0                   "设置标签不排序，默认排序
 let g:tagbar_autoshowtag = 1            "当编辑代码时，在Tagbar自动追踪变量
-let g:tagbar_iconchars = ['+', '-']     "修改默认剪头'▸', '▾'
+let g:tagbar_iconchars = ['▸', '▾']     "修改默认剪头'▸', '▾'
 
 " ------ startify
 noremap <Leader>si :Startify<CR>
