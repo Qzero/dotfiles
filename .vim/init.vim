@@ -1,1 +1,0 @@
-/Users/jetoo/dotfiles/.vimrc

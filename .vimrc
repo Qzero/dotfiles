@@ -19,7 +19,8 @@ Plug 'luochen1990/rainbow'                      " 彩虹括号
 Plug 'ybian/smartim'                            " 解决中文输入法无法输入命令
 Plug 'lfv89/vim-interestingwords'               " 变量彩色凸显
 Plug 'brooth/far.vim'                           " 替换
-Plug 'nathanaelkane/vim-indent-guides'          " 显示缩进
+" Plug 'nathanaelkane/vim-indent-guides'          " 显示缩进
+Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'                     " 注释
 Plug 'jiangmiao/auto-pairs'                     " 自动补全引号、圆括号、花括号等
 Plug 'itchyny/vim-cursorword'                   " 变量下划线
@@ -31,32 +32,32 @@ Plug 'sillybun/vim-repl'
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh'  }
+" Plug 'Yggdroot/LeaderF', { 'do': './install.sh'  }
 " Git
 Plug 'tpope/vim-fugitive'                       " git命令封装
 Plug 'airblade/vim-gitgutter'                   " 显示git更改标示
 Plug 'junegunn/gv.vim'                          " git提交树
 Plug 'mbbill/undotree'                          " 文件版本回溯
-
-Plug 'Shougo/defx.nvim'
-Plug 'kristijanhusak/defx-icons'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-
 call plug#end()
 
+"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+" Yggdroot/indentLine
+let g:indentLine_char = '│'
+let g:indentLine_enabled = 1
+let g:indentLine_color_term = 238
+let g:indentLine_fileTypeExclude = ['startify', 'vista', 'json', 'codi', 'vtm', 'jsonc', 'coc-explorer']
 
 " voldikss/vim-floaterm
 let g:floaterm_position = 'center'
 hi FloatermNF guibg=black
-" hi FloatermBorderNF guibg=red guifg=cyan
+hi FloatermBorderNF guibg=red guifg=cyan
 tnoremap <ESC> <C-\><C-n> :q<CR>
 nnoremap <Leader>fn :FloatermNew<CR>
 nnoremap <Leader>ft :FloatermToggle<CR>
 nnoremap <Leader>fnn :FloatermNext<CR>
 nnoremap <Leader>fpp :FloatermPrev<CR>
 
-" ------ neoclide/coc.nvim
+" neoclide/coc.nvim
 "  安装依赖
 "  curl -sL install-node.now.sh | sh
 "  curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
@@ -66,23 +67,59 @@ set shortmess+=c   " 不要完成菜单消息
 set signcolumn=yes " 始终显示信号
 let g:coc_status_error_sign = '❌'
 let g:coc_status_warning_sign = '⚠️'
-let g:coc_global_extensions =['coc-html','coc-css','coc-snippets','coc-prettier','coc-eslint','coc-emmet','coc-tsserver','coc-pairs','coc-json','coc-python','coc-imselect','coc-highlight','coc-git','coc-emoji','coc-lists','coc-post','coc-stylelint','coc-yaml','coc-template','coc-tabnine','coc-marketplace','coc-gitignore','coc-yank','coc-explorer','coc-go']
+let g:coc_global_extensions = [
+  \ 'coc-bookmark',
+  \ 'coc-browser',
+  \ 'coc-clock',
+  \ 'coc-css',
+  \ 'coc-diagnostic',
+  \ 'coc-dictionary',
+  \ 'coc-emoji',
+  \ 'coc-emmet',
+  \ 'coc-eslint',
+  \ 'coc-explorer',
+  \ 'coc-git',
+  \ 'coc-highlight',
+  \ 'coc-html',
+  \ 'coc-lists',
+  \ 'coc-json',
+  \ 'coc-kite',
+  \ 'coc-marketplace',
+  \ 'coc-pairs',
+  \ 'coc-post',
+  \ 'coc-prettier',
+  \ 'coc-python',
+  \ 'coc-rls',
+  \ 'coc-snippets',
+  \ 'coc-spell-checker',
+  \ 'coc-syntax',
+  \ 'coc-tag',
+  \ 'coc-todolist',
+  \ 'coc-template',
+  \ 'coc-translator',
+  \ 'coc-tslint-plugin',
+  \ 'coc-tsserver',
+  \ 'coc-vimtex',
+  \ 'coc-vimlsp',
+  \ 'coc-yank',
+  \ 'coc-zi'
+  \ ]
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>p  :<C-u>CocList extensions<cr>
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 nnoremap <silent> <space>e :CocCommand explorer<CR>
 
-" ------ junegunn/vim-easy-align
+" junegunn/vim-easy-align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-" ----- junegunn/fzf
+" junegunn/fzf
 nnoremap <Leader>fl :Files<CR>
 nnoremap <Leader>fb :Buffers<CR>
 nnoremap <Leader>fe :Lines<Space>
 
-" ------ Yggdroot/LeaderF
+" Yggdroot/LeaderF
 let g:Lf_ReverseOrder = 0   "自下而上显示
 nnoremap <leader>lf :LeaderfFile<CR>
 nnoremap <leader>lb :LeaderfBuffer<CR>
@@ -90,7 +127,7 @@ nnoremap <leader>lm :LeaderfMru<CR>
 nnoremap <leader>lft :LeaderfFunction<CR>
 nnoremap <leader>le :LeaderfLine<CR>
 
-" ------ dyng/ctrlsf  #install -y ack-grep 依赖ack/ag/pt/rg之一
+" dyng/ctrlsf  #install -y ack-grep 依赖ack/ag/pt/rg之一
 nnoremap <Leader>cf :CtrlSF<Space>
 nnoremap <Leader>cfc :CtrlSFClose<CR>
 nmap <silent><leader>cfs <Plug>CtrlSFCCwordPath<CR>
@@ -111,24 +148,24 @@ nnoremap <Leader>gv :GV<CR>
 " vim-gitgutter
 let g:gitgutter_max_signs = 800     "更改显示标示行数限制
 
-" ------ mbbill/undotree
+" mbbill/undotree
 nnoremap <Leader>ut :UndotreeToggle<cr>
 if has("persistent_undo")
     set undodir=$HOME."/.undodir"
         set undofile
     endif
 
-" ------ lfv89/vim-interestingwords
+" lfv89/vim-interestingwords
 nnoremap <silent> <leader>kw :call InterestingWords('n')<CR>
 nnoremap <silent> <leader>KW :call UncolorAllWords()<CR>
 nnoremap <silent> n :call WordNavigation('forward')<CR>
 nnoremap <silent> N :call WordNavigation('backward')<CR>
 
-" ------ t9md/vim-choosewin
+" t9md/vim-choosewin
 nmap <Leader>vv <Plug>(choosewin)
 let g:choosewin_overlay_enable = 0
 
-" ------ vim-easymotion 
+" vim-easymotion 
 let g:EasyMotion_smartcase = 1      "忽略大小写
 map ss <Plug>(easymotion-s2)
 map <Leader>j <Plug>(easymotion-j)
@@ -137,7 +174,7 @@ map <leader>h <Plug>(easymotion-linebackward)
 map <leader>l <Plug>(easymotion-lineforward)
 map <leader>r <Plug>(easymotion-repeat)
 
-" ------ nathanaelkane/vim-indent-guides
+" nathanaelkane/vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1 " vim启动时启用
 let g:indent_guides_start_level = 2           " 第二层缩进开始显示
 let g:indent_guides_guide_size = 1            " 色块宽度
@@ -146,10 +183,10 @@ let g:indent_guides_auto_colors = 0           " 自定义关联可视化颜色
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#009A65 ctermbg=4
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#8ECCCB ctermbg=3
 
-" ------ luohen199/rainbow
+" luohen199/rainbow
 let g:rainbow_active = 1
 
-" ------ vim-airline/vim-airline
+" vim-airline/vim-airline
 nnoremap <C-D> :bprevious<CR>:bdelete #<CR>
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
@@ -159,7 +196,7 @@ let g:airline_theme='ubaryd'                      " luna,term,tomorrow,ubaryd,ze
 let g:airline#extensions#tabline#enabled=1        " 用顶部tabline
 let g:airline#extensions#tabline#buffer_nr_show=0 " 显示buffer编号
 
-" ------ Tagbar 安装依赖 : install ctags
+" Tagbar 安装依赖 : install ctags
 nnoremap <Leader>tb :TagbarToggle<CR>
 let g:tagbar_ctags_bin = 'ctags'        "tagbar依赖ctags插件
 let g:tagbar_compact = 1                  "tagbar 子窗口中不显示冗余帮助信息
@@ -170,7 +207,8 @@ let g:tagbar_sort = 0                   "设置标签不排序，默认排序
 let g:tagbar_autoshowtag = 1            "当编辑代码时，在Tagbar自动追踪变量
 let g:tagbar_iconchars = ['▸', '▾']     "修改默认剪头'▸', '▾'
 
-" ------ startify
+" startify
+let g:webdevicons_enable_startify = 1
 noremap <Leader>si :Startify<CR>
 let g:startify_bookmarks = [
   \ {'c': '~/dotfiles/.vimrc'},
@@ -181,8 +219,7 @@ let g:startify_custom_header = [
   \ '                            N         E         R         V         E         R  ',
   \ '                           ___       ___       ___       ___       ___       ___ ']
 
-
-" ------ scrooloose/nerdtree
+" scrooloose/nerdtree
 nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader>ntf :NERDTreeFind<CR>
 let NERDTreeShowHidden=0                        "是否显示隐藏文件
@@ -195,7 +232,6 @@ let NERDTreeAutoDeleteBuffer=1                  "删除文件时自动删除文�
 let NERDTreeMinimalUI=1                         "不显示冗余帮助信息
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   ""当NERDTree为剩下的唯一窗口时自动关闭
 
-"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 "通用设置 ------
 set t_Co=256                                            " 开启256色支持
 set guifont=Monaco:h16                                  " 默认字体和大小
@@ -248,7 +284,7 @@ set completeopt=preview,menu                            " 代码补全
 set scrolloff=6                                         " 光标移动到buffer的顶部和底部时保持3行距离
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
-"快捷键 ------ 
+" 快捷键
 "" 窗口选择与移动
 imap kj <esc>
 noremap H ^
