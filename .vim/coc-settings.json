@@ -98,16 +98,16 @@
         "]d": "diagnosticNext",
         "gk": "gitPrev",
         "gj": "gitNext",
-        "<<": "gitStage",
-        ">>": "gitUnstage"   
+        // "<-": "gitStage",
+        // "->": "gitUnstage"   
     },
     // coc-git
-    //"git.enableGutters": true,
-    //"git.addedSign.hlGroup": "GitAdd",
-    //"git.removedSign.hlGroup": "GitDeleteBottom",
-    //"git.topRemovedSign.hlGroup": "GitDeleteTop",
-    //"git.changeRemovedSign.hlGroup": "GitDeleteTopAndBottom",
-    //"git.changedSign.hlGroup": "GitModify"
+    // "git.enableGutters": true,
+    // "git.addedSign.hlGroup": "GitAdd",
+    // "git.removedSign.hlGroup": "GitDeleteBottom",
+    // "git.topRemovedSign.hlGroup": "GitDeleteTop",
+    // "git.changeRemovedSign.hlGroup": "GitDeleteTopAndBottom",
+    // "git.changedSign.hlGroup": "GitModify",
 
     // add your languageServer into this list
     "languageserver": {}

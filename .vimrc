@@ -37,15 +37,43 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " Plug 'Yggdroot/LeaderF', { 'do': './install.sh'  }
 Plug 'voldikss/vim-translator'                  " 翻译插件
+Plug 'liuchengxu/vista.vim'
+Plug 'voldikss/vim-browser-search'              "搜索插件
 " Git
+Plug 'simnalamburt/vim-mundo', {'on': 'MundoToggle'}
 Plug 'rhysd/git-messenger'
-Plug 'simnalamburt/vim-mundo'
 Plug 'tpope/vim-fugitive'                       " git命令封装
 Plug 'airblade/vim-gitgutter'                   " 显示git更改标示
 Plug 'junegunn/gv.vim'                          " git提交树
 call plug#end()
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+" voldikss/vim-browser-search
+nmap <silent> <Leader>sw <Plug>SearchNormal
+vmap <silent> <Leader>sw <Plug>SearchVisual
+
+" Plug 'liuchengxu/vista.vim'
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_default_executive = 'ctags'
+let g:vista_executive_for = {
+  \ '.vimrc': 'vim_lsp',
+  \ 'php': 'vim_lsp',
+  \ }
+function! NearestMethodOrFunction() abort
+  return get(b:, 'vista_nearest_method_or_function', '')
+endfunction
+set statusline+=%{NearestMethodOrFunction()}
+autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
+let g:vista_ctags_cmd = {
+      \ 'haskell': 'hasktags -x -o - -c',
+      \ }
+let g:vista_fzf_preview = ['right:50%']
+let g:vista#renderer#enable_icon = 1
+let g:vista#renderer#icons = {
+\   "function": "\uf794",
+\   "variable": "\uf71b",
+\  }
+
 " simnalamburt/vim-mundo
 set undofile
 set undodir=~/.vim/undo
@@ -92,8 +120,17 @@ set hidden         " 如果没有设置，TextEdit可能失效
 set cmdheight=2    " 更好显示消息
 set shortmess+=c   " 不要完成菜单消息
 set signcolumn=yes " 始终显示信号
-let g:coc_status_error_sign = '❌'
-let g:coc_status_warning_sign = '⚠️'
+" coc-bookmark
+nmap <silent> ,b <Plug>(coc-bookmark-toggle)
+nmap <silent> ,a <Plug>(coc-bookmark-annotate)
+nmap <silent> gh <Plug>(coc-bookmark-prev)
+nmap <silent> gl <Plug>(coc-bookmark-next)
+" coc-explorer
+augroup coc-explorer-settings
+  autocmd!
+  autocmd FileType coc-explorer setlocal relativenumber
+augroup END
+" coc-extensions
 let g:coc_global_extensions = [
   \ 'coc-bookmark',
   \ 'coc-browser',
@@ -105,7 +142,6 @@ let g:coc_global_extensions = [
   \ 'coc-emmet',
   \ 'coc-eslint',
   \ 'coc-explorer',
-  \ 'coc-git',
   \ 'coc-highlight',
   \ 'coc-html',
   \ 'coc-lists',
