@@ -41,7 +41,7 @@ Plug 'liuchengxu/vista.vim'
 Plug 'voldikss/vim-browser-search'              "搜索插件
 " Git
 Plug 'simnalamburt/vim-mundo', {'on': 'MundoToggle'}
-Plug 'rhysd/git-messenger'
+Plug 'rhysd/git-messenger.vim'
 Plug 'tpope/vim-fugitive'                       " git命令封装
 Plug 'airblade/vim-gitgutter'                   " 显示git更改标示
 Plug 'junegunn/gv.vim'                          " git提交树
