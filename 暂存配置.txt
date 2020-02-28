@@ -1,0 +1,26 @@
+" nathanaelkane/vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1 " vim启动时启用
+let g:indent_guides_start_level = 2           " 第二层缩进开始显示
+let g:indent_guides_guide_size = 1            " 色块宽度
+let g:indent_guides_tab_guides = 1            " 对tab对齐的禁用
+let g:indent_guides_auto_colors = 0           " 自定义关联可视化颜色
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#009A65 ctermbg=4
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#8ECCCB ctermbg=3
+
+
+" mbbill/undotree
+nnoremap <Leader>ut :UndotreeToggle<cr>
+if has("persistent_undo")
+    set undodir=$HOME."/.undodir"
+        set undofile
+    endif
+
+
+" Yggdroot/LeaderF
+let g:Lf_ReverseOrder = 0   "自下而上显示
+nnoremap <leader>lf :LeaderfFile<CR>
+nnoremap <leader>lb :LeaderfBuffer<CR>
+nnoremap <leader>lm :LeaderfMru<CR>
+nnoremap <leader>lft :LeaderfFunction<CR>
+nnoremap <leader>le :LeaderfLine<CR>
+

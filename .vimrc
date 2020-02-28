@@ -2,6 +2,10 @@ let mapleader=";"                               "定义Leader键
 filetype on                                     "侦测文件类型
 filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
+nnoremap <Leader><Leader>i :PlugInstall<CR>     "安装插件
+nnoremap <Leader><Leader>u :PlugUpdate<CR>      "更新插件
+nnoremap <Leader><Leader>c :PlugClean<CR>       "删除插件
+nnoremap <Leader><Leader>pu :PlugUpgrade<CR>    "更新插件管理器
 
 call plug#begin('~/.vim/plugged')
 Plug 'voldikss/vim-floaterm'
@@ -19,7 +23,6 @@ Plug 'luochen1990/rainbow'                      " 彩虹括号
 Plug 'ybian/smartim'                            " 解决中文输入法无法输入命令
 Plug 'lfv89/vim-interestingwords'               " 变量彩色凸显
 Plug 'brooth/far.vim'                           " 替换
-" Plug 'nathanaelkane/vim-indent-guides'          " 显示缩进
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'                     " 注释
 Plug 'jiangmiao/auto-pairs'                     " 自动补全引号、圆括号、花括号等
@@ -33,14 +36,38 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " Plug 'Yggdroot/LeaderF', { 'do': './install.sh'  }
+Plug 'voldikss/vim-translator'                  " 翻译插件
 " Git
+Plug 'rhysd/git-messenger'
+Plug 'simnalamburt/vim-mundo'
 Plug 'tpope/vim-fugitive'                       " git命令封装
 Plug 'airblade/vim-gitgutter'                   " 显示git更改标示
 Plug 'junegunn/gv.vim'                          " git提交树
-Plug 'mbbill/undotree'                          " 文件版本回溯
 call plug#end()
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+" simnalamburt/vim-mundo
+set undofile
+set undodir=~/.vim/undo
+let g:mundo_width              = 30
+let g:mundo_preview_height     = 10
+let g:mundo_right              = 0
+let g:mundo_preview_bottom     = 1
+let g:mundo_auto_preview_delay = 10
+
+"rhysd/git-messenger
+noremap <silent> <Leader>gm :GitMessenger<CR>
+
+" voldikss/vim-translator
+let g:translator_history_enable = 1
+let g:translator_default_engines = ['google', 'ciba', 'youdao']
+nmap <silent>    ,t        <Plug>Translate
+vmap <silent>    ,t        <Plug>TranslateV 
+nmap <silent>    ,w        <Plug>TranslateW
+vmap <silent>    ,w        <Plug>TranslateWV
+nmap <silent>    ,r        <Plug>TranslateR
+vmap <silent>    ,r        <Plug>TranslateRV
+
 " Yggdroot/indentLine
 let g:indentLine_char = '│'
 let g:indentLine_enabled = 1
@@ -119,14 +146,6 @@ nnoremap <Leader>fl :Files<CR>
 nnoremap <Leader>fb :Buffers<CR>
 nnoremap <Leader>fe :Lines<Space>
 
-" Yggdroot/LeaderF
-let g:Lf_ReverseOrder = 0   "自下而上显示
-nnoremap <leader>lf :LeaderfFile<CR>
-nnoremap <leader>lb :LeaderfBuffer<CR>
-nnoremap <leader>lm :LeaderfMru<CR>
-nnoremap <leader>lft :LeaderfFunction<CR>
-nnoremap <leader>le :LeaderfLine<CR>
-
 " dyng/ctrlsf  #install -y ack-grep 依赖ack/ag/pt/rg之一
 nnoremap <Leader>cf :CtrlSF<Space>
 nnoremap <Leader>cfc :CtrlSFClose<CR>
@@ -148,13 +167,6 @@ nnoremap <Leader>gv :GV<CR>
 " vim-gitgutter
 let g:gitgutter_max_signs = 800     "更改显示标示行数限制
 
-" mbbill/undotree
-nnoremap <Leader>ut :UndotreeToggle<cr>
-if has("persistent_undo")
-    set undodir=$HOME."/.undodir"
-        set undofile
-    endif
-
 " lfv89/vim-interestingwords
 nnoremap <silent> <leader>kw :call InterestingWords('n')<CR>
 nnoremap <silent> <leader>KW :call UncolorAllWords()<CR>
@@ -173,15 +185,6 @@ map <Leader>k <Plug>(easymotion-k)
 map <leader>h <Plug>(easymotion-linebackward)
 map <leader>l <Plug>(easymotion-lineforward)
 map <leader>r <Plug>(easymotion-repeat)
-
-" nathanaelkane/vim-indent-guides
-let g:indent_guides_enable_on_vim_startup = 1 " vim启动时启用
-let g:indent_guides_start_level = 2           " 第二层缩进开始显示
-let g:indent_guides_guide_size = 1            " 色块宽度
-let g:indent_guides_tab_guides = 1            " 对tab对齐的禁用
-let g:indent_guides_auto_colors = 0           " 自定义关联可视化颜色
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#009A65 ctermbg=4
-" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#8ECCCB ctermbg=3
 
 " luohen199/rainbow
 let g:rainbow_active = 1
@@ -289,24 +292,42 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 imap kj <esc>
 noremap H ^
 noremap L $
+" 插入模式下移动
+inoremap <S-k> <Up>
+inoremap <S-j> <Down>
+snoremap <S-j> <Down>
+inoremap <S-h> <Left>
+inoremap <S-l> <Right>
+" 窗口跳转
 noremap <Leader>cc <C-w>c
 noremap <Leader>hh <C-w>h
 noremap <Leader>jj <C-w>j
 noremap <Leader>kk <C-w>k
 noremap <Leader>ll <C-w>l
 noremap <Leader>ww <C-w>w
+" 窗口分屏
 map sl :set splitright<CR>:vsplit<CR>
 map sj :set splitbelow<CR>:split<CR>
 map svs <C-w>t<C-w>H                                  
-map svh <C-w>t<C-w>K                                  
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :q<CR>
+map svh <C-w>t<C-w>K
+" 窗口通知
+nnoremap <silent> <Leader>m :messages<CR>
+nnoremap <silent> <Leader>t :TabMessage messages<CR>
+" 命令模式移动
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+cnoremap <C-b> <S-Left>
+cnoremap <C-f> <S-Right>
+cnoremap <C-h> <Left>
+cnoremap <C-l> <Right>
+"" 文件相关
+nnoremap <silent> <Leader>w :w<CR>
+nnoremap <silent> <Leader>W :wa<CR>
+nnoremap <silent> <Leader>q :q<CR>
+nnoremap <silent> <Leader>Q :qa!<CR>
+nnoremap <silent> Q         :qa!<CR>
 nnoremap <Leader>rn :set relativenumber!<CR>                    "显示相对行号
-nnoremap <Leader>vc :edit $MYVIMRC<CR>                          "编辑vimrc文件
+nnoremap <Leader>ev :edit $MYVIMRC<CR>                          "编辑vimrc文件
 map <Leader>s :source $MYVIMRC<CR>                         "重新加载vimrc文件
-" 插件与调试
-nnoremap <Leader><Leader>i :PlugInstall<CR>     "安装插件
-nnoremap <Leader><Leader>u :PlugUpdate<CR>      "更新插件
-nnoremap <Leader><Leader>c :PlugClean<CR>       "删除插件
-nnoremap <Leader><Leader>pu :PlugUpgrade<CR>    "更新插件管理器
-nnoremap <Leader>is iimport ipdb; ipdb.set_trace()
