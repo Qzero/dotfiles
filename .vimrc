@@ -203,7 +203,7 @@ let g:tagbar_iconchars = ['▸', '▾']     "修改默认剪头'▸', '▾'
 let g:webdevicons_enable_startify = 1
 noremap si :Startify<CR>
 let g:startify_bookmarks = [
-  \ {'c': '~/dotfiles/.vimrc'},
+  \ {'c': '~/dotfiles/.vimrc' },
   \ ]
 let g:startify_custom_header = [
   \ '                           ___       ___       ___       ___       ___ ',
