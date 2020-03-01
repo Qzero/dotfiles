@@ -2,10 +2,6 @@ let mapleader=";"                               "定义Leader键
 filetype on                                     "侦测文件类型
 filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
-nnoremap <Leader><Leader>i :PlugInstall<CR>     "安装插件
-nnoremap <Leader><Leader>u :PlugUpdate<CR>      "更新插件
-nnoremap <Leader><Leader>c :PlugClean<CR>       "删除插件
-nnoremap <Leader><Leader>p :PlugUpgrade<CR>    "更新插件管理器
 
 call plug#begin('~/.vim/plugged')
 Plug 'voldikss/vim-floaterm'                    " 浮动终端
@@ -18,7 +14,7 @@ Plug 'vim-airline/vim-airline-themes'           " 状态栏主题
 Plug 'easymotion/vim-easymotion'                " 超级跳转
 Plug 't9md/vim-choosewin'                       " 窗口选择
 Plug 'luochen1990/rainbow'                      " 彩虹括号
-Plug 'ybian/smartim'                            " 解决中文输入法无法输入命令
+" Plug 'ybian/smartim'                            " 解决中文输入法无法输入命令
 Plug 'lfv89/vim-interestingwords'               " 变量彩色凸显
 Plug 'brooth/far.vim'                           " 替换
 Plug 'Yggdroot/indentLine'                      " 缩进线
@@ -31,7 +27,7 @@ Plug 'junegunn/vim-easy-align'                  " 文本对齐
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-" Plug 'Yggdroot/LeaderF', { 'do': './install.sh'  }
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh'  }
 Plug 'voldikss/vim-translator'                  " 翻译插件
 Plug 'voldikss/vim-browser-search'              " 搜索插件
 " Git
@@ -41,6 +37,11 @@ Plug 'airblade/vim-gitgutter'                   " 显示git更改标示
 Plug 'junegunn/gv.vim'                          " git提交树
 call plug#end()
 
+nnoremap <Leader><Leader>i :PlugInstall<CR>     "安装插件
+nnoremap <Leader><Leader>u :PlugUpdate<CR>      "更新插件
+nnoremap <Leader><Leader>c :PlugClean<CR>       "删除插件
+nnoremap <Leader><Leader>p :PlugUpgrade<CR>    "更新插件管理器
+
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 " voldikss/vim-browser-search
 vmap <silent> sb <Plug>SearchVisual
@@ -48,12 +49,12 @@ vmap <silent> sb <Plug>SearchVisual
 " voldikss/vim-translator
 let g:translator_history_enable = 1
 let g:translator_default_engines = ['baidu', 'youdao', 'ciba', 'bing', 'google']
-nmap <silent>    ,t        <Plug>Translate
-vmap <silent>    ,t        <Plug>TranslateV 
-nmap <silent>    ,w        <Plug>TranslateW
-vmap <silent>    ,w        <Plug>TranslateWV
-nmap <silent>    ,r        <Plug>TranslateR
-vmap <silent>    ,r        <Plug>TranslateRV
+nmap <silent> ,t <Plug>Translate
+vmap <silent> ,t <Plug>TranslateV 
+nmap <silent> ,w <Plug>TranslateW
+vmap <silent> ,w <Plug>TranslateWV
+nmap <silent> ,r <Plug>TranslateR
+vmap <silent> ,r <Plug>TranslateRV
 
 " Yggdroot/indentLine
 let g:indentLine_char = '|'
@@ -77,6 +78,11 @@ set hidden         " 如果没有设置，TextEdit可能失效
 set cmdheight=2    " 更好显示消息
 set shortmess+=c   " 不要完成菜单消息
 set signcolumn=yes " 始终显示信号
+" coc-floaterm
+nnoremap ,cf :CocCommand floaterm.new<CR>
+nnoremap ,cn :CocCommand floaterm.next<CR>
+nnoremap ,cp :CocCommand floaterm.prev<CR>
+nnoremap ,ct :CocCommand floaterm.toggle<CR>
 " coc-bookmark
 nmap <silent> ,b <Plug>(coc-bookmark-toggle)
 nmap <silent> ,a <Plug>(coc-bookmark-annotate)
@@ -116,6 +122,7 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-vimtex',
   \ 'coc-vimlsp',
+  \ 'coc-floaterm',
   \ 'coc-yank',
   \ 'coc-zi'
   \ ]
@@ -129,17 +136,20 @@ nnoremap <silent> <space>e :CocCommand explorer<CR>
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-" junegunn/fzf
-nnoremap fl :Files<CR>
-nnoremap fb :Buffers<CR>
-nnoremap fe :Lines<Space>
-
 " dyng/ctrlsf  #install -y ack-grep 依赖ack/ag/pt/rg之一
 nnoremap cf :CtrlSF<Space>
 nnoremap cfc :CtrlSFClose<CR>
 nmap <silent>cfs <Plug>CtrlSFCCwordPath<CR>
 let g:ctrlsf_ackprg = 'ack'     " 搜索引擎
 let g:ctrlsf_position = "right" " 左右打开Linux用let g:ctrlsf_open_left = 0
+
+" Yggdroot/LeaderF
+let g:Lf_ReverseOrder = 0   "自下而上显示
+nnoremap lf :LeaderfFile<CR>
+nnoremap lb :LeaderfBuffer<CR>
+nnoremap lm :LeaderfMru<CR>
+nnoremap lft :LeaderfFunction<CR>
+nnoremap le :LeaderfLine<CR>
 
 " Git相关
 " vim-fugitive
@@ -152,10 +162,10 @@ nnoremap <Leader>gm :Gmerge<cr>
 nnoremap <Leader>gu :Gpush<cr>
 nnoremap <Leader>gl :Glog<cr>
 nnoremap <Leader>gv :GV<CR>
+"rhysd/git-messenger
+nnoremap <Leader>gm :GitMessenger<CR>
 " vim-gitgutter
 let g:gitgutter_max_signs = 800     "更改显示标示行数限制
-"rhysd/git-messenger
-nnoremap <silent> gm :GitMessenger<CR>
 
 " lfv89/vim-interestingwords
 nnoremap <silent> kw :call InterestingWords('n')<CR>
@@ -281,12 +291,6 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 inoremap kj <esc>
 nnoremap H ^
 nnoremap L $
-" 插入模式下移动
-inoremap <C-k> <Up>
-inoremap <C-j> <Down>
-snoremap <C-j> <Down>
-inoremap <C-h> <Left>
-inoremap <C-l> <Right>
 " 窗口跳转
 noremap <Leader>cc <C-w>c
 noremap <Leader>hh <C-w>h
@@ -297,6 +301,7 @@ noremap <Leader>ww <C-w>w
 " 窗口分屏
 nnoremap sl :set splitright<CR>:vsplit<CR>
 nnoremap sj :set splitbelow<CR>:split<CR>
+" 移动分屏
 nnoremap svs <C-w>t<C-w>H                                  
 nnoremap svh <C-w>t<C-w>K
 " 窗口通知
