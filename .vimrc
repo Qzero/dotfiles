@@ -5,43 +5,37 @@ filetype indent on                              "侦测语言的智能缩
 nnoremap <Leader><Leader>i :PlugInstall<CR>     "安装插件
 nnoremap <Leader><Leader>u :PlugUpdate<CR>      "更新插件
 nnoremap <Leader><Leader>c :PlugClean<CR>       "删除插件
-nnoremap <Leader><Leader>pu :PlugUpgrade<CR>    "更新插件管理器
+nnoremap <Leader><Leader>p :PlugUpgrade<CR>    "更新插件管理器
 
 call plug#begin('~/.vim/plugged')
-Plug 'voldikss/vim-floaterm'
-Plug 'levelone/tequila-sunrise.vim'             " 主题
-Plug 'nanotech/jellybeans.vim'
+Plug 'voldikss/vim-floaterm'                    " 浮动终端
+Plug 'nanotech/jellybeans.vim'                  " 主题
 Plug 'mhinz/vim-startify'                       " 首页
 Plug 'majutsushi/tagbar'                        " 文件大纲工具
 Plug 'scrooloose/nerdtree'                      " 资源管理树
 Plug 'vim-airline/vim-airline'                  " 状态栏
 Plug 'vim-airline/vim-airline-themes'           " 状态栏主题
-" 效率
 Plug 'easymotion/vim-easymotion'                " 超级跳转
 Plug 't9md/vim-choosewin'                       " 窗口选择
 Plug 'luochen1990/rainbow'                      " 彩虹括号
 Plug 'ybian/smartim'                            " 解决中文输入法无法输入命令
 Plug 'lfv89/vim-interestingwords'               " 变量彩色凸显
 Plug 'brooth/far.vim'                           " 替换
-Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'                      " 缩进线
 Plug 'tpope/vim-commentary'                     " 注释
 Plug 'jiangmiao/auto-pairs'                     " 自动补全引号、圆括号、花括号等
 Plug 'itchyny/vim-cursorword'                   " 变量下划线
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全工具
 Plug 'davidhalter/jedi-vim'                     " python补全工具
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
-Plug 'sillybun/vim-repl'
-" 文件搜索
 Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 " Plug 'Yggdroot/LeaderF', { 'do': './install.sh'  }
 Plug 'voldikss/vim-translator'                  " 翻译插件
-Plug 'liuchengxu/vista.vim'
-Plug 'voldikss/vim-browser-search'              "搜索插件
+Plug 'voldikss/vim-browser-search'              " 搜索插件
 " Git
-Plug 'simnalamburt/vim-mundo', {'on': 'MundoToggle'}
-Plug 'rhysd/git-messenger.vim'
+Plug 'rhysd/git-messenger.vim'                  " git提交查询
 Plug 'tpope/vim-fugitive'                       " git命令封装
 Plug 'airblade/vim-gitgutter'                   " 显示git更改标示
 Plug 'junegunn/gv.vim'                          " git提交树
@@ -49,46 +43,11 @@ call plug#end()
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 " voldikss/vim-browser-search
-nmap <silent> <Leader>sw <Plug>SearchNormal
-vmap <silent> <Leader>sw <Plug>SearchVisual
-
-" Plug 'liuchengxu/vista.vim'
-let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
-let g:vista_default_executive = 'ctags'
-let g:vista_executive_for = {
-  \ '.vimrc': 'vim_lsp',
-  \ 'php': 'vim_lsp',
-  \ }
-function! NearestMethodOrFunction() abort
-  return get(b:, 'vista_nearest_method_or_function', '')
-endfunction
-set statusline+=%{NearestMethodOrFunction()}
-autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
-let g:vista_ctags_cmd = {
-      \ 'haskell': 'hasktags -x -o - -c',
-      \ }
-let g:vista_fzf_preview = ['right:50%']
-let g:vista#renderer#enable_icon = 1
-let g:vista#renderer#icons = {
-\   "function": "\uf794",
-\   "variable": "\uf71b",
-\  }
-
-" simnalamburt/vim-mundo
-set undofile
-set undodir=~/.vim/undo
-let g:mundo_width              = 30
-let g:mundo_preview_height     = 10
-let g:mundo_right              = 0
-let g:mundo_preview_bottom     = 1
-let g:mundo_auto_preview_delay = 10
-
-"rhysd/git-messenger
-noremap <silent> <Leader>gm :GitMessenger<CR>
+vmap <silent> sb <Plug>SearchVisual
 
 " voldikss/vim-translator
 let g:translator_history_enable = 1
-let g:translator_default_engines = ['google', 'ciba', 'youdao']
+let g:translator_default_engines = ['baidu', 'youdao', 'ciba', 'bing', 'google']
 nmap <silent>    ,t        <Plug>Translate
 vmap <silent>    ,t        <Plug>TranslateV 
 nmap <silent>    ,w        <Plug>TranslateW
@@ -97,25 +56,23 @@ nmap <silent>    ,r        <Plug>TranslateR
 vmap <silent>    ,r        <Plug>TranslateRV
 
 " Yggdroot/indentLine
-let g:indentLine_char = '│'
+let g:indentLine_char = '|'
 let g:indentLine_enabled = 1
 let g:indentLine_color_term = 238
-let g:indentLine_fileTypeExclude = ['startify', 'vista', 'json', 'codi', 'vtm', 'jsonc', 'coc-explorer']
+let g:indentLine_fileTypeExclude = ['startify', 'coc-explorer', 'json']
 
 " voldikss/vim-floaterm
 let g:floaterm_position = 'center'
 hi FloatermNF guibg=black
 hi FloatermBorderNF guibg=red guifg=cyan
 tnoremap <ESC> <C-\><C-n> :q<CR>
-nnoremap <Leader>fn :FloatermNew<CR>
-nnoremap <Leader>ft :FloatermToggle<CR>
-nnoremap <Leader>fnn :FloatermNext<CR>
-nnoremap <Leader>fpp :FloatermPrev<CR>
+nnoremap fn :FloatermNew<CR>
+nnoremap ft :FloatermToggle<CR>
+nnoremap fnn :FloatermNext<CR>
+nnoremap fpp :FloatermPrev<CR>
 
 " neoclide/coc.nvim
 "  安装依赖
-"  curl -sL install-node.now.sh | sh
-"  curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
 set hidden         " 如果没有设置，TextEdit可能失效
 set cmdheight=2    " 更好显示消息
 set shortmess+=c   " 不要完成菜单消息
@@ -125,11 +82,6 @@ nmap <silent> ,b <Plug>(coc-bookmark-toggle)
 nmap <silent> ,a <Plug>(coc-bookmark-annotate)
 nmap <silent> gh <Plug>(coc-bookmark-prev)
 nmap <silent> gl <Plug>(coc-bookmark-next)
-" coc-explorer
-augroup coc-explorer-settings
-  autocmd!
-  autocmd FileType coc-explorer setlocal relativenumber
-augroup END
 " coc-extensions
 let g:coc_global_extensions = [
   \ 'coc-bookmark',
@@ -167,8 +119,8 @@ let g:coc_global_extensions = [
   \ 'coc-yank',
   \ 'coc-zi'
   \ ]
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>k :call <SID>show_documentation()<CR>
+nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>p  :<C-u>CocList extensions<cr>
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 nnoremap <silent> <space>e :CocCommand explorer<CR>
@@ -178,39 +130,41 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " junegunn/fzf
-nnoremap <Leader>fl :Files<CR>
-nnoremap <Leader>fb :Buffers<CR>
-nnoremap <Leader>fe :Lines<Space>
+nnoremap fl :Files<CR>
+nnoremap fb :Buffers<CR>
+nnoremap fe :Lines<Space>
 
 " dyng/ctrlsf  #install -y ack-grep 依赖ack/ag/pt/rg之一
-nnoremap <Leader>cf :CtrlSF<Space>
-nnoremap <Leader>cfc :CtrlSFClose<CR>
-nmap <silent><leader>cfs <Plug>CtrlSFCCwordPath<CR>
+nnoremap cf :CtrlSF<Space>
+nnoremap cfc :CtrlSFClose<CR>
+nmap <silent>cfs <Plug>CtrlSFCCwordPath<CR>
 let g:ctrlsf_ackprg = 'ack'     " 搜索引擎
 let g:ctrlsf_position = "right" " 左右打开Linux用let g:ctrlsf_open_left = 0
 
-" ------ Git相关
+" Git相关
 " vim-fugitive
-nnoremap <silent><leader>gw :Gwrite<cr>
-nnoremap <silent><leader>gc :Gcommit<cr>
-nnoremap <silent><leader>gb :Gblame<cr>
-nnoremap <silent><leader>gd :Gvdiff<cr>
-nnoremap <silent><leader>gs :Gstatus<cr>
-nnoremap <silent><leader>gm :Gmerge<cr>
-nnoremap <silent><leader>gu :Gpush<cr>
-nnoremap <silent><leader>gl :Glog<cr>
+nnoremap <Leader>gw :Gwrite<cr>
+nnoremap <Leader>gc :Gcommit<cr>
+nnoremap <Leader>gb :Gblame<cr>
+nnoremap <Leader>gd :Gvdiff<cr>
+nnoremap <Leader>gs :Gstatus<cr>
+nnoremap <Leader>gm :Gmerge<cr>
+nnoremap <Leader>gu :Gpush<cr>
+nnoremap <Leader>gl :Glog<cr>
 nnoremap <Leader>gv :GV<CR>
 " vim-gitgutter
 let g:gitgutter_max_signs = 800     "更改显示标示行数限制
+"rhysd/git-messenger
+nnoremap <silent> gm :GitMessenger<CR>
 
 " lfv89/vim-interestingwords
-nnoremap <silent> <leader>kw :call InterestingWords('n')<CR>
-nnoremap <silent> <leader>KW :call UncolorAllWords()<CR>
+nnoremap <silent> kw :call InterestingWords('n')<CR>
+nnoremap <silent> KW :call UncolorAllWords()<CR>
 nnoremap <silent> n :call WordNavigation('forward')<CR>
 nnoremap <silent> N :call WordNavigation('backward')<CR>
 
 " t9md/vim-choosewin
-nmap <Leader>vv <Plug>(choosewin)
+nmap wc <Plug>(choosewin)
 let g:choosewin_overlay_enable = 0
 
 " vim-easymotion 
@@ -226,17 +180,16 @@ map <leader>r <Plug>(easymotion-repeat)
 let g:rainbow_active = 1
 
 " vim-airline/vim-airline
-nnoremap <C-D> :bprevious<CR>:bdelete #<CR>
-nnoremap <C-N> :bn<CR>
-nnoremap <C-P> :bp<CR>
-map <Leader>te :tabedit<CR>
+nnoremap <silent> <C-D> :bprevious<CR>:bdelete #<CR>
+nnoremap <silent> <C-N> :bn<CR>
+nnoremap <silent> <C-P> :bp<CR>
 let g:airline_powerline_fonts = 1                 " 这个是安装字体后必须设置此项
 let g:airline_theme='ubaryd'                      " luna,term,tomorrow,ubaryd,zenburn
 let g:airline#extensions#tabline#enabled=1        " 用顶部tabline
 let g:airline#extensions#tabline#buffer_nr_show=0 " 显示buffer编号
 
 " Tagbar 安装依赖 : install ctags
-nnoremap <Leader>tb :TagbarToggle<CR>
+nnoremap tb :TagbarToggle<CR>
 let g:tagbar_ctags_bin = 'ctags'        "tagbar依赖ctags插件
 let g:tagbar_compact = 1                  "tagbar 子窗口中不显示冗余帮助信息
 " let g:tagbar_left = 1                   "让tagbar在页面左侧显示，默认右DTree快捷键
@@ -248,19 +201,19 @@ let g:tagbar_iconchars = ['▸', '▾']     "修改默认剪头'▸', '▾'
 
 " startify
 let g:webdevicons_enable_startify = 1
-noremap <Leader>si :Startify<CR>
+noremap si :Startify<CR>
 let g:startify_bookmarks = [
   \ {'c': '~/dotfiles/.vimrc'},
   \ ]
 let g:startify_custom_header = [
-  \ '                           ___       ___       ___       ___       ___       ___ ',
+  \ '                           ___       ___       ___       ___       ___ ',
   \ '                                                                                 ',
-  \ '                            N         E         R         V         E         R  ',
-  \ '                           ___       ___       ___       ___       ___       ___ ']
+  \ '                            J         e         t         o         o            ',
+  \ '                           ___       ___       ___       ___       ___ ']
 
 " scrooloose/nerdtree
-nnoremap <Leader>nt :NERDTreeToggle<CR>
-nnoremap <Leader>ntf :NERDTreeFind<CR>
+nnoremap nt :NERDTreeToggle<CR>
+nnoremap ntf :NERDTreeFind<CR>
 let NERDTreeShowHidden=0                        "是否显示隐藏文件
 let NERDTreeWinSize=25                          "设置宽度
 let NERDTreeShowBookmarks=1                     "显示书签列表
@@ -272,6 +225,7 @@ let NERDTreeMinimalUI=1                         "不显示冗余帮助信息
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   ""当NERDTree为剩下的唯一窗口时自动关闭
 
 "通用设置 ------
+set fillchars+=vert:\ 
 set t_Co=256                                            " 开启256色支持
 set guifont=Monaco:h16                                  " 默认字体和大小
 set showtabline=0                                       " 隐藏顶部标签栏
@@ -282,7 +236,6 @@ set laststatus=2                                        " 显示状态栏
 set ruler                                               " 显示光标位置
 set cursorline                                          " 高亮行
 set background=dark                                     " 背景色
-" colorscheme tequila-sunrise                             " 主题
 colorscheme jellybeans
 set splitbelow                                          " 允许在下部分割布局
 set splitright                                          " 允许在右侧分隔布局
@@ -325,15 +278,15 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 
 " 快捷键
 "" 窗口选择与移动
-imap kj <esc>
-noremap H ^
-noremap L $
+inoremap kj <esc>
+nnoremap H ^
+nnoremap L $
 " 插入模式下移动
-inoremap <S-k> <Up>
-inoremap <S-j> <Down>
-snoremap <S-j> <Down>
-inoremap <S-h> <Left>
-inoremap <S-l> <Right>
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+snoremap <C-j> <Down>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
 " 窗口跳转
 noremap <Leader>cc <C-w>c
 noremap <Leader>hh <C-w>h
@@ -342,13 +295,13 @@ noremap <Leader>kk <C-w>k
 noremap <Leader>ll <C-w>l
 noremap <Leader>ww <C-w>w
 " 窗口分屏
-map sl :set splitright<CR>:vsplit<CR>
-map sj :set splitbelow<CR>:split<CR>
-map svs <C-w>t<C-w>H                                  
-map svh <C-w>t<C-w>K
+nnoremap sl :set splitright<CR>:vsplit<CR>
+nnoremap sj :set splitbelow<CR>:split<CR>
+nnoremap svs <C-w>t<C-w>H                                  
+nnoremap svh <C-w>t<C-w>K
 " 窗口通知
-nnoremap <silent> <Leader>m :messages<CR>
-nnoremap <silent> <Leader>t :TabMessage messages<CR>
+nnoremap <Leader>m :messages<CR>
+nnoremap <Leader>t :TabMessage messages<CR>
 " 命令模式移动
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
@@ -358,12 +311,11 @@ cnoremap <C-b> <S-Left>
 cnoremap <C-f> <S-Right>
 cnoremap <C-h> <Left>
 cnoremap <C-l> <Right>
-"" 文件相关
-nnoremap <silent> <Leader>w :w<CR>
-nnoremap <silent> <Leader>W :wa<CR>
-nnoremap <silent> <Leader>q :q<CR>
-nnoremap <silent> <Leader>Q :qa!<CR>
-nnoremap <silent> Q         :qa!<CR>
-nnoremap <Leader>rn :set relativenumber!<CR>                    "显示相对行号
-nnoremap <Leader>ev :edit $MYVIMRC<CR>                          "编辑vimrc文件
-map <Leader>s :source $MYVIMRC<CR>                         "重新加载vimrc文件
+" 文件相关
+nnoremap fs :w<CR>
+nnoremap W :wa<CR>
+nnoremap q :q<CR>
+nnoremap Q :qa!<CR>
+nnoremap rn :set relativenumber!<CR>
+nnoremap ev :edit $MYVIMRC<CR>
+nnoremap rs :source $MYVIMRC<CR>

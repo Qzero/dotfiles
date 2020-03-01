@@ -24,3 +24,30 @@ nnoremap <leader>lm :LeaderfMru<CR>
 nnoremap <leader>lft :LeaderfFunction<CR>
 nnoremap <leader>le :LeaderfLine<CR>
 
+
+
+快捷键的多种方式
+前缀l <leader>
+====================
+1,首先需要了解四种模式
+insert模式          inoremap
+normal模式          nnoremap
+command模式         cnoremap
+visual模式          vnoremap
+
+2,设置快捷件的情况
+基本的快捷键
+需要的插件
+
+3,基本格式
+快捷键
+前缀 + 快捷键
+
+
+
+
+
+
+
+
+

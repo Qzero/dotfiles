@@ -1,5 +1,5 @@
 {
-    "translator.engines": ["bing", "ciba", "google"],
+    "translator.engines": ["baidu", "youdao", "ciba", "bing", "google"],
 
     "suggest.triggerAfterInsertEnter": false,
     "suggest.timeout": 500,
@@ -34,7 +34,24 @@
         "file": "\uf723",
         "folder": "\uf114",
         "snippet": "\ue60b",
-        "typeParameter": "\uf728", "default": "\uf29c"
+        "typeParameter": "\uf728", 
+        "default": "\uf29c"
+    },
+    
+    "cSpell.enabledLanguageIds": [
+        "git-commit",
+        "gitcommit",
+        "latex",
+        "markdown",
+        "plaintext",
+        "text"
+    ],
+    "cSpell.dictionaries": ["spell_added"],
+    "diagnostic.infoSign": "ℹ",
+    "diagnostic.hintSign": "➤",
+    "diagnostic-languageserver.filetypes": {
+        // "markdown": ["write-good"],
+        // "text": ["write-good"]
     },
 
     // python
@@ -42,10 +59,17 @@
 
     //diagnostic
     "diagnostic.signOffset": 9999999,
-	"diagnostic.errorSign": "●",
-	"diagnostic.warningSign": "●",
+	"diagnostic.errorSign": "?",
+	"diagnostic.warningSign": "!",
     "diagnostic.displayByAle": false,
-    "diagnostic.refreshOnInsertMode": true,
+    "diagnostic.refreshOnInsertMode": false,
+    "cSpell.dictionaries": ["spell_added"],
+    "diagnostic.infoSign": "i",
+    "diagnostic.hintSign": "➤",
+    "diagnostic-languageserver.filetypes": {
+    // "markdown": ["write-good"],
+    // "text": ["write-good"]
+    },
 
     // coc-explorer
     "explorer.icon.expanded": "▾",
@@ -96,10 +120,11 @@
         "]]": "sourceNext",
         "[d": "diagnosticPrev",
         "]d": "diagnosticNext",
-        "gk": "gitPrev",
-        "gj": "gitNext",
+        // "gk": "gitPrev",
+        // "gj": "gitNext",
         // "<-": "gitStage",
-        // "->": "gitUnstage"   
+        // "->": "gitUnstage"    
+
     },
     // coc-git
     // "git.enableGutters": true,
