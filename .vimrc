@@ -4,6 +4,8 @@ filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'liuchengxu/vista.vim'
 Plug 'voldikss/vim-floaterm'                    " 浮动终端
 Plug 'nanotech/jellybeans.vim'                  " 主题
 Plug 'mhinz/vim-startify'                       " 首页
@@ -28,7 +30,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh'  }
-Plug 'voldikss/vim-translator'                  " 翻译插件
+" Plug 'voldikss/vim-translator'                  " 翻译插件
 Plug 'voldikss/vim-browser-search'              " 搜索插件
 " Git
 Plug 'rhysd/git-messenger.vim'                  " git提交查询
@@ -43,6 +45,17 @@ nnoremap <Leader><Leader>c :PlugClean<CR>       "删除插件
 nnoremap <Leader><Leader>p :PlugUpgrade<CR>    "更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+" liuchengxu/vista.vim
+let g:vista_default_executive = 'ctags'
+let g:vista_echo_cursor_strategy ='floating_win' " 启用悬浮窗预览
+let g:vista_sidebar_width = 30                   " 宽度
+let g:vista_echo_cursor = 1                      " 设置为0，以禁用光标移动时的回显.
+let g:vista_cursor_delay = 400                   " 当前游标上显示详细符号信息的时间延迟.
+let g:vista_close_on_jump = 0                    " 跳转到一个符号时，自动关闭vista窗口.
+let g:vista_stay_on_open = 1                     " 打开vista窗口后移动到它.
+let g:vista_blink = [2, 100]                     " 跳转到标记后闪烁光标2次，间隔100ms.
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]       " 展示样式
+
 " voldikss/vim-browser-search
 vmap <silent> sb <Plug>SearchVisual
 
@@ -67,10 +80,10 @@ let g:floaterm_position = 'center'
 hi FloatermNF guibg=black
 hi FloatermBorderNF guibg=red guifg=cyan
 tnoremap <ESC> <C-\><C-n> :q<CR>
-nnoremap fn :FloatermNew<CR>
-nnoremap ft :FloatermToggle<CR>
-nnoremap fnn :FloatermNext<CR>
-nnoremap fpp :FloatermPrev<CR>
+nnoremap <silent> fn :FloatermNew<CR>
+nnoremap <silent> ft :FloatermToggle<CR>
+nnoremap <silent> fnn :FloatermNext<CR>
+nnoremap <silent> fpp :FloatermPrev<CR>
 
 " neoclide/coc.nvim
 "  安装依赖
@@ -78,59 +91,80 @@ set hidden         " 如果没有设置，TextEdit可能失效
 set cmdheight=2    " 更好显示消息
 set shortmess+=c   " 不要完成菜单消息
 set signcolumn=yes " 始终显示信号
+" 补全设置
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+" 完成补全
+inoremap <silent><expr> <c-space> coc#refresh()
+" 导航到诊断
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" 文档展示
+nnoremap <silent> <space>k :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+" 凸显符号
+autocmd CursorHold * silent call CocActionAsync('highlight')
+" 状态栏显示函数
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>p  :<C-u>CocList extensions<cr>
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent> <space>e :CocCommand explorer<CR>
+" coc-extensions
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-floaterm',
+  \ 'coc-translator',
+  \ 'coc-todolist',
+  \ 'coc-spell-checker',
+  \ 'coc-bookmark',
+  \ 'coc-python',
+  \ 'coc-jedi',
+  \ 'coc-diagnostic',
+  \ 'coc-browser',
+  \ ]
 " coc-floaterm
 nnoremap ,cf :CocCommand floaterm.new<CR>
 nnoremap ,cn :CocCommand floaterm.next<CR>
 nnoremap ,cp :CocCommand floaterm.prev<CR>
 nnoremap ,ct :CocCommand floaterm.toggle<CR>
 " coc-bookmark
-nmap <silent> ,b <Plug>(coc-bookmark-toggle)
-nmap <silent> ,a <Plug>(coc-bookmark-annotate)
-nmap <silent> gh <Plug>(coc-bookmark-prev)
-nmap <silent> gl <Plug>(coc-bookmark-next)
-" coc-extensions
-let g:coc_global_extensions = [
-  \ 'coc-bookmark',
-  \ 'coc-browser',
-  \ 'coc-clock',
-  \ 'coc-css',
-  \ 'coc-diagnostic',
-  \ 'coc-dictionary',
-  \ 'coc-emoji',
-  \ 'coc-emmet',
-  \ 'coc-eslint',
-  \ 'coc-explorer',
-  \ 'coc-highlight',
-  \ 'coc-html',
-  \ 'coc-lists',
-  \ 'coc-json',
-  \ 'coc-kite',
-  \ 'coc-marketplace',
-  \ 'coc-pairs',
-  \ 'coc-post',
-  \ 'coc-prettier',
-  \ 'coc-python',
-  \ 'coc-rls',
-  \ 'coc-snippets',
-  \ 'coc-spell-checker',
-  \ 'coc-syntax',
-  \ 'coc-tag',
-  \ 'coc-todolist',
-  \ 'coc-template',
-  \ 'coc-translator',
-  \ 'coc-tslint-plugin',
-  \ 'coc-tsserver',
-  \ 'coc-vimtex',
-  \ 'coc-vimlsp',
-  \ 'coc-floaterm',
-  \ 'coc-yank',
-  \ 'coc-zi'
-  \ ]
-nnoremap <silent> <space>k :call <SID>show_documentation()<CR>
-nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <space>p  :<C-u>CocList extensions<cr>
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-nnoremap <silent> <space>e :CocCommand explorer<CR>
+nmap ,clb :CocList bookmark<CR>
+nmap ,b :CocCommand bookmark.toggle<CR>
+nmap ,a :CocCommand bookmark.annotate<CR>
+nmap ,gh :CocCommand bookmark.prev<CR>
+nmap ,gl :CocCommand bookmark.next<CR>
+" coc-todolist
+nmap ,ctc :CocCommand todolist.create<CR>
+nmap ,ctu :CocCommand todolist.upload<CR>
+nmap ,ctd :CocCommand todolist.download<CR>
+nmap ,ctn :CocCommand todolist.clearNotice<CR>
+nmap ,cl :CocList todolist<CR>
+" coc-translator
+" popup
+" nmap ,t <Plug>(coc-translator-p)
+" vmap ,t <Plug>(coc-translator-pv)
+" " echo
+" nmap ,e <Plug>(coc-translator-e)
+" nmap ,e <Plug>(coc-translator-ev)
+" " replace
+" nmap ,r <Plug>(coc-translator-r)
+" nmap ,r <Plug>(coc-translator-rv)
 
 " junegunn/vim-easy-align
 xmap ga <Plug>(EasyAlign)
@@ -140,11 +174,13 @@ nmap ga <Plug>(EasyAlign)
 nnoremap cf :CtrlSF<Space>
 nnoremap cfc :CtrlSFClose<CR>
 nmap <silent>cfs <Plug>CtrlSFCCwordPath<CR>
-let g:ctrlsf_ackprg = 'ack'     " 搜索引擎
+let g:ctrlsf_ackprg = 'ag'     " 搜索引擎
 let g:ctrlsf_position = "right" " 左右打开Linux用let g:ctrlsf_open_left = 0
 
 " Yggdroot/LeaderF
 let g:Lf_ReverseOrder = 0   "自下而上显示
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
 nnoremap lf :LeaderfFile<CR>
 nnoremap lb :LeaderfBuffer<CR>
 nnoremap lm :LeaderfMru<CR>
@@ -236,6 +272,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "通用设置 ------
 set fillchars+=vert:\ 
+let g:gruvbox_vert_split='bg1'
 set t_Co=256                                            " 开启256色支持
 set guifont=Monaco:h16                                  " 默认字体和大小
 set showtabline=0                                       " 隐藏顶部标签栏
@@ -323,4 +360,4 @@ nnoremap q :q<CR>
 nnoremap Q :qa!<CR>
 nnoremap rn :set relativenumber!<CR>
 nnoremap ev :edit $MYVIMRC<CR>
-nnoremap rs :source $MYVIMRC<CR>
+nnoremap sm :source $MYVIMRC<CR>
