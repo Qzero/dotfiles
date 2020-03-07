@@ -7,7 +7,7 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +128 dotfiles/.vimrc
+badd +0 dotfiles/.vimrc
 argglobal
 %argdel
 edit dotfiles/.vimrc
@@ -27,11 +27,11 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 11 - ((10 * winheight(0) + 16) / 32)
+let s:l = 6 - ((5 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-11
+6
 normal! 0
 lcd ~/dotfiles
 tabnext 1

@@ -5,24 +5,22 @@ filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'liuchengxu/vista.vim'
 Plug 'voldikss/vim-floaterm'                    " 浮动终端
 Plug 'nanotech/jellybeans.vim'                  " 主题
 Plug 'mhinz/vim-startify'                       " 首页
-Plug 'majutsushi/tagbar'                        " 文件大纲工具
+Plug 'liuchengxu/vista.vim'
 Plug 'scrooloose/nerdtree'                      " 资源管理树
 Plug 'vim-airline/vim-airline'                  " 状态栏
 Plug 'vim-airline/vim-airline-themes'           " 状态栏主题
 Plug 'easymotion/vim-easymotion'                " 超级跳转
 Plug 't9md/vim-choosewin'                       " 窗口选择
 Plug 'luochen1990/rainbow'                      " 彩虹括号
-" Plug 'ybian/smartim'                            " 解决中文输入法无法输入命令
 Plug 'lfv89/vim-interestingwords'               " 变量彩色凸显
 Plug 'brooth/far.vim'                           " 替换
 Plug 'Yggdroot/indentLine'                      " 缩进线
 Plug 'tpope/vim-commentary'                     " 注释
 Plug 'jiangmiao/auto-pairs'                     " 自动补全引号、圆括号、花括号等
-Plug 'itchyny/vim-cursorword'                   " 变量下划线
+" Plug 'itchyny/vim-cursorword'                   " 变量下划线
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全工具
 Plug 'davidhalter/jedi-vim'                     " python补全工具
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
@@ -30,7 +28,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh'  }
-" Plug 'voldikss/vim-translator'                  " 翻译插件
+Plug 'voldikss/vim-translator'                  " 翻译插件
 Plug 'voldikss/vim-browser-search'              " 搜索插件
 " Git
 Plug 'rhysd/git-messenger.vim'                  " git提交查询
@@ -46,28 +44,34 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>    "更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 " liuchengxu/vista.vim
-let g:vista_default_executive = 'ctags'
-let g:vista_echo_cursor_strategy ='floating_win' " 启用悬浮窗预览
+nnoremap vs :Vista<CR>
+let g:vista_echo_cursor_strategy ='scroll' " 启用悬浮窗预览
 let g:vista_sidebar_width = 30                   " 宽度
-let g:vista_echo_cursor = 1                      " 设置为0，以禁用光标移动时的回显.
-let g:vista_cursor_delay = 400                   " 当前游标上显示详细符号信息的时间延迟.
 let g:vista_close_on_jump = 0                    " 跳转到一个符号时，自动关闭vista窗口.
 let g:vista_stay_on_open = 1                     " 打开vista窗口后移动到它.
-let g:vista_blink = [2, 100]                     " 跳转到标记后闪烁光标2次，间隔100ms.
-let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]       " 展示样式
-
-" voldikss/vim-browser-search
-vmap <silent> sb <Plug>SearchVisual
+let g:vista#executive#ctags#support_json_format = 1
+let g:vista#executives = ['ale', 'coc', 'ctags', 'lcn', 'vim_lsc', 'vim_lsp']
+let g:vista#finders = ['fzf', 'skim']
+let g:vista#renderer#ctags = 'default'
+let g:vista#renderer#default#vlnum_offset = 3
+let g:vista#renderer#enable_icon = 1
+let g:vista#renderer#kind_default_icon = ['╰─▸ ', '├─▸ ']
+let g:vista_fold_toggle_icons = ['▸', '▾']
+let g:vista#renderer#icons = {'subroutine': '洛', 'method': '', 'func': '', 'variables': '', 'namespace': '', 'field': '綠', 'interface': '禍', 'type': '', 'packages': '', 'property': '襁', 'implementation': '', 'default': '', 'augroup': 'פּ', 'macro': '', 'enumerator': '', 'const': '', 'macros': '', 'map': 'פּ', 'fields': '綠', 'functions': '', 'enum': '', 'function': '', 'target': '', 'typedef': '', 'variable': '', 'modules': '', 'constant': '', 'struct': 'פּ', 'types': '', 'module': '', 'typeParameter': '', 'package': '', 'class': '', 'member': '', 'var': '', 'union': '鬒'}
+let g:vista_fzf_preview = ['right:50%']
 
 " voldikss/vim-translator
 let g:translator_history_enable = 1
-let g:translator_default_engines = ['baidu', 'youdao', 'ciba', 'bing', 'google']
+let g:translator_default_engines = ['ciba', 'bing', 'google']
 nmap <silent> ,t <Plug>Translate
 vmap <silent> ,t <Plug>TranslateV 
 nmap <silent> ,w <Plug>TranslateW
 vmap <silent> ,w <Plug>TranslateWV
 nmap <silent> ,r <Plug>TranslateR
 vmap <silent> ,r <Plug>TranslateRV
+
+" voldikss/vim-browser-search
+vmap <silent> sb <Plug>SearchVisual
 
 " Yggdroot/indentLine
 let g:indentLine_char = '|'
@@ -129,7 +133,6 @@ nnoremap <silent> <space>e :CocCommand explorer<CR>
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-floaterm',
-  \ 'coc-translator',
   \ 'coc-todolist',
   \ 'coc-spell-checker',
   \ 'coc-bookmark',
@@ -155,16 +158,6 @@ nmap ,ctu :CocCommand todolist.upload<CR>
 nmap ,ctd :CocCommand todolist.download<CR>
 nmap ,ctn :CocCommand todolist.clearNotice<CR>
 nmap ,cl :CocList todolist<CR>
-" coc-translator
-" popup
-" nmap ,t <Plug>(coc-translator-p)
-" vmap ,t <Plug>(coc-translator-pv)
-" " echo
-" nmap ,e <Plug>(coc-translator-e)
-" nmap ,e <Plug>(coc-translator-ev)
-" " replace
-" nmap ,r <Plug>(coc-translator-r)
-" nmap ,r <Plug>(coc-translator-rv)
 
 " junegunn/vim-easy-align
 xmap ga <Plug>(EasyAlign)
@@ -181,6 +174,8 @@ let g:ctrlsf_position = "right" " 左右打开Linux用let g:ctrlsf_open_left = 0
 let g:Lf_ReverseOrder = 0   "自下而上显示
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
+let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu Sans Mono for Powerline" }
+let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
 nnoremap lf :LeaderfFile<CR>
 nnoremap lb :LeaderfBuffer<CR>
 nnoremap lm :LeaderfMru<CR>
@@ -234,17 +229,6 @@ let g:airline_theme='ubaryd'                      " luna,term,tomorrow,ubaryd,ze
 let g:airline#extensions#tabline#enabled=1        " 用顶部tabline
 let g:airline#extensions#tabline#buffer_nr_show=0 " 显示buffer编号
 
-" Tagbar 安装依赖 : install ctags
-nnoremap tb :TagbarToggle<CR>
-let g:tagbar_ctags_bin = 'ctags'        "tagbar依赖ctags插件
-let g:tagbar_compact = 1                  "tagbar 子窗口中不显示冗余帮助信息
-" let g:tagbar_left = 1                   "让tagbar在页面左侧显示，默认右DTree快捷键
-let g:tagbar_width = 25                 "设置tagbar的宽度
-let g:tagbar_autofocus = 1              "tagbar一打开，光标即在tagbar页面内
-let g:tagbar_sort = 0                   "设置标签不排序，默认排序
-let g:tagbar_autoshowtag = 1            "当编辑代码时，在Tagbar自动追踪变量
-let g:tagbar_iconchars = ['▸', '▾']     "修改默认剪头'▸', '▾'
-
 " startify
 let g:webdevicons_enable_startify = 1
 noremap si :Startify<CR>
@@ -272,7 +256,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "通用设置 ------
 set fillchars+=vert:\ 
-let g:gruvbox_vert_split='bg1'
 set t_Co=256                                            " 开启256色支持
 set guifont=Monaco:h16                                  " 默认字体和大小
 set showtabline=0                                       " 隐藏顶部标签栏

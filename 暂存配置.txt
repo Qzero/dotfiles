@@ -8,6 +8,18 @@ let g:indent_guides_auto_colors = 0           " 自定义关联可视化颜色
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#8ECCCB ctermbg=3
 
 
+" Tagbar 安装依赖 : install ctags
+nnoremap tb :TagbarToggle<CR>
+let g:tagbar_ctags_bin = 'ctags'        "tagbar依赖ctags插件
+let g:tagbar_compact = 1                  "tagbar 子窗口中不显示冗余帮助信息
+" let g:tagbar_left = 1                   "让tagbar在页面左侧显示，默认右DTree快捷键
+let g:tagbar_width = 25                 "设置tagbar的宽度
+let g:tagbar_autofocus = 1              "tagbar一打开，光标即在tagbar页面内
+let g:tagbar_sort = 0                   "设置标签不排序，默认排序
+let g:tagbar_autoshowtag = 1            "当编辑代码时，在Tagbar自动追踪变量
+let g:tagbar_iconchars = ['▸', '▾']     "修改默认剪头'▸', '▾'
+
+
 " mbbill/undotree
 nnoremap <Leader>ut :UndotreeToggle<cr>
 if has("persistent_undo")
@@ -23,6 +35,34 @@ nnoremap <leader>lb :LeaderfBuffer<CR>
 nnoremap <leader>lm :LeaderfMru<CR>
 nnoremap <leader>lft :LeaderfFunction<CR>
 nnoremap <leader>le :LeaderfLine<CR>
+
+" coc
+  \ 'coc-clock',
+  \ 'coc-css',
+  \ 'coc-dictionary',
+  \ 'coc-emoji',
+  \ 'coc-emmet',
+  \ 'coc-eslint',
+  \ 'coc-explorer',
+  \ 'coc-highlight',
+  \ 'coc-html',
+  \ 'coc-lists',
+  \ 'coc-json',
+  \ 'coc-kite',
+  \ 'coc-marketplace',
+  \ 'coc-pairs',
+  \ 'coc-post',
+  \ 'coc-prettier',
+  \ 'coc-rls',
+  \ 'coc-syntax',
+  \ 'coc-tag',
+  \ 'coc-template',
+  \ 'coc-tslint-plugin',
+  \ 'coc-tsserver',
+  \ 'coc-vimtex',
+  \ 'coc-vimlsp',
+  \ 'coc-yank',
+  \ 'coc-zi'
 
 
 

@@ -1,5 +1,7 @@
 {
-    "translator.engines": ["baidu", "youdao", "ciba", "bing", "google"],
+    // coc-todolist
+    "todolist.autoUpload": true,
+    "todolist.monitor": true,
 
     "suggest.triggerAfterInsertEnter": false,
     "suggest.timeout": 500,
@@ -37,7 +39,9 @@
         "typeParameter": "\uf728", 
         "default": "\uf29c"
     },
+
     
+    "cSpell.dictionaries": ["spell_added"],
     "cSpell.enabledLanguageIds": [
         "git-commit",
         "gitcommit",
@@ -46,13 +50,6 @@
         "plaintext",
         "text"
     ],
-    "cSpell.dictionaries": ["spell_added"],
-    "diagnostic.infoSign": "ℹ",
-    "diagnostic.hintSign": "➤",
-    "diagnostic-languageserver.filetypes": {
-        // "markdown": ["write-good"],
-        // "text": ["write-good"]
-    },
 
     // python
     "python.jediEnabled": true,
@@ -63,7 +60,6 @@
 	"diagnostic.warningSign": "!",
     "diagnostic.displayByAle": false,
     "diagnostic.refreshOnInsertMode": false,
-    "cSpell.dictionaries": ["spell_added"],
     "diagnostic.infoSign": "i",
     "diagnostic.hintSign": "➤",
     "diagnostic-languageserver.filetypes": {
