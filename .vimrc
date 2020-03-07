@@ -15,6 +15,7 @@ Plug 'vim-airline/vim-airline-themes'           " 状态栏主题
 Plug 'easymotion/vim-easymotion'                " 超级跳转
 Plug 't9md/vim-choosewin'                       " 窗口选择
 Plug 'luochen1990/rainbow'                      " 彩虹括号
+Plug 'ybian/smartim'                            " 解决中文输入法无法输入命令
 Plug 'lfv89/vim-interestingwords'               " 变量彩色凸显
 Plug 'brooth/far.vim'                           " 替换
 Plug 'Yggdroot/indentLine'                      " 缩进线
@@ -71,7 +72,7 @@ nmap <silent> ,r <Plug>TranslateR
 vmap <silent> ,r <Plug>TranslateRV
 
 " voldikss/vim-browser-search
-vmap <silent> sb <Plug>SearchVisual
+vmap <silent> <Leader>sb <Plug>SearchVisual
 
 " Yggdroot/indentLine
 let g:indentLine_char = '|'
@@ -160,12 +161,12 @@ nmap ,ctn :CocCommand todolist.clearNotice<CR>
 nmap ,cl :CocList todolist<CR>
 
 " junegunn/vim-easy-align
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
+xmap <Leader>ga <Plug>(EasyAlign)
+nmap <Leader>ga <Plug>(EasyAlign)
 
 " dyng/ctrlsf  #install -y ack-grep 依赖ack/ag/pt/rg之一
-nnoremap cf :CtrlSF<Space>
-nnoremap cfc :CtrlSFClose<CR>
+nnoremap <Leader>cf :CtrlSF<Space>
+nnoremap <Leader>cfc :CtrlSFClose<CR>
 nmap <silent>cfs <Plug>CtrlSFCCwordPath<CR>
 let g:ctrlsf_ackprg = 'ag'     " 搜索引擎
 let g:ctrlsf_position = "right" " 左右打开Linux用let g:ctrlsf_open_left = 0
@@ -210,7 +211,7 @@ let g:choosewin_overlay_enable = 0
 
 " vim-easymotion 
 let g:EasyMotion_smartcase = 1      "忽略大小写
-map ss <Plug>(easymotion-s2)
+map <Leader>ss <Plug>(easymotion-s2)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <leader>h <Plug>(easymotion-linebackward)
@@ -231,7 +232,7 @@ let g:airline#extensions#tabline#buffer_nr_show=0 " 显示buffer编号
 
 " startify
 let g:webdevicons_enable_startify = 1
-noremap si :Startify<CR>
+noremap <Leader>si :Startify<CR>
 let g:startify_bookmarks = [
   \ {'c': '~/dotfiles/.vimrc' },
   \ ]
@@ -255,7 +256,8 @@ let NERDTreeMinimalUI=1                         "不显示冗余帮助信息
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   ""当NERDTree为剩下的唯一窗口时自动关闭
 
 "通用设置 ------
-set fillchars+=vert:\ 
+" set fillchars+=vert:\ 
+" set fillchars=vert:\ ,stl:\ ,stlnc:\ 
 set t_Co=256                                            " 开启256色支持
 set guifont=Monaco:h16                                  " 默认字体和大小
 set showtabline=0                                       " 隐藏顶部标签栏

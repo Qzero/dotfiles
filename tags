@@ -346,8 +346,6 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <2-LeftMouse>	.vim/plugged/LeaderF/autoload/leaderf/Self.vim	/^    nnoremap <buffer> <silent> <2-LeftMouse> :exec g:Lf_py "selfExplManager.accept()"<CR>$/;"	m
 <2-LeftMouse>	.vim/plugged/LeaderF/autoload/leaderf/Tag.vim	/^    nnoremap <buffer> <silent> <2-LeftMouse> :exec g:Lf_py "tagExplManager.accept()"<CR>$/;"	m
 <2-LeftMouse>	.vim/plugged/LeaderF/autoload/leaderf/Window.vim	/^    nnoremap <buffer> <silent> <2-LeftMouse> :exec g:Lf_py "windowExplManager.accept()"<CR>$/;"	m
-<2-LeftMouse>	.vim/plugged/tagbar/autoload/tagbar.vim	/^    inoremap <script> <silent> <buffer> <2-LeftMouse>$/;"	m
-<2-LeftMouse>	.vim/plugged/tagbar/autoload/tagbar.vim	/^    nnoremap <script> <silent> <buffer> <2-LeftMouse>$/;"	m
 <2-LeftMouse>	.vim/plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><nowait><silent> <2-LeftMouse> :call startify#open_buffers()<cr>$/;"	m
 <BS>	.vim/plugged/coc.nvim/autoload/coc/snippet.vim	/^  snoremap <silent> <BS> <c-g>c$/;"	m
 <C-D>	.vim/init.vim	/^nnoremap <silent> <C-D> :bprevious<CR>:bdelete #<CR>$/;"	m
@@ -474,8 +472,16 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <Leader>b	.vim/plugged/vim-easymotion/t/easymotion_spec.vim	/^        map <Leader>b <Plug>(easymotion-iskeyword-b)$/;"	m
 <Leader>cc	.vim/init.vim	/^noremap <Leader>cc <C-w>c$/;"	m
 <Leader>cc	.vimrc	/^noremap <Leader>cc <C-w>c$/;"	m
+<Leader>cf	.vim/init.vim	/^nnoremap <Leader>cf :CtrlSF<Space>$/;"	m
+<Leader>cf	.vimrc	/^nnoremap <Leader>cf :CtrlSF<Space>$/;"	m
+<Leader>cfc	.vim/init.vim	/^nnoremap <Leader>cfc :CtrlSFClose<CR>$/;"	m
+<Leader>cfc	.vimrc	/^nnoremap <Leader>cfc :CtrlSFClose<CR>$/;"	m
 <Leader>e	.vim/plugged/vim-easymotion/t/compare_movements_spec.vim	/^        nmap <Leader>e <Plug>(easymotion-iskeyword-e)$/;"	m
 <Leader>gE	.vim/plugged/vim-easymotion/t/compare_movements_spec.vim	/^        nmap <Leader>gE <Plug>(easymotion-gE)$/;"	m
+<Leader>ga	.vim/init.vim	/^nmap <Leader>ga <Plug>(EasyAlign)$/;"	m
+<Leader>ga	.vim/init.vim	/^xmap <Leader>ga <Plug>(EasyAlign)$/;"	m
+<Leader>ga	.vimrc	/^nmap <Leader>ga <Plug>(EasyAlign)$/;"	m
+<Leader>ga	.vimrc	/^xmap <Leader>ga <Plug>(EasyAlign)$/;"	m
 <Leader>gb	.vim/init.vim	/^nnoremap <Leader>gb :Gblame<cr>$/;"	m
 <Leader>gb	.vimrc	/^nnoremap <Leader>gb :Gblame<cr>$/;"	m
 <Leader>gc	.vim/init.vim	/^nnoremap <Leader>gc :Gcommit<cr>$/;"	m
@@ -516,9 +522,14 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <Leader>ll	.vimrc	/^noremap <Leader>ll <C-w>l$/;"	m
 <Leader>m	.vim/init.vim	/^nnoremap <Leader>m :messages<CR>$/;"	m
 <Leader>m	.vimrc	/^nnoremap <Leader>m :messages<CR>$/;"	m
+<Leader>sb	.vim/init.vim	/^vmap <silent> <Leader>sb <Plug>SearchVisual$/;"	m
+<Leader>sb	.vimrc	/^vmap <silent> <Leader>sb <Plug>SearchVisual$/;"	m
+<Leader>si	.vim/init.vim	/^noremap <Leader>si :Startify<CR>$/;"	m
+<Leader>si	.vimrc	/^noremap <Leader>si :Startify<CR>$/;"	m
+<Leader>ss	.vim/init.vim	/^map <Leader>ss <Plug>(easymotion-s2)$/;"	m
+<Leader>ss	.vimrc	/^map <Leader>ss <Plug>(easymotion-s2)$/;"	m
 <Leader>t	.vim/init.vim	/^nnoremap <Leader>t :TabMessage messages<CR>$/;"	m
 <Leader>t	.vimrc	/^nnoremap <Leader>t :TabMessage messages<CR>$/;"	m
-<Leader>vs	.vim/init.vim	/^nnoremap <Leader>vs :Vista<CR>$/;"	m
 <Leader>w	.vim/plugged/vim-easymotion/t/compare_movements_spec.vim	/^        nmap <Leader>w <Plug>(easymotion-iskeyword-w)$/;"	m
 <Leader>w	.vim/plugged/vim-easymotion/t/easymotion_spec.vim	/^        map <Leader>w <Plug>(easymotion-iskeyword-w)$/;"	m
 <Leader>ww	.vim/init.vim	/^noremap <Leader>ww <C-w>w$/;"	m
@@ -533,8 +544,6 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <LeftMouse>	.vim/plugged/LeaderF/autoload/leaderf/Rg.vim	/^    nnoremap <buffer> <silent> <LeftMouse>   <LeftMouse>:exec g:Lf_py "rgExplManager._previewRes/;"	m
 <LeftMouse>	.vim/plugged/LeaderF/autoload/leaderf/Tag.vim	/^    nnoremap <buffer> <silent> <LeftMouse>   <LeftMouse>:exec g:Lf_py "tagExplManager._previewRe/;"	m
 <LeftMouse>	.vim/plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><nowait><silent> <LeftMouse>   :call <sid>leftmouse()<cr>$/;"	m
-<LeftRelease>	.vim/plugged/tagbar/autoload/tagbar.vim	/^    inoremap <script> <silent> <buffer> <LeftRelease>$/;"	m
-<LeftRelease>	.vim/plugged/tagbar/autoload/tagbar.vim	/^    nnoremap <script> <silent> <buffer> <LeftRelease>$/;"	m
 <MiddleMouse>	.vim/plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><nowait><silent> <MiddleMouse> :enew <bar> execute 'normal! "'.(v:register=='/;"	m
 <Nul>	.vim/plugged/jedi-vim/autoload/jedi.vim	/^        imap <buffer> <Nul> <C-Space>$/;"	m
 <Nul>	.vim/plugged/jedi-vim/autoload/jedi.vim	/^        smap <buffer> <Nul> <C-Space>$/;"	m
@@ -946,7 +955,6 @@ AsyncExecutor	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/asyncExecutor
 Atom	.vim/plugged/jedi-vim/pythonx/jedi/README.rst	/^.. _Atom: https:\/\/atom.io\/$/;"	T	section:Acknowledgements
 AttributeOverwrite	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/filters.py	/^class AttributeOverwrite(use_metaclass(_OverwriteMeta, _AttributeOverwriteMixin,$/;"	c
 Attribution	.vim/plugged/vim-interestingwords/CODE_OF_CONDUCT.md	/^## Attribution$/;"	s	chapter:Contributor Covenant Code of Conduct
-Author	.vim/plugged/vim-cursorword/README.md	/^## Author$/;"	s	chapter:vim-cursorword
 Author	.vim/plugged/vim-easy-align/README.md	/^Author$/;"	s	chapter:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)
 Author and Feedback	.vim/plugged/vim-startify/README.md	/^## Author and Feedback$/;"	s
 Author's Instructions	.vim/plugged/nerdtree/.github/PULL_REQUEST_TEMPLATE.md	/^#### Author's Instructions$/;"	t	subsection:New Version Info
@@ -1073,6 +1081,7 @@ C	.vim/plugged/jedi-vim/pythonx/jedi/test/test_inference/test_compiled.py	/^    
 C	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E30.py	/^    class C:$/;"	c	function:a	file:
 C1	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/classes.py	/^class C1(MyBase):$/;"	c
 CACHE_FOLDER	.vim/plugged/jedi-vim/test/test_integration.py	/^CACHE_FOLDER = os.path.join(root, 'build')$/;"	v
+CC	.vim/plugged/smartim/Makefile	/^CC=\/usr\/bin\/clang$/;"	m
 CLASS_CODE	.vim/plugged/jedi-vim/pythonx/jedi/test/test_api/test_call_signatures.py	/^CLASS_CODE = dedent('''\\$/;"	v
 CODES	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/analysis.py	/^CODES = {$/;"	v
 COMPARISON_OPERATORS	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/compiled/access.py	/^COMPARISON_OPERATORS = {$/;"	v
@@ -1104,6 +1113,7 @@ CallDetails	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/helpers.py	/^class CallD
 Callable	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/gradual/typing.py	/^class Callable(BaseTypingValueWithGenerics):$/;"	c
 Can I have different highlighting for different file extensions?	.vim/plugged/nerdtree/README.markdown	/^#### Can I have different highlighting for different file extensions?$/;"	t	section:The NERDTree [![Vint](https://github.com/preservim/nerdtree/workflows/Vint/badge.svg)](https://github.com/preservim/nerdtree/actions?workflow=Vint)""F.A.Q. (here, and in the [Wiki](https://github.com/preservim/nerdtree/wiki))
 Can I have the nerdtree on every tab automatically?	.vim/plugged/nerdtree/README.markdown	/^#### Can I have the nerdtree on every tab automatically?$/;"	t	section:The NERDTree [![Vint](https://github.com/preservim/nerdtree/workflows/Vint/badge.svg)](https://github.com/preservim/nerdtree/actions?workflow=Vint)""F.A.Q. (here, and in the [Wiki](https://github.com/preservim/nerdtree/wiki))
+Can I use `im-select` as a standalone utility?	.vim/plugged/smartim/README.md	/^## Can I use `im-select` as a standalone utility?$/;"	s	chapter:FAQ
 CastFunction	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/gradual/typing.py	/^class CastFunction(BaseTypingValue):$/;"	c
 Cat	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/pep0484_comments.py	/^class Cat(object):$/;"	c
 Caveats	.vim/plugged/jedi-vim/README.rst	/^Caveats$/;"	S	section:Installation
@@ -1233,7 +1243,6 @@ Contribution Guidelines	.vim/plugged/vim-airline-themes/README.md	/^# Contributi
 Contributions	.vim/plugged/vim-airline/CONTRIBUTING.md	/^# Contributions$/;"	c
 Contributor Covenant Code of Conduct	.vim/plugged/vim-interestingwords/CODE_OF_CONDUCT.md	/^# Contributor Covenant Code of Conduct$/;"	c
 Contributors	.vim/plugged/auto-pairs/README.md	/^Contributors$/;"	s	chapter:Auto Pairs
-Contributors	.vim/plugged/tagbar/README.md	/^## Contributors$/;"	s	chapter:Tagbar: a class outline viewer for Vim
 Conventions	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/typeshed/CONTRIBUTING.md	/^#### Conventions$/;"	t	subsection:Contributing to typeshed""Preparing Changes""Stub file coding style
 Core Extensions	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/development.rst	/^Core Extensions$/;"	s	chapter:Jedi Development
 Core developer guidelines	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/typeshed/CONTRIBUTING.md	/^### Core developer guidelines$/;"	S	section:Contributing to typeshed""Issue-tracker conventions
@@ -1298,7 +1307,6 @@ DefineGenericBase	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/gradual/base
 DefinitelyNotGlobal	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/usages.py	/^class DefinitelyNotGlobal:$/;"	c
 Definition	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/classes.py	/^class Definition(BaseDefinition):$/;"	c
 Demo	.vim/plugged/vim-easy-align/README.md	/^Demo$/;"	s	chapter:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)
-Dependencies	.vim/plugged/tagbar/README.md	/^## Dependencies$/;"	s	chapter:Tagbar: a class outline viewer for Vim
 Deprecations	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/api.rst	/^Deprecations$/;"	s	chapter:API Overview
 Deprecations Process	.vim/plugged/jedi-vim/pythonx/parso/docs/docs/development.rst	/^Deprecations Process$/;"	s	chapter:Development
 Describe your question, feature request, or bug.	.vim/plugged/LeaderF/ISSUE_TEMPLATE.md	/^### Describe your question, feature request, or bug.$/;"	S
@@ -1481,6 +1489,7 @@ F/	.vim/plugged/vim-easymotion/t/easymotion_spec.vim	/^        map F\/ <Plug>(ea
 FACTOR_1	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/classes.py	/^    FACTOR_1 = 0.1$/;"	v	class:FactorMixin
 FAILING_EXAMPLES	.vim/plugged/jedi-vim/pythonx/parso/test/failing_examples.py	/^FAILING_EXAMPLES = [$/;"	v
 FAQ	.vim/plugged/jedi-vim/README.rst	/^FAQ$/;"	s	chapter:jedi-vim - awesome Python autocompletion with VIM
+FAQ	.vim/plugged/smartim/README.md	/^# FAQ$/;"	c
 FAQ	.vim/plugged/vim-airline/README.md	/^# FAQ$/;"	c
 FAQ	.vim/plugged/vim-commentary/README.markdown	/^## FAQ$/;"	s	chapter:commentary.vim
 FAQ	.vim/plugged/vim-fugitive/README.markdown	/^## FAQ$/;"	s	chapter:fugitive.vim
@@ -1755,6 +1764,7 @@ How?	.vim/plugged/vim-gutentags/README.md	/^## How?$/;"	s	chapter:Gutentags
 I	.tmux.conf	/^set -wg window-status-current-format " #I:#W#F " # 状态栏当前窗口名称格式(#I：序号/;"	k
 I	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> I :call far#change_exclude_all(0)<cr>$/;"	m
 I don't want the docstring window to popup during completion	.vim/plugged/jedi-vim/README.rst	/^I don't want the docstring window to popup during completion$/;"	S	section:FAQ
+I have other problems to debug...	.vim/plugged/smartim/README.md	/^## I have other problems to debug...$/;"	s	chapter:FAQ
 I want <Tab> to do autocompletion	.vim/plugged/jedi-vim/README.rst	/^I want <Tab> to do autocompletion$/;"	S	section:FAQ
 I18NSPHINXOPTS	.vim/plugged/jedi-vim/pythonx/jedi/docs/Makefile	/^I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .$/;"	m
 I18NSPHINXOPTS	.vim/plugged/jedi-vim/pythonx/parso/docs/Makefile	/^I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .$/;"	m
@@ -1822,12 +1832,11 @@ Installation	.vim/plugged/jedi-vim/pythonx/parso/README.rst	/^Installation$/;"	s
 Installation	.vim/plugged/jedi-vim/pythonx/parso/docs/README.md	/^Installation$/;"	s
 Installation	.vim/plugged/jellybeans.vim/README.markdown	/^## Installation$/;"	s	chapter:jellybeans.vim
 Installation	.vim/plugged/nerdtree/README.markdown	/^Installation$/;"	s	chapter:The NERDTree [![Vint](https://github.com/preservim/nerdtree/workflows/Vint/badge.svg)](https://github.com/preservim/nerdtree/actions?workflow=Vint)
-Installation	.vim/plugged/tagbar/README.md	/^## Installation$/;"	s	chapter:Tagbar: a class outline viewer for Vim
+Installation	.vim/plugged/smartim/README.md	/^# Installation$/;"	c
 Installation	.vim/plugged/vim-airline-themes/README.md	/^# Installation$/;"	c
 Installation	.vim/plugged/vim-airline/README.md	/^# Installation$/;"	c
 Installation	.vim/plugged/vim-browser-search/README.md	/^## Installation$/;"	s	chapter:vim-browser-search
 Installation	.vim/plugged/vim-commentary/README.markdown	/^## Installation$/;"	s	chapter:commentary.vim
-Installation	.vim/plugged/vim-cursorword/README.md	/^## Installation$/;"	s	chapter:vim-cursorword
 Installation	.vim/plugged/vim-easy-align/README.md	/^Installation$/;"	s	chapter:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)
 Installation	.vim/plugged/vim-easymotion/README.md	/^Installation$/;"	s	chapter:New features in version 2.0
 Installation	.vim/plugged/vim-floaterm/README.md	/^## Installation$/;"	s
@@ -2009,11 +2018,9 @@ License	.vim/plugged/far.vim/README.md	/^## License$/;"	s	chapter:far.vim - Find
 License	.vim/plugged/fzf.vim/README.md	/^License$/;"	s	chapter:fzf :heart: vim
 License	.vim/plugged/git-messenger.vim/README.md	/^## License$/;"	s	chapter:git-messenger.vim
 License	.vim/plugged/indentLine/README.md	/^## License$/;"	s	chapter:indentLine
-License	.vim/plugged/tagbar/README.md	/^## License$/;"	s	chapter:Tagbar: a class outline viewer for Vim
 License	.vim/plugged/vim-airline-themes/README.md	/^# License$/;"	c
 License	.vim/plugged/vim-airline/README.md	/^# License$/;"	c
 License	.vim/plugged/vim-commentary/README.markdown	/^## License$/;"	s	chapter:commentary.vim
-License	.vim/plugged/vim-cursorword/README.md	/^## License$/;"	s	chapter:vim-cursorword
 License	.vim/plugged/vim-easy-align/README.md	/^License$/;"	s	chapter:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)
 License	.vim/plugged/vim-floaterm/README.md	/^## License$/;"	s
 License	.vim/plugged/vim-fugitive/README.markdown	/^## License$/;"	s	chapter:fugitive.vim
@@ -2110,6 +2117,7 @@ N	.vimrc	/^nnoremap <silent> N :call WordNavigation('backward')<CR>$/;"	m
 NAME	.vim/plugged/jedi-vim/pythonx/parso/parso/python/parser.py	/^NAME = PythonTokenTypes.NAME$/;"	v
 NAME	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tokenize.py	/^NAME = PythonTokenTypes.NAME$/;"	v
 NAME	.vim/plugged/jedi-vim/pythonx/parso/test/test_tokenize.py	/^NAME = PythonTokenTypes.NAME$/;"	v
+NAME	.vim/plugged/smartim/Makefile	/^NAME=im-select$/;"	m
 NERDTree	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^    command! -n=? -complete=dir -bar NERDTree :call g:NERDTreeCreator.CreateTabTree('<args>')$/;"	c
 NERDTree	.vim/plugged/nerdtree/plugin/NERD_tree.vim	/^augroup NERDTree$/;"	a
 NERDTree Change Log	.vim/plugged/nerdtree/CHANGELOG.md	/^# NERDTree Change Log$/;"	c
@@ -2199,7 +2207,6 @@ NormalizerConfig	.vim/plugged/jedi-vim/pythonx/parso/parso/normalizer.py	/^class
 NormalizerIssueCase	.vim/plugged/jedi-vim/pythonx/parso/conftest.py	/^class NormalizerIssueCase(object):$/;"	c
 Not Supported	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/features.rst	/^Not Supported$/;"	s	chapter:Features and Caveats
 NotCalled	.vim/plugged/jedi-vim/pythonx/jedi/test/static_analysis/attribute_error.py	/^class NotCalled():$/;"	c
-Note: If the file structure display is wrong	.vim/plugged/tagbar/README.md	/^## Note: If the file structure display is wrong$/;"	s	chapter:Tagbar: a class outline viewer for Vim
 Number	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^class Number(Literal):$/;"	c
 NumpyLike	.vim/plugged/jedi-vim/pythonx/jedi/test/test_api/test_interpreter.py	/^    class NumpyLike:$/;"	c	function:test_numpy_like_non_zero	file:
 NumpyNonZero	.vim/plugged/jedi-vim/pythonx/jedi/test/test_api/test_interpreter.py	/^    class NumpyNonZero:$/;"	c	function:test_numpy_like_non_zero	file:
@@ -2209,6 +2216,7 @@ O	.vim/plugged/gv.vim/plugin/gv.vim	/^  xnoremap <silent> <buffer> O    :<c-u>ca
 OP	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tokenize.py	/^OP = PythonTokenTypes.OP$/;"	v
 OP	.vim/plugged/jedi-vim/pythonx/parso/test/test_tokenize.py	/^OP = PythonTokenTypes.OP$/;"	v
 OPEN_ON_ENTER	ranger/commands_full.py	/^    OPEN_ON_ENTER   = 'e'$/;"	v	class:scout
+OPTS	.vim/plugged/smartim/Makefile	/^OPTS=-framework foundation -framework carbon$/;"	m
 OnErrorLeaf	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/helpers.py	/^class OnErrorLeaf(Exception):$/;"	c
 OpenBookmark	.vim/plugged/nerdtree/lib/nerdtree/creator.vim	/^    command! -buffer -complete=customlist,nerdtree#completeBookmarks -nargs=1 OpenBookmark call /;"	c
 Operational examples	.vim/plugged/vim-choosewin/README.md	/^## Operational examples$/;"	s	chapter:Navigate to the window you choose
@@ -2220,6 +2228,7 @@ Options	.vim/plugged/vista.vim/README.md	/^### Options$/;"	S	section:Vista.vim""
 Other options	.vim/plugged/vim-easy-align/README.md	/^Other options$/;"	s	chapter:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)
 Other tips	.vim/plugged/vista.vim/README.md	/^### Other tips$/;"	S	section:Vista.vim""Usage
 Others	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/installation.rst	/^Others$/;"	S	section:System-wide installation via a package manager
+Others	.vim/plugged/smartim/README.md	/^## Others$/;"	s	chapter:Installation
 Our Pledge	.vim/plugged/vim-interestingwords/CODE_OF_CONDUCT.md	/^## Our Pledge$/;"	s	chapter:Contributor Covenant Code of Conduct
 Our Responsibilities	.vim/plugged/vim-interestingwords/CODE_OF_CONDUCT.md	/^## Our Responsibilities$/;"	s	chapter:Contributor Covenant Code of Conduct
 Our Standards	.vim/plugged/vim-interestingwords/CODE_OF_CONDUCT.md	/^## Our Standards$/;"	s	chapter:Contributor Covenant Code of Conduct
@@ -2273,6 +2282,7 @@ PartialSignature	.vim/plugged/jedi-vim/pythonx/jedi/jedi/plugins/stdlib.py	/^cla
 Patched font	.vim/plugged/indentLine/README.md	/^### Patched font$/;"	S	section:indentLine""Screenshots
 PathMatcher	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/typeshed/tests/pytype_test.py	/^class PathMatcher:$/;"	c
 PathName	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/file_name.py	/^class PathName(StringName):$/;"	c
+Pathogen	.vim/plugged/smartim/README.md	/^## Pathogen$/;"	s	chapter:Installation
 Pathogen (https://github.com/tpope/vim-pathogen)	.vim/plugged/vim-easymotion/README.md	/^### Pathogen (https:\/\/github.com\/tpope\/vim-pathogen)$/;"	S	section:New features in version 2.0""Installation
 PatternContext	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyMatch.h	/^typedef struct PatternContext$/;"	s
 PatternContext	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyMatch.h	/^}PatternContext;$/;"	t	typeref:struct:PatternContext
@@ -2341,7 +2351,6 @@ Queue	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/gtagsExpl.py	/^    im
 Quick Start	.vim/plugged/coc.nvim/Readme.md	/^## Quick Start$/;"	s
 Quick Start	.vim/plugged/ctrlsf.vim/README.md	/^## Quick Start$/;"	s	chapter:ctrlsf.vim
 Quick start guide	.vim/plugged/vim-easy-align/README.md	/^Quick start guide$/;"	s	chapter:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)
-Quickstart	.vim/plugged/tagbar/README.md	/^## Quickstart$/;"	s	chapter:Tagbar: a class outline viewer for Vim
 Qux	.vim/plugged/vista.vim/test/data/ctags_tree_view.py	/^                class Qux:$/;"	c	class:Foo.Bar.Qux.Bar
 Qux	.vim/plugged/vista.vim/test/data/ctags_tree_view.py	/^                class Qux:$/;"	c	class:Foo.Bar1.Qux.Bar
 Qux	.vim/plugged/vista.vim/test/data/ctags_tree_view.py	/^                class Qux:$/;"	c	class:Foo.Bar2.Qux.Bar
@@ -2446,7 +2455,6 @@ Screenshot	.vim/plugged/vim-startify/README.md	/^## Screenshot$/;"	s
 Screenshots	.vim/plugged/LeaderF/README.md	/^Screenshots$/;"	s	chapter:LeaderF
 Screenshots	.vim/plugged/indentLine/README.md	/^## Screenshots$/;"	s	chapter:indentLine
 Screenshots	.vim/plugged/jellybeans.vim/README.markdown	/^## Screenshots$/;"	s	chapter:jellybeans.vim
-Screenshots	.vim/plugged/tagbar/README.md	/^## Screenshots$/;"	s	chapter:Tagbar: a class outline viewer for Vim
 Screenshots	.vim/plugged/vim-airline-themes/README.md	/^# Screenshots$/;"	c
 Screenshots	.vim/plugged/vim-airline/README.md	/^# Screenshots$/;"	c
 Script	.vim/plugged/jedi-vim/pythonx/jedi/conftest.py	/^def Script(environment):$/;"	f
@@ -2493,7 +2501,12 @@ Slice	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/value/iterable.py	/^clas
 SlowRepr	.vim/plugged/jedi-vim/pythonx/jedi/test/test_speed.py	/^    class SlowRepr:$/;"	c	function:test_no_repr_computation	file:
 Smartcase & Smartsign	.vim/plugged/vim-easymotion/README.md	/^### Smartcase & Smartsign$/;"	S	chapter:New features in version 2.0
 Smarter tab line	.vim/plugged/vim-airline/README.md	/^## Smarter tab line$/;"	s	chapter:Features
+Smartim_SelectDefault	.vim/plugged/smartim/plugin/smartim.vim	/^function! Smartim_SelectDefault()$/;"	f
+Smartim_SelectSaved	.vim/plugged/smartim/plugin/smartim.vim	/^function! Smartim_SelectSaved()$/;"	f
+Smartim_debug_print	.vim/plugged/smartim/plugin/smartim.vim	/^function! Smartim_debug_print(msg)$/;"	f
+Smartim_start_debug	.vim/plugged/smartim/plugin/smartim.vim	/^function! Smartim_start_debug()$/;"	f
 SomeModel	.vim/plugged/jedi-vim/pythonx/jedi/test/examples/django/app/models.py	/^SomeModel = "bar"$/;"	v
+Somehow I want to disable this plugin	.vim/plugged/smartim/README.md	/^## Somehow I want to disable this plugin$/;"	s	chapter:FAQ
 Something	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/functions.py	/^class Something():$/;"	c
 Something	.vim/plugged/jedi-vim/pythonx/jedi/test/test_api/test_interpreter.py	/^    class Something:$/;"	c	function:test_more_complex_instances	file:
 Source	.vim/plugged/vim-floaterm/rplugin/python3/denite/source/floaterm.py	/^class Source(Base):$/;"	c
@@ -2544,7 +2557,6 @@ SuperClass	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/classes.py	/^class
 SuperCopy	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/classes.py	/^SuperCopy = Super$/;"	v
 SuperInstance	.vim/plugged/jedi-vim/pythonx/jedi/jedi/plugins/stdlib.py	/^class SuperInstance(LazyValueWrapper):$/;"	c
 SuperYeah	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/arrays.py	/^class SuperYeah(list):$/;"	c
-Support for additional filetypes	.vim/plugged/tagbar/README.md	/^## Support for additional filetypes$/;"	s	chapter:Tagbar: a class outline viewer for Vim
 Support for dot repeat	.vim/plugged/vim-easymotion/README.md	/^#### Support for dot repeat$/;"	t	subsection:New features in version 2.0""Repeat motions
 Supported Python Features	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/features.rst	/^Supported Python Features$/;"	s	chapter:Features and Caveats
 Swap windows	.vim/plugged/vim-choosewin/README.md	/^### Swap windows$/;"	S	section:Navigate to the window you choose""Operational examples
@@ -2577,22 +2589,6 @@ Table Of Contents	.vim/plugged/vista.vim/README.md	/^## Table Of Contents$/;"	s	
 Table of Contents	.vim/plugged/ctrlsf.vim/README.md	/^## Table of Contents$/;"	s	chapter:ctrlsf.vim
 TagExplManager	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/tagExpl.py	/^class TagExplManager(Manager):$/;"	c
 TagExplorer	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/tagExpl.py	/^class TagExplorer(Explorer):$/;"	c
-Tagbar	.vim/plugged/tagbar/plugin/tagbar.vim	/^command! -nargs=0 Tagbar              call tagbar#ToggleWindow()$/;"	c
-Tagbar: a class outline viewer for Vim	.vim/plugged/tagbar/README.md	/^# Tagbar: a class outline viewer for Vim$/;"	c
-TagbarAutoCmds	.vim/plugged/tagbar/autoload/tagbar.vim	/^    augroup TagbarAutoCmds$/;"	a
-TagbarBalloonExpr	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! TagbarBalloonExpr() abort$/;"	f
-TagbarClose	.vim/plugged/tagbar/plugin/tagbar.vim	/^command! -nargs=0 TagbarClose         call tagbar#CloseWindow()$/;"	c
-TagbarCurrentTag	.vim/plugged/tagbar/plugin/tagbar.vim	/^command! -nargs=? TagbarCurrentTag    echo tagbar#currenttag('%s', 'No current tag', <f-args>)$/;"	c
-TagbarDebug	.vim/plugged/tagbar/plugin/tagbar.vim	/^command! -nargs=? TagbarDebug         call tagbar#debug#start_debug(<f-args>)$/;"	c
-TagbarDebugEnd	.vim/plugged/tagbar/plugin/tagbar.vim	/^command! -nargs=0 TagbarDebugEnd      call tagbar#debug#stop_debug()$/;"	c
-TagbarGetTypeConfig	.vim/plugged/tagbar/plugin/tagbar.vim	/^command! -nargs=1 TagbarGetTypeConfig call tagbar#gettypeconfig(<f-args>)$/;"	c
-TagbarOpen	.vim/plugged/tagbar/plugin/tagbar.vim	/^command! -nargs=? TagbarOpen          call tagbar#OpenWindow(<f-args>)$/;"	c
-TagbarOpenAutoClose	.vim/plugged/tagbar/plugin/tagbar.vim	/^command! -nargs=0 TagbarOpenAutoClose call tagbar#OpenWindow('fcj')$/;"	c
-TagbarSession	.vim/plugged/tagbar/plugin/tagbar.vim	/^augroup TagbarSession$/;"	a
-TagbarSetFoldlevel	.vim/plugged/tagbar/plugin/tagbar.vim	/^command! -nargs=1 -bang TagbarSetFoldlevel  call tagbar#SetFoldLevel(<args>, <bang>0)$/;"	c
-TagbarShowTag	.vim/plugged/tagbar/plugin/tagbar.vim	/^command! -nargs=0 TagbarShowTag       call tagbar#highlighttag(1, 1)$/;"	c
-TagbarToggle	.vim/plugged/tagbar/plugin/tagbar.vim	/^command! -nargs=0 TagbarToggle        call tagbar#ToggleWindow()$/;"	c
-TagbarTogglePause	.vim/plugged/tagbar/plugin/tagbar.vim	/^command! -nargs=0 TagbarTogglePause   call tagbar#toggle_pause()$/;"	c
 TarFile	.vim/plugged/jedi-vim/pythonx/jedi/test/static_analysis/descriptors.py	/^class TarFile():$/;"	c
 TearDown	.vim/plugged/vim-gitgutter/test/test_gitgutter.vim	/^function TearDown()$/;"	f
 Terminal Background	.vim/plugged/jellybeans.vim/README.markdown	/^#### Terminal Background$/;"	t	subsection:jellybeans.vim""Options""Custom Highlights
@@ -2744,7 +2740,6 @@ UPDATED_SOURCE	.vim/plugged/vim-gutentags/plat/win32/update_tags.cmd	/^set UPDAT
 UncaughtAttributeError	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/utils.py	/^class UncaughtAttributeError(Exception):$/;"	c
 UncolorAllWords	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^function! UncolorAllWords()$/;"	f
 UncolorWord	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^function! UncolorWord(word)$/;"	f
-Underlines the word under the cursor	.vim/plugged/vim-cursorword/README.md	/^## Underlines the word under the cursor$/;"	s	chapter:vim-cursorword
 Unicode	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/fuzzyMatch.py	/^    def Unicode(str, encoding):$/;"	f
 Unlock	.vim/plugged/vim-gutentags/plat/win32/update_tags.cmd	/^:Unlock$/;"	l
 UnresolvableParamName	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/compiled/value.py	/^class UnresolvableParamName(ParamNameInterface, AbstractNameDefinition):$/;"	c
@@ -2829,6 +2824,7 @@ VistaFloatingWin	.vim/plugged/vista.vim/autoload/vista/floating.vim	/^  augroup 
 VistaMOF	.vim/plugged/vista.vim/autoload/vista/autocmd.vim	/^  augroup VistaMOF$/;"	a
 VistaPopup	.vim/plugged/vista.vim/autoload/vista/popup.vim	/^  augroup VistaPopup$/;"	a
 Visual Studio Code	.vim/plugged/jedi-vim/pythonx/jedi/README.rst	/^.. _Visual Studio Code: https:\/\/code.visualstudio.com\/$/;"	T	section:Acknowledgements
+Vundle	.vim/plugged/smartim/README.md	/^## Vundle$/;"	s	chapter:Installation
 Vundle (https://github.com/gmarik/vundle)	.vim/plugged/vim-easymotion/README.md	/^### Vundle (https:\/\/github.com\/gmarik\/vundle)$/;"	S	section:New features in version 2.0""Installation
 W	.vim/init.vim	/^nnoremap W :wa<CR>$/;"	m
 W	.vimrc	/^nnoremap W :wa<CR>$/;"	m
@@ -2837,16 +2833,17 @@ WI	.vim/plugged/vim-airline-themes/autoload/airline/themes/base16_snazzy.vim	/^l
 WantedIssue	.vim/plugged/jedi-vim/pythonx/parso/test/test_normalizer_issues_files.py	/^class WantedIssue(object):$/;"	c
 Warning	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/analysis.py	/^class Warning(Error):$/;"	c
 We <3 pull requests!	.vim/plugged/jedi-vim/CONTRIBUTING.md	/^# We <3 pull requests!$/;"	c
-What Tagbar is	.vim/plugged/tagbar/README.md	/^## What Tagbar is$/;"	s	chapter:Tagbar: a class outline viewer for Vim
-What Tagbar is not	.vim/plugged/tagbar/README.md	/^## What Tagbar is not$/;"	s	chapter:Tagbar: a class outline viewer for Vim
 What if I'm also opening a saved session, for example `vim -S session_file.vim`? I don't want NERDTree to open in that scenario.	.vim/plugged/nerdtree/README.markdown	/^#### What if I'm also opening a saved session, for example `vim -S session_file.vim`? I don't wa/;"	t	section:The NERDTree [![Vint](https://github.com/preservim/nerdtree/workflows/Vint/badge.svg)](https://github.com/preservim/nerdtree/actions?workflow=Vint)""F.A.Q. (here, and in the [Wiki](https://github.com/preservim/nerdtree/wiki))
 What is improved ?	.vim/plugged/rainbow/README.md	/^### What is improved ?$/;"	S	section:Rainbow Parentheses Improved""Description [(这里有中文版)](https://github.com/luochen1990/rainbow/blob/master/README_zh.md)
+What is this?	.vim/plugged/smartim/README.md	/^# What is this?$/;"	c
+What should I do if my default keyboard is not US English?	.vim/plugged/smartim/README.md	/^## What should I do if my default keyboard is not US English?$/;"	s	chapter:FAQ
 What to do when a project's documentation and implementation disagree	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/typeshed/CONTRIBUTING.md	/^### What to do when a project's documentation and implementation disagree$/;"	S	section:Contributing to typeshed""Preparing Changes
 What to include	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/typeshed/CONTRIBUTING.md	/^### What to include$/;"	S	section:Contributing to typeshed""Preparing Changes
 What?	.vim/plugged/vim-gutentags/README.md	/^## What?$/;"	s	chapter:Gutentags
 Where and why backward compatibility is given up?	.vim/plugged/ctrlsf.vim/README.md	/^### Where and why backward compatibility is given up?$/;"	S	section:ctrlsf.vim""For user comes from pre v1.0
 Where did the name come from?	.vim/plugged/vim-airline/README.md	/^# Where did the name come from?$/;"	c
 WhileStmt	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^class WhileStmt(Flow):$/;"	c
+Why is it Mac-only?	.vim/plugged/smartim/README.md	/^## Why is it Mac-only?$/;"	s	chapter:FAQ
 Why you should use fzf on Vim	.vim/plugged/fzf.vim/README.md	/^Why you should use fzf on Vim$/;"	s	chapter:fzf :heart: vim
 Why?	.vim/plugged/git-messenger.vim/README.md	/^## Why?$/;"	s	chapter:git-messenger.vim
 Why?	.vim/plugged/vim-gutentags/README.md	/^## Why?$/;"	s	chapter:Gutentags
@@ -5304,6 +5301,7 @@ airline_tabline_tabws	.vim/plugged/vim-airline/autoload/airline/extensions/tabli
 airline_whitespace	.vim/plugged/vim-airline/autoload/airline/extensions/whitespace.vim	/^    augroup airline_whitespace$/;"	a
 airline_whitespace	.vim/plugged/vim-airline/autoload/airline/extensions/whitespace.vim	/^  augroup airline_whitespace$/;"	a
 alias	ranger/commands_full.py	/^class alias(Command):$/;"	c
+all	.vim/plugged/smartim/Makefile	/^all:$/;"	t
 allOf	.vim/plugged/coc.nvim/data/schema.json	/^      "allOf": [{ "$ref": "#\/definitions\/languageServerBase" }],$/;"	a	object:definitions.languageServerCommand
 allOf	.vim/plugged/coc.nvim/data/schema.json	/^      "allOf": [{ "$ref": "#\/definitions\/languageServerBase" }],$/;"	a	object:definitions.languageServerModule
 allOf	.vim/plugged/coc.nvim/data/schema.json	/^      "allOf": [{ "$ref": "#\/definitions\/languageServerBase" }],$/;"	a	object:definitions.languageServerSocket
@@ -5523,7 +5521,6 @@ b1	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/arrays.py	/^a1, b1 = (1, "
 b:current_syntax	.vim/plugged/LeaderF/syntax/leaderf.vim	/^let b:current_syntax = "leaderf"$/;"	v
 b:current_syntax	.vim/plugged/ctrlsf.vim/syntax/ctrlsf.vim	/^let b:current_syntax = 'ctrlsf'$/;"	v
 b:current_syntax	.vim/plugged/git-messenger.vim/syntax/gitmessengerpopup.vim	/^let b:current_syntax = 'gitmessengerpopup'$/;"	v
-b:current_syntax	.vim/plugged/tagbar/syntax/tagbar.vim	/^let b:current_syntax = 'tagbar'$/;"	v
 b:current_syntax	.vim/plugged/vim-fugitive/syntax/fugitive.vim	/^let b:current_syntax = "fugitive"$/;"	v
 b:current_syntax	.vim/plugged/vim-fugitive/syntax/fugitiveblame.vim	/^let b:current_syntax = "fugitiveblame"$/;"	v
 b:current_syntax	.vim/plugged/vim-startify/syntax/startify.vim	/^let b:current_syntax = 'startify'$/;"	v
@@ -5711,11 +5708,7 @@ cd	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/goto.py	/^cd = c$/;"	v
 cd	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/goto.py	/^cd = e$/;"	v
 cd	ranger/commands_full.py	/^class cd(Command):$/;"	c
 ce	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^    nnoremap <buffer> <silent> ce    :<C-U>Git commit --amend --no-edit<CR>$/;"	m
-cf	.vim/init.vim	/^nnoremap cf :CtrlSF<Space>$/;"	m
 cf	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^    nnoremap <buffer>          cf    :<C-U>Git commit --fixup=<C-R>=<SID>SquashArgument()<CR>$/;"	m
-cf	.vimrc	/^nnoremap cf :CtrlSF<Space>$/;"	m
-cfc	.vim/init.vim	/^nnoremap cfc :CtrlSFClose<CR>$/;"	m
-cfc	.vimrc	/^nnoremap cfc :CtrlSFClose<CR>$/;"	m
 cfs	.vim/init.vim	/^nmap <silent>cfs <Plug>CtrlSFCCwordPath<CR>$/;"	m
 cfs	.vimrc	/^nmap <silent>cfs <Plug>CtrlSFCCwordPath<CR>$/;"	m
 cgc	.vim/plugged/vim-commentary/plugin/commentary.vim	/^    nmap cgc <Plug>ChangeCommentary$/;"	m
@@ -6350,11 +6343,6 @@ cursorRow	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/instance.py	/^   
 cursors.cancelKey	.vim/plugged/coc.nvim/data/schema.json	/^    "cursors.cancelKey": {$/;"	o	object:properties
 cursors.nextKey	.vim/plugged/coc.nvim/data/schema.json	/^    "cursors.nextKey": {$/;"	o	object:properties
 cursors.previousKey	.vim/plugged/coc.nvim/data/schema.json	/^    "cursors.previousKey": {$/;"	o	object:properties
-cursorword	.vim/plugged/vim-cursorword/plugin/cursorword.vim	/^augroup cursorword$/;"	a
-cursorword#cursormoved	.vim/plugged/vim-cursorword/autoload/cursorword.vim	/^  function! cursorword#cursormoved() abort$/;"	f
-cursorword#highlight	.vim/plugged/vim-cursorword/autoload/cursorword.vim	/^function! cursorword#highlight() abort$/;"	f
-cursorword#matchadd	.vim/plugged/vim-cursorword/autoload/cursorword.vim	/^function! cursorword#matchadd(...) abort$/;"	f
-cursorword#timer_callback	.vim/plugged/vim-cursorword/autoload/cursorword.vim	/^  function! cursorword#timer_callback(...) abort$/;"	f
 cut_value_at_position	.vim/plugged/jedi-vim/pythonx/jedi/jedi/parser_utils.py	/^def cut_value_at_position(leaf, position):$/;"	f
 cv<CR>	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^    nnoremap <buffer>         cv<CR> :tab Git commit -v<CR>$/;"	m
 cv<Space>	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^    nnoremap <buffer>      cv<Space> :tab Git commit -v<Space>$/;"	m
@@ -9478,7 +9466,6 @@ g:loaded_airline	.vim/plugged/vim-airline/plugin/airline.vim	/^let g:loaded_airl
 g:loaded_airline_themes	.vim/plugged/vim-airline-themes/plugin/airline-themes.vim	/^let g:loaded_airline_themes = 1$/;"	v
 g:loaded_choosewin	.vim/plugged/vim-choosewin/plugin/choosewin.vim	/^let g:loaded_choosewin = 1$/;"	v
 g:loaded_commentary	.vim/plugged/vim-commentary/plugin/commentary.vim	/^let g:loaded_commentary = 1$/;"	v
-g:loaded_cursorword	.vim/plugged/vim-cursorword/plugin/cursorword.vim	/^let g:loaded_cursorword = 1$/;"	v
 g:loaded_easy_align	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^let g:loaded_easy_align = 1$/;"	v
 g:loaded_easy_align_plugin	.vim/plugged/vim-easy-align/plugin/easy_align.vim	/^let g:loaded_easy_align_plugin = 1$/;"	v
 g:loaded_far	.vim/plugged/far.vim/plugin/far.vim	/^let g:loaded_far = 0$/;"	v
@@ -9492,7 +9479,6 @@ g:loaded_nerdtree_fs_menu	.vim/plugged/nerdtree/nerdtree_plugin/fs_menu.vim	/^le
 g:loaded_nerdtree_ui_glue_autoload	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^let g:loaded_nerdtree_ui_glue_autoload = 1$/;"	v
 g:loaded_plug	.vim/autoload/plug.vim	/^let g:loaded_plug = 1$/;"	v
 g:loaded_startify	.vim/plugged/vim-startify/plugin/startify.vim	/^let g:loaded_startify = 1$/;"	v
-g:loaded_tagbar	.vim/plugged/tagbar/autoload/tagbar.vim	/^let g:loaded_tagbar = 1$/;"	v
 g:loaded_translator	.vim/plugged/vim-translator/plugin/translator.vim	/^let g:loaded_translator= 1$/;"	v
 g:loaded_xtabline	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^    let g:loaded_xtabline = 1$/;"	v
 g:mysyntaxfile	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^    let g:mysyntaxfile = g:indentLine_mysyntaxfile$/;"	v
@@ -9508,6 +9494,10 @@ g:rainbow_active	.vim/init.vim	/^let g:rainbow_active = 1$/;"	v
 g:rainbow_active	.vimrc	/^let g:rainbow_active = 1$/;"	v
 g:repeat_tick	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^                    let g:repeat_tick = b:changedtick$/;"	v
 g:skim_colors	.vim/plugged/vista.vim/autoload/vista/finder/skim.vim	/^      let g:skim_colors = old_skim_colors$/;"	v
+g:smartim_debug	.vim/plugged/smartim/plugin/smartim.vim	/^  let g:smartim_debug = 0$/;"	v
+g:smartim_default	.vim/plugged/smartim/plugin/smartim.vim	/^  let g:smartim_default = "com.apple.keylayout.US"$/;"	v
+g:smartim_disable	.vim/plugged/smartim/plugin/smartim.vim	/^  let g:smartim_disable = 0$/;"	v
+g:smartim_loaded	.vim/plugged/smartim/plugin/smartim.vim	/^let g:smartim_loaded = 1$/;"	v
 g:startify_bookmarks	.vim/init.vim	/^let g:startify_bookmarks = [$/;"	v
 g:startify_bookmarks	.vimrc	/^let g:startify_bookmarks = [$/;"	v
 g:startify_custom_header	.vim/init.vim	/^let g:startify_custom_header = [$/;"	v
@@ -9522,24 +9512,7 @@ g:syntastic_stl_format	.vim/plugged/vim-airline/autoload/airline/extensions/synt
 g:syntastic_stl_format	.vim/plugged/vim-airline/autoload/airline/extensions/syntastic.vim	/^    let g:syntastic_stl_format = get(g:, 'airline#extensions#syntastic#stl_format_err', '%E{[%fe/;"	v
 g:syntastic_stl_format	.vim/plugged/vim-airline/autoload/airline/extensions/syntastic.vim	/^    let g:syntastic_stl_format = get(g:, 'airline#extensions#syntastic#stl_format_warn', '%W{[%f/;"	v
 g:taboo_tabline	.vim/plugged/vim-airline/autoload/airline/extensions/tabline.vim	/^  let g:taboo_tabline = 0$/;"	v
-g:tagbar#icon_closed	.vim/plugged/tagbar/autoload/tagbar.vim	/^let g:tagbar#icon_closed = g:tagbar_iconchars[0]$/;"	v
-g:tagbar#icon_open	.vim/plugged/tagbar/autoload/tagbar.vim	/^let g:tagbar#icon_open   = g:tagbar_iconchars[1]$/;"	v
-g:tagbar_autoclose	.vim/plugged/tagbar/autoload/tagbar.vim	/^    let g:tagbar_autoclose = !g:tagbar_autoclose$/;"	v
-g:tagbar_autofocus	.vim/init.vim	/^let g:tagbar_autofocus = 1              "tagbar一打开，光标即在tagbar页面内$/;"	v
-g:tagbar_autoshowtag	.vim/init.vim	/^let g:tagbar_autoshowtag = 1            "当编辑代码时，在Tagbar自动追踪变量$/;"	v
-g:tagbar_case_insensitive	.vim/plugged/tagbar/autoload/tagbar.vim	/^    let g:tagbar_case_insensitive = !g:tagbar_case_insensitive$/;"	v
-g:tagbar_compact	.vim/init.vim	/^let g:tagbar_compact = 1                  "tagbar 子窗口中不显示冗余帮助信息$/;"	v
-g:tagbar_ctags_bin	.vim/init.vim	/^let g:tagbar_ctags_bin = 'ctags'        "tagbar依赖ctags插件$/;"	v
-g:tagbar_ctags_bin	.vim/plugged/tagbar/autoload/tagbar.vim	/^                let g:tagbar_ctags_bin = ctags$/;"	v
-g:tagbar_ctags_bin	.vim/plugged/tagbar/autoload/tagbar.vim	/^        let g:tagbar_ctags_bin = expand(g:tagbar_ctags_bin)$/;"	v
-g:tagbar_hide_nonpublic	.vim/plugged/tagbar/autoload/tagbar.vim	/^    let g:tagbar_hide_nonpublic = !g:tagbar_hide_nonpublic$/;"	v
-g:tagbar_iconchars	.vim/init.vim	/^let g:tagbar_iconchars = ['▸', '▾']     "修改默认剪头'▸', '▾'$/;"	v
-g:tagbar_iconchars	.vim/plugged/tagbar/plugin/tagbar.vim	/^        let g:tagbar_iconchars = ['+', '-']$/;"	v
-g:tagbar_iconchars	.vim/plugged/tagbar/plugin/tagbar.vim	/^        let g:tagbar_iconchars = ['▶', '▼']$/;"	v
-g:tagbar_sort	.vim/init.vim	/^let g:tagbar_sort = 0                   "设置标签不排序，默认排序$/;"	v
-g:tagbar_sort	.vim/plugged/tagbar/autoload/tagbar.vim	/^        let g:tagbar_sort = !g:tagbar_sort$/;"	v
 g:tagbar_status_func	.vim/plugged/vim-airline/autoload/airline/extensions/tagbar.vim	/^  let g:tagbar_status_func = 'airline#extensions#tagbar#get_status'$/;"	v
-g:tagbar_width	.vim/init.vim	/^let g:tagbar_width = 25                 "设置tagbar的宽度$/;"	v
 g:testname	.vim/plugged/vim-gitgutter/test/runner.vim	/^let g:testname = expand('%')$/;"	v
 g:translator_debug_mode	.vim/plugged/vim-translator/plugin/translator.vim	/^let g:translator_debug_mode = get(g:, 'translator_debug_mode', v:false)$/;"	v
 g:translator_default_engines	.vim/init.vim	/^let g:translator_default_engines = ['ciba', 'bing', 'google']$/;"	v
@@ -9670,10 +9643,6 @@ g:xtab_cwds	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtablin
 g:xtabline_alt_action	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^    let g:xtabline_alt_action = get(g:, 'xtabline_alt_action', "buffer #")$/;"	v
 g:xtabline_changing_buffer	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^        let g:xtabline_changing_buffer = 1$/;"	v
 g:xtabline_include_previews	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^    let g:xtabline_include_previews = get(g:, 'xtabline_include_previews', 1)$/;"	v
-ga	.vim/init.vim	/^nmap ga <Plug>(EasyAlign)$/;"	m
-ga	.vim/init.vim	/^xmap ga <Plug>(EasyAlign)$/;"	m
-ga	.vimrc	/^nmap ga <Plug>(EasyAlign)$/;"	m
-ga	.vimrc	/^xmap ga <Plug>(EasyAlign)$/;"	m
 gather_annotation_classes	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/base_value.py	/^    def gather_annotation_classes(self):$/;"	m	class:HelperValueMixin
 gather_annotation_classes	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/base_value.py	/^    def gather_annotation_classes(self):$/;"	m	class:ValueSet
 gather_annotation_classes	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/gradual/typing.py	/^    def gather_annotation_classes(self):$/;"	m	class:TypeAlias
@@ -11143,6 +11112,7 @@ main	.vim/plugged/jedi-vim/pythonx/jedi/sith.py	/^def main(arguments):$/;"	f
 main	.vim/plugged/jedi-vim/pythonx/parso/scripts/diff_parser_profile.py	/^def main(args):$/;"	f
 main	.vim/plugged/jedi-vim/pythonx/parso/test/fuzz_diff_parser.py	/^def main(arguments):$/;"	f
 main	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E30.py	/^def main():$/;"	f
+main	.vim/plugged/smartim/im-select.m	/^int main(int argc, const char * argv[]) {$/;"	f
 main	.vim/plugged/vim-translator/script/translator.py	/^def main():$/;"	f
 main	.vim/plugged/vista.vim/test/data/123.cpp	/^int main(void)$/;"	f	typeref:typename:int
 main	.vim/plugged/vista.vim/test/data/175.cpp	/^main(void)$/;"	f	typeref:typename:int
@@ -12165,7 +12135,6 @@ s:AskPassArgs	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:AskP
 s:Assemble	.vim/plugged/vista.vim/autoload/vista/renderer/default.vim	/^function! s:Assemble(line, depth) abort$/;"	f
 s:AsyncRequest	.vim/plugged/coc.nvim/plugin/coc.vim	/^function! s:AsyncRequest(name, args) abort$/;"	f
 s:AutoResetWidth	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^function! s:AutoResetWidth()$/;"	f
-s:AutoUpdate	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:AutoUpdate(fname, force, ...) abort$/;"	f
 s:AutoUpdate	.vim/plugged/vista.vim/autoload/vista/executive/ale.vim	/^function! s:AutoUpdate(fpath) abort$/;"	f
 s:AutoUpdate	.vim/plugged/vista.vim/autoload/vista/executive/coc.vim	/^function! s:AutoUpdate(_fpath) abort$/;"	f
 s:AutoUpdate	.vim/plugged/vista.vim/autoload/vista/executive/ctags.vim	/^function! s:AutoUpdate(fpath) abort$/;"	f
@@ -12252,22 +12221,15 @@ s:Call	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! s:Call(method, ar
 s:Cancell	.vim/plugged/vim-easymotion/autoload/EasyMotion/command_line.vim	/^function! s:Cancell() " {{{$/;"	f
 s:Cb	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^  function! s:Cb() closure$/;"	f
 s:CeilingDirectories	.vim/plugged/vim-fugitive/plugin/fugitive.vim	/^function! s:CeilingDirectories() abort$/;"	f
-s:ChangeFoldLevel	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ChangeFoldLevel(diff, force) abort$/;"	f
 s:ChannelSet	.vim/plugged/coc.nvim/autoload/coc/rpc.vim	/^function! s:ChannelSet(dict, key, val)$/;"	f
 s:CheckDefined	.vim/plugged/vim-airline/autoload/airline/highlighter.vim	/^function! s:CheckDefined(colors)$/;"	f
-s:CheckExCtagsVersion	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:CheckExCtagsVersion(output) abort$/;"	f
-s:CheckFTCtags	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:CheckFTCtags(bin, ftype) abort$/;"	f
-s:CheckForExCtags	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:CheckForExCtags(silent) abort$/;"	f
-s:CheckMouseClick	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:CheckMouseClick() abort$/;"	f
 s:ChompDefault	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:ChompDefault(default, ...) abort$/;"	f
 s:ChompError	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:ChompError(...) abort$/;"	f
 s:ClearAugroups	.vim/plugged/vista.vim/autoload/vista/sidebar.vim	/^function! s:ClearAugroups(...) abort$/;"	f
 s:ClearOtherEvents	.vim/plugged/vista.vim/autoload/vista/autocmd.vim	/^function! s:ClearOtherEvents(group) abort$/;"	f
-s:CloseFold	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:CloseFold() abort$/;"	f
 s:CloseOnCursorMoved	.vim/plugged/vista.vim/autoload/vista/floating.vim	/^function! s:CloseOnCursorMoved() abort$/;"	f
 s:CloseOnWinEnter	.vim/plugged/vista.vim/autoload/vista/floating.vim	/^function! s:CloseOnWinEnter() abort$/;"	f
 s:ClosePopup	.vim/plugged/vista.vim/autoload/vista/popup.vim	/^function! s:ClosePopup() abort$/;"	f
-s:CloseWindow	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:CloseWindow() abort$/;"	f
 s:CodeActionFromSelected	.vim/plugged/coc.nvim/plugin/coc.vim	/^function! s:CodeActionFromSelected(type)$/;"	f
 s:Color	.vim/plugged/vim-choosewin/autoload/choosewin/color.vim	/^let s:Color = {}$/;"	v
 s:Color.init	.vim/plugged/vim-choosewin/autoload/choosewin/color.vim	/^function! s:Color.init() "{{{1$/;"	f
@@ -12288,8 +12250,6 @@ s:ConfigTimestamps	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s
 s:ConsumeResult	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/async.vim	/^func! s:ConsumeResult(max) abort$/;"	f
 s:ContainWhitespaceOnly	.vim/plugged/vista.vim/autoload/vista/renderer/kind.vim	/^function! s:ContainWhitespaceOnly(str) abort$/;"	f
 s:ContainingCommit	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:ContainingCommit() abort$/;"	f
-s:CorrectFocusOnStartup	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:CorrectFocusOnStartup() abort$/;"	f
-s:CreateAutocommands	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:CreateAutocommands() abort$/;"	f
 s:CreateCoordKeyDict	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^function! s:CreateCoordKeyDict(groups, ...)$/;"	f
 s:CreateTabTreeVCS	.vim/plugged/nerdtree/nerdtree_plugin/vcs.vim	/^function! s:CreateTabTreeVCS(name)$/;"	f
 s:Creator	.vim/plugged/nerdtree/lib/nerdtree/creator.vim	/^let s:Creator = {}$/;"	v
@@ -12316,7 +12276,6 @@ s:Creator.createMirror	.vim/plugged/nerdtree/lib/nerdtree/creator.vim	/^function
 s:Creator.createTabTree	.vim/plugged/nerdtree/lib/nerdtree/creator.vim	/^function! s:Creator.createTabTree(name)$/;"	f
 s:Creator.createWindowTree	.vim/plugged/nerdtree/lib/nerdtree/creator.vim	/^function! s:Creator.createWindowTree(dir)$/;"	f
 s:Creator.toggleTabTree	.vim/plugged/nerdtree/lib/nerdtree/creator.vim	/^function! s:Creator.toggleTabTree(dir)$/;"	f
-s:CtagsErrMsg	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:CtagsErrMsg(errmsg, infomsg, silent, ...) abort$/;"	f
 s:CursorRangeFromSelected	.vim/plugged/coc.nvim/plugin/coc.vim	/^function! s:CursorRangeFromSelected(type, ...) abort$/;"	f
 s:DIRECTION	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^let s:DIRECTION = { 'forward': 0, 'backward': 1, 'bidirection': 2}$/;"	v
 s:DIRECTION	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Motion.vim	/^let s:DIRECTION = {'forward': 0, 'backward': 1}$/;"	v
@@ -12327,7 +12286,6 @@ s:DefaultTagParser	.vim/plugged/vista.vim/autoload/vista/executive/ctags.vim	/^ 
 s:DeleteTemp	.vim/plugged/vista.vim/autoload/vista/executive/ctags.vim	/^function! s:DeleteTemp() abort$/;"	f
 s:DescendantsOf	.vim/plugged/vista.vim/autoload/vista/renderer/default.vim	/^function! s:DescendantsOf(candidates, root_line, scope) abort$/;"	f
 s:DescendantsOfRoot	.vim/plugged/vista.vim/autoload/vista/renderer/default.vim	/^function! s:DescendantsOfRoot(candidates, root_line) abort$/;"	f
-s:DetectFiletype	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:DetectFiletype(bufnr) abort$/;"	f
 s:Diff	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/edit.vim	/^func! s:Diff(orig, modi) abort$/;"	f
 s:DiffClose	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:DiffClose() abort$/;"	f
 s:DiffFile	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/edit.vim	/^func! s:DiffFile(orig, modi) abort$/;"	f
@@ -12399,7 +12357,6 @@ s:Ellipsis	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/view.vim	/^func! s:Ellipsis()
 s:Enable	.vim/plugged/coc.nvim/plugin/coc.vim	/^function! s:Enable()$/;"	f
 s:EnsureExists	.vim/plugged/vista.vim/autoload/vista/source.vim	/^function! s:EnsureExists() abort$/;"	f
 s:Escape	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/backend.vim	/^func! s:Escape(for_shell, str)$/;"	f
-s:EscapeCtagsCmd	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:EscapeCtagsCmd(ctags_bin, args, ...) abort$/;"	f
 s:Event	.vim/plugged/nerdtree/lib/nerdtree/event.vim	/^let s:Event = {}$/;"	v
 s:Event.New	.vim/plugged/nerdtree/lib/nerdtree/event.vim	/^function! s:Event.New(nerdtree, subject, action, params) abort$/;"	f
 s:ExcludeOther	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/buflist.vim	/^function! s:ExcludeOther(nr, exclude_preview)$/;"	f
@@ -12408,8 +12365,6 @@ s:ExecPath	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:ExecPat
 s:ExecSearch	.vim/plugged/ctrlsf.vim/autoload/ctrlsf.vim	/^func! s:ExecSearch(args) abort$/;"	f
 s:Execute	.vim/plugged/vista.vim/autoload/vista/executive/coc.vim	/^function! s:Execute(bang, should_display) abort$/;"	f
 s:Execute	.vim/plugged/vista.vim/autoload/vista/executive/ctags.vim	/^function! s:Execute(bang, should_display) abort$/;"	f
-s:ExecuteCtags	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ExecuteCtags(ctags_cmd) abort$/;"	f
-s:ExecuteCtagsOnFile	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ExecuteCtagsOnFile(fname, realfname, typeinfo) abort$/;"	f
 s:Expand	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Expand(rev, ...) abort$/;"	f
 s:ExpandMap	.vim/plugged/auto-pairs/plugin/auto-pairs.vim	/^func! s:ExpandMap(map)$/;"	f
 s:ExpandSplit	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:ExpandSplit(string, ...) abort$/;"	f
@@ -12458,15 +12413,11 @@ s:GetAvaliableExecutives	.vim/plugged/vista.vim/autoload/vista/debugging.vim	/^f
 s:GetChar	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^function! s:GetChar(...) abort "{{{$/;"	f
 s:GetCustomCmd	.vim/plugged/vista.vim/autoload/vista/executive/ctags.vim	/^function! s:GetCustomCmd(filetype) abort$/;"	f
 s:GetDefaultCmd	.vim/plugged/vista.vim/autoload/vista/executive/ctags.vim	/^function! s:GetDefaultCmd(file) abort$/;"	f
-s:GetFileWinnr	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:GetFileWinnr(fileinfo) abort$/;"	f
 s:GetGlobalVariables	.vim/plugged/vista.vim/autoload/vista/debugging.vim	/^function! s:GetGlobalVariables() abort$/;"	f
 s:GetHiCmd	.vim/plugged/vim-airline/autoload/airline/highlighter.vim	/^function! s:GetHiCmd(list)$/;"	f
 s:GetInfoFromLSPAndExtension	.vim/plugged/vista.vim/autoload/vista/cursor/lsp.vim	/^function! s:GetInfoFromLSPAndExtension() abort$/;"	f
 s:GetInfoUnderCursor	.vim/plugged/vista.vim/autoload/vista/cursor.vim	/^function! s:GetInfoUnderCursor() abort$/;"	f
 s:GetLanguageSpecificOptition	.vim/plugged/vista.vim/autoload/vista/executive/ctags.vim	/^function! s:GetLanguageSpecificOptition(filetype) abort$/;"	f
-s:GetNearbyTag	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:GetNearbyTag(all, forcecurrent, ...) abort$/;"	f
-s:GetSupportedFiletypes	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:GetSupportedFiletypes() abort$/;"	f
-s:GetTagInfo	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:GetTagInfo(linenr, ignorepseudo) abort$/;"	f
 s:GetTempDirectory	.vim/plugged/vista.vim/autoload/vista/executive/ctags.vim	/^function! s:GetTempDirectory() abort$/;"	f
 s:GetTrailingLnum	.vim/plugged/vista.vim/autoload/vista/cursor.vim	/^function! s:GetTrailingLnum() abort$/;"	f
 s:GetVisibility	.vim/plugged/vista.vim/autoload/vista/renderer/default.vim	/^function! s:GetVisibility(line) abort$/;"	f
@@ -12475,25 +12426,17 @@ s:GlobComplete	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Glo
 s:GlobalChange	.vim/plugged/coc.nvim/autoload/coc.vim	/^function! s:GlobalChange(dict, key, val)$/;"	f
 s:Go	.vim/plugged/auto-pairs/plugin/auto-pairs.vim	/^  let s:Go = ""$/;"	v
 s:Go	.vim/plugged/auto-pairs/plugin/auto-pairs.vim	/^  let s:Go = "\\<C-G>U"$/;"	v
-s:GotoFileWindow	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:GotoFileWindow(fileinfo, ...) abort$/;"	f
-s:GotoNextFold	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:GotoNextFold() abort$/;"	f
-s:GotoNextToplevelTag	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:GotoNextToplevelTag(direction) abort$/;"	f
-s:GotoPrevFold	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:GotoPrevFold() abort$/;"	f
 s:GrepParseLine	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:GrepParseLine(prefix, name_only, dir, line) abort$/;"	f
 s:GrepSubcommand	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:GrepSubcommand(line1, line2, range, bang, mods, options) abort$/;"	f
 s:GroupByKindForLSPData	.vim/plugged/vista.vim/autoload/vista/finder.vim	/^function! s:GroupByKindForLSPData(lsp_items) abort$/;"	f
 s:GroupingAlgorithmOriginal	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^function! s:GroupingAlgorithmOriginal(targets, keys)$/;"	f
 s:GroupingAlgorithmSCTree	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^function! s:GroupingAlgorithmSCTree(targets, keys) "{{{$/;"	f
-s:HandleBufDelete	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:HandleBufDelete(bufname, bufnr) abort$/;"	f
-s:HandleBufWrite	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:HandleBufWrite(fname) abort$/;"	f
 s:HandleLSPResponse	.vim/plugged/vista.vim/autoload/vista/executive/ale.vim	/^function! s:HandleLSPResponse(resp) abort$/;"	f
 s:HandleLSPResponse	.vim/plugged/vista.vim/autoload/vista/executive/coc.vim	/^function! s:HandleLSPResponse(error, response) abort$/;"	f
 s:HandleLSPResponse	.vim/plugged/vista.vim/autoload/vista/executive/lcn.vim	/^function! s:HandleLSPResponse(output) abort$/;"	f
 s:HandleLSPResponse	.vim/plugged/vista.vim/autoload/vista/executive/vim_lsc.vim	/^function! s:HandleLSPResponse(results) abort$/;"	f
 s:HandleLSPResponse	.vim/plugged/vista.vim/autoload/vista/executive/vim_lsp.vim	/^function! s:HandleLSPResponse(_server, _req_id, _type, data) abort$/;"	f
-s:HandleOnlyWindow	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:HandleOnlyWindow() abort$/;"	f
 s:HasAvaliableServers	.vim/plugged/vista.vim/autoload/vista/executive/vim_lsp.vim	/^function! s:HasAvaliableServers() abort$/;"	f
-s:HasOpenFileWindows	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:HasOpenFileWindows() abort$/;"	f
 s:HasOpt	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:HasOpt(args, ...) abort$/;"	f
 s:HasVlnum	.vim/plugged/vista.vim/autoload/vista/cursor.vim	/^function! s:HasVlnum() abort$/;"	f
 s:HeadingWhitespaces	.vim/plugged/vista.vim/autoload/vista/fold.vim	/^function! s:HeadingWhitespaces(line) abort$/;"	f
@@ -12503,7 +12446,6 @@ s:HighlightGroup	.vim/plugged/LeaderF/autoload/leaderf/colorscheme.vim	/^functio
 s:HighlightGroup	.vim/plugged/LeaderF/autoload/leaderf/colorscheme/popup.vim	/^function! s:HighlightGroup(category, name) abort$/;"	f
 s:HighlightNearestTag	.vim/plugged/vista.vim/autoload/vista/cursor.vim	/^function! s:HighlightNearestTag(_timer) abort$/;"	f
 s:HighlightSeperator	.vim/plugged/LeaderF/autoload/leaderf/colorscheme/popup.vim	/^function! s:HighlightSeperator(category) abort$/;"	f
-s:HighlightTag	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:HighlightTag(openfolds, ...) abort$/;"	f
 s:HighlightTagInFloatinWin	.vim/plugged/vista.vim/autoload/vista/floating.vim	/^function! s:HighlightTagInFloatinWin() abort$/;"	f
 s:Hinter	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Motion.vim	/^let s:Hinter = {$/;"	v
 s:Hinter._pos2hint_to_line2col2hint	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Motion.vim	/^function! s:Hinter._pos2hint_to_line2col2hint(pos2hint) abort$/;"	f
@@ -13036,18 +12978,15 @@ s:IN3	.vim/plugged/vim-airline-themes/autoload/airline/themes/sierra.vim	/^let s
 s:IndentLinesDisable	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^function! s:IndentLinesDisable()$/;"	f
 s:IndentLinesEnable	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^function! s:IndentLinesEnable()$/;"	f
 s:IndentLinesToggle	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^function! s:IndentLinesToggle()$/;"	f
-s:Init	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:Init(silent) abort$/;"	f
 s:InitColor	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^function! s:InitColor()$/;"	f
 s:InitCommandMap	.vim/plugged/LeaderF/autoload/leaderf.vim	/^function! s:InitCommandMap(var, dict)$/;"	f
 s:InitCwds	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^function! s:InitCwds()$/;"	f
 s:InitDict	.vim/plugged/LeaderF/autoload/leaderf.vim	/^function! s:InitDict(var, dict)$/;"	f
 s:InitMainWindow	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/win.vim	/^func! s:InitMainWindow() abort$/;"	f
 s:InitPreviewWindow	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/preview.vim	/^func! s:InitPreviewWindow() abort$/;"	f
-s:InitTypes	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:InitTypes() abort$/;"	f
 s:InitVar	.vim/plugged/LeaderF/autoload/leaderf.vim	/^function! s:InitVar(var, value)$/;"	f
 s:InitVar	.vim/plugged/LeaderF/plugin/leaderf.vim	/^function! s:InitVar(var, value)$/;"	f
 s:InitViewMode	.vim/plugged/ctrlsf.vim/autoload/ctrlsf.vim	/^func! s:InitViewMode() abort$/;"	f
-s:InitWindow	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:InitWindow(autoclose) abort$/;"	f
 s:Insert	.vim/plugged/vista.vim/autoload/vista/parser/ctags.vim	/^function! s:Insert(container, kind, picked) abort$/;"	f
 s:Insert	.vim/plugged/vista.vim/autoload/vista/renderer/default.vim	/^function! s:Insert(container, key, line) abort$/;"	f
 s:InstallOptions	.vim/plugged/coc.nvim/plugin/coc.vim	/^function! s:InstallOptions(...)abort$/;"	f
@@ -13060,10 +12999,8 @@ s:IsConflicted	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:IsC
 s:IsFileUri	.vim/plugged/vista.vim/autoload/vista/parser/lsp.vim	/^function! s:IsFileUri(uri) abort$/;"	f
 s:IsHeader	.vim/plugged/vista.vim/autoload/vista/extension/markdown.vim	/^function! s:IsHeader(cur_line, next_line) abort$/;"	f
 s:IsUsable	.vim/plugged/vista.vim/autoload/vista/finder.vim	/^function! s:IsUsable(cache, fpath) abort$/;"	f
-s:IsValidFile	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:IsValidFile(fname, ftype) abort$/;"	f
 s:JobOpts	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:JobOpts(cmd, env) abort$/;"	f
 s:Join	.vim/plugged/vista.vim/autoload/vista/renderer/markdown_like.vim	/^function! s:Join(line, icon) abort$/;"	f
-s:JumpToTag	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:JumpToTag(stay_in_tagbar) abort$/;"	f
 s:KeyMap	.vim/plugged/nerdtree/lib/nerdtree/key_map.vim	/^let s:KeyMap = {}$/;"	v
 s:KeyMap.Add	.vim/plugged/nerdtree/lib/nerdtree/key_map.vim	/^function! s:KeyMap.Add(keymap)$/;"	f
 s:KeyMap.All	.vim/plugged/nerdtree/lib/nerdtree/key_map.vim	/^function! s:KeyMap.All()$/;"	f
@@ -13090,7 +13027,6 @@ s:LinesError	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Lines
 s:LoadData	.vim/plugged/vista.vim/autoload/vista/parser/ctags.vim	/^function! s:LoadData(container, line) abort$/;"	f
 s:LoadFromPalette	.vim/plugged/LeaderF/autoload/leaderf/colorscheme.vim	/^function! s:LoadFromPalette() abort$/;"	f
 s:LoadFromPalette	.vim/plugged/LeaderF/autoload/leaderf/colorscheme/popup.vim	/^function! s:LoadFromPalette() abort$/;"	f
-s:LoadUserTypeDefs	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:LoadUserTypeDefs(...) abort$/;"	f
 s:LocateCompactView	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/view.vim	/^func! s:LocateCompactView(vlnum) abort$/;"	f
 s:LocateNormalView	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/view.vim	/^func! s:LocateNormalView(vlnum) abort$/;"	f
 s:LogFlushQueue	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:LogFlushQueue(state, dir) abort$/;"	f
@@ -13100,7 +13036,6 @@ s:MD	.vim/plugged/vista.vim/autoload/vista/renderer/markdown_like.vim	/^function
 s:MakeParagraph	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/db.vim	/^func! s:MakeParagraph() abort$/;"	f
 s:Map	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Map(mode, lhs, rhs, ...) abort$/;"	f
 s:Map	.vim/plugged/vim-fugitive/plugin/fugitive.vim	/^function! s:Map(mode, lhs, rhs, ...) abort$/;"	f
-s:MapKeys	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:MapKeys() abort$/;"	f
 s:MapMotion	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:MapMotion(lhs, rhs) abort$/;"	f
 s:MatchLine	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/view.vim	/^func! s:MatchLine(match) abort$/;"	f
 s:MatchTag	.vim/plugged/vista.vim/autoload/vista/cursor/ctags.vim	/^function! s:MatchTag(trimmed_line) abort$/;"	f
@@ -13133,7 +13068,6 @@ s:MergeSubcommand	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:
 s:MergetoolSubcommand	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:MergetoolSubcommand(line1, line2, range, bang, mods, options) abort$/;"	f
 s:Message	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^function! s:Message(message) " {{{$/;"	f
 s:MessageCfile	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:MessageCfile(...) abort$/;"	f
-s:MinimizeMaxFoldLevel	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:MinimizeMaxFoldLevel(fileinfo, tags) abort$/;"	f
 s:ModifierFlags	.vim/plugged/vim-airline/autoload/airline/extensions/fugitiveline.vim	/^function! s:ModifierFlags()$/;"	f
 s:ModifyFileName	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/class/paragraph.vim	/^func! s:ModifyFileName(filename) abort$/;"	f
 s:Mods	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Mods(mods, ...) abort$/;"	f
@@ -13475,11 +13409,8 @@ s:OpenConfig	.vim/plugged/coc.nvim/plugin/coc.vim	/^function! s:OpenConfig()$/;"
 s:OpenExec	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:OpenExec(cmd, mods, env, args, ...) abort$/;"	f
 s:OpenFileInTab	.vim/plugged/ctrlsf.vim/autoload/ctrlsf.vim	/^func! s:OpenFileInTab(file, lnum, col, mode) abort$/;"	f
 s:OpenFileInWindow	.vim/plugged/ctrlsf.vim/autoload/ctrlsf.vim	/^func! s:OpenFileInWindow(file, lnum, col, mode, split) abort$/;"	f
-s:OpenFold	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:OpenFold() abort$/;"	f
-s:OpenParents	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:OpenParents(...) abort$/;"	f
 s:OpenParse	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:OpenParse(args, wants_cmd) abort$/;"	f
 s:OpenPopup	.vim/plugged/vista.vim/autoload/vista/popup.vim	/^function! s:OpenPopup(lines) abort$/;"	f
-s:OpenWindow	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:OpenWindow(flags) abort$/;"	f
 s:Opener	.vim/plugged/nerdtree/lib/nerdtree/opener.vim	/^let s:Opener = {}$/;"	v
 s:Opener.New	.vim/plugged/nerdtree/lib/nerdtree/opener.vim	/^function! s:Opener.New(path, opts)$/;"	f
 s:Opener._bufInWindows	.vim/plugged/nerdtree/lib/nerdtree/opener.vim	/^function! s:Opener._bufInWindows(bnum)$/;"	f
@@ -13523,7 +13454,6 @@ s:PREVIEW_BUF_NAME	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/preview.vim	/^let s:P
 s:ParseOneLine	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/db.vim	/^func! s:ParseOneLine(line) abort$/;"	f
 s:ParseOptions	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/opt.vim	/^func! s:ParseOptions(options_str) abort$/;"	f
 s:ParseTagfield	.vim/plugged/vista.vim/autoload/vista/parser/ctags.vim	/^function! s:ParseTagfield(tagfields) abort$/;"	f
-s:ParseTagline	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ParseTagline(part1, part2, typeinfo, fileinfo) abort$/;"	f
 s:PatchSearchExpr	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:PatchSearchExpr(reverse) abort$/;"	f
 s:Path	.vim/plugged/nerdtree/lib/nerdtree/path.vim	/^let s:Path = {}$/;"	v
 s:Path.AbsolutePathFor	.vim/plugged/nerdtree/lib/nerdtree/path.vim	/^function! s:Path.AbsolutePathFor(pathStr)$/;"	f
@@ -13586,12 +13516,7 @@ s:PreviousHunk	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Pre
 s:PreviousItem	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:PreviousItem(count) abort$/;"	f
 s:PreviousSection	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:PreviousSection(count) abort$/;"	f
 s:PreviousSectionEnd	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:PreviousSectionEnd(count) abort$/;"	f
-s:PrintHelp	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:PrintHelp() abort$/;"	f
-s:PrintKinds	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:PrintKinds(typeinfo, fileinfo) abort$/;"	f
-s:PrintTag	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:PrintTag(tag, depth, output, fileinfo, typeinfo) abort$/;"	f
 s:Printf	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/log.vim	/^func! s:Printf(format, argv) abort$/;"	f
-s:ProcessFile	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ProcessFile(fname, ftype) abort$/;"	f
-s:ProcessTag	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ProcessTag(name, filename, pattern, fields, is_split, typeinfo, fileinfo) abort$/;"	f
 s:ProjectRun	.vim/plugged/vista.vim/autoload/vista/finder/fzf.vim	/^function! s:ProjectRun(...) abort$/;"	f
 s:ProjectionistDetect	.vim/plugged/vim-fugitive/plugin/fugitive.vim	/^function! s:ProjectionistDetect() abort$/;"	f
 s:Prompt	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^function! s:Prompt(message) " {{{$/;"	f
@@ -13836,22 +13761,18 @@ s:Remove	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Remove(af
 s:RemoveVisibility	.vim/plugged/vista.vim/autoload/vista/cursor/ctags.vim	/^function! s:RemoveVisibility(tag) abort$/;"	f
 s:Render	.vim/plugged/vista.vim/autoload/vista/renderer.vim	/^function! s:Render(data) abort$/;"	f
 s:Render	.vim/plugged/vista.vim/autoload/vista/renderer/default.vim	/^function! s:Render() abort$/;"	f
-s:RenderContent	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:RenderContent(...) abort$/;"	f
 s:RenderDescendants	.vim/plugged/vista.vim/autoload/vista/renderer/default.vim	/^function! s:RenderDescendants(parent_name, parent_line, descendants, rows, depth) abort$/;"	f
 s:RenderGroupedData	.vim/plugged/vista.vim/autoload/vista/finder.vim	/^function! s:RenderGroupedData(grouped_data) abort$/;"	f
 s:RenderHirAndThenGroupByKind	.vim/plugged/vista.vim/autoload/vista/renderer/hir.vim	/^function! s:RenderHirAndThenGroupByKind(data) abort$/;"	f
-s:RenderKeepView	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:RenderKeepView(...) abort$/;"	f
 s:RenderLSPHirAndThenGroupByKind	.vim/plugged/vista.vim/autoload/vista/renderer/hir/lsp.vim	/^function! s:RenderLSPHirAndThenGroupByKind(data) abort$/;"	f
 s:RenderLinewise	.vim/plugged/vista.vim/autoload/vista/renderer/line.vim	/^function! s:RenderLinewise() abort$/;"	f
 s:RenderScopeless	.vim/plugged/vista.vim/autoload/vista/renderer/default.vim	/^function! s:RenderScopeless(scope_less, rows) abort$/;"	f
-s:ReopenWindow	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ReopenWindow(delbufname) abort$/;"	f
 s:ReplaceCmd	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:ReplaceCmd(cmd) abort$/;"	f
 s:Reset	.vim/plugged/ctrlsf.vim/autoload/ctrlsf.vim	/^func! s:Reset() abort$/;"	f
 s:ResetConcealOption	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^function! s:ResetConcealOption()$/;"	f
 s:ResetWidth	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^function! s:ResetWidth(...)$/;"	f
 s:ResizeNeighborWins	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/win.vim	/^func! s:ResizeNeighborWins() abort$/;"	f
 s:Resolve	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Resolve(path) abort$/;"	f
-s:RestoreSession	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:RestoreSession() abort$/;"	f
 s:RestoreValue	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^function! s:RestoreValue() "{{{$/;"	f
 s:RevertSubcommand	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:RevertSubcommand(line1, line2, range, bang, mods, options) abort$/;"	f
 s:Right	.vim/plugged/auto-pairs/plugin/auto-pairs.vim	/^let s:Right = s:Go."\\<RIGHT>"$/;"	v
@@ -13898,19 +13819,13 @@ s:Selection	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Select
 s:SetBufline	.vim/plugged/vista.vim/autoload/vista/util.vim	/^  function! s:SetBufline(bufnr, lines) abort$/;"	f
 s:SetConcealOption	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^function! s:SetConcealOption()$/;"	f
 s:SetDefault	.vim/plugged/vim-airline/autoload/airline/extensions/vimtex.vim	/^function! s:SetDefault(var, val)$/;"	f
-s:SetFoldLevel	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:SetFoldLevel(level, force) abort$/;"	f
-s:SetFoldLevelRecursive	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:SetFoldLevelRecursive(fileinfo, tags, level) abort$/;"	f
 s:SetLines	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^function! s:SetLines(lines, key) " {{{$/;"	f
-s:SetStatusLine	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:SetStatusLine() abort$/;"	f
 s:Setup	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^function! s:Setup()$/;"	f
 s:ShortToLong	.vim/plugged/vista.vim/autoload/vista/parser/ctags.vim	/^function! s:ShortToLong(short) abort$/;"	f
 s:ShouldSkipDisplay	.vim/plugged/vista.vim/autoload/vista/floating.vim	/^function! s:ShouldSkipDisplay(lnum) abort$/;"	f
 s:ShouldUseMarkdownExtension	.vim/plugged/vista.vim/autoload/vista/extension/markdown.vim	/^function! s:ShouldUseMarkdownExtension(source_filetype) abort$/;"	f
-s:ShowInPreviewWin	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ShowInPreviewWin() abort$/;"	f
 s:ShowInfo	.vim/plugged/coc.nvim/plugin/coc.vim	/^function! s:ShowInfo()$/;"	f
 s:ShowMsg	.vim/plugged/vim-browser-search/autoload/search.vim	/^function! s:ShowMsg(message, ...) abort$/;"	f
-s:ShowPrototype	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ShowPrototype(short) abort$/;"	f
-s:ShrinkIfExpanded	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ShrinkIfExpanded() abort$/;"	f
 s:Slash	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Slash(path) abort$/;"	f
 s:Slash	.vim/plugged/vim-fugitive/plugin/fugitive.vim	/^function! s:Slash(path) abort$/;"	f
 s:SortCompare	.vim/plugged/vista.vim/autoload/vista/renderer/default.vim	/^function! s:SortCompare(i1, i2) abort$/;"	f
@@ -13930,11 +13845,6 @@ s:StagePatch	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Stage
 s:StageReveal	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:StageReveal() abort$/;"	f
 s:StageSeek	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:StageSeek(info, fallback) abort$/;"	f
 s:StartWith	.vim/plugged/vista.vim/autoload/vista/renderer/default.vim	/^function! s:StartWith(candidate_scope, root_scope) abort$/;"	f
-s:State	.vim/plugged/tagbar/autoload/tagbar/state.vim	/^let s:State = {$/;"	v
-s:State.New	.vim/plugged/tagbar/autoload/tagbar/state.vim	/^function! s:State.New() abort dict$/;"	f
-s:State.getCurrent	.vim/plugged/tagbar/autoload/tagbar/state.vim	/^function! s:State.getCurrent(force_current) abort dict$/;"	f
-s:State.setCurrentFile	.vim/plugged/tagbar/autoload/tagbar/state.vim	/^function! s:State.setCurrentFile(fileinfo) abort dict$/;"	f
-s:State.setPaused	.vim/plugged/tagbar/autoload/tagbar/state.vim	/^function! s:State.setPaused() abort dict$/;"	f
 s:StatusCfile	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:StatusCfile(...) abort$/;"	f
 s:StatusCommand	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:StatusCommand(line1, line2, range, count, bang, mods, reg, arg, args, ...) abort$/;"	f
 s:StopCursorTimer	.vim/plugged/vista.vim/autoload/vista/cursor.vim	/^function! s:StopCursorTimer() abort$/;"	f
@@ -13958,7 +13868,6 @@ s:TRUE	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Motion.vi
 s:TYPE	.vim/autoload/plug.vim	/^let s:TYPE = {$/;"	v
 s:TYPE	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^let s:TYPE = {'dict': type({}), 'funcref': type(function('call')), 'string': type(''), 'list': t/;"	v
 s:TabBuffers	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^function! s:TabBuffers()$/;"	f
-s:TagbarBufName	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:TagbarBufName() abort$/;"	f
 s:TempCmd	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:TempCmd(out, cmd) abort$/;"	f
 s:TempReadPost	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:TempReadPost(file) abort$/;"	f
 s:TempReadPre	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:TempReadPre(file) abort$/;"	f
@@ -13966,23 +13875,14 @@ s:TempScript	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:TempS
 s:TempState	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:TempState(...) abort$/;"	f
 s:TempnameBasedOnSourceBufname	.vim/plugged/vista.vim/autoload/vista/executive/ctags.vim	/^function! s:TempnameBasedOnSourceBufname() abort$/;"	f
 s:Throw	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^function! s:Throw(message) "{{{$/;"	f
-s:ToggleAutoclose	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ToggleAutoclose() abort$/;"	f
-s:ToggleCaseInsensitive	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ToggleCaseInsensitive() abort$/;"	f
-s:ToggleFold	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ToggleFold() abort$/;"	f
-s:ToggleHelp	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ToggleHelp() abort$/;"	f
-s:ToggleHideNonPublicTags	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ToggleHideNonPublicTags() abort$/;"	f
 s:ToggleOnDiff	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^function! s:ToggleOnDiff()$/;"	f
-s:TogglePause	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:TogglePause() abort$/;"	f
-s:ToggleSort	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ToggleSort() abort$/;"	f
 s:ToggleTabTreeVCS	.vim/plugged/nerdtree/nerdtree_plugin/vcs.vim	/^function! s:ToggleTabTreeVCS(name)$/;"	f
-s:ToggleWindow	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ToggleWindow(flags) abort$/;"	f
 s:ToolItems	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:ToolItems(state, from, to, offsets, text, ...) abort$/;"	f
 s:ToolParse	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:ToolParse(state, line) abort$/;"	f
 s:ToolStream	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:ToolStream(line1, line2, range, bang, mods, options, args, state) abort$/;"	f
 s:ToolToFrom	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:ToolToFrom(str) abort$/;"	f
 s:TransformDirectly	.vim/plugged/vista.vim/autoload/vista/renderer/hir.vim	/^function! s:TransformDirectly(row) abort$/;"	f
 s:TransformDirectly	.vim/plugged/vista.vim/autoload/vista/renderer/hir/lsp.vim	/^function! s:TransformDirectly(row) abort$/;"	f
-s:TransformUserTypeDef	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:TransformUserTypeDef(def) abort$/;"	f
 s:TranslateRegex	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/pat.vim	/^func! s:TranslateRegex(pattern) abort$/;"	f
 s:Tree	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:Tree(...) abort$/;"	f
 s:Tree	.vim/plugged/vim-fugitive/plugin/fugitive.vim	/^function! s:Tree(path) abort$/;"	f
@@ -14397,7 +14297,6 @@ s:WinShellEsc	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:WinS
 s:WrapCmd	.vim/plugged/vista.vim/autoload/vista/executive/ctags.vim	/^    function! s:WrapCmd(cmd) abort$/;"	f
 s:WriteParagraph	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/edit.vim	/^func! s:WriteParagraph(buffer, orig, modi) abort$/;"	f
 s:X	.vim/plugged/jellybeans.vim/colors/jellybeans.vim	/^fun! s:X(group, fg, bg, attr, lcfg, lcbg)$/;"	f
-s:ZoomWindow	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:ZoomWindow() abort$/;"	f
 s:_	.vim/plugged/vim-choosewin/autoload/choosewin.vim	/^let s:_ = choosewin#util#get()$/;"	v
 s:_	.vim/plugged/vim-choosewin/autoload/choosewin/action.vim	/^let s:_ = choosewin#util#get()$/;"	v
 s:_	.vim/plugged/vim-choosewin/autoload/choosewin/font.vim	/^let s:_ = choosewin#util#get()$/;"	v
@@ -14487,7 +14386,6 @@ s:_foldl	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/Dict.vim	/^
 s:_function	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Hint.vim	/^  function! s:_function(fstr) abort$/;"	f
 s:_function	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Hint.vim	/^  let s:_function = function('function')$/;"	v
 s:_function	.vim/plugged/vim-easymotion/autoload/vital/easymotion.vim	/^  function! s:_function(fstr) abort$/;"	f
-s:_getPrefix	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:_getPrefix() abort dict$/;"	f
 s:_get_builtin_module	.vim/plugged/vim-easymotion/autoload/vital/easymotion.vim	/^function! s:_get_builtin_module(name) abort$/;"	f
 s:_get_key	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Over/Keymapping.vim	/^function! s:_get_key(conf)$/;"	f
 s:_get_module	.vim/plugged/vim-easymotion/autoload/vital/easymotion.vim	/^function! s:_get_module(name) abort dict$/;"	f
@@ -14602,8 +14500,6 @@ s:activateDirNode	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function
 s:activateFileNode	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:activateFileNode(node) abort$/;"	f
 s:activated	.vim/plugged/coc.nvim/autoload/coc/list.vim	/^let s:activated = 0$/;"	v
 s:active_winnr	.vim/plugged/vim-airline/plugin/airline.vim	/^let s:active_winnr = -1$/;"	v
-s:addChild	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:addChild(tag) abort dict$/;"	f
-s:addTag	.vim/plugged/tagbar/autoload/tagbar/prototypes/fileinfo.vim	/^function! s:addTag(tag) abort dict$/;"	f
 s:add_border	.vim/plugged/vim-floaterm/autoload/floaterm/floatwin.vim	/^function! s:add_border(winid) abort$/;"	f
 s:add_db	.vim/plugged/vim-gutentags/autoload/gutentags/gtags_cscope.vim	/^function! s:add_db(db_file) abort$/;"	f
 s:add_info	.vim/plugged/vim-translator/autoload/translator/debug.vim	/^function! s:add_info(log) abort$/;"	f
@@ -14611,14 +14507,6 @@ s:add_log	.vim/plugged/vim-translator/autoload/translator/debug.vim	/^function! 
 s:add_methods	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:add_methods(namespace, method_names) abort$/;"	f
 s:add_options	.vim/plugged/vim-translator/autoload/translator/debug.vim	/^function! s:add_options(log) abort$/;"	f
 s:add_section	.vim/plugged/vim-airline/autoload/airline/extensions/default.vim	/^  function! s:add_section(builder, context, key)$/;"	f
-s:add_snr	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:add_snr(funcname) abort$/;"	f
-s:add_snr	.vim/plugged/tagbar/autoload/tagbar/prototypes/fileinfo.vim	/^function! s:add_snr(funcname) abort$/;"	f
-s:add_snr	.vim/plugged/tagbar/autoload/tagbar/prototypes/kindheadertag.vim	/^function! s:add_snr(funcname) abort$/;"	f
-s:add_snr	.vim/plugged/tagbar/autoload/tagbar/prototypes/normaltag.vim	/^function! s:add_snr(funcname) abort$/;"	f
-s:add_snr	.vim/plugged/tagbar/autoload/tagbar/prototypes/pseudotag.vim	/^function! s:add_snr(funcname) abort$/;"	f
-s:add_snr	.vim/plugged/tagbar/autoload/tagbar/prototypes/splittag.vim	/^function! s:add_snr(funcname) abort$/;"	f
-s:add_snr	.vim/plugged/tagbar/autoload/tagbar/prototypes/typeinfo.vim	/^function! s:add_snr(funcname) abort$/;"	f
-s:add_tag_recursive	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:add_tag_recursive(parent, taginfo, pathlist) abort$/;"	f
 s:added_db_files	.vim/plugged/vim-gutentags/autoload/gutentags/gtags_cscope.vim	/^let s:added_db_files = {}$/;"	v
 s:added_dbs	.vim/plugged/vim-gutentags/autoload/gutentags/cscope.vim	/^let s:added_dbs = []$/;"	v
 s:addr_other	.vim/plugged/vim-fugitive/plugin/fugitive.vim	/^let s:addr_other = has('patch-8.1.560') ? '-addr=other' : ''$/;"	v
@@ -14688,7 +14576,6 @@ s:aligner.project_ctags	.vim/plugged/vista.vim/autoload/vista/finder/fzf.vim	/^f
 s:all	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:all(f, xs) abort$/;"	f
 s:all_files	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:all_files()$/;"	f
 s:all_popups	.vim/plugged/git-messenger.vim/autoload/gitmessenger.vim	/^let s:all_popups = {}$/;"	v
-s:alphabets	.vim/plugged/vim-cursorword/autoload/cursorword.vim	/^let s:alphabets = '^[\\x00-\\x7f\\xb5\\xc0-\\xd6\\xd8-\\xf6\\xf8-\\u01bf\\u01c4-\\u02af\\u0370-\\/;"	v
 s:alternating_modes	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^function! s:alternating_modes(mode)$/;"	f
 s:and	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:and(xs) abort$/;"	f
 s:ansi	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:ansi(str, group, default, ...)$/;"	f
@@ -14712,7 +14599,6 @@ s:assert_signs	.vim/plugged/vim-gitgutter/test/test_gitgutter.vim	/^function s:a
 s:assign_name	.vim/autoload/plug.vim	/^function! s:assign_name()$/;"	f
 s:assoc	.vim/autoload/plug.vim	/^function! s:assoc(dict, key, val)$/;"	f
 s:atoi	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^function! s:atoi(str)$/;"	f
-s:autocommands_done	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:autocommands_done = 0$/;"	v
 s:available	.vim/plugged/vim-gitgutter/autoload/gitgutter/async.vim	/^let s:available = has('nvim') || ($/;"	v
 s:backend_args_map	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/backend.vim	/^let s:backend_args_map = {$/;"	v
 s:backend_error_log_file	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/backend.vim	/^let s:backend_error_log_file = tempname()$/;"	v
@@ -14892,7 +14778,6 @@ s:buffer_lines	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:buffer_li
 s:buffer_options_set	.vim/plugged/vim-choosewin/autoload/choosewin/util.vim	/^function! s:buffer_options_set(bufnr, options) "{{{1$/;"	f
 s:buffer_prototype	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^let s:buffer_prototype = {}$/;"	v
 s:buffer_repo	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:buffer_repo() dict abort$/;"	f
-s:buffer_seqno	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:buffer_seqno = 0$/;"	v
 s:buffer_type	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:buffer_type(...) dict abort$/;"	f
 s:buflist	.vim/plugged/vim-floaterm/autoload/floaterm/buflist.vim	/^let s:buflist = {}$/;"	v
 s:buflist	.vim/plugged/vim-floaterm/autoload/floaterm/buflist.vim	/^let s:buflist.head = s:node.new(-1)$/;"	v
@@ -14976,8 +14861,6 @@ s:check_python	.vim/plugged/vim-translator/autoload/health/translator.vim	/^func
 s:check_ruby	.vim/autoload/plug.vim	/^function! s:check_ruby()$/;"	f
 s:check_user_options	.vim/plugged/vim-startify/autoload/startify.vim	/^function! s:check_user_options(path) abort$/;"	f
 s:check_vim_version	.vim/plugged/git-messenger.vim/autoload/health/gitmessenger.vim	/^function! s:check_vim_version() abort$/;"	f
-s:checked_ctags	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:checked_ctags       = 0$/;"	v
-s:checked_ctags_types	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:checked_ctags_types = 0$/;"	v
 s:checkout	.vim/autoload/plug.vim	/^function! s:checkout(spec)$/;"	f
 s:chomp	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:chomp(str)$/;"	f
 s:chsh	.vim/autoload/plug.vim	/^function! s:chsh(swap)$/;"	f
@@ -14987,15 +14870,11 @@ s:clear	.vim/plugged/vim-airline/t/init.vim	/^function! s:clear()$/;"	f
 s:clear	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/Dict.vim	/^function! s:clear(dict) abort$/;"	f
 s:clear	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:clear(list) abort$/;"	f
 s:clear	.vim/plugged/vim-gitgutter/autoload/gitgutter.vim	/^function! s:clear(bufnr)$/;"	f
-s:clearOldFolds	.vim/plugged/tagbar/autoload/tagbar/prototypes/fileinfo.vim	/^function! s:clearOldFolds() abort dict$/;"	f
 s:client	.vim/plugged/coc.nvim/autoload/coc/rpc.vim	/^let s:client = v:null$/;"	v
 s:clients	.vim/plugged/coc.nvim/autoload/coc/client.vim	/^let s:clients = {}$/;"	v
 s:close	.vim/plugged/vim-startify/autoload/startify.vim	/^function! s:close() abort$/;"	f
 s:closeChildren	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:closeChildren(node) abort$/;"	f
 s:closeCurrentDir	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:closeCurrentDir(node) abort$/;"	f
-s:closeFold	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:closeFold() abort dict$/;"	f
-s:closeFold	.vim/plugged/tagbar/autoload/tagbar/prototypes/kindheadertag.vim	/^function! s:closeFold() abort dict$/;"	f
-s:closeKindFold	.vim/plugged/tagbar/autoload/tagbar/prototypes/fileinfo.vim	/^function! s:closeKindFold(kind) abort dict$/;"	f
 s:closeTreeWindow	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:closeTreeWindow() abort$/;"	f
 s:close_cb	.vim/plugged/vista.vim/autoload/vista/executive/ctags.vim	/^  function! s:close_cb(channel) abort$/;"	f
 s:close_hunk_preview_window	.vim/plugged/vim-gitgutter/autoload/gitgutter/hunk.vim	/^function! s:close_hunk_preview_window()$/;"	f
@@ -15025,11 +14904,8 @@ s:commondirs	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^let s:commondirs 
 s:compact_options	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^function! s:compact_options(opts)$/;"	f
 s:compare_by_index	.vim/plugged/vim-startify/autoload/startify.vim	/^  function! s:compare_by_index(foo, bar)$/;"	f
 s:compare_by_key_len	.vim/plugged/vim-startify/autoload/startify.vim	/^  function! s:compare_by_key_len(foo, bar)$/;"	f
-s:compare_by_kind	.vim/plugged/tagbar/autoload/tagbar/sorting.vim	/^function! s:compare_by_kind(tag1, tag2) abort$/;"	f
-s:compare_by_line	.vim/plugged/tagbar/autoload/tagbar/sorting.vim	/^function! s:compare_by_line(tag1, tag2) abort$/;"	f
 s:compare_by_val_len	.vim/plugged/vim-startify/autoload/startify.vim	/^  function! s:compare_by_val_len(foo, bar)$/;"	f
 s:compare_git_uri	.vim/autoload/plug.vim	/^function! s:compare_git_uri(a, b)$/;"	f
-s:compare_typeinfo	.vim/plugged/tagbar/autoload/tagbar/sorting.vim	/^let s:compare_typeinfo = {}$/;"	v
 s:complete_dir	.vim/plugged/far.vim/autoload/far.vim	/^function! s:complete_dir(val)$/;"	f
 s:complete_insert	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:complete_insert(lines)$/;"	f
 s:complete_trigger	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:complete_trigger()$/;"	f
@@ -15061,17 +14937,14 @@ s:cpo_save	.vim/plugged/fzf.vim/plugin/fzf.vim	/^let s:cpo_save = &cpo$/;"	v
 s:cpo_save	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^let s:cpo_save = &cpo$/;"	v
 s:create	.vim/plugged/vim-airline/autoload/airline/section.vim	/^function! s:create(parts, append)$/;"	f
 s:create	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Hint.vim	/^function! s:create(targets, keys) abort$/;"	f
-s:createKinddict	.vim/plugged/tagbar/autoload/tagbar/prototypes/typeinfo.vim	/^function! s:createKinddict() abort dict$/;"	f
 s:create_far_params	.vim/plugged/far.vim/autoload/far.vim	/^function! s:create_far_params() abort$/;"	f
 s:create_last_session_link	.vim/plugged/vim-startify/autoload/startify.vim	/^function! s:create_last_session_link(session_path)$/;"	f
-s:create_pseudotag	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:create_pseudotag(name, parent, kind, typeinfo, fileinfo) abort$/;"	f
 s:create_repl_params	.vim/plugged/far.vim/autoload/far.vim	/^function! s:create_repl_params() abort$/;"	f
 s:create_undo_params	.vim/plugged/far.vim/autoload/far.vim	/^function! s:create_undo_params() abort$/;"	f
 s:create_win2pos2hint	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Motion.vim	/^function! s:create_win2pos2hint(hint_dict) abort$/;"	f
 s:create_win_params	.vim/plugged/far.vim/autoload/far.vim	/^function! s:create_win_params() abort$/;"	f
 s:csi	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:csi(color, fg)$/;"	f
 s:ctags	.vim/plugged/vista.vim/autoload/vista/executive/ctags.vim	/^let s:ctags = get(g:, 'vista_ctags_executable', 'ctags')$/;"	v
-s:ctags_is_uctags	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:ctags_is_uctags     = 0$/;"	v
 s:cterm00	.vim/plugged/vim-airline-themes/autoload/airline/themes/alduin.vim	/^let s:cterm00 = "234"$/;"	v
 s:cterm00	.vim/plugged/vim-airline-themes/autoload/airline/themes/base16_3024.vim	/^let s:cterm00 = 0$/;"	v
 s:cterm00	.vim/plugged/vim-airline-themes/autoload/airline/themes/base16_adwaita.vim	/^let s:cterm00 = 0$/;"	v
@@ -16050,8 +15923,6 @@ s:data_large	.vim/plugged/vim-choosewin/autoload/choosewin/font.vim	/^let s:data
 s:data_small	.vim/plugged/vim-choosewin/autoload/choosewin/font.vim	/^let s:data_small = expand("<sfile>:h") . '\/data\/small'$/;"	v
 s:debug	.vim/plugged/far.vim/autoload/far/tools.vim	/^let s:debug = exists('g:far#debug')? g:far#debug : 0$/;"	v
 s:debug	.vim/plugged/vim-choosewin/autoload/choosewin/util.vim	/^function! s:debug(msg) "{{{1$/;"	f
-s:debug_enabled	.vim/plugged/tagbar/autoload/tagbar/debug.vim	/^let s:debug_enabled = 0$/;"	v
-s:debug_file	.vim/plugged/tagbar/autoload/tagbar/debug.vim	/^let s:debug_file = ''$/;"	v
 s:decimal_group	.vim/plugged/vim-airline/autoload/airline/extensions/wordcount/formatters/default.vim	/^  let s:decimal_group = ''$/;"	v
 s:decimal_group	.vim/plugged/vim-airline/autoload/airline/extensions/wordcount/formatters/default.vim	/^  let s:decimal_group = ','$/;"	v
 s:decimal_group	.vim/plugged/vim-airline/autoload/airline/extensions/wordcount/formatters/default.vim	/^  let s:decimal_group = '.'$/;"	v
@@ -16076,7 +15947,6 @@ s:define_sign_text	.vim/plugged/vim-gitgutter/autoload/gitgutter/highlight.vim	/
 s:define_type_checker	.vim/plugged/vim-choosewin/autoload/choosewin/hlmanager.vim	/^function! s:define_type_checker() "{{{1$/;"	f
 s:define_type_checker	.vim/plugged/vim-choosewin/autoload/choosewin/util.vim	/^function! s:define_type_checker() "{{{1$/;"	f
 s:defs	.vim/plugged/fzf.vim/plugin/fzf.vim	/^function! s:defs(commands)$/;"	f
-s:delayed_update_files	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:delayed_update_files = []$/;"	v
 s:delete	.vim/autoload/plug.vim	/^function! s:delete(range, force)$/;"	f
 s:delete	.vim/plugged/auto-pairs/plugin/auto-pairs.vim	/^func! s:delete(s)$/;"	f
 s:deleteBookmark	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:deleteBookmark(bookmark) abort$/;"	f
@@ -16108,7 +15978,6 @@ s:display_git_branch	.vim/plugged/vim-airline/autoload/airline/extensions/branch
 s:display_hg_branch	.vim/plugged/vim-airline/autoload/airline/extensions/branch.vim	/^function! s:display_hg_branch()$/;"	f
 s:do	.vim/autoload/plug.vim	/^function! s:do(pull, force, todo)$/;"	f
 s:do_align	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^function! s:do_align(todo, modes, all_tokens, all_delims, fl, ll, fc, lc, nth, recur, dict)$/;"	f
-s:do_delayed_update	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:do_delayed_update() abort$/;"	f
 s:do_vim_enter	.vim/plugged/vim-airline/plugin/airline.vim	/^function! s:do_vim_enter()$/;"	f
 s:doautocmd	.vim/autoload/plug.vim	/^function! s:doautocmd(...)$/;"	f
 s:doautocmd_user	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Over/Commandline/Modules/Doautocmd.vim	/^function! s:doautocmd_user(prefix, command)$/;"	f
@@ -16175,7 +16044,6 @@ s:exists	.vim/plugged/vim-easymotion/autoload/vital/easymotion.vim	/^function! s
 s:exists_file	.vim/plugged/vim-gitgutter/autoload/gitgutter/utility.vim	/^function! s:exists_file(bufnr) abort$/;"	f
 s:exit	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^function! s:exit(msg)$/;"	f
 s:expand	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^let s:expand = '\\%(\\(' . s:var . '\\)\\(' . s:flag . '*\\)\\(:S\\)\\=\\)'$/;"	v
-s:expand_bufnr	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:expand_bufnr = -1$/;"	v
 s:ext	.vim/plugged/vim-airline/autoload/airline/extensions.vim	/^let s:ext = {}$/;"	v
 s:ext	.vim/plugged/vim-airline/autoload/airline/extensions.vim	/^let s:ext._theme_funcrefs = []$/;"	v
 s:ext.add_inactive_statusline_func	.vim/plugged/vim-airline/autoload/airline/extensions.vim	/^function! s:ext.add_inactive_statusline_func(name) dict$/;"	f
@@ -16376,19 +16244,9 @@ s:gcd	.vim/plugged/rainbow/autoload/rainbow_main.vim	/^fun s:gcd(a, b)$/;"	f
 s:gen_def	.vim/plugged/vim-airline-themes/autoload/airline/themes/fruit_punch.vim	/^fun! s:gen_def(fg, bg)$/;"	f
 s:generate_wildignore_options	.vim/plugged/vim-gutentags/autoload/gutentags/ctags.vim	/^function! s:generate_wildignore_options() abort$/;"	f
 s:generic_easy_align_op	.vim/plugged/vim-easy-align/plugin/easy_align.vim	/^function! s:generic_easy_align_op(type, vmode, live)$/;"	f
-s:get	.vim/plugged/tagbar/autoload/tagbar/state.vim	/^function! s:get() abort$/;"	f
 s:get	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Over/Commandline/Modules.vim	/^function! s:get(name)$/;"	f
 s:get	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Palette/Highlight.vim	/^function! s:get(name, ...)$/;"	f
-s:getChildren	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:getChildren() dict abort$/;"	f
-s:getChildrenByName	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:getChildrenByName(tagname) dict abort$/;"	f
-s:getClosedParentTline	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:getClosedParentTline() abort dict$/;"	f
-s:getKind	.vim/plugged/tagbar/autoload/tagbar/prototypes/typeinfo.vim	/^function! s:getKind(kind) abort dict$/;"	f
 s:getPromptMessage	.vim/plugged/vim-easymotion/autoload/EasyMotion/command_line.vim	/^function! s:getPromptMessage(num_strokes) "{{{$/;"	f
-s:getPrototype	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:getPrototype(short) abort dict$/;"	f
-s:getPrototype	.vim/plugged/tagbar/autoload/tagbar/prototypes/kindheadertag.vim	/^function! s:getPrototype(short) abort dict$/;"	f
-s:getPrototype	.vim/plugged/tagbar/autoload/tagbar/prototypes/normaltag.vim	/^function! s:getPrototype(short) abort dict$/;"	f
-s:getTags	.vim/plugged/tagbar/autoload/tagbar/prototypes/fileinfo.vim	/^function! s:getTags() dict abort$/;"	f
-s:getTagsByName	.vim/plugged/tagbar/autoload/tagbar/prototypes/fileinfo.vim	/^function! s:getTagsByName(tagname) dict abort$/;"	f
 s:get_accented_line	.vim/plugged/vim-airline/autoload/airline/builder.vim	/^function! s:get_accented_line(self, group, contents)$/;"	f
 s:get_airline_themes	.vim/plugged/vim-airline/plugin/airline.vim	/^function! s:get_airline_themes(a, l, p)$/;"	f
 s:get_array	.vim/plugged/vim-airline/autoload/airline/highlighter.vim	/^function! s:get_array(fg, bg, opts)$/;"	f
@@ -16415,7 +16273,6 @@ s:get_ic	.vim/plugged/vim-choosewin/autoload/choosewin/util.vim	/^function! s:ge
 s:get_index_as_string	.vim/plugged/vim-startify/autoload/startify.vim	/^function! s:get_index_as_string() abort$/;"	f
 s:get_last_selected	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Vim/Buffer.vim	/^function! s:get_last_selected() abort$/;"	f
 s:get_lists	.vim/plugged/vim-startify/autoload/startify.vim	/^function! s:get_lists() abort$/;"	f
-s:get_map_str	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:get_map_str(map) abort$/;"	f
 s:get_mode	.vim/plugged/vim-airline/autoload/airline/extensions/cursormode.vim	/^function! s:get_mode()$/;"	f
 s:get_number	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/buffers.vim	/^function! s:get_number(index)$/;"	f
 s:get_random_offset	.vim/plugged/vim-startify/autoload/startify/fortune.vim	/^function! s:get_random_offset(max) abort$/;"	f
@@ -16434,7 +16291,6 @@ s:getchar	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Prelude.vim	/^f
 s:getchar_safe	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Prelude.vim	/^function! s:getchar_safe(...) abort$/;"	f
 s:getline	.vim/plugged/auto-pairs/plugin/auto-pairs.vim	/^func! s:getline()$/;"	f
 s:getmatch	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^function! s:getmatch(mid) abort$/;"	f
-s:gettime	.vim/plugged/tagbar/autoload/tagbar/debug.vim	/^    function! s:gettime() abort$/;"	f
 s:git	.vim/plugged/git-messenger.vim/autoload/gitmessenger/git.vim	/^    let s:git.finalize_vim = funcref('s:git__finalize_vim')$/;"	v
 s:git	.vim/plugged/git-messenger.vim/autoload/gitmessenger/git.vim	/^let s:git = {}$/;"	v
 s:git	.vim/plugged/git-messenger.vim/autoload/gitmessenger/git.vim	/^let s:git.spawn = funcref('s:git__spawn')$/;"	v
@@ -16457,12 +16313,9 @@ s:globpath	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Prelude.vim	/^
 s:globsubs	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^let s:globsubs = {$/;"	v
 s:go	.vim/plugged/vim-commentary/plugin/commentary.vim	/^function! s:go(...) abort$/;"	f
 s:golden	.vim/plugged/vim-airline-themes/autoload/airline/themes/distinguished.vim	/^let s:golden  = [143, '#afaf5f']$/;"	v
-s:goto_markedwin	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:goto_markedwin(...) abort$/;"	f
 s:goto_original_window	.vim/plugged/vim-gitgutter/autoload/gitgutter/hunk.vim	/^function! s:goto_original_window()$/;"	f
 s:goto_tab	.vim/plugged/vim-choosewin/autoload/choosewin/action.vim	/^function! s:goto_tab(num) "{{{1$/;"	f
 s:goto_tabwin	.vim/plugged/vim-choosewin/autoload/choosewin/action.vim	/^function! s:goto_tabwin(tab, win) "{{{1$/;"	f
-s:goto_tagbar	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:goto_tagbar(...) abort$/;"	f
-s:goto_win	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:goto_win(winnr, ...) abort$/;"	f
 s:goto_win	.vim/plugged/vim-choosewin/autoload/choosewin/action.vim	/^function! s:goto_win(num, ...) "{{{1$/;"	f
 s:gray	.vim/plugged/vim-airline-themes/autoload/airline/themes/distinguished.vim	/^let s:gray    = [245, '#8a8a8a']$/;"	v
 s:green	.vim/plugged/vim-airline-themes/autoload/airline/themes/solarized_flood.vim	/^let s:green   = {'hex': '#859900', 'term': 106}  " 133, 153,   0 #$/;"	v
@@ -17464,13 +17317,13 @@ s:hunk_re	.vim/plugged/vim-gitgutter/autoload/gitgutter/diff.vim	/^let s:hunk_re
 s:hunk_symbols	.vim/plugged/vim-airline/autoload/airline/extensions/hunks.vim	/^let s:hunk_symbols = get(g:, 'airline#extensions#hunks#hunk_symbols', ['+', '~', '-'])$/;"	v
 s:iTerm_escape_template	.vim/plugged/vim-airline/autoload/airline/extensions/cursormode.vim	/^let s:iTerm_escape_template = '\\033]Pl%s\\033\\\\'$/;"	v
 s:icons	.vim/plugged/vista.vim/autoload/vista/renderer.vim	/^let s:icons = {$/;"	v
-s:ics	.vim/plugged/tagbar/syntax/tagbar.vim	/^let s:ics = escape(join(g:tagbar_iconchars, ''), ']^\\-')$/;"	v
 s:icy_sky	.vim/plugged/vim-airline-themes/autoload/airline/themes/fruit_punch.vim	/^let s:icy_sky         = ['#79e5e0', 116]$/;"	v
 s:ignore	.vim/plugged/jedi-vim/after/syntax/python.vim	/^    let s:ignore = s:e.'jedi.\\{-}'.s:e$/;"	v
 s:ignore_list	.vim/plugged/vista.vim/autoload/vista.vim	/^let s:ignore_list = ['vista', 'vista_kind', 'nerdtree', 'startify', 'tagbar', 'fzf', 'gitcommit'/;"	v
 s:ignored_syntax	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^function! s:ignored_syntax()$/;"	f
 s:import	.vim/plugged/vim-easymotion/autoload/vital/easymotion.vim	/^function! s:import(name, ...) abort dict$/;"	f
 s:improved_contrast	.vim/plugged/vim-airline-themes/autoload/airline/themes/base16.vim	/^let s:improved_contrast = get(g:, 'airline_base16_improved_contrast', 0)$/;"	v
+s:imselect_path	.vim/plugged/smartim/plugin/smartim.vim	/^let s:imselect_path = expand('<sfile>:p:h') . "\/im-select "$/;"	v
 s:in_hunk_preview_window	.vim/plugged/vim-gitgutter/autoload/gitgutter/hunk.vim	/^function! s:in_hunk_preview_window()$/;"	f
 s:inactive_funcrefs	.vim/plugged/vim-airline/autoload/airline.vim	/^let s:inactive_funcrefs = []$/;"	v
 s:inc_highlight	.vim/plugged/vim-easymotion/autoload/EasyMotion/command_line.vim	/^function! s:inc_highlight(re) "{{{$/;"	f
@@ -17483,13 +17336,10 @@ s:infer_properties	.vim/autoload/plug.vim	/^function! s:infer_properties(name, r
 s:init	.vim/plugged/vim-airline/autoload/airline/extensions/tagbar.vim	/^let s:init=0$/;"	v
 s:init	.vim/plugged/vim-airline/plugin/airline.vim	/^function! s:init()$/;"	f
 s:initCustomOpenArgs	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:initCustomOpenArgs() abort$/;"	f
-s:initFoldState	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:initFoldState(known_files) abort dict$/;"	f
 s:initVariable	.vim/plugged/nerdtree/plugin/NERD_tree.vim	/^function! s:initVariable(var, value)$/;"	f
 s:init_buffer	.vim/plugged/vim-airline/autoload/airline/extensions/branch.vim	/^function! s:init_buffer()$/;"	f
-s:init_done	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:init_done = 0$/;"	v
 s:init_env	.vim/plugged/vim-startify/autoload/startify.vim	/^function! s:init_env()$/;"	f
 s:init_python	.vim/plugged/jedi-vim/autoload/jedi.vim	/^function! s:init_python() abort$/;"	f
-s:init_var	.vim/plugged/tagbar/plugin/tagbar.vim	/^function! s:init_var(var, value) abort$/;"	f
 s:inject_snippet	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:inject_snippet(line)$/;"	f
 s:innerbg	.vim/plugged/vim-airline-themes/autoload/airline/themes/distinguished.vim	/^let s:innerbg = [234, '#1c1c1c']$/;"	v
 s:input	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^function! s:input(str, default, vis)$/;"	f
@@ -17509,18 +17359,6 @@ s:interestingWordsGUIColors	.vim/plugged/vim-interestingwords/plugin/interesting
 s:interestingWordsTermColors	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^let s:interestingWordsTermColors = ['154', '121', '211', '137', '214', '222']$/;"	v
 s:intersect	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:intersect(list1, list2) abort$/;"	f
 s:invoke_funcrefs	.vim/plugged/vim-airline/autoload/airline.vim	/^function! s:invoke_funcrefs(context, funcrefs)$/;"	f
-s:isFoldable	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:isFoldable() abort dict$/;"	f
-s:isFoldable	.vim/plugged/tagbar/autoload/tagbar/prototypes/kindheadertag.vim	/^function! s:isFoldable() abort dict$/;"	f
-s:isFolded	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:isFolded() abort dict$/;"	f
-s:isFolded	.vim/plugged/tagbar/autoload/tagbar/prototypes/kindheadertag.vim	/^function! s:isFolded() abort dict$/;"	f
-s:isKindheader	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:isKindheader() abort dict$/;"	f
-s:isKindheader	.vim/plugged/tagbar/autoload/tagbar/prototypes/kindheadertag.vim	/^function! s:isKindheader() abort dict$/;"	f
-s:isNormalTag	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:isNormalTag() abort dict$/;"	f
-s:isNormalTag	.vim/plugged/tagbar/autoload/tagbar/prototypes/normaltag.vim	/^function! s:isNormalTag() abort dict$/;"	f
-s:isPseudoTag	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:isPseudoTag() abort dict$/;"	f
-s:isPseudoTag	.vim/plugged/tagbar/autoload/tagbar/prototypes/pseudotag.vim	/^function! s:isPseudoTag() abort dict$/;"	f
-s:isSplitTag	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:isSplitTag() abort dict$/;"	f
-s:isSplitTag	.vim/plugged/tagbar/autoload/tagbar/prototypes/splittag.vim	/^function! s:isSplitTag() abort dict$/;"	f
 s:is_AppleTerminal	.vim/plugged/vim-airline/autoload/airline/extensions/cursormode.vim	/^let s:is_AppleTerminal = exists('$TERM_PROGRAM') && $TERM_PROGRAM =~# 'Apple_Terminal'$/;"	v
 s:is_added	.vim/plugged/vim-gitgutter/autoload/gitgutter/diff.vim	/^function! s:is_added(from_count, to_count) abort$/;"	f
 s:is_branch_empty	.vim/plugged/vim-airline/autoload/airline/extensions/hunks.vim	/^function! s:is_branch_empty()$/;"	f
@@ -17546,7 +17384,6 @@ s:is_mac	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Prelude.vim	/^fu
 s:is_mac	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Prelude.vim	/^let s:is_mac = !s:is_windows && !s:is_cygwin$/;"	v
 s:is_mac	.vim/plugged/vista.vim/autoload/vista/executive/ctags.vim	/^let s:is_mac = has('macunix')$/;"	v
 s:is_managed	.vim/autoload/plug.vim	/^function! s:is_managed(name)$/;"	f
-s:is_maximized	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:is_maximized    = 0$/;"	v
 s:is_modified	.vim/plugged/vim-gitgutter/autoload/gitgutter/diff.vim	/^function! s:is_modified(from_count, to_count) abort$/;"	f
 s:is_modified_and_added	.vim/plugged/vim-gitgutter/autoload/gitgutter/diff.vim	/^function! s:is_modified_and_added(from_count, to_count) abort$/;"	f
 s:is_modified_and_removed	.vim/plugged/vim-gitgutter/autoload/gitgutter/diff.vim	/^function! s:is_modified_and_removed(from_count, to_count) abort$/;"	f
@@ -17606,21 +17443,14 @@ s:jump_to_tab	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/buffe
 s:keyMaps	.vim/plugged/nerdtree/lib/nerdtree/key_map.vim	/^let s:keyMaps = {}$/;"	v
 s:key_sink	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:key_sink(line)$/;"	f
 s:keymap	.vim/plugged/vim-choosewin/autoload/choosewin/config.vim	/^let s:keymap = {$/;"	v
-s:known_files	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:known_files = {$/;"	v
 s:known_files	.vim/plugged/vim-gutentags/autoload/gutentags.vim	/^let s:known_files = []$/;"	v
-s:known_files.get	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:known_files.get(fname) abort dict$/;"	f
-s:known_files.has	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:known_files.has(fname) abort dict$/;"	f
-s:known_files.put	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:known_files.put(fileinfo, ...) abort dict$/;"	f
-s:known_files.rm	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:known_files.rm(fname) abort dict$/;"	f
 s:known_options	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^let s:known_options = {$/;"	v
 s:known_projects	.vim/plugged/vim-gutentags/autoload/gutentags.vim	/^let s:known_projects = {}$/;"	v
-s:l	.vim/sessions/default.vim	/^let s:l = 6 - ((5 * winheight(0) + 21) \/ 42)$/;"	v
+s:l	.vim/sessions/default.vim	/^let s:l = 13 - ((12 * winheight(0) + 21) \/ 42)$/;"	v
 s:language_opt	.vim/plugged/vista.vim/autoload/vista/types/uctags.vim	/^let s:language_opt = map(s:language_opt,$/;"	v
 s:language_opt	.vim/plugged/vista.vim/autoload/vista/types/uctags.vim	/^let s:language_opt = {$/;"	v
 s:languageclient_refresh	.vim/plugged/vim-airline/autoload/airline/extensions/languageclient.vim	/^function! s:languageclient_refresh()$/;"	f
-s:last_alt_bufnr	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:last_alt_bufnr = -1$/;"	v
 s:last_command	.vim/plugged/vim-easy-align/plugin/easy_align.vim	/^let s:last_command = 'EasyAlign'$/;"	v
-s:last_highlight_tline	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:last_highlight_tline = 0$/;"	v
 s:last_lnum	.vim/plugged/vista.vim/autoload/vista/floating.vim	/^let s:last_lnum = -1$/;"	v
 s:last_lnum	.vim/plugged/vista.vim/autoload/vista/popup.vim	/^let s:last_lnum = -1$/;"	v
 s:last_mode	.vim/plugged/vim-airline/autoload/airline/extensions/cursormode.vim	/^let s:last_mode = ''$/;"	v
@@ -17714,7 +17544,6 @@ s:mapkeys	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.
 s:maps	.vim/plugged/gv.vim/plugin/gv.vim	/^function! s:maps()$/;"	f
 s:markRecentlyUsed	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^function! s:markRecentlyUsed(n)$/;"	f
 s:mark_sink	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:mark_sink(lines)$/;"	f
-s:mark_window	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:mark_window() abort$/;"	f
 s:matchModeMap	.vim/plugged/LeaderF/autoload/leaderf/colorscheme/popup.vim	/^let s:matchModeMap = {$/;"	v
 s:matchParenGuiBg	.vim/plugged/jellybeans.vim/colors/jellybeans.vim	/^    let s:matchParenGuiBg = "000000"$/;"	v
 s:matchParenGuiBg	.vim/plugged/jellybeans.vim/colors/jellybeans.vim	/^    let s:matchParenGuiBg = "556779"$/;"	v
@@ -17816,14 +17645,12 @@ s:names	.vim/plugged/vim-airline/autoload/airline/extensions/branch.vim	/^let s:
 s:namespace_cache	.vim/plugged/coc.nvim/autoload/coc/api.vim	/^let s:namespace_cache = {}$/;"	v
 s:namespace_id	.vim/plugged/coc.nvim/autoload/coc/api.vim	/^let s:namespace_id = 1$/;"	v
 s:nbs	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^let s:nbs = nr2char(0x2007)$/;"	v
-s:nearby_disabled	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:nearby_disabled = 0$/;"	v
 s:nearest_group_at_cursor	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^function! s:nearest_group_at_cursor() abort$/;"	f
 s:new	.vim/plugged/vim-easymotion/autoload/vital/easymotion.vim	/^function! s:new(plugin_name) abort$/;"	f
 s:new_airline_ale_get_line_number	.vim/plugged/vim-airline/autoload/airline/extensions/ale.vim	/^function! s:new_airline_ale_get_line_number(cnt, type) abort$/;"	f
 s:new_log_session	.vim/plugged/vim-gitgutter/autoload/gitgutter/debug.vim	/^let s:new_log_session = 1$/;"	v
 s:new_overwin	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Motion.vim	/^function! s:new_overwin(...) abort$/;"	f
 s:new_window	.vim/autoload/plug.vim	/^function! s:new_window()$/;"	f
-s:new_window	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:new_window      = 1$/;"	v
 s:next_file	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/db.vim	/^let s:next_file = ''$/;"	v
 s:next_sign_id	.vim/plugged/vim-gitgutter/autoload/gitgutter/sign.vim	/^function! s:next_sign_id() abort$/;"	f
 s:next_sign_id	.vim/plugged/vim-gitgutter/autoload/gitgutter/sign.vim	/^let s:next_sign_id  = s:first_sign_id$/;"	v
@@ -17901,14 +17728,10 @@ s:open	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:open(cmd, target)
 s:open	.vim/plugged/gv.vim/plugin/gv.vim	/^function! s:open(visual, ...)$/;"	f
 s:open	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Vim/Buffer.vim	/^function! s:open(buffer, opener) abort$/;"	f
 s:openExplorer	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:openExplorer(node) abort$/;"	f
-s:openFold	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:openFold() abort dict$/;"	f
-s:openFold	.vim/plugged/tagbar/autoload/tagbar/prototypes/kindheadertag.vim	/^function! s:openFold() abort dict$/;"	f
 s:openHSplit	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:openHSplit(target) abort$/;"	f
 s:openInNewTab	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:openInNewTab(target) abort$/;"	f
 s:openInNewTabSilent	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:openInNewTabSilent(target) abort$/;"	f
-s:openKindFold	.vim/plugged/tagbar/autoload/tagbar/prototypes/fileinfo.vim	/^function! s:openKindFold(kind) abort dict$/;"	f
 s:openNodeRecursively	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:openNodeRecursively(node) abort$/;"	f
-s:openParents	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:openParents() abort dict$/;"	f
 s:openVSplit	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:openVSplit(target) abort$/;"	f
 s:open_buffer	.vim/plugged/vim-startify/autoload/startify.vim	/^function! s:open_buffer(entry)$/;"	f
 s:open_far_buff	.vim/plugged/far.vim/autoload/far.vim	/^function! s:open_far_buff(far_ctx, win_params) abort "{{{$/;"	f
@@ -17969,15 +17792,8 @@ s:path2directory	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Prelude.
 s:path2project_directory	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Prelude.vim	/^function! s:path2project_directory(path, ...) abort$/;"	f
 s:path_join	.vim/plugged/vim-floaterm/autoload/floaterm/resolver.vim	/^function! s:path_join(home, name) abort$/;"	f
 s:path_separator	.vim/plugged/vista.vim/autoload/vista/util.vim	/^let s:path_separator = has('win32') ? '\\' : '\/'$/;"	v
-s:pattern	.vim/plugged/tagbar/syntax/tagbar.vim	/^let s:pattern = '\\(\\S\\@<![' . s:ics . ' ]\\)\\@<=#\\([^-+# ]\\)\\@='$/;"	v
-s:pattern	.vim/plugged/tagbar/syntax/tagbar.vim	/^let s:pattern = '\\(\\S\\@<![' . s:ics . ' ]\\)\\@<=+\\([^-+# ]\\)\\@='$/;"	v
-s:pattern	.vim/plugged/tagbar/syntax/tagbar.vim	/^let s:pattern = '\\(\\S\\@<![' . s:ics . ' ]\\)\\@<=-\\([^-+# ]\\)\\@='$/;"	v
-s:pattern	.vim/plugged/tagbar/syntax/tagbar.vim	/^let s:pattern = '\\(\\S\\@<![' . s:ics . '][-+# ]\\?\\)\\@<=[^*(]\\+\\(\\*\\?\\(([^)]\\+)\\)\\? /;"	v
-s:pattern	.vim/plugged/tagbar/syntax/tagbar.vim	/^let s:pattern = '\\(^[' . s:ics . '] \\?\\)\\@3<=[^-+: ]\\+[^:]\\+$'$/;"	v
-s:pattern	.vim/plugged/tagbar/syntax/tagbar.vim	/^let s:pattern = '\\S\\@<![' . s:ics . ']\\([-+# ]\\?\\)\\@='$/;"	v
 s:pattern	.vim/plugged/vista.vim/syntax/vista_kind.vim	/^let s:pattern = join(s:prefixes, '\\|')$/;"	v
 s:pattern_gen	.vim/plugged/vim-choosewin/autoload/choosewin/font.vim	/^function! s:pattern_gen(data) "{{{1$/;"	f
-s:paused	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:paused = 0$/;"	v
 s:perf_test	.vim/plugged/vim-choosewin/test/font_load.vim	/^function! s:perf_test(cnt) "{{{1$/;"	f
 s:permutations	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:permutations(list, ...) abort$/;"	f
 s:pick	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/Dict.vim	/^function! s:pick(dict, keys) abort$/;"	f
@@ -18085,7 +17901,6 @@ s:provider	.vim/plugged/vista.vim/autoload/vista/executive/vim_lsp.vim	/^let s:p
 s:provider	.vim/plugged/vista.vim/autoload/vista/extension/markdown.vim	/^let s:provider = fnamemodify(expand('<sfile>'), ':t:r')$/;"	v
 s:provider	.vim/plugged/vista.vim/autoload/vista/extension/rst.vim	/^let s:provider = fnamemodify(expand('<sfile>'), ':t:r')$/;"	v
 s:push	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:push(list, val) abort$/;"	f
-s:pwin_by_tagbar	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:pwin_by_tagbar = 0$/;"	v
 s:py_file	.vim/plugged/vim-translator/autoload/translator.vim	/^  let s:py_file = shellescape(s:py_file)$/;"	v
 s:py_file	.vim/plugged/vim-translator/autoload/translator.vim	/^let s:py_file = expand('<sfile>:p:h') . '\/..\/script\/translator.py'$/;"	v
 s:python_executable	.vim/plugged/vim-translator/autoload/translator.vim	/^    let s:python_executable = 'python'$/;"	v
@@ -18128,8 +17943,6 @@ s:reload_only	.vim/plugged/vista.vim/autoload/vista/executive/vim_lsc.vim	/^let 
 s:reload_only	.vim/plugged/vista.vim/autoload/vista/executive/vim_lsp.vim	/^let s:reload_only = v:false$/;"	v
 s:reload_plugins	.vim/autoload/plug.vim	/^function! s:reload_plugins()$/;"	f
 s:remember_visual	.vim/plugged/vim-easy-align/plugin/easy_align.vim	/^function! s:remember_visual(mode)$/;"	f
-s:removeChild	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:removeChild(tag) dict abort$/;"	f
-s:removeTag	.vim/plugged/tagbar/autoload/tagbar/prototypes/fileinfo.vim	/^function! s:removeTag(tag) dict abort$/;"	f
 s:remove_italic_attr	.vim/plugged/jellybeans.vim/colors/jellybeans.vim	/^fun! s:remove_italic_attr(attr)$/;"	f
 s:remove_layout	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:remove_layout(opts)$/;"	f
 s:remove_rtp	.vim/autoload/plug.vim	/^function! s:remove_rtp()$/;"	f
@@ -18161,7 +17974,6 @@ s:repo_user	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:repo_u
 s:repos	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^let s:repos = {}$/;"	v
 s:request	.vim/plugged/coc.nvim/autoload/coc/client.vim	/^function! s:request(method, args) dict$/;"	f
 s:request_async	.vim/plugged/coc.nvim/autoload/coc/client.vim	/^function! s:request_async(method, args, cb) dict$/;"	f
-s:reset	.vim/plugged/tagbar/autoload/tagbar/prototypes/fileinfo.vim	/^function! s:reset() abort dict$/;"	f
 s:reset_summary	.vim/plugged/vim-gitgutter/autoload/gitgutter/hunk.vim	/^function! s:reset_summary(bufnr) abort$/;"	f
 s:reset_tick	.vim/plugged/vim-gitgutter/autoload/gitgutter.vim	/^function! s:reset_tick(bufnr) abort$/;"	f
 s:reset_untracked_cache	.vim/plugged/vim-airline/autoload/airline/extensions/branch.vim	/^function! s:reset_untracked_cache(shellcmdpost)$/;"	f
@@ -18202,8 +18014,6 @@ s:running_task	.vim/plugged/coc.nvim/autoload/coc/task.vim	/^let s:running_task 
 s:samples	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/profile.vim	/^let s:samples = []$/;"	v
 s:save_cpo	.vim/plugged/vim-airline-themes/plugin/airline-themes.vim	/^let s:save_cpo = &cpo$/;"	v
 s:save_cpo	.vim/plugged/vim-airline/plugin/airline.vim	/^let s:save_cpo = &cpo$/;"	v
-s:save_cpo	.vim/plugged/vim-cursorword/autoload/cursorword.vim	/^let s:save_cpo = &cpo$/;"	v
-s:save_cpo	.vim/plugged/vim-cursorword/plugin/cursorword.vim	/^let s:save_cpo = &cpo$/;"	v
 s:save_cpo	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^let s:save_cpo = &cpo$/;"	v
 s:save_cpo	.vim/plugged/vim-easymotion/autoload/EasyMotion/cmigemo.vim	/^let s:save_cpo = &cpo$/;"	v
 s:save_cpo	.vim/plugged/vim-easymotion/autoload/EasyMotion/command_line.vim	/^let s:save_cpo = &cpo$/;"	v
@@ -18297,7 +18107,6 @@ s:set.pop	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/Set.vim	/^
 s:set.remove	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/Set.vim	/^function! s:set.remove(e) abort$/;"	f
 s:set.symmetric_difference_update	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/Set.vim	/^function! s:set.symmetric_difference_update(t) abort$/;"	f
 s:set.update	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/Set.vim	/^function! s:set.update(iterable) abort$/;"	f
-s:setFolded	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! s:setFolded(folded) abort dict$/;"	f
 s:set_clean_jobs_variable	.vim/plugged/vim-airline/autoload/airline/async.vim	/^function! s:set_clean_jobs_variable(vcs, file, id)$/;"	f
 s:set_clean_variables	.vim/plugged/vim-airline/autoload/airline/async.vim	/^function! s:set_clean_variables(file, vcs, val)$/;"	f
 s:set_cursor	.vim/plugged/vim-startify/autoload/startify.vim	/^function! s:set_cursor() abort$/;"	f
@@ -18315,8 +18124,6 @@ s:setbufline	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/buf.vim	/^func! s:setbuflin
 s:setline	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Motion.vim	/^function! s:setline(lnum, text) abort$/;"	f
 s:setup	.vim/plugged/gv.vim/plugin/gv.vim	/^function! s:setup(git_dir, git_origin)$/;"	f
 s:setup_completeopt	.vim/plugged/jedi-vim/plugin/jedi.vim	/^    function! s:setup_completeopt()$/;"	f
-s:setup_keymaps	.vim/plugged/tagbar/plugin/tagbar.vim	/^function! s:setup_keymaps() abort$/;"	f
-s:setup_options	.vim/plugged/tagbar/plugin/tagbar.vim	/^function! s:setup_options() abort$/;"	f
 s:setup_path	.vim/plugged/vim-gitgutter/autoload/gitgutter.vim	/^function! s:setup_path(bufnr, continuation)$/;"	f
 s:severity_error	.vim/plugged/vim-airline/autoload/airline/extensions/languageclient.vim	/^let s:severity_error = 1$/;"	v
 s:severity_hint	.vim/plugged/vim-airline/autoload/airline/extensions/languageclient.vim	/^let s:severity_hint = 4$/;"	v
@@ -18332,7 +18139,6 @@ s:shellesc_sh	.vim/autoload/plug.vim	/^function! s:shellesc_sh(arg)$/;"	f
 s:shift	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^function! s:shift(modes, cycle)$/;"	f
 s:shift	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:shift(list) abort$/;"	f
 s:shift_opts	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^function! s:shift_opts(opts, key, vals)$/;"	f
-s:short_help	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:short_help      = 1$/;"	v
 s:shorthand	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^let s:shorthand = {$/;"	v
 s:shorthand_regex	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^let s:shorthand_regex =$/;"	v
 s:shortpath	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:shortpath()$/;"	f
@@ -18363,16 +18169,15 @@ s:show_tabline	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/auto
 s:shrug	.vim/plugged/gv.vim/plugin/gv.vim	/^function! s:shrug()$/;"	f
 s:sid	.vim/plugged/vim-choosewin/autoload/choosewin/util.vim	/^let s:sid = s:SID()$/;"	v
 s:sid2sfuncs	.vim/plugged/vim-easymotion/autoload/vital/easymotion.vim	/^function! s:sid2sfuncs(sid) abort$/;"	f
-s:singular_types	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:singular_types = {$/;"	v
 s:skip_check_ft	.vim/plugged/vim-airline/autoload/airline/extensions/whitespace.vim	/^let s:skip_check_ft = {'make': ['indent', 'mixed-indent-file']}$/;"	v
 s:skip_symbol	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/formatters/unique_tail_improved.vim	/^let s:skip_symbol = '…'$/;"	v
 s:skiplist	.vim/plugged/vim-startify/autoload/startify.vim	/^let s:skiplist = get(g:, 'startify_skiplist', [$/;"	v
 s:smart_execute_command	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Prelude.vim	/^function! s:smart_execute_command(action, word) abort$/;"	f
+s:smartim_debug_output	.vim/plugged/smartim/plugin/smartim.vim	/^let s:smartim_debug_output = $HOME . "\/vim_smartim_debug_output"$/;"	v
 s:snapshot	.vim/autoload/plug.vim	/^function! s:snapshot(force, ...) abort$/;"	f
 s:so_save	.vim/sessions/default.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
 s:sort	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:sort(list, expr) abort$/;"	f
 s:sortByLength	.vim/plugged/auto-pairs/plugin/auto-pairs.vim	/^func! s:sortByLength(i1, i2)$/;"	f
-s:sortTags	.vim/plugged/tagbar/autoload/tagbar/prototypes/fileinfo.vim	/^function! s:sortTags(compare_typeinfo) abort dict$/;"	f
 s:sort_buffers	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:sort_buffers(...)$/;"	f
 s:sort_by	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:sort_by(list, expr) abort$/;"	f
 s:sort_by_mtime	.vim/plugged/vim-startify/autoload/startify.vim	/^    function! s:sort_by_mtime(foo, bar)$/;"	f
@@ -18407,13 +18212,9 @@ s:start_ts	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/async.vim	/^let s:start_ts = 
 s:status	.vim/autoload/plug.vim	/^function! s:status()$/;"	f
 s:status_load	.vim/autoload/plug.vim	/^function! s:status_load(lnum)$/;"	f
 s:status_update	.vim/autoload/plug.vim	/^function! s:status_update() range$/;"	f
-s:statusline_in_use	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:statusline_in_use = 0$/;"	v
 s:store	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Vim/Guard.vim	/^function! s:store(targets) abort$/;"	f
-s:str	.vim/plugged/tagbar/autoload/tagbar/prototypes/normaltag.vim	/^function! s:str(longsig, full) abort dict$/;"	f
 s:str_split	.vim/plugged/vim-choosewin/autoload/choosewin/util.vim	/^function! s:str_split(str) "{{{1$/;"	f
 s:strchars	.vim/plugged/vim-choosewin/autoload/choosewin/util.vim	/^  function! s:strchars(str)$/;"	f
-s:strfmt	.vim/plugged/tagbar/autoload/tagbar/prototypes/normaltag.vim	/^function! s:strfmt() abort dict$/;"	f
-s:strfmt	.vim/plugged/tagbar/autoload/tagbar/prototypes/pseudotag.vim	/^function! s:strfmt() abort dict$/;"	f
 s:strip	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:strip(str)$/;"	f
 s:strip_trailing_new_line	.vim/plugged/vim-gitgutter/autoload/gitgutter/utility.vim	/^function! s:strip_trailing_new_line(line) abort$/;"	f
 s:strip_white_space	.vim/plugged/vim-commentary/plugin/commentary.vim	/^function! s:strip_white_space(l,r,line) abort$/;"	f
@@ -18504,7 +18305,6 @@ s:throw	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Over/Exception.vi
 s:throw	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:throw(string) abort$/;"	f
 s:throw_cmd	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Over/Exception.vim	/^function! s:throw_cmd(exp, where)$/;"	f
 s:tick	.vim/autoload/plug.vim	/^function! s:tick()$/;"	f
-s:timer	.vim/plugged/vim-cursorword/autoload/cursorword.vim	/^  let s:timer = 0$/;"	v
 s:timer_id	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/async.vim	/^let s:timer_id = -1$/;"	v
 s:tmp	.vim/plugged/vim-airline-themes/autoload/airline/themes/fruit_punch.vim	/^  let s:tmp[mode]['airline_c'] = s:airline_c_insert$/;"	v
 s:tmp	.vim/plugged/vim-airline-themes/autoload/airline/themes/fruit_punch.vim	/^let s:tmp = {'normal_modified': {}, 'insert_modified': {}$/;"	v
@@ -18516,7 +18316,6 @@ s:to_cursor.match	.vim/plugged/vim-easymotion/t/compare_movements_spec.vim	/^fun
 s:to_s	.vim/autoload/plug.vim	/^function! s:to_s(v)$/;"	f
 s:to_string	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Over/Commandline/Modules/InsertRegister.vim	/^function! s:to_string(expr)$/;"	f
 s:toc_supported	.vim/plugged/vista.vim/autoload/vista.vim	/^let s:toc_supported = ['markdown', 'rst', 'vimwiki', 'pandoc']$/;"	v
-s:toggleFold	.vim/plugged/tagbar/autoload/tagbar/prototypes/kindheadertag.vim	/^function! s:toggleFold(fileinfo) abort dict$/;"	f
 s:toggleIgnoreFilter	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:toggleIgnoreFilter() abort$/;"	f
 s:toggleShowBookmarks	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:toggleShowBookmarks() abort$/;"	f
 s:toggleShowFiles	.vim/plugged/nerdtree/autoload/nerdtree/ui_glue.vim	/^function! s:toggleShowFiles() abort$/;"	f
@@ -18543,7 +18342,6 @@ s:truncate_skipping	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Prelu
 s:turn_off_hl_error	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^function! s:turn_off_hl_error() "{{{$/;"	f
 s:turn_on_hl_error	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^function! s:turn_on_hl_error() "{{{$/;"	f
 s:type	.vim/plugged/gv.vim/plugin/gv.vim	/^function! s:type(visual)$/;"	f
-s:type_init_done	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:type_init_done    = 0$/;"	v
 s:types	.vim/plugged/vista.vim/autoload/vista/types/uctags/ada.vim	/^let s:types = {}$/;"	v
 s:types	.vim/plugged/vista.vim/autoload/vista/types/uctags/ada.vim	/^let s:types.kind2scope = {$/;"	v
 s:types	.vim/plugged/vista.vim/autoload/vista/types/uctags/ada.vim	/^let s:types.kinds = {$/;"	v
@@ -18866,13 +18664,11 @@ s:vim_options	.vim/plugged/vim-choosewin/autoload/choosewin/overlay.vim	/^let s:
 s:vim_options	.vim/plugged/vim-choosewin/autoload/choosewin/overlay.vim	/^let s:vim_options.buffer = {$/;"	v
 s:vim_options	.vim/plugged/vim-choosewin/autoload/choosewin/overlay.vim	/^let s:vim_options.global = {$/;"	v
 s:vim_options	.vim/plugged/vim-choosewin/autoload/choosewin/overlay.vim	/^let s:vim_options.window = {$/;"	v
-s:vim_quitting	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:vim_quitting = 0$/;"	v
 s:vim_tab_options	.vim/plugged/vim-choosewin/autoload/choosewin.vim	/^let s:vim_tab_options = {$/;"	v
 s:vim_version	.vim/plugged/vim-gitgutter/autoload/gitgutter/debug.vim	/^function! s:vim_version()$/;"	f
 s:violet	.vim/plugged/vim-airline-themes/autoload/airline/themes/solarized_flood.vim	/^let s:violet  = {'hex': '#6C71C4', 'term':  62}  " 108, 113, 196 *$/;"	v
 s:visibility_icon	.vim/plugged/vista.vim/autoload/vista/renderer/default.vim	/^let s:visibility_icon = {$/;"	v
 s:visibility_icon	.vim/plugged/vista.vim/autoload/vista/renderer/line.vim	/^let s:visibility_icon = {$/;"	v
-s:visibility_symbols	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^let s:visibility_symbols = {$/;"	v
 s:vista_blink	.vim/plugged/vista.vim/autoload/vista/jump.vim	/^let s:vista_blink = get(g:, 'vista_blink', [2, 100])$/;"	v
 s:vista_top_level_blink	.vim/plugged/vista.vim/autoload/vista/jump.vim	/^let s:vista_top_level_blink = get(g:, 'vista_top_level_blink', [2, 100])$/;"	v
 s:vital_base_dir	.vim/plugged/vim-easymotion/autoload/vital/easymotion.vim	/^let s:vital_base_dir = expand('<sfile>:h')$/;"	v
@@ -18885,7 +18681,6 @@ s:warn	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:warn(message)$/;"
 s:warn	.vim/plugged/gv.vim/plugin/gv.vim	/^function! s:warn(message)$/;"	f
 s:warn	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Vim/Message.vim	/^function! s:warn(msg) abort$/;"	f
 s:warn	.vim/plugged/vim-startify/autoload/startify.vim	/^function! s:warn(msg) abort$/;"	f
-s:warning	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! s:warning(msg) abort$/;"	f
 s:warning	.vim/plugged/vim-airline-themes/autoload/airline/themes/fruit_punch.vim	/^let s:warning = s:gen_def(s:dark_gray, s:orangarine)$/;"	v
 s:warning_sign	.vim/plugged/coc.nvim/autoload/coc.vim	/^let s:warning_sign = get(g:, 'coc_status_warning_sign', has('mac') ? '⚠️ ' : 'W')$/;"	v
 s:warning_symbol	.vim/plugged/vim-airline/autoload/airline/extensions/coc.vim	/^let s:warning_symbol = get(g:, 'airline#extensions#coc#warning_symbol', 'W:')$/;"	v
@@ -18893,7 +18688,6 @@ s:warning_symbol	.vim/plugged/vim-airline/autoload/airline/extensions/languagecl
 s:warning_symbol	.vim/plugged/vim-airline/autoload/airline/extensions/neomake.vim	/^let s:warning_symbol = get(g:, 'airline#extensions#neomake#warning_symbol', 'W:')$/;"	v
 s:warning_symbol	.vim/plugged/vim-airline/autoload/airline/extensions/syntastic.vim	/^let s:warning_symbol = get(g:, 'airline#extensions#syntastic#warning_symbol', 'W:')$/;"	v
 s:warning_symbol	.vim/plugged/vim-airline/autoload/airline/extensions/ycm.vim	/^let s:warning_symbol = get(g:, 'airline#extensions#ycm#warning_symbol', 'W:')$/;"	v
-s:warnings	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:warnings = {$/;"	v
 s:watched_keys	.vim/plugged/coc.nvim/autoload/coc.vim	/^let s:watched_keys = []$/;"	v
 s:wcswidth	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Prelude.vim	/^  function! s:wcswidth(str) abort$/;"	f
 s:wide	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^let s:wide = 120$/;"	v
@@ -18904,16 +18698,13 @@ s:win_all	.vim/plugged/vim-choosewin/plugin/choosewin.vim	/^function! s:win_all(
 s:win_params_meta	.vim/plugged/far.vim/autoload/far.vim	/^let s:win_params_meta = {$/;"	v
 s:win_swap	.vim/plugged/vim-choosewin/autoload/choosewin/action.vim	/^function! s:win_swap(tab, win) "{{{1$/;"	f
 s:wincall	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Motion.vim	/^function! s:wincall(func, arglist, ...) abort$/;"	f
-s:window_expanded	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:window_expanded   = 0$/;"	v
 s:window_options_set	.vim/plugged/vim-choosewin/autoload/choosewin/util.vim	/^function! s:window_options_set(winnr, options) "{{{1$/;"	f
-s:window_pos	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:window_pos = {$/;"	v
 s:windows	.vim/plugged/vim-floaterm/autoload/floaterm.vim	/^let s:windows = has('win32') || has('win64')$/;"	v
 s:windows_sink	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:windows_sink(line)$/;"	f
 s:winexists	.vim/plugged/vim-floaterm/autoload/floaterm/floatwin.vim	/^function! s:winexists(winid) abort$/;"	f
 s:winexists	.vim/plugged/vim-translator/autoload/translator/ui.vim	/^function! s:winexists(winid) abort$/;"	f
 s:winid	.vim/plugged/vim-gitgutter/autoload/gitgutter/hunk.vim	/^let s:winid = 0$/;"	v
 s:winnr2poses_to_list	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Motion.vim	/^function! s:winnr2poses_to_list(winnr2poses, ...) abort$/;"	f
-s:winrestcmd	.vim/plugged/tagbar/autoload/tagbar.vim	/^let s:winrestcmd      = ''$/;"	v
 s:wins	.vim/plugged/vim-choosewin/autoload/choosewin.vim	/^let s:wins = {}$/;"	v
 s:wins.get	.vim/plugged/vim-choosewin/autoload/choosewin.vim	/^function! s:wins.get(...) "{{{1$/;"	f
 s:wins.set	.vim/plugged/vim-choosewin/autoload/choosewin.vim	/^function! s:wins.set(wins) "{{{1$/;"	f
@@ -18959,8 +18750,6 @@ save_copy_buffer	ranger/commands_full.py	/^class save_copy_buffer(Command):$/;"	
 save_entry	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/completion_cache.py	/^def save_entry(module_name, name, cache):$/;"	f
 save_module	.vim/plugged/jedi-vim/pythonx/parso/parso/cache.py	/^def save_module(hashed_grammar, file_io, module, lines, pickling=True, cache_path=None):$/;"	f
 say	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/stdlib.py	/^    def say(self): pass$/;"	m	class:A
-sb	.vim/init.vim	/^vmap <silent> sb <Plug>SearchVisual$/;"	m
-sb	.vimrc	/^vmap <silent> sb <Plug>SearchVisual$/;"	m
 scan	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^        def scan(children):$/;"	f	member:Function.iter_raise_stmts	file:
 scan	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^        def scan(children):$/;"	f	member:Function.iter_return_stmts	file:
 scan	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^        def scan(children):$/;"	f	member:Function.iter_yield_exprs	file:
@@ -19076,8 +18865,6 @@ show_goto_multi_results	.vim/plugged/jedi-vim/pythonx/jedi_vim.py	/^def show_got
 show_location	.vim/plugged/jedi-vim/pythonx/jedi/sith.py	/^    def show_location(self, lineno, column, show=3):$/;"	m	class:TestCase
 show_operation	.vim/plugged/jedi-vim/pythonx/jedi/sith.py	/^    def show_operation(self):$/;"	m	class:TestCase
 shsplit	.vim/plugged/jedi-vim/pythonx/jedi_vim.py	/^from shlex import split as shsplit$/;"	x
-si	.vim/init.vim	/^noremap si :Startify<CR>$/;"	m
-si	.vimrc	/^noremap si :Startify<CR>$/;"	m
 sign	.vim/plugged/vim-translator/script/translator.py	/^    def sign(self, text, salt):$/;"	m	class:YoudaoTranslator
 signature.enable	.vim/plugged/coc.nvim/data/schema.json	/^    "signature.enable": {$/;"	o	object:properties
 signature.floatMaxWidth	.vim/plugged/coc.nvim/data/schema.json	/^    "signature.floatMaxWidth": {$/;"	o	object:properties
@@ -19116,6 +18903,7 @@ sm	.vim/init.vim	/^nnoremap sm :source $MYVIMRC<CR>$/;"	m
 sm	.vimrc	/^nnoremap sm :source $MYVIMRC<CR>$/;"	m
 smartdict_jp	.vim/plugged/vim-easymotion/t/smartsign_spec.vim	/^        let smartdict_jp = g:EasyMotion#sticky_table#jp$/;"	v
 smartdict_us	.vim/plugged/vim-easymotion/t/smartsign_spec.vim	/^        let smartdict_us = g:EasyMotion#sticky_table#us$/;"	v
+smartim	.vim/plugged/smartim/plugin/smartim.vim	/^augroup smartim$/;"	a
 snippet	.vim/coc-settings.json	/^        "snippet": "\\ue60b",$/;"	s	object:suggest.completionItemKindLabels
 snippet	.vim/plugged/coc.nvim/data/schema.json	/^        "snippet": { "type": "string" },$/;"	o	object:properties.suggest.completionItemKindLabels.properties
 some_dct	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/arrays.py	/^some_dct = dict({'a': 1, 'b': ''}, a=1.0)$/;"	v
@@ -19151,8 +18939,6 @@ split	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/anyExpl.py	/^    def 
 split_lines	.vim/plugged/jedi-vim/pythonx/parso/parso/utils.py	/^def split_lines(string, keepends=False):$/;"	f
 split_prefix	.vim/plugged/jedi-vim/pythonx/parso/parso/python/prefix.py	/^def split_prefix(leaf, start_pos):$/;"	f
 squares	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E22.py	/^def squares(n):$/;"	f
-ss	.vim/init.vim	/^map ss <Plug>(easymotion-s2)$/;"	m
-ss	.vimrc	/^map ss <Plug>(easymotion-s2)$/;"	m
 st	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/dynamic_arrays.py	/^st = set()$/;"	v
 st	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/dynamic_arrays.py	/^st = {1.0}$/;"	v
 stage	ranger/commands_full.py	/^class stage(Command):$/;"	c
@@ -19345,40 +19131,6 @@ tabpage	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/instance.py	/^    d
 tabpage	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/instance.py	/^    def tabpage(self):$/;"	m	class:LfInstance
 tabpage	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/instance.py	/^    def tabpage(self):$/;"	m	class:PopupWindow
 tagExplManager	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/tagExpl.py	/^tagExplManager = TagExplManager()$/;"	v
-tagbar#CloseWindow	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#CloseWindow() abort$/;"	f
-tagbar#OpenWindow	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#OpenWindow(...) abort$/;"	f
-tagbar#RestoreSession	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#RestoreSession() abort$/;"	f
-tagbar#SetFoldLevel	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#SetFoldLevel(level, force) abort$/;"	f
-tagbar#StopAutoUpdate	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#StopAutoUpdate() abort$/;"	f
-tagbar#ToggleWindow	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#ToggleWindow(...) abort$/;"	f
-tagbar#autoopen	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#autoopen(...) abort$/;"	f
-tagbar#currentfile	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#currentfile() abort$/;"	f
-tagbar#currenttag	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#currenttag(fmt, default, ...) abort$/;"	f
-tagbar#currenttagtype	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#currenttagtype(fmt, default) abort$/;"	f
-tagbar#debug#enabled	.vim/plugged/tagbar/autoload/tagbar/debug.vim	/^function! tagbar#debug#enabled() abort$/;"	f
-tagbar#debug#log	.vim/plugged/tagbar/autoload/tagbar/debug.vim	/^function! tagbar#debug#log(msg) abort$/;"	f
-tagbar#debug#log_ctags_output	.vim/plugged/tagbar/autoload/tagbar/debug.vim	/^function! tagbar#debug#log_ctags_output(output) abort$/;"	f
-tagbar#debug#start_debug	.vim/plugged/tagbar/autoload/tagbar/debug.vim	/^function! tagbar#debug#start_debug(...) abort$/;"	f
-tagbar#debug#stop_debug	.vim/plugged/tagbar/autoload/tagbar/debug.vim	/^function! tagbar#debug#stop_debug() abort$/;"	f
-tagbar#gettypeconfig	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#gettypeconfig(type) abort$/;"	f
-tagbar#getusertypes	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#getusertypes() abort$/;"	f
-tagbar#highlighttag	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#highlighttag(openfolds, force) abort$/;"	f
-tagbar#inspect	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#inspect(var) abort$/;"	f
-tagbar#is_paused	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#is_paused() abort$/;"	f
-tagbar#prototypes#basetag#new	.vim/plugged/tagbar/autoload/tagbar/prototypes/basetag.vim	/^function! tagbar#prototypes#basetag#new(name) abort$/;"	f
-tagbar#prototypes#fileinfo#new	.vim/plugged/tagbar/autoload/tagbar/prototypes/fileinfo.vim	/^function! tagbar#prototypes#fileinfo#new(fname, ftype, typeinfo) abort$/;"	f
-tagbar#prototypes#kindheadertag#new	.vim/plugged/tagbar/autoload/tagbar/prototypes/kindheadertag.vim	/^function! tagbar#prototypes#kindheadertag#new(name) abort$/;"	f
-tagbar#prototypes#normaltag#new	.vim/plugged/tagbar/autoload/tagbar/prototypes/normaltag.vim	/^function! tagbar#prototypes#normaltag#new(name) abort$/;"	f
-tagbar#prototypes#pseudotag#new	.vim/plugged/tagbar/autoload/tagbar/prototypes/pseudotag.vim	/^function! tagbar#prototypes#pseudotag#new(name) abort$/;"	f
-tagbar#prototypes#splittag#new	.vim/plugged/tagbar/autoload/tagbar/prototypes/splittag.vim	/^function! tagbar#prototypes#splittag#new(name) abort$/;"	f
-tagbar#prototypes#typeinfo#new	.vim/plugged/tagbar/autoload/tagbar/prototypes/typeinfo.vim	/^function! tagbar#prototypes#typeinfo#new(...) abort$/;"	f
-tagbar#sorting#sort	.vim/plugged/tagbar/autoload/tagbar/sorting.vim	/^function! tagbar#sorting#sort(tags, compareby, compare_typeinfo) abort$/;"	f
-tagbar#state#get_current_file	.vim/plugged/tagbar/autoload/tagbar/state.vim	/^function! tagbar#state#get_current_file(force_current) abort$/;"	f
-tagbar#state#set_current_file	.vim/plugged/tagbar/autoload/tagbar/state.vim	/^function! tagbar#state#set_current_file(fileinfo) abort$/;"	f
-tagbar#state#set_paused	.vim/plugged/tagbar/autoload/tagbar/state.vim	/^function! tagbar#state#set_paused() abort$/;"	f
-tagbar#toggle_pause	.vim/plugged/tagbar/autoload/tagbar.vim	/^function! tagbar#toggle_pause() abort$/;"	f
-tagbar#types#ctags#init	.vim/plugged/tagbar/autoload/tagbar/types/ctags.vim	/^function! tagbar#types#ctags#init(supported_types) abort$/;"	f
-tagbar#types#uctags#init	.vim/plugged/tagbar/autoload/tagbar/types/uctags.vim	/^function! tagbar#types#uctags#init(supported_types) abort$/;"	f
 tail	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^    uint32_t        tail;$/;"	m	struct:FeCircularQueue	typeref:typename:uint32_t	file:
 tar	.vim/plugged/coc.nvim/package.json	/^    "tar": "^4.4.10",$/;"	s	object:dependencies
 target	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/precedence.py	/^target = ''$/;"	v
@@ -19389,7 +19141,6 @@ task_count	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^  
 task_queue	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^    FeCircularQueue task_queue;$/;"	m	struct:FuzzyEngine	typeref:typename:FeCircularQueue	file:
 task_sem	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^    HANDLE          task_sem;$/;"	m	struct:FeCircularQueue	typeref:typename:HANDLE	file:
 tasks	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^    FeTaskItem*     tasks;$/;"	m	struct:FuzzyEngine	typeref:typename:FeTaskItem *	file:
-tb	.vim/init.vim	/^nnoremap tb :TagbarToggle<CR>$/;"	m
 tearDown	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E10.py	/^    def tearDown(self):$/;"	m	class:TestP4Poller
 temp	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/ordering.py	/^temp = b;$/;"	v
 tempfile	.vim/plugged/jedi-vim/pythonx/jedi_vim.py	/^def tempfile(content):$/;"	f
@@ -20677,7 +20428,6 @@ vim	README.md	/^## vim $/;"	s	chapter:必装
 vim-airline [![Build Status](https://travis-ci.org/vim-airline/vim-airline.svg?branch=master)](https://travis-ci.org/vim-airline/vim-airline) [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/chrisbra) [![reviewdog](https://github.com/vim-airline/vim-airline/workflows/reviewdog/badge.svg?branch=master)](https://github.com/vim-airline/vim-airline/actions?query=workflow%3Areviewdog+event%3Apush+branch%3Amaster)	.vim/plugged/vim-airline/README.md	/^# vim-airline [![Build Status](https:\/\/travis-ci.org\/vim-airline\/vim-airline.svg?branch=mast/;"	c
 vim-airline-themes [![Build Status](https://travis-ci.org/vim-airline/vim-airline-themes.svg?branch=master)](https://travis-ci.org/vim-airline/vim-airline-themes) [![reviewdog](https://github.com/vim-airline/vim-airline-themes/workflows/reviewdog/badge.svg?branch=master)](https://github.com/vim-airline/vim-airline-themes/actions?query=workflow%3Areviewdog+event%3Apush+branch%3Amaster)	.vim/plugged/vim-airline-themes/README.md	/^# vim-airline-themes [![Build Status](https:\/\/travis-ci.org\/vim-airline\/vim-airline-themes.s/;"	c
 vim-browser-search	.vim/plugged/vim-browser-search/README.md	/^# vim-browser-search$/;"	c
-vim-cursorword	.vim/plugged/vim-cursorword/README.md	/^# vim-cursorword$/;"	c
 vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)	.vim/plugged/vim-easy-align/README.md	/^vim-easy-align ![travis-ci](https:\/\/travis-ci.org\/junegunn\/vim-easy-align.svg?branch=master)$/;"	c
 vim-interestingwords	.vim/plugged/vim-interestingwords/README.md	/^# vim-interestingwords$/;"	c
 vim-translator	.vim/plugged/vim-translator/README.md	/^# vim-translator$/;"	c
@@ -20890,6 +20640,7 @@ vital#_easymotion#Vim#Guard#import	.vim/plugged/vim-easymotion/autoload/vital/_e
 vital#_easymotion#Vim#Message#import	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Vim/Message.vim	/^  function! vital#_easymotion#Vim#Message#import() abort$/;"	f
 vital#of	.vim/plugged/vim-easymotion/autoload/vital.vim	/^function! vital#of(name) abort$/;"	f
 vmode	.vim/plugged/ctrlsf.vim/syntax/ctrlsf.vim	/^let vmode = ctrlsf#CurrentMode()$/;"	v
+vs	.vim/init.vim	/^nnoremap vs :Vista<CR>$/;"	m
 vs	.vimrc	/^nnoremap vs :Vista<CR>$/;"	m
 vscode-languageserver	.vim/plugged/coc.nvim/package.json	/^    "vscode-languageserver": "^6.1.1"$/;"	s	object:devDependencies
 vscode-languageserver-protocol	.vim/plugged/coc.nvim/package.json	/^    "vscode-languageserver-protocol": "^3.15.3",$/;"	s	object:dependencies
