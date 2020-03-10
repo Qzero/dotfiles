@@ -4,6 +4,7 @@ filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
+Plug 'rking/ag.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'voldikss/vim-floaterm'                    " 浮动终端
 Plug 'nanotech/jellybeans.vim'                  " 主题
@@ -48,22 +49,21 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>    "更新插件管理器
 nnoremap vs :Vista<CR>
 let g:vista_echo_cursor_strategy ='scroll' " 启用悬浮窗预览
 let g:vista_sidebar_width = 30                   " 宽度
-let g:vista_close_on_jump = 0                    " 跳转到一个符号时，自动关闭vista窗口.
+let g:vista_close_on_jump = 1                    " 跳转到一个符号时，自动关闭vista窗口.
 let g:vista_stay_on_open = 1                     " 打开vista窗口后移动到它.
 let g:vista#executive#ctags#support_json_format = 1
 let g:vista#executives = ['ale', 'coc', 'ctags', 'lcn', 'vim_lsc', 'vim_lsp']
-let g:vista#finders = ['fzf', 'skim']
+let g:vista#finders = ['LeaderF']
 let g:vista#renderer#ctags = 'default'
 let g:vista#renderer#default#vlnum_offset = 3
 let g:vista#renderer#enable_icon = 1
 let g:vista#renderer#kind_default_icon = ['╰─▸ ', '├─▸ ']
 let g:vista_fold_toggle_icons = ['▸', '▾']
 let g:vista#renderer#icons = {'subroutine': '洛', 'method': '', 'func': '', 'variables': '', 'namespace': '', 'field': '綠', 'interface': '禍', 'type': '', 'packages': '', 'property': '襁', 'implementation': '', 'default': '', 'augroup': 'פּ', 'macro': '', 'enumerator': '', 'const': '', 'macros': '', 'map': 'פּ', 'fields': '綠', 'functions': '', 'enum': '', 'function': '', 'target': '', 'typedef': '', 'variable': '', 'modules': '', 'constant': '', 'struct': 'פּ', 'types': '', 'module': '', 'typeParameter': '', 'package': '', 'class': '', 'member': '', 'var': '', 'union': '鬒'}
-let g:vista_fzf_preview = ['right:50%']
 
 " voldikss/vim-translator
 let g:translator_history_enable = 1
-let g:translator_default_engines = ['ciba', 'bing', 'google']
+let g:translator_default_engines = ['bing']
 nmap <silent> ,t <Plug>Translate
 vmap <silent> ,t <Plug>TranslateV 
 nmap <silent> ,w <Plug>TranslateW
@@ -138,7 +138,6 @@ let g:coc_global_extensions = [
   \ 'coc-spell-checker',
   \ 'coc-bookmark',
   \ 'coc-python',
-  \ 'coc-jedi',
   \ 'coc-diagnostic',
   \ 'coc-browser',
   \ ]
@@ -257,7 +256,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "通用设置 ------
 " set fillchars+=vert:\ 
-" set fillchars=vert:\ ,stl:\ ,stlnc:\ 
+set fillchars=vert:\ ,stl:\ ,stlnc:\ 
 set t_Co=256                                            " 开启256色支持
 set guifont=Monaco:h16                                  " 默认字体和大小
 set showtabline=0                                       " 隐藏顶部标签栏
@@ -306,7 +305,8 @@ set belloff=all                                         " 所有事件下（包�
 set autoread                                            " 设置当文件被改动时自动载入
 set completeopt=preview,menu                            " 代码补全
 set scrolloff=6                                         " 光标移动到buffer的顶部和底部时保持3行距离
-autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
+set undofile
+set undodir=~/.vim/undo/
 
 " 快捷键
 "" 窗口选择与移动

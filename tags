@@ -81,6 +81,7 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 ,w	.vim/init.vim	/^vmap <silent> ,w <Plug>TranslateWV$/;"	m
 ,w	.vimrc	/^nmap <silent> ,w <Plug>TranslateW$/;"	m
 ,w	.vimrc	/^vmap <silent> ,w <Plug>TranslateWV$/;"	m
+->	.vim/coc-settings.json	/^        "->": "gitUnstage"    $/;"	s	object:explorer.keyMappings
 .	.vim/coc-settings.json	/^        ".": "toggleHidden",$/;"	s	object:explorer.keyMappings
 .	.vim/plugged/gv.vim/plugin/gv.vim	/^  nnoremap          <buffer> <expr> .  <sid>dot()$/;"	m
 .	.vim/plugged/jedi-vim/ftplugin/python/jedi.vim	/^        inoremap <silent> <buffer> . .<C-R>=jedi#complete_string(1)<CR>$/;"	m
@@ -330,6 +331,7 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 :Farp [params]	.vim/plugged/far.vim/README.md	/^#### :Farp [params]$/;"	t	section:far.vim - Find And Replace Vim plugin""Usage
 :Refar [params]	.vim/plugged/far.vim/README.md	/^#### :Refar [params]$/;"	t	section:far.vim - Find And Replace Vim plugin""Usage
 ;	.vim/plugged/vim-easymotion/t/easymotion_spec.vim	/^        map ; <Plug>(easymotion-next)$/;"	m
+<-	.vim/coc-settings.json	/^        "<-": "gitStage",$/;"	s	object:explorer.keyMappings
 <2-LeftMouse>	.vim/plugged/LeaderF/autoload/leaderf/Any.vim	/^    nnoremap <buffer> <silent> <2-LeftMouse> :exec g:Lf_py b:Lf_AnyExplManager."accept()"<CR>$/;"	m
 <2-LeftMouse>	.vim/plugged/LeaderF/autoload/leaderf/BufTag.vim	/^    nnoremap <buffer> <silent> <2-LeftMouse> :exec g:Lf_py "bufTagExplManager.accept()"<CR>$/;"	m
 <2-LeftMouse>	.vim/plugged/LeaderF/autoload/leaderf/Buffer.vim	/^    nnoremap <buffer> <silent> <2-LeftMouse> :exec g:Lf_py "bufExplManager.accept()"<CR>$/;"	m
@@ -904,6 +906,7 @@ AbstractTreeName	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/names.py	/^cl
 AbstractUsedNamesFilter	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/filters.py	/^class AbstractUsedNamesFilter(AbstractFilter):$/;"	c
 AccessHandle	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/compiled/subprocess/__init__.py	/^class AccessHandle(object):$/;"	c
 AccessPath	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/compiled/access.py	/^class AccessPath(object):$/;"	c
+Acknowledgements	.vim/plugged/ag.vim/README.md	/^### Acknowledgements ###$/;"	S	section:ag.vim""Usage
 Acknowledgements	.vim/plugged/jedi-vim/pythonx/jedi/README.rst	/^Acknowledgements$/;"	s	chapter:Jedi - an awesome autocompletion/static analysis library for Python
 Acknowledgements	.vim/plugged/jedi-vim/pythonx/parso/README.rst	/^Acknowledgements$/;"	s	chapter:parso - A Python Parser
 Actual behaviour	.vim/plugged/LeaderF/ISSUE_TEMPLATE.md	/^### Actual behaviour$/;"	S
@@ -914,6 +917,13 @@ AddLine	.vim/plugged/vim-easymotion/t/smartsign_spec.vim	/^function! AddLine(str
 Adjusting indentation	.vim/plugged/vim-easy-align/README.md	/^### Adjusting indentation$/;"	S	section:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)""Alignment options
 Advanced customization	.vim/plugged/fzf.vim/README.md	/^### Advanced customization$/;"	S	section:fzf :heart: vim""Customization
 Advanced examples and use cases	.vim/plugged/vim-easy-align/README.md	/^Advanced examples and use cases$/;"	s	chapter:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)
+Ag	.vim/plugged/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=file Ag call ag#Ag('grep<bang>',<q-args>)$/;"	c
+AgAdd	.vim/plugged/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=file AgAdd call ag#Ag('grepadd<bang>', <q-args>)$/;"	c
+AgBuffer	.vim/plugged/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=file AgBuffer call ag#AgBuffer('grep<bang>',<q-args>)$/;"	c
+AgFile	.vim/plugged/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=file AgFile call ag#Ag('grep<bang> -g', <q-args>)$/;"	c
+AgFromSearch	.vim/plugged/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=file AgFromSearch call ag#AgFromSearch('grep<bang>', <q-args>)$/;"	c
+AgHelp	.vim/plugged/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=help AgHelp call ag#AgHelp('grep<bang>',<q-args>)$/;"	c
+Airline theme	.vim/plugged/gruvbox/README.md	/^### Airline theme$/;"	S	section:Screenshots
 AirlineExtensions	.vim/plugged/vim-airline/plugin/airline.vim	/^command! AirlineExtensions   call s:airline_extensions()$/;"	c
 AirlineRefresh	.vim/plugged/vim-airline/plugin/airline.vim	/^command! -bar -bang AirlineRefresh call s:airline_refresh(<q-bang>)$/;"	c
 AirlineTheme	.vim/plugged/vim-airline/plugin/airline.vim	/^command! -bar -nargs=? -complete=customlist,<sid>get_airline_themes AirlineTheme call <sid>airli/;"	c
@@ -953,6 +963,7 @@ AssertStmt	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^class Asse
 Assertions	.vim/plugged/jedi-vim/pythonx/jedi/test/examples/absolute_import/local_module.py	/^class Assertions(unittest.TestCase):$/;"	c
 AsyncExecutor	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/asyncExecutor.py	/^class AsyncExecutor(object):$/;"	c
 Atom	.vim/plugged/jedi-vim/pythonx/jedi/README.rst	/^.. _Atom: https:\/\/atom.io\/$/;"	T	section:Acknowledgements
+Attention	.vim/plugged/gruvbox/README.md	/^Attention$/;"	s
 AttributeOverwrite	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/filters.py	/^class AttributeOverwrite(use_metaclass(_OverwriteMeta, _AttributeOverwriteMixin,$/;"	c
 Attribution	.vim/plugged/vim-interestingwords/CODE_OF_CONDUCT.md	/^## Attribution$/;"	s	chapter:Contributor Covenant Code of Conduct
 Author	.vim/plugged/vim-easy-align/README.md	/^Author$/;"	s	chapter:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)
@@ -1118,6 +1129,7 @@ CastFunction	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/gradual/typing.py
 Cat	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/pep0484_comments.py	/^class Cat(object):$/;"	c
 Caveats	.vim/plugged/jedi-vim/README.rst	/^Caveats$/;"	S	section:Installation
 Caveats	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/features.rst	/^Caveats$/;"	s	chapter:Features and Caveats
+Change Log	.vim/plugged/gruvbox/CHANGELOG.md	/^# Change Log$/;"	c
 Change Log	.vim/plugged/vim-airline/CHANGELOG.md	/^# Change Log$/;"	c
 Change highlight	.vim/plugged/vim-floaterm/README.md	/^### Change highlight$/;"	S	section:Global variables
 Changelog	.vim/plugged/LeaderF/README.md	/^Changelog$/;"	s	chapter:LeaderF
@@ -1225,6 +1237,7 @@ ComprehensionMixin	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/value/itera
 Config	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/classes.py	/^class Config(BaseClass):$/;"	c
 Config2	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/import_tree/classes.py	/^class Config2():$/;"	c
 Configurable and extensible	.vim/plugged/vim-airline/README.md	/^## Configurable and extensible$/;"	s	chapter:Features
+Configuration	.vim/plugged/ag.vim/README.md	/^### Configuration ###$/;"	S	section:ag.vim""Installation
 Configuration	.vim/plugged/ctrlsf.vim/README.md	/^## Configuration$/;"	s	chapter:ctrlsf.vim
 Configuration	.vim/plugged/vim-interestingwords/README.md	/^## Configuration$/;"	s	chapter:vim-interestingwords
 Configuration	.vim/plugged/vim-translator/README.md	/^## Configuration$/;"	s	chapter:vim-translator
@@ -1234,12 +1247,14 @@ Configure	.vim/plugged/rainbow/README.md	/^Configure$/;"	s	chapter:Rainbow Paren
 Consistency Check	.vim/plugged/far.vim/README.md	/^### Consistency Check$/;"	S	section:far.vim - Find And Replace Vim plugin""Extras
 ContextualizedNode	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/base_value.py	/^class ContextualizedNode(object):$/;"	c
 ContextualizedSubscriptListNode	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/syntax_tree.py	/^class ContextualizedSubscriptListNode(ContextualizedNode):$/;"	c
+Contrast options	.vim/plugged/gruvbox/README.md	/^Contrast options$/;"	s
 Contributing	.vim/plugged/jedi-vim/README.rst	/^Contributing$/;"	s	chapter:jedi-vim - awesome Python autocompletion with VIM
 Contributing	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/typeshed/README.md	/^## Contributing$/;"	s	chapter:typeshed
 Contributing	.vim/plugged/vim-gutentags/CONTRIBUTING.md	/^# Contributing$/;"	c
 Contributing	.vim/plugged/vista.vim/README.md	/^## Contributing$/;"	s	chapter:Vista.vim
 Contributing to typeshed	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/typeshed/CONTRIBUTING.md	/^# Contributing to typeshed$/;"	c
 Contribution Guidelines	.vim/plugged/vim-airline-themes/README.md	/^# Contribution Guidelines$/;"	c
+Contributions	.vim/plugged/gruvbox/README.md	/^Contributions$/;"	s
 Contributions	.vim/plugged/vim-airline/CONTRIBUTING.md	/^# Contributions$/;"	c
 Contributor Covenant Code of Conduct	.vim/plugged/vim-interestingwords/CODE_OF_CONDUCT.md	/^# Contributor Covenant Code of Conduct$/;"	c
 Contributors	.vim/plugged/auto-pairs/README.md	/^Contributors$/;"	s	chapter:Auto Pairs
@@ -1292,6 +1307,8 @@ DFAPlan	.vim/plugged/jedi-vim/pythonx/parso/parso/pgen2/generator.py	/^class DFA
 DFAState	.vim/plugged/jedi-vim/pythonx/parso/parso/pgen2/generator.py	/^class DFAState(object):$/;"	c
 DOCSTRING_PARAM_PATTERNS	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/docstrings.py	/^DOCSTRING_PARAM_PATTERNS = [$/;"	v
 DOCSTRING_RETURN_PATTERNS	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/docstrings.py	/^DOCSTRING_RETURN_PATTERNS = [$/;"	v
+Dark mode	.vim/plugged/gruvbox/README.md	/^### Dark mode$/;"	S	section:Palette
+Dark mode	.vim/plugged/gruvbox/README.md	/^### Dark mode$/;"	S	section:Screenshots
 DataclassParamName	.vim/plugged/jedi-vim/pythonx/jedi/jedi/plugins/stdlib.py	/^class DataclassParamName(BaseTreeParamName):$/;"	c
 DataclassSignature	.vim/plugged/jedi-vim/pythonx/jedi/jedi/plugins/stdlib.py	/^class DataclassSignature(AbstractSignature):$/;"	c
 DataclassWrapper	.vim/plugged/jedi-vim/pythonx/jedi/jedi/plugins/stdlib.py	/^class DataclassWrapper(ValueWrapper, ClassMixin):$/;"	c
@@ -1307,6 +1324,7 @@ DefineGenericBase	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/gradual/base
 DefinitelyNotGlobal	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/usages.py	/^class DefinitelyNotGlobal:$/;"	c
 Definition	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/classes.py	/^class Definition(BaseDefinition):$/;"	c
 Demo	.vim/plugged/vim-easy-align/README.md	/^Demo$/;"	s	chapter:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)
+Deprecated: See [this comment](https://github.com/rking/ag.vim/issues/124#issuecomment-227038003) for more info. Maybe try [ack.vim](https://github.com/mileszs/ack.vim#can-i-use-ag-the-silver-searcher-with-this) as an alternative.	.vim/plugged/ag.vim/README.md	/^## Deprecated: See [this comment](https:\/\/github.com\/rking\/ag.vim\/issues\/124#issuecomment-/;"	s	chapter:ag.vim
 Deprecations	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/api.rst	/^Deprecations$/;"	s	chapter:API Overview
 Deprecations Process	.vim/plugged/jedi-vim/pythonx/parso/docs/docs/development.rst	/^Deprecations Process$/;"	s	chapter:Development
 Describe your question, feature request, or bug.	.vim/plugged/LeaderF/ISSUE_TEMPLATE.md	/^### Describe your question, feature request, or bug.$/;"	S
@@ -1330,6 +1348,7 @@ Discussion	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/typeshed/CONTRIBU
 Docs	.vim/plugged/jedi-vim/pythonx/jedi/docs/index.rst	/^Docs$/;"	s	chapter:Jedi - an awesome autocompletion/static analysis library for Python
 Docs	.vim/plugged/jedi-vim/pythonx/parso/docs/index.rst	/^Docs$/;"	s	chapter:parso - A Python Parser
 DocstringMixin	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^class DocstringMixin(object):$/;"	c
+Documentation	.vim/plugged/gruvbox/README.md	/^Documentation$/;"	s
 Documentation	.vim/plugged/jedi-vim/README.rst	/^Documentation$/;"	s	chapter:jedi-vim - awesome Python autocompletion with VIM
 Documentation	.vim/plugged/vim-airline/README.md	/^# Documentation$/;"	c
 Dog	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/pep0484_comments.py	/^class Dog:$/;"	c
@@ -1552,6 +1571,7 @@ FeTaskItem	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^}F
 Feature Support and Caveats	.vim/plugged/jedi-vim/pythonx/jedi/README.rst	/^Feature Support and Caveats$/;"	s	chapter:Jedi - an awesome autocompletion/static analysis library for Python
 Features	.vim/plugged/auto-pairs/README.md	/^Features$/;"	s	chapter:Auto Pairs
 Features	.vim/plugged/ctrlsf.vim/README.md	/^## Features$/;"	s	chapter:ctrlsf.vim
+Features	.vim/plugged/gruvbox/README.md	/^Features$/;"	s
 Features	.vim/plugged/jedi-vim/README.rst	/^Features$/;"	s	chapter:jedi-vim - awesome Python autocompletion with VIM
 Features	.vim/plugged/vim-airline/README.md	/^# Features$/;"	c
 Features	.vim/plugged/vim-floaterm/README.md	/^## Features$/;"	s
@@ -1722,10 +1742,13 @@ Global variables	.vim/plugged/vim-floaterm/README.md	/^## Global variables$/;"	s
 GlobalNameFilter	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/filters.py	/^class GlobalNameFilter(AbstractUsedNamesFilter):$/;"	c
 GlobalStmt	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^class GlobalStmt(KeywordStatement):$/;"	c
 GoogleTranslator	.vim/plugged/vim-translator/script/translator.py	/^class GoogleTranslator(BasicTranslator):$/;"	c
+Gotchas	.vim/plugged/ag.vim/README.md	/^### Gotchas ###$/;"	S	section:ag.vim""Usage
 Grammar	.vim/plugged/jedi-vim/pythonx/parso/parso/grammar.py	/^class Grammar(object):$/;"	c
 Grammar	.vim/plugged/jedi-vim/pythonx/parso/parso/pgen2/generator.py	/^class Grammar(object):$/;"	c
 Grammar methods	.vim/plugged/jedi-vim/pythonx/parso/docs/docs/usage.rst	/^Grammar methods$/;"	s	chapter:Usage
 GrammarParser	.vim/plugged/jedi-vim/pythonx/parso/parso/pgen2/grammar_parser.py	/^class GrammarParser():$/;"	c
+GruvboxHlsHideCursor	.vim/plugged/gruvbox/colors/gruvbox.vim	/^function! GruvboxHlsHideCursor()$/;"	f
+GruvboxHlsShowCursor	.vim/plugged/gruvbox/colors/gruvbox.vim	/^function! GruvboxHlsShowCursor()$/;"	f
 GtagsExplManager	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/gtagsExpl.py	/^class GtagsExplManager(Manager):$/;"	c
 GtagsExplorer	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/gtagsExpl.py	/^class GtagsExplorer(Explorer):$/;"	c
 Gutentags	.vim/plugged/vim-gutentags/README.md	/^# Gutentags$/;"	c
@@ -1734,6 +1757,7 @@ GutentagsToggleFake	.vim/plugged/vim-gutentags/plugin/gutentags.vim	/^    comman
 GutentagsToggleTrace	.vim/plugged/vim-gutentags/plugin/gutentags.vim	/^    command! GutentagsToggleTrace   :call gutentags#toggletrace()$/;"	c
 GutentagsUpdate	.vim/plugged/vim-gutentags/autoload/gutentags.vim	/^    command! -buffer -bang GutentagsUpdate :call s:manual_update_tags(<bang>0)$/;"	c
 H	.vim/init.vim	/^nnoremap H ^$/;"	m
+H	.vim/plugged/ag.vim/autoload/ag.vim	/^      nnoremap <silent> <buffer> H  <C-W><CR><C-w>K<C-w>b$/;"	m
 H	.vimrc	/^nnoremap H ^$/;"	m
 HANGING_BRACKET	.vim/plugged/jedi-vim/pythonx/parso/parso/python/pep8.py	/^    HANGING_BRACKET = object()$/;"	v	class:IndentationTypes
 Health Check	.vim/plugged/git-messenger.vim/README.md	/^### Health Check$/;"	S	section:git-messenger.vim""Usage
@@ -1818,6 +1842,7 @@ Inner	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/inheritance.py	/^    de
 InsertTestText1	.vim/plugged/vim-easymotion/t/compare_movements_spec.vim	/^function! InsertTestText1()$/;"	f
 Install	.vim/plugged/rainbow/README.md	/^Install$/;"	s	chapter:Rainbow Parentheses Improved
 Installation	.vim/plugged/LeaderF/README.md	/^Installation$/;"	s	chapter:LeaderF
+Installation	.vim/plugged/ag.vim/README.md	/^## Installation ##$/;"	s	chapter:ag.vim
 Installation	.vim/plugged/auto-pairs/README.md	/^Installation$/;"	s	chapter:Auto Pairs
 Installation	.vim/plugged/ctrlsf.vim/README.md	/^## Installation$/;"	s	chapter:ctrlsf.vim
 Installation	.vim/plugged/far.vim/README.md	/^## Installation$/;"	s	chapter:far.vim - Find And Replace Vim plugin
@@ -1904,6 +1929,7 @@ Kate	.vim/plugged/jedi-vim/pythonx/jedi/README.rst	/^.. _Kate: https:\/\/kate-ed
 Key	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/pep0484_typing.py	/^class Key:$/;"	c
 Key Mappings	.vim/plugged/vim-translator/README.md	/^## Key Mappings$/;"	s	chapter:vim-translator
 Key Maps	.vim/plugged/ctrlsf.vim/README.md	/^## Key Maps$/;"	s	chapter:ctrlsf.vim
+Keyboard Shortcuts	.vim/plugged/ag.vim/README.md	/^### Keyboard Shortcuts ###$/;"	S	section:ag.vim""Usage
 Keymappings	.vim/plugged/vim-browser-search/README.md	/^## Keymappings$/;"	s	chapter:vim-browser-search
 Keymaps	.vim/plugged/vim-floaterm/README.md	/^### Keymaps$/;"	S	section:Global variables
 Keyword	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^class Keyword(_LeafWithoutNewlines, _StringComparisonMixin):$/;"	c
@@ -1921,6 +1947,10 @@ L	.vim/autoload/plug.vim	/^    xnoremap <silent> <buffer> L :call <SID>status_lo
 L	.vim/init.vim	/^nnoremap L \$$/;"	m
 L	.vim/plugged/LeaderF/autoload/leaderf/Rg.vim	/^    nnoremap <buffer> <silent> L             :exec g:Lf_py "rgExplManager.outputToLoclist()"<CR>$/;"	m
 L	.vimrc	/^nnoremap L \$$/;"	m
+LAg	.vim/plugged/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=file LAg call ag#Ag('lgrep<bang>', <q-args>)$/;"	c
+LAgAdd	.vim/plugged/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=file LAgAdd call ag#Ag('lgrepadd<bang>', <q-args>)$/;"	c
+LAgBuffer	.vim/plugged/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=file LAgBuffer call ag#AgBuffer('lgrep<bang>',<q-args>)$/;"	c
+LAgHelp	.vim/plugged/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=help LAgHelp call ag#AgHelp('lgrep<bang>',<q-args>)$/;"	c
 LOG	.vim/plugged/jedi-vim/pythonx/parso/parso/cache.py	/^LOG = logging.getLogger(__name__)$/;"	v
 LOG	.vim/plugged/jedi-vim/pythonx/parso/parso/python/diff.py	/^LOG = logging.getLogger(__name__)$/;"	v
 LOG_FILE	.vim/plugged/vim-gutentags/plat/win32/update_scopedb.cmd	/^    set LOG_FILE=%~2$/;"	v
@@ -2017,6 +2047,7 @@ License	.vim/plugged/coc.nvim/Readme.md	/^## License$/;"	s
 License	.vim/plugged/far.vim/README.md	/^## License$/;"	s	chapter:far.vim - Find And Replace Vim plugin
 License	.vim/plugged/fzf.vim/README.md	/^License$/;"	s	chapter:fzf :heart: vim
 License	.vim/plugged/git-messenger.vim/README.md	/^## License$/;"	s	chapter:git-messenger.vim
+License	.vim/plugged/gruvbox/README.md	/^License$/;"	s
 License	.vim/plugged/indentLine/README.md	/^## License$/;"	s	chapter:indentLine
 License	.vim/plugged/vim-airline-themes/README.md	/^# License$/;"	c
 License	.vim/plugged/vim-airline/README.md	/^# License$/;"	c
@@ -2026,6 +2057,8 @@ License	.vim/plugged/vim-floaterm/README.md	/^## License$/;"	s
 License	.vim/plugged/vim-fugitive/README.markdown	/^## License$/;"	s	chapter:fugitive.vim
 License	.vim/plugged/vim-translator/README.md	/^## License$/;"	s	chapter:vim-translator
 License	.vim/plugged/vista.vim/README.md	/^## License$/;"	s	chapter:Vista.vim
+Light mode	.vim/plugged/gruvbox/README.md	/^### Light mode$/;"	S	section:Palette
+Light mode	.vim/plugged/gruvbox/README.md	/^### Light mode$/;"	S	section:Screenshots
 Limitation	.vim/plugged/ctrlsf.vim/README.md	/^### Limitation$/;"	S	section:ctrlsf.vim""Edit Mode
 LineCopy	.vim/plugged/jedi-vim/pythonx/parso/test/fuzz_diff_parser.py	/^class LineCopy:$/;"	c
 LineDeletion	.vim/plugged/jedi-vim/pythonx/parso/test/fuzz_diff_parser.py	/^class LineDeletion:$/;"	c
@@ -2259,6 +2292,7 @@ PROJECT_ROOT	.vim/plugged/vim-gutentags/plat/win32/update_tags.cmd	/^set PROJECT
 PROJ_ROOT	.vim/plugged/vim-gutentags/plat/win32/update_scopedb.cmd	/^    set PROJ_ROOT=%~2$/;"	v
 PYTEST_ADDOPTS	.vim/plugged/jedi-vim/Makefile	/^test_coverage: export PYTEST_ADDOPTS:=--cov pythonx --cov test --cov-report=term-missing:skip-co/;"	m
 Package management	.vim/plugged/vista.vim/README.md	/^### Package management$/;"	S	section:Vista.vim""Installation
+Palette	.vim/plugged/gruvbox/README.md	/^Palette$/;"	s
 Param	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^class Param(PythonBaseNode):$/;"	c
 ParamDefinition	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/classes.py	/^class ParamDefinition(Definition):$/;"	c
 ParamIssue	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/arguments.py	/^class ParamIssue(Exception):$/;"	c
@@ -2390,6 +2424,7 @@ Refar	.vim/plugged/far.vim/plugin/far.vim	/^function! Refar(rngmode, rngline1, r
 Referenced:	.vim/plugged/rainbow/README.md	/^### Referenced:$/;"	S	section:Rainbow Parentheses Improved""Description [(这里有中文版)](https://github.com/luochen1990/rainbow/blob/master/README_zh.md)
 References	.vim/plugged/vim-translator/README.md	/^## References$/;"	s	chapter:vim-translator
 Regular expression vs. predefined rules	.vim/plugged/vim-easy-align/README.md	/^### Regular expression vs. predefined rules$/;"	S	section:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)""Usage
+Related Plugin	.vim/plugged/ag.vim/README.md	/^### Related Plugin ###$/;"	S	section:ag.vim""Usage
 Related Projects	.vim/plugged/vim-gutentags/README.md	/^# Related Projects$/;"	c
 Related Topics	.vim/plugged/jedi-vim/pythonx/jedi/docs/_themes/flask/relations.html	/^<h3>Related Topics<\/h3>$/;"	j
 Related Topics	.vim/plugged/jedi-vim/pythonx/parso/docs/_themes/flask/relations.html	/^<h3>Related Topics<\/h3>$/;"	j
@@ -2453,6 +2488,7 @@ Screencasts	.vim/plugged/vim-fugitive/README.markdown	/^## Screencasts$/;"	s	cha
 Screenshot	.vim/plugged/git-messenger.vim/README.md	/^## Screenshot$/;"	s	chapter:git-messenger.vim
 Screenshot	.vim/plugged/vim-startify/README.md	/^## Screenshot$/;"	s
 Screenshots	.vim/plugged/LeaderF/README.md	/^Screenshots$/;"	s	chapter:LeaderF
+Screenshots	.vim/plugged/gruvbox/README.md	/^Screenshots$/;"	s
 Screenshots	.vim/plugged/indentLine/README.md	/^## Screenshots$/;"	s	chapter:indentLine
 Screenshots	.vim/plugged/jellybeans.vim/README.markdown	/^## Screenshots$/;"	s	chapter:jellybeans.vim
 Screenshots	.vim/plugged/vim-airline-themes/README.md	/^# Screenshots$/;"	c
@@ -2469,6 +2505,7 @@ SectionSpec	.vim/plugged/vim-airline/t/section.vim	/^function! SectionSpec()$/;"
 Self promotion	.vim/plugged/indentLine/README.md	/^## Self promotion$/;"	s	chapter:indentLine
 Self-Diagnosis	.vim/plugged/nerdtree/.github/ISSUE_TEMPLATE/bug.md	/^#### Self-Diagnosis$/;"	t	section:labels: bug
 Self-Diagnosis	.vim/plugged/nerdtree/.github/ISSUE_TEMPLATE/question.md	/^#### Self-Diagnosis$/;"	t	section:labels: "general question"
+Self-Promotion	.vim/plugged/gruvbox/README.md	/^Self-Promotion$/;"	s
 Self-Promotion	.vim/plugged/vim-commentary/README.markdown	/^## Self-Promotion$/;"	s	chapter:commentary.vim
 Self-Promotion	.vim/plugged/vim-fugitive/README.markdown	/^## Self-Promotion$/;"	s	chapter:fugitive.vim
 SelfAttributeFilter	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/value/instance.py	/^class SelfAttributeFilter(ClassFilter):$/;"	c
@@ -2566,6 +2603,7 @@ Syntax example	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/typeshed/CONT
 Syntax-aware alignment	.vim/plugged/vim-easy-align/README.md	/^### Syntax-aware alignment$/;"	S	section:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)""Demo
 SyntaxRule	.vim/plugged/jedi-vim/pythonx/parso/parso/python/errors.py	/^class SyntaxRule(Rule):$/;"	c
 System-wide installation via a package manager	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/installation.rst	/^System-wide installation via a package manager$/;"	s	chapter:Installation and Configuration
+T	.vim/plugged/ag.vim/autoload/ag.vim	/^      nnoremap <silent> <buffer> T  <C-w><CR><C-w>TgT<C-W><C-W>$/;"	m
 T	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> T :call far#change_exclude_all(-1)<cr>$/;"	m
 T	.vim/plugged/vim-easymotion/t/easymotion_spec.vim	/^        map T <Plug>(easymotion-T)$/;"	m
 T	.vim/plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><nowait><silent> T             :call startify#set_batchmode('T')<cr>$/;"	m
@@ -2690,6 +2728,7 @@ Themes	.vim/plugged/vim-airline/CONTRIBUTING.md	/^# Themes$/;"	c
 Themes	.vim/plugged/vim-airline/README.md	/^## Themes$/;"	s	chapter:Features
 Things about your system and environment（请在此填写你的系统信息）	.vim/plugged/ctrlsf.vim/.github/ISSUE_TEMPLATE.md	/^#### Things about your system and environment（请在此填写你的系统信息）$/;"	t	section:Issue template
 Tips	.vim/plugged/ctrlsf.vim/README.md	/^## Tips$/;"	s	chapter:ctrlsf.vim
+ToDo	.vim/plugged/gruvbox/README.md	/^ToDo$/;"	s
 Token	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tokenize.py	/^class Token(namedtuple('Token', ['type', 'string', 'start_pos', 'prefix'])):$/;"	c
 TokenCollection	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tokenize.py	/^TokenCollection = namedtuple($/;"	v
 TokenType	.vim/plugged/jedi-vim/pythonx/parso/parso/python/token.py	/^class TokenType(object):$/;"	c
@@ -2745,6 +2784,7 @@ Unlock	.vim/plugged/vim-gutentags/plat/win32/update_tags.cmd	/^:Unlock$/;"	l
 UnresolvableParamName	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/compiled/value.py	/^class UnresolvableParamName(ParamNameInterface, AbstractNameDefinition):$/;"	c
 Updating Typeshed	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/README_typeshed.md	/^## Updating Typeshed$/;"	s	chapter:Typeshed in Jedi
 Usage	.vim/plugged/LeaderF/README.md	/^Usage$/;"	s	chapter:LeaderF
+Usage	.vim/plugged/ag.vim/README.md	/^## Usage ##$/;"	s	chapter:ag.vim
 Usage	.vim/plugged/far.vim/README.md	/^## Usage$/;"	s	chapter:far.vim - Find And Replace Vim plugin
 Usage	.vim/plugged/fzf.vim/README.md	/^### Usage$/;"	S	section:fzf :heart: vim""Mappings
 Usage	.vim/plugged/git-messenger.vim/README.md	/^## Usage$/;"	s	chapter:git-messenger.vim
@@ -2912,6 +2952,7 @@ ZipFileIO	.vim/plugged/jedi-vim/pythonx/jedi/jedi/file_io.py	/^class ZipFileIO(f
 [0.8] - 2016-03-09	.vim/plugged/vim-airline/CHANGELOG.md	/^## [0.8] - 2016-03-09$/;"	s	chapter:Change Log
 [0.9] - 2018-01-15	.vim/plugged/vim-airline/CHANGELOG.md	/^## [0.9] - 2018-01-15$/;"	s	chapter:Change Log
 [LanguageClient][57]	.vim/plugged/vim-airline/README.md	/^#### [LanguageClient][57]$/;"	t	section:Features""Seamless integration
+[Unreleased](https://github.com/morhetz/gruvbox/tree/HEAD)	.vim/plugged/gruvbox/CHANGELOG.md	/^## [Unreleased](https:\/\/github.com\/morhetz\/gruvbox\/tree\/HEAD)$/;"	s	chapter:Change Log
 [Vundle.vim](https://github.com/VundleVim/Vundle.vim)	.vim/plugged/nerdtree/README.markdown	/^#### [Vundle.vim](https:\/\/github.com\/VundleVim\/Vundle.vim)$/;"	t	section:The NERDTree [![Vint](https://github.com/preservim/nerdtree/workflows/Vint/badge.svg)](https://github.com/preservim/nerdtree/actions?workflow=Vint)""Installation
 [[	.vim/autoload/plug.vim	/^  nnoremap <silent> <buffer> [[ :silent! call <SID>section('b')<cr>$/;"	m
 [[	.vim/coc-settings.json	/^        "[[": "sourcePrev",$/;"	s	object:explorer.keyMappings
@@ -2939,6 +2980,8 @@ ZipFileIO	.vim/plugged/jedi-vim/pythonx/jedi/jedi/file_io.py	/^class ZipFileIO(f
 [tagbar][19]	.vim/plugged/vim-airline/README.md	/^#### [tagbar][19]$/;"	t	section:Features""Seamless integration
 [tmuxline][35]	.vim/plugged/vim-airline/README.md	/^#### [tmuxline][35]$/;"	t	section:Features""Seamless integration
 [unite.vim][9]	.vim/plugged/vim-airline/README.md	/^#### [unite.vim][9]$/;"	t	section:Features""Seamless integration
+[v0.0.8](https://github.com/morhetz/gruvbox/tree/v0.0.8) (2012-12-08)	.vim/plugged/gruvbox/CHANGELOG.md	/^## [v0.0.8](https:\/\/github.com\/morhetz\/gruvbox\/tree\/v0.0.8) (2012-12-08)$/;"	s	chapter:Change Log
+[v1.3.5](https://github.com/morhetz/gruvbox/tree/v1.3.5) (2014-03-19)	.vim/plugged/gruvbox/CHANGELOG.md	/^## [v1.3.5](https:\/\/github.com\/morhetz\/gruvbox\/tree\/v1.3.5) (2014-03-19)$/;"	s	chapter:Change Log
 [vim-plug](https://github.com/junegunn/vim-plug)	.vim/plugged/far.vim/README.md	/^#### [vim-plug](https:\/\/github.com\/junegunn\/vim-plug)$/;"	t	section:far.vim - Find And Replace Vim plugin""Installation
 [vim-plug](https://github.com/junegunn/vim-plug)	.vim/plugged/nerdtree/README.markdown	/^#### [vim-plug](https:\/\/github.com\/junegunn\/vim-plug)$/;"	t	section:The NERDTree [![Vint](https://github.com/preservim/nerdtree/workflows/Vint/badge.svg)](https://github.com/preservim/nerdtree/actions?workflow=Vint)""Installation
 [vimagit][50]	.vim/plugged/vim-airline/README.md	/^#### [vimagit][50]$/;"	t	section:Features""Seamless integration
@@ -4976,6 +5019,12 @@ additionalSchemes	.vim/plugged/coc.nvim/data/schema.json	/^        "additionalSc
 addopts	.vim/plugged/jedi-vim/pythonx/jedi/pytest.ini	/^addopts = --doctest-modules$/;"	k	section:pytest
 addopts	.vim/plugged/jedi-vim/pythonx/parso/pytest.ini	/^addopts = --doctest-modules$/;"	k	section:pytest
 after	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/ordering.py	/^    def after(self):$/;"	m	class:A
+ag#Ag	.vim/plugged/ag.vim/autoload/ag.vim	/^function! ag#Ag(cmd, args)$/;"	f
+ag#AgBuffer	.vim/plugged/ag.vim/autoload/ag.vim	/^function! ag#AgBuffer(cmd, args)$/;"	f
+ag#AgFromSearch	.vim/plugged/ag.vim/autoload/ag.vim	/^function! ag#AgFromSearch(cmd, args)$/;"	f
+ag#AgHelp	.vim/plugged/ag.vim/autoload/ag.vim	/^function! ag#AgHelp(cmd,args)$/;"	f
+ag#GetDocLocations	.vim/plugged/ag.vim/autoload/ag.vim	/^function! ag#GetDocLocations()$/;"	f
+ag.vim	.vim/plugged/ag.vim/README.md	/^# ag.vim #$/;"	c
 airline	.vim/plugged/vim-airline/autoload/airline/extensions/cursormode.vim	/^augroup airline#extensions#cursormode$/;"	a
 airline	.vim/plugged/vim-airline/plugin/airline.vim	/^    augroup airline$/;"	a
 airline#add_inactive_statusline_func	.vim/plugged/vim-airline/autoload/airline.vim	/^function! airline#add_inactive_statusline_func(name)$/;"	f
@@ -5255,6 +5304,7 @@ airline#themes#biogoo#refresh	.vim/plugged/vim-airline-themes/autoload/airline/t
 airline#themes#generate_color_map	.vim/plugged/vim-airline/autoload/airline/themes.vim	/^function! airline#themes#generate_color_map(sect1, sect2, sect3, ...)$/;"	f
 airline#themes#get_highlight	.vim/plugged/vim-airline/autoload/airline/themes.vim	/^function! airline#themes#get_highlight(group, ...)$/;"	f
 airline#themes#get_highlight2	.vim/plugged/vim-airline/autoload/airline/themes.vim	/^function! airline#themes#get_highlight2(fg, bg, ...)$/;"	f
+airline#themes#gruvbox#refresh	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^function! airline#themes#gruvbox#refresh()$/;"	f
 airline#themes#hybrid#refresh	.vim/plugged/vim-airline-themes/autoload/airline/themes/hybrid.vim	/^function! airline#themes#hybrid#refresh()$/;"	f
 airline#themes#kalisi#refresh	.vim/plugged/vim-airline-themes/autoload/airline/themes/kalisi.vim	/^function! airline#themes#kalisi#refresh()$/;"	f
 airline#themes#lucius#refresh	.vim/plugged/vim-airline-themes/autoload/airline/themes/lucius.vim	/^function! airline#themes#lucius#refresh()$/;"	f
@@ -5437,6 +5487,7 @@ attr_y	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/stdlib.py	/^    attr_y
 attribute	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/inheritance.py	/^    attribute = 3$/;"	v	class:Super
 attribute	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/inheritance.py	/^    def attribute(self):$/;"	m	class:Sub
 author	.vim/plugged/coc.nvim/package.json	/^  "author": "Qiming Zhao <chemzqm@gmail.com>",$/;"	s
+author	.vim/plugged/gruvbox/package.json	/^  "author": "Pavel Pertsev <morhetz@gmail.com>",$/;"	s
 auto_import_json	.vim/plugged/jedi-vim/pythonx/jedi/test/test_settings.py	/^def auto_import_json(monkeypatch):$/;"	f
 auto_import_modules	.vim/plugged/jedi-vim/pythonx/jedi/jedi/settings.py	/^auto_import_modules = [$/;"	v
 autoclass_content	.vim/plugged/jedi-vim/pythonx/jedi/docs/conf.py	/^autoclass_content = 'both'$/;"	v
@@ -7795,6 +7846,20 @@ g:__gutentags_vim_is_leaving	.vim/plugged/vim-gutentags/plugin/gutentags.vim	/^l
 g:_fugitive_last_job	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^    let g:_fugitive_last_job = state$/;"	v
 g:_jedi_init_error	.vim/plugged/jedi-vim/autoload/jedi.vim	/^    let g:_jedi_init_error = 0$/;"	v
 g:_plug_bang	.vim/autoload/plug.vim	/^    let g:_plug_bang = (s:is_win && has('gui_running') ? 'silent ' : '').'!'.escape(cmd, '#!%')$/;"	v
+g:ag_apply_lmappings	.vim/plugged/ag.vim/autoload/ag.vim	/^  let g:ag_apply_lmappings=1$/;"	v
+g:ag_apply_qmappings	.vim/plugged/ag.vim/autoload/ag.vim	/^  let g:ag_apply_qmappings=1$/;"	v
+g:ag_format	.vim/plugged/ag.vim/autoload/ag.vim	/^    let g:ag_format="%f"$/;"	v
+g:ag_format	.vim/plugged/ag.vim/autoload/ag.vim	/^    let g:ag_format="%f:%l:%c:%m"$/;"	v
+g:ag_format	.vim/plugged/ag.vim/autoload/ag.vim	/^    let g:ag_format=s:ag_format_backup$/;"	v
+g:ag_format	.vim/plugged/ag.vim/autoload/ag.vim	/^  let g:ag_format = g:agformat$/;"	v
+g:ag_highlight	.vim/plugged/ag.vim/autoload/ag.vim	/^  let g:ag_highlight = g:aghighlight$/;"	v
+g:ag_lhandler	.vim/plugged/ag.vim/autoload/ag.vim	/^  let g:ag_lhandler="botright lopen"$/;"	v
+g:ag_mapping_message	.vim/plugged/ag.vim/autoload/ag.vim	/^  let g:ag_mapping_message=1$/;"	v
+g:ag_prg	.vim/plugged/ag.vim/autoload/ag.vim	/^    let g:ag_prg="ag --column --nogroup --noheading"$/;"	v
+g:ag_prg	.vim/plugged/ag.vim/autoload/ag.vim	/^    let g:ag_prg="ag --vimgrep"$/;"	v
+g:ag_prg	.vim/plugged/ag.vim/autoload/ag.vim	/^  let g:ag_prg = g:agprg$/;"	v
+g:ag_qhandler	.vim/plugged/ag.vim/autoload/ag.vim	/^  let g:ag_qhandler="botright copen"$/;"	v
+g:ag_working_path_mode	.vim/plugged/ag.vim/autoload/ag.vim	/^    let g:ag_working_path_mode = 'c'$/;"	v
 g:airline#extensions#default#layout	.vim/plugged/vim-airline/t/extensions_default.vim	/^let g:airline#extensions#default#layout = [$/;"	v
 g:airline#extensions#example#number_of_cats	.vim/plugged/vim-airline/autoload/airline/extensions/example.vim	/^  let g:airline#extensions#example#number_of_cats = 42$/;"	v
 g:airline#extensions#localsearch#loaded	.vim/plugged/vim-airline/autoload/airline/extensions/localsearch.vim	/^let g:airline#extensions#localsearch#loaded = 001$/;"	v
@@ -8530,6 +8595,35 @@ g:airline#themes#fruit_punch#palette	.vim/plugged/vim-airline-themes/autoload/ai
 g:airline#themes#fruit_punch#palette	.vim/plugged/vim-airline-themes/autoload/airline/themes/fruit_punch.vim	/^let g:airline#themes#fruit_punch#palette.normal =$/;"	v
 g:airline#themes#fruit_punch#palette	.vim/plugged/vim-airline-themes/autoload/airline/themes/fruit_punch.vim	/^let g:airline#themes#fruit_punch#palette.replace =$/;"	v
 g:airline#themes#fruit_punch#palette	.vim/plugged/vim-airline-themes/autoload/airline/themes/fruit_punch.vim	/^let g:airline#themes#fruit_punch#palette.visual =$/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.accents = { 'red': accents_group }$/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, /;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.inactive_modified = { 'airline_c': modified_group }$/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.insert.airline_error = g:airline#themes#gruvbox#palette.n/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.insert.airline_warning = g:airline#themes#gruvbox#palette/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.insert_modified = g:airline#themes#gruvbox#palette.normal/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.insert_modified.airline_error = g:airline#themes#gruvbox#/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.insert_modified.airline_warning = g:airline#themes#gruvbo/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.normal.airline_error = error_group$/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.normal.airline_warning = warning_group$/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.normal_modified = { 'airline_c': modified_group }$/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.normal_modified.airline_error = error_group$/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.normal_modified.airline_warning = warning_group$/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.replace = airline#themes#generate_color_map(s:R1, s:R2, s/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.replace.airline_error = g:airline#themes#gruvbox#palette./;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.replace.airline_warning = g:airline#themes#gruvbox#palett/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.replace_modified = g:airline#themes#gruvbox#palette.norma/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.replace_modified.airline_error = g:airline#themes#gruvbox/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.replace_modified.airline_warning = g:airline#themes#gruvb/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.tabline = {$/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.visual.airline_error = g:airline#themes#gruvbox#palette.n/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.visual.airline_warning = g:airline#themes#gruvbox#palette/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.visual_modified = { 'airline_c': [ s:V3[0], '', s:V3[2], /;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.visual_modified.airline_error = g:airline#themes#gruvbox#/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^  let g:airline#themes#gruvbox#palette.visual_modified.airline_warning = g:airline#themes#gruvbo/;"	v
+g:airline#themes#gruvbox#palette	.vim/plugged/gruvbox/autoload/airline/themes/gruvbox.vim	/^let g:airline#themes#gruvbox#palette = {}$/;"	v
 g:airline#themes#hybrid#palette	.vim/plugged/vim-airline-themes/autoload/airline/themes/hybrid.vim	/^    let g:airline#themes#hybrid#palette.accents = {$/;"	v
 g:airline#themes#hybrid#palette	.vim/plugged/vim-airline-themes/autoload/airline/themes/hybrid.vim	/^    let g:airline#themes#hybrid#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA,/;"	v
 g:airline#themes#hybrid#palette	.vim/plugged/vim-airline-themes/autoload/airline/themes/hybrid.vim	/^    let g:airline#themes#hybrid#palette.inactive_modified = g:airline#themes#hybrid#palette.norm/;"	v
@@ -9229,6 +9323,7 @@ g:coc_stl_format	.vim/plugged/vim-airline/autoload/airline/extensions/coc.vim	/^
 g:coc_user_config	.vim/plugged/coc.nvim/autoload/coc.vim	/^  let g:coc_user_config[a:section] = a:value$/;"	v
 g:coc_user_config	.vim/plugged/coc.nvim/autoload/coc.vim	/^let g:coc_user_config = get(g:, 'coc_user_config', {})$/;"	v
 g:coc_vim_commands	.vim/plugged/coc.nvim/autoload/coc.vim	/^let g:coc_vim_commands = []$/;"	v
+g:colors_name	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let g:colors_name='gruvbox'$/;"	v
 g:comp	.vim/plugged/jedi-vim/test/vspec/pyimport.vim	/^        let g:comp = jedi#py_import_completions('zip', 0, 0)$/;"	v
 g:comp	.vim/plugged/jedi-vim/test/vspec/pyimport.vim	/^        let g:comp = substitute(g:comp, '^zipapp\\n', '', '')$/;"	v
 g:count	.vim/plugged/vim-airline/t/util.vim	/^    let g:count = 0$/;"	v
@@ -9339,11 +9434,27 @@ g:gitgutter_highlight_lines	.vim/plugged/vim-gitgutter/autoload/gitgutter/highli
 g:gitgutter_hook_context	.vim/plugged/vim-gitgutter/autoload/gitgutter/diff.vim	/^    let g:gitgutter_hook_context = {'bufnr': a:bufnr}$/;"	v
 g:gitgutter_max_signs	.vim/init.vim	/^let g:gitgutter_max_signs = 800     "更改显示标示行数限制$/;"	v
 g:gitgutter_max_signs	.vimrc	/^let g:gitgutter_max_signs = 800     "更改显示标示行数限制$/;"	v
+g:gitgutter_override_sign_column_highlight	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:gitgutter_override_sign_column_highlight = 0$/;"	v
 g:gitgutter_sign_allow_clobber	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^  let g:gitgutter_sign_allow_clobber = 1$/;"	v
 g:gitgutter_sign_priority	.vim/plugged/vim-gitgutter/test/test_gitgutter.vim	/^  let g:gitgutter_sign_priority = 10$/;"	v
 g:gitgutter_sign_priority	.vim/plugged/vim-gitgutter/test/test_gitgutter.vim	/^  let g:gitgutter_sign_priority = 5$/;"	v
 g:gitgutter_signs	.vim/plugged/vim-gitgutter/autoload/gitgutter/sign.vim	/^  let g:gitgutter_signs = 0$/;"	v
 g:gitgutter_signs	.vim/plugged/vim-gitgutter/autoload/gitgutter/sign.vim	/^  let g:gitgutter_signs = 1$/;"	v
+g:gruvbox_bold	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:gruvbox_bold=1$/;"	v
+g:gruvbox_contrast_dark	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:gruvbox_contrast_dark='medium'$/;"	v
+g:gruvbox_contrast_light	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:gruvbox_contrast_light='medium'$/;"	v
+g:gruvbox_guisp_fallback	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:gruvbox_guisp_fallback='NONE'$/;"	v
+g:gruvbox_improved_strings	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:gruvbox_improved_strings=0$/;"	v
+g:gruvbox_improved_warnings	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:gruvbox_improved_warnings=0$/;"	v
+g:gruvbox_inverse	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:gruvbox_inverse=1$/;"	v
+g:gruvbox_invert_indent_guides	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:gruvbox_invert_indent_guides=0$/;"	v
+g:gruvbox_invert_signs	.vim/plugged/gruvbox/autoload/gruvbox.vim	/^    let g:gruvbox_invert_signs=0$/;"	v
+g:gruvbox_invert_signs	.vim/plugged/gruvbox/autoload/gruvbox.vim	/^    let g:gruvbox_invert_signs=1$/;"	v
+g:gruvbox_italic	.vim/plugged/gruvbox/colors/gruvbox.vim	/^    let g:gruvbox_italic=0$/;"	v
+g:gruvbox_italic	.vim/plugged/gruvbox/colors/gruvbox.vim	/^    let g:gruvbox_italic=1$/;"	v
+g:gruvbox_termcolors	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:gruvbox_termcolors=256$/;"	v
+g:gruvbox_undercurl	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:gruvbox_undercurl=1$/;"	v
+g:gruvbox_underline	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:gruvbox_underline=1$/;"	v
 g:gutentags_add_ctrlp_root_markers	.vim/plugged/vim-gutentags/plugin/gutentags.vim	/^let g:gutentags_add_ctrlp_root_markers = get(g:, 'gutentags_add_ctrlp_root_markers', 1)$/;"	v
 g:gutentags_add_default_project_roots	.vim/plugged/vim-gutentags/plugin/gutentags.vim	/^let g:gutentags_add_default_project_roots = get(g:, 'gutentags_add_default_project_roots', 1)$/;"	v
 g:gutentags_auto_add_cscope	.vim/plugged/vim-gutentags/autoload/gutentags/cscope.vim	/^    let g:gutentags_auto_add_cscope = 1$/;"	v
@@ -9410,7 +9521,9 @@ g:indentLine_char	.vim/init.vim	/^let g:indentLine_char = '|'$/;"	v
 g:indentLine_char	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^let g:indentLine_char = get(g:, 'indentLine_char', (&encoding ==# "utf-8" && &term isnot# "linux/;"	v
 g:indentLine_char	.vimrc	/^let g:indentLine_char = '|'$/;"	v
 g:indentLine_char_list	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^let g:indentLine_char_list = get(g:, 'indentLine_char_list', [])$/;"	v
+g:indentLine_color_gui	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:indentLine_color_gui = s:bg2[0]$/;"	v
 g:indentLine_color_term	.vim/init.vim	/^let g:indentLine_color_term = 238$/;"	v
+g:indentLine_color_term	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:indentLine_color_term = s:bg2[1]$/;"	v
 g:indentLine_color_term	.vimrc	/^let g:indentLine_color_term = 238$/;"	v
 g:indentLine_defaultGroup	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^let g:indentLine_defaultGroup = get(g:, 'indentLine_defaultGroup', "")$/;"	v
 g:indentLine_enabled	.vim/init.vim	/^let g:indentLine_enabled = 1$/;"	v
@@ -9432,6 +9545,7 @@ g:indentLine_newVersion	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^le
 g:indentLine_setColors	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^let g:indentLine_setColors = get(g:, 'indentLine_setColors', 1)$/;"	v
 g:indentLine_setConceal	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^let g:indentLine_setConceal = get(g:, 'indentLine_setConceal', 1)$/;"	v
 g:indentLine_showFirstIndentLevel	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^let g:indentLine_showFirstIndentLevel = get(g:, 'indentLine_showFirstIndentLevel', 0)$/;"	v
+g:indent_guides_auto_colors	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:indent_guides_auto_colors = 0$/;"	v
 g:indent_guides_auto_colors	.vim/plugged/jellybeans.vim/colors/jellybeans.vim	/^  let g:indent_guides_auto_colors = 0$/;"	v
 g:interestingWordsDefaultMappings	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^    let g:interestingWordsDefaultMappings = 1$/;"	v
 g:interestingWordsGUIColors	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^let g:interestingWordsGUIColors = exists('g:interestingWordsGUIColors') ? g:interestingWordsGUIC/;"	v
@@ -9462,6 +9576,7 @@ g:leaderf#colorscheme#default#palette	.vim/plugged/LeaderF/autoload/leaderf/colo
 g:leaderf#colorscheme#powerline#palette	.vim/plugged/LeaderF/autoload/leaderf/colorscheme/powerline.vim	/^let g:leaderf#colorscheme#powerline#palette = leaderf#colorscheme#mergePalette(s:palette)$/;"	v
 g:leaderf#loaded	.vim/plugged/LeaderF/autoload/leaderf.vim	/^    let g:leaderf#loaded = 1$/;"	v
 g:leaderf_loaded	.vim/plugged/LeaderF/plugin/leaderf.vim	/^    let g:leaderf_loaded = 1$/;"	v
+g:lightline#colorscheme#gruvbox#palette	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let g:lightline#colorscheme#gruvbox#palette = lightline#colorscheme#flatten(s:p)$/;"	v
 g:loaded_airline	.vim/plugged/vim-airline/plugin/airline.vim	/^let g:loaded_airline = 1$/;"	v
 g:loaded_airline_themes	.vim/plugged/vim-airline-themes/plugin/airline-themes.vim	/^let g:loaded_airline_themes = 1$/;"	v
 g:loaded_choosewin	.vim/plugged/vim-choosewin/plugin/choosewin.vim	/^let g:loaded_choosewin = 1$/;"	v
@@ -9483,6 +9598,8 @@ g:loaded_translator	.vim/plugged/vim-translator/plugin/translator.vim	/^let g:lo
 g:loaded_xtabline	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^    let g:loaded_xtabline = 1$/;"	v
 g:mysyntaxfile	.vim/plugged/indentLine/after/plugin/indentLine.vim	/^    let g:mysyntaxfile = g:indentLine_mysyntaxfile$/;"	v
 g:netrw_force_overwrite_statusline	.vim/plugged/vim-airline/autoload/airline/extensions/netrw.vim	/^  let g:netrw_force_overwrite_statusline = 0$/;"	v
+g:niji_dark_colours	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let g:niji_dark_colours = g:rbpt_colorpairs$/;"	v
+g:niji_light_colours	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let g:niji_light_colours = g:rbpt_colorpairs$/;"	v
 g:obsession_append	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^        let g:obsession_append = [string]$/;"	v
 g:plug_home	.vim/autoload/plug.vim	/^  let g:plug_home = home$/;"	v
 g:plugs	.vim/autoload/plug.vim	/^    let g:plugs[name] = spec$/;"	v
@@ -9492,6 +9609,12 @@ g:plugs_order	.vim/autoload/plug.vim	/^  let g:plugs_order = get(g:, 'plugs_orde
 g:promptline_symbols	.vim/plugged/vim-airline/autoload/airline/extensions/promptline.vim	/^    let g:promptline_symbols = {$/;"	v
 g:rainbow_active	.vim/init.vim	/^let g:rainbow_active = 1$/;"	v
 g:rainbow_active	.vimrc	/^let g:rainbow_active = 1$/;"	v
+g:rainbow_conf	.vim/plugged/gruvbox/colors/gruvbox.vim	/^   let g:rainbow_conf = {}$/;"	v
+g:rainbow_conf	.vim/plugged/gruvbox/colors/gruvbox.vim	/^   let g:rainbow_conf['ctermfgs'] = g:rainbow_ctermfgs$/;"	v
+g:rainbow_conf	.vim/plugged/gruvbox/colors/gruvbox.vim	/^   let g:rainbow_conf['guifgs'] = g:rainbow_guifgs$/;"	v
+g:rainbow_ctermfgs	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let g:rainbow_ctermfgs = [ '166', 'red', 'magenta', 'blue' ]$/;"	v
+g:rainbow_guifgs	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let g:rainbow_guifgs = [ '#d65d0e', '#cc241d', '#b16286', '#458588' ]$/;"	v
+g:rbpt_colorpairs	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:rbpt_colorpairs =$/;"	v
 g:repeat_tick	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^                    let g:repeat_tick = b:changedtick$/;"	v
 g:skim_colors	.vim/plugged/vista.vim/autoload/vista/finder/skim.vim	/^      let g:skim_colors = old_skim_colors$/;"	v
 g:smartim_debug	.vim/plugged/smartim/plugin/smartim.vim	/^  let g:smartim_debug = 0$/;"	v
@@ -9513,12 +9636,28 @@ g:syntastic_stl_format	.vim/plugged/vim-airline/autoload/airline/extensions/synt
 g:syntastic_stl_format	.vim/plugged/vim-airline/autoload/airline/extensions/syntastic.vim	/^    let g:syntastic_stl_format = get(g:, 'airline#extensions#syntastic#stl_format_warn', '%W{[%f/;"	v
 g:taboo_tabline	.vim/plugged/vim-airline/autoload/airline/extensions/tabline.vim	/^  let g:taboo_tabline = 0$/;"	v
 g:tagbar_status_func	.vim/plugged/vim-airline/autoload/airline/extensions/tagbar.vim	/^  let g:tagbar_status_func = 'airline#extensions#tagbar#get_status'$/;"	v
+g:terminal_color_0	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_0 = s:bg0[0]$/;"	v
+g:terminal_color_1	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_1 = s:gb.neutral_red[0]$/;"	v
+g:terminal_color_10	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_10 = s:green[0]$/;"	v
+g:terminal_color_11	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_11 = s:yellow[0]$/;"	v
+g:terminal_color_12	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_12 = s:blue[0]$/;"	v
+g:terminal_color_13	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_13 = s:purple[0]$/;"	v
+g:terminal_color_14	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_14 = s:aqua[0]$/;"	v
+g:terminal_color_15	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_15 = s:fg1[0]$/;"	v
+g:terminal_color_2	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_2 = s:gb.neutral_green[0]$/;"	v
+g:terminal_color_3	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_3 = s:gb.neutral_yellow[0]$/;"	v
+g:terminal_color_4	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_4 = s:gb.neutral_blue[0]$/;"	v
+g:terminal_color_5	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_5 = s:gb.neutral_purple[0]$/;"	v
+g:terminal_color_6	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_6 = s:gb.neutral_aqua[0]$/;"	v
+g:terminal_color_7	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_7 = s:fg4[0]$/;"	v
+g:terminal_color_8	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_8 = s:gray[0]$/;"	v
+g:terminal_color_9	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let g:terminal_color_9 = s:red[0]$/;"	v
 g:testname	.vim/plugged/vim-gitgutter/test/runner.vim	/^let g:testname = expand('%')$/;"	v
 g:translator_debug_mode	.vim/plugged/vim-translator/plugin/translator.vim	/^let g:translator_debug_mode = get(g:, 'translator_debug_mode', v:false)$/;"	v
-g:translator_default_engines	.vim/init.vim	/^let g:translator_default_engines = ['ciba', 'bing', 'google']$/;"	v
+g:translator_default_engines	.vim/init.vim	/^let g:translator_default_engines = ['bing']$/;"	v
 g:translator_default_engines	.vim/plugged/vim-translator/plugin/translator.vim	/^  let g:translator_default_engines = get(g:, 'translator_default_engines', ['ciba', 'youdao'])$/;"	v
 g:translator_default_engines	.vim/plugged/vim-translator/plugin/translator.vim	/^  let g:translator_default_engines = get(g:, 'translator_default_engines', ['google', 'bing'])$/;"	v
-g:translator_default_engines	.vimrc	/^let g:translator_default_engines = ['ciba', 'bing', 'google']$/;"	v
+g:translator_default_engines	.vimrc	/^let g:translator_default_engines = ['bing']$/;"	v
 g:translator_history_enable	.vim/init.vim	/^let g:translator_history_enable = 1$/;"	v
 g:translator_history_enable	.vim/plugged/vim-translator/plugin/translator.vim	/^let g:translator_history_enable = get(g:, 'translator_history_enable', v:false)$/;"	v
 g:translator_history_enable	.vimrc	/^let g:translator_history_enable = 1$/;"	v
@@ -9534,6 +9673,7 @@ g:translator_window_max_width	.vim/plugged/vim-translator/plugin/translator.vim	
 g:translator_window_type	.vim/plugged/vim-translator/plugin/translator.vim	/^let g:translator_window_type = get(g:, 'translator_window_type', 'popup')$/;"	v
 g:unite_force_overwrite_statusline	.vim/plugged/vim-airline/autoload/airline/extensions/unite.vim	/^  let g:unite_force_overwrite_statusline = 0$/;"	v
 g:vimfiler_force_overwrite_statusline	.vim/plugged/vim-airline/autoload/airline/extensions.vim	/^    let g:vimfiler_force_overwrite_statusline = 0$/;"	v
+g:vimshell_escape_colors	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let g:vimshell_escape_colors = [$/;"	v
 g:virtual_scriptnames	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^    let g:virtual_scriptnames = {}$/;"	v
 g:virtual_scriptnames	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^  let g:virtual_scriptnames[temp] = amatch$/;"	v
 g:vista#executive#ctags#support_json_format	.vim/init.vim	/^let g:vista#executive#ctags#support_json_format = 1$/;"	v
@@ -9543,9 +9683,9 @@ g:vista#executives	.vim/init.vim	/^let g:vista#executives = ['ale', 'coc', 'ctag
 g:vista#executives	.vim/plugged/vista.vim/autoload/vista.vim	/^let g:vista#executives = vista#FindItemsUnderDirectory(s:cur_dir.'\/vista\/executive')$/;"	v
 g:vista#executives	.vimrc	/^let g:vista#executives = ['ale', 'coc', 'ctags', 'lcn', 'vim_lsc', 'vim_lsp']$/;"	v
 g:vista#extensions	.vim/plugged/vista.vim/autoload/vista.vim	/^let g:vista#extensions = vista#FindItemsUnderDirectory(s:cur_dir.'\/vista\/extension')$/;"	v
-g:vista#finders	.vim/init.vim	/^let g:vista#finders = ['fzf', 'skim']$/;"	v
+g:vista#finders	.vim/init.vim	/^let g:vista#finders = ['LeaderF']$/;"	v
 g:vista#finders	.vim/plugged/vista.vim/autoload/vista.vim	/^let g:vista#finders = vista#FindItemsUnderDirectory(s:cur_dir.'\/vista\/finder')$/;"	v
-g:vista#finders	.vimrc	/^let g:vista#finders = ['fzf', 'skim']$/;"	v
+g:vista#finders	.vimrc	/^let g:vista#finders = ['LeaderF']$/;"	v
 g:vista#renderer#ctags	.vim/init.vim	/^let g:vista#renderer#ctags = 'default'$/;"	v
 g:vista#renderer#ctags	.vim/plugged/vista.vim/autoload/vista/renderer.vim	/^let g:vista#renderer#ctags = get(g:, 'vista#renderer#ctags', 'default')$/;"	v
 g:vista#renderer#ctags	.vimrc	/^let g:vista#renderer#ctags = 'default'$/;"	v
@@ -9619,8 +9759,8 @@ g:vista#types#uctags#verilog#	.vim/plugged/vista.vim/autoload/vista/types/uctags
 g:vista#types#uctags#vhdl#	.vim/plugged/vista.vim/autoload/vista/types/uctags/vhdl.vim	/^let g:vista#types#uctags#vhdl# = s:types$/;"	v
 g:vista#types#uctags#vim#	.vim/plugged/vista.vim/autoload/vista/types/uctags/vim.vim	/^let g:vista#types#uctags#vim# = s:types$/;"	v
 g:vista#types#uctags#yacc#	.vim/plugged/vista.vim/autoload/vista/types/uctags/yacc.vim	/^let g:vista#types#uctags#yacc# = s:types$/;"	v
-g:vista_close_on_jump	.vim/init.vim	/^let g:vista_close_on_jump = 0                    " 跳转到一个符号时，自动关闭vista窗/;"	v
-g:vista_close_on_jump	.vimrc	/^let g:vista_close_on_jump = 0                    " 跳转到一个符号时，自动关闭vista窗/;"	v
+g:vista_close_on_jump	.vim/init.vim	/^let g:vista_close_on_jump = 1                    " 跳转到一个符号时，自动关闭vista窗/;"	v
+g:vista_close_on_jump	.vimrc	/^let g:vista_close_on_jump = 1                    " 跳转到一个符号时，自动关闭vista窗/;"	v
 g:vista_echo_cursor_strategy	.vim/init.vim	/^let g:vista_echo_cursor_strategy ='scroll' " 启用悬浮窗预览$/;"	v
 g:vista_echo_cursor_strategy	.vimrc	/^let g:vista_echo_cursor_strategy ='scroll' " 启用悬浮窗预览$/;"	v
 g:vista_executive_nvim_lsp_fetching	.vim/plugged/vista.vim/autoload/vista/executive/nvim_lsp.vim	/^let g:vista_executive_nvim_lsp_fetching = v:true$/;"	v
@@ -9632,7 +9772,6 @@ g:vista_fold_toggle_icons	.vim/init.vim	/^let g:vista_fold_toggle_icons = ['▸'
 g:vista_fold_toggle_icons	.vim/plugged/vista.vim/autoload/vista/renderer/default.vim	/^let g:vista_fold_toggle_icons = get(g:, 'vista_fold_toggle_icons', ['▼', '▶'])$/;"	v
 g:vista_fold_toggle_icons	.vimrc	/^let g:vista_fold_toggle_icons = ['▸', '▾']$/;"	v
 g:vista_fzf_preview	.vim/init.vim	/^let g:vista_fzf_preview = ['right:50%']$/;"	v
-g:vista_fzf_preview	.vimrc	/^let g:vista_fzf_preview = ['right:50%']$/;"	v
 g:vista_sidebar_width	.vim/init.vim	/^let g:vista_sidebar_width = 30                   " 宽度$/;"	v
 g:vista_sidebar_width	.vimrc	/^let g:vista_sidebar_width = 30                   " 宽度$/;"	v
 g:vista_stay_on_open	.vim/init.vim	/^let g:vista_stay_on_open = 1                     " 打开vista窗口后移动到它.$/;"	v
@@ -10107,6 +10246,11 @@ gf	.vim/coc-settings.json	/^        "gf": "gotoSource:file",$/;"	s	object:explor
 gh	.vim/coc-settings.json	/^        "gh": "collapseRecursive",$/;"	s	object:explorer.keyMappings
 git	README.md	/^## git $/;"	s	chapter:必装
 git-messenger.vim	.vim/plugged/git-messenger.vim/README.md	/^git-messenger.vim$/;"	c
+git.addedSign.hlGroup	.vim/coc-settings.json	/^    "git.addedSign.hlGroup": "GitAdd",$/;"	s
+git.changeRemovedSign.hlGroup	.vim/coc-settings.json	/^    "git.changeRemovedSign.hlGroup": "GitDeleteTopAndBottom",$/;"	s
+git.changedSign.hlGroup	.vim/coc-settings.json	/^    "git.changedSign.hlGroup": "GitModify",$/;"	s
+git.removedSign.hlGroup	.vim/coc-settings.json	/^    "git.removedSign.hlGroup": "GitDeleteBottom",$/;"	s
+git.topRemovedSign.hlGroup	.vim/coc-settings.json	/^    "git.topRemovedSign.hlGroup": "GitDeleteTop",$/;"	s
 gitgutter	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^augroup gitgutter$/;"	a
 gitgutter#all	.vim/plugged/vim-gitgutter/autoload/gitgutter.vim	/^function! gitgutter#all(force) abort$/;"	f
 gitgutter#async#available	.vim/plugged/vim-gitgutter/autoload/gitgutter/async.vim	/^function! gitgutter#async#available()$/;"	f
@@ -10198,6 +10342,8 @@ gitmessenger#new	.vim/plugged/git-messenger.vim/autoload/gitmessenger.vim	/^func
 gitmessenger#popup#close_current_popup	.vim/plugged/git-messenger.vim/autoload/gitmessenger/popup.vim	/^function! gitmessenger#popup#close_current_popup() abort$/;"	f
 gitmessenger#popup#new	.vim/plugged/git-messenger.vim/autoload/gitmessenger/popup.vim	/^function! gitmessenger#popup#new(contents, opts) abort$/;"	f
 gitmessenger#scroll	.vim/plugged/git-messenger.vim/autoload/gitmessenger.vim	/^function! gitmessenger#scroll(bufnr, map) abort$/;"	f
+gj	.vim/coc-settings.json	/^        "gj": "gitNext",$/;"	s	object:explorer.keyMappings
+gk	.vim/coc-settings.json	/^        "gk": "gitPrev",$/;"	s	object:explorer.keyMappings
 gl	.vim/coc-settings.json	/^        "gl": "expandRecursive",$/;"	s	object:explorer.keyMappings
 glob	.vim/plugged/coc.nvim/package.json	/^    "glob": "^7.1.4",$/;"	s	object:dependencies
 glob	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/allowed_syntax_python3.6.py	/^def glob():$/;"	f
@@ -10238,6 +10384,10 @@ grammar36	.vim/plugged/jedi-vim/pythonx/jedi/test/run.py	/^grammar36 = parso.loa
 grep	ranger/commands_full.py	/^class grep(Command):$/;"	c
 group	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tokenize.py	/^def group(*choices, **kwargs):$/;"	f
 group	.vim/plugged/vim-airline-themes/autoload/airline/themes/deus.vim	/^let group = airline#themes#get_highlight('vimCommand')$/;"	v
+gruvbox#hls_hide	.vim/plugged/gruvbox/autoload/gruvbox.vim	/^function! gruvbox#hls_hide()$/;"	f
+gruvbox#hls_show	.vim/plugged/gruvbox/autoload/gruvbox.vim	/^function! gruvbox#hls_show()$/;"	f
+gruvbox#hls_toggle	.vim/plugged/gruvbox/autoload/gruvbox.vim	/^function! gruvbox#hls_toggle()$/;"	f
+gruvbox#invert_signs_toggle	.vim/plugged/gruvbox/autoload/gruvbox.vim	/^function! gruvbox#invert_signs_toggle()$/;"	f
 gtagsExplManager	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/gtagsExpl.py	/^gtagsExplManager = GtagsExplManager()$/;"	v
 gtags_usage	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/anyExpl.py	/^gtags_usage = """$/;"	v
 guess	.vim/plugged/far.vim/test/guess.py	/^    guess = int(raw_input('Take a guess: '))$/;"	v
@@ -10293,6 +10443,7 @@ gv#sha	.vim/plugged/gv.vim/plugin/gv.vim	/^function! gv#sha(...)$/;"	f
 gv#shellwords	.vim/plugged/gv.vim/plugin/gv.vim	/^function! gv#shellwords(arg)$/;"	f
 gv.vim	.vim/plugged/gv.vim/README.md	/^gv.vim$/;"	c
 h	.vim/coc-settings.json	/^        "h": "collapse",$/;"	s	object:explorer.keyMappings
+h	.vim/plugged/ag.vim/autoload/ag.vim	/^      nnoremap <silent> <buffer> h  <C-W><CR><C-w>K$/;"	m
 halves	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E22.py	/^def halves(n):$/;"	f
 has	.vim/plugged/jedi-vim/pythonx/jedi_vim.py	/^    def has(cls, what):$/;"	m	class:VimCompat
 has_iter	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/compiled/access.py	/^    def has_iter(self):$/;"	m	class:DirectObjectAccess
@@ -11021,6 +11172,7 @@ lft	.vim/init.vim	/^nnoremap lft :LeaderfFunction<CR>$/;"	m
 lft	.vimrc	/^nnoremap lft :LeaderfFunction<CR>$/;"	m
 libpath	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/typeshed/tests/mypy_test.py	/^def libpath(major, minor):$/;"	f
 license	.vim/plugged/coc.nvim/package.json	/^  "license": "MIT",$/;"	s
+license	.vim/plugged/gruvbox/package.json	/^  "license": "MIT",$/;"	s
 like	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/thirdparty/jedi_.py	/^scopes, path, dot, like = \\$/;"	v
 line	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/classes.py	/^    def line(self):$/;"	m	class:BaseDefinition
 line	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/analysis.py	/^    def line(self):$/;"	m	class:Error
@@ -11327,6 +11479,7 @@ n-character search motion	.vim/plugged/vim-easymotion/README.md	/^### n-characte
 na	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/thirdparty/pylab_.py	/^na = numpy.array([1,2])$/;"	v
 name	.vim/plugged/coc.nvim/package.json	/^  "name": "coc.nvim",$/;"	s
 name	.vim/plugged/far.vim/test/guess.py	/^name = raw_input('Hello! What is your name?\\n')$/;"	v
+name	.vim/plugged/gruvbox/package.json	/^  "name": "gruvbox",$/;"	s
 name	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/classes.py	/^    def name(self):$/;"	m	class:BaseDefinition
 name	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/base_value.py	/^    def name(self):$/;"	m	class:Value
 name	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/base_value.py	/^    def name(self):$/;"	m	class:_ValueWrapperBase
@@ -11479,6 +11632,7 @@ o	.vim/plugged/LeaderF/autoload/leaderf/Rg.vim	/^    nnoremap <buffer> <silent> 
 o	.vim/plugged/LeaderF/autoload/leaderf/Self.vim	/^    nnoremap <buffer> <silent> o             :exec g:Lf_py "selfExplManager.accept()"<CR>$/;"	m
 o	.vim/plugged/LeaderF/autoload/leaderf/Tag.vim	/^    nnoremap <buffer> <silent> o             :exec g:Lf_py "tagExplManager.accept()"<CR>$/;"	m
 o	.vim/plugged/LeaderF/autoload/leaderf/Window.vim	/^    nnoremap <buffer> <silent> o             :exec g:Lf_py "windowExplManager.accept()"<CR>$/;"	m
+o	.vim/plugged/ag.vim/autoload/ag.vim	/^      nnoremap <silent> <buffer> o  <CR>$/;"	m
 o	.vim/plugged/coc.nvim/build/index.js	/^\/******\/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnP/;"	f	function:__webpack_require__
 o	.vim/plugged/gv.vim/plugin/gv.vim	/^  nnoremap <buffer> o <cr><c-w><c-w>$/;"	m
 o	.vim/plugged/gv.vim/plugin/gv.vim	/^  nnoremap <silent> <buffer> o    :call <sid>open(0)<cr>$/;"	m
@@ -11504,6 +11658,7 @@ operation	.vim/plugged/jedi-vim/pythonx/jedi/test/test_api/test_full_name.py	/^ 
 operations	.vim/plugged/jedi-vim/pythonx/jedi/sith.py	/^    operations = ['complete', 'goto', 'infer', 'get_references', 'get_signatures']$/;"	v	class:TestCase
 operator	.vim/coc-settings.json	/^        "operator": "\\u03a8",$/;"	s	object:suggest.completionItemKindLabels
 operator	.vim/plugged/coc.nvim/data/schema.json	/^        "operator": { "type": "string" },$/;"	o	object:properties.suggest.completionItemKindLabels.properties
+opt	.vim/plugged/gruvbox/package.json	/^    "opt": true$/;"	b	object:vim
 optional	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/pep0484_typing.py	/^def optional(p):$/;"	f
 options	.vim/plugged/jedi-vim/pythonx/jedi/docs/_themes/flask/theme.conf	/^[options]$/;"	s
 options	.vim/plugged/jedi-vim/pythonx/parso/docs/_themes/flask/theme.conf	/^[options]$/;"	s
@@ -11969,6 +12124,7 @@ replace_str	.vim/plugged/jedi-vim/pythonx/jedi/jedi/refactoring.py	/^    replace
 replace_str	.vim/plugged/jedi-vim/pythonx/jedi/jedi/refactoring.py	/^    replace_str = replace_str.strip()$/;"	v
 report	.vim/plugged/jedi-vim/pythonx/jedi/test/run.py	/^    def report(case, actual, desired):$/;"	f
 repository	.vim/plugged/coc.nvim/package.json	/^  "repository": {$/;"	o
+repository	.vim/plugged/gruvbox/package.json	/^  "repository": "git@github.com:morhetz\/gruvbox.git",$/;"	s
 request	.vim/plugged/vim-translator/script/translator.py	/^    def request(self, url, data=None, post=False, header=None):$/;"	m	class:BasicTranslator
 requireRootPattern	.vim/plugged/coc.nvim/data/schema.json	/^        "requireRootPattern": {$/;"	o	object:definitions.languageServerBase.properties
 requireRootPattern	.vim/plugged/coc.nvim/data/schema.json	/^        "requireRootPattern": {},$/;"	o	object:definitions.languageServerCommand.properties
@@ -12431,6 +12587,7 @@ s:GrepSubcommand	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:G
 s:GroupByKindForLSPData	.vim/plugged/vista.vim/autoload/vista/finder.vim	/^function! s:GroupByKindForLSPData(lsp_items) abort$/;"	f
 s:GroupingAlgorithmOriginal	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^function! s:GroupingAlgorithmOriginal(targets, keys)$/;"	f
 s:GroupingAlgorithmSCTree	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^function! s:GroupingAlgorithmSCTree(targets, keys) "{{{$/;"	f
+s:HL	.vim/plugged/gruvbox/colors/gruvbox.vim	/^function! s:HL(group, fg, ...)$/;"	f
 s:HandleLSPResponse	.vim/plugged/vista.vim/autoload/vista/executive/ale.vim	/^function! s:HandleLSPResponse(resp) abort$/;"	f
 s:HandleLSPResponse	.vim/plugged/vista.vim/autoload/vista/executive/coc.vim	/^function! s:HandleLSPResponse(error, response) abort$/;"	f
 s:HandleLSPResponse	.vim/plugged/vista.vim/autoload/vista/executive/lcn.vim	/^function! s:HandleLSPResponse(output) abort$/;"	f
@@ -14588,6 +14745,10 @@ s:app	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^  let s:app = "Terminal"$/;"
 s:app	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^  let s:app = "iTerm2"$/;"	v
 s:append_ul	.vim/autoload/plug.vim	/^function! s:append_ul(lnum, text)$/;"	f
 s:apply_color_to_word	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^function! s:apply_color_to_word(n, word, mode, mid)$/;"	f
+s:aqua	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:aqua   = s:getGruvColor('GruvboxAqua')$/;"	v
+s:aqua	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:aqua   = s:gb.bright_aqua$/;"	v
+s:aqua	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:aqua   = s:gb.faded_aqua$/;"	v
+s:aqua	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:aqua[1]   = 14$/;"	v
 s:as_key_config	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Over/Keymapping.vim	/^function! s:as_key_config(config)$/;"	f
 s:as_keymapping	.vim/plugged/vim-easymotion/autoload/EasyMotion/command_line.vim	/^function! s:as_keymapping(key)$/;"	f
 s:ask	.vim/autoload/plug.vim	/^function! s:ask(message, ...)$/;"	f
@@ -14727,6 +14888,25 @@ s:basic16	.vim/plugged/vim-airline/autoload/airline/msdos.vim	/^let s:basic16 = 
 s:batchfile	.vim/autoload/plug.vim	/^  function! s:batchfile(cmd)$/;"	f
 s:batchmode	.vim/plugged/vim-startify/autoload/startify.vim	/^let s:batchmode = ''$/;"	v
 s:begin	.vim/plugged/gv.vim/plugin/gv.vim	/^let s:begin = '^[^0-9]*[0-9]\\{4}-[0-9]\\{2}-[0-9]\\{2}\\s\\+'$/;"	v
+s:bg0	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:bg0  = s:getGruvColor('GruvboxBg0')$/;"	v
+s:bg0	.vim/plugged/gruvbox/colors/gruvbox.vim	/^    let s:bg0  = s:gb.dark0_hard$/;"	v
+s:bg0	.vim/plugged/gruvbox/colors/gruvbox.vim	/^    let s:bg0  = s:gb.dark0_soft$/;"	v
+s:bg0	.vim/plugged/gruvbox/colors/gruvbox.vim	/^    let s:bg0  = s:gb.light0_hard$/;"	v
+s:bg0	.vim/plugged/gruvbox/colors/gruvbox.vim	/^    let s:bg0  = s:gb.light0_soft$/;"	v
+s:bg0	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:bg0  = s:gb.dark0$/;"	v
+s:bg0	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:bg0  = s:gb.light0$/;"	v
+s:bg0	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:bg0[1]    = 0$/;"	v
+s:bg1	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:bg1  = s:getGruvColor('GruvboxBg1')$/;"	v
+s:bg1	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:bg1  = s:gb.dark1$/;"	v
+s:bg1	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:bg1  = s:gb.light1$/;"	v
+s:bg2	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:bg2  = s:getGruvColor('GruvboxBg2')$/;"	v
+s:bg2	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:bg2  = s:gb.dark2$/;"	v
+s:bg2	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:bg2  = s:gb.light2$/;"	v
+s:bg3	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:bg3  = s:gb.dark3$/;"	v
+s:bg3	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:bg3  = s:gb.light3$/;"	v
+s:bg4	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:bg4  = s:getGruvColor('GruvboxBg4')$/;"	v
+s:bg4	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:bg4  = s:gb.dark4$/;"	v
+s:bg4	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:bg4  = s:gb.light4$/;"	v
 s:bin	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^    let s:bin.preview = fnamemodify(s:bin.preview, ':8')$/;"	v
 s:bin	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^    let s:bin.preview = split(system('for %A in ("'.s:bin.preview.'") do @echo %~sA'), "\\n")[0]$/;"	v
 s:bin	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^  let s:bin.preview = 'bash '.escape(s:bin.preview, '\\')$/;"	v
@@ -14759,8 +14939,14 @@ s:blink	.vim/plugged/vim-choosewin/autoload/choosewin/util.vim	/^function! s:bli
 s:blink.clear	.vim/plugged/vista.vim/autoload/vista/util.vim	/^  function! s:blink.clear() abort$/;"	f
 s:blink.tick	.vim/plugged/vista.vim/autoload/vista/util.vim	/^  function! s:blink.tick(_) abort$/;"	f
 s:blobdirs	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^  let s:blobdirs = {}$/;"	v
+s:blue	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:blue   = s:getGruvColor('GruvboxBlue')$/;"	v
+s:blue	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:blue   = s:gb.bright_blue$/;"	v
+s:blue	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:blue   = s:gb.faded_blue$/;"	v
+s:blue	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:blue[1]   = 12$/;"	v
 s:blue	.vim/plugged/vim-airline-themes/autoload/airline/themes/distinguished.vim	/^let s:blue    = [ 67, '#5f87af']$/;"	v
 s:blue	.vim/plugged/vim-airline-themes/autoload/airline/themes/solarized_flood.vim	/^let s:blue    = {'hex': '#268BD2', 'term':  32}  "  38, 139, 210 *$/;"	v
+s:bold	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:bold = ''$/;"	v
+s:bold	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:bold = 'bold,'$/;"	v
 s:break	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:break(f, xs) abort$/;"	f
 s:browse	.vim/plugged/gv.vim/plugin/gv.vim	/^function! s:browse(url)$/;"	f
 s:btags_sink	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:btags_sink(lines)$/;"	f
@@ -14886,6 +15072,8 @@ s:cmdheight.restore	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Over/
 s:cmdheight.save	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Over/Commandline/Modules/DrawCommandline.vim	/^function! s:cmdheight.save()$/;"	f
 s:cmdline	.vim/plugged/vim-easymotion/autoload/EasyMotion/command_line.vim	/^let s:cmdline = s:V.import('Over.Commandline.Base')$/;"	v
 s:color	.vim/plugged/jellybeans.vim/colors/jellybeans.vim	/^fun! s:color(r, g, b)$/;"	f
+s:color_column	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:color_column = get(s:gb, g:gruvbox_color_column)$/;"	v
+s:color_column	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:color_column = s:bg1$/;"	v
 s:color_template	.vim/plugged/vim-airline/autoload/airline/extensions/ctrlp.vim	/^let s:color_template = get(g:, 'airline#extensions#ctrlp#color_template', 'insert')$/;"	v
 s:color_template	.vim/plugged/vim-airline/autoload/airline/extensions/promptline.vim	/^let s:color_template = get(g:, 'airline#extensions#promptline#color_template', 'normal')$/;"	v
 s:color_template	.vim/plugged/vim-airline/autoload/airline/extensions/tmuxline.vim	/^let s:color_template = get(g:, 'airline#extensions#tmuxline#color_template', 'normal')$/;"	v
@@ -16063,6 +16251,22 @@ s:far_preview_buffer_name	.vim/plugged/far.vim/autoload/far.vim	/^let s:far_prev
 s:fetching	.vim/plugged/vista.vim/autoload/vista/executive/lcn.vim	/^let s:fetching = v:true$/;"	v
 s:fetching	.vim/plugged/vista.vim/autoload/vista/executive/vim_lsc.vim	/^let s:fetching = v:true$/;"	v
 s:fff_callback	.vim/plugged/vim-floaterm/autoload/floaterm/wrapper/fff.vim	/^function! s:fff_callback(...) abort$/;"	f
+s:fg0	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:fg0 = s:gb.dark0$/;"	v
+s:fg0	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:fg0 = s:gb.light0$/;"	v
+s:fg1	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:fg1  = s:getGruvColor('GruvboxFg1')$/;"	v
+s:fg1	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:fg1 = s:gb.dark1$/;"	v
+s:fg1	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:fg1 = s:gb.light1$/;"	v
+s:fg1	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:fg1[1]    = 15$/;"	v
+s:fg2	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:fg2 = s:gb.dark2$/;"	v
+s:fg2	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:fg2 = s:gb.light2$/;"	v
+s:fg3	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:fg3 = s:gb.dark3$/;"	v
+s:fg3	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:fg3 = s:gb.light3$/;"	v
+s:fg4	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:fg4  = s:getGruvColor('GruvboxFg4')$/;"	v
+s:fg4	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:fg4 = s:gb.dark4$/;"	v
+s:fg4	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:fg4 = s:gb.light4$/;"	v
+s:fg4	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:fg4[1]    = 7$/;"	v
+s:fg4_256	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:fg4_256 = s:gb.dark4_256$/;"	v
+s:fg4_256	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:fg4_256 = s:gb.light4_256$/;"	v
 s:file_commit_pattern	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^let s:file_commit_pattern = s:file_pattern . '\\|^\\%(\\l\\{3,\\} \\)\\=[0-9a-f]\\{4,\\} '$/;"	v
 s:file_options	.vim/plugged/fzf.vim/autoload/fzf/vim/complete.vim	/^function! s:file_options(prefix)$/;"	f
 s:file_pattern	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^let s:file_pattern = '^[A-Z?] .\\|^diff --'$/;"	v
@@ -16239,6 +16443,65 @@ s:fzf_vim_term	.vim/plugged/fzf.vim/plugin/fzf.vim	/^  function! s:fzf_vim_term(
 s:gap_between_regions	.vim/plugged/vim-gitgutter/autoload/gitgutter/diff_highlight.vim	/^let s:gap_between_regions = 5$/;"	v
 s:gather_poses	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Motion.vim	/^function! s:gather_poses(pattern) abort$/;"	f
 s:gather_visible_matched_poses	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Motion.vim	/^function! s:gather_visible_matched_poses(pattern, direction, allow_cursor_pos_match) abort$/;"	f
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb = {}$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.aqua   = s:aqua$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.bg0 = s:bg0$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.bg1 = s:bg1$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.bg2 = s:bg2$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.bg3 = s:bg3$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.bg4 = s:bg4$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.blue   = s:blue$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.bright_aqua    = ['#8ec07c', 108]     " 142-192-124$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.bright_blue    = ['#83a598', 109]     " 131-165-152$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.bright_green   = ['#b8bb26', 142]     " 184-187-38$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.bright_orange  = ['#fe8019', 208]     " 254-128-25$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.bright_purple  = ['#d3869b', 175]     " 211-134-155$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.bright_red     = ['#fb4934', 167]     " 251-73-52$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.bright_yellow  = ['#fabd2f', 214]     " 250-189-47$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.dark0       = ['#282828', 235]     " 40-40-40$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.dark0_hard  = ['#1d2021', 234]     " 29-32-33$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.dark0_soft  = ['#32302f', 236]     " 50-48-47$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.dark1       = ['#3c3836', 237]     " 60-56-54$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.dark2       = ['#504945', 239]     " 80-73-69$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.dark3       = ['#665c54', 241]     " 102-92-84$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.dark4       = ['#7c6f64', 243]     " 124-111-100$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.dark4_256   = ['#7c6f64', 243]     " 124-111-100$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.faded_aqua     = ['#427b58', 66]      " 66-123-88$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.faded_blue     = ['#076678', 24]      " 7-102-120$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.faded_green    = ['#79740e', 100]     " 121-116-14$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.faded_orange   = ['#af3a03', 130]     " 175-58-3$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.faded_purple   = ['#8f3f71', 96]      " 143-63-113$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.faded_red      = ['#9d0006', 88]      " 157-0-6$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.faded_yellow   = ['#b57614', 136]     " 181-118-20$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.fg0 = s:fg0$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.fg1 = s:fg1$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.fg2 = s:fg2$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.fg3 = s:fg3$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.fg4 = s:fg4$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.fg4_256 = s:fg4_256$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.gray = s:gray$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.gray_244    = ['#928374', 244]     " 146-131-116$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.gray_245    = ['#928374', 245]     " 146-131-116$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.green  = s:green$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.light0      = ['#fbf1c7', 229]     " 253-244-193$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.light0_hard = ['#f9f5d7', 230]     " 249-245-215$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.light0_soft = ['#f2e5bc', 228]     " 242-229-188$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.light1      = ['#ebdbb2', 223]     " 235-219-178$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.light2      = ['#d5c4a1', 250]     " 213-196-161$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.light3      = ['#bdae93', 248]     " 189-174-147$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.light4      = ['#a89984', 246]     " 168-153-132$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.light4_256  = ['#a89984', 246]     " 168-153-132$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.neutral_aqua   = ['#689d6a', 72]      " 104-157-106$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.neutral_blue   = ['#458588', 66]      " 69-133-136$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.neutral_green  = ['#98971a', 106]     " 152-151-26$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.neutral_orange = ['#d65d0e', 166]     " 214-93-14$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.neutral_purple = ['#b16286', 132]     " 177-98-134$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.neutral_red    = ['#cc241d', 124]     " 204-36-29$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.neutral_yellow = ['#d79921', 172]     " 215-153-33$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.orange = s:orange$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.purple = s:purple$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.red    = s:red$/;"	v
+s:gb	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:gb.yellow = s:yellow$/;"	v
 s:gbrowse	.vim/plugged/gv.vim/plugin/gv.vim	/^function! s:gbrowse()$/;"	f
 s:gcd	.vim/plugged/rainbow/autoload/rainbow_main.vim	/^fun s:gcd(a, b)$/;"	f
 s:gen_def	.vim/plugged/vim-airline-themes/autoload/airline/themes/fruit_punch.vim	/^fun! s:gen_def(fg, bg)$/;"	f
@@ -16246,6 +16509,7 @@ s:generate_wildignore_options	.vim/plugged/vim-gutentags/autoload/gutentags/ctag
 s:generic_easy_align_op	.vim/plugged/vim-easy-align/plugin/easy_align.vim	/^function! s:generic_easy_align_op(type, vmode, live)$/;"	f
 s:get	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Over/Commandline/Modules.vim	/^function! s:get(name)$/;"	f
 s:get	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Palette/Highlight.vim	/^function! s:get(name, ...)$/;"	f
+s:getGruvColor	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^function! s:getGruvColor(group)$/;"	f
 s:getPromptMessage	.vim/plugged/vim-easymotion/autoload/EasyMotion/command_line.vim	/^function! s:getPromptMessage(num_strokes) "{{{$/;"	f
 s:get_accented_line	.vim/plugged/vim-airline/autoload/airline/builder.vim	/^function! s:get_accented_line(self, group, contents)$/;"	f
 s:get_airline_themes	.vim/plugged/vim-airline/plugin/airline.vim	/^function! s:get_airline_themes(a, l, p)$/;"	f
@@ -16317,7 +16581,14 @@ s:goto_original_window	.vim/plugged/vim-gitgutter/autoload/gitgutter/hunk.vim	/^
 s:goto_tab	.vim/plugged/vim-choosewin/autoload/choosewin/action.vim	/^function! s:goto_tab(num) "{{{1$/;"	f
 s:goto_tabwin	.vim/plugged/vim-choosewin/autoload/choosewin/action.vim	/^function! s:goto_tabwin(tab, win) "{{{1$/;"	f
 s:goto_win	.vim/plugged/vim-choosewin/autoload/choosewin/action.vim	/^function! s:goto_win(num, ...) "{{{1$/;"	f
+s:gray	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:gray = s:gb.gray_244$/;"	v
+s:gray	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:gray = s:gb.gray_245$/;"	v
+s:gray	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:gray[1]   = 8$/;"	v
 s:gray	.vim/plugged/vim-airline-themes/autoload/airline/themes/distinguished.vim	/^let s:gray    = [245, '#8a8a8a']$/;"	v
+s:green	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:green = s:getGruvColor('GruvboxGreen')$/;"	v
+s:green	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:green  = s:gb.bright_green$/;"	v
+s:green	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:green  = s:gb.faded_green$/;"	v
+s:green	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:green[1]  = 10$/;"	v
 s:green	.vim/plugged/vim-airline-themes/autoload/airline/themes/solarized_flood.vim	/^let s:green   = {'hex': '#859900', 'term': 106}  " 133, 153,   0 #$/;"	v
 s:grep_version	.vim/plugged/vim-gitgutter/autoload/gitgutter/debug.vim	/^function! s:grep_version()$/;"	f
 s:grey_color	.vim/plugged/jellybeans.vim/colors/jellybeans.vim	/^  fun! s:grey_color(n)$/;"	f
@@ -16330,6 +16601,7 @@ s:grouping_algorithms	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^let 
 s:gsub	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^function! s:gsub(str,pat,rep) abort$/;"	f
 s:guard	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Vim/Guard.vim	/^let s:guard = {}$/;"	v
 s:guard.restore	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Vim/Guard.vim	/^function! s:guard.restore() abort$/;"	f
+s:guessProjectRoot	.vim/plugged/ag.vim/autoload/ag.vim	/^function! s:guessProjectRoot()$/;"	f
 s:guess_root	.vim/plugged/vim-floaterm/autoload/floaterm/resolver.vim	/^  function! s:guess_root(filename, markers) abort$/;"	f
 s:gui	.vim/plugged/coc.nvim/autoload/coc/list.vim	/^let s:gui = has('gui_running') || has('nvim')$/;"	v
 s:gui00	.vim/plugged/vim-airline-themes/autoload/airline/themes/alduin.vim	/^let s:gui00 = "#1c1c1c" " ANSI Black$/;"	v
@@ -17309,6 +17581,8 @@ s:hlmgr.register	.vim/plugged/vim-choosewin/autoload/choosewin/hlmanager.vim	/^f
 s:hlmgr.register_auto	.vim/plugged/vim-choosewin/autoload/choosewin/hlmanager.vim	/^function! s:hlmgr.register_auto(spec) "{{{1$/;"	f
 s:hlmgr.reset	.vim/plugged/vim-choosewin/autoload/choosewin/hlmanager.vim	/^function! s:hlmgr.reset() "{{{1$/;"	f
 s:hlmgr.spec_for	.vim/plugged/vim-choosewin/autoload/choosewin/hlmanager.vim	/^function! s:hlmgr.spec_for(color) "{{{1$/;"	f
+s:hls_cursor	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:hls_cursor = get(s:gb, g:gruvbox_hls_cursor)$/;"	v
+s:hls_cursor	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:hls_cursor = s:orange$/;"	v
 s:home	.vim/plugged/vim-floaterm/autoload/floaterm.vim	/^let s:home = fnamemodify(resolve(expand('<sfile>:p')), ':h')$/;"	v
 s:hooks	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Over/Commandline/Modules/Doautocmd.vim	/^let s:hooks = [$/;"	v
 s:hooks_camel	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Over/Commandline/Modules/Doautocmd.vim	/^let s:hooks_camel = [$/;"	v
@@ -17358,6 +17632,14 @@ s:interestingWords	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim
 s:interestingWordsGUIColors	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^let s:interestingWordsGUIColors = ['#aeee00', '#ff0000', '#0000ff', '#b88823', '#ffa724', '#ff2c/;"	v
 s:interestingWordsTermColors	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^let s:interestingWordsTermColors = ['154', '121', '211', '137', '214', '222']$/;"	v
 s:intersect	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:intersect(list1, list2) abort$/;"	f
+s:inverse	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:inverse = ''$/;"	v
+s:inverse	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:inverse = 'inverse,'$/;"	v
+s:invert_selection	.vim/plugged/gruvbox/colors/gruvbox.vim	/^    let s:invert_selection = ''$/;"	v
+s:invert_selection	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:invert_selection = s:inverse$/;"	v
+s:invert_signs	.vim/plugged/gruvbox/colors/gruvbox.vim	/^    let s:invert_signs = s:inverse$/;"	v
+s:invert_signs	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:invert_signs = ''$/;"	v
+s:invert_tabline	.vim/plugged/gruvbox/colors/gruvbox.vim	/^    let s:invert_tabline = s:inverse$/;"	v
+s:invert_tabline	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:invert_tabline = ''$/;"	v
 s:invoke_funcrefs	.vim/plugged/vim-airline/autoload/airline.vim	/^function! s:invoke_funcrefs(context, funcrefs)$/;"	f
 s:is_AppleTerminal	.vim/plugged/vim-airline/autoload/airline/extensions/cursormode.vim	/^let s:is_AppleTerminal = exists('$TERM_PROGRAM') && $TERM_PROGRAM =~# 'Apple_Terminal'$/;"	v
 s:is_added	.vim/plugged/vim-gitgutter/autoload/gitgutter/diff.vim	/^function! s:is_added(from_count, to_count) abort$/;"	f
@@ -17365,6 +17647,7 @@ s:is_branch_empty	.vim/plugged/vim-airline/autoload/airline/extensions/hunks.vim
 s:is_cmdwin	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Vim/Buffer.vim	/^  function! s:is_cmdwin() abort$/;"	f
 s:is_cygwin	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Prelude.vim	/^function! s:is_cygwin() abort$/;"	f
 s:is_cygwin	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Prelude.vim	/^let s:is_cygwin = has('win32unix')$/;"	v
+s:is_dark	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:is_dark=(&background == 'dark')$/;"	v
 s:is_dict	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Prelude.vim	/^function! s:is_dict(Value) abort$/;"	f
 s:is_empty_or_none	.vim/plugged/jellybeans.vim/colors/jellybeans.vim	/^fun! s:is_empty_or_none(str)$/;"	f
 s:is_excluded_window	.vim/plugged/vim-airline/autoload/airline/extensions.vim	/^function! s:is_excluded_window()$/;"	f
@@ -17422,6 +17705,12 @@ s:is_windows	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Prelude.vim	
 s:is_windows	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Prelude.vim	/^let s:is_windows = has('win16') || has('win32') || has('win64') || has('win95')$/;"	v
 s:is_windows	.vim/plugged/vim-floaterm/autoload/floaterm/resolver.vim	/^  let s:is_windows = 0$/;"	v
 s:is_windows	.vim/plugged/vim-floaterm/autoload/floaterm/resolver.vim	/^  let s:is_windows = 1$/;"	v
+s:italic	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:italic = ''$/;"	v
+s:italic	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:italic = 'italic,'$/;"	v
+s:italicize_comments	.vim/plugged/gruvbox/colors/gruvbox.vim	/^    let s:italicize_comments = ''$/;"	v
+s:italicize_comments	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:italicize_comments = s:italic$/;"	v
+s:italicize_strings	.vim/plugged/gruvbox/colors/gruvbox.vim	/^    let s:italicize_strings = s:italic$/;"	v
+s:italicize_strings	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:italicize_strings = ''$/;"	v
 s:item_pattern	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^let s:item_pattern = s:file_commit_pattern . '\\|^@@'$/;"	v
 s:jedi_debug_info	.vim/plugged/jedi-vim/plugin/jedi.vim	/^function! s:jedi_debug_info()$/;"	f
 s:job_abort	.vim/autoload/plug.vim	/^function! s:job_abort()$/;"	f
@@ -17446,7 +17735,7 @@ s:keymap	.vim/plugged/vim-choosewin/autoload/choosewin/config.vim	/^let s:keymap
 s:known_files	.vim/plugged/vim-gutentags/autoload/gutentags.vim	/^let s:known_files = []$/;"	v
 s:known_options	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^let s:known_options = {$/;"	v
 s:known_projects	.vim/plugged/vim-gutentags/autoload/gutentags.vim	/^let s:known_projects = {}$/;"	v
-s:l	.vim/sessions/default.vim	/^let s:l = 13 - ((12 * winheight(0) + 21) \/ 42)$/;"	v
+s:l	.vim/sessions/default.vim	/^let s:l = 311 - ((12 * winheight(0) + 21) \/ 42)$/;"	v
 s:language_opt	.vim/plugged/vista.vim/autoload/vista/types/uctags.vim	/^let s:language_opt = map(s:language_opt,$/;"	v
 s:language_opt	.vim/plugged/vista.vim/autoload/vista/types/uctags.vim	/^let s:language_opt = {$/;"	v
 s:languageclient_refresh	.vim/plugged/vim-airline/autoload/airline/extensions/languageclient.vim	/^function! s:languageclient_refresh()$/;"	f
@@ -17662,11 +17951,14 @@ s:node.to_string	.vim/plugged/vim-floaterm/autoload/floaterm/buflist.vim	/^funct
 s:nomodeline	.vim/plugged/vim-airline/autoload/airline/util.vim	/^let s:nomodeline = (v:version > 703 || (v:version == 703 && has("patch438"))) ? '<nomodeline>' :/;"	v
 s:nomodeline	.vim/plugged/vim-gitgutter/autoload/gitgutter/diff.vim	/^let s:nomodeline = (v:version > 703 || (v:version == 703 && has('patch442'))) ? '<nomodeline>' :/;"	v
 s:non_zero_only	.vim/plugged/vim-airline/autoload/airline/extensions/hunks.vim	/^let s:non_zero_only = get(g:, 'airline#extensions#hunks#non_zero_only', 0)$/;"	v
+s:none	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:none = ['NONE', 'NONE']$/;"	v
 s:normalize_options	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^function! s:normalize_options(opts)$/;"	f
 s:not_git_dir	.vim/plugged/vim-gitgutter/autoload/gitgutter/utility.vim	/^function! s:not_git_dir(bufnr) abort$/;"	f
 s:notify	.vim/plugged/coc.nvim/autoload/coc/client.vim	/^function! s:notify(method, args) dict$/;"	f
 s:nowait	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^let s:nowait = v:version >= 704 ? '<nowait>' : ''$/;"	v
 s:nowait	.vim/plugged/vim-fugitive/plugin/fugitive.vim	/^let s:nowait = v:version >= 704 ? '<nowait>' : ''$/;"	v
+s:number_column	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:number_column = get(s:gb, g:gruvbox_number_column)$/;"	v
+s:number_column	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:number_column = s:none$/;"	v
 s:number_map	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/buffers.vim	/^let s:number_map = &encoding == 'utf-8'$/;"	v
 s:number_map	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/buffers.vim	/^let s:number_map = {$/;"	v
 s:numfiles	.vim/plugged/vim-startify/autoload/startify.vim	/^let s:numfiles = get(g:, 'startify_files_number', 10)$/;"	v
@@ -17744,6 +18036,9 @@ s:option_values	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^let s:opti
 s:options	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/opt.vim	/^let s:options = {}$/;"	v
 s:or	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:or(xs) abort$/;"	f
 s:orangarine	.vim/plugged/vim-airline-themes/autoload/airline/themes/fruit_punch.vim	/^let s:orangarine      = ['#e8a15a', 179]$/;"	v
+s:orange	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:orange = s:getGruvColor('GruvboxOrange')$/;"	v
+s:orange	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:orange = s:gb.bright_orange$/;"	v
+s:orange	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:orange = s:gb.faded_orange$/;"	v
 s:orange	.vim/plugged/vim-airline-themes/autoload/airline/themes/distinguished.vim	/^let s:orange  = [166, '#d75f00']$/;"	v
 s:orange	.vim/plugged/vim-airline-themes/autoload/airline/themes/solarized_flood.vim	/^let s:orange  = {'hex': '#CB4B16', 'term': 166}  " 203,  75,  22$/;"	v
 s:osascript	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! s:osascript(...) abort$/;"	f
@@ -17765,6 +18060,31 @@ s:overwin.pattern	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHin
 s:overwin.restore_options	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Motion.vim	/^function! s:overwin.restore_options() abort$/;"	f
 s:overwin.select_winpos	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Motion.vim	/^function! s:overwin.select_winpos(winnr2poses, keys) abort$/;"	f
 s:overwin.set_options	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Motion.vim	/^function! s:overwin.set_options() abort$/;"	f
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p = {'normal':{}, 'inactive':{}, 'insert':{}, 'replace':{}, 'visual':{}, 'tabline':{}, '/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.inactive.left =  [ [ s:bg4, s:bg1 ], [ s:bg4, s:bg1 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.inactive.middle = [ [ s:bg4, s:bg1 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.inactive.right = [ [ s:bg4, s:bg1 ], [ s:bg4, s:bg1 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.insert.left = [ [ s:bg0, s:blue, 'bold' ], [ s:fg1, s:bg2 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.insert.middle = [ [ s:fg4, s:bg2 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.insert.right = [ [ s:bg0, s:blue ], [ s:fg1, s:bg2 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.normal.error = [ [ s:bg0, s:orange ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.normal.left = [ [ s:bg0, s:fg4, 'bold' ], [ s:fg4, s:bg2 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.normal.middle = [ [ s:fg4, s:bg1 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.normal.right = [ [ s:bg0, s:fg4 ], [ s:fg4, s:bg2 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.normal.warning = [ [ s:bg2, s:yellow ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.replace.left = [ [ s:bg0, s:aqua, 'bold' ], [ s:fg1, s:bg2 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.replace.middle = [ [ s:fg4, s:bg2 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.replace.right = [ [ s:bg0, s:aqua ], [ s:fg1, s:bg2 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.tabline.left = [ [ s:fg4, s:bg2 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.tabline.middle = [ [ s:bg0, s:bg0 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.tabline.right = [ [ s:bg0, s:orange ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.tabline.tabsel = [ [ s:bg0, s:fg4 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.terminal.left = [ [ s:bg0, s:green, 'bold' ], [ s:fg1, s:bg2 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.terminal.middle = [ [ s:fg4, s:bg2 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.terminal.right = [ [ s:bg0, s:green ], [ s:fg1, s:bg2 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.visual.left = [ [ s:bg0, s:orange, 'bold' ], [ s:bg0, s:bg4 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.visual.middle = [ [ s:fg4, s:bg1 ] ]$/;"	v
+s:p	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:p.visual.right = [ [ s:bg0, s:orange ], [ s:bg0, s:bg4 ] ]$/;"	v
 s:padding_end	.vim/plugged/vim-translator/autoload/translator/history.vim	/^function! s:padding_end(text, length) abort$/;"	f
 s:padding_left	.vim/plugged/vim-startify/autoload/startify.vim	/^let s:padding_left = repeat(' ', get(g:, 'startify_padding_left', 3))$/;"	v
 s:padding_left	.vim/plugged/vim-startify/syntax/startify.vim	/^let s:padding_left = repeat(' ', get(g:, 'startify_padding_left', 3))$/;"	v
@@ -17900,6 +18220,9 @@ s:provider	.vim/plugged/vista.vim/autoload/vista/executive/vim_lsc.vim	/^let s:p
 s:provider	.vim/plugged/vista.vim/autoload/vista/executive/vim_lsp.vim	/^let s:provider = fnamemodify(expand('<sfile>'), ':t:r')$/;"	v
 s:provider	.vim/plugged/vista.vim/autoload/vista/extension/markdown.vim	/^let s:provider = fnamemodify(expand('<sfile>'), ':t:r')$/;"	v
 s:provider	.vim/plugged/vista.vim/autoload/vista/extension/rst.vim	/^let s:provider = fnamemodify(expand('<sfile>'), ':t:r')$/;"	v
+s:purple	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:purple = s:gb.bright_purple$/;"	v
+s:purple	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:purple = s:gb.faded_purple$/;"	v
+s:purple	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:purple[1] = 13$/;"	v
 s:push	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:push(list, val) abort$/;"	f
 s:py_file	.vim/plugged/vim-translator/autoload/translator.vim	/^  let s:py_file = shellescape(s:py_file)$/;"	v
 s:py_file	.vim/plugged/vim-translator/autoload/translator.vim	/^let s:py_file = expand('<sfile>:p:h') . '\/..\/script\/translator.py'$/;"	v
@@ -17922,6 +18245,9 @@ s:reap	.vim/autoload/plug.vim	/^function! s:reap(name)$/;"	f
 s:rebase_abbrevs	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^let s:rebase_abbrevs = {$/;"	v
 s:recentlyUsed	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^let s:recentlyUsed = []$/;"	v
 s:record_diagnostics	.vim/plugged/vim-airline/autoload/airline/extensions/languageclient.vim	/^function! s:record_diagnostics(state)$/;"	f
+s:red	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:red    = s:gb.bright_red$/;"	v
+s:red	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:red    = s:gb.faded_red$/;"	v
+s:red	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:red[1]    = 9$/;"	v
 s:red	.vim/plugged/vim-airline-themes/autoload/airline/themes/solarized_flood.vim	/^let s:red     = {'hex': '#DC322F', 'term': 160}  " 220,  50,  47 *$/;"	v
 s:redirects	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^let s:redirects = {}$/;"	v
 s:reduce_line	.vim/plugged/fzf.vim/autoload/fzf/vim/complete.vim	/^function! s:reduce_line(lines)$/;"	f
@@ -18169,6 +18495,9 @@ s:show_tabline	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/auto
 s:shrug	.vim/plugged/gv.vim/plugin/gv.vim	/^function! s:shrug()$/;"	f
 s:sid	.vim/plugged/vim-choosewin/autoload/choosewin/util.vim	/^let s:sid = s:SID()$/;"	v
 s:sid2sfuncs	.vim/plugged/vim-easymotion/autoload/vital/easymotion.vim	/^function! s:sid2sfuncs(sid) abort$/;"	f
+s:sign_column	.vim/plugged/gruvbox/colors/gruvbox.vim	/^    let s:sign_column = get(s:gb, g:gruvbox_sign_column)$/;"	v
+s:sign_column	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:sign_column = s:number_column$/;"	v
+s:sign_column	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:sign_column = s:bg1$/;"	v
 s:skip_check_ft	.vim/plugged/vim-airline/autoload/airline/extensions/whitespace.vim	/^let s:skip_check_ft = {'make': ['indent', 'mixed-indent-file']}$/;"	v
 s:skip_symbol	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/formatters/unique_tail_improved.vim	/^let s:skip_symbol = '…'$/;"	v
 s:skiplist	.vim/plugged/vim-startify/autoload/startify.vim	/^let s:skiplist = get(g:, 'startify_skiplist', [$/;"	v
@@ -18586,6 +18915,10 @@ s:types6	.vim/plugged/vista.vim/autoload/vista/types/uctags/perl6.vim	/^let s:ty
 s:uiMode	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^function! s:uiMode()$/;"	f
 s:ulen	.vim/plugged/auto-pairs/plugin/auto-pairs.vim	/^func! s:ulen(s)$/;"	f
 s:unc_path	.vim/plugged/vim-gitgutter/autoload/gitgutter/utility.vim	/^function! s:unc_path(bufnr)$/;"	f
+s:undercurl	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:undercurl = ''$/;"	v
+s:undercurl	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:undercurl = 'undercurl,'$/;"	v
+s:underline	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:underline = ''$/;"	v
+s:underline	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:underline = 'underline,'$/;"	v
 s:undo	.vim/plugged/vim-gitgutter/autoload/gitgutter/hunk.vim	/^function! s:undo(hunk_diff)$/;"	f
 s:undo_lock	.vim/plugged/vim-easymotion/autoload/EasyMotion/undo.vim	/^let s:undo_lock = {}$/;"	v
 s:undo_lock	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Motion.vim	/^let s:undo_lock = {}$/;"	v
@@ -18653,13 +18986,17 @@ s:vcs_config	.vim/plugged/vim-airline/autoload/airline/extensions/branch.vim	/^l
 s:vcs_marker	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/fs.vim	/^let s:vcs_marker = ['.git', '.svn', '.bzr', '_darcs']$/;"	v
 s:verbosefiles	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Palette/Capture.vim	/^let s:verbosefiles = []$/;"	v
 s:version_requirement	.vim/autoload/plug.vim	/^function! s:version_requirement(val, min)$/;"	f
+s:vert_split	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:vert_split = get(s:gb, g:gruvbox_vert_split)$/;"	v
+s:vert_split	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:vert_split = s:bg0$/;"	v
 s:viewer	.vim/plugged/vista.vim/autoload/vista/renderer/kind.vim	/^let s:viewer = {}$/;"	v
 s:viewer.init	.vim/plugged/vista.vim/autoload/vista/renderer/kind.vim	/^function! s:viewer.init(data) abort$/;"	f
 s:viewer.render	.vim/plugged/vista.vim/autoload/vista/renderer/kind.vim	/^function! s:viewer.render() abort$/;"	f
 s:vim8	.vim/autoload/plug.vim	/^let s:vim8 = has('patch-8.0.0039') && exists('*job_start')$/;"	v
+s:vim_bg	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:vim_bg = ['bg', 'bg']$/;"	v
 s:vim_cmdline_mapping	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Over/Commandline/Modules/KeyMapping.vim	/^let s:vim_cmdline_mapping = {$/;"	v
 s:vim_cmdline_mapping.keymapping	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Over/Commandline/Modules/KeyMapping.vim	/^function! s:vim_cmdline_mapping.keymapping(cmdline)$/;"	f
 s:vim_cmdline_mapping.on_enter	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Over/Commandline/Modules/KeyMapping.vim	/^function! s:vim_cmdline_mapping.on_enter(cmdline)$/;"	f
+s:vim_fg	.vim/plugged/gruvbox/colors/gruvbox.vim	/^let s:vim_fg = ['fg', 'fg']$/;"	v
 s:vim_options	.vim/plugged/vim-choosewin/autoload/choosewin/overlay.vim	/^let s:vim_options = {}$/;"	v
 s:vim_options	.vim/plugged/vim-choosewin/autoload/choosewin/overlay.vim	/^let s:vim_options.buffer = {$/;"	v
 s:vim_options	.vim/plugged/vim-choosewin/autoload/choosewin/overlay.vim	/^let s:vim_options.global = {$/;"	v
@@ -18730,6 +19067,10 @@ s:write_triggered_update_tags	.vim/plugged/vim-gutentags/autoload/gutentags.vim	
 s:ws_refresh	.vim/plugged/vim-airline/autoload/airline/extensions/whitespace.vim	/^function! s:ws_refresh()$/;"	f
 s:xterm_escape_template	.vim/plugged/vim-airline/autoload/airline/extensions/cursormode.vim	/^let s:xterm_escape_template = '\\033]12;%s\\007'$/;"	v
 s:yank_to_register	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:yank_to_register(data)$/;"	f
+s:yellow	.vim/plugged/gruvbox/autoload/lightline/colorscheme/gruvbox.vim	/^  let s:yellow = s:getGruvColor('GruvboxYellow')$/;"	v
+s:yellow	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:yellow = s:gb.bright_yellow$/;"	v
+s:yellow	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:yellow = s:gb.faded_yellow$/;"	v
+s:yellow	.vim/plugged/gruvbox/colors/gruvbox.vim	/^  let s:yellow[1] = 11$/;"	v
 s:yellow	.vim/plugged/vim-airline-themes/autoload/airline/themes/solarized_flood.vim	/^let s:yellow  = {'hex': '#B58900', 'term': 136}  " 181, 137,   0$/;"	v
 s:zip	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:zip(...) abort$/;"	f
 s:zip_fill	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:zip_fill(xs, ys, filler) abort$/;"	f
@@ -19102,6 +19443,7 @@ t	.vim/plugged/LeaderF/autoload/leaderf/Line.vim	/^    nnoremap <buffer> <silent
 t	.vim/plugged/LeaderF/autoload/leaderf/Mru.vim	/^    nnoremap <buffer> <silent> t             :exec g:Lf_py "mruExplManager.accept('t')"<CR>$/;"	m
 t	.vim/plugged/LeaderF/autoload/leaderf/Rg.vim	/^    nnoremap <buffer> <silent> t             :exec g:Lf_py "rgExplManager.accept('t')"<CR>$/;"	m
 t	.vim/plugged/LeaderF/autoload/leaderf/Tag.vim	/^    nnoremap <buffer> <silent> t             :exec g:Lf_py "tagExplManager.accept('t')"<CR>$/;"	m
+t	.vim/plugged/ag.vim/autoload/ag.vim	/^      nnoremap <silent> <buffer> t  <C-w><CR><C-w>T$/;"	m
 t	.vim/plugged/coc.nvim/build/index.js	/^\/******\/ 	__webpack_require__.t = function(value, mode) {$/;"	f	function:__webpack_require__
 t	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> t :call far#change_exclude_under_cursor(-1)<cr>$/;"	m
 t	.vim/plugged/far.vim/autoload/far.vim	/^    vnoremap <buffer><silent> t :call far#change_exclude_under_cursor(-1)<cr>$/;"	m
@@ -20365,6 +20707,7 @@ v	.vim/plugged/LeaderF/autoload/leaderf/Line.vim	/^    nnoremap <buffer> <silent
 v	.vim/plugged/LeaderF/autoload/leaderf/Mru.vim	/^    nnoremap <buffer> <silent> v             :exec g:Lf_py "mruExplManager.accept('v')"<CR>$/;"	m
 v	.vim/plugged/LeaderF/autoload/leaderf/Rg.vim	/^    nnoremap <buffer> <silent> v             :exec g:Lf_py "rgExplManager.accept('v')"<CR>$/;"	m
 v	.vim/plugged/LeaderF/autoload/leaderf/Tag.vim	/^    nnoremap <buffer> <silent> v             :exec g:Lf_py "tagExplManager.accept('v')"<CR>$/;"	m
+v	.vim/plugged/ag.vim/autoload/ag.vim	/^      nnoremap <silent> <buffer> v  <C-w><CR><C-w>H<C-W>b<C-W>J<C-W>t$/;"	m
 v	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/arrays.py	/^u, v = 1, ""$/;"	v
 v	.vim/plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><nowait><silent> v             :call startify#set_mark('V')<cr>$/;"	m
 v1.00 (2013-12-29)	.vim/plugged/LeaderF/CHANGELOG.md	/^v1.00 (2013-12-29)$/;"	c
@@ -20415,6 +20758,7 @@ variable_rename	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/functions.py	
 venv_path	.vim/plugged/jedi-vim/pythonx/jedi/test/conftest.py	/^def venv_path(tmpdir_factory, environment):$/;"	f
 version	.vim/plugged/coc.nvim/bin/server.js	/^const version = process.version.replace('v', '')$/;"	C
 version	.vim/plugged/coc.nvim/package.json	/^  "version": "0.0.75",$/;"	s
+version	.vim/plugged/gruvbox/package.json	/^  "version": "2.0.0",$/;"	s
 version	.vim/plugged/jedi-vim/pythonx/jedi/docs/conf.py	/^version = '.'.join(str(x) for x in version_info()[:2])$/;"	v
 version	.vim/plugged/jedi-vim/pythonx/jedi/setup.py	/^version = tree.body[int(not hasattr(tree, 'docstring'))].value.s$/;"	v
 version	.vim/plugged/jedi-vim/pythonx/jedi_vim.py	/^            version = utils.version_info()$/;"	v
@@ -20423,6 +20767,7 @@ version	.vim/plugged/jedi-vim/pythonx/parso/docs/conf.py	/^version = '.'.join(st
 version_info	.vim/plugged/jedi-vim/pythonx/jedi/jedi/utils.py	/^def version_info():$/;"	f
 version_info	.vim/plugged/jedi-vim/pythonx/parso/parso/utils.py	/^def version_info():$/;"	f
 very_long_identifiers	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E50.py	/^very_long_identifiers=and_terrible_whitespace_habits(are_no_excuse+for_long_lines)$/;"	v
+vim	.vim/plugged/gruvbox/package.json	/^  "vim": {$/;"	o
 vim	.vim/plugged/vim-floaterm/bin/floaterm.cmd	/^:vim$/;"	l
 vim	README.md	/^## vim $/;"	s	chapter:必装
 vim-airline [![Build Status](https://travis-ci.org/vim-airline/vim-airline.svg?branch=master)](https://travis-ci.org/vim-airline/vim-airline) [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/chrisbra) [![reviewdog](https://github.com/vim-airline/vim-airline/workflows/reviewdog/badge.svg?branch=master)](https://github.com/vim-airline/vim-airline/actions?query=workflow%3Areviewdog+event%3Apush+branch%3Amaster)	.vim/plugged/vim-airline/README.md	/^# vim-airline [![Build Status](https:\/\/travis-ci.org\/vim-airline\/vim-airline.svg?branch=mast/;"	c
