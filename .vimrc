@@ -47,7 +47,7 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>    "更新插件管理器
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 " liuchengxu/vista.vim
 nnoremap vs :Vista<CR>
-let g:vista_echo_cursor_strategy ='scroll' " 启用悬浮窗预览
+let g:vista_echo_cursor_strategy ='scroll'       " 启用悬浮窗预览
 let g:vista_sidebar_width = 30                   " 宽度
 let g:vista_close_on_jump = 1                    " 跳转到一个符号时，自动关闭vista窗口.
 let g:vista_stay_on_open = 1                     " 打开vista窗口后移动到它.
@@ -199,10 +199,10 @@ nnoremap <Leader>gm :GitMessenger<CR>
 let g:gitgutter_max_signs = 800     "更改显示标示行数限制
 
 " lfv89/vim-interestingwords
-nnoremap <silent> kw :call InterestingWords('n')<CR>
-nnoremap <silent> KW :call UncolorAllWords()<CR>
-nnoremap <silent> n :call WordNavigation('forward')<CR>
-nnoremap <silent> N :call WordNavigation('backward')<CR>
+nnoremap <silent> <Leader>iw :call InterestingWords('n')<CR>
+nnoremap <silent> <Leader>IW :call UncolorAllWords()<CR>
+nnoremap <silent> <Leader>n :call WordNavigation('forward')<CR>
+nnoremap <silent> <Leader>N :call WordNavigation('backward')<CR>
 
 " t9md/vim-choosewin
 nmap wc <Plug>(choosewin)
@@ -256,7 +256,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "通用设置 ------
 " set fillchars+=vert:\ 
-set fillchars=vert:\ ,stl:\ ,stlnc:\ 
+" set fillchars=vert:\ ,stl:\ ,stlnc:\ 
 set t_Co=256                                            " 开启256色支持
 set guifont=Monaco:h16                                  " 默认字体和大小
 set showtabline=0                                       " 隐藏顶部标签栏
