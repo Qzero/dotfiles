@@ -42,6 +42,7 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 **`g:floaterm_open_command`**	.vim/plugged/vim-floaterm/README.md	/^#### **`g:floaterm_open_command`**$/;"	t	subsection:Basic Usage""Options
 **`g:floaterm_position`**	.vim/plugged/vim-floaterm/README.md	/^#### **`g:floaterm_position`**$/;"	t	subsection:Basic Usage""Options
 **`g:floaterm_rootmarkers`**	.vim/plugged/vim-floaterm/README.md	/^#### **`g:floaterm_rootmarkers`**$/;"	t	subsection:Basic Usage""Options
+**`g:floaterm_shell`**	.vim/plugged/vim-floaterm/README.md	/^#### **`g:floaterm_shell`**$/;"	t	subsection:Basic Usage""Options
 **`g:floaterm_width`**	.vim/plugged/vim-floaterm/README.md	/^#### **`g:floaterm_width`**$/;"	t	subsection:Basic Usage""Options
 **`g:floaterm_winblend`**	.vim/plugged/vim-floaterm/README.md	/^#### **`g:floaterm_winblend`**$/;"	t	subsection:Basic Usage""Options
 **`g:floaterm_wintitle`**	.vim/plugged/vim-floaterm/README.md	/^#### **`g:floaterm_wintitle`**$/;"	t	subsection:Basic Usage""Options
@@ -128,6 +129,7 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 0	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["length", "alphabetical"]$/;"	s	array:properties.suggest.defaultSortMethod.enum
 0	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["more", "warning", "error"]$/;"	s	array:properties.coc.preferences.messageLevel.enum
 0	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["preview", "echo", "float"]$/;"	s	array:properties.coc.preferences.hoverTarget.enum
+0	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["quickfix", "location", "none"]$/;"	s	array:properties.coc.preferences.listOfWorkspaceEdit.enum
 0	.vim/plugged/coc.nvim/data/schema.json	/^      "required": ["command", "filetypes"],$/;"	s	array:definitions.languageServerCommand.required
 0	.vim/plugged/coc.nvim/data/schema.json	/^      "required": ["module", "filetypes"],$/;"	s	array:definitions.languageServerModule.required
 0	.vim/plugged/coc.nvim/data/schema.json	/^      "required": ["port", "filetypes"],$/;"	s	array:definitions.languageServerSocket.required
@@ -192,6 +194,7 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 1	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["length", "alphabetical"]$/;"	s	array:properties.suggest.defaultSortMethod.enum
 1	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["more", "warning", "error"]$/;"	s	array:properties.coc.preferences.messageLevel.enum
 1	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["preview", "echo", "float"]$/;"	s	array:properties.coc.preferences.hoverTarget.enum
+1	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["quickfix", "location", "none"]$/;"	s	array:properties.coc.preferences.listOfWorkspaceEdit.enum
 1	.vim/plugged/coc.nvim/data/schema.json	/^      "required": ["command", "filetypes"],$/;"	s	array:definitions.languageServerCommand.required
 1	.vim/plugged/coc.nvim/data/schema.json	/^      "required": ["module", "filetypes"],$/;"	s	array:definitions.languageServerModule.required
 1	.vim/plugged/coc.nvim/data/schema.json	/^      "required": ["port", "filetypes"],$/;"	s	array:definitions.languageServerSocket.required
@@ -213,6 +216,7 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 2	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["hint", "information", "warning", "error"]$/;"	s	array:properties.diagnostic.level.enum
 2	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["more", "warning", "error"]$/;"	s	array:properties.coc.preferences.messageLevel.enum
 2	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["preview", "echo", "float"]$/;"	s	array:properties.coc.preferences.hoverTarget.enum
+2	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["quickfix", "location", "none"]$/;"	s	array:properties.coc.preferences.listOfWorkspaceEdit.enum
 2	.vim/plugged/coc.nvim/package.json	/^      "json",$/;"	s	array:jest.moduleFileExtensions
 2-character search motion	.vim/plugged/vim-easymotion/README.md	/^### 2-character search motion$/;"	S	chapter:New features in version 2.0
 2. Using `:EasyAlign` command	.vim/plugged/vim-easy-align/README.md	/^#### 2. Using `:EasyAlign` command$/;"	t	subsection:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)""Usage""Flow of execution
@@ -340,11 +344,13 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 6.6	.vim/plugged/nerdtree/CHANGELOG.md	/^#### 6.6$/;"	t	chapter:NERDTree Change Log
 6.7	.vim/plugged/nerdtree/CHANGELOG.md	/^#### 6.7$/;"	t	chapter:NERDTree Change Log
 :EasyAlign command	.vim/plugged/vim-easy-align/README.md	/^### :EasyAlign command$/;"	S	section:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)""Usage
-:F {pattern} {file-mask} [params]	.vim/plugged/far.vim/README.md	/^#### :F {pattern} {file-mask} [params]$/;"	t	section:far.vim - Find And Replace Vim plugin""Usage
-:Far {pattern} {replace-with} {file-mask} [params]	.vim/plugged/far.vim/README.md	/^#### :Far {pattern} {replace-with} {file-mask} [params]$/;"	t	section:far.vim - Find And Replace Vim plugin""Usage
-:Fardo [params]	.vim/plugged/far.vim/README.md	/^#### :Fardo [params]$/;"	t	section:far.vim - Find And Replace Vim plugin""Usage
-:Farp [params]	.vim/plugged/far.vim/README.md	/^#### :Farp [params]$/;"	t	section:far.vim - Find And Replace Vim plugin""Usage
-:Refar [params]	.vim/plugged/far.vim/README.md	/^#### :Refar [params]$/;"	t	section:far.vim - Find And Replace Vim plugin""Usage
+:F {pattern} {file-mask} [params]	.vim/plugged/far.vim/README.md	/^#### :F {pattern} {file-mask} [params]$/;"	t	subsection:far.vim - Find And Replace Vim plugin""Usage""Searching with Command
+:Far {pattern} {replace-with} {file-mask} [params]	.vim/plugged/far.vim/README.md	/^#### :Far {pattern} {replace-with} {file-mask} [params]$/;"	t	subsection:far.vim - Find And Replace Vim plugin""Usage""Searching with Command
+:Fardo [params]	.vim/plugged/far.vim/README.md	/^#### :Fardo [params]$/;"	t	subsection:far.vim - Find And Replace Vim plugin""Usage""Commands in the searching result window
+:Farf [params]	.vim/plugged/far.vim/README.md	/^#### :Farf [params]$/;"	t	subsection:far.vim - Find And Replace Vim plugin""Usage""Searching Interatively
+:Farr [params]	.vim/plugged/far.vim/README.md	/^#### :Farr [params]$/;"	t	subsection:far.vim - Find And Replace Vim plugin""Usage""Searching Interatively
+:Farundo [params]	.vim/plugged/far.vim/README.md	/^#### :Farundo [params]$/;"	t	subsection:far.vim - Find And Replace Vim plugin""Usage""Commands in the searching result window
+:Refar [params]	.vim/plugged/far.vim/README.md	/^#### :Refar [params]$/;"	t	subsection:far.vim - Find And Replace Vim plugin""Usage""Commands in the searching result window
 ;	.vim/plugged/vim-easymotion/t/easymotion_spec.vim	/^        map ; <Plug>(easymotion-next)$/;"	m
 <-	.vim/coc-settings.json	/^        "<-": "gitStage",$/;"	s	object:explorer.keyMappings
 <2-LeftMouse>	.vim/plugged/LeaderF/autoload/leaderf/Any.vim	/^    nnoremap <buffer> <silent> <2-LeftMouse> :exec g:Lf_py b:Lf_AnyExplManager."accept()"<CR>$/;"	m
@@ -814,14 +820,11 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <Up>	.vim/plugged/LeaderF/autoload/leaderf/Tag.vim	/^    nnoremap <buffer> <silent> <Up>          <Up>:exec g:Lf_py "tagExplManager._previewResult(Fa/;"	m
 <bs>	.vim/coc-settings.json	/^        "<bs>": "gotoParent",$/;"	s	object:explorer.keyMappings
 <c-h>	.vim/plugged/coc.nvim/autoload/coc/snippet.vim	/^  snoremap <silent> <c-h> <c-g>c$/;"	m
-<c-j>	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> <c-j> :call far#scroll_preview_window(g:far#preview_window_scroll_/;"	m
-<c-k>	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> <c-k> :call far#scroll_preview_window(-g:far#preview_window_scroll/;"	m
 <c-r>	.vim/plugged/coc.nvim/autoload/coc/snippet.vim	/^  snoremap <c-r> <c-g>"_c<c-r>$/;"	m
 <c-space>	.vim/init.vim	/^inoremap <silent><expr> <c-space> coc#refresh()$/;"	m
 <c-space>	.vimrc	/^inoremap <silent><expr> <c-space> coc#refresh()$/;"	m
 <cr>	.vim/autoload/plug.vim	/^      nmap <buffer> <cr> <plug>(plug-preview)$/;"	m
 <cr>	.vim/coc-settings.json	/^        "<cr>": "open",$/;"	s	object:explorer.keyMappings
-<cr>	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> <cr> :call far#jump_buffer_under_cursor()<cr>$/;"	m
 <cr>	.vim/plugged/gv.vim/plugin/gv.vim	/^  nnoremap <silent> <buffer> <cr> :call <sid>open(0)<cr>$/;"	m
 <cr>	.vim/plugged/gv.vim/plugin/gv.vim	/^  xnoremap <silent> <buffer> <cr> :<c-u>call <sid>open(1)<cr>$/;"	m
 <cr>	.vim/plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><nowait><silent> <cr>          :call startify#open_buffers()<cr>$/;"	m
@@ -873,20 +876,20 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <tab>	.vim/coc-settings.json	/^        "<tab>": "actionMenu",$/;"	s	object:explorer.keyMappings
 ?	.vim/coc-settings.json	/^        "?": "help",$/;"	s	object:explorer.keyMappings
 ?	.vim/plugged/git-messenger.vim/autoload/gitmessenger/popup.vim	/^        nnoremap <buffer><silent><nowait>? :<C-u>call b:__gitmessenger_popup.echo_help()<CR>$/;"	m
-@chemzqm/neovim	.vim/plugged/coc.nvim/package.json	/^    "@chemzqm\/neovim": "5.2.3",$/;"	s	object:dependencies
+@chemzqm/neovim	.vim/plugged/coc.nvim/package.json	/^    "@chemzqm\/neovim": "^5.2.4",$/;"	s	object:dependencies
 @chemzqm/tslint-config	.vim/plugged/coc.nvim/package.json	/^    "@chemzqm\/tslint-config": "^1.0.18",$/;"	s	object:devDependencies
 @types/debounce	.vim/plugged/coc.nvim/package.json	/^    "@types\/debounce": "^3.0.0",$/;"	s	object:devDependencies
 @types/fb-watchman	.vim/plugged/coc.nvim/package.json	/^    "@types\/fb-watchman": "^2.0.0",$/;"	s	object:devDependencies
 @types/glob	.vim/plugged/coc.nvim/package.json	/^    "@types\/glob": "^7.1.1",$/;"	s	object:devDependencies
-@types/jest	.vim/plugged/coc.nvim/package.json	/^    "@types\/jest": "^24.0.18",$/;"	s	object:devDependencies
+@types/jest	.vim/plugged/coc.nvim/package.json	/^    "@types\/jest": "^25.2.1",$/;"	s	object:devDependencies
 @types/minimatch	.vim/plugged/coc.nvim/package.json	/^    "@types\/minimatch": "^3.0.3",$/;"	s	object:devDependencies
-@types/mkdirp	.vim/plugged/coc.nvim/package.json	/^    "@types\/mkdirp": "^0.5.2",$/;"	s	object:devDependencies
-@types/node	.vim/plugged/coc.nvim/package.json	/^    "@types\/node": "^12.12.17",$/;"	s	object:devDependencies
-@types/semver	.vim/plugged/coc.nvim/package.json	/^    "@types\/semver": "^6.0.2",$/;"	s	object:devDependencies
+@types/mkdirp	.vim/plugged/coc.nvim/package.json	/^    "@types\/mkdirp": "^1.0.0",$/;"	s	object:devDependencies
+@types/node	.vim/plugged/coc.nvim/package.json	/^    "@types\/node": "^12.12.6",$/;"	s	object:devDependencies
+@types/semver	.vim/plugged/coc.nvim/package.json	/^    "@types\/semver": "^7.1.0",$/;"	s	object:devDependencies
 @types/tar	.vim/plugged/coc.nvim/package.json	/^    "@types\/tar": "^4.0.3",$/;"	s	object:devDependencies
 @types/tunnel	.vim/plugged/coc.nvim/package.json	/^    "@types\/tunnel": "^0.0.1",$/;"	s	object:devDependencies
-@types/uuid	.vim/plugged/coc.nvim/package.json	/^    "@types\/uuid": "^3.4.5",$/;"	s	object:devDependencies
-@types/which	.vim/plugged/coc.nvim/package.json	/^    "@types\/which": "^1.3.1",$/;"	s	object:devDependencies
+@types/uuid	.vim/plugged/coc.nvim/package.json	/^    "@types\/uuid": "^7.0.3",$/;"	s	object:devDependencies
+@types/which	.vim/plugged/coc.nvim/package.json	/^    "@types\/which": "^1.3.2",$/;"	s	object:devDependencies
 A	.vim/coc-settings.json	/^        "A": "addDirectory",$/;"	s	object:explorer.keyMappings
 A	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/async_.py	/^class A():$/;"	c
 A	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/basic.py	/^class A():$/;"	c
@@ -1247,6 +1250,7 @@ Commands	.vim/plugged/vim-browser-search/README.md	/^## Commands$/;"	s	chapter:v
 Commands	.vim/plugged/vim-floaterm/README.md	/^### Commands$/;"	S	section:Basic Usage
 Commands	.vim/plugged/vim-translator/README.md	/^## Commands$/;"	s	chapter:vim-translator
 Commands	.vim/plugged/vista.vim/README.md	/^### Commands$/;"	S	section:Vista.vim""Usage
+Commands in the searching result window	.vim/plugged/far.vim/README.md	/^### Commands in the searching result window$/;"	S	section:far.vim - Find And Replace Vim plugin""Usage
 Commas	.vim/plugged/vim-easy-align/EXAMPLES.md	/^Commas$/;"	s	chapter:easy-align examples
 Commentary	.vim/plugged/vim-commentary/plugin/commentary.vim	/^command! -range -bar Commentary call s:go(<line1>,<line2>)$/;"	c
 CompFor	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^CompFor = SyncCompFor$/;"	v
@@ -1592,13 +1596,16 @@ FakeList	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/value/iterable.py	/^c
 FakeTuple	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/value/iterable.py	/^class FakeTuple(_FakeSequence):$/;"	c
 Far	.vim/plugged/far.vim/plugin/far.vim	/^command! -complete=customlist,far#FarComplete -nargs=+ -range=-1 Far$/;"	c
 Far	.vim/plugged/far.vim/plugin/far.vim	/^function! Far(rngmode, rngline1, rngline2, cmdline) range abort "{{{$/;"	f
-FarDo	.vim/plugged/far.vim/plugin/far.vim	/^function! FarDo(...) abort "{{{$/;"	f
+FarDo	.vim/plugged/far.vim/plugin/far.vim	/^function! FarDo(...) abort range "{{{$/;"	f
+FarModePrompt	.vim/plugged/far.vim/plugin/far.vim	/^function! FarModePrompt(rngmode, rngline1, rngline2, substitute_open, cmdline, ...) abort range /;"	f
 FarPlugin	.vim/plugged/far.vim/rplugin/python3/far/__init__.py	/^    class FarPlugin(object):$/;"	c
 FarPrompt	.vim/plugged/far.vim/plugin/far.vim	/^function! FarPrompt(rngmode, rngline1, rngline2, ...) abort range "{{{$/;"	f
-FarUndo	.vim/plugged/far.vim/plugin/far.vim	/^function! FarUndo(...) abort "{{{$/;"	f
-Fardo	.vim/plugged/far.vim/plugin/far.vim	/^command! -complete=customlist,far#FardoComplete -nargs=* Fardo call FarDo(<f-args>)$/;"	c
+FarUndo	.vim/plugged/far.vim/plugin/far.vim	/^function! FarUndo(...) abort range "{{{$/;"	f
+Fardo	.vim/plugged/far.vim/plugin/far.vim	/^command! -complete=customlist,far#FardoComplete -nargs=* -range=-1 Fardo$/;"	c
+Farf	.vim/plugged/far.vim/plugin/far.vim	/^command! -complete=customlist,far#FarArgsComplete -nargs=* -range=-1 Farf$/;"	c
 Farp	.vim/plugged/far.vim/plugin/far.vim	/^command! -complete=customlist,far#FarArgsComplete -nargs=* -range=-1 Farp$/;"	c
-Farundo	.vim/plugged/far.vim/plugin/far.vim	/^command! -complete=customlist,far#FarundoComplete -nargs=* Farundo call FarUndo(<f-args>)$/;"	c
+Farr	.vim/plugged/far.vim/plugin/far.vim	/^command! -complete=customlist,far#FarArgsComplete -nargs=* -range=-1 Farr$/;"	c
+Farundo	.vim/plugged/far.vim/plugin/far.vim	/^command! -complete=customlist,far#FarundoComplete -nargs=* -range=-1 Farundo$/;"	c
 FeCircularQueue	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^typedef struct FeCircularQueue$/;"	s	file:
 FeCircularQueue	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^}FeCircularQueue;$/;"	t	typeref:struct:FeCircularQueue	file:
 FeResult	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^typedef struct FeResult$/;"	s	file:
@@ -1781,6 +1788,7 @@ GitMessenger	.vim/plugged/git-messenger.vim/plugin/gitmessenger.vim	/^command! -
 GitMessengerClose	.vim/plugged/git-messenger.vim/plugin/gitmessenger.vim	/^command! -nargs=0 -bar GitMessengerClose call gitmessenger#close_popup(bufnr('%'))$/;"	c
 Github	.vim/plugged/jedi-vim/pythonx/jedi/docs/_templates/ghbuttons.html	/^<h3>Github<\/h3>$/;"	j
 Github	.vim/plugged/jedi-vim/pythonx/parso/docs/_templates/ghbuttons.html	/^<h3>Github<\/h3>$/;"	j
+GlobError	.vim/plugged/far.vim/rplugin/python3/far/sources/far_glob.py	/^class GlobError(ValueError):$/;"	c
 Global options	.vim/plugged/fzf.vim/README.md	/^### Global options$/;"	S	section:fzf :heart: vim""Customization
 GlobalNameFilter	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/filters.py	/^class GlobalNameFilter(AbstractUsedNamesFilter):$/;"	c
 GlobalStmt	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^class GlobalStmt(KeywordStatement):$/;"	c
@@ -1832,7 +1840,6 @@ How to take coverage	.vim/plugged/git-messenger.vim/test/README.md	/^### How to 
 How to write sources for fuzzy finder plugins	.vim/plugged/vim-floaterm/README.md	/^## How to write sources for fuzzy finder plugins$/;"	s
 How?	.vim/plugged/vim-gutentags/README.md	/^## How?$/;"	s	chapter:Gutentags
 I	.tmux.conf	/^set -wg window-status-current-format " #I:#W#F " # 状态栏当前窗口名称格式(#I：序号/;"	k
-I	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> I :call far#change_exclude_all(0)<cr>$/;"	m
 I don't want the docstring window to popup during completion	.vim/plugged/jedi-vim/README.rst	/^I don't want the docstring window to popup during completion$/;"	S	section:FAQ
 I have other problems to debug...	.vim/plugged/smartim/README.md	/^## I have other problems to debug...$/;"	s	chapter:FAQ
 I want <Tab> to do autocompletion	.vim/plugged/jedi-vim/README.rst	/^I want <Tab> to do autocompletion$/;"	S	section:FAQ
@@ -1849,6 +1856,7 @@ INDEX_WHOLE_PROJECT	.vim/plugged/vim-gutentags/plat/win32/update_tags.cmd	/^set 
 INVERT	ranger/commands_full.py	/^    INVERT          = 'v'$/;"	v	class:scout
 IS_NVIM	.vim/plugged/jedi-vim/pythonx/jedi_vim.py	/^IS_NVIM = hasattr(vim, 'from_nvim')$/;"	v
 IfStmt	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^class IfStmt(Flow):$/;"	c
+IgnoreFileError	.vim/plugged/far.vim/rplugin/python3/far/sources/far_glob.py	/^class IgnoreFileError(ValueError):$/;"	c
 Ignoring delimiters in comments or strings	.vim/plugged/vim-easy-align/EXAMPLES.md	/^Ignoring delimiters in comments or strings$/;"	s	chapter:easy-align examples
 Ignoring delimiters in comments or strings	.vim/plugged/vim-easy-align/README.md	/^### Ignoring delimiters in comments or strings$/;"	S	section:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)""Alignment options
 Ignoring unmatched lines	.vim/plugged/vim-easy-align/README.md	/^### Ignoring unmatched lines$/;"	S	section:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)""Alignment options
@@ -1863,7 +1871,6 @@ ImportName	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^class Impo
 Important notes	.vim/plugged/vim-easymotion/README.md	/^Important notes$/;"	c
 Importer	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/imports.py	/^class Importer(object):$/;"	c
 Imports & Modules	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/development.rst	/^Imports & Modules$/;"	s	chapter:Jedi Development
-Improving scrolling performance	.vim/plugged/far.vim/README.md	/^#### Improving scrolling performance$/;"	t	section:far.vim - Find And Replace Vim plugin""Troubleshooting
 InBoth	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/docstring.py	/^class InBoth():$/;"	c
 InClass	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/docstring.py	/^class InClass():$/;"	c
 InInit	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/docstring.py	/^class InInit():$/;"	c
@@ -1933,6 +1940,7 @@ Integrate with [asynctasks.vim](https://github.com/skywind3000/asynctasks.vim)	.
 Integrate with [coc.nvim](https://github.com/neoclide/coc.nvim)	.vim/plugged/vim-floaterm/README.md	/^### Integrate with [coc.nvim](https:\/\/github.com\/neoclide\/coc.nvim)$/;"	S	section:More use cases and demos
 Integrate with [denite.nvim](https://github.com/Shougo/denite.nvim)	.vim/plugged/vim-floaterm/README.md	/^### Integrate with [denite.nvim](https:\/\/github.com\/Shougo\/denite.nvim)$/;"	S	section:More use cases and demos
 Integrate with [vim-clap](https://github.com/liuchengxu/vim-clap)	.vim/plugged/vim-floaterm/README.md	/^### Integrate with [vim-clap](https:\/\/github.com\/liuchengxu\/vim-clap)$/;"	S	section:More use cases and demos
+Integrate with other fuzzy finders	.vim/plugged/vim-floaterm/README.md	/^### Integrate with other fuzzy finders$/;"	S	section:More use cases and demos
 Integrating with powerline fonts	.vim/plugged/vim-airline/README.md	/^# Integrating with powerline fonts$/;"	c
 Integration with incsearch.vim	.vim/plugged/vim-easymotion/README.md	/^#### Integration with incsearch.vim$/;"	t	subsection:New features in version 3.0""Overwin motions
 IntegrationTestCase	.vim/plugged/jedi-vim/pythonx/jedi/test/run.py	/^class IntegrationTestCase(BaseTestCase):$/;"	c
@@ -2282,7 +2290,7 @@ NamespaceContext	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/context.py	/^
 NamespaceObject	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/interpreter.py	/^class NamespaceObject(object):$/;"	c
 Navigate to the window you choose	.vim/plugged/vim-choosewin/README.md	/^# Navigate to the window you choose$/;"	c
 Navigating Highlights	.vim/plugged/vim-interestingwords/README.md	/^### Navigating Highlights$/;"	S	section:vim-interestingwords""Usage
-Need help?	.vim/plugged/far.vim/README.md	/^#### Need help?$/;"	t	section:far.vim - Find And Replace Vim plugin""Usage
+Need help?	.vim/plugged/far.vim/README.md	/^### Need help?$/;"	S	section:far.vim - Find And Replace Vim plugin""Usage
 NeoBundle (https://github.com/Shougo/neobundle.vim)	.vim/plugged/vim-easymotion/README.md	/^### NeoBundle (https:\/\/github.com\/Shougo\/neobundle.vim)$/;"	S	section:New features in version 2.0""Installation
 NeoVim	.vim/plugged/vista.vim/README.md	/^#### NeoVim$/;"	t	subsection:Vista.vim""Installation""Package management
 NeoVimLoggerHandler	.vim/plugged/far.vim/rplugin/python3/far/__init__.py	/^    class NeoVimLoggerHandler(logging.Handler):$/;"	c
@@ -2335,7 +2343,6 @@ Output of “:verbose JediDebugInfo”	.vim/plugged/jedi-vim/.github/ISSUE_TEMPL
 OverloadFunction	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/gradual/typing.py	/^class OverloadFunction(BaseTypingValue):$/;"	c
 OverloadedFunctionValue	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/value/function.py	/^class OverloadedFunctionValue(FunctionMixin, ValueWrapper):$/;"	c
 Overwin motions	.vim/plugged/vim-easymotion/README.md	/^### Overwin motions$/;"	S	chapter:New features in version 3.0
-P	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> P :call far#close_preview_window()<cr>$/;"	m
 PAPER	.vim/plugged/jedi-vim/pythonx/jedi/docs/Makefile	/^PAPER         =$/;"	m
 PAPER	.vim/plugged/jedi-vim/pythonx/parso/docs/Makefile	/^PAPER         =$/;"	m
 PAPEROPT_a4	.vim/plugged/jedi-vim/pythonx/jedi/docs/Makefile	/^PAPEROPT_a4     = -D latex_paper_size=a4$/;"	m
@@ -2482,6 +2489,7 @@ ReadBookmarks	.vim/plugged/nerdtree/lib/nerdtree/creator.vim	/^    command! -buf
 Reader	.vim/plugged/jedi-vim/pythonx/jedi/test/test_inference/test_mixed.py	/^    class Reader(Generic[T]):$/;"	c	function:test_generics_methods	file:
 Recipes	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/features.rst	/^Recipes$/;"	s	chapter:Features and Caveats
 RecolorAllWords	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^function! RecolorAllWords()$/;"	f
+Recommented Setting	.vim/plugged/far.vim/README.md	/^#### Recommented Setting$/;"	t	section:far.vim - Find And Replace Vim plugin""Troubleshooting
 Recursion	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/recursion.py	/^def Recursion():$/;"	f
 RecursionDetector	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/recursion.py	/^class RecursionDetector(object):$/;"	c
 Recursions (recursion.py)	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/development.rst	/^Recursions (recursion.py)$/;"	S	section:Caching & Recursions
@@ -2576,6 +2584,8 @@ Search	.vim/plugged/vim-browser-search/plugin/search.vim	/^command! -complete=cu
 Search and Explore	.vim/plugged/ctrlsf.vim/README.md	/^### Search and Explore$/;"	S	chapter:ctrlsf.vim
 SearchCurrentText	.vim/plugged/vim-browser-search/plugin/search.vim	/^command! -complete=customlist,search#Complete -nargs=? -range SearchCurrentText call search#Sear/;"	c
 SearchVisualText	.vim/plugged/vim-browser-search/plugin/search.vim	/^command! -complete=customlist,search#Complete -nargs=? -range SearchVisualText  call search#Sear/;"	c
+Searching Interatively	.vim/plugged/far.vim/README.md	/^### Searching Interatively$/;"	S	section:far.vim - Find And Replace Vim plugin""Usage
+Searching with Command	.vim/plugged/far.vim/README.md	/^### Searching with Command$/;"	S	section:far.vim - Find And Replace Vim plugin""Usage
 SectionSpec	.vim/plugged/vim-airline/t/section.vim	/^function! SectionSpec()$/;"	f
 Self promotion	.vim/plugged/indentLine/README.md	/^## Self promotion$/;"	s	chapter:indentLine
 Self-Diagnosis	.vim/plugged/nerdtree/.github/ISSUE_TEMPLATE/bug.md	/^#### Self-Diagnosis$/;"	t	section:labels: bug
@@ -2640,6 +2650,7 @@ StaticMethodObject	.vim/plugged/jedi-vim/pythonx/jedi/jedi/plugins/stdlib.py	/^c
 Status	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/flow_analysis.py	/^class Status(object):$/;"	c
 Status line of terminal buffer	.vim/plugged/fzf.vim/README.md	/^Status line of terminal buffer$/;"	s	chapter:fzf :heart: vim
 Statusline	.vim/pack/kite/start/vim-plugin/README.md	/^### Statusline$/;"	S	section:Kite Python Plugin for Vim/Neovim""Features
+Statusline	.vim/plugged/vim-translator/README.md	/^## Statusline$/;"	s	chapter:vim-translator
 Steps to Reproduce the Issue	.vim/plugged/nerdtree/.github/ISSUE_TEMPLATE/bug.md	/^#### Steps to Reproduce the Issue$/;"	t	section:labels: bug
 Steps to reproduce	.vim/plugged/LeaderF/ISSUE_TEMPLATE.md	/^### Steps to reproduce$/;"	S
 Steps to reproduce	.vim/plugged/jedi-vim/.github/ISSUE_TEMPLATE.md	/^### Steps to reproduce$/;"	S
@@ -2680,7 +2691,6 @@ Syntax-aware alignment	.vim/plugged/vim-easy-align/README.md	/^### Syntax-aware 
 SyntaxRule	.vim/plugged/jedi-vim/pythonx/parso/parso/python/errors.py	/^class SyntaxRule(Rule):$/;"	c
 System-wide installation via a package manager	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/installation.rst	/^System-wide installation via a package manager$/;"	s	chapter:Installation and Configuration
 T	.vim/plugged/ag.vim/autoload/ag.vim	/^      nnoremap <silent> <buffer> T  <C-w><CR><C-w>TgT<C-W><C-W>$/;"	m
-T	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> T :call far#change_exclude_all(-1)<cr>$/;"	m
 T	.vim/plugged/vim-easymotion/t/easymotion_spec.vim	/^        map T <Plug>(easymotion-T)$/;"	m
 T	.vim/plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><nowait><silent> T             :call startify#set_batchmode('T')<cr>$/;"	m
 T/	.vim/plugged/vim-easymotion/t/easymotion_spec.vim	/^        map T\/ <Plug>(easymotion-Tn)$/;"	m
@@ -2987,7 +2997,6 @@ Writing	.vim/plugged/vim-gutentags/CONTRIBUTING.md	/^## Writing$/;"	s	chapter:Co
 WrongVersion	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/exceptions.py	/^class WrongVersion(_JediError):$/;"	c
 X	.vim/autoload/plug.vim	/^    nnoremap <silent> <buffer> X :call <SID>revert()<cr>$/;"	m
 X	.vim/coc-settings.json	/^        "X": "systemExecute",$/;"	s	object:explorer.keyMappings
-X	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> X :call far#change_exclude_all(1)<cr>$/;"	m
 X	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/arrays.py	/^class X():$/;"	c
 X	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/classes.py	/^        class X():$/;"	c	member:Foo.create_class	file:
 X	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/comprehensions.py	/^class X():$/;"	c
@@ -4877,7 +4886,7 @@ _writeCache	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/fileExpl.py	/^ 
 `:TranslateL`	.vim/plugged/vim-translator/README.md	/^#### `:TranslateL`$/;"	t	section:vim-translator""Commands
 `:TranslateR[!] [engines=] [target_lang=] [source_lang=] [your text]`	.vim/plugged/vim-translator/README.md	/^#### `:TranslateR[!] [engines=] [target_lang=] [source_lang=] [your text]`$/;"	t	section:vim-translator""Commands
 `:TranslateW[!] [engines=] [target_lang=] [source_lang=] [your text]`	.vim/plugged/vim-translator/README.md	/^#### `:TranslateW[!] [engines=] [target_lang=] [source_lang=] [your text]`$/;"	t	section:vim-translator""Commands
-`:TranslateX [engines=] [target_lang=] [source_lang=] [your text]`	.vim/plugged/vim-translator/README.md	/^#### `:TranslateX [engines=] [target_lang=] [source_lang=] [your text]`$/;"	t	section:vim-translator""Commands
+`:TranslateX [engines=] [target_lang=] [source_lang=]`	.vim/plugged/vim-translator/README.md	/^#### `:TranslateX [engines=] [target_lang=] [source_lang=]`$/;"	t	section:vim-translator""Commands
 `:Translate[!] [engines=] [target_lang=] [source_lang=] [your text]`	.vim/plugged/vim-translator/README.md	/^#### `:Translate[!] [engines=] [target_lang=] [source_lang=] [your text]`$/;"	t	section:vim-translator""Commands
 `<Space>`	.vim/plugged/vim-easy-align/README.md	/^#### `<Space>`$/;"	t	subsection:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)""Demo""Using predefined alignment rules
 `=`	.vim/plugged/vim-easy-align/README.md	/^#### `=`$/;"	t	subsection:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)""Demo""Using predefined alignment rules
@@ -5718,7 +5727,6 @@ beg	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyMatch.h	/^    uint16
 bg	.tmux.conf	/^set -g message-style "bg=red, fg=yellow"         # 指定消息通知的前景、后景色$/;"	k
 bg	.tmux.conf	/^set -g status-style "bg=black, fg=yellow"        # 状态栏前景背景色$/;"	k
 bg	.tmux.conf	/^set -wg window-status-current-style "bg=red"     # 状态栏当前窗口对称的样式$/;"	k
-bin	.vim/plugged/coc.nvim/package.json	/^  "bin": ".\/bin\/server.js",$/;"	s
 binary_search	.vim/plugged/jedi-vim/pythonx/parso/parso/tree.py	/^        def binary_search(lower, upper):$/;"	f	member:BaseNode.get_leaf_for_position	file:
 bind	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/signature.py	/^    def bind(self, value):$/;"	m	class:AbstractSignature
 bind	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/signature.py	/^    def bind(self, value):$/;"	m	class:BuiltinSignature
@@ -5744,7 +5752,7 @@ both	.vim/plugged/jedi-vim/pythonx/jedi/test/examples/stub_packages/with_python/
 bracket_start	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/classes.py	/^    def bracket_start(self):$/;"	m	class:Signature
 bracket_start	.vim/plugged/jedi-vim/pythonx/jedi/test/test_api/test_call_signatures.py	/^    def bracket_start(src):$/;"	f	function:test_bracket_start	file:
 broken_import	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/imports.py	/^def broken_import():$/;"	f
-bser	.vim/plugged/coc.nvim/package.json	/^    "bser": "^2.1.0",$/;"	s	object:dependencies
+bser	.vim/plugged/coc.nvim/package.json	/^    "bser": "^2.1.1",$/;"	s	object:dependencies
 buddy	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/pep0484_comments.py	/^buddy = Dog(UNKNOWN_NAME1, UNKNOWN_NAME2, UNKNOWN_NAME3)$/;"	v
 bufExplManager	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/bufExpl.py	/^bufExplManager = BufExplManager()$/;"	v
 bufTagExplManager	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/bufTagExpl.py	/^bufTagExplManager = BufTagExplManager()$/;"	v
@@ -5961,8 +5969,8 @@ cls_nested	.vim/plugged/jedi-vim/pythonx/jedi/test/test_api/test_context.py	/^cl
 clz_table_8bit	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyMatch.c	/^    static uint8_t clz_table_8bit[256] =$/;"	v	typeref:typename:uint8_t[256]	file:
 cmap	ranger/commands_full.py	/^class cmap(map_):$/;"	c
 cmd	.vim/plugged/far.vim/autoload/far.vim	/^    let cmd = ['ack', '--nogroup', '--column', '--nocolor',$/;"	v
-cmd	.vim/plugged/far.vim/autoload/far.vim	/^    let cmd = ['ag', '--nogroup', '--column', '--nocolor', '--silent',$/;"	v
-cmd	.vim/plugged/far.vim/autoload/far.vim	/^    let cmd = ['rg', '--no-heading', '--column', '--no-messages',$/;"	v
+cmd	.vim/plugged/far.vim/autoload/far.vim	/^    let cmd = ['ag', '--nogroup', '--column', '--nocolor', '--silent', '--vimgrep',$/;"	v
+cmd	.vim/plugged/far.vim/autoload/far.vim	/^    let cmd = ['xargs',  'rg','--json','--with-filename', '--no-heading',$/;"	v
 cmd	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E101.py	/^	cmd = ([os.path.join(path, PEP8_BIN)] +$/;"	v
 cmd	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E12_not_first.py	/^    cmd = ([os.path.join(path, PEP8_BIN)] +$/;"	v
 cmdline_call_signatures	.vim/plugged/jedi-vim/pythonx/jedi_vim.py	/^def cmdline_call_signatures(signatures):$/;"	f
@@ -6046,10 +6054,9 @@ coc#util#change_lines	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! co
 coc#util#clear_signs	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#clear_signs()$/;"	f
 coc#util#clearmatches	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#clearmatches(ids, ...)$/;"	f
 coc#util#close	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#close(id) abort$/;"	f
-coc#util#close_pum_float	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#close_pum_float()$/;"	f
 coc#util#close_win	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#close_win(id)$/;"	f
 coc#util#create_float_buf	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#create_float_buf(bufnr) abort$/;"	f
-coc#util#create_float_win	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#create_float_win(winnr, bufnr, config) abort$/;"	f
+coc#util#create_float_win	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#create_float_win(winid, bufnr, config) abort$/;"	f
 coc#util#cursor	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#cursor()$/;"	f
 coc#util#diff_content	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#diff_content(lines) abort$/;"	f
 coc#util#do_autocmd	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#do_autocmd(name) abort$/;"	f
@@ -6108,6 +6115,7 @@ coc#util#refactor_foldlevel	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^functi
 coc#util#remote_fns	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#remote_fns(name)$/;"	f
 coc#util#root_patterns	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#root_patterns() abort$/;"	f
 coc#util#run_terminal	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#run_terminal(opts, cb)$/;"	f
+coc#util#set_buf_lines	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#set_buf_lines(bufnr, lines) abort$/;"	f
 coc#util#set_buf_var	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#set_buf_var(bufnr, name, val) abort$/;"	f
 coc#util#setline	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#setline(lnum, line)$/;"	f
 coc#util#timer	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^function! coc#util#timer(method, args)$/;"	f
@@ -6131,6 +6139,7 @@ coc.preferences.formatOnTypeFiletypes	.vim/plugged/coc.nvim/data/schema.json	/^ 
 coc.preferences.highlightTimeout	.vim/plugged/coc.nvim/data/schema.json	/^    "coc.preferences.highlightTimeout": {$/;"	o	object:properties
 coc.preferences.hoverTarget	.vim/plugged/coc.nvim/data/schema.json	/^    "coc.preferences.hoverTarget": {$/;"	o	object:properties
 coc.preferences.jumpCommand	.vim/plugged/coc.nvim/data/schema.json	/^    "coc.preferences.jumpCommand": {$/;"	o	object:properties
+coc.preferences.listOfWorkspaceEdit	.vim/plugged/coc.nvim/data/schema.json	/^    "coc.preferences.listOfWorkspaceEdit": {$/;"	o	object:properties
 coc.preferences.maxFileSize	.vim/plugged/coc.nvim/data/schema.json	/^    "coc.preferences.maxFileSize": {$/;"	o	object:properties
 coc.preferences.messageLevel	.vim/plugged/coc.nvim/data/schema.json	/^    "coc.preferences.messageLevel": {$/;"	o	object:properties
 coc.preferences.previewAutoClose	.vim/plugged/coc.nvim/data/schema.json	/^    "coc.preferences.previewAutoClose": {$/;"	o	object:properties
@@ -6192,7 +6201,7 @@ collections_namedtuple	.vim/plugged/jedi-vim/pythonx/jedi/jedi/plugins/stdlib.py
 colllect_normalizer_tests	.vim/plugged/jedi-vim/pythonx/parso/conftest.py	/^def colllect_normalizer_tests(base_dir):$/;"	f
 color	.vim/coc-settings.json	/^        "color": "\\ue22b",$/;"	s	object:suggest.completionItemKindLabels
 color	.vim/plugged/coc.nvim/data/schema.json	/^        "color": { "type": "string" },$/;"	o	object:properties.suggest.completionItemKindLabels.properties
-colors	.vim/plugged/coc.nvim/package.json	/^    "colors": "^1.3.3",$/;"	s	object:devDependencies
+colors	.vim/plugged/coc.nvim/package.json	/^    "colors": "^1.4.0",$/;"	s	object:devDependencies
 colors	.vim/plugged/vim-airline/t/themes.vim	/^    let colors = airline#themes#get_highlight('Foo')$/;"	v
 colors_name	.vim/plugged/jellybeans.vim/colors/jellybeans.vim	/^let colors_name = "jellybeans"$/;"	v
 colorschemeExplManager	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/colorschemeExpl.py	/^colorschemeExplManager = ColorschemeExplManager()$/;"	v
@@ -6614,6 +6623,8 @@ default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": "length",$/;"	
 default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": "menu",$/;"	s	object:properties.suggest.detailField
 default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": "more",$/;"	s	object:properties.coc.preferences.messageLevel
 default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": "npm",$/;"	s	object:properties.npm.binPath
+default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": "quickfix",$/;"	s	object:properties.coc.preferences.listOfWorkspaceEdit
+default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": "true"$/;"	s	object:properties.diagnostic.virtualTextCurrentLineOnly
 default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": "vsplit"$/;"	s	object:properties.refactor.openCommand
 default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": "~",$/;"	s	object:properties.suggest.snippetIndicator
 default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": "‣"$/;"	s	object:properties.codeLens.separator
@@ -6658,6 +6669,7 @@ default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": [],$/;"	a	obje
 default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": [],$/;"	a	object:properties.coc.source.file.disableSyntaxes
 default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": [],$/;"	a	object:properties.coc.source.file.ignorePatterns
 default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": [],$/;"	a	object:properties.list.source.outline.ctagsFilestypes
+default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": [],$/;"	a	object:properties.list.source.symbols.excludes
 default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": false$/;"	b	object:properties.coc.preferences.currentFunctionSymbolAutoUpdate
 default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": false$/;"	b	object:properties.coc.preferences.formatOnInsertLeave
 default	.vim/plugged/coc.nvim/data/schema.json	/^      "default": false$/;"	b	object:properties.coc.preferences.formatOnType
@@ -6851,6 +6863,7 @@ description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Key u
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Key used for select next line on insert mode."$/;"	s	object:properties.list.nextKeymap
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Key used for select previous line on insert mode."$/;"	s	object:properties.list.previousKeymap
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Limit lines for list buffer."$/;"	s	object:properties.list.limitLines
+description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "List should contains changed locations after workspace edit, default to vi/;"	s	object:properties.coc.preferences.listOfWorkspaceEdit
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Make inserted word replace word characters after cursor position.",$/;"	s	object:properties.suggest.fixInsertedWord
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Max height for preview window of list."$/;"	s	object:properties.list.maxPreviewHeight
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Max items count for source priority bigger than or equal to 90."$/;"	s	object:properties.suggest.highPrioritySourceLimit
@@ -6871,11 +6884,13 @@ description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Not m
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Offset number of buffer.addHighlight, neovim only.",$/;"	s	object:properties.diagnostic.highlightOffset
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Offset number of sign",$/;"	s	object:properties.diagnostic.signOffset
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Only refresh diagnostics after save, default false.",$/;"	s	object:properties.diagnostic.refreshAfterSave
+description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Only show virtualText diagnostic on current cursor line",$/;"	s	object:properties.diagnostic.virtualTextCurrentLineOnly
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Open command for refactor window.",$/;"	s	object:properties.refactor.openCommand
+description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Patterns of mimimatch for filepath to execlude from symbols list.",$/;"	s	object:properties.list.source.symbols.excludes
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Print num lines of leading context before each match."$/;"	s	object:properties.refactor.beforeContext
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Print num lines of trailing context after each match."$/;"	s	object:properties.refactor.afterContext
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Priority of language sources."$/;"	s	object:properties.suggest.languageSourcePriority
-description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Prompt confirm from user for workspace edit.",$/;"	s	object:properties.coc.preferences.promptWorkspaceEdit
+description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Prompt confirm from user when apply workspace edit for unloaded files.",$/;"	s	object:properties.coc.preferences.promptWorkspaceEdit
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Remove completion items with duplicated word for all sources, snippet item/;"	s	object:properties.suggest.removeDuplicateItems
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Remove kind field from vim complete item.",$/;"	s	object:properties.suggest.disableKind
 description	.vim/plugged/coc.nvim/data/schema.json	/^      "description": "Remove menu field from vim complete item.",$/;"	s	object:properties.suggest.disableMenu
@@ -6962,6 +6977,7 @@ diagnostic.refreshOnInsertMode	.vim/plugged/coc.nvim/data/schema.json	/^    "dia
 diagnostic.separateRelatedInformationAsDiagnostics	.vim/plugged/coc.nvim/data/schema.json	/^    "diagnostic.separateRelatedInformationAsDiagnostics": {$/;"	o	object:properties
 diagnostic.signOffset	.vim/plugged/coc.nvim/data/schema.json	/^    "diagnostic.signOffset": {$/;"	o	object:properties
 diagnostic.virtualText	.vim/plugged/coc.nvim/data/schema.json	/^    "diagnostic.virtualText": {$/;"	o	object:properties
+diagnostic.virtualTextCurrentLineOnly	.vim/plugged/coc.nvim/data/schema.json	/^    "diagnostic.virtualTextCurrentLineOnly": {$/;"	o	object:properties
 diagnostic.virtualTextLineSeparator	.vim/plugged/coc.nvim/data/schema.json	/^    "diagnostic.virtualTextLineSeparator": {$/;"	o	object:properties
 diagnostic.virtualTextLines	.vim/plugged/coc.nvim/data/schema.json	/^    "diagnostic.virtualTextLines": {$/;"	o	object:properties
 diagnostic.virtualTextPrefix	.vim/plugged/coc.nvim/data/schema.json	/^    "diagnostic.virtualTextPrefix": {$/;"	o	object:properties
@@ -7149,6 +7165,7 @@ enum	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["hint", "informatio
 enum	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["length", "alphabetical"]$/;"	a	object:properties.suggest.defaultSortMethod
 enum	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["more", "warning", "error"]$/;"	a	object:properties.coc.preferences.messageLevel
 enum	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["preview", "echo", "float"]$/;"	a	object:properties.coc.preferences.hoverTarget
+enum	.vim/plugged/coc.nvim/data/schema.json	/^      "enum": ["quickfix", "location", "none"]$/;"	a	object:properties.coc.preferences.listOfWorkspaceEdit
 enumMember	.vim/coc-settings.json	/^        "enumMember": "\\uf02b",$/;"	s	object:suggest.completionItemKindLabels
 enumMember	.vim/plugged/coc.nvim/data/schema.json	/^        "enumMember": { "type": "string" },$/;"	o	object:properties.suggest.completionItemKindLabels.properties
 env	.vim/plugged/coc.nvim/data/schema.json	/^        "env": {$/;"	o	object:definitions.languageServerBase.properties
@@ -7197,6 +7214,7 @@ example	.vim/plugged/vista.vim/test/data/175.cpp	/^namespace example {$/;"	n	fil
 example_dir	.vim/plugged/jedi-vim/pythonx/jedi/test/helpers.py	/^example_dir = join(test_dir, 'examples')$/;"	v
 example_issue254	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E12_not_second.py	/^    def example_issue254():$/;"	f
 example_issue254	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E12_third.py	/^    def example_issue254():$/;"	f
+exception_ignore	.vim/plugged/far.vim/rplugin/python3/far/sources/far_glob.py	/^def exception_ignore(ignore_rules_origin):$/;"	f
 exclude_patterns	.vim/plugged/jedi-vim/pythonx/jedi/docs/conf.py	/^exclude_patterns = []$/;"	v
 exclude_patterns	.vim/plugged/jedi-vim/pythonx/parso/docs/conf.py	/^exclude_patterns = []$/;"	v
 exe	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/decorators.py	/^exe = decorated(set, '')$/;"	v
@@ -7352,12 +7370,16 @@ far#FardoComplete	.vim/plugged/far.vim/autoload/far.vim	/^function! far#FardoCom
 far#FarundoComplete	.vim/plugged/far.vim/autoload/far.vim	/^function! far#FarundoComplete(arglead, cmdline, cursorpos) abort$/;"	f
 far#FindArgsComplete	.vim/plugged/far.vim/autoload/far.vim	/^function! far#FindArgsComplete(arglead, cmdline, cursorpos) abort$/;"	f
 far#FindComplete	.vim/plugged/far.vim/autoload/far.vim	/^function! far#FindComplete(arglead, cmdline, cursorpos) abort$/;"	f
+far#ModePromptComplete	.vim/plugged/far.vim/autoload/far.vim	/^function! far#ModePromptComplete(arglead, cmdline, cursorpos) abort$/;"	f
 far#RefarComplete	.vim/plugged/far.vim/autoload/far.vim	/^function! far#RefarComplete(arglead, cmdline, cursorpos) abort$/;"	f
 far#apply_default_mappings	.vim/plugged/far.vim/autoload/far.vim	/^function! far#apply_default_mappings() abort "{{{$/;"	f
 far#change_collapse_all	.vim/plugged/far.vim/autoload/far.vim	/^function! far#change_collapse_all(cmode) abort "{{{$/;"	f
 far#change_collapse_under_cursor	.vim/plugged/far.vim/autoload/far.vim	/^function! far#change_collapse_under_cursor(cmode) abort "{{{$/;"	f
+far#change_collapse_under_selection	.vim/plugged/far.vim/autoload/far.vim	/^function! far#change_collapse_under_selection(cmode) abort range "{{{$/;"	f
 far#change_exclude_all	.vim/plugged/far.vim/autoload/far.vim	/^function! far#change_exclude_all(cmode) abort "{{{$/;"	f
 far#change_exclude_under_cursor	.vim/plugged/far.vim/autoload/far.vim	/^function! far#change_exclude_under_cursor(cmode) abort "{{{$/;"	f
+far#change_exclude_under_selection	.vim/plugged/far.vim/autoload/far.vim	/^function! far#change_exclude_under_selection(cmode) abort range "{{{$/;"	f
+far#close_far_buff	.vim/plugged/far.vim/autoload/far.vim	/^function! far#close_far_buff() abort range "{{{$/;"	f
 far#close_preview_window	.vim/plugged/far.vim/autoload/far.vim	/^function! far#close_preview_window() abort "{{{$/;"	f
 far#executors#basic#execute	.vim/plugged/far.vim/autoload/far/executors/basic.vim	/^function! far#executors#basic#execute(exec_ctx, callback) abort$/;"	f
 far#executors#nvim#callback	.vim/plugged/far.vim/autoload/far/executors/nvim.vim	/^function! far#executors#nvim#callback(result, ctx_idx) abort$/;"	f
@@ -7365,17 +7387,22 @@ far#executors#nvim#execute	.vim/plugged/far.vim/autoload/far/executors/nvim.vim	
 far#executors#py3#execute	.vim/plugged/far.vim/autoload/far/executors/py3.vim	/^function! far#executors#py3#execute(exec_ctx, callback) abort$/;"	f
 far#find	.vim/plugged/far.vim/autoload/far.vim	/^function! far#find(far_params, xargs) "{{{$/;"	f
 far#jump_buffer_under_cursor	.vim/plugged/far.vim/autoload/far.vim	/^function! far#jump_buffer_under_cursor() abort "{{{$/;"	f
+far#mode_prompt_close	.vim/plugged/far.vim/autoload/far.vim	/^function! far#mode_prompt_close() abort "{{{$/;"	f
+far#mode_prompt_get_item	.vim/plugged/far.vim/autoload/far.vim	/^function! far#mode_prompt_get_item(item_name, default_item, complete_list) abort "{{{$/;"	f
+far#mode_prompt_open	.vim/plugged/far.vim/autoload/far.vim	/^function! far#mode_prompt_open() abort "{{{$/;"	f
 far#refind	.vim/plugged/far.vim/autoload/far.vim	/^function! far#refind(range, xargs) abort "{{{$/;"	f
 far#replace	.vim/plugged/far.vim/autoload/far.vim	/^function! far#replace(xargs) abort "{{{$/;"	f
 far#rpc#invoke	.vim/plugged/far.vim/autoload/far/rpc.vim	/^function! far#rpc#invoke(imports, evalstr) abort "{{{$/;"	f
 far#rpc#nvim_invoke	.vim/plugged/far.vim/autoload/far/rpc.vim	/^function! far#rpc#nvim_invoke(execlist) abort "{{{$/;"	f
 far#scroll_preview_window	.vim/plugged/far.vim/autoload/far.vim	/^function! far#scroll_preview_window(steps) abort "{{{$/;"	f
+far#set_mappings	.vim/plugged/far.vim/autoload/far.vim	/^function! far#set_mappings(map, act_func_ref) abort "{{{$/;"	f
 far#show_preview_window_under_cursor	.vim/plugged/far.vim/autoload/far.vim	/^function! far#show_preview_window_under_cursor() abort "{{{$/;"	f
 far#sources#qf#search	.vim/plugged/far.vim/autoload/far/sources/qf.vim	/^function! far#sources#qf#search(ctx, fargs, cmdargs) abort "{{{$/;"	f
 far#tools#centrify_text	.vim/plugged/far.vim/autoload/far/tools.vim	/^function! far#tools#centrify_text(text, width, val_col) abort "{{{$/;"	f
 far#tools#cut_text_middle	.vim/plugged/far.vim/autoload/far/tools.vim	/^function! far#tools#cut_text_middle(text, width) abort "{{{$/;"	f
 far#tools#echo_err	.vim/plugged/far.vim/autoload/far/tools.vim	/^function! far#tools#echo_err(msg) abort "{{{$/;"	f
 far#tools#echo_msg	.vim/plugged/far.vim/autoload/far/tools.vim	/^function! far#tools#echo_msg(msg) abort "{{{$/;"	f
+far#tools#echo_warn	.vim/plugged/far.vim/autoload/far/tools.vim	/^function! far#tools#echo_warn(msg) abort "{{{$/;"	f
 far#tools#ftlookup	.vim/plugged/far.vim/autoload/far/tools.vim	/^function! far#tools#ftlookup(ext) abort "{{{$/;"	f
 far#tools#isdebug	.vim/plugged/far.vim/autoload/far/tools.vim	/^function! far#tools#isdebug()$/;"	f
 far#tools#log	.vim/plugged/far.vim/autoload/far/tools.vim	/^function! far#tools#log(msg)$/;"	f
@@ -7385,15 +7412,16 @@ far#tools#setdefault	.vim/plugged/far.vim/autoload/far/tools.vim	/^function! far
 far#tools#split_layout	.vim/plugged/far.vim/autoload/far/tools.vim	/^function! far#tools#split_layout(smode, bname, width, height) abort "{{{$/;"	f
 far#tools#splitcmd	.vim/plugged/far.vim/autoload/far/tools.vim	/^function! far#tools#splitcmd(cmdline) "{{{$/;"	f
 far#tools#undo_nextnr	.vim/plugged/far.vim/autoload/far/tools.vim	/^function! far#tools#undo_nextnr() "{{{$/;"	f
-far#tools#visualtext	.vim/plugged/far.vim/autoload/far/tools.vim	/^function! far#tools#visualtext() "{{{$/;"	f
+far#tools#visualtext	.vim/plugged/far.vim/autoload/far/tools.vim	/^function! far#tools#visualtext(...) "{{{$/;"	f
 far#tools#win_layout	.vim/plugged/far.vim/autoload/far/tools.vim	/^function! far#tools#win_layout(win_params, param_prefix, fname) abort "{{{$/;"	f
 far#undo	.vim/plugged/far.vim/autoload/far.vim	/^function! far#undo(xargs) abort "{{{$/;"	f
 far.vim - Find And Replace Vim plugin	.vim/plugged/far.vim/README.md	/^# far.vim - Find And Replace Vim plugin$/;"	c
+far_glob	.vim/plugged/far.vim/rplugin/python3/far/sources/far_glob.py	/^def far_glob(root, rules, ignore_rules):$/;"	f
 faraugroup	.vim/plugged/far.vim/autoload/far.vim	/^augroup faraugroup "{{{$/;"	a
 farpy_path	.vim/plugged/far.vim/autoload/far/rpc.vim	/^let farpy_path = escape(fnamemodify(expand('<sfile>'), ':p:h:h:h'), ' \\').'\/rplugin\/python3'$/;"	v
 fast-diff	.vim/plugged/coc.nvim/package.json	/^    "fast-diff": "^1.2.0",$/;"	s	object:dependencies
 fast_parser	.vim/plugged/jedi-vim/pythonx/jedi/jedi/settings.py	/^fast_parser = True$/;"	v
-fb-watchman	.vim/plugged/coc.nvim/package.json	/^    "fb-watchman": "^2.0.0",$/;"	s	object:dependencies
+fb-watchman	.vim/plugged/coc.nvim/package.json	/^    "fb-watchman": "^2.0.1",$/;"	s	object:dependencies
 feed_node	.vim/plugged/jedi-vim/pythonx/parso/parso/normalizer.py	/^    def feed_node(self, node):$/;"	m	class:Rule
 fetch	.vim/plugged/jedi-vim/pythonx/jedi/sith.py	/^    def fetch(file_path):$/;"	m	class:SourceFinder
 fetch	.vim/plugged/rainbow/tests/test.sh	/^fetch() {$/;"	f
@@ -7506,7 +7534,7 @@ folder	.vim/coc-settings.json	/^        "folder": "\\uf114",$/;"	s	object:sugges
 folder	.vim/plugged/coc.nvim/data/schema.json	/^        "folder": { "type": "string" },$/;"	o	object:properties.suggest.completionItemKindLabels.properties
 folderNodesDefaultSymbol	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/devicons.py	/^folderNodesDefaultSymbol = ''$/;"	v
 follow	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/imports.py	/^    def follow(self):$/;"	m	class:Importer
-follow-redirects	.vim/plugged/coc.nvim/package.json	/^    "follow-redirects": "^1.9.0",$/;"	s	object:dependencies
+follow-redirects	.vim/plugged/coc.nvim/package.json	/^    "follow-redirects": "^1.11.0",$/;"	s	object:dependencies
 follow_definition	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/classes.py	/^    def follow_definition(self):$/;"	m	class:Completion
 follow_error_node_imports_if_possible	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/imports.py	/^def follow_error_node_imports_if_possible(context, name):$/;"	f
 follow_statement	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/decorators.py	/^def follow_statement(stmt):$/;"	f
@@ -9401,6 +9429,7 @@ g:coc_enabled	.vim/plugged/coc.nvim/plugin/coc.vim	/^  let g:coc_enabled = 1$/;"
 g:coc_global_extensions	.vim/init.vim	/^let g:coc_global_extensions = [$/;"	v
 g:coc_global_extensions	.vim/plugged/coc.nvim/autoload/coc.vim	/^let g:coc_global_extensions = get(g:, 'coc_global_extensions', [])$/;"	v
 g:coc_global_extensions	.vimrc	/^let g:coc_global_extensions = [$/;"	v
+g:coc_last_float_win	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^  let g:coc_last_float_win = winid$/;"	v
 g:coc_last_hover_message	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^  let g:coc_last_hover_message = a:msg$/;"	v
 g:coc_selected_text	.vim/plugged/coc.nvim/autoload/coc.vim	/^let g:coc_selected_text = ''$/;"	v
 g:coc_service_initialized	.vim/plugged/coc.nvim/plugin/coc.vim	/^let g:coc_service_initialized = 0$/;"	v
@@ -9462,13 +9491,24 @@ g:easy_align_last_command	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^
 g:easy_align_last_command	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^    let g:easy_align_last_command = s:echon('', n, regx, d, copts, '')$/;"	v
 g:easy_align_need_repeat	.vim/plugged/vim-easy-align/plugin/easy_align.vim	/^      let g:easy_align_need_repeat = 1$/;"	v
 g:far#check_windows_to_resize_timer	.vim/plugged/far.vim/autoload/far.vim	/^    let g:far#check_windows_to_resize_timer =$/;"	v
+g:far#default_file_mask	.vim/plugged/far.vim/plugin/far.vim	/^    let g:far#default_file_mask = file_mask$/;"	v
 g:far#executors#nvim#context_idx	.vim/plugged/far.vim/autoload/far/executors/nvim.vim	/^    let g:far#executors#nvim#context_idx += 1$/;"	v
 g:far#executors#nvim#context_idx	.vim/plugged/far.vim/autoload/far/executors/nvim.vim	/^let g:far#executors#nvim#context_idx = 0$/;"	v
 g:far#executors#nvim#contexts	.vim/plugged/far.vim/autoload/far/executors/nvim.vim	/^    let g:far#executors#nvim#contexts[ctx_idx] = ctx$/;"	v
 g:far#executors#nvim#contexts	.vim/plugged/far.vim/autoload/far/executors/nvim.vim	/^let g:far#executors#nvim#contexts = {}$/;"	v
 g:far#file_mask_history	.vim/plugged/far.vim/autoload/far.vim	/^let g:far#file_mask_history = []$/;"	v
+g:far#mapping	.vim/plugged/far.vim/autoload/far.vim	/^        let g:far#mapping[key] = get(g:far#mapping, key,$/;"	v
+g:far#mapping	.vim/plugged/far.vim/autoload/far.vim	/^    let g:far#mapping = s:default_mapping$/;"	v
+g:far#mode_open	.vim/plugged/far.vim/autoload/far.vim	/^                let g:far#mode_open['case_sensitive'] = ! g:far#mode_open['case_sensitive']$/;"	v
+g:far#mode_open	.vim/plugged/far.vim/autoload/far.vim	/^                let g:far#mode_open['regex'] = ! g:far#mode_open['regex']$/;"	v
+g:far#mode_open	.vim/plugged/far.vim/autoload/far.vim	/^                let g:far#mode_open['substitute'] = ! g:far#mode_open['substitute']$/;"	v
+g:far#mode_open	.vim/plugged/far.vim/autoload/far.vim	/^                let g:far#mode_open['word'] = ! g:far#mode_open['word']$/;"	v
+g:far#mode_open	.vim/plugged/far.vim/plugin/far.vim	/^    let g:far#mode_open['substitute'] = a:substitute_open$/;"	v
+g:far#prompt_mapping	.vim/plugged/far.vim/autoload/far.vim	/^        let g:far#prompt_mapping[key] = get(g:far#prompt_mapping, key,$/;"	v
+g:far#prompt_mapping	.vim/plugged/far.vim/autoload/far.vim	/^    let g:far#prompt_mapping = s:default_prompt_mapping$/;"	v
 g:far#repl_history	.vim/plugged/far.vim/autoload/far.vim	/^let g:far#repl_history = []$/;"	v
 g:far#search_history	.vim/plugged/far.vim/autoload/far.vim	/^let g:far#search_history = []$/;"	v
+g:far#show_prompt_key	.vim/plugged/far.vim/autoload/far.vim	/^    let g:far#show_prompt_key=1$/;"	v
 g:floaterm_autoclose	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_autoclose     = get(g:, 'floaterm_autoclose', v:false)$/;"	v
 g:floaterm_autoinsert	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_autoinsert    = get(g:, 'floaterm_autoinsert', v:true)$/;"	v
 g:floaterm_borderchars	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_borderchars   = get(g:, 'floaterm_borderchars', ['─', '│', '─', '│', '┌/;"	v
@@ -9476,12 +9516,14 @@ g:floaterm_gitcommit	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:float
 g:floaterm_height	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_height        = get(g:, 'floaterm_height', v:null)$/;"	v
 g:floaterm_keymap_hide	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_keymap_hide   = get(g:, 'floaterm_keymap_hide', v:null)$/;"	v
 g:floaterm_keymap_hide	.vim/plugged/vim-floaterm/test/vimrc	/^let g:floaterm_keymap_hide   = '<F10>'$/;"	v
+g:floaterm_keymap_kill	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_keymap_kill   = get(g:, 'floaterm_keymap_kill', v:null)$/;"	v
 g:floaterm_keymap_new	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_keymap_new    = get(g:, 'floaterm_keymap_new', v:null)$/;"	v
 g:floaterm_keymap_new	.vim/plugged/vim-floaterm/test/vimrc	/^let g:floaterm_keymap_new    = '<F7>'$/;"	v
 g:floaterm_keymap_next	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_keymap_next   = get(g:, 'floaterm_keymap_next', v:null)$/;"	v
 g:floaterm_keymap_next	.vim/plugged/vim-floaterm/test/vimrc	/^let g:floaterm_keymap_next   = '<F9>'$/;"	v
 g:floaterm_keymap_prev	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_keymap_prev   = get(g:, 'floaterm_keymap_prev', v:null)$/;"	v
 g:floaterm_keymap_prev	.vim/plugged/vim-floaterm/test/vimrc	/^let g:floaterm_keymap_prev   = '<F8>'$/;"	v
+g:floaterm_keymap_show	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_keymap_show   = get(g:, 'floaterm_keymap_show', v:null)$/;"	v
 g:floaterm_keymap_toggle	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_keymap_toggle = get(g:, 'floaterm_keymap_toggle', v:null)$/;"	v
 g:floaterm_keymap_toggle	.vim/plugged/vim-floaterm/test/vimrc	/^let g:floaterm_keymap_toggle = '<F12>'$/;"	v
 g:floaterm_open_command	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_open_command  = get(g:, 'floaterm_open_command', 'edit')$/;"	v
@@ -9489,6 +9531,7 @@ g:floaterm_position	.vim/init.vim	/^let g:floaterm_position = 'center'$/;"	v
 g:floaterm_position	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_position      = get(g:, 'floaterm_position', 'center')$/;"	v
 g:floaterm_position	.vimrc	/^let g:floaterm_position = 'center'$/;"	v
 g:floaterm_rootmarkers	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_rootmarkers   = get(g:, 'floaterm_rootmarkers', [])$/;"	v
+g:floaterm_shell	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_shell         = get(g:, 'floaterm_shell', &shell)$/;"	v
 g:floaterm_width	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_width         = get(g:, 'floaterm_width', v:null)$/;"	v
 g:floaterm_winblend	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_winblend      = get(g:, 'floaterm_winblend', 0)$/;"	v
 g:floaterm_wintitle	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^let g:floaterm_wintitle      = get(g:, 'floaterm_wintitle', v:true)$/;"	v
@@ -9513,6 +9556,8 @@ g:git_messenger_max_popup_width	.vim/plugged/git-messenger.vim/autoload/gitmesse
 g:git_messenger_no_default_mappings	.vim/plugged/git-messenger.vim/plugin/gitmessenger.vim	/^let g:git_messenger_no_default_mappings = get(g:, 'git_messenger_no_default_mappings', v:false)$/;"	v
 g:git_messenger_preview_mods	.vim/plugged/git-messenger.vim/autoload/gitmessenger.vim	/^let g:git_messenger_preview_mods = get(g:, 'git_messenger_preview_mods', '')$/;"	v
 g:gitgutter_async	.vim/plugged/vim-gitgutter/autoload/gitgutter/hunk.vim	/^    let g:gitgutter_async = async$/;"	v
+g:gitgutter_enabled	.vim/plugged/far.vim/autoload/far.vim	/^        let g:gitgutter_enabled = 0$/;"	v
+g:gitgutter_enabled	.vim/plugged/far.vim/autoload/far.vim	/^        let g:gitgutter_enabled = old_gitgutter_enabled$/;"	v
 g:gitgutter_enabled	.vim/plugged/vim-gitgutter/autoload/gitgutter.vim	/^  let g:gitgutter_enabled = 0$/;"	v
 g:gitgutter_enabled	.vim/plugged/vim-gitgutter/autoload/gitgutter.vim	/^  let g:gitgutter_enabled = 1$/;"	v
 g:gitgutter_grep	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^      let g:gitgutter_grep .= ' --color=never'$/;"	v
@@ -9724,6 +9769,9 @@ g:translator_history_enable	.vim/plugged/vim-translator/plugin/translator.vim	/^
 g:translator_history_enable	.vimrc	/^let g:translator_history_enable = 1$/;"	v
 g:translator_proxy_url	.vim/plugged/vim-translator/plugin/translator.vim	/^let g:translator_proxy_url               = get(g:, 'translator_proxy_url', v:null)$/;"	v
 g:translator_source_lang	.vim/plugged/vim-translator/plugin/translator.vim	/^let g:translator_source_lang             = get(g:, 'translator_source_lang', 'auto')$/;"	v
+g:translator_status	.vim/plugged/vim-translator/autoload/translator.vim	/^  let g:translator_status = 'translating'$/;"	v
+g:translator_status	.vim/plugged/vim-translator/autoload/translator/job.vim	/^  let g:translator_status = ''$/;"	v
+g:translator_status	.vim/plugged/vim-translator/plugin/translator.vim	/^let g:translator_status = ''$/;"	v
 g:translator_target_lang	.vim/plugged/vim-translator/plugin/translator.vim	/^let g:translator_target_lang             = get(g:, 'translator_target_lang', 'zh')$/;"	v
 g:translator_translate_shell_options	.vim/plugged/vim-translator/plugin/translator.vim	/^let g:translator_translate_shell_options = get(g:, 'translator_translate_shell_options', [])$/;"	v
 g:translator_window_borderchars	.vim/plugged/vim-translator/plugin/translator.vim	/^let g:translator_window_borderchars      = get(g:, 'translator_window_borderchars', ['─', '│/;"	v
@@ -10480,8 +10528,9 @@ gitmessenger#scroll	.vim/plugged/git-messenger.vim/autoload/gitmessenger.vim	/^f
 gj	.vim/coc-settings.json	/^        "gj": "gitNext",$/;"	s	object:explorer.keyMappings
 gk	.vim/coc-settings.json	/^        "gk": "gitPrev",$/;"	s	object:explorer.keyMappings
 gl	.vim/coc-settings.json	/^        "gl": "expandRecursive",$/;"	s	object:explorer.keyMappings
-glob	.vim/plugged/coc.nvim/package.json	/^    "glob": "^7.1.4",$/;"	s	object:dependencies
+glob	.vim/plugged/coc.nvim/package.json	/^    "glob": "^7.1.6",$/;"	s	object:dependencies
 glob	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/allowed_syntax_python3.6.py	/^def glob():$/;"	f
+glob_rules	.vim/plugged/far.vim/rplugin/python3/far/sources/far_glob.py	/^def glob_rules(root, rules):$/;"	f
 globalSetup	.vim/plugged/coc.nvim/package.json	/^    "globalSetup": ".\/jest.js",$/;"	s	object:jest
 global_as_import	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/basic.py	/^def global_as_import():$/;"	f
 global_define	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/basic.py	/^def global_define():$/;"	f
@@ -10666,8 +10715,6 @@ i	.vim/plugged/LeaderF/autoload/leaderf/Rg.vim	/^    nnoremap <buffer> <silent> 
 i	.vim/plugged/LeaderF/autoload/leaderf/Self.vim	/^    nnoremap <buffer> <silent> i             :exec g:Lf_py "selfExplManager.input()"<CR>$/;"	m
 i	.vim/plugged/LeaderF/autoload/leaderf/Tag.vim	/^    nnoremap <buffer> <silent> i             :exec g:Lf_py "tagExplManager.input()"<CR>$/;"	m
 i	.vim/plugged/LeaderF/autoload/leaderf/Window.vim	/^    nnoremap <buffer> <silent> i             :exec g:Lf_py "windowExplManager.input()"<CR>$/;"	m
-i	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> i :call far#change_exclude_under_cursor(0)<cr>$/;"	m
-i	.vim/plugged/far.vim/autoload/far.vim	/^    vnoremap <buffer><silent> i :call far#change_exclude_under_cursor(0)<cr>$/;"	m
 i	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/keywords.py	/^class i$/;"	c	function:i	file:
 i	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/keywords.py	/^def i$/;"	f
 i	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/precedence.py	/^i = 0$/;"	v
@@ -11025,6 +11072,7 @@ items	.vim/plugged/coc.nvim/data/schema.json	/^      "items": {$/;"	o	object:pro
 items	.vim/plugged/coc.nvim/data/schema.json	/^      "items": {$/;"	o	object:properties.coc.source.file.triggerCharacters
 items	.vim/plugged/coc.nvim/data/schema.json	/^      "items": {$/;"	o	object:properties.coc.source.file.trimSameExts
 items	.vim/plugged/coc.nvim/data/schema.json	/^      "items": {$/;"	o	object:properties.list.source.outline.ctagsFilestypes
+items	.vim/plugged/coc.nvim/data/schema.json	/^      "items": {$/;"	o	object:properties.list.source.symbols.excludes
 items	.vim/plugged/coc.nvim/data/schema.json	/^      "items": {$/;"	o	object:properties.suggest.invalidInsertCharacters
 items	.vim/plugged/coc.nvim/data/schema.json	/^      "items": {$/;"	o	object:properties.workspace.ignoredFiletypes
 iter	.vim/plugged/jedi-vim/pythonx/jedi/test/test_api/test_context.py	/^    def iter(context):$/;"	f	function:_iter_hierarchy	file:
@@ -11124,7 +11172,7 @@ jedi_usages	.vim/plugged/jedi-vim/autoload/jedi.vim	/^            augroup jedi_u
 jedi_usages	.vim/plugged/jedi-vim/autoload/jedi.vim	/^        augroup jedi_usages$/;"	a
 jedi_usages	.vim/plugged/jedi-vim/autoload/jedi.vim	/^    augroup jedi_usages$/;"	a
 jellybeans.vim	.vim/plugged/jellybeans.vim/README.markdown	/^jellybeans.vim$/;"	c
-jest	.vim/plugged/coc.nvim/package.json	/^    "jest": "24.9.0",$/;"	s	object:devDependencies
+jest	.vim/plugged/coc.nvim/package.json	/^    "jest": "25.5.4",$/;"	s	object:devDependencies
 jest	.vim/plugged/coc.nvim/package.json	/^  "jest": {$/;"	o
 join	.vim/plugged/jedi-vim/pythonx/jedi_vim.py	/^    def join():$/;"	f	function:cmdline_call_signatures	file:
 join1	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/descriptors.py	/^    def join1(self):$/;"	m	class:PropClass
@@ -11132,7 +11180,7 @@ join2	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/descriptors.py	/^    de
 join_left	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/asyncExecutor.py	/^        def join_left(self, iterable):$/;"	m	class:AsyncExecutor.Result
 json	.vim/plugged/jedi-vim/pythonx/jedi/docs/Makefile	/^json:$/;"	t
 json	.vim/plugged/jedi-vim/pythonx/parso/docs/Makefile	/^json:$/;"	t
-jsonc-parser	.vim/plugged/coc.nvim/package.json	/^    "jsonc-parser": "^2.1.1",$/;"	s	object:dependencies
+jsonc-parser	.vim/plugged/coc.nvim/package.json	/^    "jsonc-parser": "^2.2.1",$/;"	s	object:dependencies
 just_a_func	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/decorators.py	/^def just_a_func():$/;"	f
 just_a_method	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/descriptors.py	/^    def just_a_method(self):$/;"	m	class:RevealAccess
 just_a_method	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/usages.py	/^    def just_a_method(self): pass$/;"	m	class:Super
@@ -11436,6 +11484,7 @@ list.previousKeymap	.vim/plugged/coc.nvim/data/schema.json	/^    "list.previousK
 list.selectedSignText	.vim/plugged/coc.nvim/data/schema.json	/^    "list.selectedSignText": {$/;"	o	object:properties
 list.signOffset	.vim/plugged/coc.nvim/data/schema.json	/^    "list.signOffset": {$/;"	o	object:properties
 list.source.outline.ctagsFilestypes	.vim/plugged/coc.nvim/data/schema.json	/^    "list.source.outline.ctagsFilestypes": {$/;"	o	object:properties
+list.source.symbols.excludes	.vim/plugged/coc.nvim/data/schema.json	/^    "list.source.symbols.excludes": {$/;"	o	object:properties
 list_arr	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/dynamic_arrays.py	/^    def list_arr(self, el):$/;"	m	class:C
 list_module_names	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/compiled/subprocess/functions.py	/^def list_module_names(inference_state, search_path):$/;"	f
 list_type_vars	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/value/klass.py	/^    def list_type_vars(self):$/;"	m	class:ClassValue
@@ -11453,6 +11502,7 @@ load_blacklist	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/typeshed/test
 load_copy_buffer	ranger/commands_full.py	/^class load_copy_buffer(Command):$/;"	c
 load_grammar	.vim/plugged/jedi-vim/pythonx/parso/parso/grammar.py	/^    def load_grammar(language='python', version=None, path=None):$/;"	f	function:load_grammar	file:
 load_grammar	.vim/plugged/jedi-vim/pythonx/parso/parso/grammar.py	/^def load_grammar(**kwargs):$/;"	f
+load_ignore_rules	.vim/plugged/far.vim/rplugin/python3/far/sources/far_glob.py	/^def load_ignore_rules(file_path):$/;"	f
 load_module	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/compiled/__init__.py	/^def load_module(inference_state, dotted_name, **kwargs):$/;"	f
 load_module	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/compiled/access.py	/^def load_module(inference_state, dotted_name, sys_path):$/;"	f
 load_module	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/compiled/subprocess/functions.py	/^def load_module(inference_state, **kwargs):$/;"	f
@@ -11466,7 +11516,7 @@ loaded_nerd_tree	.vim/plugged/nerdtree/plugin/NERD_tree.vim	/^let loaded_nerd_tr
 loads	.vim/plugged/jedi-vim/pythonx/jedi/jedi/_compatibility.py	/^    def loads(s, fix_imports=True, encoding="ASCII", errors="strict"):$/;"	f
 local_classes	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/docstring.py	/^def local_classes(node, node2):$/;"	f
 log	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/typeshed/tests/mypy_test.py	/^def log(args, *varargs):$/;"	f
-log4js	.vim/plugged/coc.nvim/package.json	/^    "log4js": "^5.1.0",$/;"	s	object:dependencies
+log4js	.vim/plugged/coc.nvim/package.json	/^    "log4js": "^6.2.1",$/;"	s	object:dependencies
 logger	.vim/plugged/far.vim/rplugin/python3/far/__init__.py	/^    logger = logging.getLogger('far')$/;"	v
 logger	.vim/plugged/far.vim/rplugin/python3/far/sources/shell.py	/^logger = logging.getLogger('far')$/;"	v
 long_function_name	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E101.py	/^def long_function_name($/;"	f
@@ -11643,7 +11693,7 @@ missing	.vim/plugged/vim-floaterm/bin/floaterm.cmd	/^:missing$/;"	l
 mixed	.vim/plugged/jedi-vim/pythonx/jedi/test/static_analysis/star_arguments.py	/^def mixed(*args, **kwargs):$/;"	f
 mixed2	.vim/plugged/jedi-vim/pythonx/jedi/test/static_analysis/star_arguments.py	/^def mixed2(*args, **kwargs):$/;"	f
 mkdir	ranger/commands_full.py	/^class mkdir(Command):$/;"	c
-mkdirp	.vim/plugged/coc.nvim/package.json	/^    "mkdirp": "^0.5.1",$/;"	s	object:dependencies
+mkdirp	.vim/plugged/coc.nvim/package.json	/^    "mkdirp": "^1.0.4",$/;"	s	object:dependencies
 mod1	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/imports.py	/^from . import datetime as mod1$/;"	x
 mode	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^    uint32_t mode;$/;"	m	struct:GtagsParameter	typeref:typename:uint32_t	file:
 mode	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^    uint32_t mode;$/;"	m	struct:Parameter	typeref:typename:uint32_t	file:
@@ -11926,7 +11976,6 @@ p	.vim/plugged/LeaderF/autoload/leaderf/Line.vim	/^    nnoremap <buffer> <silent
 p	.vim/plugged/LeaderF/autoload/leaderf/Mru.vim	/^    nnoremap <buffer> <silent> p             :exec g:Lf_py "mruExplManager._previewResult(True)"/;"	m
 p	.vim/plugged/LeaderF/autoload/leaderf/Rg.vim	/^    nnoremap <buffer> <silent> p             :exec g:Lf_py "rgExplManager._previewResult(True)"</;"	m
 p	.vim/plugged/LeaderF/autoload/leaderf/Tag.vim	/^    nnoremap <buffer> <silent> p             :exec g:Lf_py "tagExplManager._previewResult(True)"/;"	m
-p	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> p :call far#show_preview_window_under_cursor()<cr>$/;"	m
 p	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/descriptors.py	/^    p = property(t)$/;"	v	class:B
 p	.vim/plugged/vista.vim/autoload/vista/ftplugin.vim	/^    nnoremap <buffer> <silent> p    :<c-u>call vista#cursor#TogglePreview()<CR>$/;"	m
 p4change	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E10.py	/^p4change = {$/;"	v
@@ -12030,6 +12079,7 @@ print_to_stdout	.vim/plugged/jedi-vim/pythonx/jedi/jedi/debug.py	/^def print_to_
 print_to_stdout	.vim/plugged/jedi-vim/pythonx/jedi_vim.py	/^def print_to_stdout(level, str_out):$/;"	f
 print_x	.vim/plugged/vista.vim/test/data/123.cpp	/^void print_x(void)$/;"	f	typeref:typename:void
 print_y	.vim/plugged/vista.vim/test/data/123.cpp	/^void print_y(void)$/;"	f	typeref:typename:void
+proc	.vim/plugged/far.vim/rplugin/python3/far/sources/far_glob.py	/^def proc(rules_origin):$/;"	f
 process	.vim/plugged/jedi-vim/pythonx/jedi/jedi/refactoring.py	/^    def process(path, old_lines, new_lines):$/;"	f	function:_rename	file:
 process_comp_for	.vim/plugged/jedi-vim/pythonx/parso/parso/python/errors.py	/^        def process_comp_for(comp_for):$/;"	f	member:_NamedExprRule.is_issue	file:
 process_memory	.vim/plugged/jedi-vim/pythonx/jedi/scripts/wx_check.py	/^def process_memory():$/;"	f
@@ -12428,7 +12478,7 @@ right	ranger/rc.conf	/^cmap <a-right>  eval fm.ui.console.move_word(right=1)$/;"
 right	ranger/rc.conf	/^cmap <end>   eval fm.ui.console.move(right=-1, absolute=True)$/;"	k
 right	ranger/rc.conf	/^cmap <home>  eval fm.ui.console.move(right=0, absolute=True)$/;"	k
 right	ranger/rc.conf	/^cmap <right> eval fm.ui.console.move(right=1)$/;"	k
-rimraf	.vim/plugged/coc.nvim/package.json	/^    "rimraf": "^3.0.0",$/;"	s	object:dependencies
+rimraf	.vim/plugged/coc.nvim/package.json	/^    "rimraf": "^3.0.2",$/;"	s	object:dependencies
 rn	.vim/init.vim	/^nnoremap rn :set relativenumber!<CR>$/;"	m
 rn	.vimrc	/^nnoremap rn :set relativenumber!<CR>$/;"	m
 root	.vim/plugged/jedi-vim/test/test_integration.py	/^root = os.path.dirname(os.path.dirname(__file__))$/;"	v
@@ -14878,7 +14928,7 @@ s:ac.do_win	.vim/plugged/vim-choosewin/autoload/choosewin/action.vim	/^function!
 s:ac.do_win_land	.vim/plugged/vim-choosewin/autoload/choosewin/action.vim	/^function! s:ac.do_win_land() "{{{1$/;"	f
 s:ac.init	.vim/plugged/vim-choosewin/autoload/choosewin/action.vim	/^function! s:ac.init(app) "{{{1$/;"	f
 s:accents	.vim/plugged/vim-airline/autoload/airline/highlighter.vim	/^let s:accents = {}$/;"	v
-s:ack_param_proc	.vim/plugged/far.vim/autoload/far.vim	/^function! s:ack_param_proc(far_params, win_params, cmdargs) "{{{$/;"	f
+s:act_func_ref	.vim/plugged/far.vim/autoload/far.vim	/^let s:act_func_ref = {$/;"	v
 s:action_for	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^function! s:action_for(key, ...)$/;"	f
 s:activate	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^  let s:activate = 'activate'$/;"	v
 s:activate	.vim/plugged/coc.nvim/autoload/coc/util.vim	/^let s:activate = ""$/;"	v
@@ -16349,7 +16399,9 @@ s:default_cmd_fmt	.vim/plugged/vista.vim/autoload/vista/executive/ctags.vim	/^  
 s:default_config	.vim/plugged/vim-easymotion/autoload/EasyMotion.vim	/^function! s:default_config() abort$/;"	f
 s:default_context	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/opt.vim	/^let s:default_context = { 'conf': '', 'ctx': {} }$/;"	v
 s:default_mapping	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^let s:default_mapping = {$/;"	v
+s:default_mapping	.vim/plugged/far.vim/autoload/far.vim	/^let s:default_mapping = {$/;"	v
 s:default_mapping	.vim/plugged/vim-easymotion/plugin/EasyMotion.vim	/^    function! s:default_mapping(motions, do_mapping) "{{{$/;"	f
+s:default_prompt_mapping	.vim/plugged/far.vim/autoload/far.vim	/^let s:default_prompt_mapping={$/;"	v
 s:default_settings	.vim/plugged/jedi-vim/autoload/jedi.vim	/^let s:default_settings = {$/;"	v
 s:define_commands	.vim/autoload/plug.vim	/^function! s:define_commands()$/;"	f
 s:define_sign_line_highlights	.vim/plugged/vim-gitgutter/autoload/gitgutter/highlight.vim	/^function! s:define_sign_line_highlights() abort$/;"	f
@@ -16481,7 +16533,10 @@ s:fail	.vim/plugged/vim-gitgutter/test/runner.vim	/^      let s:fail += 1$/;"	v
 s:fail	.vim/plugged/vim-gitgutter/test/runner.vim	/^let s:fail = 0$/;"	v
 s:far_buffer_name	.vim/plugged/far.vim/autoload/far.vim	/^let s:far_buffer_name = 'FAR %d'$/;"	v
 s:far_params_meta	.vim/plugged/far.vim/autoload/far.vim	/^let s:far_params_meta = {$/;"	v
+s:far_params_meta_vimgrep	.vim/plugged/far.vim/autoload/far.vim	/^let s:far_params_meta_vimgrep = {$/;"	v
 s:far_preview_buffer_name	.vim/plugged/far.vim/autoload/far.vim	/^let s:far_preview_buffer_name = 'Preview'$/;"	v
+s:far_prompt_escape	.vim/plugged/far.vim/autoload/far.vim	/^let s:far_prompt_escape = "\\<c-o>"$/;"	v
+s:farvim_dir	.vim/plugged/far.vim/autoload/far.vim	/^let s:farvim_dir = resolve(expand('<sfile>:p:h:h'))$/;"	v
 s:feedkeys	.vim/pack/kite/start/vim-plugin/autoload/kite/completion.vim	/^function s:feedkeys(keys)$/;"	f
 s:fetching	.vim/plugged/vista.vim/autoload/vista/executive/lcn.vim	/^let s:fetching = v:true$/;"	v
 s:fetching	.vim/plugged/vista.vim/autoload/vista/executive/vim_lsc.vim	/^let s:fetching = v:true$/;"	v
@@ -18036,6 +18091,7 @@ s:min_by	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/Dict.vim	/^
 s:min_by	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:min_by(list, expr) abort$/;"	f
 s:modeMap	.vim/plugged/LeaderF/autoload/leaderf/colorscheme.vim	/^let s:modeMap = {$/;"	v
 s:mode_labels	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^let s:mode_labels = { 'l': '', 'r': '[R]', 'c': '[C]' }$/;"	v
+s:mode_prompt_update	.vim/plugged/far.vim/autoload/far.vim	/^function! s:mode_prompt_update()  abort "{{{$/;"	f
 s:modep	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Palette/Keymapping.vim	/^let s:modep = "[nvoicsxl]"$/;"	v
 s:modified	.vim/plugged/vim-airline-themes/autoload/airline/themes/alduin.vim	/^let s:modified = { 'airline_c': [s:gui07, '', s:cterm07, '', ''] }$/;"	v
 s:modified	.vim/plugged/vim-airline-themes/autoload/airline/themes/fairyfloss.vim	/^let s:modified = { 'airline_c': [ s:guiRose, '', 215, '', '' ] }$/;"	v
@@ -18171,7 +18227,7 @@ s:on_exit_untracked	.vim/plugged/vim-airline/autoload/airline/async.vim	/^  func
 s:on_exit_vim	.vim/plugged/git-messenger.vim/autoload/gitmessenger/git.vim	/^    function! s:on_exit_vim(ch, code) dict abort$/;"	f
 s:on_exit_vim	.vim/plugged/vim-gitgutter/autoload/gitgutter/async.vim	/^function! s:on_exit_vim(channel) dict abort$/;"	f
 s:on_exit_vim	.vim/plugged/vim-translator/autoload/translator/job.vim	/^  function! s:on_exit_vim(ch, code) abort$/;"	f
-s:on_floaterm_close	.vim/plugged/vim-floaterm/autoload/floaterm/terminal.vim	/^function! s:on_floaterm_close(bufnr) abort$/;"	f
+s:on_floaterm_close	.vim/plugged/vim-floaterm/autoload/floaterm/terminal.vim	/^function! s:on_floaterm_close(callback, job, msg, ...) abort$/;"	f
 s:on_floaterm_open	.vim/plugged/vim-floaterm/autoload/floaterm/terminal.vim	/^function! s:on_floaterm_open(bufnr, winid, winopts) abort$/;"	f
 s:on_focus_gained	.vim/plugged/vim-airline/plugin/airline.vim	/^function! s:on_focus_gained()$/;"	f
 s:on_open	.vim/plugged/git-messenger.vim/autoload/gitmessenger.vim	/^function! s:on_open(blame) dict abort$/;"	f
@@ -18343,6 +18399,7 @@ s:preview_commit	.vim/autoload/plug.vim	/^function! s:preview_commit()$/;"	f
 s:preview_height	.vim/plugged/vim-floaterm/autoload/clap/provider/floaterm.vim	/^let s:preview_height = 10$/;"	v
 s:print_section_header	.vim/plugged/vim-startify/autoload/startify.vim	/^function! s:print_section_header() abort$/;"	f
 s:priorities	.vim/plugged/vim-easymotion/autoload/EasyMotion/highlight.vim	/^let s:priorities = {$/;"	v
+s:proc_pattern_args	.vim/plugged/far.vim/autoload/far.vim	/^function! s:proc_pattern_args(far_params, cmdargs) abort "{{{$/;"	f
 s:procbar_dots	.vim/plugged/ctrlsf.vim/autoload/ctrlsf/view.vim	/^let s:procbar_dots = 0$/;"	v
 s:process	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^function! s:process(range, mode, n, ch, opts, regexp, rules, bvis)$/;"	f
 s:process_added	.vim/plugged/vim-gitgutter/autoload/gitgutter/diff.vim	/^function! s:process_added(modifications, from_count, to_count, to_line) abort$/;"	f
@@ -18358,6 +18415,11 @@ s:progress_opt	.vim/autoload/plug.vim	/^function! s:progress_opt(base)$/;"	f
 s:project_root	.vim/plugged/vim-easymotion/autoload/vital/easymotion.vim	/^let s:project_root = expand('<sfile>:h:h:h')$/;"	v
 s:project_sink	.vim/plugged/vista.vim/autoload/vista/finder/fzf.vim	/^function! s:project_sink(line) abort$/;"	f
 s:promptToDelBuffer	.vim/plugged/nerdtree/nerdtree_plugin/fs_menu.vim	/^function! s:promptToDelBuffer(bufnum, msg)$/;"	f
+s:prompt_act_func_ref	.vim/plugged/far.vim/autoload/far.vim	/^let s:prompt_act_func_ref={$/;"	v
+s:prompt_key_display	.vim/plugged/far.vim/autoload/far.vim	/^    let s:prompt_key_display[key] = g:far#prompt_mapping[key]['prompt']$/;"	v
+s:prompt_key_display	.vim/plugged/far.vim/autoload/far.vim	/^let s:prompt_key_display = {}$/;"	v
+s:prompt_mapping_keys	.vim/plugged/far.vim/autoload/far.vim	/^    let s:prompt_mapping_keys[key] = g:far#prompt_mapping[key]['key']$/;"	v
+s:prompt_mapping_keys	.vim/plugged/far.vim/autoload/far.vim	/^let s:prompt_mapping_keys = {}$/;"	v
 s:prompt_snapshot_file	.vim/plugged/vim-airline/autoload/airline/extensions/promptline.vim	/^let s:prompt_snapshot_file = get(g:, 'airline#extensions#promptline#snapshot_file', '')$/;"	v
 s:prompted	.vim/pack/kite/start/vim-plugin/autoload/kite/metrics.vim	/^let s:prompted = 0$/;"	v
 s:prop_id	.vim/plugged/coc.nvim/autoload/coc/api.vim	/^let s:prop_id = 1000$/;"	v
@@ -18387,6 +18449,7 @@ s:provider	.vim/plugged/vista.vim/autoload/vista/extension/rst.vim	/^let s:provi
 s:push	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/Data/List.vim	/^function! s:push(list, val) abort$/;"	f
 s:py_file	.vim/plugged/vim-translator/autoload/translator.vim	/^  let s:py_file = shellescape(s:py_file)$/;"	v
 s:py_file	.vim/plugged/vim-translator/autoload/translator.vim	/^let s:py_file = expand('<sfile>:p:h') . '\/..\/script\/translator.py'$/;"	v
+s:pyglob_param_proc	.vim/plugged/far.vim/autoload/far.vim	/^function! s:pyglob_param_proc(far_params, win_params, cmdargs) "{{{$/;"	f
 s:python_executable	.vim/plugged/vim-translator/autoload/translator.vim	/^    let s:python_executable = 'python'$/;"	v
 s:python_executable	.vim/plugged/vim-translator/autoload/translator.vim	/^    let s:python_executable = 'python3'$/;"	v
 s:python_executable	.vim/plugged/vim-translator/autoload/translator.vim	/^    let s:python_executable = g:python3_host_prog$/;"	v
@@ -19149,6 +19212,7 @@ s:update_tags	.vim/plugged/vim-gutentags/autoload/gutentags.vim	/^function! s:up
 s:update_timer	.vim/plugged/vista.vim/autoload/vista/autocmd.vim	/^let s:update_timer = -1$/;"	v
 s:update_untracked	.vim/plugged/vim-airline/autoload/airline/extensions/branch.vim	/^function! s:update_untracked()$/;"	f
 s:update_vim	.vim/autoload/plug.vim	/^function! s:update_vim()$/;"	f
+s:update_winopts	.vim/plugged/vim-floaterm/autoload/floaterm/terminal.vim	/^function! s:update_winopts(winopts) abort$/;"	f
 s:update_wordcount	.vim/plugged/vim-airline/autoload/airline/extensions/wordcount.vim	/^function! s:update_wordcount(force_update)$/;"	f
 s:upgrade	.vim/autoload/plug.vim	/^function! s:upgrade()$/;"	f
 s:upgrade_specs	.vim/autoload/plug.vim	/^function! s:upgrade_specs()$/;"	f
@@ -19318,7 +19382,7 @@ selectMulti	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/manager.py	/^  
 selfExplManager	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/selfExpl.py	/^selfExplManager = SelfExplManager()$/;"	v
 self_test	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/usages.py	/^    def self_test(self):$/;"	m	class:Abc
 semver	.vim/plugged/coc.nvim/bin/server.js	/^const semver = require('semver')$/;"	C
-semver	.vim/plugged/coc.nvim/package.json	/^    "semver": "^6.3.0",$/;"	s	object:dependencies
+semver	.vim/plugged/coc.nvim/package.json	/^    "semver": "^7.3.2",$/;"	s	object:dependencies
 sentinel	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/base_value.py	/^sentinel = object()$/;"	v
 separator	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^    const char* separator;$/;"	m	struct:RgParameter	typeref:typename:const char *	file:
 separator_len	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^    uint32_t separator_len;$/;"	m	struct:RgParameter	typeref:typename:uint32_t	file:
@@ -19640,8 +19704,6 @@ t	.vim/plugged/LeaderF/autoload/leaderf/Rg.vim	/^    nnoremap <buffer> <silent> 
 t	.vim/plugged/LeaderF/autoload/leaderf/Tag.vim	/^    nnoremap <buffer> <silent> t             :exec g:Lf_py "tagExplManager.accept('t')"<CR>$/;"	m
 t	.vim/plugged/ag.vim/autoload/ag.vim	/^      nnoremap <silent> <buffer> t  <C-w><CR><C-w>T$/;"	m
 t	.vim/plugged/coc.nvim/build/index.js	/^\/******\/ 	__webpack_require__.t = function(value, mode) {$/;"	f	function:__webpack_require__
-t	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> t :call far#change_exclude_under_cursor(-1)<cr>$/;"	m
-t	.vim/plugged/far.vim/autoload/far.vim	/^    vnoremap <buffer><silent> t :call far#change_exclude_under_cursor(-1)<cr>$/;"	m
 t	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/descriptors.py	/^    def t(cls, x):$/;"	m	class:E
 t	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/descriptors.py	/^    def t(self):$/;"	m	class:B
 t	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/pep0484_typing.py	/^import typing as t$/;"	I
@@ -19670,7 +19732,7 @@ tabpage	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/instance.py	/^    d
 tagExplManager	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/tagExpl.py	/^tagExplManager = TagExplManager()$/;"	v
 tag_getDigest	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^static void tag_getDigest(char** str, uint32_t* length, Parameter* param)$/;"	f	typeref:typename:void	file:
 tail	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^    uint32_t        tail;$/;"	m	struct:FeCircularQueue	typeref:typename:uint32_t	file:
-tar	.vim/plugged/coc.nvim/package.json	/^    "tar": "^4.4.10",$/;"	s	object:dependencies
+tar	.vim/plugged/coc.nvim/package.json	/^    "tar": "^6.0.2",$/;"	s	object:dependencies
 target	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/precedence.py	/^target = ''$/;"	v
 target	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/precedence.py	/^target = u''$/;"	v
 taropen	.vim/plugged/jedi-vim/pythonx/jedi/test/static_analysis/descriptors.py	/^    def taropen(cls, name, **kwargs):$/;"	m	class:TarFile
@@ -20562,9 +20624,9 @@ try_except	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/flow_analysis.py	/
 try_iter_content	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/arguments.py	/^def try_iter_content(types, depth=0):$/;"	f
 try_merge	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/base_value.py	/^    def try_merge(self, function_name):$/;"	m	class:ValueSet
 try_to_get_name	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/compiled/access.py	/^        def try_to_get_name(obj):$/;"	f	member:DirectObjectAccess.get_qualified_names	file:
-ts-jest	.vim/plugged/coc.nvim/package.json	/^    "ts-jest": "^24.2.0",$/;"	s	object:devDependencies
-tslib	.vim/plugged/coc.nvim/package.json	/^    "tslib": "^1.11.0",$/;"	s	object:dependencies
-tslint	.vim/plugged/coc.nvim/package.json	/^    "tslint": "^5.19.0",$/;"	s	object:devDependencies
+ts-jest	.vim/plugged/coc.nvim/package.json	/^    "ts-jest": "^25.5.0",$/;"	s	object:devDependencies
+tslib	.vim/plugged/coc.nvim/package.json	/^    "tslib": "^1.11.2",$/;"	s	object:dependencies
+tslint	.vim/plugged/coc.nvim/package.json	/^    "tslint": "^6.1.2",$/;"	s	object:devDependencies
 tunmap	ranger/commands_full.py	/^class tunmap(unmap):$/;"	c
 tunnel	.vim/plugged/coc.nvim/package.json	/^    "tunnel": "^0.0.6",$/;"	s	object:dependencies
 tup	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/stdlib.py	/^tup = kw(1)$/;"	v
@@ -20646,6 +20708,7 @@ type	.vim/plugged/coc.nvim/data/schema.json	/^        "type": "string"$/;"	s	obj
 type	.vim/plugged/coc.nvim/data/schema.json	/^        "type": "string"$/;"	s	object:properties.coc.source.file.triggerCharacters.items
 type	.vim/plugged/coc.nvim/data/schema.json	/^        "type": "string"$/;"	s	object:properties.coc.source.file.trimSameExts.items
 type	.vim/plugged/coc.nvim/data/schema.json	/^        "type": "string"$/;"	s	object:properties.list.source.outline.ctagsFilestypes.items
+type	.vim/plugged/coc.nvim/data/schema.json	/^        "type": "string"$/;"	s	object:properties.list.source.symbols.excludes.items
 type	.vim/plugged/coc.nvim/data/schema.json	/^        "type": "string"$/;"	s	object:properties.suggest.invalidInsertCharacters.items
 type	.vim/plugged/coc.nvim/data/schema.json	/^        "type": "string"$/;"	s	object:properties.workspace.ignoredFiletypes.items
 type	.vim/plugged/coc.nvim/data/schema.json	/^        "typeParameter": { "type": "string" },$/;"	s	object:properties.suggest.completionItemKindLabels.properties.typeParameter
@@ -20662,6 +20725,7 @@ type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "array",$/;"	s	objec
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "array",$/;"	s	object:properties.coc.source.file.triggerCharacters
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "array",$/;"	s	object:properties.coc.source.file.trimSameExts
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "array",$/;"	s	object:properties.list.source.outline.ctagsFilestypes
+type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "array",$/;"	s	object:properties.list.source.symbols.excludes
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "array",$/;"	s	object:properties.suggest.invalidInsertCharacters
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "array",$/;"	s	object:properties.workspace.ignoredFiletypes
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "boolean",$/;"	s	object:properties.coc.preferences.bracketEnterImprove
@@ -20693,6 +20757,7 @@ type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "boolean",$/;"	s	obj
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "boolean",$/;"	s	object:properties.diagnostic.refreshOnInsertMode
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "boolean",$/;"	s	object:properties.diagnostic.separateRelatedInformationAsDiagnostics
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "boolean",$/;"	s	object:properties.diagnostic.virtualText
+type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "boolean",$/;"	s	object:properties.diagnostic.virtualTextCurrentLineOnly
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "boolean",$/;"	s	object:properties.http.proxyStrictSSL
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "boolean",$/;"	s	object:properties.https.rejectUnauthorized
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "boolean",$/;"	s	object:properties.list.autoResize
@@ -20760,6 +20825,7 @@ type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "object",$/;"	s	obje
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "string",$/;"	s	object:properties.coc.preferences.extensionUpdateCheck
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "string",$/;"	s	object:properties.coc.preferences.hoverTarget
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "string",$/;"	s	object:properties.coc.preferences.jumpCommand
+type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "string",$/;"	s	object:properties.coc.preferences.listOfWorkspaceEdit
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "string",$/;"	s	object:properties.coc.preferences.maxFileSize
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "string",$/;"	s	object:properties.coc.preferences.messageLevel
 type	.vim/plugged/coc.nvim/data/schema.json	/^      "type": "string",$/;"	s	object:properties.coc.preferences.snippetStatusText
@@ -20841,7 +20907,7 @@ type_go	.vim/plugged/vista.vim/autoload/vista/types/uctags/go.vim	/^let type_go.
 type_go	.vim/plugged/vista.vim/autoload/vista/types/uctags/go.vim	/^let type_go.sro = '.'$/;"	v
 type_in_out1	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/pep0484_typing.py	/^def type_in_out1(x: typing.Type[TYPE_VARX]) -> TYPE_VARX: ...$/;"	f
 type_in_out2	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/pep0484_typing.py	/^def type_in_out2(x: typing.Type[TYPE_VAR_CONSTRAINTSX]) -> TYPE_VAR_CONSTRAINTSX: ...$/;"	f
-typescript	.vim/plugged/coc.nvim/package.json	/^    "typescript": "^3.8.2",$/;"	s	object:devDependencies
+typescript	.vim/plugged/coc.nvim/package.json	/^    "typescript": "^3.8.3",$/;"	s	object:devDependencies
 typeshed	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/typeshed/README.md	/^# typeshed$/;"	c
 typing_module	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/__init__.py	/^    def typing_module(self):$/;"	m	class:InferenceState
 typoo	.vim/plugged/rainbow/tests/test.c	/^typoo$/;"	f
@@ -20907,7 +20973,7 @@ usefixtures	.vim/plugged/jedi-vim/pythonx/jedi/pytest.ini	/^usefixtures = clean_
 usefixtures	.vim/plugged/jedi-vim/pythonx/parso/pytest.ini	/^usefixtures = clean_parso_cache$/;"	k	section:pytest
 utf8_repr	.vim/plugged/jedi-vim/pythonx/jedi/jedi/_compatibility.py	/^def utf8_repr(func):$/;"	f
 utf8_repr	.vim/plugged/jedi-vim/pythonx/parso/parso/_compatibility.py	/^def utf8_repr(func):$/;"	f
-uuid	.vim/plugged/coc.nvim/package.json	/^    "uuid": "^3.3.3",$/;"	s	object:dependencies
+uuid	.vim/plugged/coc.nvim/package.json	/^    "uuid": "^7.0.3",$/;"	s	object:dependencies
 v	.vim/plugged/LeaderF/autoload/leaderf/Any.vim	/^    nnoremap <buffer> <silent> v             :exec g:Lf_py b:Lf_AnyExplManager."accept('v')"<CR>$/;"	m
 v	.vim/plugged/LeaderF/autoload/leaderf/BufTag.vim	/^    nnoremap <buffer> <silent> v             :exec g:Lf_py "bufTagExplManager.accept('v')"<CR>$/;"	m
 v	.vim/plugged/LeaderF/autoload/leaderf/Buffer.vim	/^    nnoremap <buffer> <silent> v             :exec g:Lf_py "bufExplManager.accept('v')"<CR>$/;"	m
@@ -21207,7 +21273,7 @@ vscode-languageserver	.vim/plugged/coc.nvim/package.json	/^    "vscode-languages
 vscode-languageserver-protocol	.vim/plugged/coc.nvim/package.json	/^    "vscode-languageserver-protocol": "^3.15.3",$/;"	s	object:dependencies
 vscode-languageserver-textdocument	.vim/plugged/coc.nvim/package.json	/^    "vscode-languageserver-textdocument": "^1.0.1",$/;"	s	object:dependencies
 vscode-languageserver-types	.vim/plugged/coc.nvim/package.json	/^    "vscode-languageserver-types": "^3.15.1",$/;"	s	object:dependencies
-vscode-uri	.vim/plugged/coc.nvim/package.json	/^    "vscode-uri": "^2.0.3",$/;"	s	object:dependencies
+vscode-uri	.vim/plugged/coc.nvim/package.json	/^    "vscode-uri": "^2.1.1",$/;"	s	object:dependencies
 vspec_version	.vim/plugged/jedi-vim/test/test_integration.py	/^vspec_version = '1.9.0'$/;"	v
 vundle	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/installation.rst	/^.. _vundle: https:\/\/github.com\/gmarik\/vundle$/;"	T	section:Inclusion as a submodule
 w	.vim/plugged/vim-easymotion/t/easymotion_spec.vim	/^        map w <Plug>(easymotion-w)$/;"	m
@@ -21230,7 +21296,7 @@ weight	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^      
 weight_t	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^typedef float weight_t;$/;"	t	typeref:typename:float	file:
 weights	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^        weight_t*        weights;$/;"	m	union:FuzzyEngine::__anonbc327906050a	typeref:typename:weight_t *	file:
 whatever_func	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/usages.py	/^def whatever_func():$/;"	f
-which	.vim/plugged/coc.nvim/package.json	/^    "which": "^1.3.1"$/;"	s	object:dependencies
+which	.vim/plugged/coc.nvim/package.json	/^    "which": "^2.0.2"$/;"	s	object:dependencies
 which	.vim/plugged/jedi-vim/pythonx/jedi/jedi/_compatibility.py	/^def which(cmd, mode=os.F_OK | os.X_OK, path=None):$/;"	f
 whitespace	.vim/plugged/vim-airline/README.md	/^#### whitespace$/;"	t	section:Features""Extras
 width	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/instance.py	/^    def width(self):$/;"	m	class:FloatWindow
@@ -21328,8 +21394,6 @@ x	.vim/plugged/LeaderF/autoload/leaderf/Line.vim	/^    nnoremap <buffer> <silent
 x	.vim/plugged/LeaderF/autoload/leaderf/Mru.vim	/^    nnoremap <buffer> <silent> x             :exec g:Lf_py "mruExplManager.accept('h')"<CR>$/;"	m
 x	.vim/plugged/LeaderF/autoload/leaderf/Rg.vim	/^    nnoremap <buffer> <silent> x             :exec g:Lf_py "rgExplManager.accept('h')"<CR>$/;"	m
 x	.vim/plugged/LeaderF/autoload/leaderf/Tag.vim	/^    nnoremap <buffer> <silent> x             :exec g:Lf_py "tagExplManager.accept('h')"<CR>$/;"	m
-x	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> x :call far#change_exclude_under_cursor(1)<cr>$/;"	m
-x	.vim/plugged/far.vim/autoload/far.vim	/^    vnoremap <buffer><silent> x :call far#change_exclude_under_cursor(1)<cr>$/;"	m
 x	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/arrays.py	/^    def x(self):$/;"	m	class:X
 x	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/arrays.py	/^x, = d.values()$/;"	v
 x	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/async_.py	/^async def x():$/;"	f
@@ -21486,15 +21550,9 @@ z	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E22.py	/^z = 2
 z	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E22.py	/^z = x **y$/;"	v
 z	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E22.py	/^z = x[0]          + 3$/;"	v
 z	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/allowed_syntax_python3.6.py	/^        class z():$/;"	c	function:x.y	file:
-zA	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> zA :call far#change_collapse_all(-1)<cr>$/;"	m
-za	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> za :call far#change_collapse_under_cursor(-1)<cr>$/;"	m
-zc	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> zc :call far#change_collapse_under_cursor(1)<cr>$/;"	m
 zip_longest	.vim/plugged/jedi-vim/pythonx/jedi/jedi/_compatibility.py	/^    from itertools import izip_longest as zip_longest  # Python 2  # noqa: F401$/;"	x
 zip_longest	.vim/plugged/jedi-vim/pythonx/jedi_vim.py	/^    from itertools import izip_longest as zip_longest  # Python 2$/;"	x
 zip_longest	.vim/plugged/jedi-vim/pythonx/parso/test/test_prefix.py	/^    from itertools import izip_longest as zip_longest$/;"	x
-zm	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> zm :call far#change_collapse_all(1)<cr>$/;"	m
-zo	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> zo :call far#change_collapse_under_cursor(0)<cr>$/;"	m
-zr	.vim/plugged/far.vim/autoload/far.vim	/^    nnoremap <buffer><silent> zr :call far#change_collapse_all(0)<cr>$/;"	m
 zsh & ohmyzsh & zplug	README.md	/^## zsh & ohmyzsh & zplug$/;"	s	chapter:必装
 | ...            | ...             | ...           |	.vim/plugged/rainbow/README.md	/^| ...            | ...             | ...           |$/;"	s	chapter:Rainbow Parentheses Improved
 | syn cppRainbow   syn javaRainbow   syn pyRainbow |	.vim/plugged/rainbow/README.md	/^| syn cppRainbow   syn javaRainbow   syn pyRainbow |$/;"	s	chapter:Rainbow Parentheses Improved
