@@ -27,11 +27,11 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 81 - ((24 * winheight(0) + 15) / 31)
+let s:l = 8 - ((7 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-81
+8
 normal! 0
 lcd ~/dotfiles
 tabnext 1
