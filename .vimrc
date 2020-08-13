@@ -235,11 +235,6 @@ noremap <Leader>si :Startify<CR>
 let g:startify_bookmarks = [
   \ {'c': '~/dotfiles/.vimrc' },
   \ ]
-let g:startify_custom_header = [
-  \ '                           ___       ___       ___       ___       ___ ',
-  \ '                                                                                 ',
-  \ '                            J         e         t         o         o            ',
-  \ '                           ___       ___       ___       ___       ___ ']
 
 " scrooloose/nerdtree
 nnoremap nt :NERDTreeToggle<CR>
