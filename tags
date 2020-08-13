@@ -7,6 +7,8 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/ee8b8d5/
+"	.vim/sessions/default.vim	/^inoremap <buffer> <silent> " =AutoPairsInsert('"')$/;"	m
+"	.vim/sessions/default.vim	/^inoremap <silent> <expr> " coc#_insert_key('request', 'eb6b9129-dd32-11ea-a85f-5bc0cfb032d6')$/;"	m
 $(BUILD_VIRTUAL_ENV)	.vim/plugged/jedi-vim/Makefile	/^$(BUILD_VIRTUAL_ENV): | $(dir $(BUILD_VIRTUAL_ENV))$/;"	t
 $(BUILD_VIRTUAL_ENV)/bin/flake8	.vim/plugged/jedi-vim/Makefile	/^$(BUILD_VIRTUAL_ENV)\/bin\/flake8: | $(BUILD_VIRTUAL_ENV)$/;"	t
 $(BUILD_VIRTUAL_ENV)/bin/vint	.vim/plugged/jedi-vim/Makefile	/^$(BUILD_VIRTUAL_ENV)\/bin\/vint: | $(BUILD_VIRTUAL_ENV)$/;"	t
@@ -26,6 +28,12 @@ $ref	.vim/plugged/coc.nvim/data/schema.json	/^      "allOf": [{ "$ref": "#\/defi
 $ref	.vim/plugged/coc.nvim/data/schema.json	/^      "allOf": [{ "$ref": "#\/definitions\/languageServerBase" }],$/;"	s	object:definitions.languageServerModule.allOf.0
 $ref	.vim/plugged/coc.nvim/data/schema.json	/^      "allOf": [{ "$ref": "#\/definitions\/languageServerBase" }],$/;"	s	object:definitions.languageServerSocket.allOf.0
 $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-schema.org\/draft-06\/schema",$/;"	s
+'	.vim/sessions/default.vim	/^inoremap <buffer> <silent> ' =AutoPairsInsert('''')$/;"	m
+'	.vim/sessions/default.vim	/^inoremap <silent> <expr> ' coc#_insert_key('request', 'eb6b9128-dd32-11ea-a85f-5bc0cfb032d6')$/;"	m
+(	.vim/sessions/default.vim	/^inoremap <buffer> <silent> ( =AutoPairsInsert('(')$/;"	m
+(	.vim/sessions/default.vim	/^inoremap <silent> <expr> ( coc#_insert_key('request', 'eb6b9120-dd32-11ea-a85f-5bc0cfb032d6')$/;"	m
+)	.vim/sessions/default.vim	/^inoremap <buffer> <silent> ) =AutoPairsInsert(')')$/;"	m
+)	.vim/sessions/default.vim	/^inoremap <silent> <expr> ) coc#_insert_key('request', 'eb6b9121-dd32-11ea-a85f-5bc0cfb032d6')$/;"	m
 *	.vim/coc-settings.json	/^        "*": "toggleSelection",$/;"	s	object:explorer.keyMappings
 **Additional context**	.vim/plugged/rainbow/.github/ISSUE_TEMPLATE/bug_report.md	/^### **Additional context**$/;"	S
 **Describe the bug**	.vim/plugged/rainbow/.github/ISSUE_TEMPLATE/bug_report.md	/^### **Describe the bug**$/;"	S
@@ -59,45 +67,68 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 **`g:translator_window_type`**	.vim/plugged/vim-translator/README.md	/^#### **`g:translator_window_type`**$/;"	t	section:vim-translator""Configuration
 ,	.vim/plugged/vim-easymotion/t/easymotion_spec.vim	/^        map , <Plug>(easymotion-prev)$/;"	m
 ,a	.vim/init.vim	/^nmap ,a :CocCommand bookmark.annotate<CR>$/;"	m
+,a	.vim/sessions/default.vim	/^nmap ,a :CocCommand bookmark.annotate$/;"	m
 ,a	.vimrc	/^nmap ,a :CocCommand bookmark.annotate<CR>$/;"	m
 ,b	.vim/init.vim	/^nmap ,b :CocCommand bookmark.toggle<CR>$/;"	m
+,b	.vim/sessions/default.vim	/^nmap ,b :CocCommand bookmark.toggle$/;"	m
 ,b	.vimrc	/^nmap ,b :CocCommand bookmark.toggle<CR>$/;"	m
 ,cf	.vim/init.vim	/^nnoremap ,cf :CocCommand floaterm.new<CR>$/;"	m
+,cf	.vim/sessions/default.vim	/^nnoremap ,cf :CocCommand floaterm.new$/;"	m
 ,cf	.vimrc	/^nnoremap ,cf :CocCommand floaterm.new<CR>$/;"	m
 ,cl	.vim/init.vim	/^nmap ,cl :CocList todolist<CR>$/;"	m
+,cl	.vim/sessions/default.vim	/^nmap ,cl :CocList todolist$/;"	m
 ,cl	.vimrc	/^nmap ,cl :CocList todolist<CR>$/;"	m
 ,clb	.vim/init.vim	/^nmap ,clb :CocList bookmark<CR>$/;"	m
+,clb	.vim/sessions/default.vim	/^nmap ,clb :CocList bookmark$/;"	m
 ,clb	.vimrc	/^nmap ,clb :CocList bookmark<CR>$/;"	m
 ,cn	.vim/init.vim	/^nnoremap ,cn :CocCommand floaterm.next<CR>$/;"	m
+,cn	.vim/sessions/default.vim	/^nnoremap ,cn :CocCommand floaterm.next$/;"	m
 ,cn	.vimrc	/^nnoremap ,cn :CocCommand floaterm.next<CR>$/;"	m
 ,cp	.vim/init.vim	/^nnoremap ,cp :CocCommand floaterm.prev<CR>$/;"	m
+,cp	.vim/sessions/default.vim	/^nnoremap ,cp :CocCommand floaterm.prev$/;"	m
 ,cp	.vimrc	/^nnoremap ,cp :CocCommand floaterm.prev<CR>$/;"	m
 ,ct	.vim/init.vim	/^nnoremap ,ct :CocCommand floaterm.toggle<CR>$/;"	m
+,ct	.vim/sessions/default.vim	/^nnoremap ,ct :CocCommand floaterm.toggle$/;"	m
 ,ct	.vimrc	/^nnoremap ,ct :CocCommand floaterm.toggle<CR>$/;"	m
 ,ctc	.vim/init.vim	/^nmap ,ctc :CocCommand todolist.create<CR>$/;"	m
+,ctc	.vim/sessions/default.vim	/^nmap ,ctc :CocCommand todolist.create$/;"	m
 ,ctc	.vimrc	/^nmap ,ctc :CocCommand todolist.create<CR>$/;"	m
 ,ctd	.vim/init.vim	/^nmap ,ctd :CocCommand todolist.download<CR>$/;"	m
+,ctd	.vim/sessions/default.vim	/^nmap ,ctd :CocCommand todolist.download$/;"	m
 ,ctd	.vimrc	/^nmap ,ctd :CocCommand todolist.download<CR>$/;"	m
 ,ctn	.vim/init.vim	/^nmap ,ctn :CocCommand todolist.clearNotice<CR>$/;"	m
+,ctn	.vim/sessions/default.vim	/^nmap ,ctn :CocCommand todolist.clearNotice$/;"	m
 ,ctn	.vimrc	/^nmap ,ctn :CocCommand todolist.clearNotice<CR>$/;"	m
 ,ctu	.vim/init.vim	/^nmap ,ctu :CocCommand todolist.upload<CR>$/;"	m
+,ctu	.vim/sessions/default.vim	/^nmap ,ctu :CocCommand todolist.upload$/;"	m
 ,ctu	.vimrc	/^nmap ,ctu :CocCommand todolist.upload<CR>$/;"	m
 ,gh	.vim/init.vim	/^nmap ,gh :CocCommand bookmark.prev<CR>$/;"	m
+,gh	.vim/sessions/default.vim	/^nmap ,gh :CocCommand bookmark.prev$/;"	m
 ,gh	.vimrc	/^nmap ,gh :CocCommand bookmark.prev<CR>$/;"	m
 ,gl	.vim/init.vim	/^nmap ,gl :CocCommand bookmark.next<CR>$/;"	m
+,gl	.vim/sessions/default.vim	/^nmap ,gl :CocCommand bookmark.next$/;"	m
 ,gl	.vimrc	/^nmap ,gl :CocCommand bookmark.next<CR>$/;"	m
 ,r	.vim/init.vim	/^nmap <silent> ,r <Plug>TranslateR$/;"	m
 ,r	.vim/init.vim	/^vmap <silent> ,r <Plug>TranslateRV$/;"	m
+,r	.vim/sessions/default.vim	/^nmap <silent> ,r <Plug>TranslateR$/;"	m
+,r	.vim/sessions/default.vim	/^vmap <silent> ,r <Plug>TranslateRV$/;"	m
 ,r	.vimrc	/^nmap <silent> ,r <Plug>TranslateR$/;"	m
 ,r	.vimrc	/^vmap <silent> ,r <Plug>TranslateRV$/;"	m
 ,t	.vim/init.vim	/^nmap <silent> ,t <Plug>Translate$/;"	m
 ,t	.vim/init.vim	/^vmap <silent> ,t <Plug>TranslateV $/;"	m
+,t	.vim/sessions/default.vim	/^nmap <silent> ,t <Plug>Translate$/;"	m
+,t	.vim/sessions/default.vim	/^vmap <silent> ,t <Plug>TranslateV $/;"	m
 ,t	.vimrc	/^nmap <silent> ,t <Plug>Translate$/;"	m
 ,t	.vimrc	/^vmap <silent> ,t <Plug>TranslateV $/;"	m
 ,w	.vim/init.vim	/^nmap <silent> ,w <Plug>TranslateW$/;"	m
 ,w	.vim/init.vim	/^vmap <silent> ,w <Plug>TranslateWV$/;"	m
+,w	.vim/sessions/default.vim	/^nmap <silent> ,w <Plug>TranslateW$/;"	m
+,w	.vim/sessions/default.vim	/^vmap <silent> ,w <Plug>TranslateWV$/;"	m
 ,w	.vimrc	/^nmap <silent> ,w <Plug>TranslateW$/;"	m
 ,w	.vimrc	/^vmap <silent> ,w <Plug>TranslateWV$/;"	m
+-	.vim/init.vim	/^nmap - <Plug>(choosewin)$/;"	m
+-	.vim/sessions/default.vim	/^nmap - <Plug>(choosewin)$/;"	m
+-	.vimrc	/^nmap - <Plug>(choosewin)$/;"	m
 ->	.vim/coc-settings.json	/^        "->": "gitUnstage"    $/;"	s	object:explorer.keyMappings
 .	.vim/coc-settings.json	/^        ".": "toggleHidden",$/;"	s	object:explorer.keyMappings
 .	.vim/plugged/gv.vim/plugin/gv.vim	/^  nnoremap          <buffer> <expr> .  <sid>dot()$/;"	m
@@ -363,6 +394,53 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 :Farundo [params]	.vim/plugged/far.vim/README.md	/^#### :Farundo [params]$/;"	t	subsection:far.vim - Find And Replace Vim plugin""Usage""Commands in the searching result window
 :Refar [params]	.vim/plugged/far.vim/README.md	/^#### :Refar [params]$/;"	t	subsection:far.vim - Find And Replace Vim plugin""Usage""Commands in the searching result window
 ;	.vim/plugged/vim-easymotion/t/easymotion_spec.vim	/^        map ; <Plug>(easymotion-next)$/;"	m
+;;	.vim/sessions/default.vim	/^map ;; <Plug>(easymotion-prefix)$/;"	m
+;;c	.vim/sessions/default.vim	/^nnoremap ;;c :PlugClean$/;"	m
+;;i	.vim/sessions/default.vim	/^nnoremap ;;i :PlugInstall$/;"	m
+;;p	.vim/sessions/default.vim	/^nnoremap ;;p :PlugUpgrade$/;"	m
+;;u	.vim/sessions/default.vim	/^nnoremap ;;u :PlugUpdate$/;"	m
+;IW	.vim/sessions/default.vim	/^nnoremap <silent> ;IW :call UncolorAllWords()$/;"	m
+;K	.vim/sessions/default.vim	/^nnoremap <silent> ;K :call UncolorAllWords()$/;"	m
+;N	.vim/sessions/default.vim	/^nnoremap <silent> ;N :call WordNavigation('backward')$/;"	m
+;b	.vim/sessions/default.vim	/^nnoremap <silent> ;b :LeaderfBuffer$/;"	m
+;cc	.vim/sessions/default.vim	/^noremap ;cc c$/;"	m
+;cf	.vim/sessions/default.vim	/^nnoremap ;cf :CtrlSF $/;"	m
+;cfc	.vim/sessions/default.vim	/^nnoremap ;cfc :CtrlSFClose$/;"	m
+;f	.vim/sessions/default.vim	/^nnoremap <silent> ;f :LeaderfFile$/;"	m
+;ga	.vim/sessions/default.vim	/^nmap ;ga <Plug>(EasyAlign)$/;"	m
+;ga	.vim/sessions/default.vim	/^xmap ;ga <Plug>(EasyAlign)$/;"	m
+;gb	.vim/sessions/default.vim	/^nnoremap ;gb :Gblame$/;"	m
+;gc	.vim/sessions/default.vim	/^nnoremap ;gc :Gcommit$/;"	m
+;gd	.vim/sessions/default.vim	/^nnoremap ;gd :Gvdiff$/;"	m
+;gl	.vim/sessions/default.vim	/^nnoremap ;gl :Glog$/;"	m
+;gm	.vim/sessions/default.vim	/^nmap ;gm <Plug>(git-messenger)$/;"	m
+;gs	.vim/sessions/default.vim	/^nnoremap ;gs :Gstatus$/;"	m
+;gu	.vim/sessions/default.vim	/^nnoremap ;gu :Gpush$/;"	m
+;gv	.vim/sessions/default.vim	/^nnoremap ;gv :GV$/;"	m
+;gw	.vim/sessions/default.vim	/^nnoremap ;gw :Gwrite$/;"	m
+;h	.vim/sessions/default.vim	/^map ;h <Plug>(easymotion-linebackward)$/;"	m
+;hh	.vim/sessions/default.vim	/^noremap ;hh h$/;"	m
+;hp	.vim/sessions/default.vim	/^nmap <buffer> ;hp <Plug>(GitGutterPreviewHunk)$/;"	m
+;hs	.vim/sessions/default.vim	/^nmap <buffer> ;hs <Plug>(GitGutterStageHunk)$/;"	m
+;hs	.vim/sessions/default.vim	/^xmap <buffer> ;hs <Plug>(GitGutterStageHunk)$/;"	m
+;hu	.vim/sessions/default.vim	/^nmap <buffer> ;hu <Plug>(GitGutterUndoHunk)$/;"	m
+;iw	.vim/sessions/default.vim	/^nnoremap <silent> ;iw :call InterestingWords('n')$/;"	m
+;j	.vim/sessions/default.vim	/^map ;j <Plug>(easymotion-j)$/;"	m
+;jj	.vim/sessions/default.vim	/^noremap ;jj j$/;"	m
+;k	.vim/sessions/default.vim	/^nnoremap <silent> ;k :call InterestingWords('n')$/;"	m
+;k	.vim/sessions/default.vim	/^omap ;k <Plug>(easymotion-k)$/;"	m
+;k	.vim/sessions/default.vim	/^vnoremap <silent> ;k :call InterestingWords('v')$/;"	m
+;kk	.vim/sessions/default.vim	/^noremap ;kk k$/;"	m
+;l	.vim/sessions/default.vim	/^map ;l <Plug>(easymotion-lineforward)$/;"	m
+;ll	.vim/sessions/default.vim	/^noremap ;ll l$/;"	m
+;m	.vim/sessions/default.vim	/^nnoremap ;m :messages$/;"	m
+;n	.vim/sessions/default.vim	/^nnoremap <silent> ;n :call WordNavigation('forward')$/;"	m
+;r	.vim/sessions/default.vim	/^map ;r <Plug>(easymotion-repeat)$/;"	m
+;sb	.vim/sessions/default.vim	/^vmap <silent> ;sb <Plug>SearchVisual$/;"	m
+;si	.vim/sessions/default.vim	/^noremap ;si :Startify$/;"	m
+;ss	.vim/sessions/default.vim	/^map ;ss <Plug>(easymotion-s2)$/;"	m
+;t	.vim/sessions/default.vim	/^nnoremap ;t :TabMessage messages$/;"	m
+;ww	.vim/sessions/default.vim	/^noremap ;ww w$/;"	m
 <-	.vim/coc-settings.json	/^        "<-": "gitStage",$/;"	s	object:explorer.keyMappings
 <2-LeftMouse>	.vim/plugged/LeaderF/autoload/leaderf/Any.vim	/^    nnoremap <buffer> <silent> <2-LeftMouse> :exec g:Lf_py b:Lf_AnyExplManager."accept()"<CR>$/;"	m
 <2-LeftMouse>	.vim/plugged/LeaderF/autoload/leaderf/BufTag.vim	/^    nnoremap <buffer> <silent> <2-LeftMouse> :exec g:Lf_py "bufTagExplManager.accept()"<CR>$/;"	m
@@ -383,7 +461,13 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <2-LeftMouse>	.vim/plugged/LeaderF/autoload/leaderf/Window.vim	/^    nnoremap <buffer> <silent> <2-LeftMouse> :exec g:Lf_py "windowExplManager.accept()"<CR>$/;"	m
 <2-LeftMouse>	.vim/plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><nowait><silent> <2-LeftMouse> :call startify#open_buffers()<cr>$/;"	m
 <BS>	.vim/plugged/coc.nvim/autoload/coc/snippet.vim	/^  snoremap <silent> <BS> <c-g>c$/;"	m
+<BS>	.vim/sessions/default.vim	/^inoremap <buffer> <silent> <BS> =AutoPairsDelete()$/;"	m
+<BS>	.vim/sessions/default.vim	/^vmap <BS> "-d$/;"	m
+<C-A>	.vim/sessions/default.vim	/^cnoremap <C-A> <Home>$/;"	m
+<C-B>	.vim/sessions/default.vim	/^cnoremap <C-B> <S-Left>$/;"	m
+<C-C>	.vim/sessions/default.vim	/^inoremap <C-C> $/;"	m
 <C-D>	.vim/init.vim	/^nnoremap <silent> <C-D> :bprevious<CR>:bdelete #<CR>$/;"	m
+<C-D>	.vim/sessions/default.vim	/^nnoremap <silent> <C-D> :bprevious$/;"	m
 <C-D>	.vimrc	/^nnoremap <silent> <C-D> :bprevious<CR>:bdelete #<CR>$/;"	m
 <C-Down>	.vim/plugged/LeaderF/autoload/leaderf/BufTag.vim	/^        nnoremap <buffer> <silent> <C-Down>  :exec g:Lf_py "bufTagExplManager._toDownInPopup()"</;"	m
 <C-Down>	.vim/plugged/LeaderF/autoload/leaderf/Buffer.vim	/^        nnoremap <buffer> <silent> <C-Down>  :exec g:Lf_py "bufExplManager._toDownInPopup()"<CR>$/;"	m
@@ -395,15 +479,25 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <C-Down>	.vim/plugged/LeaderF/autoload/leaderf/QfLocList.vim	/^        nnoremap <buffer> <silent> <C-Down>  :exec g:Lf_py "qfloclistExplManager._toDownInPopup(/;"	m
 <C-Down>	.vim/plugged/LeaderF/autoload/leaderf/Rg.vim	/^        nnoremap <buffer> <silent> <C-Down>  :exec g:Lf_py "rgExplManager._toDownInPopup()"<CR>$/;"	m
 <C-Down>	.vim/plugged/LeaderF/autoload/leaderf/Tag.vim	/^        nnoremap <buffer> <silent> <C-Down>  :exec g:Lf_py "tagExplManager._toDownInPopup()"<CR>$/;"	m
+<C-E>	.vim/sessions/default.vim	/^cnoremap <C-E> <End>$/;"	m
+<C-F>	.vim/sessions/default.vim	/^cnoremap <C-F> <S-Right>$/;"	m
+<C-H>	.vim/sessions/default.vim	/^cnoremap <C-H> <Left>$/;"	m
+<C-H>	.vim/sessions/default.vim	/^inoremap <buffer> <silent> <C-H> =AutoPairsDelete()$/;"	m
 <C-I>	.vim/plugged/LeaderF/autoload/leaderf/Command.vim	/^    nnoremap <buffer> <silent> <C-I>         :exec g:Lf_pI "commandExplManager.input()"<CR>$/;"	m
 <C-I>	.vim/plugged/LeaderF/autoload/leaderf/History.vim	/^    nnoremap <buffer> <silent> <C-I>         :exec g:Lf_py "historyExplManager.input()"<CR>$/;"	m
+<C-L>	.vim/sessions/default.vim	/^cnoremap <C-L> <Right>$/;"	m
 <C-N>	.vim/init.vim	/^nnoremap <silent> <C-N> :bn<CR>$/;"	m
 <C-N>	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^        nnoremap <buffer> <silent> <C-N> :<C-U>execute <SID>NextItem(v:count1)<CR>$/;"	m
+<C-N>	.vim/sessions/default.vim	/^cnoremap <C-N> <Down>$/;"	m
+<C-N>	.vim/sessions/default.vim	/^nnoremap <silent> <C-N> :bn$/;"	m
 <C-N>	.vimrc	/^nnoremap <silent> <C-N> :bn<CR>$/;"	m
 <C-P>	.vim/init.vim	/^nnoremap <silent> <C-P> :bp<CR>$/;"	m
 <C-P>	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^          nnoremap <buffer> <silent> <C-P> :<C-U>execute <SID>PreviousItem(v:count1)<CR>$/;"	m
 <C-P>	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^          nnoremap <buffer> <silent> <C-P> :<C-U>execute line('.') == 1 ? 'CtrlP ' . fnameescape/;"	m
+<C-P>	.vim/sessions/default.vim	/^cnoremap <C-P> <Up>$/;"	m
+<C-P>	.vim/sessions/default.vim	/^nnoremap <silent> <C-P> :bp$/;"	m
 <C-P>	.vimrc	/^nnoremap <silent> <C-P> :bp<CR>$/;"	m
+<C-Space>	.vim/sessions/default.vim	/^inoremap <silent> <expr> <C-Space> coc#refresh()$/;"	m
 <C-Up>	.vim/plugged/LeaderF/autoload/leaderf/BufTag.vim	/^        nnoremap <buffer> <silent> <C-Up>    :exec g:Lf_py "bufTagExplManager._toUpInPopup()"<CR/;"	m
 <C-Up>	.vim/plugged/LeaderF/autoload/leaderf/Buffer.vim	/^        nnoremap <buffer> <silent> <C-Up>    :exec g:Lf_py "bufExplManager._toUpInPopup()"<CR>$/;"	m
 <C-Up>	.vim/plugged/LeaderF/autoload/leaderf/File.vim	/^        nnoremap <buffer> <silent> <C-Up>    :exec g:Lf_py "fileExplManager._toUpInPopup()"<CR>$/;"	m
@@ -459,6 +553,11 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <CR>	.vim/plugged/LeaderF/autoload/leaderf/Window.vim	/^    nnoremap <buffer> <silent> <CR>          :exec g:Lf_py "windowExplManager.accept()"<CR>$/;"	m
 <CR>	.vim/plugged/jedi-vim/autoload/jedi.vim	/^        noremap <buffer> <CR> :call jedi#goto_window_on_enter()<CR>$/;"	m
 <CR>	.vim/plugged/vista.vim/autoload/vista/ftplugin.vim	/^    nnoremap <buffer> <silent> <CR> :<c-u>call vista#cursor#FoldOrJump()<CR>$/;"	m
+<D-c>	.vim/sessions/default.vim	/^vmap <D-c> "*y$/;"	m
+<D-v>	.vim/sessions/default.vim	/^map! <D-v> *$/;"	m
+<D-v>	.vim/sessions/default.vim	/^nmap <D-v> "*P$/;"	m
+<D-v>	.vim/sessions/default.vim	/^vmap <D-v> "-d"*P$/;"	m
+<D-x>	.vim/sessions/default.vim	/^vmap <D-x> "*d$/;"	m
 <DEL>	.vim/plugged/coc.nvim/autoload/coc/snippet.vim	/^  snoremap <silent> <DEL> <c-g>c$/;"	m
 <Down>	.vim/plugged/LeaderF/autoload/leaderf/BufTag.vim	/^    nnoremap <buffer> <silent> <Down>        <Down>:exec g:Lf_py "bufTagExplManager._previewResu/;"	m
 <Down>	.vim/plugged/LeaderF/autoload/leaderf/Colors.vim	/^    nnoremap <buffer> <silent> <Down>        <Down>:exec g:Lf_py "colorschemeExplManager._previe/;"	m
@@ -589,6 +688,20 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <Leader>ww	.vim/init.vim	/^noremap <Leader>ww <C-w>w$/;"	m
 <Leader>ww	.vimrc	/^noremap <Leader>ww <C-w>w$/;"	m
 <LeftMouse>	.vim/plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><nowait><silent> <LeftMouse>   :call <sid>leftmouse()<cr>$/;"	m
+<M-">	.vim/sessions/default.vim	/^inoremap <buffer> <silent> <M-"> =AutoPairsMoveCharacter('"')$/;"	m
+<M-'>	.vim/sessions/default.vim	/^inoremap <buffer> <silent> <M-'> =AutoPairsMoveCharacter('''')$/;"	m
+<M-(>	.vim/sessions/default.vim	/^inoremap <buffer> <silent> <M-(> =AutoPairsMoveCharacter('(')$/;"	m
+<M-)>	.vim/sessions/default.vim	/^inoremap <buffer> <silent> <M-)> =AutoPairsMoveCharacter(')')$/;"	m
+<M-[>	.vim/sessions/default.vim	/^inoremap <buffer> <silent> <M-[> =AutoPairsMoveCharacter('[')$/;"	m
+<M-]>	.vim/sessions/default.vim	/^inoremap <buffer> <silent> <M-]> =AutoPairsMoveCharacter(']')$/;"	m
+<M-b>	.vim/sessions/default.vim	/^inoremap <buffer> <silent> <M-b> =AutoPairsBackInsert()$/;"	m
+<M-e>	.vim/sessions/default.vim	/^inoremap <buffer> <silent> <M-e> =AutoPairsFastWrap()$/;"	m
+<M-n>	.vim/sessions/default.vim	/^inoremap <buffer> <silent> <M-n> :call AutoPairsJump()$/;"	m
+<M-n>	.vim/sessions/default.vim	/^noremap <buffer> <silent> <M-n> :call AutoPairsJump()$/;"	m
+<M-p>	.vim/sessions/default.vim	/^inoremap <buffer> <silent> <expr> <M-p> AutoPairsToggle()$/;"	m
+<M-p>	.vim/sessions/default.vim	/^noremap <buffer> <silent> <M-p> :call AutoPairsToggle()$/;"	m
+<M-{>	.vim/sessions/default.vim	/^inoremap <buffer> <silent> <M-{> =AutoPairsMoveCharacter('{')$/;"	m
+<M-}>	.vim/sessions/default.vim	/^inoremap <buffer> <silent> <M-}> =AutoPairsMoveCharacter('}')$/;"	m
 <MiddleMouse>	.vim/plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><nowait><silent> <MiddleMouse> :enew <bar> execute 'normal! "'.(v:register=='/;"	m
 <Nul>	.vim/plugged/jedi-vim/autoload/jedi.vim	/^        imap <buffer> <Nul> <C-Space>$/;"	m
 <Nul>	.vim/plugged/jedi-vim/autoload/jedi.vim	/^        smap <buffer> <Nul> <C-Space>$/;"	m
@@ -617,81 +730,652 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <Plug>(EasyAlignRepeat)	.vim/plugged/vim-easy-align/plugin/easy_align.vim	/^nnoremap <silent> <Plug>(EasyAlignRepeat) :call <SID>easy_align_repeat()<Enter>$/;"	m
 <Plug>(EasyAlignRepeat)	.vim/plugged/vim-easy-align/plugin/easy_align.vim	/^vnoremap <silent> <Plug>(EasyAlignRepeat) :<C-U>call <SID>repeat_in_visual()<Enter>$/;"	m
 <Plug>(GitGutterNextHunk)	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^nnoremap <silent> <expr> <Plug>(GitGutterNextHunk) &diff ? ']c' : ":\\<C-U>execute v:count1 . 'G/;"	m
+<Plug>(GitGutterNextHunk)	.vim/sessions/default.vim	/^nnoremap <silent> <expr> <Plug>(GitGutterNextHunk) &diff ? ']c' : ":\\execute v:count1 . 'GitG/;"	m
 <Plug>(GitGutterPrevHunk)	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^nnoremap <silent> <expr> <Plug>(GitGutterPrevHunk) &diff ? '[c' : ":\\<C-U>execute v:count1 . 'G/;"	m
+<Plug>(GitGutterPrevHunk)	.vim/sessions/default.vim	/^nnoremap <silent> <expr> <Plug>(GitGutterPrevHunk) &diff ? '[c' : ":\\execute v:count1 . 'GitG/;"	m
 <Plug>(GitGutterPreviewHunk)	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^nnoremap <silent> <Plug>(GitGutterPreviewHunk) :GitGutterPreviewHunk<CR>$/;"	m
+<Plug>(GitGutterPreviewHunk)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(GitGutterPreviewHunk) :GitGutterPreviewHunk$/;"	m
 <Plug>(GitGutterStageHunk)	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^nnoremap <silent> <Plug>(GitGutterStageHunk)   :GitGutterStageHunk<CR>$/;"	m
 <Plug>(GitGutterStageHunk)	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^xnoremap <silent> <Plug>(GitGutterStageHunk)   :GitGutterStageHunk<CR>$/;"	m
+<Plug>(GitGutterStageHunk)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(GitGutterStageHunk) :GitGutterStageHunk$/;"	m
+<Plug>(GitGutterStageHunk)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(GitGutterStageHunk) :GitGutterStageHunk$/;"	m
 <Plug>(GitGutterTextObjectInnerPending)	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^onoremap <silent> <Plug>(GitGutterTextObjectInnerPending) :<C-U>call gitgutter#hunk#text_object(/;"	m
+<Plug>(GitGutterTextObjectInnerPending)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(GitGutterTextObjectInnerPending) :call gitgutter#hunk#text_object(1)$/;"	m
 <Plug>(GitGutterTextObjectInnerVisual)	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^xnoremap <silent> <Plug>(GitGutterTextObjectInnerVisual)  :<C-U>call gitgutter#hunk#text_object(/;"	m
+<Plug>(GitGutterTextObjectInnerVisual)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(GitGutterTextObjectInnerVisual) :call gitgutter#hunk#text_object(1)$/;"	m
 <Plug>(GitGutterTextObjectOuterPending)	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^onoremap <silent> <Plug>(GitGutterTextObjectOuterPending) :<C-U>call gitgutter#hunk#text_object(/;"	m
+<Plug>(GitGutterTextObjectOuterPending)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(GitGutterTextObjectOuterPending) :call gitgutter#hunk#text_object(0)$/;"	m
 <Plug>(GitGutterTextObjectOuterVisual)	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^xnoremap <silent> <Plug>(GitGutterTextObjectOuterVisual)  :<C-U>call gitgutter#hunk#text_object(/;"	m
+<Plug>(GitGutterTextObjectOuterVisual)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(GitGutterTextObjectOuterVisual) :call gitgutter#hunk#text_object(0)$/;"	m
 <Plug>(GitGutterUndoHunk)	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^nnoremap <silent> <Plug>(GitGutterUndoHunk)    :GitGutterUndoHunk<CR>$/;"	m
+<Plug>(GitGutterUndoHunk)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(GitGutterUndoHunk) :GitGutterUndoHunk$/;"	m
 <Plug>(LiveEasyAlign)	.vim/plugged/vim-easy-align/plugin/easy_align.vim	/^nnoremap <silent> <Plug>(LiveEasyAlign) :set opfunc=<SID>live_easy_align_op<Enter>g@$/;"	m
 <Plug>(LiveEasyAlign)	.vim/plugged/vim-easy-align/plugin/easy_align.vim	/^vnoremap <silent> <Plug>(LiveEasyAlign) :<C-U>call <SID>live_easy_align_op(visualmode(), 1)<Ente/;"	m
 <Plug>(choosewin)	.vim/plugged/vim-choosewin/plugin/choosewin.vim	/^nnoremap <silent> <Plug>(choosewin)$/;"	m
+<Plug>(choosewin)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(choosewin) :call choosewin#start(range(1, winnr('$')))$/;"	m
+<Plug>(coc-bookmark-annotate)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-bookmark-annotate) :call coc#rpc#notify('doKeymap', ['bookmark-an/;"	m
+<Plug>(coc-bookmark-next)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-bookmark-next) :call coc#rpc#notify('doKeymap', ['bookmark-next']/;"	m
+<Plug>(coc-bookmark-prev)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-bookmark-prev) :call coc#rpc#notify('doKeymap', ['bookmark-prev']/;"	m
+<Plug>(coc-bookmark-toggle)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-bookmark-toggle) :call coc#rpc#notify('doKeymap', ['bookmark-togg/;"	m
 <Plug>(coc-classobj-a)	.vim/plugged/coc.nvim/plugin/coc.vim	/^onoremap <silent> <Plug>(coc-classobj-a)       :<C-U>call coc#rpc#request('selectSymbolRange', [/;"	m
 <Plug>(coc-classobj-a)	.vim/plugged/coc.nvim/plugin/coc.vim	/^vnoremap <silent> <Plug>(coc-classobj-a)       :<C-U>call coc#rpc#request('selectSymbolRange', [/;"	m
+<Plug>(coc-classobj-a)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(coc-classobj-a) :call coc#rpc#request('selectSymbolRange', [v:false, /;"	m
+<Plug>(coc-classobj-a)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-classobj-a) :call coc#rpc#request('selectSymbolRange', [v:false, /;"	m
 <Plug>(coc-classobj-i)	.vim/plugged/coc.nvim/plugin/coc.vim	/^onoremap <silent> <Plug>(coc-classobj-i)       :<C-U>call coc#rpc#request('selectSymbolRange', [/;"	m
 <Plug>(coc-classobj-i)	.vim/plugged/coc.nvim/plugin/coc.vim	/^vnoremap <silent> <Plug>(coc-classobj-i)       :<C-U>call coc#rpc#request('selectSymbolRange', [/;"	m
+<Plug>(coc-classobj-i)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(coc-classobj-i) :call coc#rpc#request('selectSymbolRange', [v:true, '/;"	m
+<Plug>(coc-classobj-i)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-classobj-i) :call coc#rpc#request('selectSymbolRange', [v:true, v/;"	m
 <Plug>(coc-codeaction)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-codeaction)            :<C-u>call       CocActionAsync('codeAction',        /;"	m
+<Plug>(coc-codeaction)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-codeaction) :call       CocActionAsync('codeAction',         '')$/;"	m
 <Plug>(coc-codeaction-line)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-codeaction-line)       :<C-u>call       CocActionAsync('codeAction',        /;"	m
+<Plug>(coc-codeaction-line)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-codeaction-line) :call       CocActionAsync('codeAction',         'n')$/;"	m
 <Plug>(coc-codeaction-selected)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-codeaction-selected)   :<C-u>set        operatorfunc=<SID>CodeActionFromSele/;"	m
 <Plug>(coc-codeaction-selected)	.vim/plugged/coc.nvim/plugin/coc.vim	/^vnoremap <Plug>(coc-codeaction-selected)   :<C-u>call       CocActionAsync('codeAction',        /;"	m
+<Plug>(coc-codeaction-selected)	.vim/sessions/default.vim	/^vnoremap <Plug>(coc-codeaction-selected) :call       CocActionAsync('codeAction',         visu/;"	m
 <Plug>(coc-codelens-action)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-codelens-action)       :<C-u>call       CocActionAsync('codeLensAction')<CR>$/;"	m
+<Plug>(coc-codelens-action)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-codelens-action) :call       CocActionAsync('codeLensAction')$/;"	m
 <Plug>(coc-command-repeat)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-command-repeat)        :<C-u>call       CocAction('repeatCommand')<CR>$/;"	m
+<Plug>(coc-command-repeat)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-command-repeat) :call       CocAction('repeatCommand')$/;"	m
 <Plug>(coc-cursors-operator)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <silent> <Plug>(coc-cursors-operator) :<C-u>set operatorfunc=<SID>CursorRangeFromSelect/;"	m
 <Plug>(coc-cursors-position)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <silent> <Plug>(coc-cursors-position) :<C-u>call coc#rpc#request('cursorsSelect', [bufn/;"	m
+<Plug>(coc-cursors-position)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-cursors-position) :call coc#rpc#request('cursorsSelect', [bufnr('/;"	m
 <Plug>(coc-cursors-range)	.vim/plugged/coc.nvim/plugin/coc.vim	/^vnoremap <silent> <Plug>(coc-cursors-range)    :<C-u>call coc#rpc#request('cursorsSelect', [bufn/;"	m
+<Plug>(coc-cursors-range)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-cursors-range) :call coc#rpc#request('cursorsSelect', [bufnr('%')/;"	m
 <Plug>(coc-cursors-word)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <silent> <Plug>(coc-cursors-word)     :<C-u>call coc#rpc#request('cursorsSelect', [bufn/;"	m
+<Plug>(coc-cursors-word)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-cursors-word) :call coc#rpc#request('cursorsSelect', [bufnr('%'),/;"	m
 <Plug>(coc-declaration)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-declaration)           :<C-u>call       CocActionAsync('jumpDeclaration')<CR/;"	m
+<Plug>(coc-declaration)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-declaration) :call       CocActionAsync('jumpDeclaration')$/;"	m
 <Plug>(coc-definition)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-definition)            :<C-u>call       CocActionAsync('jumpDefinition')<CR>$/;"	m
+<Plug>(coc-definition)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-definition) :call       CocActionAsync('jumpDefinition')$/;"	m
 <Plug>(coc-diagnostic-info)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-diagnostic-info)       :<C-u>call       CocActionAsync('diagnosticInfo')<CR>$/;"	m
+<Plug>(coc-diagnostic-info)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-diagnostic-info) :call       CocActionAsync('diagnosticInfo')$/;"	m
 <Plug>(coc-diagnostic-next)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-diagnostic-next)       :<C-u>call       CocActionAsync('diagnosticNext')<CR>$/;"	m
+<Plug>(coc-diagnostic-next)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-diagnostic-next) :call       CocActionAsync('diagnosticNext')$/;"	m
 <Plug>(coc-diagnostic-next-error)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-diagnostic-next-error) :<C-u>call       CocActionAsync('diagnosticNext',    /;"	m
+<Plug>(coc-diagnostic-next-error)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-diagnostic-next-error) :call       CocActionAsync('diagnosticNext',     'e/;"	m
 <Plug>(coc-diagnostic-prev)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-diagnostic-prev)       :<C-u>call       CocActionAsync('diagnosticPrevious')/;"	m
+<Plug>(coc-diagnostic-prev)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-diagnostic-prev) :call       CocActionAsync('diagnosticPrevious')$/;"	m
 <Plug>(coc-diagnostic-prev-error)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-diagnostic-prev-error) :<C-u>call       CocActionAsync('diagnosticPrevious',/;"	m
+<Plug>(coc-diagnostic-prev-error)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-diagnostic-prev-error) :call       CocActionAsync('diagnosticPrevious', 'e/;"	m
+<Plug>(coc-explorer-action-n-*)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-*) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-->)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-->) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-.)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-.) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n->>)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n->>) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-?)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-?) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-A)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-A) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-D)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-D) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-E)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-E) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-F)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-F) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-J)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-J) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-K)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-K) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-R)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-R) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-X)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-X) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-Y)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-Y) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-[2-LeftMouse])	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-[2-LeftMouse]) :call coc#rpc#request('doKeymap'/;"	m
+<Plug>(coc-explorer-action-n-[[)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-[[) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-[bs])	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-[bs]) :call coc#rpc#request('doKeymap', ['explo/;"	m
+<Plug>(coc-explorer-action-n-[c)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-[c) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-[cr])	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-[cr]) :call coc#rpc#request('doKeymap', ['explo/;"	m
+<Plug>(coc-explorer-action-n-[d)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-[d) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-[m)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-[m) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-[tab])	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-[tab]) :call coc#rpc#request('doKeymap', ['expl/;"	m
+<Plug>(coc-explorer-action-n-\x16<-)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-<-) :call coc#rpc#request('doKeymap', ['explor/;"	m
+<Plug>(coc-explorer-action-n-\x16<\x16<)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-<<) :call coc#rpc#request('doKeymap', ['explo/;"	m
+<Plug>(coc-explorer-action-n-]])	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-]]) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-]c)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-]c) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-]d)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-]d) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-]m)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-]m) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-a)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-a) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-c)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-c) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-d)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-d) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-e)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-e) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-f)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-f) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-gb)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-gb) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-gd)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-gd) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-gf)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-gf) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-gh)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-gh) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-gj)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-gj) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-gk)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-gk) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-gl)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-gl) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-gp)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-gp) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-gs)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-gs) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-n-h)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-h) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-j)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-j) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-k)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-k) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-l)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-l) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-o)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-o) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-p)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-p) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-q)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-q) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-r)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-r) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-s)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-s) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-t)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-t) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-x)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-x) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-n-y)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-explorer-action-n-y) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-*)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-*) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-->)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-->) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-.)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-.) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v->>)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v->>) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-?)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-?) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-A)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-A) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-D)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-D) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-E)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-E) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-F)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-F) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-J)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-J) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-K)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-K) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-R)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-R) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-X)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-X) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-Y)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-Y) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-[2-LeftMouse])	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-[2-LeftMouse]) :call coc#rpc#request('doKeymap'/;"	m
+<Plug>(coc-explorer-action-v-[[)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-[[) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-[bs])	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-[bs]) :call coc#rpc#request('doKeymap', ['explo/;"	m
+<Plug>(coc-explorer-action-v-[c)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-[c) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-[cr])	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-[cr]) :call coc#rpc#request('doKeymap', ['explo/;"	m
+<Plug>(coc-explorer-action-v-[d)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-[d) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-[m)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-[m) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-[tab])	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-[tab]) :call coc#rpc#request('doKeymap', ['expl/;"	m
+<Plug>(coc-explorer-action-v-\x16<-)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-<-) :call coc#rpc#request('doKeymap', ['explor/;"	m
+<Plug>(coc-explorer-action-v-\x16<\x16<)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-<<) :call coc#rpc#request('doKeymap', ['explo/;"	m
+<Plug>(coc-explorer-action-v-]])	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-]]) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-]c)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-]c) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-]d)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-]d) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-]m)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-]m) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-a)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-a) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-c)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-c) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-d)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-d) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-e)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-e) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-f)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-f) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-gb)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-gb) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-gd)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-gd) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-gf)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-gf) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-gh)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-gh) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-gj)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-gj) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-gk)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-gk) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-gl)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-gl) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-gp)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-gp) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-gs)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-gs) :call coc#rpc#request('doKeymap', ['explore/;"	m
+<Plug>(coc-explorer-action-v-h)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-h) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-l)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-l) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-p)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-p) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-q)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-q) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-r)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-r) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-s)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-s) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-t)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-t) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-x)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-x) :call coc#rpc#request('doKeymap', ['explorer/;"	m
+<Plug>(coc-explorer-action-v-y)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-explorer-action-v-y) :call coc#rpc#request('doKeymap', ['explorer/;"	m
 <Plug>(coc-fix-current)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-fix-current)           :<C-u>call       CocActionAsync('doQuickfix')<CR>$/;"	m
+<Plug>(coc-fix-current)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-fix-current) :call       CocActionAsync('doQuickfix')$/;"	m
 <Plug>(coc-float-hide)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-float-hide)            :<C-u>call       coc#util#float_hide()<CR>$/;"	m
+<Plug>(coc-float-hide)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-float-hide) :call       coc#util#float_hide()$/;"	m
 <Plug>(coc-float-jump)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-float-jump)            :<c-u>call       coc#util#float_jump()<cr>$/;"	m
+<Plug>(coc-float-jump)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-float-jump) :call       coc#util#float_jump()$/;"	m
 <Plug>(coc-format)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-format)                :<C-u>call       CocActionAsync('format')<CR>$/;"	m
+<Plug>(coc-format)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-format) :call       CocActionAsync('format')$/;"	m
 <Plug>(coc-format-selected)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-format-selected)       :<C-u>set        operatorfunc=<SID>FormatFromSelected/;"	m
 <Plug>(coc-format-selected)	.vim/plugged/coc.nvim/plugin/coc.vim	/^vnoremap <Plug>(coc-format-selected)       :<C-u>call       CocActionAsync('formatSelected',    /;"	m
+<Plug>(coc-format-selected)	.vim/sessions/default.vim	/^vnoremap <Plug>(coc-format-selected) :call       CocActionAsync('formatSelected',     visualmo/;"	m
 <Plug>(coc-funcobj-a)	.vim/plugged/coc.nvim/plugin/coc.vim	/^onoremap <silent> <Plug>(coc-funcobj-a)        :<C-U>call coc#rpc#request('selectSymbolRange', [/;"	m
 <Plug>(coc-funcobj-a)	.vim/plugged/coc.nvim/plugin/coc.vim	/^vnoremap <silent> <Plug>(coc-funcobj-a)        :<C-U>call coc#rpc#request('selectSymbolRange', [/;"	m
+<Plug>(coc-funcobj-a)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(coc-funcobj-a) :call coc#rpc#request('selectSymbolRange', [v:false, '/;"	m
+<Plug>(coc-funcobj-a)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-funcobj-a) :call coc#rpc#request('selectSymbolRange', [v:false, v/;"	m
 <Plug>(coc-funcobj-i)	.vim/plugged/coc.nvim/plugin/coc.vim	/^onoremap <silent> <Plug>(coc-funcobj-i)        :<C-U>call coc#rpc#request('selectSymbolRange', [/;"	m
 <Plug>(coc-funcobj-i)	.vim/plugged/coc.nvim/plugin/coc.vim	/^vnoremap <silent> <Plug>(coc-funcobj-i)        :<C-U>call coc#rpc#request('selectSymbolRange', [/;"	m
+<Plug>(coc-funcobj-i)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(coc-funcobj-i) :call coc#rpc#request('selectSymbolRange', [v:true, ''/;"	m
+<Plug>(coc-funcobj-i)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-funcobj-i) :call coc#rpc#request('selectSymbolRange', [v:true, vi/;"	m
+<Plug>(coc-git-chunk-inner)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(coc-git-chunk-inner) :call coc#rpc#request('doKeymap', ['git-chunk-in/;"	m
+<Plug>(coc-git-chunk-inner)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(coc-git-chunk-inner) :call coc#rpc#request('doKeymap', ['git-chunk-in/;"	m
+<Plug>(coc-git-chunk-outer)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(coc-git-chunk-outer) :call coc#rpc#request('doKeymap', ['git-chunk-ou/;"	m
+<Plug>(coc-git-chunk-outer)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(coc-git-chunk-outer) :call coc#rpc#request('doKeymap', ['git-chunk-ou/;"	m
+<Plug>(coc-git-chunkinfo)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-git-chunkinfo) :call coc#rpc#notify('doKeymap', ['git-chunkinfo']/;"	m
+<Plug>(coc-git-commit)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-git-commit) :call coc#rpc#notify('doKeymap', ['git-commit'])$/;"	m
+<Plug>(coc-git-nextchunk)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-git-nextchunk) :call coc#rpc#notify('doKeymap', ['git-nextchunk']/;"	m
+<Plug>(coc-git-prevchunk)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-git-prevchunk) :call coc#rpc#notify('doKeymap', ['git-prevchunk']/;"	m
 <Plug>(coc-implementation)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-implementation)        :<C-u>call       CocActionAsync('jumpImplementation')/;"	m
+<Plug>(coc-implementation)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-implementation) :call       CocActionAsync('jumpImplementation')$/;"	m
 <Plug>(coc-openlink)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-openlink)              :<C-u>call       CocActionAsync('openLink')<CR>$/;"	m
+<Plug>(coc-openlink)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-openlink) :call       CocActionAsync('openLink')$/;"	m
 <Plug>(coc-range-select)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-range-select)          :<C-u>call       CocAction('rangeSelect',     '', v:t/;"	m
 <Plug>(coc-range-select)	.vim/plugged/coc.nvim/plugin/coc.vim	/^vnoremap <Plug>(coc-range-select)          :<C-u>call       CocAction('rangeSelect',     visualm/;"	m
+<Plug>(coc-range-select)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-range-select) :call       CocAction('rangeSelect',     '', v:true)$/;"	m
+<Plug>(coc-range-select)	.vim/sessions/default.vim	/^vnoremap <Plug>(coc-range-select) :call       CocAction('rangeSelect',     visualmode(), v:tru/;"	m
 <Plug>(coc-range-select-backward)	.vim/plugged/coc.nvim/plugin/coc.vim	/^vnoremap <Plug>(coc-range-select-backward) :<C-u>call       CocAction('rangeSelect',     visualm/;"	m
+<Plug>(coc-range-select-backward)	.vim/sessions/default.vim	/^vnoremap <Plug>(coc-range-select-backward) :call       CocAction('rangeSelect',     visualmode/;"	m
 <Plug>(coc-refactor)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-refactor)              :<C-u>call       CocActionAsync('refactor')<CR>$/;"	m
+<Plug>(coc-refactor)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-refactor) :call       CocActionAsync('refactor')$/;"	m
 <Plug>(coc-references)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-references)            :<C-u>call       CocActionAsync('jumpReferences')<CR>$/;"	m
+<Plug>(coc-references)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-references) :call       CocActionAsync('jumpReferences')$/;"	m
 <Plug>(coc-rename)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-rename)                :<C-u>call       CocActionAsync('rename')<CR>$/;"	m
+<Plug>(coc-rename)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-rename) :call       CocActionAsync('rename')$/;"	m
+<Plug>(coc-snippets-expand)	.vim/sessions/default.vim	/^inoremap <silent> <expr> <Plug>(coc-snippets-expand) coc#_insert_key('request', 'snippets-expand/;"	m
+<Plug>(coc-snippets-expand-jump)	.vim/sessions/default.vim	/^inoremap <silent> <expr> <Plug>(coc-snippets-expand-jump) coc#_insert_key('request', 'snippets-e/;"	m
+<Plug>(coc-snippets-select)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-snippets-select) :call coc#rpc#notify('doKeymap', ['snippets-sele/;"	m
+<Plug>(coc-template)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-template) :call coc#rpc#notify('doKeymap', ['template'])$/;"	m
+<Plug>(coc-template-bottom)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-template-bottom) :call coc#rpc#notify('doKeymap', ['template-bott/;"	m
+<Plug>(coc-template-top)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-template-top) :call coc#rpc#notify('doKeymap', ['template-top'])$/;"	m
+<Plug>(coc-translator-e)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-translator-e) :call coc#rpc#notify('doKeymap', ['translator-e'])$/;"	m
+<Plug>(coc-translator-ev)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-translator-ev) :call coc#rpc#notify('doKeymap', ['translator-ev']/;"	m
+<Plug>(coc-translator-h)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-translator-h) :call coc#rpc#notify('doKeymap', ['translator-h'])$/;"	m
+<Plug>(coc-translator-p)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-translator-p) :call coc#rpc#notify('doKeymap', ['translator-p'])$/;"	m
+<Plug>(coc-translator-pv)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-translator-pv) :call coc#rpc#notify('doKeymap', ['translator-pv']/;"	m
+<Plug>(coc-translator-r)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(coc-translator-r) :call coc#rpc#notify('doKeymap', ['translator-r'])$/;"	m
+<Plug>(coc-translator-rv)	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>(coc-translator-rv) :call coc#rpc#notify('doKeymap', ['translator-rv']/;"	m
 <Plug>(coc-type-definition)	.vim/plugged/coc.nvim/plugin/coc.vim	/^nnoremap <Plug>(coc-type-definition)       :<C-u>call       CocActionAsync('jumpTypeDefinition')/;"	m
+<Plug>(coc-type-definition)	.vim/sessions/default.vim	/^nnoremap <Plug>(coc-type-definition) :call       CocActionAsync('jumpTypeDefinition')$/;"	m
+<Plug>(easymotion-B)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-B) :call EasyMotion#WBW(0,1)$/;"	m
+<Plug>(easymotion-B)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-B) :call EasyMotion#WBW(0,1)$/;"	m
+<Plug>(easymotion-B)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-B) :call EasyMotion#WBW(0,1)$/;"	m
+<Plug>(easymotion-B)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-B) :call EasyMotion#WBW(1,1)$/;"	m
+<Plug>(easymotion-E)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-E) :call EasyMotion#EW(0,0)$/;"	m
+<Plug>(easymotion-E)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-E) :call EasyMotion#EW(0,0)$/;"	m
+<Plug>(easymotion-E)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-E) :call EasyMotion#EW(0,0)$/;"	m
+<Plug>(easymotion-E)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-E) :call EasyMotion#EW(1,0)$/;"	m
+<Plug>(easymotion-F)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-F) :call EasyMotion#S(1,0,1)$/;"	m
+<Plug>(easymotion-F)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-F) :call EasyMotion#S(1,0,1)$/;"	m
+<Plug>(easymotion-F)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-F) :call EasyMotion#S(1,0,1)$/;"	m
+<Plug>(easymotion-F)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-F) :call EasyMotion#S(1,1,1)$/;"	m
+<Plug>(easymotion-F2)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-F2) :call EasyMotion#S(2,0,1)$/;"	m
+<Plug>(easymotion-F2)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-F2) :call EasyMotion#S(2,0,1)$/;"	m
+<Plug>(easymotion-F2)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-F2) :call EasyMotion#S(2,0,1)$/;"	m
+<Plug>(easymotion-F2)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-F2) :call EasyMotion#S(2,1,1)$/;"	m
+<Plug>(easymotion-Fl)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-Fl) :call EasyMotion#SL(1,0,1)$/;"	m
+<Plug>(easymotion-Fl)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-Fl) :call EasyMotion#SL(1,0,1)$/;"	m
+<Plug>(easymotion-Fl)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-Fl) :call EasyMotion#SL(1,0,1)$/;"	m
+<Plug>(easymotion-Fl)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-Fl) :call EasyMotion#SL(1,1,1)$/;"	m
+<Plug>(easymotion-Fl2)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-Fl2) :call EasyMotion#SL(2,0,1)$/;"	m
+<Plug>(easymotion-Fl2)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-Fl2) :call EasyMotion#SL(2,0,1)$/;"	m
+<Plug>(easymotion-Fl2)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-Fl2) :call EasyMotion#SL(2,0,1)$/;"	m
+<Plug>(easymotion-Fl2)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-Fl2) :call EasyMotion#SL(2,1,1)$/;"	m
+<Plug>(easymotion-Fln)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-Fln) :call EasyMotion#SL(-1,0,1)$/;"	m
+<Plug>(easymotion-Fln)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-Fln) :call EasyMotion#SL(-1,0,1)$/;"	m
+<Plug>(easymotion-Fln)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-Fln) :call EasyMotion#SL(-1,0,1)$/;"	m
+<Plug>(easymotion-Fln)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-Fln) :call EasyMotion#SL(-1,1,1)$/;"	m
+<Plug>(easymotion-Fn)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-Fn) :call EasyMotion#S(-1,0,1)$/;"	m
+<Plug>(easymotion-Fn)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-Fn) :call EasyMotion#S(-1,0,1)$/;"	m
+<Plug>(easymotion-Fn)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-Fn) :call EasyMotion#S(-1,0,1)$/;"	m
+<Plug>(easymotion-Fn)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-Fn) :call EasyMotion#S(-1,1,1)$/;"	m
+<Plug>(easymotion-N)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-N) :call EasyMotion#Search(0,1,0)$/;"	m
+<Plug>(easymotion-N)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-N) :call EasyMotion#Search(0,1,0)$/;"	m
+<Plug>(easymotion-N)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-N) :call EasyMotion#Search(0,1,0)$/;"	m
+<Plug>(easymotion-N)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-N) :call EasyMotion#Search(1,1,0)$/;"	m
+<Plug>(easymotion-T)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-T) :call EasyMotion#T(1,0,1)$/;"	m
+<Plug>(easymotion-T)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-T) :call EasyMotion#T(1,0,1)$/;"	m
+<Plug>(easymotion-T)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-T) :call EasyMotion#T(1,0,1)$/;"	m
+<Plug>(easymotion-T)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-T) :call EasyMotion#T(1,1,1)$/;"	m
+<Plug>(easymotion-T2)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-T2) :call EasyMotion#T(2,0,1)$/;"	m
+<Plug>(easymotion-T2)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-T2) :call EasyMotion#T(2,0,1)$/;"	m
+<Plug>(easymotion-T2)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-T2) :call EasyMotion#T(2,0,1)$/;"	m
+<Plug>(easymotion-T2)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-T2) :call EasyMotion#T(2,1,1)$/;"	m
+<Plug>(easymotion-Tl)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-Tl) :call EasyMotion#TL(1,0,1)$/;"	m
+<Plug>(easymotion-Tl)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-Tl) :call EasyMotion#TL(1,0,1)$/;"	m
+<Plug>(easymotion-Tl)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-Tl) :call EasyMotion#TL(1,0,1)$/;"	m
+<Plug>(easymotion-Tl)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-Tl) :call EasyMotion#TL(1,1,1)$/;"	m
+<Plug>(easymotion-Tl2)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-Tl2) :call EasyMotion#TL(2,0,1)$/;"	m
+<Plug>(easymotion-Tl2)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-Tl2) :call EasyMotion#TL(2,0,1)$/;"	m
+<Plug>(easymotion-Tl2)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-Tl2) :call EasyMotion#TL(2,0,1)$/;"	m
+<Plug>(easymotion-Tl2)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-Tl2) :call EasyMotion#TL(2,1,1)$/;"	m
+<Plug>(easymotion-Tln)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-Tln) :call EasyMotion#TL(-1,0,1)$/;"	m
+<Plug>(easymotion-Tln)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-Tln) :call EasyMotion#TL(-1,0,1)$/;"	m
+<Plug>(easymotion-Tln)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-Tln) :call EasyMotion#TL(-1,0,1)$/;"	m
+<Plug>(easymotion-Tln)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-Tln) :call EasyMotion#TL(-1,1,1)$/;"	m
+<Plug>(easymotion-Tn)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-Tn) :call EasyMotion#T(-1,0,1)$/;"	m
+<Plug>(easymotion-Tn)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-Tn) :call EasyMotion#T(-1,0,1)$/;"	m
+<Plug>(easymotion-Tn)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-Tn) :call EasyMotion#T(-1,0,1)$/;"	m
+<Plug>(easymotion-Tn)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-Tn) :call EasyMotion#T(-1,1,1)$/;"	m
+<Plug>(easymotion-W)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-W) :call EasyMotion#WBW(0,0)$/;"	m
+<Plug>(easymotion-W)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-W) :call EasyMotion#WBW(0,0)$/;"	m
+<Plug>(easymotion-W)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-W) :call EasyMotion#WBW(0,0)$/;"	m
+<Plug>(easymotion-W)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-W) :call EasyMotion#WBW(1,0)$/;"	m
 <Plug>(easymotion-activate)	.vim/plugged/vim-easymotion/plugin/EasyMotion.vim	/^noremap  <silent><Plug>(easymotion-activate) :<C-u>call EasyMotion#activate(0)<CR>$/;"	m
 <Plug>(easymotion-activate)	.vim/plugged/vim-easymotion/plugin/EasyMotion.vim	/^xnoremap <silent><Plug>(easymotion-activate) :<C-u>call EasyMotion#activate(1)<CR>$/;"	m
+<Plug>(easymotion-activate)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-activate) :call EasyMotion#activate(0)$/;"	m
+<Plug>(easymotion-activate)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-activate) :call EasyMotion#activate(0)$/;"	m
+<Plug>(easymotion-activate)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-activate) :call EasyMotion#activate(0)$/;"	m
+<Plug>(easymotion-activate)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-activate) :call EasyMotion#activate(1)$/;"	m
+<Plug>(easymotion-b)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-b) :call EasyMotion#WB(0,1)$/;"	m
+<Plug>(easymotion-b)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-b) :call EasyMotion#WB(0,1)$/;"	m
+<Plug>(easymotion-b)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-b) :call EasyMotion#WB(0,1)$/;"	m
+<Plug>(easymotion-b)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-b) :call EasyMotion#WB(1,1)$/;"	m
+<Plug>(easymotion-bd-E)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-E) :call EasyMotion#EW(0,2)$/;"	m
+<Plug>(easymotion-bd-E)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-E) :call EasyMotion#EW(0,2)$/;"	m
+<Plug>(easymotion-bd-E)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-E) :call EasyMotion#EW(0,2)$/;"	m
+<Plug>(easymotion-bd-E)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-E) :call EasyMotion#EW(1,2)$/;"	m
+<Plug>(easymotion-bd-W)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-W) :call EasyMotion#WBW(0,2)$/;"	m
+<Plug>(easymotion-bd-W)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-W) :call EasyMotion#WBW(0,2)$/;"	m
+<Plug>(easymotion-bd-W)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-W) :call EasyMotion#WBW(0,2)$/;"	m
+<Plug>(easymotion-bd-W)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-W) :call EasyMotion#WBW(1,2)$/;"	m
+<Plug>(easymotion-bd-e)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-e) :call EasyMotion#E(0,2)$/;"	m
+<Plug>(easymotion-bd-e)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-e) :call EasyMotion#E(0,2)$/;"	m
+<Plug>(easymotion-bd-e)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-e) :call EasyMotion#E(0,2)$/;"	m
+<Plug>(easymotion-bd-e)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-e) :call EasyMotion#E(1,2)$/;"	m
+<Plug>(easymotion-bd-el)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-el) :call EasyMotion#EL(0,2)$/;"	m
+<Plug>(easymotion-bd-el)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-el) :call EasyMotion#EL(0,2)$/;"	m
+<Plug>(easymotion-bd-el)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-el) :call EasyMotion#EL(0,2)$/;"	m
+<Plug>(easymotion-bd-el)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-el) :call EasyMotion#EL(1,2)$/;"	m
+<Plug>(easymotion-bd-f)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-f) :call EasyMotion#S(1,0,2)$/;"	m
+<Plug>(easymotion-bd-f)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-f) :call EasyMotion#S(1,0,2)$/;"	m
+<Plug>(easymotion-bd-f)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-f) :call EasyMotion#S(1,0,2)$/;"	m
+<Plug>(easymotion-bd-f)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-f) :call EasyMotion#S(1,1,2)$/;"	m
+<Plug>(easymotion-bd-f2)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-f2) :call EasyMotion#S(2,0,2)$/;"	m
+<Plug>(easymotion-bd-f2)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-f2) :call EasyMotion#S(2,0,2)$/;"	m
+<Plug>(easymotion-bd-f2)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-f2) :call EasyMotion#S(2,0,2)$/;"	m
+<Plug>(easymotion-bd-f2)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-f2) :call EasyMotion#S(2,1,2)$/;"	m
+<Plug>(easymotion-bd-fl)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-fl) :call EasyMotion#SL(1,0,2)$/;"	m
+<Plug>(easymotion-bd-fl)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-fl) :call EasyMotion#SL(1,0,2)$/;"	m
+<Plug>(easymotion-bd-fl)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-fl) :call EasyMotion#SL(1,0,2)$/;"	m
+<Plug>(easymotion-bd-fl)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-fl) :call EasyMotion#SL(1,1,2)$/;"	m
+<Plug>(easymotion-bd-fl2)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-fl2) :call EasyMotion#SL(2,0,2)$/;"	m
+<Plug>(easymotion-bd-fl2)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-fl2) :call EasyMotion#SL(2,0,2)$/;"	m
+<Plug>(easymotion-bd-fl2)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-fl2) :call EasyMotion#SL(2,0,2)$/;"	m
+<Plug>(easymotion-bd-fl2)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-fl2) :call EasyMotion#SL(2,1,2)$/;"	m
+<Plug>(easymotion-bd-fln)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-fln) :call EasyMotion#SL(-1,0,2)$/;"	m
+<Plug>(easymotion-bd-fln)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-fln) :call EasyMotion#SL(-1,0,2)$/;"	m
+<Plug>(easymotion-bd-fln)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-fln) :call EasyMotion#SL(-1,0,2)$/;"	m
+<Plug>(easymotion-bd-fln)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-fln) :call EasyMotion#SL(-1,1,2)$/;"	m
+<Plug>(easymotion-bd-fn)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-fn) :call EasyMotion#S(-1,0,2)$/;"	m
+<Plug>(easymotion-bd-fn)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-fn) :call EasyMotion#S(-1,0,2)$/;"	m
+<Plug>(easymotion-bd-fn)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-fn) :call EasyMotion#S(-1,0,2)$/;"	m
+<Plug>(easymotion-bd-fn)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-fn) :call EasyMotion#S(-1,1,2)$/;"	m
+<Plug>(easymotion-bd-jk)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-jk) :call EasyMotion#JK(0,2)$/;"	m
+<Plug>(easymotion-bd-jk)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-jk) :call EasyMotion#JK(0,2)$/;"	m
+<Plug>(easymotion-bd-jk)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-jk) :call EasyMotion#JK(0,2)$/;"	m
+<Plug>(easymotion-bd-jk)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-jk) :call EasyMotion#JK(1,2)$/;"	m
+<Plug>(easymotion-bd-n)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-n) :call EasyMotion#Search(0,2,0)$/;"	m
+<Plug>(easymotion-bd-n)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-n) :call EasyMotion#Search(0,2,0)$/;"	m
+<Plug>(easymotion-bd-n)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-n) :call EasyMotion#Search(0,2,0)$/;"	m
+<Plug>(easymotion-bd-n)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-n) :call EasyMotion#Search(1,2,0)$/;"	m
+<Plug>(easymotion-bd-t)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-t) :call EasyMotion#T(1,0,2)$/;"	m
+<Plug>(easymotion-bd-t)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-t) :call EasyMotion#T(1,0,2)$/;"	m
+<Plug>(easymotion-bd-t)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-t) :call EasyMotion#T(1,0,2)$/;"	m
+<Plug>(easymotion-bd-t)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-t) :call EasyMotion#T(1,1,2)$/;"	m
+<Plug>(easymotion-bd-t2)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-t2) :call EasyMotion#T(2,0,2)$/;"	m
+<Plug>(easymotion-bd-t2)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-t2) :call EasyMotion#T(2,0,2)$/;"	m
+<Plug>(easymotion-bd-t2)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-t2) :call EasyMotion#T(2,0,2)$/;"	m
+<Plug>(easymotion-bd-t2)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-t2) :call EasyMotion#T(2,1,2)$/;"	m
+<Plug>(easymotion-bd-tl)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-tl) :call EasyMotion#TL(1,0,2)$/;"	m
+<Plug>(easymotion-bd-tl)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-tl) :call EasyMotion#TL(1,0,2)$/;"	m
+<Plug>(easymotion-bd-tl)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-tl) :call EasyMotion#TL(1,0,2)$/;"	m
+<Plug>(easymotion-bd-tl)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-tl) :call EasyMotion#TL(1,1,2)$/;"	m
+<Plug>(easymotion-bd-tl2)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-tl2) :call EasyMotion#TL(2,0,2)$/;"	m
+<Plug>(easymotion-bd-tl2)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-tl2) :call EasyMotion#TL(2,0,2)$/;"	m
+<Plug>(easymotion-bd-tl2)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-tl2) :call EasyMotion#TL(2,0,2)$/;"	m
+<Plug>(easymotion-bd-tl2)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-tl2) :call EasyMotion#TL(2,1,2)$/;"	m
+<Plug>(easymotion-bd-tln)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-tln) :call EasyMotion#TL(-1,0,2)$/;"	m
+<Plug>(easymotion-bd-tln)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-tln) :call EasyMotion#TL(-1,0,2)$/;"	m
+<Plug>(easymotion-bd-tln)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-tln) :call EasyMotion#TL(-1,0,2)$/;"	m
+<Plug>(easymotion-bd-tln)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-tln) :call EasyMotion#TL(-1,1,2)$/;"	m
+<Plug>(easymotion-bd-tn)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-tn) :call EasyMotion#T(-1,0,2)$/;"	m
+<Plug>(easymotion-bd-tn)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-tn) :call EasyMotion#T(-1,0,2)$/;"	m
+<Plug>(easymotion-bd-tn)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-tn) :call EasyMotion#T(-1,0,2)$/;"	m
+<Plug>(easymotion-bd-tn)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-tn) :call EasyMotion#T(-1,1,2)$/;"	m
+<Plug>(easymotion-bd-w)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-w) :call EasyMotion#WB(0,2)$/;"	m
+<Plug>(easymotion-bd-w)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-w) :call EasyMotion#WB(0,2)$/;"	m
+<Plug>(easymotion-bd-w)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-w) :call EasyMotion#WB(0,2)$/;"	m
+<Plug>(easymotion-bd-w)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-w) :call EasyMotion#WB(1,2)$/;"	m
+<Plug>(easymotion-bd-wl)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bd-wl) :call EasyMotion#WBL(0,2)$/;"	m
+<Plug>(easymotion-bd-wl)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bd-wl) :call EasyMotion#WBL(0,2)$/;"	m
+<Plug>(easymotion-bd-wl)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bd-wl) :call EasyMotion#WBL(0,2)$/;"	m
+<Plug>(easymotion-bd-wl)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bd-wl) :call EasyMotion#WBL(1,2)$/;"	m
+<Plug>(easymotion-bl)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-bl) :call EasyMotion#WBL(0,1)$/;"	m
+<Plug>(easymotion-bl)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-bl) :call EasyMotion#WBL(0,1)$/;"	m
+<Plug>(easymotion-bl)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-bl) :call EasyMotion#WBL(0,1)$/;"	m
+<Plug>(easymotion-bl)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-bl) :call EasyMotion#WBL(1,1)$/;"	m
 <Plug>(easymotion-dotrepeat)	.vim/plugged/vim-easymotion/plugin/EasyMotion.vim	/^noremap  <silent><Plug>(easymotion-dotrepeat)$/;"	m
+<Plug>(easymotion-dotrepeat)	.vim/sessions/default.vim	/^noremap <silent> <Plug>(easymotion-dotrepeat) :call EasyMotion#DotRepeat()$/;"	m
+<Plug>(easymotion-e)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-e) :call EasyMotion#E(0,0)$/;"	m
+<Plug>(easymotion-e)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-e) :call EasyMotion#E(0,0)$/;"	m
+<Plug>(easymotion-e)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-e) :call EasyMotion#E(0,0)$/;"	m
+<Plug>(easymotion-e)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-e) :call EasyMotion#E(1,0)$/;"	m
+<Plug>(easymotion-el)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-el) :call EasyMotion#EL(0,0)$/;"	m
+<Plug>(easymotion-el)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-el) :call EasyMotion#EL(0,0)$/;"	m
+<Plug>(easymotion-el)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-el) :call EasyMotion#EL(0,0)$/;"	m
+<Plug>(easymotion-el)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-el) :call EasyMotion#EL(1,0)$/;"	m
+<Plug>(easymotion-eol-bd-jk)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-eol-bd-jk) :call EasyMotion#Eol(0,2)$/;"	m
+<Plug>(easymotion-eol-bd-jk)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-eol-bd-jk) :call EasyMotion#Eol(0,2)$/;"	m
+<Plug>(easymotion-eol-bd-jk)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-eol-bd-jk) :call EasyMotion#Eol(0,2)$/;"	m
+<Plug>(easymotion-eol-bd-jk)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-eol-bd-jk) :call EasyMotion#Eol(1,2)$/;"	m
+<Plug>(easymotion-eol-j)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-eol-j) :call EasyMotion#Eol(0,0)$/;"	m
+<Plug>(easymotion-eol-j)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-eol-j) :call EasyMotion#Eol(0,0)$/;"	m
+<Plug>(easymotion-eol-j)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-eol-j) :call EasyMotion#Eol(0,0)$/;"	m
+<Plug>(easymotion-eol-j)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-eol-j) :call EasyMotion#Eol(1,0)$/;"	m
+<Plug>(easymotion-eol-k)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-eol-k) :call EasyMotion#Eol(0,1)$/;"	m
+<Plug>(easymotion-eol-k)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-eol-k) :call EasyMotion#Eol(0,1)$/;"	m
+<Plug>(easymotion-eol-k)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-eol-k) :call EasyMotion#Eol(0,1)$/;"	m
+<Plug>(easymotion-eol-k)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-eol-k) :call EasyMotion#Eol(1,1)$/;"	m
+<Plug>(easymotion-f)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-f) :call EasyMotion#S(1,0,0)$/;"	m
+<Plug>(easymotion-f)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-f) :call EasyMotion#S(1,0,0)$/;"	m
+<Plug>(easymotion-f)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-f) :call EasyMotion#S(1,0,0)$/;"	m
+<Plug>(easymotion-f)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-f) :call EasyMotion#S(1,1,0)$/;"	m
+<Plug>(easymotion-f2)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-f2) :call EasyMotion#S(2,0,0)$/;"	m
+<Plug>(easymotion-f2)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-f2) :call EasyMotion#S(2,0,0)$/;"	m
+<Plug>(easymotion-f2)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-f2) :call EasyMotion#S(2,0,0)$/;"	m
+<Plug>(easymotion-f2)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-f2) :call EasyMotion#S(2,1,0)$/;"	m
+<Plug>(easymotion-fl)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-fl) :call EasyMotion#SL(1,0,0)$/;"	m
+<Plug>(easymotion-fl)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-fl) :call EasyMotion#SL(1,0,0)$/;"	m
+<Plug>(easymotion-fl)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-fl) :call EasyMotion#SL(1,0,0)$/;"	m
+<Plug>(easymotion-fl)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-fl) :call EasyMotion#SL(1,1,0)$/;"	m
+<Plug>(easymotion-fl2)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-fl2) :call EasyMotion#SL(2,0,0)$/;"	m
+<Plug>(easymotion-fl2)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-fl2) :call EasyMotion#SL(2,0,0)$/;"	m
+<Plug>(easymotion-fl2)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-fl2) :call EasyMotion#SL(2,0,0)$/;"	m
+<Plug>(easymotion-fl2)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-fl2) :call EasyMotion#SL(2,1,0)$/;"	m
+<Plug>(easymotion-fln)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)$/;"	m
+<Plug>(easymotion-fln)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)$/;"	m
+<Plug>(easymotion-fln)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,0,0)$/;"	m
+<Plug>(easymotion-fln)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-fln) :call EasyMotion#SL(-1,1,0)$/;"	m
+<Plug>(easymotion-fn)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-fn) :call EasyMotion#S(-1,0,0)$/;"	m
+<Plug>(easymotion-fn)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-fn) :call EasyMotion#S(-1,0,0)$/;"	m
+<Plug>(easymotion-fn)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-fn) :call EasyMotion#S(-1,0,0)$/;"	m
+<Plug>(easymotion-fn)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-fn) :call EasyMotion#S(-1,1,0)$/;"	m
+<Plug>(easymotion-gE)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-gE) :call EasyMotion#EW(0,1)$/;"	m
+<Plug>(easymotion-gE)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-gE) :call EasyMotion#EW(0,1)$/;"	m
+<Plug>(easymotion-gE)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-gE) :call EasyMotion#EW(0,1)$/;"	m
+<Plug>(easymotion-gE)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-gE) :call EasyMotion#EW(1,1)$/;"	m
+<Plug>(easymotion-ge)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-ge) :call EasyMotion#E(0,1)$/;"	m
+<Plug>(easymotion-ge)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-ge) :call EasyMotion#E(0,1)$/;"	m
+<Plug>(easymotion-ge)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-ge) :call EasyMotion#E(0,1)$/;"	m
+<Plug>(easymotion-ge)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-ge) :call EasyMotion#E(1,1)$/;"	m
+<Plug>(easymotion-gel)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-gel) :call EasyMotion#EL(0,1)$/;"	m
+<Plug>(easymotion-gel)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-gel) :call EasyMotion#EL(0,1)$/;"	m
+<Plug>(easymotion-gel)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-gel) :call EasyMotion#EL(0,1)$/;"	m
+<Plug>(easymotion-gel)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-gel) :call EasyMotion#EL(1,1)$/;"	m
+<Plug>(easymotion-iskeyword-b)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-iskeyword-b) :call EasyMotion#WBK(0,1)$/;"	m
+<Plug>(easymotion-iskeyword-b)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-iskeyword-b) :call EasyMotion#WBK(0,1)$/;"	m
+<Plug>(easymotion-iskeyword-b)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-iskeyword-b) :call EasyMotion#WBK(0,1)$/;"	m
+<Plug>(easymotion-iskeyword-b)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-iskeyword-b) :call EasyMotion#WBK(1,1)$/;"	m
+<Plug>(easymotion-iskeyword-bd-e)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-iskeyword-bd-e) :call EasyMotion#EK(0,2)$/;"	m
+<Plug>(easymotion-iskeyword-bd-e)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-iskeyword-bd-e) :call EasyMotion#EK(0,2)$/;"	m
+<Plug>(easymotion-iskeyword-bd-e)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-iskeyword-bd-e) :call EasyMotion#EK(0,2)$/;"	m
+<Plug>(easymotion-iskeyword-bd-e)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-iskeyword-bd-e) :call EasyMotion#EK(1,2)$/;"	m
+<Plug>(easymotion-iskeyword-bd-w)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-iskeyword-bd-w) :call EasyMotion#WBK(0,2)$/;"	m
+<Plug>(easymotion-iskeyword-bd-w)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-iskeyword-bd-w) :call EasyMotion#WBK(0,2)$/;"	m
+<Plug>(easymotion-iskeyword-bd-w)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-iskeyword-bd-w) :call EasyMotion#WBK(0,2)$/;"	m
+<Plug>(easymotion-iskeyword-bd-w)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-iskeyword-bd-w) :call EasyMotion#WBK(1,2)$/;"	m
+<Plug>(easymotion-iskeyword-e)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-iskeyword-e) :call EasyMotion#EK(0,0)$/;"	m
+<Plug>(easymotion-iskeyword-e)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-iskeyword-e) :call EasyMotion#EK(0,0)$/;"	m
+<Plug>(easymotion-iskeyword-e)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-iskeyword-e) :call EasyMotion#EK(0,0)$/;"	m
+<Plug>(easymotion-iskeyword-e)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-iskeyword-e) :call EasyMotion#EK(1,0)$/;"	m
+<Plug>(easymotion-iskeyword-ge)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-iskeyword-ge) :call EasyMotion#EK(0,1)$/;"	m
+<Plug>(easymotion-iskeyword-ge)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-iskeyword-ge) :call EasyMotion#EK(0,1)$/;"	m
+<Plug>(easymotion-iskeyword-ge)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-iskeyword-ge) :call EasyMotion#EK(0,1)$/;"	m
+<Plug>(easymotion-iskeyword-ge)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-iskeyword-ge) :call EasyMotion#EK(1,1)$/;"	m
+<Plug>(easymotion-iskeyword-w)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-iskeyword-w) :call EasyMotion#WBK(0,0)$/;"	m
+<Plug>(easymotion-iskeyword-w)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-iskeyword-w) :call EasyMotion#WBK(0,0)$/;"	m
+<Plug>(easymotion-iskeyword-w)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-iskeyword-w) :call EasyMotion#WBK(0,0)$/;"	m
+<Plug>(easymotion-iskeyword-w)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-iskeyword-w) :call EasyMotion#WBK(1,0)$/;"	m
+<Plug>(easymotion-j)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-j) :call EasyMotion#JK(0,0)$/;"	m
+<Plug>(easymotion-j)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-j) :call EasyMotion#JK(0,0)$/;"	m
+<Plug>(easymotion-j)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-j) :call EasyMotion#JK(0,0)$/;"	m
+<Plug>(easymotion-j)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-j) :call EasyMotion#JK(1,0)$/;"	m
+<Plug>(easymotion-jumptoanywhere)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-jumptoanywhere) :call EasyMotion#JumpToAnywhere(0,2)$/;"	m
+<Plug>(easymotion-jumptoanywhere)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-jumptoanywhere) :call EasyMotion#JumpToAnywhere(0,2)$/;"	m
+<Plug>(easymotion-jumptoanywhere)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-jumptoanywhere) :call EasyMotion#JumpToAnywhere(0,2)$/;"	m
+<Plug>(easymotion-jumptoanywhere)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-jumptoanywhere) :call EasyMotion#JumpToAnywhere(1,2)$/;"	m
+<Plug>(easymotion-k)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-k) :call EasyMotion#JK(0,1)$/;"	m
+<Plug>(easymotion-k)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-k) :call EasyMotion#JK(0,1)$/;"	m
+<Plug>(easymotion-k)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-k) :call EasyMotion#JK(0,1)$/;"	m
+<Plug>(easymotion-k)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-k) :call EasyMotion#JK(1,1)$/;"	m
+<Plug>(easymotion-lineanywhere)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-lineanywhere) :call EasyMotion#LineAnywhere(0,2)$/;"	m
+<Plug>(easymotion-lineanywhere)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-lineanywhere) :call EasyMotion#LineAnywhere(0,2)$/;"	m
+<Plug>(easymotion-lineanywhere)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-lineanywhere) :call EasyMotion#LineAnywhere(0,2)$/;"	m
+<Plug>(easymotion-lineanywhere)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-lineanywhere) :call EasyMotion#LineAnywhere(1,2)$/;"	m
+<Plug>(easymotion-linebackward)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-linebackward) :call EasyMotion#LineAnywhere(0,1)$/;"	m
+<Plug>(easymotion-linebackward)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-linebackward) :call EasyMotion#LineAnywhere(0,1)$/;"	m
+<Plug>(easymotion-linebackward)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-linebackward) :call EasyMotion#LineAnywhere(0,1)$/;"	m
+<Plug>(easymotion-linebackward)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-linebackward) :call EasyMotion#LineAnywhere(1,1)$/;"	m
+<Plug>(easymotion-lineforward)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-lineforward) :call EasyMotion#LineAnywhere(0,0)$/;"	m
+<Plug>(easymotion-lineforward)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-lineforward) :call EasyMotion#LineAnywhere(0,0)$/;"	m
+<Plug>(easymotion-lineforward)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-lineforward) :call EasyMotion#LineAnywhere(0,0)$/;"	m
+<Plug>(easymotion-lineforward)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-lineforward) :call EasyMotion#LineAnywhere(1,0)$/;"	m
+<Plug>(easymotion-n)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-n) :call EasyMotion#Search(0,0,0)$/;"	m
+<Plug>(easymotion-n)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-n) :call EasyMotion#Search(0,0,0)$/;"	m
+<Plug>(easymotion-n)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-n) :call EasyMotion#Search(0,0,0)$/;"	m
+<Plug>(easymotion-n)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-n) :call EasyMotion#Search(1,0,0)$/;"	m
 <Plug>(easymotion-next)	.vim/plugged/vim-easymotion/plugin/EasyMotion.vim	/^noremap  <silent><Plug>(easymotion-next)$/;"	m
 <Plug>(easymotion-next)	.vim/plugged/vim-easymotion/plugin/EasyMotion.vim	/^xnoremap <silent><Plug>(easymotion-next)$/;"	m
+<Plug>(easymotion-next)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-next) :call EasyMotion#NextPrevious(0,0)$/;"	m
+<Plug>(easymotion-next)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-next) :call EasyMotion#NextPrevious(0,0)$/;"	m
+<Plug>(easymotion-next)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-next) :call EasyMotion#NextPrevious(0,0)$/;"	m
+<Plug>(easymotion-next)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-next) :call EasyMotion#NextPrevious(1,0)$/;"	m
 <Plug>(easymotion-overwin-f)	.vim/plugged/vim-easymotion/plugin/EasyMotion.vim	/^nnoremap <silent> <Plug>(easymotion-overwin-f) :<C-u>call EasyMotion#OverwinF(1)<CR>$/;"	m
+<Plug>(easymotion-overwin-f)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-overwin-f) :call EasyMotion#OverwinF(1)$/;"	m
 <Plug>(easymotion-overwin-f2)	.vim/plugged/vim-easymotion/plugin/EasyMotion.vim	/^nnoremap <silent> <Plug>(easymotion-overwin-f2) :<C-u>call EasyMotion#OverwinF(2)<CR>$/;"	m
+<Plug>(easymotion-overwin-f2)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-overwin-f2) :call EasyMotion#OverwinF(2)$/;"	m
 <Plug>(easymotion-overwin-line)	.vim/plugged/vim-easymotion/plugin/EasyMotion.vim	/^nnoremap <silent> <Plug>(easymotion-overwin-line) :<C-u>call EasyMotion#overwin#line()<CR>$/;"	m
+<Plug>(easymotion-overwin-line)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-overwin-line) :call EasyMotion#overwin#line()$/;"	m
 <Plug>(easymotion-overwin-w)	.vim/plugged/vim-easymotion/plugin/EasyMotion.vim	/^nnoremap <silent> <Plug>(easymotion-overwin-w) :<C-u>call EasyMotion#overwin#w()<CR>$/;"	m
+<Plug>(easymotion-overwin-w)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-overwin-w) :call EasyMotion#overwin#w()$/;"	m
+<Plug>(easymotion-prefix)B	.vim/sessions/default.vim	/^map <silent> <Plug>(easymotion-prefix)B <Plug>(easymotion-B)$/;"	m
+<Plug>(easymotion-prefix)E	.vim/sessions/default.vim	/^map <silent> <Plug>(easymotion-prefix)E <Plug>(easymotion-E)$/;"	m
+<Plug>(easymotion-prefix)F	.vim/sessions/default.vim	/^map <silent> <Plug>(easymotion-prefix)F <Plug>(easymotion-F)$/;"	m
+<Plug>(easymotion-prefix)N	.vim/sessions/default.vim	/^map <silent> <Plug>(easymotion-prefix)N <Plug>(easymotion-N)$/;"	m
+<Plug>(easymotion-prefix)T	.vim/sessions/default.vim	/^map <silent> <Plug>(easymotion-prefix)T <Plug>(easymotion-T)$/;"	m
+<Plug>(easymotion-prefix)W	.vim/sessions/default.vim	/^map <silent> <Plug>(easymotion-prefix)W <Plug>(easymotion-W)$/;"	m
+<Plug>(easymotion-prefix)b	.vim/sessions/default.vim	/^map <silent> <Plug>(easymotion-prefix)b <Plug>(easymotion-b)$/;"	m
+<Plug>(easymotion-prefix)e	.vim/sessions/default.vim	/^map <silent> <Plug>(easymotion-prefix)e <Plug>(easymotion-e)$/;"	m
+<Plug>(easymotion-prefix)f	.vim/sessions/default.vim	/^map <silent> <Plug>(easymotion-prefix)f <Plug>(easymotion-f)$/;"	m
+<Plug>(easymotion-prefix)gE	.vim/sessions/default.vim	/^map <silent> <Plug>(easymotion-prefix)gE <Plug>(easymotion-gE)$/;"	m
+<Plug>(easymotion-prefix)ge	.vim/sessions/default.vim	/^map <silent> <Plug>(easymotion-prefix)ge <Plug>(easymotion-ge)$/;"	m
+<Plug>(easymotion-prefix)n	.vim/sessions/default.vim	/^map <silent> <Plug>(easymotion-prefix)n <Plug>(easymotion-n)$/;"	m
+<Plug>(easymotion-prefix)s	.vim/sessions/default.vim	/^map <silent> <Plug>(easymotion-prefix)s <Plug>(easymotion-s)$/;"	m
+<Plug>(easymotion-prefix)t	.vim/sessions/default.vim	/^map <silent> <Plug>(easymotion-prefix)t <Plug>(easymotion-t)$/;"	m
+<Plug>(easymotion-prefix)w	.vim/sessions/default.vim	/^map <silent> <Plug>(easymotion-prefix)w <Plug>(easymotion-w)$/;"	m
 <Plug>(easymotion-prev)	.vim/plugged/vim-easymotion/plugin/EasyMotion.vim	/^noremap  <silent><Plug>(easymotion-prev)$/;"	m
 <Plug>(easymotion-prev)	.vim/plugged/vim-easymotion/plugin/EasyMotion.vim	/^xnoremap <silent><Plug>(easymotion-prev)$/;"	m
+<Plug>(easymotion-prev)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-prev) :call EasyMotion#NextPrevious(0,1)$/;"	m
+<Plug>(easymotion-prev)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-prev) :call EasyMotion#NextPrevious(0,1)$/;"	m
+<Plug>(easymotion-prev)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-prev) :call EasyMotion#NextPrevious(0,1)$/;"	m
+<Plug>(easymotion-prev)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-prev) :call EasyMotion#NextPrevious(1,1)$/;"	m
 <Plug>(easymotion-repeat)	.vim/plugged/vim-easymotion/plugin/EasyMotion.vim	/^noremap  <silent><Plug>(easymotion-repeat)$/;"	m
 <Plug>(easymotion-repeat)	.vim/plugged/vim-easymotion/plugin/EasyMotion.vim	/^xnoremap <silent><Plug>(easymotion-repeat)$/;"	m
+<Plug>(easymotion-repeat)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-repeat) :call EasyMotion#Repeat(0)$/;"	m
+<Plug>(easymotion-repeat)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-repeat) :call EasyMotion#Repeat(0)$/;"	m
+<Plug>(easymotion-repeat)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-repeat) :call EasyMotion#Repeat(0)$/;"	m
+<Plug>(easymotion-repeat)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-repeat) :call EasyMotion#Repeat(1)$/;"	m
+<Plug>(easymotion-s)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-s) :call EasyMotion#S(1,0,2)$/;"	m
+<Plug>(easymotion-s)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-s) :call EasyMotion#S(1,0,2)$/;"	m
+<Plug>(easymotion-s)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-s) :call EasyMotion#S(1,0,2)$/;"	m
+<Plug>(easymotion-s)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-s) :call EasyMotion#S(1,1,2)$/;"	m
+<Plug>(easymotion-s2)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-s2) :call EasyMotion#S(2,0,2)$/;"	m
+<Plug>(easymotion-s2)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-s2) :call EasyMotion#S(2,0,2)$/;"	m
+<Plug>(easymotion-s2)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-s2) :call EasyMotion#S(2,0,2)$/;"	m
+<Plug>(easymotion-s2)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-s2) :call EasyMotion#S(2,1,2)$/;"	m
+<Plug>(easymotion-sl)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-sl) :call EasyMotion#SL(1,0,2)$/;"	m
+<Plug>(easymotion-sl)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-sl) :call EasyMotion#SL(1,0,2)$/;"	m
+<Plug>(easymotion-sl)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-sl) :call EasyMotion#SL(1,0,2)$/;"	m
+<Plug>(easymotion-sl)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-sl) :call EasyMotion#SL(1,1,2)$/;"	m
+<Plug>(easymotion-sl2)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-sl2) :call EasyMotion#SL(2,0,2)$/;"	m
+<Plug>(easymotion-sl2)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-sl2) :call EasyMotion#SL(2,0,2)$/;"	m
+<Plug>(easymotion-sl2)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-sl2) :call EasyMotion#SL(2,0,2)$/;"	m
+<Plug>(easymotion-sl2)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-sl2) :call EasyMotion#SL(2,1,2)$/;"	m
+<Plug>(easymotion-sln)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-sln) :call EasyMotion#SL(-1,0,2)$/;"	m
+<Plug>(easymotion-sln)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-sln) :call EasyMotion#SL(-1,0,2)$/;"	m
+<Plug>(easymotion-sln)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-sln) :call EasyMotion#SL(-1,0,2)$/;"	m
+<Plug>(easymotion-sln)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-sln) :call EasyMotion#SL(-1,1,2)$/;"	m
+<Plug>(easymotion-sn)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-sn) :call EasyMotion#S(-1,0,2)$/;"	m
+<Plug>(easymotion-sn)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-sn) :call EasyMotion#S(-1,0,2)$/;"	m
+<Plug>(easymotion-sn)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-sn) :call EasyMotion#S(-1,0,2)$/;"	m
+<Plug>(easymotion-sn)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-sn) :call EasyMotion#S(-1,1,2)$/;"	m
+<Plug>(easymotion-sol-bd-jk)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-sol-bd-jk) :call EasyMotion#Sol(0,2)$/;"	m
+<Plug>(easymotion-sol-bd-jk)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-sol-bd-jk) :call EasyMotion#Sol(0,2)$/;"	m
+<Plug>(easymotion-sol-bd-jk)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-sol-bd-jk) :call EasyMotion#Sol(0,2)$/;"	m
+<Plug>(easymotion-sol-bd-jk)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-sol-bd-jk) :call EasyMotion#Sol(1,2)$/;"	m
+<Plug>(easymotion-sol-j)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-sol-j) :call EasyMotion#Sol(0,0)$/;"	m
+<Plug>(easymotion-sol-j)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-sol-j) :call EasyMotion#Sol(0,0)$/;"	m
+<Plug>(easymotion-sol-j)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-sol-j) :call EasyMotion#Sol(0,0)$/;"	m
+<Plug>(easymotion-sol-j)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-sol-j) :call EasyMotion#Sol(1,0)$/;"	m
+<Plug>(easymotion-sol-k)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-sol-k) :call EasyMotion#Sol(0,1)$/;"	m
+<Plug>(easymotion-sol-k)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-sol-k) :call EasyMotion#Sol(0,1)$/;"	m
+<Plug>(easymotion-sol-k)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-sol-k) :call EasyMotion#Sol(0,1)$/;"	m
+<Plug>(easymotion-sol-k)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-sol-k) :call EasyMotion#Sol(1,1)$/;"	m
+<Plug>(easymotion-t)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-t) :call EasyMotion#T(1,0,0)$/;"	m
+<Plug>(easymotion-t)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-t) :call EasyMotion#T(1,0,0)$/;"	m
+<Plug>(easymotion-t)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-t) :call EasyMotion#T(1,0,0)$/;"	m
+<Plug>(easymotion-t)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-t) :call EasyMotion#T(1,1,0)$/;"	m
+<Plug>(easymotion-t2)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-t2) :call EasyMotion#T(2,0,0)$/;"	m
+<Plug>(easymotion-t2)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-t2) :call EasyMotion#T(2,0,0)$/;"	m
+<Plug>(easymotion-t2)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-t2) :call EasyMotion#T(2,0,0)$/;"	m
+<Plug>(easymotion-t2)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-t2) :call EasyMotion#T(2,1,0)$/;"	m
+<Plug>(easymotion-tl)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-tl) :call EasyMotion#TL(1,0,0)$/;"	m
+<Plug>(easymotion-tl)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-tl) :call EasyMotion#TL(1,0,0)$/;"	m
+<Plug>(easymotion-tl)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-tl) :call EasyMotion#TL(1,0,0)$/;"	m
+<Plug>(easymotion-tl)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-tl) :call EasyMotion#TL(1,1,0)$/;"	m
+<Plug>(easymotion-tl2)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-tl2) :call EasyMotion#TL(2,0,0)$/;"	m
+<Plug>(easymotion-tl2)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-tl2) :call EasyMotion#TL(2,0,0)$/;"	m
+<Plug>(easymotion-tl2)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-tl2) :call EasyMotion#TL(2,0,0)$/;"	m
+<Plug>(easymotion-tl2)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-tl2) :call EasyMotion#TL(2,1,0)$/;"	m
+<Plug>(easymotion-tln)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-tln) :call EasyMotion#TL(-1,0,0)$/;"	m
+<Plug>(easymotion-tln)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-tln) :call EasyMotion#TL(-1,0,0)$/;"	m
+<Plug>(easymotion-tln)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-tln) :call EasyMotion#TL(-1,0,0)$/;"	m
+<Plug>(easymotion-tln)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-tln) :call EasyMotion#TL(-1,1,0)$/;"	m
+<Plug>(easymotion-tn)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-tn) :call EasyMotion#T(-1,0,0)$/;"	m
+<Plug>(easymotion-tn)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-tn) :call EasyMotion#T(-1,0,0)$/;"	m
+<Plug>(easymotion-tn)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-tn) :call EasyMotion#T(-1,0,0)$/;"	m
+<Plug>(easymotion-tn)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-tn) :call EasyMotion#T(-1,1,0)$/;"	m
+<Plug>(easymotion-vim-N)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-vim-N) :call EasyMotion#Search(0,1,1)$/;"	m
+<Plug>(easymotion-vim-N)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-vim-N) :call EasyMotion#Search(0,1,1)$/;"	m
+<Plug>(easymotion-vim-N)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-vim-N) :call EasyMotion#Search(0,1,1)$/;"	m
+<Plug>(easymotion-vim-N)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-vim-N) :call EasyMotion#Search(1,1,1)$/;"	m
+<Plug>(easymotion-vim-n)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-vim-n) :call EasyMotion#Search(0,0,1)$/;"	m
+<Plug>(easymotion-vim-n)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-vim-n) :call EasyMotion#Search(0,0,1)$/;"	m
+<Plug>(easymotion-vim-n)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-vim-n) :call EasyMotion#Search(0,0,1)$/;"	m
+<Plug>(easymotion-vim-n)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-vim-n) :call EasyMotion#Search(1,0,1)$/;"	m
+<Plug>(easymotion-w)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-w) :call EasyMotion#WB(0,0)$/;"	m
+<Plug>(easymotion-w)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-w) :call EasyMotion#WB(0,0)$/;"	m
+<Plug>(easymotion-w)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-w) :call EasyMotion#WB(0,0)$/;"	m
+<Plug>(easymotion-w)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-w) :call EasyMotion#WB(1,0)$/;"	m
+<Plug>(easymotion-wl)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(easymotion-wl) :call EasyMotion#WBL(0,0)$/;"	m
+<Plug>(easymotion-wl)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(easymotion-wl) :call EasyMotion#WBL(0,0)$/;"	m
+<Plug>(easymotion-wl)	.vim/sessions/default.vim	/^snoremap <silent> <Plug>(easymotion-wl) :call EasyMotion#WBL(0,0)$/;"	m
+<Plug>(easymotion-wl)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(easymotion-wl) :call EasyMotion#WBL(1,0)$/;"	m
+<Plug>(fzf-complete-buffer-line)	.vim/sessions/default.vim	/^inoremap <expr> <Plug>(fzf-complete-buffer-line) fzf#vim#complete#buffer_line()$/;"	m
+<Plug>(fzf-complete-file)	.vim/sessions/default.vim	/^inoremap <expr> <Plug>(fzf-complete-file) fzf#vim#complete#path("find . -path '*\/\\.*' -prune -/;"	m
+<Plug>(fzf-complete-file-ag)	.vim/sessions/default.vim	/^inoremap <expr> <Plug>(fzf-complete-file-ag) fzf#vim#complete#path('ag -l -g ""')$/;"	m
+<Plug>(fzf-complete-line)	.vim/sessions/default.vim	/^inoremap <expr> <Plug>(fzf-complete-line) fzf#vim#complete#line()$/;"	m
+<Plug>(fzf-complete-path)	.vim/sessions/default.vim	/^inoremap <expr> <Plug>(fzf-complete-path) fzf#vim#complete#path("find . -path '*\/\\.*' -prune -/;"	m
+<Plug>(fzf-complete-word)	.vim/sessions/default.vim	/^inoremap <expr> <Plug>(fzf-complete-word) fzf#vim#complete#word()$/;"	m
+<Plug>(fzf-maps-i)	.vim/sessions/default.vim	/^inoremap <silent> <Plug>(fzf-maps-i) :call fzf#vim#maps('i', 0)$/;"	m
+<Plug>(fzf-maps-n)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(fzf-maps-n) :call fzf#vim#maps('n', 0)$/;"	m
+<Plug>(fzf-maps-o)	.vim/sessions/default.vim	/^onoremap <silent> <Plug>(fzf-maps-o) :call fzf#vim#maps('o', 0)$/;"	m
+<Plug>(fzf-maps-x)	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>(fzf-maps-x) :call fzf#vim#maps('x', 0)$/;"	m
 <Plug>(git-messenger)	.vim/plugged/git-messenger.vim/plugin/gitmessenger.vim	/^nnoremap <silent><Plug>(git-messenger) :<C-u>GitMessenger<CR>$/;"	m
+<Plug>(git-messenger)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(git-messenger) :GitMessenger$/;"	m
 <Plug>(git-messenger-close)	.vim/plugged/git-messenger.vim/plugin/gitmessenger.vim	/^nnoremap <silent><Plug>(git-messenger-close) :<C-u>call gitmessenger#close_popup(bufnr('%'))<CR>$/;"	m
+<Plug>(git-messenger-close)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(git-messenger-close) :call gitmessenger#close_popup(bufnr('%'))$/;"	m
 <Plug>(git-messenger-into-popup)	.vim/plugged/git-messenger.vim/plugin/gitmessenger.vim	/^nnoremap <silent><Plug>(git-messenger-into-popup) :<C-u>call gitmessenger#into_popup(bufnr('%'))/;"	m
+<Plug>(git-messenger-into-popup)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(git-messenger-into-popup) :call gitmessenger#into_popup(bufnr('%'))$/;"	m
 <Plug>(git-messenger-scroll-down-1)	.vim/plugged/git-messenger.vim/plugin/gitmessenger.vim	/^nnoremap <silent><Plug>(git-messenger-scroll-down-1) :<C-u>call gitmessenger#scroll(bufnr('%'), /;"	m
+<Plug>(git-messenger-scroll-down-1)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(git-messenger-scroll-down-1) :call gitmessenger#scroll(bufnr('%'), 'C/;"	m
 <Plug>(git-messenger-scroll-down-half)	.vim/plugged/git-messenger.vim/plugin/gitmessenger.vim	/^nnoremap <silent><Plug>(git-messenger-scroll-down-half) :<C-u>call gitmessenger#scroll(bufnr('%'/;"	m
+<Plug>(git-messenger-scroll-down-half)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(git-messenger-scroll-down-half) :call gitmessenger#scroll(bufnr('%'),/;"	m
 <Plug>(git-messenger-scroll-down-page)	.vim/plugged/git-messenger.vim/plugin/gitmessenger.vim	/^nnoremap <silent><Plug>(git-messenger-scroll-down-page) :<C-u>call gitmessenger#scroll(bufnr('%'/;"	m
+<Plug>(git-messenger-scroll-down-page)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(git-messenger-scroll-down-page) :call gitmessenger#scroll(bufnr('%'),/;"	m
 <Plug>(git-messenger-scroll-up-1)	.vim/plugged/git-messenger.vim/plugin/gitmessenger.vim	/^nnoremap <silent><Plug>(git-messenger-scroll-up-1) :<C-u>call gitmessenger#scroll(bufnr('%'), 'C/;"	m
+<Plug>(git-messenger-scroll-up-1)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(git-messenger-scroll-up-1) :call gitmessenger#scroll(bufnr('%'), 'C-y/;"	m
 <Plug>(git-messenger-scroll-up-half)	.vim/plugged/git-messenger.vim/plugin/gitmessenger.vim	/^nnoremap <silent><Plug>(git-messenger-scroll-up-half) :<C-u>call gitmessenger#scroll(bufnr('%'),/;"	m
+<Plug>(git-messenger-scroll-up-half)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(git-messenger-scroll-up-half) :call gitmessenger#scroll(bufnr('%'), '/;"	m
 <Plug>(git-messenger-scroll-up-page)	.vim/plugged/git-messenger.vim/plugin/gitmessenger.vim	/^nnoremap <silent><Plug>(git-messenger-scroll-up-page) :<C-u>call gitmessenger#scroll(bufnr('%'),/;"	m
+<Plug>(git-messenger-scroll-up-page)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(git-messenger-scroll-up-page) :call gitmessenger#scroll(bufnr('%'), '/;"	m
 <Plug>(kite-docs)	.vim/pack/kite/start/vim-plugin/plugin/kite.vim	/^nnoremap <silent> <Plug>(kite-docs) :call kite#docs#docs()<CR>$/;"	m
+<Plug>(kite-docs)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(kite-docs) :call kite#docs#docs()$/;"	m
+<Plug>(startify-open-buffers)	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>(startify-open-buffers) :call startify#open_buffers()$/;"	m
 <Plug>AirlineSelectNextTab	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/buffers.vim	/^    noremap <silent> <Plug>AirlineSelectNextTab :<C-u>call <SID>jump_to_tab(v:count1)<CR>$/;"	m
 <Plug>AirlineSelectNextTab	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/tabs.vim	/^  noremap <silent> <Plug>AirlineSelectNextTab :<C-U>exe repeat(':tabn\\|', v:count1)<cr>$/;"	m
 <Plug>AirlineSelectPrevTab	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/buffers.vim	/^    noremap <silent> <Plug>AirlineSelectPrevTab :<C-u>call <SID>jump_to_tab(-v:count1)<CR>$/;"	m
@@ -699,16 +1383,19 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <Plug>AutoPairsReturn	.vim/plugged/auto-pairs/plugin/auto-pairs.vim	/^imap <script> <Plug>AutoPairsReturn <SID>AutoPairsReturn$/;"	m
 <Plug>ChangeCommentary	.vim/plugged/vim-commentary/plugin/commentary.vim	/^nnoremap <silent> <Plug>ChangeCommentary c:<C-U>call <SID>textobject(1)<CR>$/;"	m
 <Plug>CocRefresh	.vim/plugged/coc.nvim/plugin/coc.vim	/^inoremap <silent>                          <Plug>CocRefresh <C-r>=coc#_complete()<CR>$/;"	m
+<Plug>CocRefresh	.vim/sessions/default.vim	/^inoremap <silent> <Plug>CocRefresh =coc#_complete()$/;"	m
 <Plug>Commentary	.vim/plugged/vim-commentary/plugin/commentary.vim	/^nnoremap <expr>   <Plug>Commentary     <SID>go()$/;"	m
 <Plug>Commentary	.vim/plugged/vim-commentary/plugin/commentary.vim	/^onoremap <silent> <Plug>Commentary        :<C-U>call <SID>textobject(get(v:, 'operator', '') ==#/;"	m
 <Plug>Commentary	.vim/plugged/vim-commentary/plugin/commentary.vim	/^xnoremap <expr>   <Plug>Commentary     <SID>go()$/;"	m
 <Plug>CommentaryLine	.vim/plugged/vim-commentary/plugin/commentary.vim	/^nnoremap <expr>   <Plug>CommentaryLine <SID>go() . '_'$/;"	m
 <Plug>CommentaryUndo	.vim/plugged/vim-commentary/plugin/commentary.vim	/^nmap <silent> <Plug>CommentaryUndo :echoerr "Change your <Plug>CommentaryUndo map to <Plug>Comme/;"	m
+<Plug>CommentaryUndo	.vim/sessions/default.vim	/^nmap <silent> <Plug>CommentaryUndo :echoerr "Change your <Plug>CommentaryUndo map to <Plug>Comme/;"	m
 <Plug>CtrlSFCCwordExec	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^nnoremap <silent> <expr> <Plug>CtrlSFCCwordExec <SID>SearchCwordCmd('CtrlSF', 1, 1)$/;"	m
 <Plug>CtrlSFCCwordPath	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^nnoremap          <expr> <Plug>CtrlSFCCwordPath <SID>SearchCwordCmd('CtrlSF', 1, 0)$/;"	m
 <Plug>CtrlSFCwordExec	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^nnoremap <silent> <expr> <Plug>CtrlSFCwordExec  <SID>SearchCwordCmd('CtrlSF', 0, 1)$/;"	m
 <Plug>CtrlSFCwordPath	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^nnoremap          <expr> <Plug>CtrlSFCwordPath  <SID>SearchCwordCmd('CtrlSF', 0, 0)$/;"	m
 <Plug>CtrlSFPrompt	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^nnoremap                 <Plug>CtrlSFPrompt     :CtrlSF<Space>$/;"	m
+<Plug>CtrlSFPrompt	.vim/sessions/default.vim	/^nnoremap <Plug>CtrlSFPrompt :CtrlSF $/;"	m
 <Plug>CtrlSFPwordExec	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^nnoremap <silent> <expr> <Plug>CtrlSFPwordExec  <SID>SearchPwordCmd('CtrlSF', 1)$/;"	m
 <Plug>CtrlSFPwordPath	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^nnoremap          <expr> <Plug>CtrlSFPwordPath  <SID>SearchPwordCmd('CtrlSF', 0)$/;"	m
 <Plug>CtrlSFQuickfixCCwordExec	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^nnoremap <silent> <expr> <Plug>CtrlSFQuickfixCCwordExec <SID>SearchCwordCmd('CtrlSFQuickfix', 1,/;"	m
@@ -716,6 +1403,7 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <Plug>CtrlSFQuickfixCwordExec	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^nnoremap <silent> <expr> <Plug>CtrlSFQuickfixCwordExec  <SID>SearchCwordCmd('CtrlSFQuickfix', 0,/;"	m
 <Plug>CtrlSFQuickfixCwordPath	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^nnoremap          <expr> <Plug>CtrlSFQuickfixCwordPath  <SID>SearchCwordCmd('CtrlSFQuickfix', 0,/;"	m
 <Plug>CtrlSFQuickfixPrompt	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^nnoremap                 <Plug>CtrlSFQuickfixPrompt     :CtrlSFQuickfix<Space>$/;"	m
+<Plug>CtrlSFQuickfixPrompt	.vim/sessions/default.vim	/^nnoremap <Plug>CtrlSFQuickfixPrompt :CtrlSFQuickfix $/;"	m
 <Plug>CtrlSFQuickfixPwordExec	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^nnoremap <silent> <expr> <Plug>CtrlSFQuickfixPwordExec  <SID>SearchPwordCmd('CtrlSFQuickfix', 1)$/;"	m
 <Plug>CtrlSFQuickfixPwordPath	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^nnoremap          <expr> <Plug>CtrlSFQuickfixPwordPath  <SID>SearchPwordCmd('CtrlSFQuickfix', 0)$/;"	m
 <Plug>CtrlSFQuickfixVwordExec	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^vnoremap <silent> <expr> <Plug>CtrlSFQuickfixVwordExec  <SID>SearchVwordCmd('CtrlSFQuickfix', 1)$/;"	m
@@ -723,69 +1411,134 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <Plug>CtrlSFVwordExec	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^vnoremap <silent> <expr> <Plug>CtrlSFVwordExec  <SID>SearchVwordCmd('CtrlSF', 1)$/;"	m
 <Plug>CtrlSFVwordPath	.vim/plugged/ctrlsf.vim/plugin/ctrlsf.vim	/^vnoremap          <expr> <Plug>CtrlSFVwordPath  <SID>SearchVwordCmd('CtrlSF', 0)$/;"	m
 <Plug>GitGutterNextHunk	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^nnoremap <silent> <expr> <Plug>GitGutterNextHunk   &diff ? ']c' : ":\\<C-U>call gitgutter#utilit/;"	m
+<Plug>GitGutterNextHunk	.vim/sessions/default.vim	/^nnoremap <silent> <expr> <Plug>GitGutterNextHunk &diff ? ']c' : ":\\call gitgutter#utility#war/;"	m
 <Plug>GitGutterPrevHunk	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^nnoremap <silent> <expr> <Plug>GitGutterPrevHunk   &diff ? '[c' : ":\\<C-U>call gitgutter#utilit/;"	m
+<Plug>GitGutterPrevHunk	.vim/sessions/default.vim	/^nnoremap <silent> <expr> <Plug>GitGutterPrevHunk &diff ? '[c' : ":\\call gitgutter#utility#war/;"	m
 <Plug>GitGutterPreviewHunk	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^nnoremap <silent> <Plug>GitGutterPreviewHunk   :call gitgutter#utility#warn('please change your /;"	m
+<Plug>GitGutterPreviewHunk	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>GitGutterPreviewHunk :call gitgutter#utility#warn('please change your ma/;"	m
 <Plug>GitGutterStageHunk	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^nnoremap <silent> <Plug>GitGutterStageHunk     :call gitgutter#utility#warn('please change your /;"	m
 <Plug>GitGutterStageHunk	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^xnoremap <silent> <Plug>GitGutterStageHunk     :call gitgutter#utility#warn('please change your /;"	m
+<Plug>GitGutterStageHunk	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>GitGutterStageHunk :call gitgutter#utility#warn('please change your map /;"	m
+<Plug>GitGutterStageHunk	.vim/sessions/default.vim	/^xnoremap <silent> <Plug>GitGutterStageHunk :call gitgutter#utility#warn('please change your map /;"	m
 <Plug>GitGutterUndoHunk	.vim/plugged/vim-gitgutter/plugin/gitgutter.vim	/^nnoremap <silent> <Plug>GitGutterUndoHunk      :call gitgutter#utility#warn('please change your /;"	m
+<Plug>GitGutterUndoHunk	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>GitGutterUndoHunk :call gitgutter#utility#warn('please change your map /;"	m
 <Plug>InterestingWords	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^      nnoremap <silent> <unique> <script> <Plug>InterestingWords$/;"	m
 <Plug>InterestingWords	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^      vnoremap <silent> <unique> <script> <Plug>InterestingWords$/;"	m
 <Plug>InterestingWordsBackward	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^      nnoremap <silent> <unique> <script> <Plug>InterestingWordsBackward$/;"	m
 <Plug>InterestingWordsClear	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^      nnoremap <silent> <unique> <script> <Plug>InterestingWordsClear$/;"	m
 <Plug>InterestingWordsForeward	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^      nnoremap <silent> <unique> <script> <Plug>InterestingWordsForeward$/;"	m
 <Plug>LeaderfBufferBottom	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <silent> <Plug>LeaderfBufferBottom     :<C-U>Leaderf buffer --bottom<CR>$/;"	m
+<Plug>LeaderfBufferBottom	.vim/sessions/default.vim	/^noremap <silent> <Plug>LeaderfBufferBottom :Leaderf buffer --bottom$/;"	m
 <Plug>LeaderfBufferFullScreen	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <silent> <Plug>LeaderfBufferFullScreen :<C-U>Leaderf buffer --fullScreen<CR>$/;"	m
+<Plug>LeaderfBufferFullScreen	.vim/sessions/default.vim	/^noremap <silent> <Plug>LeaderfBufferFullScreen :Leaderf buffer --fullScreen$/;"	m
 <Plug>LeaderfBufferLeft	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <silent> <Plug>LeaderfBufferLeft       :<C-U>Leaderf buffer --left<CR>$/;"	m
+<Plug>LeaderfBufferLeft	.vim/sessions/default.vim	/^noremap <silent> <Plug>LeaderfBufferLeft :Leaderf buffer --left$/;"	m
 <Plug>LeaderfBufferRight	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <silent> <Plug>LeaderfBufferRight      :<C-U>Leaderf buffer --right<CR>$/;"	m
+<Plug>LeaderfBufferRight	.vim/sessions/default.vim	/^noremap <silent> <Plug>LeaderfBufferRight :Leaderf buffer --right$/;"	m
 <Plug>LeaderfBufferTop	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <silent> <Plug>LeaderfBufferTop        :<C-U>Leaderf buffer --top<CR>$/;"	m
+<Plug>LeaderfBufferTop	.vim/sessions/default.vim	/^noremap <silent> <Plug>LeaderfBufferTop :Leaderf buffer --top$/;"	m
 <Plug>LeaderfFileBottom	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <silent> <Plug>LeaderfFileBottom     :<C-U>Leaderf file --bottom<CR>$/;"	m
+<Plug>LeaderfFileBottom	.vim/sessions/default.vim	/^noremap <silent> <Plug>LeaderfFileBottom :Leaderf file --bottom$/;"	m
 <Plug>LeaderfFileFullScreen	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <silent> <Plug>LeaderfFileFullScreen :<C-U>Leaderf file --fullScreen<CR>$/;"	m
+<Plug>LeaderfFileFullScreen	.vim/sessions/default.vim	/^noremap <silent> <Plug>LeaderfFileFullScreen :Leaderf file --fullScreen$/;"	m
 <Plug>LeaderfFileLeft	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <silent> <Plug>LeaderfFileLeft       :<C-U>Leaderf file --left<CR>$/;"	m
+<Plug>LeaderfFileLeft	.vim/sessions/default.vim	/^noremap <silent> <Plug>LeaderfFileLeft :Leaderf file --left$/;"	m
 <Plug>LeaderfFileRight	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <silent> <Plug>LeaderfFileRight      :<C-U>Leaderf file --right<CR>$/;"	m
+<Plug>LeaderfFileRight	.vim/sessions/default.vim	/^noremap <silent> <Plug>LeaderfFileRight :Leaderf file --right$/;"	m
 <Plug>LeaderfFileTop	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <silent> <Plug>LeaderfFileTop        :<C-U>Leaderf file --top<CR>$/;"	m
+<Plug>LeaderfFileTop	.vim/sessions/default.vim	/^noremap <silent> <Plug>LeaderfFileTop :Leaderf file --top$/;"	m
 <Plug>LeaderfGtagsDefinition	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfGtagsDefinition :<C-U><C-R>=leaderf#Gtags#startCmdline(0, 1, 'd')<CR><CR>$/;"	m
 <Plug>LeaderfGtagsDefinition	.vim/plugged/LeaderF/plugin/leaderf.vim	/^vnoremap <silent> <Plug>LeaderfGtagsDefinition :<C-U><C-R>=leaderf#Gtags#startCmdline(2, 1, 'd')/;"	m
+<Plug>LeaderfGtagsDefinition	.vim/sessions/default.vim	/^nnoremap <Plug>LeaderfGtagsDefinition :=leaderf#Gtags#startCmdline(0, 1, 'd')$/;"	m
+<Plug>LeaderfGtagsDefinition	.vim/sessions/default.vim	/^onoremap <Plug>LeaderfGtagsDefinition :=leaderf#Gtags#startCmdline(0, 1, 'd')$/;"	m
+<Plug>LeaderfGtagsDefinition	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>LeaderfGtagsDefinition :=leaderf#Gtags#startCmdline(2, 1, 'd')$/;"	m
 <Plug>LeaderfGtagsGrep	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfGtagsGrep :<C-U><C-R>=leaderf#Gtags#startCmdline(0, 1, 'g')<CR><CR>$/;"	m
 <Plug>LeaderfGtagsGrep	.vim/plugged/LeaderF/plugin/leaderf.vim	/^vnoremap <silent> <Plug>LeaderfGtagsGrep :<C-U><C-R>=leaderf#Gtags#startCmdline(2, 1, 'g')<CR><C/;"	m
+<Plug>LeaderfGtagsGrep	.vim/sessions/default.vim	/^nnoremap <Plug>LeaderfGtagsGrep :=leaderf#Gtags#startCmdline(0, 1, 'g')$/;"	m
+<Plug>LeaderfGtagsGrep	.vim/sessions/default.vim	/^onoremap <Plug>LeaderfGtagsGrep :=leaderf#Gtags#startCmdline(0, 1, 'g')$/;"	m
+<Plug>LeaderfGtagsGrep	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>LeaderfGtagsGrep :=leaderf#Gtags#startCmdline(2, 1, 'g')$/;"	m
 <Plug>LeaderfGtagsReference	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfGtagsReference :<C-U><C-R>=leaderf#Gtags#startCmdline(0, 1, 'r')<CR><CR>$/;"	m
 <Plug>LeaderfGtagsReference	.vim/plugged/LeaderF/plugin/leaderf.vim	/^vnoremap <silent> <Plug>LeaderfGtagsReference :<C-U><C-R>=leaderf#Gtags#startCmdline(2, 1, 'r')</;"	m
+<Plug>LeaderfGtagsReference	.vim/sessions/default.vim	/^nnoremap <Plug>LeaderfGtagsReference :=leaderf#Gtags#startCmdline(0, 1, 'r')$/;"	m
+<Plug>LeaderfGtagsReference	.vim/sessions/default.vim	/^onoremap <Plug>LeaderfGtagsReference :=leaderf#Gtags#startCmdline(0, 1, 'r')$/;"	m
+<Plug>LeaderfGtagsReference	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>LeaderfGtagsReference :=leaderf#Gtags#startCmdline(2, 1, 'r')$/;"	m
 <Plug>LeaderfGtagsSymbol	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfGtagsSymbol :<C-U><C-R>=leaderf#Gtags#startCmdline(0, 1, 's')<CR><CR>$/;"	m
 <Plug>LeaderfGtagsSymbol	.vim/plugged/LeaderF/plugin/leaderf.vim	/^vnoremap <silent> <Plug>LeaderfGtagsSymbol :<C-U><C-R>=leaderf#Gtags#startCmdline(2, 1, 's')<CR>/;"	m
+<Plug>LeaderfGtagsSymbol	.vim/sessions/default.vim	/^nnoremap <Plug>LeaderfGtagsSymbol :=leaderf#Gtags#startCmdline(0, 1, 's')$/;"	m
+<Plug>LeaderfGtagsSymbol	.vim/sessions/default.vim	/^onoremap <Plug>LeaderfGtagsSymbol :=leaderf#Gtags#startCmdline(0, 1, 's')$/;"	m
+<Plug>LeaderfGtagsSymbol	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>LeaderfGtagsSymbol :=leaderf#Gtags#startCmdline(2, 1, 's')$/;"	m
 <Plug>LeaderfMruCwdBottom	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <silent> <Plug>LeaderfMruCwdBottom     :<C-U>Leaderf mru --bottom<CR>$/;"	m
+<Plug>LeaderfMruCwdBottom	.vim/sessions/default.vim	/^noremap <silent> <Plug>LeaderfMruCwdBottom :Leaderf mru --bottom$/;"	m
 <Plug>LeaderfMruCwdFullScreen	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <silent> <Plug>LeaderfMruCwdFullScreen :<C-U>Leaderf mru --fullScreen<CR>$/;"	m
+<Plug>LeaderfMruCwdFullScreen	.vim/sessions/default.vim	/^noremap <silent> <Plug>LeaderfMruCwdFullScreen :Leaderf mru --fullScreen$/;"	m
 <Plug>LeaderfMruCwdLeft	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <silent> <Plug>LeaderfMruCwdLeft       :<C-U>Leaderf mru --left<CR>$/;"	m
+<Plug>LeaderfMruCwdLeft	.vim/sessions/default.vim	/^noremap <silent> <Plug>LeaderfMruCwdLeft :Leaderf mru --left$/;"	m
 <Plug>LeaderfMruCwdRight	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <silent> <Plug>LeaderfMruCwdRight      :<C-U>Leaderf mru --right<CR>$/;"	m
+<Plug>LeaderfMruCwdRight	.vim/sessions/default.vim	/^noremap <silent> <Plug>LeaderfMruCwdRight :Leaderf mru --right$/;"	m
 <Plug>LeaderfMruCwdTop	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <silent> <Plug>LeaderfMruCwdTop        :<C-U>Leaderf mru --top<CR>$/;"	m
+<Plug>LeaderfMruCwdTop	.vim/sessions/default.vim	/^noremap <silent> <Plug>LeaderfMruCwdTop :Leaderf mru --top$/;"	m
 <Plug>LeaderfRgBangCwordLiteralBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfRgBangCwordLiteralBoundary   :<C-U><C-R>=leaderf#Rg#startCmdline(0, 1, 0, 1/;"	m
+<Plug>LeaderfRgBangCwordLiteralBoundary	.vim/sessions/default.vim	/^noremap <Plug>LeaderfRgBangCwordLiteralBoundary :=leaderf#Rg#startCmdline(0, 1, 0, 1)$/;"	m
 <Plug>LeaderfRgBangCwordLiteralNoBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfRgBangCwordLiteralNoBoundary :<C-U><C-R>=leaderf#Rg#startCmdline(0, 1, 0, 0/;"	m
+<Plug>LeaderfRgBangCwordLiteralNoBoundary	.vim/sessions/default.vim	/^noremap <Plug>LeaderfRgBangCwordLiteralNoBoundary :=leaderf#Rg#startCmdline(0, 1, 0, 0)$/;"	m
 <Plug>LeaderfRgBangCwordRegexBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfRgBangCwordRegexBoundary     :<C-U><C-R>=leaderf#Rg#startCmdline(0, 1, 1, 1/;"	m
+<Plug>LeaderfRgBangCwordRegexBoundary	.vim/sessions/default.vim	/^noremap <Plug>LeaderfRgBangCwordRegexBoundary :=leaderf#Rg#startCmdline(0, 1, 1, 1)$/;"	m
 <Plug>LeaderfRgBangCwordRegexNoBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfRgBangCwordRegexNoBoundary   :<C-U><C-R>=leaderf#Rg#startCmdline(0, 1, 1, 0/;"	m
+<Plug>LeaderfRgBangCwordRegexNoBoundary	.vim/sessions/default.vim	/^noremap <Plug>LeaderfRgBangCwordRegexNoBoundary :=leaderf#Rg#startCmdline(0, 1, 1, 0)$/;"	m
 <Plug>LeaderfRgBangVisualLiteralBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^vnoremap <silent> <Plug>LeaderfRgBangVisualLiteralBoundary   :<C-U><C-R>=leaderf#Rg#startCmdline/;"	m
+<Plug>LeaderfRgBangVisualLiteralBoundary	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>LeaderfRgBangVisualLiteralBoundary :=leaderf#Rg#startCmdline(2, 1, 0/;"	m
 <Plug>LeaderfRgBangVisualLiteralNoBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^vnoremap <silent> <Plug>LeaderfRgBangVisualLiteralNoBoundary :<C-U><C-R>=leaderf#Rg#startCmdline/;"	m
+<Plug>LeaderfRgBangVisualLiteralNoBoundary	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>LeaderfRgBangVisualLiteralNoBoundary :=leaderf#Rg#startCmdline(2, 1,/;"	m
 <Plug>LeaderfRgBangVisualRegexBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^vnoremap <silent> <Plug>LeaderfRgBangVisualRegexBoundary     :<C-U><C-R>=leaderf#Rg#startCmdline/;"	m
+<Plug>LeaderfRgBangVisualRegexBoundary	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>LeaderfRgBangVisualRegexBoundary :=leaderf#Rg#startCmdline(2, 1, 1, /;"	m
 <Plug>LeaderfRgBangVisualRegexNoBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^vnoremap <silent> <Plug>LeaderfRgBangVisualRegexNoBoundary   :<C-U><C-R>=leaderf#Rg#startCmdline/;"	m
+<Plug>LeaderfRgBangVisualRegexNoBoundary	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>LeaderfRgBangVisualRegexNoBoundary :=leaderf#Rg#startCmdline(2, 1, 1/;"	m
 <Plug>LeaderfRgCwordLiteralBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfRgCwordLiteralBoundary   :<C-U><C-R>=leaderf#Rg#startCmdline(0, 0, 0, 1)<CR/;"	m
+<Plug>LeaderfRgCwordLiteralBoundary	.vim/sessions/default.vim	/^noremap <Plug>LeaderfRgCwordLiteralBoundary :=leaderf#Rg#startCmdline(0, 0, 0, 1)$/;"	m
 <Plug>LeaderfRgCwordLiteralNoBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfRgCwordLiteralNoBoundary :<C-U><C-R>=leaderf#Rg#startCmdline(0, 0, 0, 0)<CR/;"	m
+<Plug>LeaderfRgCwordLiteralNoBoundary	.vim/sessions/default.vim	/^noremap <Plug>LeaderfRgCwordLiteralNoBoundary :=leaderf#Rg#startCmdline(0, 0, 0, 0)$/;"	m
 <Plug>LeaderfRgCwordRegexBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfRgCwordRegexBoundary     :<C-U><C-R>=leaderf#Rg#startCmdline(0, 0, 1, 1)<CR/;"	m
+<Plug>LeaderfRgCwordRegexBoundary	.vim/sessions/default.vim	/^noremap <Plug>LeaderfRgCwordRegexBoundary :=leaderf#Rg#startCmdline(0, 0, 1, 1)$/;"	m
 <Plug>LeaderfRgCwordRegexNoBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfRgCwordRegexNoBoundary   :<C-U><C-R>=leaderf#Rg#startCmdline(0, 0, 1, 0)<CR/;"	m
+<Plug>LeaderfRgCwordRegexNoBoundary	.vim/sessions/default.vim	/^noremap <Plug>LeaderfRgCwordRegexNoBoundary :=leaderf#Rg#startCmdline(0, 0, 1, 0)$/;"	m
 <Plug>LeaderfRgPrompt	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfRgPrompt :<C-U>Leaderf rg -e<Space>$/;"	m
+<Plug>LeaderfRgPrompt	.vim/sessions/default.vim	/^noremap <Plug>LeaderfRgPrompt :Leaderf rg -e $/;"	m
 <Plug>LeaderfRgVisualLiteralBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^vnoremap <silent> <Plug>LeaderfRgVisualLiteralBoundary   :<C-U><C-R>=leaderf#Rg#startCmdline(2, /;"	m
+<Plug>LeaderfRgVisualLiteralBoundary	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>LeaderfRgVisualLiteralBoundary :=leaderf#Rg#startCmdline(2, 0, 0, 1)/;"	m
 <Plug>LeaderfRgVisualLiteralNoBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^vnoremap <silent> <Plug>LeaderfRgVisualLiteralNoBoundary :<C-U><C-R>=leaderf#Rg#startCmdline(2, /;"	m
+<Plug>LeaderfRgVisualLiteralNoBoundary	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>LeaderfRgVisualLiteralNoBoundary :=leaderf#Rg#startCmdline(2, 0, 0, /;"	m
 <Plug>LeaderfRgVisualRegexBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^vnoremap <silent> <Plug>LeaderfRgVisualRegexBoundary     :<C-U><C-R>=leaderf#Rg#startCmdline(2, /;"	m
+<Plug>LeaderfRgVisualRegexBoundary	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>LeaderfRgVisualRegexBoundary :=leaderf#Rg#startCmdline(2, 0, 1, 1)$/;"	m
 <Plug>LeaderfRgVisualRegexNoBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^vnoremap <silent> <Plug>LeaderfRgVisualRegexNoBoundary   :<C-U><C-R>=leaderf#Rg#startCmdline(2, /;"	m
+<Plug>LeaderfRgVisualRegexNoBoundary	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>LeaderfRgVisualRegexNoBoundary :=leaderf#Rg#startCmdline(2, 0, 1, 0)/;"	m
 <Plug>LeaderfRgWORDLiteralBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfRgWORDLiteralBoundary   :<C-U><C-R>=leaderf#Rg#startCmdline(1, 0, 0, 1)<CR>$/;"	m
+<Plug>LeaderfRgWORDLiteralBoundary	.vim/sessions/default.vim	/^noremap <Plug>LeaderfRgWORDLiteralBoundary :=leaderf#Rg#startCmdline(1, 0, 0, 1)$/;"	m
 <Plug>LeaderfRgWORDLiteralNoBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfRgWORDLiteralNoBoundary :<C-U><C-R>=leaderf#Rg#startCmdline(1, 0, 0, 0)<CR>$/;"	m
+<Plug>LeaderfRgWORDLiteralNoBoundary	.vim/sessions/default.vim	/^noremap <Plug>LeaderfRgWORDLiteralNoBoundary :=leaderf#Rg#startCmdline(1, 0, 0, 0)$/;"	m
 <Plug>LeaderfRgWORDRegexBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfRgWORDRegexBoundary     :<C-U><C-R>=leaderf#Rg#startCmdline(1, 0, 1, 1)<CR>$/;"	m
+<Plug>LeaderfRgWORDRegexBoundary	.vim/sessions/default.vim	/^noremap <Plug>LeaderfRgWORDRegexBoundary :=leaderf#Rg#startCmdline(1, 0, 1, 1)$/;"	m
 <Plug>LeaderfRgWORDRegexNoBoundary	.vim/plugged/LeaderF/plugin/leaderf.vim	/^noremap <Plug>LeaderfRgWORDRegexNoBoundary   :<C-U><C-R>=leaderf#Rg#startCmdline(1, 0, 1, 0)<CR>$/;"	m
+<Plug>LeaderfRgWORDRegexNoBoundary	.vim/sessions/default.vim	/^noremap <Plug>LeaderfRgWORDRegexNoBoundary :=leaderf#Rg#startCmdline(1, 0, 1, 0)$/;"	m
+<Plug>NetrwBrowseX	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX/;"	m
+<Plug>NetrwBrowseXVis	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()$/;"	m
 <Plug>SearchNormal	.vim/plugged/vim-browser-search/plugin/search.vim	/^nmap <silent> <Plug>SearchNormal  :set operatorfunc=search#search_normal<cr>g@$/;"	m
+<Plug>SearchNormal	.vim/sessions/default.vim	/^nmap <silent> <Plug>SearchNormal :set operatorfunc=search#search_normal$/;"	m
 <Plug>SearchVisual	.vim/plugged/vim-browser-search/plugin/search.vim	/^vmap <silent> <Plug>SearchVisual  :<c-u>call search#search_visual('')<cr>$/;"	m
+<Plug>SearchVisual	.vim/sessions/default.vim	/^vmap <silent> <Plug>SearchVisual :call search#search_visual('')$/;"	m
 <Plug>Translate	.vim/plugged/vim-translator/plugin/translator.vim	/^nnoremap <silent> <Plug>Translate   :Translate<CR>$/;"	m
+<Plug>Translate	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>Translate :Translate$/;"	m
 <Plug>TranslateR	.vim/plugged/vim-translator/plugin/translator.vim	/^nnoremap <silent> <Plug>TranslateR  :TranslateR<CR>$/;"	m
+<Plug>TranslateR	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>TranslateR :TranslateR$/;"	m
 <Plug>TranslateRV	.vim/plugged/vim-translator/plugin/translator.vim	/^vnoremap <silent> <Plug>TranslateRV :TranslateR<CR>$/;"	m
+<Plug>TranslateRV	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>TranslateRV :TranslateR$/;"	m
 <Plug>TranslateV	.vim/plugged/vim-translator/plugin/translator.vim	/^vnoremap <silent> <Plug>TranslateV  :Translate<CR>$/;"	m
+<Plug>TranslateV	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>TranslateV :Translate$/;"	m
 <Plug>TranslateW	.vim/plugged/vim-translator/plugin/translator.vim	/^nnoremap <silent> <Plug>TranslateW  :TranslateW<CR>$/;"	m
+<Plug>TranslateW	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>TranslateW :TranslateW$/;"	m
 <Plug>TranslateWV	.vim/plugged/vim-translator/plugin/translator.vim	/^vnoremap <silent> <Plug>TranslateWV :TranslateW<CR>$/;"	m
+<Plug>TranslateWV	.vim/sessions/default.vim	/^vnoremap <silent> <Plug>TranslateWV :TranslateW$/;"	m
 <Plug>TranslateX	.vim/plugged/vim-translator/plugin/translator.vim	/^nnoremap <silent> <Plug>TranslateX  :TranslateX<CR>$/;"	m
+<Plug>TranslateX	.vim/sessions/default.vim	/^nnoremap <silent> <Plug>TranslateX :TranslateX$/;"	m
 <Plug>XTablineCdCurrent	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^        nnoremap <unique> <script> <Plug>XTablineCdCurrent :cd %:p:h<cr>:call airline#util#doaut/;"	m
 <Plug>XTablineCdDown1	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^        nnoremap <unique> <script> <Plug>XTablineCdDown1   :cd %:p:h:h<cr>:call airline#util#doa/;"	m
 <Plug>XTablineCdDown2	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^        nnoremap <unique> <script> <Plug>XTablineCdDown2   :cd %:p:h:h:h<cr>:call airline#util#d/;"	m
@@ -799,6 +1552,7 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <Plug>XTablineToggleTabs	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^    nnoremap <unique> <script> <Plug>XTablineToggleTabs <SID>ToggleTabs$/;"	m
 <S-TAB>	.vim/init.vim	/^inoremap <expr><S-TAB> pumvisible() ? "\\<C-p>" : "\\<C-h>"$/;"	m
 <S-TAB>	.vimrc	/^inoremap <expr><S-TAB> pumvisible() ? "\\<C-p>" : "\\<C-h>"$/;"	m
+<S-Tab>	.vim/sessions/default.vim	/^inoremap <expr> <S-Tab> pumvisible() ? "\\" : "\\"$/;"	m
 <SID>:	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^nnoremap <SID>: :<C-U><C-R>=v:count ? v:count : ''<CR>$/;"	m
 <SID>AutoPairsReturn	.vim/plugged/auto-pairs/plugin/auto-pairs.vim	/^inoremap <silent> <SID>AutoPairsReturn <C-R>=AutoPairsReturn()<CR>$/;"	m
 <SID>NextBuffer	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^    nnoremap <silent> <expr> <SID>NextBuffer airline#extensions#tabline#xtabline#next_buffer(v:c/;"	m
@@ -807,6 +1561,8 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <SID>SelectBuffer	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^    nnoremap <silent> <expr> <SID>SelectBuffer g:xtabline_changing_buffer ? "\\<C-c>" : ":<C-u>c/;"	m
 <SID>ToggleFiltering	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^    nnoremap <silent> <SID>ToggleFiltering :call airline#extensions#tabline#xtabline#toggle_buff/;"	m
 <SID>ToggleTabs	.vim/plugged/vim-airline/autoload/airline/extensions/tabline/xtabline.vim	/^    nnoremap <silent> <SID>ToggleTabs :call airline#extensions#tabline#xtabline#toggle_tabs()<cr/;"	m
+<SNR>145_:	.vim/sessions/default.vim	/^nnoremap <SNR>145_: :=v:count ? v:count : ''$/;"	m
+<SNR>50_AutoPairsReturn	.vim/sessions/default.vim	/^inoremap <silent> <SNR>50_AutoPairsReturn =AutoPairsReturn()$/;"	m
 <TAB>	.vim/init.vim	/^inoremap <silent><expr> <TAB>$/;"	m
 <TAB>	.vimrc	/^inoremap <silent><expr> <TAB>$/;"	m
 <Tab>	.vim/pack/kite/start/vim-plugin/autoload/kite.vim	/^    imap <buffer> <expr> <Tab> pumvisible() ? "\\<C-y>" : "\\<Tab>"$/;"	m
@@ -889,6 +1645,7 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <space>p	.vim/init.vim	/^nnoremap <silent> <space>p  :<C-u>CocList extensions<cr>$/;"	m
 <space>p	.vimrc	/^nnoremap <silent> <space>p  :<C-u>CocList extensions<cr>$/;"	m
 <tab>	.vim/coc-settings.json	/^        "<tab>": "actionMenu",$/;"	s	object:explorer.keyMappings
+>	.vim/sessions/default.vim	/^inoremap <silent> <expr> > coc#_insert_key('request', 'eb6b9127-dd32-11ea-a85f-5bc0cfb032d6')$/;"	m
 ?	.vim/coc-settings.json	/^        "?": "help",$/;"	s	object:explorer.keyMappings
 ?	.vim/plugged/git-messenger.vim/autoload/gitmessenger/popup.vim	/^        nnoremap <buffer><silent><nowait>? :<C-u>call b:__gitmessenger_popup.echo_help()<CR>$/;"	m
 @chemzqm/neovim	.vim/plugged/coc.nvim/package.json	/^    "@chemzqm\/neovim": "^5.2.6",$/;"	s	object:dependencies
@@ -1171,7 +1928,6 @@ CONST	.vim/plugged/jedi-vim/pythonx/jedi/test/examples/implicit_nested_namespace
 CONST	.vim/plugged/jedi-vim/pythonx/jedi/test/examples/nested_namespaces/namespace/pkg/__init__.py	/^CONST = 1$/;"	v
 CONST	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/python3.py	/^CONST: int = 42$/;"	v
 CONTRIBUTING	.vim/plugged/vim-startify/CONTRIBUTING.md	/^CONTRIBUTING$/;"	c
-CPU	.tmux.conf	/^set -g status-right "#{?client_prefix, @ ,}  #[bg=black] #h #[bg=red] %Y-%m-%d %H:%M • CPU:#{c/;"	k
 CSCOPE_ARGS	.vim/plugged/vim-gutentags/plat/win32/update_scopedb.cmd	/^    set CSCOPE_ARGS=%CSCOPE_ARGS% -q$/;"	v
 CSCOPE_ARGS	.vim/plugged/vim-gutentags/plat/win32/update_scopedb.cmd	/^set CSCOPE_ARGS=$/;"	v
 CSCOPE_ARGS	.vim/plugged/vim-gutentags/plat/win32/update_scopedb.cmd	/^set CSCOPE_ARGS=%CSCOPE_ARGS% -i %DB_FILE%.files$/;"	v
@@ -1889,6 +2645,7 @@ GutentagsToggleTrace	.vim/plugged/vim-gutentags/plugin/gutentags.vim	/^    comma
 GutentagsUpdate	.vim/plugged/vim-gutentags/autoload/gutentags.vim	/^    command! -buffer -bang GutentagsUpdate :call s:manual_update_tags(<bang>0)$/;"	c
 H	.vim/init.vim	/^nnoremap H ^$/;"	m
 H	.vim/plugged/ag.vim/autoload/ag.vim	/^      nnoremap <silent> <buffer> H  <C-W><CR><C-w>K<C-w>b$/;"	m
+H	.vim/sessions/default.vim	/^nnoremap H ^$/;"	m
 H	.vimrc	/^nnoremap H ^$/;"	m
 HANGING_BRACKET	.vim/plugged/jedi-vim/pythonx/parso/parso/python/pep8.py	/^    HANGING_BRACKET = object()$/;"	v	class:IndentationTypes
 HTTPREQUEST_CLASS_FULLNAME	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/django-stubs/mypy_django_plugin/lib/fullnames.py	/^HTTPREQUEST_CLASS_FULLNAME = 'django.http.request.HttpRequest'$/;"	v
@@ -2122,6 +2879,7 @@ L	.vim/autoload/plug.vim	/^    nnoremap <silent> <buffer> L :call <SID>status_lo
 L	.vim/autoload/plug.vim	/^    xnoremap <silent> <buffer> L :call <SID>status_load(line('.'))<cr>$/;"	m
 L	.vim/init.vim	/^nnoremap L \$$/;"	m
 L	.vim/plugged/LeaderF/autoload/leaderf/Rg.vim	/^    nnoremap <buffer> <silent> L             :exec g:Lf_py "rgExplManager.outputToLoclist()"<CR>$/;"	m
+L	.vim/sessions/default.vim	/^nnoremap L \$$/;"	m
 L	.vimrc	/^nnoremap L \$$/;"	m
 LAg	.vim/plugged/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=file LAg call ag#Ag('lgrep<bang>', <q-args>)$/;"	c
 LAgAdd	.vim/plugged/ag.vim/plugin/ag.vim	/^command! -bang -nargs=* -complete=file LAgAdd call ag#Ag('lgrepadd<bang>', <q-args>)$/;"	c
@@ -2355,6 +3113,7 @@ MypyType	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/django-stubs/mypy_d
 MypyType	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/django-stubs/mypy_django_plugin/transformers/settings.py	/^from mypy.types import Type as MypyType$/;"	x
 N	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^    nnoremap <silent> N :call WordNavigation(0)<cr>$/;"	m
 N	.vim/plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><expr> N 'j '[v:searchforward].'N'$/;"	m
+N	.vim/sessions/default.vim	/^nnoremap <silent> N :call WordNavigation(0)$/;"	m
 NAME	.vim/plugged/jedi-vim/pythonx/parso/parso/python/parser.py	/^NAME = PythonTokenTypes.NAME$/;"	v
 NAME	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tokenize.py	/^NAME = PythonTokenTypes.NAME$/;"	v
 NAME	.vim/plugged/jedi-vim/pythonx/parso/test/test_tokenize.py	/^NAME = PythonTokenTypes.NAME$/;"	v
@@ -2608,6 +3367,7 @@ PythonTokenTypes	.vim/plugged/jedi-vim/pythonx/parso/parso/python/token.py	/^Pyt
 PythonVersionInfo	.vim/plugged/jedi-vim/pythonx/parso/parso/utils.py	/^class PythonVersionInfo(namedtuple('Version', 'major, minor')):$/;"	c
 Q	.vim/init.vim	/^nnoremap Q :qa!<CR>$/;"	m
 Q	.vim/plugged/LeaderF/autoload/leaderf/Rg.vim	/^    nnoremap <buffer> <silent> Q             :exec g:Lf_py "rgExplManager.outputToQflist()"<CR>$/;"	m
+Q	.vim/sessions/default.vim	/^nnoremap Q :qa!$/;"	m
 Q	.vimrc	/^nnoremap Q :qa!<CR>$/;"	m
 QUERYSET_CLASS_FULLNAME	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/django-stubs/mypy_django_plugin/lib/fullnames.py	/^QUERYSET_CLASS_FULLNAME = 'django.db.models.query.QuerySet'$/;"	v
 QUEUE_DESTROY	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^#define QUEUE_DESTROY(/;"	d	file:
@@ -3168,6 +3928,7 @@ Visual Studio Code	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/usage.rst	/^Visu
 Vundle	.vim/plugged/smartim/README.md	/^## Vundle$/;"	s	chapter:Installation
 Vundle (https://github.com/gmarik/vundle)	.vim/plugged/vim-easymotion/README.md	/^### Vundle (https:\/\/github.com\/gmarik\/vundle)$/;"	S	section:New features in version 2.0""Installation
 W	.vim/init.vim	/^nnoremap W :wa<CR>$/;"	m
+W	.vim/sessions/default.vim	/^nnoremap W :wa$/;"	m
 W	.vimrc	/^nnoremap W :wa<CR>$/;"	m
 WARNING	.vim/plugged/jedi-vim/pythonx/jedi/jedi/debug.py	/^WARNING = object()$/;"	v
 WI	.vim/plugged/vim-airline-themes/autoload/airline/themes/base16_snazzy.vim	/^let WI = [ s:base00 , s:base0A , 235 , 229 ]      " [ warning color ]$/;"	v
@@ -3251,6 +4012,8 @@ Ya	.vim/plugged/jedi-vim/pythonx/jedi/test/refactor/extract_function.py	/^class 
 YieldExpr	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^class YieldExpr(PythonBaseNode):$/;"	c
 YoudaoTranslator	.vim/plugged/vim-translator/script/translator.py	/^class YoudaoTranslator(BasicTranslator):$/;"	c
 ZipFileIO	.vim/plugged/jedi-vim/pythonx/jedi/jedi/file_io.py	/^class ZipFileIO(file_io.KnownContentFileIO, FileIOFolderMixin):$/;"	c
+[	.vim/sessions/default.vim	/^inoremap <buffer> <silent> [ =AutoPairsInsert('[')$/;"	m
+[	.vim/sessions/default.vim	/^inoremap <silent> <expr> [ coc#_insert_key('request', 'eb6b9122-dd32-11ea-a85f-5bc0cfb032d6')$/;"	m
 [0.10] - 2018-12-15	.vim/plugged/vim-airline/CHANGELOG.md	/^## [0.10] - 2018-12-15$/;"	s	chapter:Change Log
 [0.11] - 2019-11-10	.vim/plugged/vim-airline/CHANGELOG.md	/^## [0.11] - 2019-11-10$/;"	s	chapter:Change Log
 [0.12] - Unreleased	.vim/plugged/vim-airline/CHANGELOG.md	/^## [0.12] - Unreleased$/;"	s	chapter:Change Log
@@ -3274,6 +4037,7 @@ ZipFileIO	.vim/plugged/jedi-vim/pythonx/jedi/jedi/file_io.py	/^class ZipFileIO(f
 [apt-vim](https://github.com/egalpin/apt-vim)	.vim/plugged/nerdtree/README.markdown	/^#### [apt-vim](https:\/\/github.com\/egalpin\/apt-vim)$/;"	t	section:The NERDTree [![Vint](https://github.com/preservim/nerdtree/workflows/Vint/badge.svg)](https://github.com/preservim/nerdtree/actions?workflow=Vint)""Installation
 [asynctasks.vim](https://github.com/skywind3000/asynctasks.vim)	.vim/plugged/vim-floaterm/README.md	/^### [asynctasks.vim](https:\/\/github.com\/skywind3000\/asynctasks.vim)$/;"	S	section:Integrate with other plugins
 [c	.vim/plugged/vim-gitgutter/autoload/gitgutter.vim	/^    nmap <buffer> [c <Plug>(GitGutterPrevHunk)$/;"	m
+[c	.vim/sessions/default.vim	/^nmap <buffer> [c <Plug>(GitGutterPrevHunk)$/;"	m
 [coc.nvim](https://github.com/neoclide/coc.nvim)	.vim/plugged/vim-floaterm/README.md	/^### [coc.nvim](https:\/\/github.com\/neoclide\/coc.nvim)$/;"	S	section:Integrate with other plugins
 [csv.vim][28]	.vim/plugged/vim-airline/README.md	/^#### [csv.vim][28]$/;"	t	section:Features""Seamless integration
 [ctrlp.vim][10]	.vim/plugged/vim-airline/README.md	/^#### [ctrlp.vim][10]$/;"	t	section:Features""Seamless integration
@@ -3283,6 +4047,7 @@ ZipFileIO	.vim/plugged/jedi-vim/pythonx/jedi/jedi/file_io.py	/^class ZipFileIO(f
 [denite.nvim](https://github.com/Shougo/denite.nvim)	.vim/plugged/vim-floaterm/README.md	/^### [denite.nvim](https:\/\/github.com\/Shougo\/denite.nvim)$/;"	S	section:Integrate with other plugins
 [denite.nvim][51]	.vim/plugged/vim-airline/README.md	/^#### [denite.nvim][51]$/;"	t	section:Features""Seamless integration
 [g	.vim/init.vim	/^nmap <silent> [g <Plug>(coc-diagnostic-prev)$/;"	m
+[g	.vim/sessions/default.vim	/^nmap <silent> [g <Plug>(coc-diagnostic-prev)$/;"	m
 [g	.vimrc	/^nmap <silent> [g <Plug>(coc-diagnostic-prev)$/;"	m
 [lightline.vim](https://github.com/itchyny/lightline.vim)	.vim/plugged/vista.vim/README.md	/^#### [lightline.vim](https:\/\/github.com\/itchyny\/lightline.vim)$/;"	t	subsection:Vista.vim""Usage""Show the nearest method/function in the statusline
 [localsearch][54]	.vim/plugged/vim-airline/README.md	/^#### [localsearch][54]$/;"	t	section:Features""Seamless integration
@@ -3301,6 +4066,25 @@ ZipFileIO	.vim/plugged/jedi-vim/pythonx/jedi/jedi/file_io.py	/^class ZipFileIO(f
 [vimtex][53]	.vim/plugged/vim-airline/README.md	/^#### [vimtex][53]$/;"	t	section:Features""Seamless integration
 [virtualenv][31]	.vim/plugged/vim-airline/README.md	/^#### [virtualenv][31]$/;"	t	section:Features""Seamless integration
 [xkb-switch][48]/[xkb-layout][49]	.vim/plugged/vim-airline/README.md	/^#### [xkb-switch][48]\/[xkb-layout][49]$/;"	t	section:Features""Seamless integration
+\x16	.vim/sessions/default.vim	/^inoremap <buffer> <silent>   =AutoPairsSpace()$/;"	m
+\x16	.vim/sessions/default.vim	/^nnoremap <silent>  c :CocList commands$/;"	m
+\x16	.vim/sessions/default.vim	/^nnoremap <silent>  d :CocList diagnostics$/;"	m
+\x16	.vim/sessions/default.vim	/^nnoremap <silent>  e :CocCommand explorer$/;"	m
+\x16	.vim/sessions/default.vim	/^nnoremap <silent>  p :CocList extensions$/;"	m
+\x16<	.vim/sessions/default.vim	/^inoremap <silent> <expr> < coc#_insert_key('request', 'eb6b9126-dd32-11ea-a85f-5bc0cfb032d6')$/;"	m
+\x16\b	.vim/sessions/default.vim	/^cnoremap  <Left>$/;"	m
+\x16\b	.vim/sessions/default.vim	/^inoremap <buffer> <silent>  =AutoPairsDelete()$/;"	m
+\x16\f	.vim/sessions/default.vim	/^cnoremap  <Right>$/;"	m
+\x16\x01	.vim/sessions/default.vim	/^cnoremap  <Home>$/;"	m
+\x16\x02	.vim/sessions/default.vim	/^cnoremap  <S-Left>$/;"	m
+\x16\x03	.vim/sessions/default.vim	/^inoremap  $/;"	m
+\x16\x04	.vim/sessions/default.vim	/^nnoremap <silent>  :bprevious$/;"	m
+\x16\x05	.vim/sessions/default.vim	/^cnoremap  <End>$/;"	m
+\x16\x06	.vim/sessions/default.vim	/^cnoremap  <S-Right>$/;"	m
+\x16\x0E	.vim/sessions/default.vim	/^cnoremap  <Down>$/;"	m
+\x16\x0E	.vim/sessions/default.vim	/^nnoremap <silent>  :bn$/;"	m
+\x16\x10	.vim/sessions/default.vim	/^cnoremap  <Up>$/;"	m
+\x16\x10	.vim/sessions/default.vim	/^nnoremap <silent>  :bp$/;"	m
 \x20            terminal	ranger/rifle.conf	/^ext x?html?, has w3m,             terminal = w3m "$@"$/;"	k
 \x20           terminal	ranger/rifle.conf	/^ext x?html?, has lynx,            terminal = lynx -- "$@"$/;"	k
 \x20          terminal	ranger/rifle.conf	/^ext x?html?, has links,           terminal = links "$@"$/;"	k
@@ -3418,6 +4202,8 @@ ZipFileIO	.vim/plugged/jedi-vim/pythonx/jedi/jedi/file_io.py	/^class ZipFileIO(f
 \x20mark_files toggle	ranger/rc.conf	/^map <Space> mark_files toggle=True$/;"	k
 \x20move down	ranger/rc.conf	/^map <PAGEDOWN> move down=1   pages=True$/;"	k
 \x20tag_toggle tag	ranger/rc.conf	/^map "<any>  tag_toggle tag=%any$/;"	k
+]	.vim/sessions/default.vim	/^inoremap <buffer> <silent> ] =AutoPairsInsert(']')$/;"	m
+]	.vim/sessions/default.vim	/^inoremap <silent> <expr> ] coc#_insert_key('request', 'eb6b9123-dd32-11ea-a85f-5bc0cfb032d6')$/;"	m
 ][	.vim/plugged/gv.vim/plugin/gv.vim	/^  nnoremap <silent> <buffer> <expr> ][ <sid>move('')$/;"	m
 ][	.vim/plugged/gv.vim/plugin/gv.vim	/^  xnoremap <silent> <buffer> <expr> ][ <sid>move('')$/;"	m
 ]]	.vim/autoload/plug.vim	/^  nnoremap <silent> <buffer> ]] :silent! call <SID>section('')<cr>$/;"	m
@@ -3425,8 +4211,10 @@ ZipFileIO	.vim/plugged/jedi-vim/pythonx/jedi/jedi/file_io.py	/^class ZipFileIO(f
 ]]	.vim/plugged/gv.vim/plugin/gv.vim	/^  nnoremap <silent> <buffer> <expr> ]] <sid>move('')$/;"	m
 ]]	.vim/plugged/gv.vim/plugin/gv.vim	/^  xnoremap <silent> <buffer> <expr> ]] <sid>move('')$/;"	m
 ]c	.vim/plugged/vim-gitgutter/autoload/gitgutter.vim	/^    nmap <buffer> ]c <Plug>(GitGutterNextHunk)$/;"	m
+]c	.vim/sessions/default.vim	/^nmap <buffer> ]c <Plug>(GitGutterNextHunk)$/;"	m
 ]d	.vim/coc-settings.json	/^        "]d": "diagnosticNext",$/;"	s	object:explorer.keyMappings
 ]g	.vim/init.vim	/^nmap <silent> ]g <Plug>(coc-diagnostic-next)$/;"	m
+]g	.vim/sessions/default.vim	/^nmap <silent> ]g <Plug>(coc-diagnostic-next)$/;"	m
 ]g	.vimrc	/^nmap <silent> ]g <Plug>(coc-diagnostic-next)$/;"	m
 ^.+\\\\.tsx?$	.vim/plugged/coc.nvim/package.json	/^      "^.+\\\\.tsx?$": "ts-jest"$/;"	s	object:jest.transform
 ^[_a-zA-Z]+$	.vim/plugged/coc.nvim/data/schema.json	/^        "^[_a-zA-Z]+$": {$/;"	o	object:properties.languageserver.patternProperties
@@ -5193,6 +5981,8 @@ _workaround	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/compiled/subproces
 _worker	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyEngine.c	/^static DWORD WINAPI _worker(LPVOID pParam)$/;"	f	typeref:typename:DWORD WINAPI	file:
 _wrapped_value	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/base_value.py	/^    def _wrapped_value(self):$/;"	m	class:LazyValueWrapper
 _writeCache	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/fileExpl.py	/^    def _writeCache(self, content):$/;"	m	class:FileExplorer
+`	.vim/sessions/default.vim	/^inoremap <buffer> <silent> ` =AutoPairsInsert('`')$/;"	m
+`	.vim/sessions/default.vim	/^inoremap <silent> <expr> ` coc#_insert_key('request', 'eb6b912a-dd32-11ea-a85f-5bc0cfb032d6')$/;"	m
 `,`	.vim/plugged/vim-easy-align/README.md	/^#### `,`$/;"	t	subsection:vim-easy-align ![travis-ci](https://travis-ci.org/junegunn/vim-easy-align.svg?branch=master)""Demo""Using predefined alignment rules
 `:BrowserSearch [--engine] [text]`	.vim/plugged/vim-browser-search/README.md	/^#### `:BrowserSearch [--engine] [text]`$/;"	t	section:vim-browser-search""Commands
 `:FloatermHide[!] [floaterm_name]` Hide the current floaterms window.	.vim/plugged/vim-floaterm/README.md	/^#### `:FloatermHide[!] [floaterm_name]` Hide the current floaterms window.$/;"	t	subsection:Basic Usage""Commands
@@ -5427,6 +6217,8 @@ abris	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E12_second
 absolute_path	.vim/plugged/vim-floaterm/bin/floaterm	/^absolute_path() {$/;"	f
 ac	.vim/plugged/vim-gitgutter/autoload/gitgutter.vim	/^    omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)$/;"	m
 ac	.vim/plugged/vim-gitgutter/autoload/gitgutter.vim	/^    xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)$/;"	m
+ac	.vim/sessions/default.vim	/^omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)$/;"	m
+ac	.vim/sessions/default.vim	/^xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)$/;"	m
 accept	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/manager.py	/^    def accept(self, mode=''):$/;"	m	class:Manager
 action_new	.vim/plugged/vim-floaterm/rplugin/python3/denite/kind/floaterm.py	/^    def action_new(self, context: UserContext) -> None:$/;"	m	class:Kind
 action_open	.vim/plugged/vim-floaterm/rplugin/python3/denite/kind/floaterm.py	/^    def action_open(self, context: UserContext) -> None:$/;"	m	class:Kind
@@ -6254,6 +7046,7 @@ cd	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/goto.py	/^cd = c$/;"	v
 cd	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/goto.py	/^cd = e$/;"	v
 cd	ranger/commands_full.py	/^class cd(Command):$/;"	c
 cfs	.vim/init.vim	/^nmap <silent>cfs <Plug>CtrlSFCCwordPath<CR>$/;"	m
+cfs	.vim/sessions/default.vim	/^nmap <silent> cfs <Plug>CtrlSFCCwordPath$/;"	m
 cfs	.vimrc	/^nmap <silent>cfs <Plug>CtrlSFCCwordPath<CR>$/;"	m
 cgc	.vim/plugged/vim-commentary/plugin/commentary.vim	/^    nmap cgc <Plug>ChangeCommentary$/;"	m
 chain	ranger/commands_full.py	/^class chain(Command):$/;"	c
@@ -7644,6 +8437,7 @@ eslint-config-prettier	.vim/plugged/coc.nvim/package.json	/^    "eslint-config-p
 eslint-plugin-jest	.vim/plugged/coc.nvim/package.json	/^    "eslint-plugin-jest": "^23.10.0",$/;"	s	object:devDependencies
 eslint-plugin-jsdoc	.vim/plugged/coc.nvim/package.json	/^    "eslint-plugin-jsdoc": "^25.0.1",$/;"	s	object:devDependencies
 ev	.vim/init.vim	/^nnoremap ev :edit $MYVIMRC<CR>$/;"	m
+ev	.vim/sessions/default.vim	/^nnoremap ev :edit $MYVIMRC$/;"	m
 ev	.vimrc	/^nnoremap ev :edit $MYVIMRC<CR>$/;"	m
 eval_	ranger/commands_full.py	/^class eval_(Command):$/;"	c
 evaluate	.vim/plugged/LeaderF/autoload/leaderf/fuzzyMatch_C/fuzzyMatch.c	/^ValueElements* evaluate(TextContext* pText_ctxt,$/;"	f	typeref:typename:ValueElements *
@@ -8011,8 +8805,10 @@ floaterm#wrapper#rg#	.vim/plugged/vim-floaterm/autoload/floaterm/wrapper/rg.vim	
 floaterm#wrapper#vifm#	.vim/plugged/vim-floaterm/autoload/floaterm/wrapper/vifm.vim	/^function! floaterm#wrapper#vifm#(cmd) abort$/;"	f
 floaterm_enter_insertmode	.vim/plugged/vim-floaterm/plugin/floaterm.vim	/^augroup floaterm_enter_insertmode$/;"	a
 fn	.vim/init.vim	/^nnoremap <silent> fn :FloatermNew<CR>$/;"	m
+fn	.vim/sessions/default.vim	/^nnoremap <silent> fn :FloatermNew$/;"	m
 fn	.vimrc	/^nnoremap <silent> fn :FloatermNew<CR>$/;"	m
 fnn	.vim/init.vim	/^nnoremap <silent> fnn :FloatermNext<CR>$/;"	m
+fnn	.vim/sessions/default.vim	/^nnoremap <silent> fnn :FloatermNext$/;"	m
 fnn	.vimrc	/^nnoremap <silent> fnn :FloatermNext<CR>$/;"	m
 focus_return	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/basic.py	/^def focus_return():$/;"	f
 folder	.vim/coc-settings.json	/^        "folder": "\\uf114",$/;"	s	object:suggest.completionItemKindLabels
@@ -8097,6 +8893,7 @@ format_line	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/fileExpl.py	/^d
 fpath	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/django-stubs/scripts/catch_non_abstract_annotation.py	/^        fpath = os.path.join(dirpath, filename)$/;"	v
 fpath	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/django-stubs/scripts/catch_non_abstract_annotation.py	/^fpath = os.path.join(BASE_DIR, 'core', 'checks', 'model_checks.pyi')$/;"	v
 fpp	.vim/init.vim	/^nnoremap <silent> fpp :FloatermPrev<CR>$/;"	m
+fpp	.vim/sessions/default.vim	/^nnoremap <silent> fpp :FloatermPrev$/;"	m
 fpp	.vimrc	/^nnoremap <silent> fpp :FloatermPrev<CR>$/;"	m
 friend	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/pep0484_comments.py	/^friend = buddy.friend_for_name('buster')$/;"	v
 friend	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/pep0484_comments.py	/^friend = buddy.friends[0][1]$/;"	v
@@ -8111,12 +8908,14 @@ from_names_goto	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/on_import.py	
 from_scope_node	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/context.py	/^        def from_scope_node(scope_node, is_nested=True):$/;"	f	member:TreeContextMixin.create_context	file:
 from_sets	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/base_value.py	/^    def from_sets(cls, sets):$/;"	m	class:ValueSet
 fs	.vim/init.vim	/^nnoremap fs :w<CR>$/;"	m
+fs	.vim/sessions/default.vim	/^nnoremap fs :w$/;"	m
 fs	.vimrc	/^nnoremap fs :w<CR>$/;"	m
 fstring_format_spec_multi_line	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tokenize.py	/^fstring_format_spec_multi_line = _compile(r'[^{}]+')$/;"	v
 fstring_format_spec_single_line	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tokenize.py	/^fstring_format_spec_single_line = _compile(r'(?:\\\\(?:\\r\\n?|\\n)|[^{}\\r\\n])+')$/;"	v
 fstring_string_multi_line	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tokenize.py	/^fstring_string_multi_line = _compile(r'(?:[^{}]+|\\{\\{|\\}\\})+')$/;"	v
 fstring_string_single_line	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tokenize.py	/^fstring_string_single_line = _compile(r'(?:\\{\\{|\\}\\}|\\\\(?:\\r\\n?|\\n)|[^{}\\r\\n])+')$/;"	v
 ft	.vim/init.vim	/^nnoremap <silent> ft :FloatermToggle<CR>$/;"	m
+ft	.vim/sessions/default.vim	/^nnoremap <silent> ft :FloatermToggle$/;"	m
 ft	.vimrc	/^nnoremap <silent> ft :FloatermToggle<CR>$/;"	m
 fu	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/decorators.py	/^def fu(a, b, c, *args, **kwargs):$/;"	f
 fu	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/functions.py	/^def fu(a=1, b="", *args, **kwargs):$/;"	f
@@ -10498,8 +11297,13 @@ gb	.vim/plugged/gv.vim/plugin/gv.vim	/^  nnoremap <silent> <buffer> gb   :call <
 gc	.vim/plugged/vim-commentary/plugin/commentary.vim	/^  nmap gc  <Plug>Commentary$/;"	m
 gc	.vim/plugged/vim-commentary/plugin/commentary.vim	/^  omap gc  <Plug>Commentary$/;"	m
 gc	.vim/plugged/vim-commentary/plugin/commentary.vim	/^  xmap gc  <Plug>Commentary$/;"	m
+gc	.vim/sessions/default.vim	/^nmap gc <Plug>Commentary$/;"	m
+gc	.vim/sessions/default.vim	/^omap gc <Plug>Commentary$/;"	m
+gc	.vim/sessions/default.vim	/^xmap gc <Plug>Commentary$/;"	m
 gcc	.vim/plugged/vim-commentary/plugin/commentary.vim	/^  nmap gcc <Plug>CommentaryLine$/;"	m
+gcc	.vim/sessions/default.vim	/^nmap gcc <Plug>CommentaryLine$/;"	m
 gcu	.vim/plugged/vim-commentary/plugin/commentary.vim	/^  nmap gcu <Plug>Commentary<Plug>Commentary$/;"	m
+gcu	.vim/sessions/default.vim	/^nmap gcu <Plug>Commentary<Plug>Commentary$/;"	m
 gd	.vim/coc-settings.json	/^        "gd": "listDrive",$/;"	s	object:explorer.keyMappings
 gedi	.vim/plugged/jedi-vim/pythonx/jedi/README.rst	/^.. _gedi: https:\/\/github.com\/isamert\/gedi$/;"	T	section:Acknowledgements
 gedi	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/usage.rst	/^.. _gedi: https:\/\/github.com\/isamert\/gedi$/;"	T	subsubsection:Numpydoc
@@ -11226,6 +12030,8 @@ gutentags_detect	.vim/plugged/vim-gutentags/plugin/gutentags.vim	/^augroup guten
 gv#sha	.vim/plugged/gv.vim/plugin/gv.vim	/^function! gv#sha(...)$/;"	f
 gv#shellwords	.vim/plugged/gv.vim/plugin/gv.vim	/^function! gv#shellwords(arg)$/;"	f
 gv.vim	.vim/plugged/gv.vim/README.md	/^gv.vim$/;"	c
+gx	.vim/sessions/default.vim	/^nmap gx <Plug>NetrwBrowseX$/;"	m
+gx	.vim/sessions/default.vim	/^vmap gx <Plug>NetrwBrowseXVis$/;"	m
 h	.vim/coc-settings.json	/^        "h": "collapse",$/;"	s	object:explorer.keyMappings
 h	.vim/plugged/ag.vim/autoload/ag.vim	/^      nnoremap <silent> <buffer> h  <C-W><CR><C-w>K$/;"	m
 halves	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E22.py	/^def halves(n):$/;"	f
@@ -11345,6 +12151,8 @@ i	.vim/plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><nowait><
 i_see	.vim/plugged/jedi-vim/pythonx/jedi/test/static_analysis/try_except.py	/^def i_see(r):$/;"	f
 ic	.vim/plugged/vim-gitgutter/autoload/gitgutter.vim	/^    omap <buffer> ic <Plug>(GitGutterTextObjectInnerPending)$/;"	m
 ic	.vim/plugged/vim-gitgutter/autoload/gitgutter.vim	/^    xmap <buffer> ic <Plug>(GitGutterTextObjectInnerVisual)$/;"	m
+ic	.vim/sessions/default.vim	/^omap <buffer> ic <Plug>(GitGutterTextObjectInnerPending)$/;"	m
+ic	.vim/sessions/default.vim	/^xmap <buffer> ic <Plug>(GitGutterTextObjectInnerVisual)$/;"	m
 icons	.vim/plugged/vista.vim/syntax/vista.vim	/^let icons = join(values(g:vista#renderer#icons), '\\|')$/;"	v
 icons	.vim/plugged/vista.vim/syntax/vista_kind.vim	/^let icons = join(values(g:vista#renderer#icons), '\\|')$/;"	v
 id	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/instance.py	/^    def id(self):$/;"	m	class:FloatWindow
@@ -11955,6 +12763,7 @@ kite#utils#warn	.vim/pack/kite/start/vim-plugin/autoload/kite/utils.vim	/^functi
 kite#utils#windows	.vim/pack/kite/start/vim-plugin/autoload/kite/utils.vim	/^function! kite#utils#windows()$/;"	f
 kite#utils#wrap	.vim/pack/kite/start/vim-plugin/autoload/kite/utils.vim	/^function! kite#utils#wrap(str, length, indent)$/;"	f
 kj	.vim/init.vim	/^inoremap kj <esc>$/;"	m
+kj	.vim/sessions/default.vim	/^inoremap kj $/;"	m
 kj	.vimrc	/^inoremap kj <esc>$/;"	m
 kw	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/stdlib.py	/^    kw = functools.partialmethod(function, b=1.0)$/;"	v	class:X
 kw	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/stdlib.py	/^kw = functools.partial(function, b=1.0)$/;"	v
@@ -11997,9 +12806,11 @@ latexpdf	.vim/plugged/jedi-vim/pythonx/parso/docs/Makefile	/^latexpdf:$/;"	t
 latin1	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/latin-1.py	/^latin1 = ('��������������������������������'$/;"	v
 lazygit	.vim/plugged/vim-floaterm/README.md	/^### lazygit$/;"	S	section:Integrate with command line tools
 lb	.vim/init.vim	/^nnoremap lb :LeaderfBuffer<CR>$/;"	m
+lb	.vim/sessions/default.vim	/^nnoremap lb :LeaderfBuffer$/;"	m
 lb	.vimrc	/^nnoremap lb :LeaderfBuffer<CR>$/;"	m
 lc	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/arrays.py	/^lc = [x for a, *x in [(1, '', 1.0)]]$/;"	v
 le	.vim/init.vim	/^nnoremap le :LeaderfLine<CR>$/;"	m
+le	.vim/sessions/default.vim	/^nnoremap le :LeaderfLine$/;"	m
 le	.vimrc	/^nnoremap le :LeaderfLine<CR>$/;"	m
 leaderf#Any#Maps	.vim/plugged/LeaderF/autoload/leaderf/Any.vim	/^function! leaderf#Any#Maps(category)$/;"	f
 leaderf#Any#parseArguments	.vim/plugged/LeaderF/autoload/leaderf/Any.vim	/^function! leaderf#Any#parseArguments(argLead, cmdline, cursorPos) abort$/;"	f
@@ -12092,6 +12903,7 @@ level	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^    def level(s
 level	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^    def level(self):$/;"	m	class:ImportName
 lf	.vim/init.vim	/^nnoremap lf :LeaderfFile<CR>$/;"	m
 lf	.vim/plugged/vim-floaterm/README.md	/^### lf$/;"	S	section:Integrate with command line tools
+lf	.vim/sessions/default.vim	/^nnoremap lf :LeaderfFile$/;"	m
 lf	.vimrc	/^nnoremap lf :LeaderfFile<CR>$/;"	m
 lfActualLineCount	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/utils.py	/^def lfActualLineCount(buffer, start, end, col_width):$/;"	f
 lfBytes2Str	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/utils.py	/^    def lfBytes2Str(bytes, encoding=None):$/;"	f
@@ -12110,6 +12922,7 @@ lfRelpath	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/utils.py	/^def lf
 lfWinId	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/utils.py	/^def lfWinId(winnr, tab=None):$/;"	f
 lf_encoding	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/utils.py	/^lf_encoding = lfEval("&encoding")$/;"	v
 lft	.vim/init.vim	/^nnoremap lft :LeaderfFunction<CR>$/;"	m
+lft	.vim/sessions/default.vim	/^nnoremap lft :LeaderfFunction$/;"	m
 lft	.vimrc	/^nnoremap lft :LeaderfFunction<CR>$/;"	m
 libpath	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/typeshed/tests/mypy_test.py	/^def libpath(major, minor):$/;"	f
 license	.vim/plugged/coc.nvim/package.json	/^  "license": "MIT",$/;"	s
@@ -12180,6 +12993,7 @@ listen	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/compiled/subprocess/__i
 literal_arr	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/dynamic_arrays.py	/^    def literal_arr(self, el):$/;"	m	class:C
 literal_eval	.vim/plugged/jedi-vim/pythonx/jedi/jedi/_compatibility.py	/^def literal_eval(string):$/;"	f
 lm	.vim/init.vim	/^nnoremap lm :LeaderfMru<CR>$/;"	m
+lm	.vim/sessions/default.vim	/^nnoremap lm :LeaderfMru$/;"	m
 lm	.vimrc	/^nnoremap lm :LeaderfMru<CR>$/;"	m
 load	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/project.py	/^    def load(cls, path):$/;"	m	class:Project
 load	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/compiled/subprocess/__main__.py	/^    def load(name):$/;"	f
@@ -12483,6 +13297,7 @@ n	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/refactoring/__init__.py	/^        
 n	.vim/plugged/jedi-vim/pythonx/jedi/jedi/api/refactoring/__init__.py	/^        n = tree_name$/;"	v
 n	.vim/plugged/vim-interestingwords/plugin/interestingwords.vim	/^    nnoremap <silent> n :call WordNavigation(1)<cr>$/;"	m
 n	.vim/plugged/vim-startify/autoload/startify.vim	/^  nnoremap <buffer><expr> n ' j'[v:searchforward].'n'$/;"	m
+n	.vim/sessions/default.vim	/^nnoremap <silent> n :call WordNavigation(1)$/;"	m
 n-character search motion	.vim/plugged/vim-easymotion/README.md	/^### n-character search motion$/;"	S	chapter:New features in version 2.0
 na	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/thirdparty/pylab_.py	/^na = numpy.array([1,2])$/;"	v
 name	.vim/plugged/coc.nvim/package.json	/^  "name": "coc.nvim",$/;"	s
@@ -12619,8 +13434,10 @@ npm-run-all	.vim/plugged/coc.nvim/package.json	/^    "npm-run-all": "^4.1.5",$/;
 npm.binPath	.vim/plugged/coc.nvim/data/schema.json	/^    "npm.binPath": {$/;"	o	object:properties
 ns3f25470d0101	.vim/plugged/jedi-vim/doc/logotype-a.svg	/^	 xml:space="preserve">$/;"	n	uri:http://www.w3.org/2000/svg
 nt	.vim/init.vim	/^nnoremap nt :NERDTreeToggle<CR>$/;"	m
+nt	.vim/sessions/default.vim	/^nnoremap nt :NERDTreeToggle$/;"	m
 nt	.vimrc	/^nnoremap nt :NERDTreeToggle<CR>$/;"	m
 ntf	.vim/init.vim	/^nnoremap ntf :NERDTreeFind<CR>$/;"	m
+ntf	.vim/sessions/default.vim	/^nnoremap ntf :NERDTreeFind$/;"	m
 ntf	.vimrc	/^nnoremap ntf :NERDTreeFind<CR>$/;"	m
 num	.vim/plugged/far.vim/test/odd.py	/^num = int(input("Enter a number: "))$/;"	v
 number	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/instance.py	/^    def number(self):$/;"	m	class:FloatWindow
@@ -13093,6 +13910,7 @@ q	.vim/plugged/jedi-vim/autoload/jedi.vim	/^    nnoremap <buffer> q ZQ$/;"	m
 q	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^      nnoremap <buffer> <silent> q    :<C-U>bdelete<Bar>echohl WarningMsg<Bar>echo "Temp file q /;"	m
 q	.vim/plugged/vim-fugitive/autoload/fugitive.vim	/^      nnoremap <buffer> <silent> q :<C-U>if bufnr('$') == 1<Bar>quit<Bar>else<Bar>bdelete<Bar>en/;"	m
 q	.vim/plugged/vista.vim/autoload/vista/ftplugin.vim	/^    nnoremap <buffer> <silent> q    :close<CR>$/;"	m
+q	.vim/sessions/default.vim	/^nnoremap q :q$/;"	m
 q	.vimrc	/^nnoremap q :q<CR>$/;"	m
 qfloclistExplManager	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/qfloclistExpl.py	/^qfloclistExplManager = QfLocListExplManager()$/;"	v
 qsplit	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/stdlib.py	/^qsplit = shlex.split("foo, ferwerwerw werw werw e")$/;"	v
@@ -13287,6 +14105,7 @@ right	ranger/rc.conf	/^cmap <home>  eval fm.ui.console.move(right=0, absolute=Tr
 right	ranger/rc.conf	/^cmap <right> eval fm.ui.console.move(right=1)$/;"	k
 rimraf	.vim/plugged/coc.nvim/package.json	/^    "rimraf": "^3.0.2",$/;"	s	object:dependencies
 rn	.vim/init.vim	/^nnoremap rn :set relativenumber!<CR>$/;"	m
+rn	.vim/sessions/default.vim	/^nnoremap rn :set relativenumber!$/;"	m
 rn	.vimrc	/^nnoremap rn :set relativenumber!<CR>$/;"	m
 root	.vim/plugged/jedi-vim/test/test_integration.py	/^root = os.path.dirname(os.path.dirname(__file__))$/;"	v
 rootPatterns	.vim/plugged/coc.nvim/data/schema.json	/^        "rootPatterns": {$/;"	o	object:definitions.languageServerBase.properties
@@ -16216,6 +17035,7 @@ s:cpo_save	.vim/plugged/fzf.vim/autoload/fzf/vim.vim	/^let s:cpo_save = &cpo$/;"
 s:cpo_save	.vim/plugged/fzf.vim/autoload/fzf/vim/complete.vim	/^let s:cpo_save = &cpo$/;"	v
 s:cpo_save	.vim/plugged/fzf.vim/plugin/fzf.vim	/^let s:cpo_save = &cpo$/;"	v
 s:cpo_save	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^let s:cpo_save = &cpo$/;"	v
+s:cpo_save	.vim/sessions/default.vim	/^let s:cpo_save=&cpo$/;"	v
 s:create	.vim/plugged/vim-airline/autoload/airline/section.vim	/^function! s:create(parts, append)$/;"	f
 s:create	.vim/plugged/vim-easymotion/autoload/vital/_easymotion/HitAHint/Hint.vim	/^function! s:create(targets, keys) abort$/;"	f
 s:create_far_params	.vim/plugged/far.vim/autoload/far.vim	/^function! s:create_far_params() abort$/;"	f
@@ -18769,7 +19589,7 @@ s:kite_symbol	.vim/pack/kite/start/vim-plugin/autoload/kite.vim	/^  let s:kite_s
 s:known_files	.vim/plugged/vim-gutentags/autoload/gutentags.vim	/^let s:known_files = []$/;"	v
 s:known_options	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^let s:known_options = {$/;"	v
 s:known_projects	.vim/plugged/vim-gutentags/autoload/gutentags.vim	/^let s:known_projects = {}$/;"	v
-s:l	.vim/sessions/default.vim	/^let s:l = 8 - ((7 * winheight(0) + 15) \/ 30)$/;"	v
+s:l	.vim/sessions/default.vim	/^let s:l = 18 - ((14 * winheight(0) + 12) \/ 25)$/;"	v
 s:language_opt	.vim/plugged/vista.vim/autoload/vista/types/uctags.vim	/^let s:language_opt = map(s:language_opt,$/;"	v
 s:language_opt	.vim/plugged/vista.vim/autoload/vista/types/uctags.vim	/^let s:language_opt = {$/;"	v
 s:languageclient_refresh	.vim/plugged/vim-airline/autoload/airline/extensions/languageclient.vim	/^function! s:languageclient_refresh()$/;"	f
@@ -20323,6 +21143,7 @@ simple_mixed	.vim/plugged/jedi-vim/pythonx/jedi/test/static_analysis/star_argume
 singlehtml	.vim/plugged/jedi-vim/pythonx/jedi/docs/Makefile	/^singlehtml:$/;"	t
 singlehtml	.vim/plugged/jedi-vim/pythonx/parso/docs/Makefile	/^singlehtml:$/;"	t
 sj	.vim/init.vim	/^nnoremap sj :set splitbelow<CR>:split<CR>$/;"	m
+sj	.vim/sessions/default.vim	/^nnoremap sj :set splitbelow$/;"	m
 sj	.vimrc	/^nnoremap sj :set splitbelow<CR>:split<CR>$/;"	m
 skip_deprecated	.vim/plugged/jedi-vim/pythonx/jedi/docs/conf.py	/^def skip_deprecated(app, what, name, obj, skip, options):$/;"	f
 skip_deprecated	.vim/plugged/jedi-vim/pythonx/parso/docs/conf.py	/^def skip_deprecated(app, what, name, obj, skip, options):$/;"	f
@@ -20338,8 +21159,10 @@ skip_pre_python38	.vim/plugged/jedi-vim/pythonx/jedi/conftest.py	/^def skip_pre_
 skip_python2	.vim/plugged/jedi-vim/pythonx/jedi/conftest.py	/^def skip_python2(environment):$/;"	f
 skip_python_version	.vim/plugged/jedi-vim/pythonx/jedi/test/run.py	/^def skip_python_version(line):$/;"	f
 sl	.vim/init.vim	/^nnoremap sl :set splitright<CR>:vsplit<CR>$/;"	m
+sl	.vim/sessions/default.vim	/^nnoremap sl :set splitright$/;"	m
 sl	.vimrc	/^nnoremap sl :set splitright<CR>:vsplit<CR>$/;"	m
 sm	.vim/init.vim	/^nnoremap sm :source $MYVIMRC<CR>$/;"	m
+sm	.vim/sessions/default.vim	/^nnoremap sm :source $MYVIMRC$/;"	m
 sm	.vimrc	/^nnoremap sm :source $MYVIMRC<CR>$/;"	m
 small_integer_field	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/django.py	/^    small_integer_field = models.SmallIntegerField()$/;"	v	class:BusinessModel
 smartdict_jp	.vim/plugged/vim-easymotion/t/smartsign_spec.vim	/^        let smartdict_jp = g:EasyMotion#sticky_table#jp$/;"	v
@@ -20541,8 +21364,10 @@ supportsNameOnly	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/qfloclistE
 supportsNameOnly	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/rgExpl.py	/^    def supportsNameOnly(self):$/;"	m	class:RgExplorer
 supportsNameOnly	.vim/plugged/LeaderF/autoload/leaderf/python/leaderf/windowExpl.py	/^    def supportsNameOnly(self):$/;"	m	class:WindowExplorer
 svh	.vim/init.vim	/^nnoremap svh <C-w>t<C-w>K$/;"	m
+svh	.vim/sessions/default.vim	/^nnoremap svh tK$/;"	m
 svh	.vimrc	/^nnoremap svh <C-w>t<C-w>K$/;"	m
 svs	.vim/init.vim	/^nnoremap svs <C-w>t<C-w>H                                  $/;"	m
+svs	.vim/sessions/default.vim	/^nnoremap svs tH                                  $/;"	m
 svs	.vimrc	/^nnoremap svs <C-w>t<C-w>H                                  $/;"	m
 syn_name	.vim/plugged/vim-floaterm/rplugin/python3/denite/source/floaterm.py	/^            def syn_name(key: str) -> str:$/;"	f	member:Source.highlight	file:
 syslogs_to_df	.vim/plugged/jedi-vim/pythonx/jedi/test/test_api/test_interpreter.py	/^    def syslogs_to_df():$/;"	f	function:test__wrapped__	file:
@@ -22232,6 +23057,7 @@ vital#_easymotion#Vim#Message#import	.vim/plugged/vim-easymotion/autoload/vital/
 vital#of	.vim/plugged/vim-easymotion/autoload/vital.vim	/^function! vital#of(name) abort$/;"	f
 vmode	.vim/plugged/ctrlsf.vim/syntax/ctrlsf.vim	/^let vmode = ctrlsf#CurrentMode()$/;"	v
 vs	.vim/init.vim	/^nnoremap vs :Vista<CR>$/;"	m
+vs	.vim/sessions/default.vim	/^nnoremap vs :Vista$/;"	m
 vs	.vimrc	/^nnoremap vs :Vista<CR>$/;"	m
 vscode-languageserver	.vim/plugged/coc.nvim/package.json	/^    "vscode-languageserver": "^6.1.1"$/;"	s	object:devDependencies
 vscode-languageserver-protocol	.vim/plugged/coc.nvim/package.json	/^    "vscode-languageserver-protocol": "^3.15.3",$/;"	s	object:dependencies
@@ -22249,8 +23075,6 @@ warn_unused_ignores	.vim/plugged/jedi-vim/pythonx/jedi/jedi/third_party/django-s
 warning	.vim/plugged/jedi-vim/pythonx/jedi/jedi/debug.py	/^def warning(message, *args, **kwargs):$/;"	f
 watch	.vim/plugged/coc.nvim/package.json	/^    "watch": "tsc -p tsconfig.json --watch true --sourceMap",$/;"	s	object:scripts
 watchman	.vim/plugged/coc.nvim/package.json	/^    "watchman": false,$/;"	b	object:jest
-wc	.vim/init.vim	/^nmap wc <Plug>(choosewin)$/;"	m
-wc	.vimrc	/^nmap wc <Plug>(choosewin)$/;"	m
 wdb	.vim/plugged/jedi-vim/pythonx/jedi/README.rst	/^.. _wdb: https:\/\/github.com\/Kozea\/wdb$/;"	T	section:Acknowledgements
 wdb	.vim/plugged/jedi-vim/pythonx/jedi/docs/docs/usage.rst	/^.. _wdb: https:\/\/github.com\/Kozea\/wdb$/;"	T	subsubsection:Numpydoc
 we_can_has_sequence	.vim/plugged/jedi-vim/pythonx/jedi/test/completion/pep0484_typing.py	/^def we_can_has_sequence(p, q, r, s, t, u):$/;"	f
@@ -22641,8 +23465,26 @@ zip_longest	.vim/plugged/jedi-vim/pythonx/jedi_vim.py	/^    from itertools impor
 zip_longest	.vim/plugged/jedi-vim/pythonx/parso/test/test_prefix.py	/^    from itertools import izip_longest as zip_longest$/;"	x
 zplug	README.md	/^### zplug$/;"	S	section:dotfiles 使用顺序""安装
 zsh & oh my zsh	README.md	/^### zsh & oh my zsh$/;"	S	section:dotfiles 使用顺序""安装
+{	.vim/sessions/default.vim	/^inoremap <buffer> <silent> { =AutoPairsInsert('{')$/;"	m
+{	.vim/sessions/default.vim	/^inoremap <silent> <expr> { coc#_insert_key('request', 'eb6b9124-dd32-11ea-a85f-5bc0cfb032d6')$/;"	m
 | ...            | ...             | ...           |	.vim/plugged/rainbow/README.md	/^| ...            | ...             | ...           |$/;"	s	chapter:Rainbow Parentheses Improved
 | syn cppRainbow   syn javaRainbow   syn pyRainbow |	.vim/plugged/rainbow/README.md	/^| syn cppRainbow   syn javaRainbow   syn pyRainbow |$/;"	s	chapter:Rainbow Parentheses Improved
+}	.vim/sessions/default.vim	/^inoremap <buffer> <silent> } =AutoPairsInsert('}')$/;"	m
+}	.vim/sessions/default.vim	/^inoremap <silent> <expr> } coc#_insert_key('request', 'eb6b9125-dd32-11ea-a85f-5bc0cfb032d6')$/;"	m
+¢	.vim/sessions/default.vim	/^inoremap <buffer> <silent> ¢ =AutoPairsMoveCharacter('"')$/;"	m
+§	.vim/sessions/default.vim	/^inoremap <buffer> <silent> § =AutoPairsMoveCharacter('''')$/;"	m
+¨	.vim/sessions/default.vim	/^inoremap <buffer> <silent> ¨ =AutoPairsMoveCharacter('(')$/;"	m
+©	.vim/sessions/default.vim	/^inoremap <buffer> <silent> © =AutoPairsMoveCharacter(')')$/;"	m
+Û	.vim/sessions/default.vim	/^inoremap <buffer> <silent> Û =AutoPairsMoveCharacter('[')$/;"	m
+Ý	.vim/sessions/default.vim	/^inoremap <buffer> <silent> Ý =AutoPairsMoveCharacter(']')$/;"	m
+â	.vim/sessions/default.vim	/^inoremap <buffer> <silent> â =AutoPairsBackInsert()$/;"	m
+å	.vim/sessions/default.vim	/^inoremap <buffer> <silent> å =AutoPairsFastWrap()$/;"	m
+î	.vim/sessions/default.vim	/^inoremap <buffer> <silent> î :call AutoPairsJump()$/;"	m
+î	.vim/sessions/default.vim	/^noremap <buffer> <silent> î :call AutoPairsJump()$/;"	m
+ð	.vim/sessions/default.vim	/^inoremap <buffer> <silent> <expr> ð AutoPairsToggle()$/;"	m
+ð	.vim/sessions/default.vim	/^noremap <buffer> <silent> ð :call AutoPairsToggle()$/;"	m
+û	.vim/sessions/default.vim	/^inoremap <buffer> <silent> û =AutoPairsMoveCharacter('{')$/;"	m
+ý	.vim/sessions/default.vim	/^inoremap <buffer> <silent> ý =AutoPairsMoveCharacter('}')$/;"	m
 さっきの(直前の)ウィンドウを選ぶ	.vim/plugged/vim-choosewin/README-JP.md	/^### さっきの(直前の)ウィンドウを選ぶ$/;"	S	section:選択したウィンドウに移動""操作例
 アニメーションGIF	.vim/plugged/vim-choosewin/README-JP.md	/^# アニメーションGIF$/;"	c
 ウィンドウの交換(swap)	.vim/plugged/vim-choosewin/README-JP.md	/^### ウィンドウの交換(swap)$/;"	S	section:選択したウィンドウに移動""操作例

@@ -205,7 +205,7 @@ nnoremap <silent> <Leader>n :call WordNavigation('forward')<CR>
 nnoremap <silent> <Leader>N :call WordNavigation('backward')<CR>
 
 " t9md/vim-choosewin
-nmap wc <Plug>(choosewin)
+nmap - <Plug>(choosewin)
 let g:choosewin_overlay_enable = 0
 
 " vim-easymotion 
