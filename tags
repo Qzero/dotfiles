@@ -417,6 +417,7 @@ $schema	.vim/plugged/coc.nvim/data/schema.json	/^  "$schema": "http:\/\/json-sch
 <C-Up>	.vim/plugged/LeaderF/autoload/leaderf/QfLocList.vim	/^        nnoremap <buffer> <silent> <C-Up>    :exec g:Lf_py "qfloclistExplManager._toUpInPopup()"/;"	m
 <C-Up>	.vim/plugged/LeaderF/autoload/leaderf/Rg.vim	/^        nnoremap <buffer> <silent> <C-Up>    :exec g:Lf_py "rgExplManager._toUpInPopup()"<CR>$/;"	m
 <C-Up>	.vim/plugged/LeaderF/autoload/leaderf/Tag.vim	/^        nnoremap <buffer> <silent> <C-Up>    :exec g:Lf_py "tagExplManager._toUpInPopup()"<CR>$/;"	m
+<C-]>	.vim/pack/kite/start/vim-plugin/autoload/kite.vim	/^    nmap <silent> <buffer> <C-]> :KiteGotoDefinition<CR>$/;"	m
 <C-a>	.vim/init.vim	/^cnoremap <C-a> <Home>$/;"	m
 <C-a>	.vimrc	/^cnoremap <C-a> <Home>$/;"	m
 <C-b>	.vim/init.vim	/^cnoremap <C-b> <S-Left>$/;"	m
@@ -1876,6 +1877,7 @@ GlobalNameFilter	.vim/plugged/jedi-vim/pythonx/jedi/jedi/inference/filters.py	/^
 GlobalStmt	.vim/plugged/jedi-vim/pythonx/parso/parso/python/tree.py	/^class GlobalStmt(KeywordStatement):$/;"	c
 GoogleTranslator	.vim/plugged/vim-translator/script/translator.py	/^class GoogleTranslator(BasicTranslator):$/;"	c
 Gotchas	.vim/plugged/ag.vim/README.md	/^### Gotchas ###$/;"	S	section:ag.vim""Usage
+Goto Definition	.vim/pack/kite/start/vim-plugin/README.md	/^### Goto Definition$/;"	S	section:Kite Python Plugin for Vim/Neovim""Features
 Grammar	.vim/plugged/jedi-vim/pythonx/parso/parso/grammar.py	/^class Grammar(object):$/;"	c
 Grammar	.vim/plugged/jedi-vim/pythonx/parso/parso/pgen2/generator.py	/^class Grammar(object):$/;"	c
 Grammar methods	.vim/plugged/jedi-vim/pythonx/parso/docs/docs/usage.rst	/^Grammar methods$/;"	s	chapter:Usage
@@ -2107,6 +2109,7 @@ KiteDocsAtCursor	.vim/pack/kite/start/vim-plugin/plugin/kite.vim	/^command! Kite
 KiteEnableAutoStart	.vim/pack/kite/start/vim-plugin/plugin/kite.vim	/^command! KiteEnableAutoStart      call kite#enable_auto_start()$/;"	c
 KiteEvents	.vim/pack/kite/start/vim-plugin/autoload/kite.vim	/^  augroup KiteEvents$/;"	a
 KiteGeneralSettings	.vim/pack/kite/start/vim-plugin/plugin/kite.vim	/^command! KiteGeneralSettings      call kite#client#settings()$/;"	c
+KiteGotoDefinition	.vim/pack/kite/start/vim-plugin/plugin/kite.vim	/^command! KiteGotoDefinition       call kite#hover#goto_definition()$/;"	c
 KiteHidePopularPatterns	.vim/pack/kite/start/vim-plugin/plugin/kite.vim	/^command! KiteHidePopularPatterns  call kite#signature#hide_popular_patterns()$/;"	c
 KiteOpenCopilot	.vim/pack/kite/start/vim-plugin/plugin/kite.vim	/^command! KiteOpenCopilot          call kite#client#copilot()$/;"	c
 KitePermissions	.vim/pack/kite/start/vim-plugin/plugin/kite.vim	/^command! KitePermissions          call kite#client#permissions()$/;"	c
@@ -10485,6 +10488,8 @@ g:vista_find_nearest_method_or_function_delay	.vim/plugged/vista.vim/plugin/vist
 g:vista_fold_toggle_icons	.vim/init.vim	/^let g:vista_fold_toggle_icons = ['▸', '▾']$/;"	v
 g:vista_fold_toggle_icons	.vim/plugged/vista.vim/plugin/vista.vim	/^let g:vista_fold_toggle_icons = get(g:, 'vista_fold_toggle_icons', ['▼', '▶'])$/;"	v
 g:vista_fold_toggle_icons	.vimrc	/^let g:vista_fold_toggle_icons = ['▸', '▾']$/;"	v
+g:vista_fzf_preview	.vim/plugged/vista.vim/autoload/vista/finder.vim	/^      let g:vista_fzf_preview[idx] = g:vista_fzf_preview[idx] . ':+{-1}-5'$/;"	v
+g:vista_fzf_preview	.vim/plugged/vista.vim/plugin/vista.vim	/^let g:vista_fzf_preview = get(g:, 'vista_fzf_preview', [])$/;"	v
 g:vista_icon_indent	.vim/plugged/vista.vim/plugin/vista.vim	/^let g:vista_icon_indent = get(g:, 'vista_icon_indent', ['└ ', '│ '])$/;"	v
 g:vista_ignore_kinds	.vim/plugged/vista.vim/plugin/vista.vim	/^let g:vista_ignore_kinds = get(g:, 'vista_ignore_kinds', [])$/;"	v
 g:vista_no_mappings	.vim/plugged/vista.vim/plugin/vista.vim	/^let g:vista_no_mappings = get(g:, 'vista_no_mappings', 0)$/;"	v
@@ -11915,6 +11920,8 @@ kite#enable_auto_start	.vim/pack/kite/start/vim-plugin/autoload/kite.vim	/^funct
 kite#events#any_events_pending	.vim/pack/kite/start/vim-plugin/autoload/kite/events.vim	/^function! kite#events#any_events_pending()$/;"	f
 kite#events#event	.vim/pack/kite/start/vim-plugin/autoload/kite/events.vim	/^function! kite#events#event(action)$/;"	f
 kite#events#handler	.vim/pack/kite/start/vim-plugin/autoload/kite/events.vim	/^function! kite#events#handler(bufnr, response)$/;"	f
+kite#hover#goto_definition	.vim/pack/kite/start/vim-plugin/autoload/kite/hover.vim	/^function! kite#hover#goto_definition()$/;"	f
+kite#hover#goto_definition_handler	.vim/pack/kite/start/vim-plugin/autoload/kite/hover.vim	/^function! kite#hover#goto_definition_handler(response)$/;"	f
 kite#hover#handler	.vim/pack/kite/start/vim-plugin/autoload/kite/hover.vim	/^function! kite#hover#handler(response)$/;"	f
 kite#hover#hover	.vim/pack/kite/start/vim-plugin/autoload/kite/hover.vim	/^function! kite#hover#hover()$/;"	f
 kite#languages#handler	.vim/pack/kite/start/vim-plugin/autoload/kite/languages.vim	/^function! kite#languages#handler(response)$/;"	f
@@ -12565,8 +12572,8 @@ negative	.vim/plugged/jedi-vim/pythonx/parso/test/normalizer_issue_files/E22.py	
 neovim	.vim/plugged/vim-floaterm/bin/floaterm.cmd	/^:neovim$/;"	l
 nerdtree#and	.vim/plugged/nerdtree/autoload/nerdtree.vim	/^function! nerdtree#and(x,y) abort$/;"	f
 nerdtree#checkForBrowse	.vim/plugged/nerdtree/autoload/nerdtree.vim	/^function! nerdtree#checkForBrowse(dir) abort$/;"	f
+nerdtree#compareNodePaths	.vim/plugged/nerdtree/autoload/nerdtree.vim	/^function! nerdtree#compareNodePaths(p1, p2) abort$/;"	f
 nerdtree#compareNodes	.vim/plugged/nerdtree/autoload/nerdtree.vim	/^function! nerdtree#compareNodes(n1, n2) abort$/;"	f
-nerdtree#compareNodesBySortKey	.vim/plugged/nerdtree/autoload/nerdtree.vim	/^function! nerdtree#compareNodesBySortKey(n1, n2) abort$/;"	f
 nerdtree#completeBookmarks	.vim/plugged/nerdtree/autoload/nerdtree.vim	/^function! nerdtree#completeBookmarks(A,L,P) abort$/;"	f
 nerdtree#deprecated	.vim/plugged/nerdtree/autoload/nerdtree.vim	/^function! nerdtree#deprecated(func, ...) abort$/;"	f
 nerdtree#echo	.vim/plugged/nerdtree/autoload/nerdtree.vim	/^function! nerdtree#echo(msg) abort$/;"	f
@@ -14752,7 +14759,6 @@ s:Path.addDelimiter	.vim/plugged/nerdtree/lib/nerdtree/path.vim	/^function! s:Pa
 s:Path.bookmarkNames	.vim/plugged/nerdtree/lib/nerdtree/path.vim	/^function! s:Path.bookmarkNames()$/;"	f
 s:Path.cacheDisplayString	.vim/plugged/nerdtree/lib/nerdtree/path.vim	/^function! s:Path.cacheDisplayString() abort$/;"	f
 s:Path.changeToDir	.vim/plugged/nerdtree/lib/nerdtree/path.vim	/^function! s:Path.changeToDir()$/;"	f
-s:Path.compareTo	.vim/plugged/nerdtree/lib/nerdtree/path.vim	/^function! s:Path.compareTo(path)$/;"	f
 s:Path.copy	.vim/plugged/nerdtree/lib/nerdtree/path.vim	/^function! s:Path.copy(dest)$/;"	f
 s:Path.copyingWillOverwrite	.vim/plugged/nerdtree/lib/nerdtree/path.vim	/^function! s:Path.copyingWillOverwrite(dest)$/;"	f
 s:Path.createParentDirectories	.vim/plugged/nerdtree/lib/nerdtree/path.vim	/^function! s:Path.createParentDirectories(path)$/;"	f
@@ -18795,6 +18801,7 @@ s:kite_symbol	.vim/pack/kite/start/vim-plugin/autoload/kite.vim	/^  let s:kite_s
 s:known_files	.vim/plugged/vim-gutentags/autoload/gutentags.vim	/^let s:known_files = []$/;"	v
 s:known_options	.vim/plugged/vim-easy-align/autoload/easy_align.vim	/^let s:known_options = {$/;"	v
 s:known_projects	.vim/plugged/vim-gutentags/autoload/gutentags.vim	/^let s:known_projects = {}$/;"	v
+s:l	.vim/sessions/default.vim	/^let s:l = 8 - ((7 * winheight(0) + 15) \/ 31)$/;"	v
 s:language_opt	.vim/plugged/vista.vim/autoload/vista/types/uctags.vim	/^let s:language_opt = map(s:language_opt,$/;"	v
 s:language_opt	.vim/plugged/vista.vim/autoload/vista/types/uctags.vim	/^let s:language_opt = {$/;"	v
 s:languageclient_refresh	.vim/plugged/vim-airline/autoload/airline/extensions/languageclient.vim	/^function! s:languageclient_refresh()$/;"	f

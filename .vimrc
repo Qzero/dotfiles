@@ -3,6 +3,10 @@ filetype on                                     "侦测文件类型
 filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
+" ------ Visual Studio Code
+" Gist ID:c1ddd4543701bec42df8c3412d3b131f
+" Token:cce76b0b361acb0e10d57af28a39bfdf866ec984
+
 call plug#begin('~/.vim/plugged')
 Plug 'rking/ag.vim'
 Plug 'ludovicchabant/vim-gutentags'
