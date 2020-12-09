@@ -4,12 +4,9 @@ filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
-Plug 'rking/ag.vim'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'voldikss/vim-floaterm'                    " 浮动终端
 Plug 'nanotech/jellybeans.vim'                  " 主题
 Plug 'mhinz/vim-startify'                       " 首页
-Plug 'liuchengxu/vista.vim'
 Plug 'scrooloose/nerdtree'                      " 资源管理树
 Plug 'vim-airline/vim-airline'                  " 状态栏
 Plug 'vim-airline/vim-airline-themes'           " 状态栏主题
@@ -22,16 +19,9 @@ Plug 'brooth/far.vim'                           " 替换
 Plug 'Yggdroot/indentLine'                      " 缩进线
 Plug 'tpope/vim-commentary'                     " 注释
 Plug 'jiangmiao/auto-pairs'                     " 自动补全引号、圆括号、花括号等
-" Plug 'itchyny/vim-cursorword'                   " 变量下划线
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全工具
 Plug 'davidhalter/jedi-vim'                     " python补全工具
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
-Plug 'dyng/ctrlsf.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh'  }
-Plug 'voldikss/vim-translator'                  " 翻译插件
-Plug 'voldikss/vim-browser-search'              " 搜索插件
 " Git
 Plug 'rhysd/git-messenger.vim'                  " git提交查询
 Plug 'tpope/vim-fugitive'                       " git命令封装
@@ -45,38 +35,6 @@ nnoremap <Leader><Leader>c :PlugClean<CR>       "删除插件
 nnoremap <Leader><Leader>p :PlugUpgrade<CR>    "更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-" kite
-let g:kite_supported_languages = ['python', 'vimrc']
-
-" liuchengxu/vista.vim
-nnoremap vs :Vista<CR>
-let g:vista_echo_cursor_strategy ='scroll'       " 启用悬浮窗预览
-let g:vista_sidebar_width = 30                   " 宽度
-let g:vista_close_on_jump = 1                    " 跳转到一个符号时，自动关闭vista窗口.
-let g:vista_stay_on_open = 1                     " 打开vista窗口后移动到它.
-let g:vista#executive#ctags#support_json_format = 1
-let g:vista#executives = ['ale', 'coc', 'ctags', 'lcn', 'vim_lsc', 'vim_lsp']
-let g:vista#finders = ['LeaderF']
-let g:vista#renderer#ctags = 'default'
-let g:vista#renderer#default#vlnum_offset = 3
-let g:vista#renderer#enable_icon = 1
-let g:vista#renderer#kind_default_icon = ['╰─▸ ', '├─▸ ']
-let g:vista_fold_toggle_icons = ['▸', '▾']
-let g:vista#renderer#icons = {'subroutine': '洛', 'method': '', 'func': '', 'variables': '', 'namespace': '', 'field': '綠', 'interface': '禍', 'type': '', 'packages': '', 'property': '襁', 'implementation': '', 'default': '', 'augroup': 'פּ', 'macro': '', 'enumerator': '', 'const': '', 'macros': '', 'map': 'פּ', 'fields': '綠', 'functions': '', 'enum': '', 'function': '', 'target': '', 'typedef': '', 'variable': '', 'modules': '', 'constant': '', 'struct': 'פּ', 'types': '', 'module': '', 'typeParameter': '', 'package': '', 'class': '', 'member': '', 'var': '', 'union': '鬒'}
-
-" voldikss/vim-translator
-let g:translator_history_enable = 1
-let g:translator_default_engines = ['bing']
-nmap <silent> ,t <Plug>Translate
-vmap <silent> ,t <Plug>TranslateV 
-nmap <silent> ,w <Plug>TranslateW
-vmap <silent> ,w <Plug>TranslateWV
-nmap <silent> ,r <Plug>TranslateR
-vmap <silent> ,r <Plug>TranslateRV
-
-" voldikss/vim-browser-search
-vmap <silent> <Leader>sb <Plug>SearchVisual
 
 " Yggdroot/indentLine
 let g:indentLine_char = '|'
@@ -95,27 +53,10 @@ nnoremap <silent> fnn :FloatermNext<CR>
 nnoremap <silent> fpp :FloatermPrev<CR>
 
 " neoclide/coc.nvim
-"  安装依赖
 set hidden         " 如果没有设置，TextEdit可能失效
 set cmdheight=2    " 更好显示消息
 set shortmess+=c   " 不要完成菜单消息
 set signcolumn=yes " 始终显示信号
-" 补全设置
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-" 完成补全
-inoremap <silent><expr> <c-space> coc#refresh()
-" 导航到诊断
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " 文档展示
 nnoremap <silent> <space>k :call <SID>show_documentation()<CR>
 function! s:show_documentation()
@@ -125,10 +66,6 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-" 凸显符号
-autocmd CursorHold * silent call CocActionAsync('highlight')
-" 状态栏显示函数
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>p  :<C-u>CocList extensions<cr>
@@ -136,55 +73,12 @@ nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 nnoremap <silent> <space>e :CocCommand explorer<CR>
 " coc-extensions
 let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-floaterm',
-  \ 'coc-todolist',
-  \ 'coc-spell-checker',
-  \ 'coc-bookmark',
   \ 'coc-python',
-  \ 'coc-diagnostic',
-  \ 'coc-browser',
   \ ]
-" coc-floaterm
-nnoremap ,cf :CocCommand floaterm.new<CR>
-nnoremap ,cn :CocCommand floaterm.next<CR>
-nnoremap ,cp :CocCommand floaterm.prev<CR>
-nnoremap ,ct :CocCommand floaterm.toggle<CR>
-" coc-bookmark
-nmap ,clb :CocList bookmark<CR>
-nmap ,b :CocCommand bookmark.toggle<CR>
-nmap ,a :CocCommand bookmark.annotate<CR>
-nmap ,gh :CocCommand bookmark.prev<CR>
-nmap ,gl :CocCommand bookmark.next<CR>
-" coc-todolist
-nmap ,ctc :CocCommand todolist.create<CR>
-nmap ,ctu :CocCommand todolist.upload<CR>
-nmap ,ctd :CocCommand todolist.download<CR>
-nmap ,ctn :CocCommand todolist.clearNotice<CR>
-nmap ,cl :CocList todolist<CR>
 
 " junegunn/vim-easy-align
 xmap <Leader>ga <Plug>(EasyAlign)
 nmap <Leader>ga <Plug>(EasyAlign)
-
-" dyng/ctrlsf  #install -y ack-grep 依赖ack/ag/pt/rg之一
-nnoremap <Leader>cf :CtrlSF<Space>
-nnoremap <Leader>cfc :CtrlSFClose<CR>
-nmap <silent>cfs <Plug>CtrlSFCCwordPath<CR>
-let g:ctrlsf_ackprg = 'ag'     " 搜索引擎
-let g:ctrlsf_position = "right" " 左右打开Linux用let g:ctrlsf_open_left = 0
-
-" Yggdroot/LeaderF
-let g:Lf_ReverseOrder = 0   "自下而上显示
-let g:Lf_WindowPosition = 'popup'
-let g:Lf_PreviewInPopup = 1
-let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu Sans Mono for Powerline" }
-let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
-nnoremap lf :LeaderfFile<CR>
-nnoremap lb :LeaderfBuffer<CR>
-nnoremap lm :LeaderfMru<CR>
-nnoremap lft :LeaderfFunction<CR>
-nnoremap le :LeaderfLine<CR>
 
 " Git相关
 " vim-fugitive
