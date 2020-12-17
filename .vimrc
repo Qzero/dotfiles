@@ -19,7 +19,6 @@ Plug 'brooth/far.vim'                           " 替换
 Plug 'Yggdroot/indentLine'                      " 缩进线
 Plug 'tpope/vim-commentary'                     " 注释
 Plug 'jiangmiao/auto-pairs'                     " 自动补全引号、圆括号、花括号等
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全工具
 Plug 'davidhalter/jedi-vim'                     " python补全工具
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
 " Git
@@ -51,30 +50,6 @@ nnoremap <silent> fn :FloatermNew<CR>
 nnoremap <silent> ft :FloatermToggle<CR>
 nnoremap <silent> fnn :FloatermNext<CR>
 nnoremap <silent> fpp :FloatermPrev<CR>
-
-" neoclide/coc.nvim
-set hidden         " 如果没有设置，TextEdit可能失效
-set cmdheight=2    " 更好显示消息
-set shortmess+=c   " 不要完成菜单消息
-set signcolumn=yes " 始终显示信号
-" 文档展示
-nnoremap <silent> <space>k :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <space>p  :<C-u>CocList extensions<cr>
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-nnoremap <silent> <space>e :CocCommand explorer<CR>
-" coc-extensions
-let g:coc_global_extensions = [
-  \ 'coc-python',
-  \ ]
 
 " junegunn/vim-easy-align
 xmap <Leader>ga <Plug>(EasyAlign)
