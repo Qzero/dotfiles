@@ -19,7 +19,6 @@ Plug 'brooth/far.vim'                           " 替换
 Plug 'Yggdroot/indentLine'                      " 缩进线
 Plug 'tpope/vim-commentary'                     " 注释
 Plug 'jiangmiao/auto-pairs'                     " 自动补全引号、圆括号、花括号等
-Plug 'davidhalter/jedi-vim'                     " python补全工具
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
 " Git
 Plug 'rhysd/git-messenger.vim'                  " git提交查询
