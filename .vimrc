@@ -4,10 +4,12 @@ filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
+Plug 'tomasiser/vim-code-dark'
 Plug 'voldikss/vim-floaterm'                    " 浮动终端
 Plug 'nanotech/jellybeans.vim'                  " 主题
 Plug 'mhinz/vim-startify'                       " 首页
 Plug 'scrooloose/nerdtree'                      " 资源管理树
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'                  " 状态栏
 Plug 'vim-airline/vim-airline-themes'           " 状态栏主题
 Plug 'easymotion/vim-easymotion'                " 超级跳转
@@ -20,19 +22,111 @@ Plug 'Yggdroot/indentLine'                      " 缩进线
 Plug 'tpope/vim-commentary'                     " 注释
 Plug 'jiangmiao/auto-pairs'                     " 自动补全引号、圆括号、花括号等
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
+Plug 'preservim/tagbar'
+Plug 'yianwillis/vimcdoc'
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
+Plug 'dyng/ctrlsf.vim'
 " Git
 Plug 'rhysd/git-messenger.vim'                  " git提交查询
 Plug 'tpope/vim-fugitive'                       " git命令封装
 Plug 'airblade/vim-gitgutter'                   " 显示git更改标示
 Plug 'junegunn/gv.vim'                          " git提交树
+Plug 'mbbill/undotree'
 call plug#end()
 
-nnoremap <Leader><Leader>i :PlugInstall<CR>     "安装插件
-nnoremap <Leader><Leader>u :PlugUpdate<CR>      "更新插件
-nnoremap <Leader><Leader>c :PlugClean<CR>       "删除插件
-nnoremap <Leader><Leader>p :PlugUpgrade<CR>    "更新插件管理器
+nnoremap <Leader><Leader>i :PlugInstall<CR>     " 安装插件
+nnoremap <Leader><Leader>u :PlugUpdate<CR>      " 更新插件
+nnoremap <Leader><Leader>c :PlugClean<CR>       " 删除插件
+nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+" dyng/ctrlsf.vim
+nnoremap ,cf :CtrlSF<Space>
+nnoremap ,cfc :CtrlSFClose<CR>
+nnoremap ,cfs <Plug>CtrlSFCCwordPath<CR>
+let g:ctrlsf_ackprg = 'ag'     " 搜索引擎
+let g:ctrlsf_position = "right" " 左右打开Linux用let g:ctrlsf_open_left = 0
+
+" neoclide/coc.vim
+set shortmess+=c
+" tab键补全
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" 确认补全
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+" 显示文档
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+" 诊断面板以及跳转
+nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+nnoremap <silent> <space>p  :<C-u>CocList extensions<cr>
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent> <space>e :CocCommand explorer<cr>
+" coc-extensions
+let g:coc_global_extensions = [
+  \ 'coc-todolist',
+  \ 'coc-bookmark',
+  \ 'coc-explorer',
+  \ 'coc-python',
+  \ 'coc-vimlsp',
+  \ 'coc-fzf-preview',
+  \ 'coc-jedi',
+  \ 'coc-translator',
+  \ 'coc-diagnostic',
+  \ ]
+" coc-fzf
+nnoremap ,cfl :CocCommand fzf-preview.Lines<CR>
+nnoremap ,cfc :CocCommand fzf-preview.Changes<CR>
+" coc-todolist
+nnoremap ,cc :CocCommand todolist.create<CR>
+nnoremap ,ctu :CocCommand todolist.upload<CR>
+nnoremap ,ctd :CocCommand todolist.download<CR>
+nnoremap ,cte :CocCommand todolist.export<CR>
+nnoremap ,ctc :CocCommand todolist.closeNotice<CR>
+nnoremap ,cl :CocCommand todolist.clear<CR>
+" coc-translator
+nnoremap ,t :CocCommand translator.popup<CR>
+nnoremap ,tl :CocCommand translator.exportHistory<CR>
+
+" Yggdroot/LeaderF
+" let g:Lf_ReverseOrder = 1   "自下而上显示
+" nnoremap ,lf :LeaderfFile<CR>
+" nnoremap ,lb :LeaderfBuffer<CR>
+" nnoremap ,lm :LeaderfMru<CR>
+" nnoremap ,lff :LeaderfFunction<CR>
+" nnoremap ,le :LeaderfLine<CR>
+
+" mbbill/undotree
+nnoremap ,ut :UndotreeToggle<CR>
+if has("persistent_undo")
+    set undodir=$HOME."/.undodir"
+    set undofile
+endif
 
 " Yggdroot/indentLine
 let g:indentLine_char = '|'
@@ -42,8 +136,6 @@ let g:indentLine_fileTypeExclude = ['startify', 'coc-explorer', 'json']
 
 " voldikss/vim-floaterm
 let g:floaterm_position = 'center'
-hi FloatermNF guibg=black
-hi FloatermBorderNF guibg=red guifg=cyan
 tnoremap <ESC> <C-\><C-n> :q<CR>
 nnoremap <silent> fn :FloatermNew<CR>
 nnoremap <silent> ft :FloatermToggle<CR>
@@ -103,13 +195,25 @@ let g:airline#extensions#tabline#buffer_nr_show=0 " 显示buffer编号
 
 " startify
 let g:webdevicons_enable_startify = 1
-noremap <Leader>si :Startify<CR>
+noremap ,si :Startify<CR>
 let g:startify_bookmarks = [
   \ {'c': '~/dotfiles/.vimrc' },
   \ ]
 
+" Tagbar 安装依赖 : install ctags
+nnoremap tb :TagbarToggle<CR>
+let g:tagbar_ctags_bin = 'ctags'        "tagbar依赖ctags插件
+let g:tagbar_compact = 1                  "tagbar 子窗口中不显示冗余帮助信息
+" let g:tagbar_left = 1                   "让tagbar在页面左侧显示，默认右DTree快捷键
+let g:tagbar_width = 25                 "设置tagbar的宽度
+let g:tagbar_autofocus = 1              "tagbar一打开，光标即在tagbar页面内
+let g:tagbar_sort = 0                   "设置标签不排序，默认排序
+let g:tagbar_autoshowtag = 1            "当编辑代码时，在Tagbar自动追踪变量
+let g:tagbar_iconchars = ['▸', '▾']     "修改默认剪头'▸', '▾'
+
 " scrooloose/nerdtree
 nnoremap nt :NERDTreeToggle<CR>
+nnoremap nts :NERDTreeFocus<CR>
 nnoremap ntf :NERDTreeFind<CR>
 let NERDTreeShowHidden=0                        "是否显示隐藏文件
 let NERDTreeWinSize=25                          "设置宽度
@@ -120,6 +224,20 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeAutoDeleteBuffer=1                  "删除文件时自动删除文件对应 buffer
 let NERDTreeMinimalUI=1                         "不显示冗余帮助信息
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   ""当NERDTree为剩下的唯一窗口时自动关闭
+let g:NERDTreeGitStatusUseNerdFonts = 1
+let g:NERDTreeGitStatusShowIgnored = 0
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'✹',
+                \ 'Staged'    :'✚',
+                \ 'Untracked' :'✭',
+                \ 'Renamed'   :'➜',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'✖',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
 
 "通用设置 ------
 " set fillchars+=vert:\ 
@@ -134,7 +252,8 @@ set laststatus=2                                        " 显示状态栏
 set ruler                                               " 显示光标位置
 set cursorline                                          " 高亮行
 set background=dark                                     " 背景色
-colorscheme jellybeans
+" colorscheme jellybeans
+colorscheme codedark
 set splitbelow                                          " 允许在下部分割布局
 set splitright                                          " 允许在右侧分隔布局
 syntax enable                                           " 开启语法高亮
@@ -171,9 +290,10 @@ set updatetime=30                                       " 30毫秒更新
 set belloff=all                                         " 所有事件下（包括错按esc，错按backspace）不发出声音
 set autoread                                            " 设置当文件被改动时自动载入
 set completeopt=preview,menu                            " 代码补全
-set scrolloff=6                                         " 光标移动到buffer的顶部和底部时保持3行距离
-set undofile
+set scrolloff=3                                         " 光标移动到buffer的顶部和底部时保持3行距离
+" 保存 undo 历史
 set undodir=~/.vim/undo/
+set undofile
 
 " 快捷键
 "" 窗口选择与移动
