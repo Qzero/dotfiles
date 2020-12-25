@@ -20,14 +20,14 @@ Plug 'lfv89/vim-interestingwords'               " 变量彩色凸显
 Plug 'brooth/far.vim'                           " 替换
 Plug 'Yggdroot/indentLine'                      " 缩进线
 Plug 'tpope/vim-commentary'                     " 注释
-Plug 'jiangmiao/auto-pairs'                     " 自动补全引号、圆括号、花括号等
+" Plug 'jiangmiao/auto-pairs'                     " 自动补全引号、圆括号、花括号等
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
 Plug 'preservim/tagbar'
 Plug 'yianwillis/vimcdoc'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'dyng/ctrlsf.vim'
 " Git
 Plug 'rhysd/git-messenger.vim'                  " git提交查询
@@ -43,6 +43,7 @@ nnoremap <Leader><Leader>c :PlugClean<CR>       " 删除插件
 nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 " dyng/ctrlsf.vim
 nnoremap ,cf :CtrlSF<Space>
 nnoremap ,cfc :CtrlSFClose<CR>
@@ -97,11 +98,12 @@ let g:coc_global_extensions = [
   \ 'coc-fzf-preview',
   \ 'coc-jedi',
   \ 'coc-translator',
+  \ 'coc-pairs',
   \ 'coc-diagnostic',
   \ ]
 " coc-fzf
-nnoremap ,cfl :CocCommand fzf-preview.Lines<CR>
-nnoremap ,cfc :CocCommand fzf-preview.Changes<CR>
+nnoremap ,fl :CocCommand fzf-preview.Lines<CR>
+nnoremap ,fc :CocCommand fzf-preview.Changes<CR>
 " coc-todolist
 nnoremap ,cc :CocCommand todolist.create<CR>
 nnoremap ,ctu :CocCommand todolist.upload<CR>
@@ -124,7 +126,7 @@ nnoremap ,tl :CocCommand translator.exportHistory<CR>
 " mbbill/undotree
 nnoremap ,ut :UndotreeToggle<CR>
 if has("persistent_undo")
-    set undodir=$HOME."/.undodir"
+    set undodir="~/.vim/.undodir"
     set undofile
 endif
 
@@ -288,12 +290,9 @@ set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030 " 自动编码依次尝�
 set fileformat=unix                                     " unix的格式保存文件
 set updatetime=30                                       " 30毫秒更新
 set belloff=all                                         " 所有事件下（包括错按esc，错按backspace）不发出声音
-set autoread                                            " 设置当文件被改动时自动载入
 set completeopt=preview,menu                            " 代码补全
 set scrolloff=3                                         " 光标移动到buffer的顶部和底部时保持3行距离
-" 保存 undo 历史
-set undodir=~/.vim/undo/
-set undofile
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 " 快捷键
 "" 窗口选择与移动
@@ -301,30 +300,20 @@ inoremap kj <esc>
 nnoremap H ^
 nnoremap L $
 " 窗口跳转
-noremap <Leader>cc <C-w>c
-noremap <Leader>hh <C-w>h
-noremap <Leader>jj <C-w>j
-noremap <Leader>kk <C-w>k
-noremap <Leader>ll <C-w>l
-noremap <Leader>ww <C-w>w
-" 窗口分屏
-nnoremap sl :set splitright<CR>:vsplit<CR>
-nnoremap sj :set splitbelow<CR>:split<CR>
-" 移动分屏
-nnoremap svs <C-w>t<C-w>H                                  
-nnoremap svh <C-w>t<C-w>K
+nnoremap <Leader>wh <C-w>h
+nnoremap <Leader>wj <C-w>j
+nnoremap <Leader>wk <C-w>k
+nnoremap <Leader>wl <C-w>l
+nnoremap <Leader>ww <C-w>w
+nnoremap <Leader>wc <C-w>c
+nnoremap <Leader>ws <C-w>s
+nnoremap <Leader>wv <C-w>v
+nnoremap <Leader>w= <C-w>=
+nnoremap <Leader>wjj <C-w>+
+nnoremap <Leader>wkk <C-w>-
 " 窗口通知
 nnoremap <Leader>m :messages<CR>
 nnoremap <Leader>t :TabMessage messages<CR>
-" 命令模式移动
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
-cnoremap <C-p> <Up>
-cnoremap <C-n> <Down>
-cnoremap <C-b> <S-Left>
-cnoremap <C-f> <S-Right>
-cnoremap <C-h> <Left>
-cnoremap <C-l> <Right>
 " 文件相关
 nnoremap fs :w<CR>
 nnoremap W :wa<CR>
