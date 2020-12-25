@@ -9,7 +9,6 @@ Plug 'voldikss/vim-floaterm'                    " 浮动终端
 Plug 'nanotech/jellybeans.vim'                  " 主题
 Plug 'mhinz/vim-startify'                       " 首页
 Plug 'scrooloose/nerdtree'                      " 资源管理树
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'                  " 状态栏
 Plug 'vim-airline/vim-airline-themes'           " 状态栏主题
 Plug 'easymotion/vim-easymotion'                " 超级跳转
@@ -20,7 +19,6 @@ Plug 'lfv89/vim-interestingwords'               " 变量彩色凸显
 Plug 'brooth/far.vim'                           " 替换
 Plug 'Yggdroot/indentLine'                      " 缩进线
 Plug 'tpope/vim-commentary'                     " 注释
-" Plug 'jiangmiao/auto-pairs'                     " 自动补全引号、圆括号、花括号等
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
 Plug 'preservim/tagbar'
 Plug 'yianwillis/vimcdoc'
@@ -28,7 +26,9 @@ Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'dyng/ctrlsf.vim'
+Plug 'liuchengxu/vista.vim'
 " Git
 Plug 'rhysd/git-messenger.vim'                  " git提交查询
 Plug 'tpope/vim-fugitive'                       " git命令封装
@@ -44,12 +44,30 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+" junegunn/fzf
+nnoremap <Leader>ch :History:<CR>
+nnoremap <Leader>fc :Commits<CR>
+
+" liuchengxu/vista 
+nnoremap <Leader>vs :Vista<CR>
+nnoremap <Leader>vsc :Vista!<CR>
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_default_executive = 'ctags'
+let g:vista_fzf_preview = ['right:50%']
+let g:vista#renderer#enable_icon = 1
+let g:vista_executive_for = {
+  \ 'python': 'coc',
+  \ }
+let g:vista_ctags_cmd = {
+      \ 'haskell': 'hasktags -x -o - -c',
+      \ }
+
 " dyng/ctrlsf.vim
 nnoremap ,cf :CtrlSF<Space>
 nnoremap ,cfc :CtrlSFClose<CR>
 nnoremap ,cfs <Plug>CtrlSFCCwordPath<CR>
 let g:ctrlsf_ackprg = 'ag'     " 搜索引擎
-let g:ctrlsf_position = "right" " 左右打开Linux用let g:ctrlsf_open_left = 0
+let g:ctrlsf_position = "bottom" " 左右打开Linux用let g:ctrlsf_open_left = 0
 
 " neoclide/coc.vim
 set shortmess+=c
@@ -116,12 +134,16 @@ nnoremap ,t :CocCommand translator.popup<CR>
 nnoremap ,tl :CocCommand translator.exportHistory<CR>
 
 " Yggdroot/LeaderF
-" let g:Lf_ReverseOrder = 1   "自下而上显示
-" nnoremap ,lf :LeaderfFile<CR>
-" nnoremap ,lb :LeaderfBuffer<CR>
-" nnoremap ,lm :LeaderfMru<CR>
-" nnoremap ,lff :LeaderfFunction<CR>
-" nnoremap ,le :LeaderfLine<CR>
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+" let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2"}
+let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0, 'Colorscheme':1}
+let g:Lf_ReverseOrder = 1   "自下而上显示
+nnoremap <Leader>lf :LeaderfFile<CR> 
+nnoremap <leader>lb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+nnoremap <leader>lm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+nnoremap <leader>lt :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
+nnoremap <leader>ll :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
 
 " mbbill/undotree
 nnoremap ,ut :UndotreeToggle<CR>
@@ -226,24 +248,11 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeAutoDeleteBuffer=1                  "删除文件时自动删除文件对应 buffer
 let NERDTreeMinimalUI=1                         "不显示冗余帮助信息
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   ""当NERDTree为剩下的唯一窗口时自动关闭
-let g:NERDTreeGitStatusUseNerdFonts = 1
-let g:NERDTreeGitStatusShowIgnored = 0
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'✹',
-                \ 'Staged'    :'✚',
-                \ 'Untracked' :'✭',
-                \ 'Renamed'   :'➜',
-                \ 'Unmerged'  :'═',
-                \ 'Deleted'   :'✖',
-                \ 'Dirty'     :'✗',
-                \ 'Ignored'   :'☒',
-                \ 'Clean'     :'✔︎',
-                \ 'Unknown'   :'?',
-                \ }
 
 "通用设置 ------
 " set fillchars+=vert:\ 
 " set fillchars=vert:\ ,stl:\ ,stlnc:\ 
+set modifiable
 set t_Co=256                                            " 开启256色支持
 set guifont=Monaco:h16                                  " 默认字体和大小
 set showtabline=0                                       " 隐藏顶部标签栏
