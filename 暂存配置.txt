@@ -8,6 +8,7 @@ let g:indent_guides_auto_colors = 0           " 自定义关联可视化颜色
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#8ECCCB ctermbg=3
 
 
+Plug 'preservim/tagbar'
 " Tagbar 安装依赖 : install ctags
 nnoremap tb :TagbarToggle<CR>
 let g:tagbar_ctags_bin = 'ctags'        "tagbar依赖ctags插件
@@ -19,7 +20,6 @@ let g:tagbar_sort = 0                   "设置标签不排序，默认排序
 let g:tagbar_autoshowtag = 1            "当编辑代码时，在Tagbar自动追踪变量
 let g:tagbar_iconchars = ['▸', '▾']     "修改默认剪头'▸', '▾'
 
-
 " mbbill/undotree
 nnoremap <Leader>ut :UndotreeToggle<cr>
 if has("persistent_undo")
@@ -28,13 +28,20 @@ if has("persistent_undo")
     endif
 
 
+
+" Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 " Yggdroot/LeaderF
-let g:Lf_ReverseOrder = 0   "自下而上显示
-nnoremap <leader>lf :LeaderfFile<CR>
-nnoremap <leader>lb :LeaderfBuffer<CR>
-nnoremap <leader>lm :LeaderfMru<CR>
-nnoremap <leader>lft :LeaderfFunction<CR>
-nnoremap <leader>le :LeaderfLine<CR>
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+" let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2"}
+let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0, 'Colorscheme':1}
+let g:Lf_ReverseOrder = 1   "自下而上显示
+nnoremap <Leader>lf :LeaderfFile<CR> 
+nnoremap <leader>lb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+nnoremap <leader>lm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+nnoremap <leader>lt :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
+nnoremap <leader>ll :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+
 
 " coc
   \ 'coc-clock',

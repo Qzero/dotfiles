@@ -1,4 +1,7 @@
 {
+
+    // coc-translator
+
     // coc-todolist
     "todolist.autoUpload": true,
     "todolist.monitor": true,

@@ -5,12 +5,19 @@
 - brew<Mac>
  - autojump
  - cakebrew
-
-- nvim
+ - fzf
  - rg
  - ctags
+ - curl
+ - wget
+ - tig
+ - the_silver_searcher
+
+- nvim
  - coc.vim
  - vista
+
+ > https://github.com/liuchengxu/vista.vim
 
 - tmux
  - tmp
