@@ -6,6 +6,7 @@ filetype indent on                              "侦测语言的智能缩
 call plug#begin('~/.vim/plugged')
 Plug 'jpo/vim-railscasts-theme'
 Plug 'tomasiser/vim-code-dark'
+Plug 'tmux-plugins/vim-tmux'
 Plug 'roxma/vim-tmux-clipboard'                 " vim tmux剪贴板共享
 Plug 'tmhedberg/SimpylFold'                     " 代码折叠
 Plug 'haya14busa/incsearch.vim'                 " 搜索插件
