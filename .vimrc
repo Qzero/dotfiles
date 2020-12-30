@@ -4,9 +4,13 @@ filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
+Plug 'jpo/vim-railscasts-theme'
 Plug 'tomasiser/vim-code-dark'
+Plug 'roxma/vim-tmux-clipboard'                 " vim tmux剪贴板共享
+Plug 'tmhedberg/SimpylFold'                     " 代码折叠
+Plug 'haya14busa/incsearch.vim'                 " 搜索插件
+Plug 'farmergreg/vim-lastplace'                 " 打开文件跳转到最后一次位置
 Plug 'voldikss/vim-floaterm'                    " 浮动终端
-Plug 'nanotech/jellybeans.vim'                  " 主题
 Plug 'mhinz/vim-startify'                       " 首页
 Plug 'scrooloose/nerdtree'                      " 资源管理树
 Plug 'vim-airline/vim-airline'                  " 状态栏
@@ -21,18 +25,20 @@ Plug 'Yggdroot/indentLine'                      " 缩进线
 Plug 'tpope/vim-commentary'                     " 注释
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
 Plug 'yianwillis/vimcdoc'
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'liuchengxu/vista.vim'
+" markdown
+Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'iamcco/markdown-preview.vim'
 " Git
 Plug 'rhysd/git-messenger.vim'                  " git提交查询
-Plug 'tpope/vim-fugitive'                       " git命令封装
-Plug 'airblade/vim-gitgutter'                   " 显示git更改标示
+Plug 'tpope/vim-fugitive'                       " git更改标识
+Plug 'airblade/vim-gitgutter'                   " git命令封装
 Plug 'junegunn/gv.vim'                          " git提交树
-Plug 'mbbill/undotree'
+Plug 'mbbill/undotree'                          " git本地文件树
 call plug#end()
 
 nnoremap <Leader><Leader>i :PlugInstall<CR>     " 安装插件
@@ -42,36 +48,29 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+" tmhedberg/SimpylFold
+set foldmethod=indent
+let g:SimpylFold_docstring_preview = 0
+
+" markdown
+let g:mkdp_path_to_chrome = "open -a Google\\ Chrome"
+let g:mkdp_auto_start = 1
+let g:mkdp_auto_open = 1
+
+" haya14busa/incsearch
+set hlsearch
+nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
 " junegunn/fzf
 nnoremap <Leader>ch :History:<CR>
 nnoremap <Leader>fc :Commits<CR>
 nnoremap <Leader>fg :GFiles?<CR>
-
-" liuchengxu/vista 
-nnoremap <Leader>vs :Vista<CR>
-nnoremap <Leader>vsc :Vista!<CR>
-let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
-let g:vista_default_executive = 'ctags'
-let g:vista_fzf_preview = ['right:50%']
-let g:vista#renderer#enable_icon = 1
-let g:vista_executive_for = {
-  \ 'python': 'coc',
-  \ }
-let g:vista_ctags_cmd = {
-      \ 'haskell': 'hasktags -x -o - -c',
-      \ }
-
-" Yggdroot/LeaderF
-let g:Lf_WindowPosition = 'popup'
-let g:Lf_PreviewInPopup = 1
-" let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2"}
-let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0, 'Colorscheme':1}
-let g:Lf_ReverseOrder = 1   "自下而上显示
-nnoremap <Leader>lf :LeaderfFile<CR> 
-nnoremap <leader>lb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
-nnoremap <leader>lm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
-nnoremap <leader>lt :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
-nnoremap <leader>ll :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+nnoremap <Leader>le :Lines<CR>
+nnoremap <Leader>ca :Commands<CR>
+nnoremap <Leader>rg :Rg<CR>
 
 " mbbill/undotree
 nnoremap <Leader>ut :UndotreeToggle<CR>
@@ -80,23 +79,25 @@ if has("persistent_undo")
     set undofile
 endif
 
-" Yggdroot/indentLine
-let g:indentLine_char = '|'
-let g:indentLine_enabled = 1
-let g:indentLine_color_term = 238
-let g:indentLine_fileTypeExclude = ['startify', 'coc-explorer', 'json']
+" liuchengxu/vista 
+nnoremap <Leader>vs :Vista!!<CR>
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_default_executive = 'ctags'
+let g:vista_fzf_preview = ['right:50%']
+let g:vista_update_on_text_changed = 1
+let g:vista#renderer#enable_icon = 1
+let g:vista_executive_for = {
+  \ 'python': 'coc',
+  \ }
 
-" voldikss/vim-floaterm
-let g:floaterm_position = 'center'
-tnoremap <ESC> <C-\><C-n> :q<CR>
-nnoremap <silent> fn :FloatermNew<CR>
-nnoremap <silent> ft :FloatermToggle<CR>
-nnoremap <silent> fnn :FloatermNext<CR>
-nnoremap <silent> fpp :FloatermPrev<CR>
-
-" junegunn/vim-easy-align
-xmap <Leader>ga <Plug>(EasyAlign)
-nmap <Leader>ga <Plug>(EasyAlign)
+" vim-easymotion 
+let g:EasyMotion_smartcase = 1      "忽略大小写
+map <Leader>ss <Plug>(easymotion-s2)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <leader>h <Plug>(easymotion-linebackward)
+map <leader>l <Plug>(easymotion-lineforward)
+map <leader>r <Plug>(easymotion-repeat)
 
 " Git相关
 " vim-fugitive
@@ -120,18 +121,19 @@ nnoremap <silent> <Leader>IW :call UncolorAllWords()<CR>
 nnoremap <silent> <Leader>n :call WordNavigation('forward')<CR>
 nnoremap <silent> <Leader>N :call WordNavigation('backward')<CR>
 
-" t9md/vim-choosewin
-nmap - <Plug>(choosewin)
-let g:choosewin_overlay_enable = 0
+" Yggdroot/indentLine
+let g:indentLine_char = '|'
+let g:indentLine_enabled = 1
+let g:indentLine_color_term = 238
+let g:indentLine_fileTypeExclude = ['startify', 'coc-explorer', 'json']
 
-" vim-easymotion 
-let g:EasyMotion_smartcase = 1      "忽略大小写
-map <Leader>ss <Plug>(easymotion-s2)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <leader>h <Plug>(easymotion-linebackward)
-map <leader>l <Plug>(easymotion-lineforward)
-map <leader>r <Plug>(easymotion-repeat)
+" junegunn/vim-easy-align                           
+xmap <Leader>ga <Plug>(EasyAlign)               
+nmap <Leader>ga <Plug>(EasyAlign)               
+
+" t9md/vim-choosewin                                
+nmap - <Plug>(choosewin)
+let g:choosewin_overlay_enable = 0                  
 
 " luohen199/rainbow
 let g:rainbow_active = 1
@@ -143,23 +145,23 @@ nnoremap <silent> <C-P> :bp<CR>
 let g:airline_powerline_fonts = 1                 " 这个是安装字体后必须设置此项
 let g:airline_theme='ubaryd'                      " luna,term,tomorrow,ubaryd,zenburn
 let g:airline#extensions#tabline#enabled=1        " 用顶部tabline
-let g:airline#extensions#tabline#buffer_nr_show=0 " 显示buffer编号
 
 " startify
 let g:webdevicons_enable_startify = 1
-noremap ,si :Startify<CR>
+nnoremap <Leader>si :Startify<CR>
 let g:startify_bookmarks = [
   \ {'c': '~/dotfiles/.vimrc' },
+  \ {'b': '~/Blog/README.md'},
   \ ]
 
 " scrooloose/nerdtree
-nnoremap nt :NERDTreeToggle<CR>
-nnoremap nts :NERDTreeFocus<CR>
-nnoremap ntf :NERDTreeFind<CR>
+nnoremap <Leader>nt :NERDTreeToggle<CR>
+nnoremap <Leader>nts :NERDTreeFocus<CR>
+nnoremap <Leader>ntf :NERDTreeFind<CR>
 let NERDTreeShowHidden=0                        "是否显示隐藏文件
 let NERDTreeWinSize=25                          "设置宽度
 let NERDTreeShowBookmarks=1                     "显示书签列表
-let NERDTreeIgnore=['\.pyc','\~$','\.swp']      "忽略一下文件的显示
+let NERDTreeIgnore=['\.pyc','\~$','\.swp']      "忽略以下文件的显示
 let g:NERDTreeDirArrowExpandable = '▸'          "修改默认箭头'▸' '▾'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeAutoDeleteBuffer=1                  "删除文件时自动删除文件对应 buffer
@@ -197,8 +199,8 @@ function! s:show_documentation()
 endfunction
 " 诊断面板以及跳转
 nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nnoremap <silent> [g <Plug>(coc-diagnostic-prev)
+nnoremap <silent> ]g <Plug>(coc-diagnostic-next)
 
 nnoremap <silent> <space>p  :<C-u>CocList extensions<cr>
 nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
@@ -207,16 +209,26 @@ nnoremap <silent> <space>e :CocCommand explorer<cr>
 let g:coc_global_extensions = [
   \ 'coc-todolist',
   \ 'coc-bookmark',
-  \ 'coc-explorer',
-  \ 'coc-python',
-  \ 'coc-vimlsp',
-  \ 'coc-fzf-preview',
-  \ 'coc-jedi',
-  \ 'coc-translator',
-  \ 'coc-pairs',
+  \ 'coc-explorer',        
+  \ 'coc-vimlsp',          
+  \ 'coc-fzf-preview',     
+  \ 'coc-jedi',            
+  \ 'coc-translator',      
+  \ 'coc-pairs',           
   \ 'coc-diagnostic',
+  \ 'coc-floaterm',
+  \ 'coc-python'
   \ ]
-" coc-fzf
+" coc-floaterm
+nnoremap ,ft :CocList floaterm<CR>
+nnoremap ,fn :CocCommand floaterm.new<CR>
+nnoremap ,fnn :CocCommand floaterm.next<CR>
+nnoremap ,fpp :CocCommand floaterm.prev<CR>
+" coc-bookmark
+nnoremap ,bc :CocCommand bookmark.toggle<CR>
+nnoremap ,ba :CocCommand bookmark.annotate<CR>
+nnoremap ,bm :CocList bookmark<CR>
+" coc-fzf-preview
 nnoremap ,fl :CocCommand fzf-preview.Lines<CR>
 nnoremap ,fc :CocCommand fzf-preview.Changes<CR>
 " coc-todolist
@@ -231,8 +243,6 @@ nnoremap ,t :CocCommand translator.popup<CR>
 nnoremap ,tl :CocCommand translator.exportHistory<CR>
 
 "通用设置 ------
-" set fillchars+=vert:\ 
-" set fillchars=vert:\ ,stl:\ ,stlnc:\ 
 set t_Co=256                                            " 开启256色支持
 set guifont=Monaco:h16                                  " 默认字体和大小
 set showtabline=0                                       " 隐藏顶部标签栏
@@ -243,8 +253,7 @@ set laststatus=2                                        " 显示状态栏
 set ruler                                               " 显示光标位置
 set cursorline                                          " 高亮行
 set background=dark                                     " 背景色
-" colorscheme jellybeans
-colorscheme codedark
+colorscheme railscasts
 set splitbelow                                          " 允许在下部分割布局
 set splitright                                          " 允许在右侧分隔布局
 syntax enable                                           " 开启语法高亮
@@ -264,6 +273,7 @@ set numberwidth=4                                       " 默认占据4空间,�
 set smartindent                                         " 智能的选择对齐方式
 set expandtab                                           " 将制表符扩展为空格
 set nu smarttab autoindent sw=4 ts=4 sts=4 et tw=78 shiftwidth=4 tabstop=4 softtabstop=4
+set autoread
 set nowrap                                              " 禁止折行
 set backspace=2                                         " 使用回车键正常处理indent,eol,start等
 set sidescroll=10                                       " 向右滚动字符数
@@ -289,10 +299,10 @@ inoremap kj <esc>
 nnoremap H ^
 nnoremap L $
 " 窗口跳转
-nnoremap <Leader>wh <C-w>h
-nnoremap <Leader>wj <C-w>j
-nnoremap <Leader>wk <C-w>k
-nnoremap <Leader>wl <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 nnoremap <Leader>ww <C-w>w
 nnoremap <Leader>wc <C-w>c
 nnoremap <Leader>ws <C-w>s
@@ -300,9 +310,6 @@ nnoremap <Leader>wv <C-w>v
 nnoremap <Leader>w= <C-w>=
 nnoremap <Leader>wjj <C-w>+
 nnoremap <Leader>wkk <C-w>-
-" 窗口通知
-nnoremap <Leader>m :messages<CR>
-nnoremap <Leader>t :TabMessage messages<CR>
 " 文件相关
 nnoremap fs :w<CR>
 nnoremap W :wa<CR>
@@ -311,3 +318,4 @@ nnoremap Q :qa!<CR>
 nnoremap rn :set relativenumber!<CR>
 nnoremap ev :edit $MYVIMRC<CR>
 nnoremap sm :source $MYVIMRC<CR>
+nnoremap <Leader>m :messages<CR>
