@@ -13,6 +13,7 @@ Plug 'farmergreg/vim-lastplace'                 " 打开文件跳转到最后一
 Plug 'voldikss/vim-floaterm'                    " 浮动终端
 Plug 'mhinz/vim-startify'                       " 首页
 Plug 'scrooloose/nerdtree'                      " 资源管理树
+Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'                  " 状态栏
 Plug 'vim-airline/vim-airline-themes'           " 状态栏主题
 Plug 'easymotion/vim-easymotion'                " 超级跳转
@@ -24,11 +25,11 @@ Plug 'brooth/far.vim'                           " 替换
 Plug 'Yggdroot/indentLine'                      " 缩进线
 Plug 'tpope/vim-commentary'                     " 注释
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
-Plug 'yianwillis/vimcdoc'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'yianwillis/vimcdoc'                       " 中文帮助文档
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全框架
+Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' } " cocPython插件
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'liuchengxu/vista.vim'
 " markdown
 Plug 'iamcco/mathjax-support-for-mkdp'
@@ -47,6 +48,13 @@ nnoremap <Leader><Leader>c :PlugClean<CR>       " 删除插件
 nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+" ryanoasis/vim-devicons
+let g:webdevicons_enable = 1            " 加载插件
+let g:webdevicons_enable_nerdtree = 1   " nerdtree支持
+let g:webdevicons_enable_startify = 1   " startify支持
+let g:webdevicons_enable_airline_tabline = 1    " airline tab支持
+let g:webdevicons_enable_airline_statusline = 1 " airline statuslien支持
 
 " tmhedberg/SimpylFold
 set foldmethod=indent
