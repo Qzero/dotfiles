@@ -300,7 +300,8 @@ set belloff=all                                         " 所有事件下（包�
 set completeopt=preview,menu                            " 代码补全
 set scrolloff=3                                         " 光标移动到buffer的顶部和底部时保持3行距离
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
-
+vnoremap <Leader>y "+y                                  
+nmap <Leader>p "+p
 " 快捷键
 "" 窗口选择与移动
 inoremap kj <esc>
