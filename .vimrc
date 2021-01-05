@@ -49,13 +49,6 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-" ryanoasis/vim-devicons
-let g:webdevicons_enable = 1            " 加载插件
-let g:webdevicons_enable_nerdtree = 1   " nerdtree支持
-let g:webdevicons_enable_startify = 1   " startify支持
-let g:webdevicons_enable_airline_tabline = 1    " airline tab支持
-let g:webdevicons_enable_airline_statusline = 1 " airline statuslien支持
-
 " tmhedberg/SimpylFold
 set foldmethod=indent
 let g:SimpylFold_docstring_preview = 0
@@ -67,7 +60,7 @@ let g:mkdp_auto_open = 1
 
 " haya14busa/incsearch
 set hlsearch
-nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
+nnoremap <Esc> :<C-u>nohlsearch<CR>
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
@@ -90,12 +83,14 @@ endif
 " liuchengxu/vista 
 nnoremap <Leader>vs :Vista!!<CR>
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
-let g:vista_default_executive = 'ctags'
+let g:vista_default_executive = 'coc'
 let g:vista_fzf_preview = ['right:50%']
 let g:vista_update_on_text_changed = 1
 let g:vista#renderer#enable_icon = 1
 let g:vista_executive_for = {
   \ 'python': 'coc',
+  \ 'json': 'coc',
+  \ 'yml': 'coc',
   \ }
 
 " vim-easymotion 
@@ -122,12 +117,27 @@ nnoremap <Leader>gv :GV<CR>
 nnoremap <Leader>gm :GitMessenger<CR>
 " vim-gitgutter
 let g:gitgutter_max_signs = 800     "更改显示标示行数限制
+let g:gitgutter_signs = 1
+let g:gitgutter_sign_allow_clobber = 0
+let g:gitgutter_map_keys = 0
+let g:gitgutter_override_sign_column_highlight = 1
+let g:gitgutter_preview_win_floating = 1
+highlight GitGutterAdd ctermfg=green guifg=darkgreen
+highlight GitGutterChange ctermfg=yellow guifg=darkyellow
+highlight GitGutterDelete ctermfg=red guifg=darkred
+highlight GitGutterChangeDelete ctermfg=yellow guifg=darkyellow
+let g:gitgutter_sign_added = '▎'
+let g:gitgutter_sign_modified = '░'
+let g:gitgutter_sign_removed = '▏'
+let g:gitgutter_sign_removed_first_line = '▔'
+let g:gitgutter_sign_modified_removed = '▒'
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
 
 " lfv89/vim-interestingwords
 nnoremap <silent> <Leader>iw :call InterestingWords('n')<CR>
 nnoremap <silent> <Leader>IW :call UncolorAllWords()<CR>
 nnoremap <silent> <Leader>n :call WordNavigation('forward')<CR>
-nnoremap <silent> <Leader>N :call WordNavigation('backward')<CR>
 
 " Yggdroot/indentLine
 let g:indentLine_char = '|'
@@ -160,6 +170,7 @@ nnoremap <Leader>si :Startify<CR>
 let g:startify_bookmarks = [
   \ {'c': '~/dotfiles/.vimrc' },
   \ {'b': '~/Blog/README.md'},
+  \ {'a': '~/hejie.xyz/_config.yml'}
   \ ]
 
 " scrooloose/nerdtree
@@ -175,6 +186,12 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeAutoDeleteBuffer=1                  "删除文件时自动删除文件对应 buffer
 let NERDTreeMinimalUI=1                         "不显示冗余帮助信息
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   ""当NERDTree为剩下的唯一窗口时自动关闭
+" ryanoasis/vim-devicons
+let g:webdevicons_enable = 1            " 加载插件
+let g:webdevicons_enable_nerdtree = 1   " nerdtree支持
+let g:webdevicons_enable_startify = 1   " startify支持
+let g:webdevicons_enable_airline_tabline = 1    " airline tab支持
+let g:webdevicons_enable_airline_statusline = 1 " airline statuslien支持
 
 " neoclide/coc.vim
 set shortmess+=c
@@ -194,6 +211,9 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+" Enter键确认
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 " 显示文档
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()
@@ -205,6 +225,12 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
+" coc-actions
+function! s:cocActionsOpenFromSelected(type) abort
+  execute 'CocCommand actions.open ' . a:type
+endfunction
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>aw  <Plug>(coc-codeaction-selected)w
 " 诊断面板以及跳转
 nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -225,8 +251,15 @@ let g:coc_global_extensions = [
   \ 'coc-pairs',           
   \ 'coc-diagnostic',
   \ 'coc-floaterm',
-  \ 'coc-python'
+  \ 'coc-python',
+  \ 'coc-pyright',
+  \ 'coc-diagnostic',
+  \ 'coc-json',
+  \ 'coc-actions',
+  \ 'coc-marketplace'
   \ ]
+" coc-marketplace
+nnoremap ,mp :CocList marketplace<CR>
 " coc-floaterm
 nnoremap ,ft :CocList floaterm<CR>
 nnoremap ,fn :CocCommand floaterm.new<CR>
@@ -295,7 +328,7 @@ set encoding=utf-8                                      " 新文件的编码为 
 set termencoding=utf-8                                  " 只影响普通模式 (非图形界面) 下的 Vim
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030 " 自动编码依次尝试
 set fileformat=unix                                     " unix的格式保存文件
-set updatetime=30                                       " 30毫秒更新
+set updatetime=100                                      " 30毫秒更新
 set belloff=all                                         " 所有事件下（包括错按esc，错按backspace）不发出声音
 set completeopt=preview,menu                            " 代码补全
 set scrolloff=3                                         " 光标移动到buffer的顶部和底部时保持3行距离
