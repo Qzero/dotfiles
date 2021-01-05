@@ -17,9 +17,11 @@
 - nvim
 
  - coc.vim
+
  - vista
 
 - tmux
+
  - tpm
 
 - zsh
