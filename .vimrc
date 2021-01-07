@@ -4,6 +4,10 @@ filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
+Plug 'francoiscabrol/ranger.vim'                " ranger插件
+Plug 'rbgrouleff/bclose.vim'                    " ranger配套，neovim使用
+Plug 'tpope/vim-surround'                       " 符号成对修改
+Plug 'gcmt/wildfire.vim'                        " 代码块选择
 Plug 'jpo/vim-railscasts-theme'
 Plug 'tomasiser/vim-code-dark'
 Plug 'roxma/vim-tmux-clipboard'                 " vim tmux共享剪贴板
@@ -12,8 +16,8 @@ Plug 'haya14busa/incsearch.vim'                 " 搜索插件
 Plug 'farmergreg/vim-lastplace'                 " 打开文件跳转到最后一次位置
 Plug 'voldikss/vim-floaterm'                    " 浮动终端
 Plug 'mhinz/vim-startify'                       " 首页
-Plug 'scrooloose/nerdtree'                      " 资源管理树
-Plug 'ryanoasis/vim-devicons'
+" Plug 'scrooloose/nerdtree'                      " 资源管理树
+Plug 'ryanoasis/vim-devicons'                   " 文件图标
 Plug 'vim-airline/vim-airline'                  " 状态栏
 Plug 'vim-airline/vim-airline-themes'           " 状态栏主题
 Plug 'easymotion/vim-easymotion'                " 超级跳转
@@ -30,7 +34,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全框架
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' } " cocPython插件
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'liuchengxu/vista.vim'
+Plug 'liuchengxu/vista.vim'                     " 大纲
 " markdown
 Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
@@ -55,8 +59,6 @@ let g:SimpylFold_docstring_preview = 0
 
 " markdown
 let g:mkdp_path_to_chrome = "open -a Google\\ Chrome"
-let g:mkdp_auto_start = 1
-let g:mkdp_auto_open = 1
 
 " haya14busa/incsearch
 set hlsearch
@@ -76,7 +78,7 @@ nnoremap <Leader>rg :Rg<CR>
 " mbbill/undotree
 nnoremap <Leader>ut :UndotreeToggle<CR>
 if has("persistent_undo")
-    set undodir=~/dotfiles/undodir
+    set undodir=~/undodir
     set undofile
 endif
 
@@ -140,14 +142,14 @@ nnoremap <silent> <Leader>IW :call UncolorAllWords()<CR>
 nnoremap <silent> <Leader>n :call WordNavigation('forward')<CR>
 
 " Yggdroot/indentLine
-let g:indentLine_char = '|'
-let g:indentLine_enabled = 1
-let g:indentLine_color_term = 238
+let g:indentLine_char            = '|'
+let g:indentLine_enabled         = 1
+let g:indentLine_color_term      = 238
 let g:indentLine_fileTypeExclude = ['startify', 'coc-explorer', 'json']
 
 " junegunn/vim-easy-align                           
-xmap <Leader>ga <Plug>(EasyAlign)               
-nmap <Leader>ga <Plug>(EasyAlign)               
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " t9md/vim-choosewin                                
 nmap - <Plug>(choosewin)
@@ -174,18 +176,18 @@ let g:startify_bookmarks = [
   \ ]
 
 " scrooloose/nerdtree
-nnoremap <Leader>nt :NERDTreeToggle<CR>
-nnoremap <Leader>nts :NERDTreeFocus<CR>
-nnoremap <Leader>ntf :NERDTreeFind<CR>
-let NERDTreeShowHidden=0                        "是否显示隐藏文件
-let NERDTreeWinSize=25                          "设置宽度
-let NERDTreeShowBookmarks=1                     "显示书签列表
-let NERDTreeIgnore=['\.pyc','\~$','\.swp']      "忽略以下文件的显示
-let g:NERDTreeDirArrowExpandable = '▸'          "修改默认箭头'▸' '▾'
-let g:NERDTreeDirArrowCollapsible = '▾'
-let NERDTreeAutoDeleteBuffer=1                  "删除文件时自动删除文件对应 buffer
-let NERDTreeMinimalUI=1                         "不显示冗余帮助信息
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   ""当NERDTree为剩下的唯一窗口时自动关闭
+" nnoremap <Leader>nt :NERDTreeToggle<CR>
+" nnoremap <Leader>nts :NERDTreeFocus<CR>
+" nnoremap <Leader>ntf :NERDTreeFind<CR>
+" let NERDTreeShowHidden=0                        "是否显示隐藏文件
+" let NERDTreeWinSize=25                          "设置宽度
+" let NERDTreeShowBookmarks=1                     "显示书签列表
+" let NERDTreeIgnore=['\.pyc','\~$','\.swp']      "忽略以下文件的显示
+" let g:NERDTreeDirArrowExpandable = '▸'          "修改默认箭头'▸' '▾'
+" let g:NERDTreeDirArrowCollapsible = '▾'
+" let NERDTreeAutoDeleteBuffer=1                  "删除文件时自动删除文件对应 buffer
+" let NERDTreeMinimalUI=1                         "不显示冗余帮助信息
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   ""当NERDTree为剩下的唯一窗口时自动关闭
 " ryanoasis/vim-devicons
 let g:webdevicons_enable = 1            " 加载插件
 let g:webdevicons_enable_nerdtree = 1   " nerdtree支持
