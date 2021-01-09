@@ -16,7 +16,6 @@ Plug 'haya14busa/incsearch.vim'                 " 搜索插件
 Plug 'farmergreg/vim-lastplace'                 " 打开文件跳转到最后一次位置
 Plug 'voldikss/vim-floaterm'                    " 浮动终端
 Plug 'mhinz/vim-startify'                       " 首页
-" Plug 'scrooloose/nerdtree'                      " 资源管理树
 Plug 'ryanoasis/vim-devicons'                   " 文件图标
 Plug 'vim-airline/vim-airline'                  " 状态栏
 Plug 'vim-airline/vim-airline-themes'           " 状态栏主题
@@ -35,6 +34,7 @@ Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'liuchengxu/vista.vim'                     " 大纲
+Plug 'bronson/vim-trailing-whitespace'
 " markdown
 Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
@@ -53,12 +53,12 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+" bronson/vim-trailing-whitespace
+nnoremap <leader><space> :FixWhitespace<cr>
+
 " tmhedberg/SimpylFold
 set foldmethod=indent
-let g:SimpylFold_docstring_preview = 0
-
-" markdown
-let g:mkdp_path_to_chrome = "open -a Google\\ Chrome"
+let g:SimpylFold_docstring_preview = 1
 
 " haya14busa/incsearch
 set hlsearch
@@ -75,14 +75,7 @@ nnoremap <Leader>le :Lines<CR>
 nnoremap <Leader>ca :Commands<CR>
 nnoremap <Leader>rg :Rg<CR>
 
-" mbbill/undotree
-nnoremap <Leader>ut :UndotreeToggle<CR>
-if has("persistent_undo")
-    set undodir=~/undodir
-    set undofile
-endif
-
-" liuchengxu/vista 
+" liuchengxu/vista
 nnoremap <Leader>vs :Vista!!<CR>
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 let g:vista_default_executive = 'coc'
@@ -95,7 +88,7 @@ let g:vista_executive_for = {
   \ 'yml': 'coc',
   \ }
 
-" vim-easymotion 
+" vim-easymotion
 let g:EasyMotion_smartcase = 1      "忽略大小写
 map <Leader>ss <Plug>(easymotion-s2)
 map <Leader>j <Plug>(easymotion-j)
@@ -119,22 +112,14 @@ nnoremap <Leader>gv :GV<CR>
 nnoremap <Leader>gm :GitMessenger<CR>
 " vim-gitgutter
 let g:gitgutter_max_signs = 800     "更改显示标示行数限制
-let g:gitgutter_signs = 1
-let g:gitgutter_sign_allow_clobber = 0
-let g:gitgutter_map_keys = 0
-let g:gitgutter_override_sign_column_highlight = 1
-let g:gitgutter_preview_win_floating = 1
-highlight GitGutterAdd ctermfg=green guifg=darkgreen
-highlight GitGutterChange ctermfg=yellow guifg=darkyellow
-highlight GitGutterDelete ctermfg=red guifg=darkred
-highlight GitGutterChangeDelete ctermfg=yellow guifg=darkyellow
-let g:gitgutter_sign_added = '▎'
-let g:gitgutter_sign_modified = '░'
-let g:gitgutter_sign_removed = '▏'
-let g:gitgutter_sign_removed_first_line = '▔'
-let g:gitgutter_sign_modified_removed = '▒'
 nmap ]h <Plug>(GitGutterNextHunk)
 nmap [h <Plug>(GitGutterPrevHunk)
+" mbbill/undotree
+nnoremap <Leader>ut :UndotreeToggle<CR>
+if has("persistent_undo")
+    set undodir=~/undodir
+    set undofile
+endif
 
 " lfv89/vim-interestingwords
 nnoremap <silent> <Leader>iw :call InterestingWords('n')<CR>
@@ -147,13 +132,13 @@ let g:indentLine_enabled         = 1
 let g:indentLine_color_term      = 238
 let g:indentLine_fileTypeExclude = ['startify', 'coc-explorer', 'json']
 
-" junegunn/vim-easy-align                           
+" junegunn/vim-easy-align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-" t9md/vim-choosewin                                
+" t9md/vim-choosewin
 nmap - <Plug>(choosewin)
-let g:choosewin_overlay_enable = 0                  
+let g:choosewin_overlay_enable = 0
 
 " luohen199/rainbow
 let g:rainbow_active = 1
@@ -165,6 +150,7 @@ nnoremap <silent> <C-P> :bp<CR>
 let g:airline_powerline_fonts = 1                 " 这个是安装字体后必须设置此项
 let g:airline_theme='ubaryd'                      " luna,term,tomorrow,ubaryd,zenburn
 let g:airline#extensions#tabline#enabled=1        " 用顶部tabline
+let g:airline#extensions#coc#enabled = 1
 
 " startify
 let g:webdevicons_enable_startify = 1
@@ -175,19 +161,6 @@ let g:startify_bookmarks = [
   \ {'a': '~/hejie.xyz/_config.yml'}
   \ ]
 
-" scrooloose/nerdtree
-" nnoremap <Leader>nt :NERDTreeToggle<CR>
-" nnoremap <Leader>nts :NERDTreeFocus<CR>
-" nnoremap <Leader>ntf :NERDTreeFind<CR>
-" let NERDTreeShowHidden=0                        "是否显示隐藏文件
-" let NERDTreeWinSize=25                          "设置宽度
-" let NERDTreeShowBookmarks=1                     "显示书签列表
-" let NERDTreeIgnore=['\.pyc','\~$','\.swp']      "忽略以下文件的显示
-" let g:NERDTreeDirArrowExpandable = '▸'          "修改默认箭头'▸' '▾'
-" let g:NERDTreeDirArrowCollapsible = '▾'
-" let NERDTreeAutoDeleteBuffer=1                  "删除文件时自动删除文件对应 buffer
-" let NERDTreeMinimalUI=1                         "不显示冗余帮助信息
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif   ""当NERDTree为剩下的唯一窗口时自动关闭
 " ryanoasis/vim-devicons
 let g:webdevicons_enable = 1            " 加载插件
 let g:webdevicons_enable_nerdtree = 1   " nerdtree支持
@@ -245,19 +218,19 @@ nnoremap <silent> <space>e :CocCommand explorer<cr>
 let g:coc_global_extensions = [
   \ 'coc-todolist',
   \ 'coc-bookmark',
-  \ 'coc-explorer',        
-  \ 'coc-vimlsp',          
-  \ 'coc-fzf-preview',     
-  \ 'coc-jedi',            
-  \ 'coc-translator',      
-  \ 'coc-pairs',           
-  \ 'coc-diagnostic',
+  \ 'coc-explorer',
+  \ 'coc-vimlsp',
+  \ 'coc-fzf-preview',
+  \ 'coc-jedi',
+  \ 'coc-translator',
+  \ 'coc-pairs',
   \ 'coc-floaterm',
   \ 'coc-python',
   \ 'coc-pyright',
   \ 'coc-diagnostic',
   \ 'coc-json',
   \ 'coc-actions',
+  \ 'coc-spell-checker',
   \ 'coc-marketplace'
   \ ]
 " coc-marketplace
@@ -324,7 +297,7 @@ set nobackup                                            " 不要备份
 set nowritebackup                                       " 不要写入备份
 set noswapfile                                          " 禁止生成临时文件交换文件
 set confirm                                             " 在处理未保存或只读文件的时候，弹出确认
-set langmenu=zh_CN.UTF-8        
+set langmenu=zh_CN.UTF-8
 set helplang=cn
 set encoding=utf-8                                      " 新文件的编码为 UTF-8
 set termencoding=utf-8                                  " 只影响普通模式 (非图形界面) 下的 Vim
@@ -335,7 +308,9 @@ set belloff=all                                         " 所有事件下（包�
 set completeopt=preview,menu                            " 代码补全
 set scrolloff=3                                         " 光标移动到buffer的顶部和底部时保持3行距离
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
-vnoremap <Leader>y "+y                                  
+" 打开文件自动定位到最后编辑的位置
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
+vnoremap <Leader>y "+y
 nmap <Leader>p "+p
 " 快捷键
 "" 窗口选择与移动
