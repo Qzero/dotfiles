@@ -4,8 +4,6 @@ filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
-Plug 'francoiscabrol/ranger.vim'                " ranger插件
-Plug 'rbgrouleff/bclose.vim'                    " ranger配套，neovim使用
 Plug 'tpope/vim-surround'                       " 符号成对修改
 Plug 'gcmt/wildfire.vim'                        " 代码块选择
 Plug 'jpo/vim-railscasts-theme'

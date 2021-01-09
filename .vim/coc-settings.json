@@ -12,7 +12,7 @@
     "cSpell.maxNumberOfProblems": 100,
     "cSpell.numSuggestions": 8,
     "cSpell.minWordLength": 4,
-        "cSpell.enabledLanguageIds": [
+    "cSpell.enabledLanguageIds": [
         "markdown",
         "json"
     ],
@@ -74,6 +74,10 @@
     "diagnostic.virtualTextPrefix": " ❯❯❯ ",
     "diagnostic.virtualText": true,
     "codeLens.enable": true,
+    "diagnostic-languageserver.filetypes": {
+        "vim": "vint",
+        "markdown": [ "write-good", "markdownlint" ]
+    },
     // coc-explorer
     "explorer.icon.expanded": "▾",
     "explorer.icon.shrinked": "▸",
