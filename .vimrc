@@ -104,7 +104,7 @@ nnoremap gm :Gmerge<cr>
 nnoremap gu :Gpush<cr>
 nnoremap gl :Glog<cr>
 nnoremap gv :GV<CR>
-nnoremap gp  :Nrun git push<CR>
+nnoremap gp :Nrun git push<CR>
 command! -complete=file -nargs=* Nrun :call s:Terminal(<q-args>)
 function! s:Terminal(cmd)
   execute 'belowright 5new'
@@ -123,7 +123,7 @@ function! s:OnExit(job_id, status, event) dict
   endif
 endfunction
 "rhysd/git-messenger
-nnoremap <Leader>gm :GitMessenger<CR>
+nnoremap gm :GitMessenger<CR>
 " vim-gitgutter
 nmap ]c <Plug>(GitGutterNextHunk)
 nmap [c <Plug>(GitGutterPrevHunk)
@@ -178,6 +178,15 @@ let g:airline_powerline_fonts = 1            " 这个是安装字体后必须设
 let g:airline_theme = 'jellybeans'           " luna,term,tomorrow,ubaryd,zenburn
 let g:airline#extensions#tabline#enabled = 1 " 用顶部tabline
 let g:airline#extensions#coc#enabled = 1
+function! MyStatusGitChanges() abort
+  let gutter = get(b:, 'gitgutter', {})
+  if empty(gutter) | return '' | endif
+  let summary = gutter['summary']
+  if summary[0] == 0 && summary[1] == 0 && summary[2] == 0
+    return ''
+  endif
+  return '  +'.summary[0].' ~'.summary[1].' -'.summary[2].' '
+endfunction
 
 " startify
 let g:webdevicons_enable_startify = 1
