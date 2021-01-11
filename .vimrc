@@ -1,4 +1,4 @@
-let mapleader=";"                               "定义Leader键
+let mapleader = ";"                               "定义Leader键
 filetype on                                     "侦测文件类型
 filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
@@ -6,10 +6,8 @@ filetype indent on                              "侦测语言的智能缩
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'                       " 符号成对修改
 Plug 'gcmt/wildfire.vim'                        " 代码块选择
-Plug 'jpo/vim-railscasts-theme'
-Plug 'tomasiser/vim-code-dark'
+Plug 'jpo/vim-railscasts-theme'                 " 主题
 Plug 'roxma/vim-tmux-clipboard'                 " vim tmux共享剪贴板
-Plug 'tmhedberg/SimpylFold'                     " 代码折叠
 Plug 'haya14busa/incsearch.vim'                 " 搜索插件
 Plug 'farmergreg/vim-lastplace'                 " 打开文件跳转到最后一次位置
 Plug 'voldikss/vim-floaterm'                    " 浮动终端
@@ -32,7 +30,7 @@ Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'liuchengxu/vista.vim'                     " 大纲
-Plug 'bronson/vim-trailing-whitespace'
+Plug 'bronson/vim-trailing-whitespace'          " 行尾空白
 " markdown
 Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
@@ -55,11 +53,10 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 nnoremap <leader><space> :FixWhitespace<cr>
 
 " tmhedberg/SimpylFold
-set foldmethod=indent
+set foldmethod=marker
 let g:SimpylFold_docstring_preview = 1
 
 " haya14busa/incsearch
-set hlsearch
 nnoremap <Esc> :<C-u>nohlsearch<CR>
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
@@ -76,15 +73,16 @@ nnoremap <Leader>rg :Rg<CR>
 " liuchengxu/vista
 nnoremap <Leader>vs :Vista!!<CR>
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
-let g:vista_default_executive = 'coc'
+let g:vista_default_executive = 'ctags'
 let g:vista_fzf_preview = ['right:50%']
+let g:fzf_preview_window = 'right:50%'
 let g:vista_update_on_text_changed = 1
+let g:vista_echo_cursor_strategy ='floating_win'
 let g:vista#renderer#enable_icon = 1
-let g:vista_executive_for = {
-  \ 'python': 'coc',
-  \ 'json': 'coc',
-  \ 'yml': 'coc',
-  \ }
+let g:vista#renderer#icons = {
+\   "function": "\uf794",
+\   "variable": "\uf71b",
+\  }
 
 " vim-easymotion
 let g:EasyMotion_smartcase = 1      "忽略大小写
@@ -97,21 +95,45 @@ map <leader>r <Plug>(easymotion-repeat)
 
 " Git相关
 " vim-fugitive
-nnoremap <Leader>gw :Gwrite<cr>
-nnoremap <Leader>gc :Gcommit<cr>
-nnoremap <Leader>gb :Gblame<cr>
-nnoremap <Leader>gd :Gvdiff<cr>
-nnoremap <Leader>gs :Gstatus<cr>
-nnoremap <Leader>gm :Gmerge<cr>
-nnoremap <Leader>gu :Gpush<cr>
-nnoremap <Leader>gl :Glog<cr>
-nnoremap <Leader>gv :GV<CR>
+nnoremap gw :Gwrite<cr>
+nnoremap gc :Gcommit -a -v<cr>
+nnoremap gb :Gblame<cr>
+nnoremap gd :Gvdiff<cr>
+nnoremap gs :Gstatus<cr>
+nnoremap gm :Gmerge<cr>
+nnoremap gu :Gpush<cr>
+nnoremap gl :Glog<cr>
+nnoremap gv :GV<CR>
+nnoremap gp  :Nrun git push<CR>
+command! -complete=file -nargs=* Nrun :call s:Terminal(<q-args>)
+function! s:Terminal(cmd)
+  execute 'belowright 5new'
+  set winfixheight
+  call termopen(a:cmd, {
+        \ 'on_exit': function('s:OnExit'),
+        \ 'buffer_nr': bufnr('%'),
+        \})
+  call setbufvar('%', 'is_autorun', 1)
+  execute 'wincmd p'
+endfunction
+
+function! s:OnExit(job_id, status, event) dict
+  if a:status == 0
+    execute 'silent! bd! '.self.buffer_nr
+  endif
+endfunction
 "rhysd/git-messenger
 nnoremap <Leader>gm :GitMessenger<CR>
 " vim-gitgutter
+nmap ]c <Plug>(GitGutterNextHunk)
+nmap [c <Plug>(GitGutterPrevHunk)
 let g:gitgutter_max_signs = 800     "更改显示标示行数限制
-nmap ]h <Plug>(GitGutterNextHunk)
-nmap [h <Plug>(GitGutterPrevHunk)
+let g:gitgutter_preview_win_floating = 1
+" let g:gitgutter_sign_added = '▎'
+" let g:gitgutter_sign_modified = '░'
+" let g:gitgutter_sign_removed = '▏'
+" let g:gitgutter_sign_removed_first_line = '▔'
+" let g:gitgutter_sign_modified_removed = '▒'
 " mbbill/undotree
 nnoremap <Leader>ut :UndotreeToggle<CR>
 if has("persistent_undo")
@@ -125,10 +147,11 @@ nnoremap <silent> <Leader>IW :call UncolorAllWords()<CR>
 nnoremap <silent> <Leader>n :call WordNavigation('forward')<CR>
 
 " Yggdroot/indentLine
-let g:indentLine_char            = '|'
-let g:indentLine_enabled         = 1
-let g:indentLine_color_term      = 238
-let g:indentLine_fileTypeExclude = ['startify', 'coc-explorer', 'json']
+let g:indentLine_char = '┊'
+let g:indentLine_enabled = 1
+let g:indentLine_color_term = 238
+" let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_fileTypeExclude = ['startify', 'coc-explorer']
 
 " junegunn/vim-easy-align
 xmap ga <Plug>(EasyAlign)
@@ -142,12 +165,18 @@ let g:choosewin_overlay_enable = 0
 let g:rainbow_active = 1
 
 " vim-airline/vim-airline
-nnoremap <silent> <C-D> :bprevious<CR>:bdelete #<CR>
 nnoremap <silent> <C-N> :bn<CR>
 nnoremap <silent> <C-P> :bp<CR>
-let g:airline_powerline_fonts = 1                 " 这个是安装字体后必须设置此项
-let g:airline_theme='ubaryd'                      " luna,term,tomorrow,ubaryd,zenburn
-let g:airline#extensions#tabline#enabled=1        " 用顶部tabline
+nnoremap <silent> <C-D> :bprevious<CR>:bdelete #<CR>
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+let g:airline_powerline_fonts = 1            " 这个是安装字体后必须设置此项
+let g:airline_theme = 'jellybeans'           " luna,term,tomorrow,ubaryd,zenburn
+let g:airline#extensions#tabline#enabled = 1 " 用顶部tabline
 let g:airline#extensions#coc#enabled = 1
 
 " startify
@@ -155,7 +184,6 @@ let g:webdevicons_enable_startify = 1
 nnoremap <Leader>si :Startify<CR>
 let g:startify_bookmarks = [
   \ {'c': '~/dotfiles/.vimrc' },
-  \ {'b': '~/Blog/README.md'},
   \ {'a': '~/hejie.xyz/_config.yml'}
   \ ]
 
@@ -167,6 +195,7 @@ let g:webdevicons_enable_airline_tabline = 1    " airline tab支持
 let g:webdevicons_enable_airline_statusline = 1 " airline statuslien支持
 
 " neoclide/coc.vim
+" 屏蔽乌干达儿童
 set shortmess+=c
 " tab键补全
 inoremap <silent><expr> <TAB>
@@ -203,7 +232,7 @@ function! s:cocActionsOpenFromSelected(type) abort
   execute 'CocCommand actions.open ' . a:type
 endfunction
 xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>aw  <Plug>(coc-codeaction-selected)w
+nmap <leader>aw  <Plug>(coc-codeaction-selected)
 " 诊断面板以及跳转
 nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
 nnoremap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -226,6 +255,7 @@ let g:coc_global_extensions = [
   \ 'coc-python',
   \ 'coc-pyright',
   \ 'coc-diagnostic',
+  \ 'coc-highlight',
   \ 'coc-json',
   \ 'coc-actions',
   \ 'coc-spell-checker',
@@ -256,63 +286,75 @@ nnoremap ,cl :CocCommand todolist.clear<CR>
 nnoremap ,t :CocCommand translator.popup<CR>
 nnoremap ,tl :CocCommand translator.exportHistory<CR>
 
-"通用设置 ------
+" 窗口显示配色
 set t_Co=256                                            " 开启256色支持
+set background=dark                                     " 背景色
+colorscheme railscasts                                  " 主题
 set guifont=Monaco:h16                                  " 默认字体和大小
-set showtabline=0                                       " 隐藏顶部标签栏
+set showtabline=2                                       " 显示顶部标签栏
+set laststatus=2                                        " 显示状态栏
 set guioptions-=r                                       " 隐藏右侧滚动条
 set guioptions-=L                                       " 隐藏左侧滚动条
 set guioptions-=b                                       " 隐藏底部滚动条
-set laststatus=2                                        " 显示状态栏
+set number                                              " 显示行号
 set ruler                                               " 显示光标位置
 set cursorline                                          " 高亮行
-set background=dark                                     " 背景色
-colorscheme railscasts
 set splitbelow                                          " 允许在下部分割布局
 set splitright                                          " 允许在右侧分隔布局
-syntax enable                                           " 开启语法高亮
-syntax on                                               " 自动语法高亮
-set showmatch                                           " 高亮显示匹配的括号
+set showmatch                                           " 高亮显示匹配括号
 set matchtime=1                                         " 匹配括号高亮的时间（单位是十分之一秒）
 set noeb                                                " 关闭错误的提示
-set nocompatible                                        " 不兼容原始vi模式
-set cmdheight=2                                         " 命令行的高度
-set showcmd                                             " select模式下显示选中的行数
+set nocompatible                                        " 高亮显示匹配括号式
+set cmdheight=1                                         " 命令行的高度
+set showcmd                                             " 显示没有完成命令
 set whichwrap+=<,>,h,l                                  " 光标键跨行
-set ttimeoutlen=0                                       " <ESC>键响应时间
 set virtualedit=block,onemore                           " 允许光标出现在最后一个字符的后面
+set numberwidth=3                                       " 默认占据4空间,超过999行时更改
+set belloff=all                                         " 所有事件下（包括错按esc，错按backspace）不发出声音
+set scrolloff=3                                         " 光标移动到buffer的顶部和底部时保持5行距离
+set completeopt=menu,preview                            " 代码补全
+" 语法
+syntax enable                                           " 开启语法高亮
+syntax on                                               " 自动语法高亮
+" 其他
+set ttimeoutlen=0                                       " <ESC>键响应时间
 set magic                                               " 设置魔术
 set clipboard=unnamed                                   " 共享粘贴板
-set numberwidth=4                                       " 默认占据4空间,超过999行时更改
-set smartindent                                         " 智能的选择对齐方式
-set expandtab                                           " 将制表符扩展为空格
-set nu smarttab autoindent sw=4 ts=4 sts=4 et tw=78 shiftwidth=4 tabstop=4 softtabstop=4
-set autoread
-set nowrap                                              " 禁止折行
 set backspace=2                                         " 使用回车键正常处理indent,eol,start等
-set sidescroll=10                                       " 向右滚动字符数
-set nobackup                                            " 不要备份
-set nowritebackup                                       " 不要写入备份
-set noswapfile                                          " 禁止生成临时文件交换文件
-set confirm                                             " 在处理未保存或只读文件的时候，弹出确认
-set langmenu=zh_CN.UTF-8
-set helplang=cn
+" 编码
 set encoding=utf-8                                      " 新文件的编码为 UTF-8
 set termencoding=utf-8                                  " 只影响普通模式 (非图形界面) 下的 Vim
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030 " 自动编码依次尝试
 set fileformat=unix                                     " unix的格式保存文件
-set updatetime=100                                      " 30毫秒更新
-set belloff=all                                         " 所有事件下（包括错按esc，错按backspace）不发出声音
-set completeopt=preview,menu                            " 代码补全
-set scrolloff=3                                         " 光标移动到buffer的顶部和底部时保持3行距离
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
-" 打开文件自动定位到最后编辑的位置
+set updatetime=30                                       " 30毫秒更新
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
-vnoremap <Leader>y "+y
-nmap <Leader>p "+p
+" 缩进排版
+set smartindent                                         " 智能的选择对齐方式
+set expandtab                                           " 将制表符扩展为空格
+set smarttab                                            " 在行和段使用制表符
+set autoindent                                          " 自动缩进
+set shiftwidth=4                                        " 格式化时制表符占用空格数
+set tabstop=4                                           " 编辑时制表符占用空格数
+set softtabstop=4                                       " 设置4个空格为制表符
+set sidescroll=1                                        " 向右滚动字符数
+set nofoldenable                                        " 禁用折叠代码
+set nowrap                                              " 长度不够禁止折行
+" 搜索
+set hlsearch                                            " 高亮显示所有搜索到的内容
+set incsearch                                           " 光标立刻跳到搜索内容
+set nowrapscan                                          " 搜索到最后匹配的位置后,再次搜索不回到第一个匹配处
+" 缓存
+set nobackup                                            " 不要备份
+set nowritebackup                                       " 不要写入备份
+set noswapfile                                          " 禁止生成临时文件交换文件
+set autoread                                            " 文件在vim之外修改过，自动重新读入
+set autowrite                                           " 设置自动保存
+set confirm                                             " 在处理未保存或只读文件的时候，弹出确认
+
 " 快捷键
 "" 窗口选择与移动
 inoremap kj <esc>
+inoremap KJ <esc>
 nnoremap H ^
 nnoremap L $
 " 窗口跳转
@@ -324,7 +366,7 @@ nnoremap <Leader>ww <C-w>w
 nnoremap <Leader>wc <C-w>c
 nnoremap <Leader>ws <C-w>s
 nnoremap <Leader>wv <C-w>v
-nnoremap <Leader>w= <C-w>=
+nnoremap <Leader>whh <C-w>=
 nnoremap <Leader>wjj <C-w>+
 nnoremap <Leader>wkk <C-w>-
 " 文件相关
@@ -335,4 +377,7 @@ nnoremap Q :qa!<CR>
 nnoremap rn :set relativenumber!<CR>
 nnoremap ev :edit $MYVIMRC<CR>
 nnoremap sm :source $MYVIMRC<CR>
-nnoremap <Leader>m :messages<CR>
+vnoremap <Leader>y "+y
+nmap <Leader>p "+p
+nnoremap <space>j <C-d>
+nnoremap <space>k <C-b>
