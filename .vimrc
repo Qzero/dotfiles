@@ -1,10 +1,10 @@
-let mapleader = ";"                               "定义Leader键
 filetype on                                     "侦测文件类型
 filetype plugin on                              "侦测类型开启插件
 filetype indent on                              "侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'                       " 符号成对修改
+Plug 'tpope/vim-repeat'                         " 重复操作
 Plug 'gcmt/wildfire.vim'                        " 代码块选择
 Plug 'jpo/vim-railscasts-theme'                 " 主题
 Plug 'roxma/vim-tmux-clipboard'                 " vim tmux共享剪贴板
@@ -22,7 +22,9 @@ Plug 'ybian/smartim'                            " 解决中文输入法无法输
 Plug 'lfv89/vim-interestingwords'               " 变量彩色凸显
 Plug 'brooth/far.vim'                           " 替换
 Plug 'Yggdroot/indentLine'                      " 缩进线
-Plug 'tpope/vim-commentary'                     " 注释
+" Plug 'tpope/vim-commentary'                     " 注释
+Plug 'scrooloose/nerdcommenter'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
 Plug 'yianwillis/vimcdoc'                       " 中文帮助文档
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全框架
@@ -31,6 +33,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'liuchengxu/vista.vim'                     " 大纲
 Plug 'bronson/vim-trailing-whitespace'          " 行尾空白
+Plug 'ctrlpvim/ctrlp.vim' , { 'for': ['cs', 'vim-plug'] }
 " markdown
 Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
@@ -49,12 +52,22 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+let g:ctrlp_map = '<c-m>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" scrooloose/nerdcommenter
+let g:NERDSpaceDelims=1     "自动加空格
+
+" liuchengxu/vim-which-key
+nnoremap <silent> ` :WhichKey '<Space>'<CR>
+
 " bronson/vim-trailing-whitespace
 nnoremap <leader><space> :FixWhitespace<cr>
 
 " tmhedberg/SimpylFold
-set foldmethod=marker
-let g:SimpylFold_docstring_preview = 1
+set foldmethod=indent
+set foldlevelstart=99
+let g:SimpylFold_docstring_preview = 0
 
 " haya14busa/incsearch
 nnoremap <Esc> :<C-u>nohlsearch<CR>
@@ -62,26 +75,43 @@ map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
-" junegunn/fzf
-nnoremap <Leader>ch :History:<CR>
-nnoremap <Leader>fc :Commits<CR>
-nnoremap <Leader>fg :GFiles?<CR>
-nnoremap <Leader>le :Lines<CR>
-nnoremap <Leader>ca :Commands<CR>
-nnoremap <Leader>rg :Rg<CR>
-
 " liuchengxu/vista
 nnoremap <Leader>vs :Vista!!<CR>
+let g:vista_sidebar_width = '36'
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
-let g:vista_default_executive = 'ctags'
-let g:vista_fzf_preview = ['right:50%']
-let g:fzf_preview_window = 'right:50%'
+let g:vista_default_executive = 'coc'
+" let g:vista_fzf_preview = ['right:50%']
+" let g:fzf_preview_window = 'right:50%'
 let g:vista_update_on_text_changed = 1
-let g:vista_echo_cursor_strategy ='floating_win'
+" let g:vista_echo_cursor_strategy ='floating_win'
+let g:vista_sidebar_position = 'vertical topleft'
 let g:vista#renderer#enable_icon = 1
 let g:vista#renderer#icons = {
-\   "function": "\uf794",
-\   "variable": "\uf71b",
+\    "class": "\uf0e8",
+\    "color": "\ue22b",
+\    "constant": "\uf8fe",
+\    "default": "\uf29c",
+\    "enum": "\uf435",
+\    "enumMember": "\uf02b",
+\    "event": "\ufacd",
+\    "field": "\uf93d",
+\    "file": "\uf723",
+\    "folder": "\uf115",
+\    "function": "\u0192",
+\    "interface": "\uf417",
+\    "keyword": "\uf1de",
+\    "method": "\uf6a6",
+\    "module": "\uf40d",
+\    "operator": "\uf915",
+\    "property": "\ue624",
+\    "reference": "\ufa46",
+\    "snippet": "\ue60b",
+\    "struct": "\ufb44",
+\    "text": "\ue612",
+\    "typeParameter": "\uf728",
+\    "unit": "\uf475",
+\    "value": "\uf89f",
+\    "variable": "\ue71b"
 \  }
 
 " vim-easymotion
@@ -96,7 +126,7 @@ map <leader>r <Plug>(easymotion-repeat)
 " Git相关
 " vim-fugitive
 nnoremap gw :Gwrite<cr>
-nnoremap gav :Gcommit -a -v<cr>
+nnoremap gc :Gcommit -a -v<cr>
 nnoremap gb :Gblame<cr>
 nnoremap gd :Gvdiff<cr>
 nnoremap gs :Gstatus<cr>
@@ -105,8 +135,7 @@ nnoremap gu :Gpush<cr>
 nnoremap gl :Glog<cr>
 nnoremap gv :GV<CR>
 " 异步执行git
-" nnoremap gp :Nrun git push<CR>
-nnoremap gp :Nrun Gpush<CR>
+nnoremap gp :Nrun git push<CR>
 command! -complete=file -nargs=* Nrun :call s:Terminal(<q-args>)
 function! s:Terminal(cmd)
   execute 'belowright 5new'
@@ -131,13 +160,21 @@ nmap ]c <Plug>(GitGutterNextHunk)
 nmap [c <Plug>(GitGutterPrevHunk)
 let g:gitgutter_max_signs = 800     "更改显示标示行数限制
 let g:gitgutter_preview_win_floating = 1
-" let g:gitgutter_sign_added = '▎'
-" let g:gitgutter_sign_modified = '░'
-" let g:gitgutter_sign_removed = '▏'
-" let g:gitgutter_sign_removed_first_line = '▔'
-" let g:gitgutter_sign_modified_removed = '▒'
 " mbbill/undotree
 nnoremap <Leader>ut :UndotreeToggle<CR>
+let g:undotree_DiffAutoOpen = 1
+let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_ShortIndicators = 1
+let g:undotree_WindowLayout = 2
+let g:undotree_DiffpanelHeight = 8
+let g:undotree_SplitWidth = 24
+function g:Undotree_CustomMap()
+	nmap <buffer> u <plug>UndotreeNextState
+	nmap <buffer> e <plug>UndotreePreviousState
+	nmap <buffer> U 5<plug>UndotreeNextState
+	nmap <buffer> E 5<plug>UndotreePreviousState
+endfunc
+" 保存路径
 if has("persistent_undo")
     set undodir=~/undodir
     set undofile
@@ -167,8 +204,6 @@ let g:choosewin_overlay_enable = 0
 let g:rainbow_active = 1
 
 " vim-airline/vim-airline
-nnoremap <silent> <C-N> :bn<CR>
-nnoremap <silent> <C-P> :bp<CR>
 nnoremap <silent> <C-D> :bprevious<CR>:bdelete #<CR>
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
@@ -176,6 +211,9 @@ nmap <leader>3 <Plug>AirlineSelectTab3
 nmap <leader>4 <Plug>AirlineSelectTab4
 nmap <leader>5 <Plug>AirlineSelectTab5
 nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
 let g:airline_powerline_fonts = 1            " 这个是安装字体后必须设置此项
 let g:airline_theme = 'jellybeans'           " luna,term,tomorrow,ubaryd,zenburn
 let g:airline#extensions#tabline#enabled = 1 " 用顶部tabline
@@ -199,6 +237,19 @@ let g:webdevicons_enable_airline_statusline = 1 " airline statuslien支持
 " neoclide/coc.vim
 " 屏蔽乌干达儿童
 set shortmess+=c
+" set signcolumn=number
+" set signcolumn=yes
+" 同单词高亮
+autocmd CursorHold * silent call CocActionAsync('highlight')
+" 代码折叠
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder.
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
 " tab键补全
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -207,7 +258,7 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 " 确认补全
 if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
+  inoremap <silent><expr> <space><space> coc#refresh()
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
@@ -215,11 +266,10 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-" Enter键确认
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 " 显示文档
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> 'k :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -233,16 +283,15 @@ endfunction
 function! s:cocActionsOpenFromSelected(type) abort
   execute 'CocCommand actions.open ' . a:type
 endfunction
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>aw  <Plug>(coc-codeaction-selected)
+xmap 'a  <Plug>(coc-codeaction-selected)
+nmap 'aw  <Plug>(coc-codeaction-selected)
 " 诊断面板以及跳转
-nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
-nnoremap <silent> [g <Plug>(coc-diagnostic-prev)
-nnoremap <silent> ]g <Plug>(coc-diagnostic-next)
+nnoremap <silent> 'd  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> 'k <Plug>(coc-diagnostic-prev)
+nnoremap <silent> 'j <Plug>(coc-diagnostic-next)
 
-nnoremap <silent> <space>p  :<C-u>CocList extensions<cr>
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-nnoremap <silent> <space>e :CocCommand explorer<cr>
+nnoremap <silent> 'p  :<C-u>CocList extensions<cr>
+nnoremap <silent> 'c  :<C-u>CocList commands<cr>
 " coc-extensions
 let g:coc_global_extensions = [
   \ 'coc-todolist',
@@ -255,7 +304,6 @@ let g:coc_global_extensions = [
   \ 'coc-pairs',
   \ 'coc-floaterm',
   \ 'coc-python',
-  \ 'coc-pyright',
   \ 'coc-diagnostic',
   \ 'coc-highlight',
   \ 'coc-json',
@@ -264,29 +312,30 @@ let g:coc_global_extensions = [
   \ 'coc-marketplace'
   \ ]
 " coc-marketplace
-nnoremap ,mp :CocList marketplace<CR>
+nnoremap 'm :CocList marketplace<CR>
 " coc-floaterm
-nnoremap ,ft :CocList floaterm<CR>
-nnoremap ,fn :CocCommand floaterm.new<CR>
-nnoremap ,fnn :CocCommand floaterm.next<CR>
-nnoremap ,fpp :CocCommand floaterm.prev<CR>
+nnoremap 'ft :CocList floaterm<CR>
+nnoremap 'fn :CocCommand floaterm.new<CR>
+nnoremap 'fnn :CocCommand floaterm.next<CR>
+nnoremap 'fpp :CocCommand floaterm.prev<CR>
 " coc-bookmark
-nnoremap ,bc :CocCommand bookmark.toggle<CR>
-nnoremap ,ba :CocCommand bookmark.annotate<CR>
-nnoremap ,bm :CocList bookmark<CR>
+nnoremap 'bc :CocCommand bookmark.toggle<CR>
+nnoremap 'ba :CocCommand bookmark.annotate<CR>
+nnoremap 'bm :CocList bookmark<CR>
 " coc-fzf-preview
-nnoremap ,fl :CocCommand fzf-preview.Lines<CR>
-nnoremap ,fc :CocCommand fzf-preview.Changes<CR>
+nnoremap 'fl :CocCommand fzf-preview.Lines<CR>
 " coc-todolist
-nnoremap ,cc :CocCommand todolist.create<CR>
-nnoremap ,ctu :CocCommand todolist.upload<CR>
-nnoremap ,ctd :CocCommand todolist.download<CR>
-nnoremap ,cte :CocCommand todolist.export<CR>
-nnoremap ,ctc :CocCommand todolist.closeNotice<CR>
-nnoremap ,cl :CocCommand todolist.clear<CR>
+nnoremap 'cc :CocCommand todolist.create<CR>
+nnoremap 'ctu :CocCommand todolist.upload<CR>
+nnoremap 'ctd :CocCommand todolist.download<CR>
+nnoremap 'cte :CocCommand todolist.export<CR>
+nnoremap 'ctc :CocCommand todolist.closeNotice<CR>
+nnoremap 'cl :CocCommand todolist.clear<CR>
 " coc-translator
-nnoremap ,t :CocCommand translator.popup<CR>
-nnoremap ,tl :CocCommand translator.exportHistory<CR>
+nnoremap 't :CocCommand translator.popup<CR>
+nnoremap 'tl :CocCommand translator.exportHistory<CR>
+" coc-explorer
+nnoremap 'e :CocCommand explorer<cr>
 
 " 窗口显示配色
 set t_Co=256                                            " 开启256色支持

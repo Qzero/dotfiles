@@ -1,31 +1,37 @@
 {
+    // 插件每天自动更新
     "coc.preferences.extensionUpdateCheck": "daily",
-    "coc.preferences.formatOnSaveFiletypes": ["python"],
-    "coc.preferences.hoverTarget": "preview",
+    // 保存时自动格式化
+    "coc.preferences.formatOnSaveFiletypes": [
+        "json"
+    ],
+    "coc.preferences.hoverTarget": "float",
     "coc.preferences.enableFloatHighlight": true,
     "coc.preferences.messageLevel": "error",
     "coc.source.around.firstMatch": false,
     "coc.source.buffer.firstMatch": false,
     "coc.source.syntax.firstMatch": false,
-    // cspell
+    // ---cspell
     "cSpell.language": "en",
     "cSpell.maxNumberOfProblems": 100,
     "cSpell.numSuggestions": 8,
-    "cSpell.minWordLength": 4,
-    "cSpell.enabledLanguageIds": ["json"],
-    "cSpell.enabled": false,
+    "cSpell.minWordLength": 2,
+    "cSpell.enabledLanguageIds": [
+        "json"
+    ],
+    "cSpell.eabled": true,
     "cSpell.showStatus": true,
-    // suggest
+    // ---suggest
+    "suggest.minTriggerInputLength": 2,
     "suggest.detailMaxLength": 60,
     "suggest.noselect": true,
     "suggest.enablePreselect": false,
-    "suggest.triggerAfterInsertEnter": true,
+    "suggest.triggerAfterInsertEnter": false,
     "suggest.autoTrigger": "always",
-    "suggest.timeout": 5000,
+    "suggest.timeout": 1000,
     "suggest.enablePreview": true,
     "suggest.floatEnable": true,
     "suggest.detailField": "preview",
-    "suggest.snippetIndicator": "",
     "suggest.triggerCompletionWait": 100,
     "suggest.echodocSupport": true,
     "suggest.completionItemKindLabels": {
@@ -55,22 +61,22 @@
         "value": "\uf89f",
         "variable": "\ue71b"
     },
-    // coc-todolist
-    "todolist.autoUpload": true,
-    "todolist.monitor": true,
-    //diagnostic
-    "diagnostic.signOffset": 1,
-    "diagnostic.errorSign": "\uf467",
-    "diagnostic.warningSign": "\uf071",
-    "diagnostic.infoSign": "\uf129",
-    "diagnostic.hintSign": "\uf864",
+    // ---diagnostic
+    "diagnostic.signOffset": 0,
+    "diagnostic.errorSign": "×",
+    "diagnostic.warningSign": "»",
+    "diagnostic.infoSign": "ღ",
+    "diagnostic.hintSign": "ஐ",
     "diagnostic.displayByAle": false,
+    // 插入时检测
     "diagnostic.refreshOnInsertMode": true,
+    // 保存时检测
     "diagnostic.refreshAfterSave": true,
     "diagnostic.checkCurrentLine": true,
-    "diagnostic.virtualTextPrefix": " ❯❯❯ ",
+    "diagnostic.virtualTextPrefix": "❯❯❯ ",
     "diagnostic.virtualText": true,
     "codeLens.enable": true,
+    "list.previewHighlightGroup": "Statement",
     "diagnostic-languageserver.filetypes": {
         "vim": "vint",
         "markdown": [
@@ -78,13 +84,25 @@
             "markdownlint"
         ]
     },
-    // coc-explorer
+    // ---vimlsp
+    "vimlsp.diagnostic.enable": false,
+    "vimlsp.indexes.count": 2,
+    "vimlsp.suggest.fromVimruntime": true,
+    // ---coc-explorer
+    // 右边显示
+    "explorer.position": "floating",
+    // 标识
     "explorer.icon.expanded": "▾",
     "explorer.icon.shrinked": "▸",
-    "explorer.width": 26,
-    "explorer.file.column.indent.indentLine": true,
+    // 宽度
+    "explorer.width": 30,
+    // 开启nerdfont
     "explorer.icon.enableNerdfont": true,
+    // 显示隐藏文件
     "explorer.file.showHiddenFiles": true,
+    // 结构标识
+    "explorer.file.column.indent.indentLine": true,
+    // 显示忽略
     "explorer.file.column.git.showIgnored": true,
     "explorer.keyMappings": {
         "k": "nodePrev",
@@ -131,13 +149,77 @@
         "gb": "gotoSource:buffer",
         "[[": "sourcePrev",
         "]]": "sourceNext",
-        "[d": "diagnosticPrev",
-        "]d": "diagnosticNext",
         "gk": "gitPrev",
-        "gj": "gitNext",
-        "<-": "gitStage",
-        "->": "gitUnstage"
+        "gj": "gitNext"
     },
-    // add your languageServer into this list
-    "languageserver": {}
+    // ---add your languageServer into this list
+    "languageserver": {
+        "python": {
+            "command": "python",
+            "args": [
+                "-mpyls",
+                "-vv",
+                "--log-file",
+                "/tmp/lsp_python.log"
+            ],
+            "trace.server": "verbose",
+            "filetypes": [
+                "python"
+            ],
+            "settings": {
+                "pyls": {
+                    "enable": true,
+                    "trace": {
+                        "server": "verbose"
+                    },
+                    "commandPath": "",
+                    "configurationSources": [
+                        "pycodestyle"
+                    ],
+                    "plugins": {
+                        "jedi_completion": {
+                            "enabled": true
+                        },
+                        "jedi_hover": {
+                            "enabled": true
+                        },
+                        "jedi_references": {
+                            "enabled": true
+                        },
+                        "jedi_signature_help": {
+                            "enabled": true
+                        },
+                        "jedi_symbols": {
+                            "enabled": true,
+                            "all_scopes": true
+                        },
+                        "mccabe": {
+                            "enabled": true,
+                            "threshold": 15
+                        },
+                        "preload": {
+                            "enabled": true
+                        },
+                        "pycodestyle": {
+                            "enabled": true
+                        },
+                        "pydocstyle": {
+                            "enabled": false,
+                            "match": "(?!test_).*\\.py",
+                            "matchDir": "[^\\.].*"
+                        },
+                        "pyflakes": {
+                            "enabled": true
+                        },
+                        "rope_completion": {
+                            "enabled": true
+                        },
+                        "yapf": {
+                            "enabled": true
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
