@@ -1,6 +1,7 @@
-filetype on                                     "侦测文件类型
-filetype plugin on                              "侦测类型开启插件
-filetype indent on                              "侦测语言的智能缩
+let mapleader = ";"                             " 定义Leader键
+filetype on                                     " 侦测文件类型
+filetype plugin on                              " 侦测类型开启插件
+filetype indent on                              " 侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'                       " 符号成对修改
@@ -26,14 +27,13 @@ Plug 'Yggdroot/indentLine'                      " 缩进线
 Plug 'scrooloose/nerdcommenter'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
-Plug 'yianwillis/vimcdoc'                       " 中文帮助文档
+" Plug 'yianwillis/vimcdoc'                       " 中文帮助文档
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全框架
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' } " cocPython插件
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'liuchengxu/vista.vim'                     " 大纲
 Plug 'bronson/vim-trailing-whitespace'          " 行尾空白
-Plug 'ctrlpvim/ctrlp.vim' , { 'for': ['cs', 'vim-plug'] }
 " markdown
 Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
@@ -52,9 +52,6 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-let g:ctrlp_map = '<c-m>'
-let g:ctrlp_cmd = 'CtrlP'
-
 " scrooloose/nerdcommenter
 let g:NERDSpaceDelims=1     "自动加空格
 
@@ -63,11 +60,6 @@ nnoremap <silent> ` :WhichKey '<Space>'<CR>
 
 " bronson/vim-trailing-whitespace
 nnoremap <leader><space> :FixWhitespace<cr>
-
-" tmhedberg/SimpylFold
-set foldmethod=indent
-set foldlevelstart=99
-let g:SimpylFold_docstring_preview = 0
 
 " haya14busa/incsearch
 nnoremap <Esc> :<C-u>nohlsearch<CR>
@@ -79,7 +71,7 @@ map g/ <Plug>(incsearch-stay)
 nnoremap <Leader>vs :Vista!!<CR>
 let g:vista_sidebar_width = '36'
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
-let g:vista_default_executive = 'coc'
+let g:vista_default_executive = 'ctags'
 " let g:vista_fzf_preview = ['right:50%']
 " let g:fzf_preview_window = 'right:50%'
 let g:vista_update_on_text_changed = 1
@@ -96,7 +88,6 @@ let g:vista#renderer#icons = {
 \    "event": "\ufacd",
 \    "field": "\uf93d",
 \    "file": "\uf723",
-\    "folder": "\uf115",
 \    "function": "\u0192",
 \    "interface": "\uf417",
 \    "keyword": "\uf1de",
@@ -217,7 +208,6 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 let g:airline_powerline_fonts = 1            " 这个是安装字体后必须设置此项
 let g:airline_theme = 'jellybeans'           " luna,term,tomorrow,ubaryd,zenburn
 let g:airline#extensions#tabline#enabled = 1 " 用顶部tabline
-let g:airline#extensions#coc#enabled = 1
 
 " startify
 let g:webdevicons_enable_startify = 1
@@ -240,16 +230,7 @@ set shortmess+=c
 " set signcolumn=number
 " set signcolumn=yes
 " 同单词高亮
-autocmd CursorHold * silent call CocActionAsync('highlight')
-" 代码折叠
-augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder.
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
-
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 " tab键补全
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -269,7 +250,7 @@ endfunction
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 " 显示文档
-nnoremap <silent> 'k :call <SID>show_documentation()<CR>
+nnoremap <silent> 'h :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -287,19 +268,14 @@ xmap 'a  <Plug>(coc-codeaction-selected)
 nmap 'aw  <Plug>(coc-codeaction-selected)
 " 诊断面板以及跳转
 nnoremap <silent> 'd  :<C-u>CocList diagnostics<cr>
-nnoremap <silent> 'k <Plug>(coc-diagnostic-prev)
-nnoremap <silent> 'j <Plug>(coc-diagnostic-next)
 
 nnoremap <silent> 'p  :<C-u>CocList extensions<cr>
 nnoremap <silent> 'c  :<C-u>CocList commands<cr>
 " coc-extensions
 let g:coc_global_extensions = [
-  \ 'coc-todolist',
-  \ 'coc-bookmark',
   \ 'coc-explorer',
   \ 'coc-vimlsp',
   \ 'coc-fzf-preview',
-  \ 'coc-jedi',
   \ 'coc-translator',
   \ 'coc-pairs',
   \ 'coc-floaterm',
@@ -318,19 +294,8 @@ nnoremap 'ft :CocList floaterm<CR>
 nnoremap 'fn :CocCommand floaterm.new<CR>
 nnoremap 'fnn :CocCommand floaterm.next<CR>
 nnoremap 'fpp :CocCommand floaterm.prev<CR>
-" coc-bookmark
-nnoremap 'bc :CocCommand bookmark.toggle<CR>
-nnoremap 'ba :CocCommand bookmark.annotate<CR>
-nnoremap 'bm :CocList bookmark<CR>
 " coc-fzf-preview
 nnoremap 'fl :CocCommand fzf-preview.Lines<CR>
-" coc-todolist
-nnoremap 'cc :CocCommand todolist.create<CR>
-nnoremap 'ctu :CocCommand todolist.upload<CR>
-nnoremap 'ctd :CocCommand todolist.download<CR>
-nnoremap 'cte :CocCommand todolist.export<CR>
-nnoremap 'ctc :CocCommand todolist.closeNotice<CR>
-nnoremap 'cl :CocCommand todolist.clear<CR>
 " coc-translator
 nnoremap 't :CocCommand translator.popup<CR>
 nnoremap 'tl :CocCommand translator.exportHistory<CR>

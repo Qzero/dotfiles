@@ -1,7 +1,7 @@
 {
     // 插件每天自动更新
     "coc.preferences.extensionUpdateCheck": "daily",
-    // 保存时自动格式化
+    // 自动格式化
     "coc.preferences.formatOnSaveFiletypes": [
         "json"
     ],
@@ -13,14 +13,13 @@
     "coc.source.syntax.firstMatch": false,
     // ---cspell
     "cSpell.language": "en",
+    "cSpell.eabled": true,
     "cSpell.maxNumberOfProblems": 100,
     "cSpell.numSuggestions": 8,
     "cSpell.minWordLength": 2,
     "cSpell.enabledLanguageIds": [
         "json"
     ],
-    "cSpell.eabled": true,
-    "cSpell.showStatus": true,
     // ---suggest
     "suggest.minTriggerInputLength": 2,
     "suggest.detailMaxLength": 60,
@@ -72,7 +71,7 @@
     "diagnostic.refreshOnInsertMode": true,
     // 保存时检测
     "diagnostic.refreshAfterSave": true,
-    "diagnostic.checkCurrentLine": true,
+    "diagnostic.checkCurrentLine": false,
     "diagnostic.virtualTextPrefix": "❯❯❯ ",
     "diagnostic.virtualText": true,
     "codeLens.enable": true,
@@ -90,12 +89,12 @@
     "vimlsp.suggest.fromVimruntime": true,
     // ---coc-explorer
     // 右边显示
-    "explorer.position": "floating",
+    "explorer.position": "right",
     // 标识
     "explorer.icon.expanded": "▾",
     "explorer.icon.shrinked": "▸",
     // 宽度
-    "explorer.width": 30,
+    "explorer.width": 26,
     // 开启nerdfont
     "explorer.icon.enableNerdfont": true,
     // 显示隐藏文件
@@ -149,77 +148,11 @@
         "gb": "gotoSource:buffer",
         "[[": "sourcePrev",
         "]]": "sourceNext",
+        "[d": "diagnosticPrev",
+        "]d": "diagnosticNext",
         "gk": "gitPrev",
         "gj": "gitNext"
     },
     // ---add your languageServer into this list
-    "languageserver": {
-        "python": {
-            "command": "python",
-            "args": [
-                "-mpyls",
-                "-vv",
-                "--log-file",
-                "/tmp/lsp_python.log"
-            ],
-            "trace.server": "verbose",
-            "filetypes": [
-                "python"
-            ],
-            "settings": {
-                "pyls": {
-                    "enable": true,
-                    "trace": {
-                        "server": "verbose"
-                    },
-                    "commandPath": "",
-                    "configurationSources": [
-                        "pycodestyle"
-                    ],
-                    "plugins": {
-                        "jedi_completion": {
-                            "enabled": true
-                        },
-                        "jedi_hover": {
-                            "enabled": true
-                        },
-                        "jedi_references": {
-                            "enabled": true
-                        },
-                        "jedi_signature_help": {
-                            "enabled": true
-                        },
-                        "jedi_symbols": {
-                            "enabled": true,
-                            "all_scopes": true
-                        },
-                        "mccabe": {
-                            "enabled": true,
-                            "threshold": 15
-                        },
-                        "preload": {
-                            "enabled": true
-                        },
-                        "pycodestyle": {
-                            "enabled": true
-                        },
-                        "pydocstyle": {
-                            "enabled": false,
-                            "match": "(?!test_).*\\.py",
-                            "matchDir": "[^\\.].*"
-                        },
-                        "pyflakes": {
-                            "enabled": true
-                        },
-                        "rope_completion": {
-                            "enabled": true
-                        },
-                        "yapf": {
-                            "enabled": true
-                        }
-                    }
-                }
-            }
-        }
-    }
+    "languageserver": {}
 }
