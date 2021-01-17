@@ -1,9 +1,8 @@
 let mapleader = ";"                             " 定义Leader键
-filetype on                                     " 侦测文件类型
-filetype plugin on                              " 侦测类型开启插件
-filetype indent on                              " 侦测语言的智能缩
 
 call plug#begin('~/.vim/plugged')
+Plug 'francoiscabrol/ranger.vim'                " ranger插件
+Plug 'rbgrouleff/bclose.vim'
 Plug 'tpope/vim-surround'                       " 符号成对修改
 Plug 'tpope/vim-repeat'                         " 重复操作
 Plug 'gcmt/wildfire.vim'                        " 代码块选择
@@ -43,6 +42,7 @@ Plug 'tpope/vim-fugitive'                       " git更改标识
 Plug 'airblade/vim-gitgutter'                   " git命令封装
 Plug 'junegunn/gv.vim'                          " git提交树
 Plug 'mbbill/undotree'                          " git本地文件树
+Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
 call plug#end()
 
 nnoremap <Leader><Leader>i :PlugInstall<CR>     " 安装插件
@@ -52,6 +52,9 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+" francoiscabrol/ranger.vim
+nnoremap <silent> <Leader>rg :Ranger<CR>
+
 " scrooloose/nerdcommenter
 let g:NERDSpaceDelims=1     "自动加空格
 
@@ -59,7 +62,7 @@ let g:NERDSpaceDelims=1     "自动加空格
 nnoremap <silent> ` :WhichKey '<Space>'<CR>
 
 " bronson/vim-trailing-whitespace
-nnoremap <leader><space> :FixWhitespace<cr>
+nnoremap <leader>fw :FixWhitespace<cr>
 
 " haya14busa/incsearch
 nnoremap <Esc> :<C-u>nohlsearch<CR>
@@ -69,41 +72,59 @@ map g/ <Plug>(incsearch-stay)
 
 " liuchengxu/vista
 nnoremap <Leader>vs :Vista!!<CR>
+" 打开vista窗口后移动到它
+let g:vista_stay_on_open = 1
 let g:vista_sidebar_width = '36'
+" 跳转到一个符号时，自动关闭vista窗口.
+let g:vista_close_on_jump = 0
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+" 优先选择lsp作为标签来源，其次ctags
+let g:vista_cpp_executive = 'vim_lsp'
 let g:vista_default_executive = 'ctags'
 " let g:vista_fzf_preview = ['right:50%']
-" let g:fzf_preview_window = 'right:50%'
-let g:vista_update_on_text_changed = 1
 " let g:vista_echo_cursor_strategy ='floating_win'
 let g:vista_sidebar_position = 'vertical topleft'
 let g:vista#renderer#enable_icon = 1
 let g:vista#renderer#icons = {
-\    "class": "\uf0e8",
-\    "color": "\ue22b",
-\    "constant": "\uf8fe",
-\    "default": "\uf29c",
-\    "enum": "\uf435",
-\    "enumMember": "\uf02b",
-\    "event": "\ufacd",
-\    "field": "\uf93d",
-\    "file": "\uf723",
-\    "function": "\u0192",
-\    "interface": "\uf417",
-\    "keyword": "\uf1de",
-\    "method": "\uf6a6",
-\    "module": "\uf40d",
-\    "operator": "\uf915",
-\    "property": "\ue624",
-\    "reference": "\ufa46",
-\    "snippet": "\ue60b",
-\    "struct": "\ufb44",
-\    "text": "\ue612",
-\    "typeParameter": "\uf728",
-\    "unit": "\uf475",
-\    "value": "\uf89f",
-\    "variable": "\ue71b"
-\  }
+\    'func': "\uf794",
+\    'function': "\uf794",
+\    'functions': "\uf794",
+\    'var': "\uf5c0",
+\    'variable': "\uf5c0",
+\    'variables': "\uf5c0",
+\    'const': "\uf8ff",
+\    'constant': "\uf8ff",
+\    'constructor': "\uf976",
+\    'method': "\uf6a6",
+\    'package': "\ue612",
+\    'packages': "\ue612",
+\    'enum': "\uf702",
+\    'enummember': "\uf282",
+\    'enumerator': "\uf702",
+\    'module': "\uf136",
+\    'modules': "\uf136",
+\    'type': "\uf7fd",
+\    'typedef': "\uf7fd",
+\    'types': "\uf7fd",
+\    'field': "\uf30b",
+\    'fields': "\uf30b",
+\    'macro': "\uf8a3",
+\    'macros': "\uf8a3",
+\    'map': "\ufb44",
+\    'class': "\uf0e8",
+\    'augroup': "\ufb44",
+\    'struct': "\uf318",
+\    'union': "\ufacd",
+\    'member': "\uf02b",
+\    'target': "\uf893",
+\    'property': "\ufab6",
+\    'interface': "\uf7fe",
+\    'namespace': "\uf475",
+\    'subroutine': "\uf9af",
+\    'implementation': "\uf776",
+\    'typeParameter': "\uf278",
+\    'default': "\uf29c"
+\}
 
 " vim-easymotion
 let g:EasyMotion_smartcase = 1      "忽略大小写
@@ -138,7 +159,6 @@ function! s:Terminal(cmd)
   call setbufvar('%', 'is_autorun', 1)
   execute 'wincmd p'
 endfunction
-
 function! s:OnExit(job_id, status, event) dict
   if a:status == 0
     execute 'silent! bd! '.self.buffer_nr
@@ -167,9 +187,15 @@ function g:Undotree_CustomMap()
 endfunc
 " 保存路径
 if has("persistent_undo")
-    set undodir=~/undodir
+    set undodir=~/dotfiles/undodir
     set undofile
 endif
+" kdheepak/lazygit.nvim
+nnoremap <silent> <leader>lg :LazyGit<CR>
+let g:lazygit_floating_window_winblend = 0 " transparency of floating window
+let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window
+let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters
+let g:lazygit_use_neovim_remote = 1 " for neovim-remote support
 
 " lfv89/vim-interestingwords
 nnoremap <silent> <Leader>iw :call InterestingWords('n')<CR>
@@ -239,7 +265,7 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 " 确认补全
 if has('nvim')
-  inoremap <silent><expr> <space><space> coc#refresh()
+  inoremap <silent><expr> 'c coc#refresh()
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
@@ -302,6 +328,10 @@ nnoremap 'tl :CocCommand translator.exportHistory<CR>
 " coc-explorer
 nnoremap 'e :CocCommand explorer<cr>
 
+" 基础配置
+filetype on                                     " 侦测文件类型
+filetype plugin on                              " 侦测类型开启插件
+filetype indent on                              " 侦测语言的智能缩
 " 窗口显示配色
 set t_Co=256                                            " 开启256色支持
 set background=dark                                     " 背景色
@@ -354,6 +384,8 @@ set tabstop=4                                           " 编辑时制表符占�
 set softtabstop=4                                       " 设置4个空格为制表符
 set sidescroll=1                                        " 向右滚动字符数
 set nofoldenable                                        " 禁用折叠代码
+set foldlevelstart=99                                   " 默认不折叠代码
+set foldmethod=indent                                   " indent方式折叠代码
 set nowrap                                              " 长度不够禁止折行
 " 搜索
 set hlsearch                                            " 高亮显示所有搜索到的内容
@@ -387,9 +419,8 @@ nnoremap <Leader>wjj <C-w>+
 nnoremap <Leader>wkk <C-w>-
 " 文件相关
 nnoremap fs :w<CR>
-nnoremap W :wa<CR>
 nnoremap q :q<CR>
-nnoremap Q :qa!<CR>
+nnoremap qq :qa!<CR>
 nnoremap rn :set relativenumber!<CR>
 nnoremap ev :edit $MYVIMRC<CR>
 nnoremap sm :source $MYVIMRC<CR>

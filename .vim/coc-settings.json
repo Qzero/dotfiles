@@ -6,26 +6,28 @@
         "json"
     ],
     "coc.preferences.hoverTarget": "float",
-    "coc.preferences.enableFloatHighlight": true,
+    "coc.preferences.enableFloatHighlight": false,
     "coc.preferences.messageLevel": "error",
-    "coc.source.around.firstMatch": false,
-    "coc.source.buffer.firstMatch": false,
-    "coc.source.syntax.firstMatch": false,
+    "// coc.source.around.firstMatch": false,
+    "// coc.source.buffer.firstMatch": false,
+    "// coc.source.syntax.firstMatch": false,
     // ---cspell
     "cSpell.language": "en",
     "cSpell.eabled": true,
+    // 可显示最大错误数
     "cSpell.maxNumberOfProblems": 100,
-    "cSpell.numSuggestions": 8,
+    "cSpell.numSuggestions": 7,
     "cSpell.minWordLength": 2,
-    "cSpell.enabledLanguageIds": [
-        "json"
-    ],
+    // 开启语言
+    "cSpell.enabledLanguageIds": [],
     // ---suggest
+    // 第二个字符开始建议
     "suggest.minTriggerInputLength": 2,
-    "suggest.detailMaxLength": 60,
+    // 建议列表最大数
+    "suggest.detailMaxLength": 100,
     "suggest.noselect": true,
-    "suggest.enablePreselect": false,
-    "suggest.triggerAfterInsertEnter": false,
+    "suggest.enablePreselect": true,
+    "suggest.triggerAfterInsertEnter": true,
     "suggest.autoTrigger": "always",
     "suggest.timeout": 1000,
     "suggest.enablePreview": true,
@@ -76,16 +78,10 @@
     "diagnostic.virtualText": true,
     "codeLens.enable": true,
     "list.previewHighlightGroup": "Statement",
-    "diagnostic-languageserver.filetypes": {
-        "vim": "vint",
-        "markdown": [
-            "write-good",
-            "markdownlint"
-        ]
-    },
+    "diagnostic-languageserver.filetypes": {},
     // ---vimlsp
     "vimlsp.diagnostic.enable": false,
-    "vimlsp.indexes.count": 2,
+    "vimlsp.indexes.count": 1,
     "vimlsp.suggest.fromVimruntime": true,
     // ---coc-explorer
     // 右边显示
