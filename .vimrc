@@ -42,7 +42,7 @@ Plug 'tpope/vim-fugitive'                       " git更改标识
 Plug 'airblade/vim-gitgutter'                   " git命令封装
 Plug 'junegunn/gv.vim'                          " git提交树
 Plug 'mbbill/undotree'                          " git本地文件树
-Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
+Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' } "lazygit
 call plug#end()
 
 nnoremap <Leader><Leader>i :PlugInstall<CR>     " 安装插件
@@ -58,14 +58,11 @@ nnoremap <silent> <Leader>rg :Ranger<CR>
 " scrooloose/nerdcommenter
 let g:NERDSpaceDelims=1     "自动加空格
 
-" liuchengxu/vim-which-key
-nnoremap <silent> ` :WhichKey '<Space>'<CR>
-
 " bronson/vim-trailing-whitespace
 nnoremap <leader>fw :FixWhitespace<cr>
 
 " haya14busa/incsearch
-nnoremap <Esc> :<C-u>nohlsearch<CR>
+nnoremap <Leader><cr> :<C-u>nohlsearch<CR>
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
@@ -74,7 +71,7 @@ map g/ <Plug>(incsearch-stay)
 nnoremap <Leader>vs :Vista!!<CR>
 " 打开vista窗口后移动到它
 let g:vista_stay_on_open = 1
-let g:vista_sidebar_width = '36'
+let g:vista_sidebar_width = '33'
 " 跳转到一个符号时，自动关闭vista窗口.
 let g:vista_close_on_jump = 0
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
@@ -401,8 +398,7 @@ set confirm                                             " 在处理未保存或�
 
 " 快捷键
 "" 窗口选择与移动
-inoremap kj <esc>
-inoremap KJ <esc>
+inoremap fd <esc>
 nnoremap H ^
 nnoremap L $
 " 窗口跳转
@@ -426,5 +422,3 @@ nnoremap ev :edit $MYVIMRC<CR>
 nnoremap sm :source $MYVIMRC<CR>
 vnoremap <Leader>y "+y
 nmap <Leader>p "+p
-nnoremap <space>j <C-d>
-nnoremap <space>k <C-b>
