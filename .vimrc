@@ -43,6 +43,7 @@ Plug 'airblade/vim-gitgutter'                   " git命令封装
 Plug 'junegunn/gv.vim'                          " git提交树
 Plug 'mbbill/undotree'                          " git本地文件树
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' } "lazygit
+Plug 'tveskag/nvim-blame-line'
 call plug#end()
 
 nnoremap <Leader><Leader>i :PlugInstall<CR>     " 安装插件
@@ -51,6 +52,9 @@ nnoremap <Leader><Leader>c :PlugClean<CR>       " 删除插件
 nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+" tveskag/nvim-blame-line
+nnoremap <silent> <leader>bl :ToggleBlameLine<CR>
+autocmd BufEnter * EnableBlameLine
 
 " francoiscabrol/ranger.vim
 nnoremap <silent> <Leader>rg :Ranger<CR>
@@ -71,7 +75,7 @@ map g/ <Plug>(incsearch-stay)
 nnoremap <Leader>vs :Vista!!<CR>
 " 打开vista窗口后移动到它
 let g:vista_stay_on_open = 1
-let g:vista_sidebar_width = '33'
+let g:vista_sidebar_width = '28'
 " 跳转到一个符号时，自动关闭vista窗口.
 let g:vista_close_on_jump = 0
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
