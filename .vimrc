@@ -1,6 +1,7 @@
 let mapleader = ";"                             " 定义Leader键
 
 call plug#begin('~/.vim/plugged')
+Plug 'voldikss/vim-floaterm'                    " 浮动终端
 Plug 'hiphopcoders/hexo.vim'                    " hexo支持
 Plug 'francoiscabrol/ranger.vim'                " ranger插件
 Plug 'rbgrouleff/bclose.vim'
@@ -53,6 +54,10 @@ nnoremap <Leader><Leader>c :PlugClean<CR>       " 删除插件
 nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+" voldikss/vim-floaterm
+nnoremap 'fn :FloatermNew<CR>
+nnoremap 'ft :FloatermToggle<CR>
+
 " hiphopcoders/hexo.vim
 let g:hexoProjectPath="/Users/jie/hejie.xyz"
 
@@ -69,7 +74,7 @@ nnoremap <leader>fw :FixWhitespace<cr>
 nnoremap <Leader><cr> :<C-u>nohlsearch<CR>
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
+map g/ <Plug>(incearch-stay)
 
 " liuchengxu/vista
 nnoremap <Leader>vs :Vista!!<CR>
@@ -306,7 +311,6 @@ let g:coc_global_extensions = [
   \ 'coc-fzf-preview',
   \ 'coc-translator',
   \ 'coc-pairs',
-  \ 'coc-floaterm',
   \ 'coc-python',
   \ 'coc-diagnostic',
   \ 'coc-highlight',
@@ -317,11 +321,6 @@ let g:coc_global_extensions = [
   \ ]
 " coc-marketplace
 nnoremap 'm :CocList marketplace<CR>
-" coc-floaterm
-nnoremap 'ft :CocList floaterm<CR>
-nnoremap 'fn :CocCommand floaterm.new<CR>
-nnoremap 'fnn :CocCommand floaterm.next<CR>
-nnoremap 'fpp :CocCommand floaterm.prev<CR>
 " coc-fzf-preview
 nnoremap 'fl :CocCommand fzf-preview.Lines<CR>
 " coc-translator
