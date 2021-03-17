@@ -1,6 +1,7 @@
 let mapleader = ";"                             " 定义Leader键
 
 call plug#begin('~/.vim/plugged')
+Plug 'hiphopcoders/hexo.vim'                    " hexo支持
 Plug 'francoiscabrol/ranger.vim'                " ranger插件
 Plug 'rbgrouleff/bclose.vim'
 Plug 'tpope/vim-surround'                       " 符号成对修改
@@ -52,9 +53,8 @@ nnoremap <Leader><Leader>c :PlugClean<CR>       " 删除插件
 nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-" tveskag/nvim-blame-line
-nnoremap <silent> <leader>bl :ToggleBlameLine<CR>
-autocmd BufEnter * EnableBlameLine
+" hiphopcoders/hexo.vim
+let g:hexoProjectPath="/Users/jie/hejie.xyz"
 
 " francoiscabrol/ranger.vim
 nnoremap <silent> <Leader>rg :Ranger<CR>
@@ -144,7 +144,7 @@ nnoremap gb :Gblame<cr>
 nnoremap gd :Gvdiff<cr>
 nnoremap gs :Gstatus<cr>
 nnoremap gm :Gmerge<cr>
-nnoremap gu :Gpush<cr>
+" nnoremap gu :Gpush<cr>
 nnoremap gl :Glog<cr>
 nnoremap gv :GV<CR>
 " 异步执行git
@@ -197,6 +197,9 @@ let g:lazygit_floating_window_winblend = 0 " transparency of floating window
 let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window
 let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters
 let g:lazygit_use_neovim_remote = 1 " for neovim-remote support
+" tveskag/nvim-blame-line
+nnoremap <silent> <leader>bl :ToggleBlameLine<CR>
+autocmd BufEnter * EnableBlameLine
 
 " lfv89/vim-interestingwords
 nnoremap <silent> <Leader>iw :call InterestingWords('n')<CR>
@@ -256,8 +259,6 @@ let g:webdevicons_enable_airline_statusline = 1 " airline statuslien支持
 set shortmess+=c
 " set signcolumn=number
 " set signcolumn=yes
-" 同单词高亮
-" autocmd CursorHold * silent call CocActionAsync('highlight')
 " tab键补全
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -402,7 +403,6 @@ set confirm                                             " 在处理未保存或�
 
 " 快捷键
 "" 窗口选择与移动
-inoremap fd <esc>
 nnoremap H ^
 nnoremap L $
 " 窗口跳转
@@ -418,11 +418,9 @@ nnoremap <Leader>whh <C-w>=
 nnoremap <Leader>wjj <C-w>+
 nnoremap <Leader>wkk <C-w>-
 " 文件相关
-nnoremap fs :w<CR>
+inoremap fd <esc>:w<CR>
 nnoremap q :q<CR>
 nnoremap qq :qa!<CR>
 nnoremap rn :set relativenumber!<CR>
 nnoremap ev :edit $MYVIMRC<CR>
 nnoremap sm :source $MYVIMRC<CR>
-vnoremap <Leader>y "+y
-nmap <Leader>p "+p
