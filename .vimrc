@@ -1,7 +1,6 @@
 let mapleader = ";"                             " 定义Leader键
 
 call plug#begin('~/.vim/plugged')
-Plug 'hiphopcoders/hexo.vim'                    " hexo支持
 Plug 'tpope/vim-surround'                       " 符号成对修改
 Plug 'tpope/vim-repeat'                         " 重复操作
 Plug 'gcmt/wildfire.vim'                        " 代码块选择
@@ -51,10 +50,6 @@ nnoremap 'ft :FloatermToggle<CR>
 let g:floaterm_autoclose=1      " 任务完成自动关闭窗口
 let g:floaterm_width = 0.8      " 窗口宽度
 let g:floaterm_height = 0.8     " 窗口高度
-
-" hiphopcoders/hexo.vim
-let g:hexoProjectPath="/Users/jie/hejie.xyz"
-nnoremap <Leader>hc :HexoClean<CR>
 
 " scrooloose/nerdcommenter
 let g:NERDSpaceDelims=1     "自动加空格
