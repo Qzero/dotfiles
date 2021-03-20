@@ -1,10 +1,7 @@
 let mapleader = ";"                             " 定义Leader键
 
 call plug#begin('~/.vim/plugged')
-Plug 'voldikss/vim-floaterm'                    " 浮动终端
 Plug 'hiphopcoders/hexo.vim'                    " hexo支持
-Plug 'francoiscabrol/ranger.vim'                " ranger插件
-Plug 'rbgrouleff/bclose.vim'
 Plug 'tpope/vim-surround'                       " 符号成对修改
 Plug 'tpope/vim-repeat'                         " 重复操作
 Plug 'gcmt/wildfire.vim'                        " 代码块选择
@@ -20,15 +17,13 @@ Plug 'vim-airline/vim-airline-themes'           " 状态栏主题
 Plug 'easymotion/vim-easymotion'                " 超级跳转
 Plug 't9md/vim-choosewin'                       " 窗口选择
 Plug 'luochen1990/rainbow'                      " 彩虹括号
-Plug 'ybian/smartim'                            " 解决中文输入法无法输入命令
+Plug 'ybian/smartim'                            " 中文输入法无法输入命令
 Plug 'lfv89/vim-interestingwords'               " 变量彩色凸显
 Plug 'brooth/far.vim'                           " 替换
 Plug 'Yggdroot/indentLine'                      " 缩进线
 " Plug 'tpope/vim-commentary'                     " 注释
-Plug 'scrooloose/nerdcommenter'
-Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'scrooloose/nerdcommenter'                 " 注释
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
-" Plug 'yianwillis/vimcdoc'                       " 中文帮助文档
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全框架
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' } " cocPython插件
 Plug 'junegunn/fzf.vim'
@@ -42,7 +37,7 @@ Plug 'airblade/vim-gitgutter'                   " git命令封装
 Plug 'junegunn/gv.vim'                          " git提交树
 Plug 'mbbill/undotree'                          " git本地文件树
 Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' } "lazygit
-Plug 'tveskag/nvim-blame-line'
+Plug 'tveskag/nvim-blame-line'                  " git提交信息
 call plug#end()
 
 nnoremap <Leader><Leader>i :PlugInstall<CR>     " 安装插件
@@ -54,12 +49,13 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 " voldikss/vim-floaterm
 nnoremap 'fn :FloatermNew<CR>
 nnoremap 'ft :FloatermToggle<CR>
+let g:floaterm_autoclose=1      " 任务完成自动关闭窗口
+let g:floaterm_width = 0.8      " 窗口宽度
+let g:floaterm_height = 0.8     " 窗口高度
 
 " hiphopcoders/hexo.vim
 let g:hexoProjectPath="/Users/jie/hejie.xyz"
-
-" francoiscabrol/ranger.vim
-nnoremap <silent> <Leader>rg :Ranger<CR>
+nnoremap <Leader>hc :HexoClean<CR>
 
 " scrooloose/nerdcommenter
 let g:NERDSpaceDelims=1     "自动加空格
@@ -201,7 +197,7 @@ let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " cust
 let g:lazygit_use_neovim_remote = 1 " for neovim-remote support
 " tveskag/nvim-blame-line
 nnoremap <silent> <leader>bl :ToggleBlameLine<CR>
-autocmd BufEnter * EnableBlameLine
+" autocmd BufEnter * EnableBlameLine
 
 " lfv89/vim-interestingwords
 nnoremap <silent> <Leader>iw :call InterestingWords('n')<CR>
@@ -239,14 +235,15 @@ nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 let g:airline_powerline_fonts = 1            " 这个是安装字体后必须设置此项
 let g:airline_theme = 'jellybeans'           " luna,term,tomorrow,ubaryd,zenburn
-let g:airline#extensions#tabline#enabled = 1 " 用顶部tabline
+let g:airline#extensions#tabline#enabled = 1 " 顶部tabline
 
 " startify
 let g:webdevicons_enable_startify = 1
 nnoremap <Leader>si :Startify<CR>
 let g:startify_bookmarks = [
   \ {'c': '~/dotfiles/.vimrc' },
-  \ {'a': '~/hejie.xyz/_config.yml'}
+  \ {'a': '~/hejie.xyz/_config.yml'},
+  \ {'b': '~/Python/00.py'}
   \ ]
 
 " ryanoasis/vim-devicons
@@ -334,7 +331,7 @@ filetype indent on                              " 侦测语言的智能缩
 set t_Co=256                                            " 开启256色支持
 set background=dark                                     " 背景色
 colorscheme railscasts                                  " 主题
-set guifont=Monaco:h16                                  " 默认字体和大小
+set guifont=Monaco:h18                                  " 默认字体和大小
 set showtabline=2                                       " 显示顶部标签栏
 set laststatus=2                                        " 显示状态栏
 set guioptions-=r                                       " 隐藏右侧滚动条
@@ -414,6 +411,7 @@ nnoremap <Leader>whh <C-w>=
 nnoremap <Leader>wjj <C-w>+
 nnoremap <Leader>wkk <C-w>-
 " 文件相关
+nnoremap fd <esc>:w<CR>
 inoremap fd <esc>:w<CR>
 nnoremap q :q<CR>
 nnoremap qq :qa!<CR>
