@@ -1,7 +1,11 @@
-let mapleader = ";"                             " 定义Leader键
+syntax on           " 自动语法高亮
+syntax enable       " 开启语法高亮
+filetype on         " 侦测文件类型
+filetype plugin on  " 侦测类型开启插件
+filetype indent on  " 侦测语言的智能缩
+let mapleader = ";" " 定义Leader键
 let g:python_host_prog='/usr/bin/python2.7'
 let g:python3_host_prog = '/usr/bin/python3'
-
 " Vim-Plug的首次下载安装
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
 	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
@@ -41,7 +45,7 @@ Plug 'bronson/vim-trailing-whitespace'          " 行尾空白
 " Git
 Plug 'rhysd/git-messenger.vim'                  " git提交查询
 Plug 'tpope/vim-fugitive'                       " git更改标识
-Plug 'airblade/vim-gitgutter'                   " git命令封装
+" Plug 'airblade/vim-gitgutter'                   " git命令封装
 Plug 'junegunn/gv.vim'                          " git提交树
 Plug 'mbbill/undotree'                          " git本地文件树
 Plug 'tveskag/nvim-blame-line'                  " git提交信息
@@ -62,9 +66,9 @@ nnoremap 'fn :FloatermNew<CR>
 nnoremap 'ft :FloatermToggle<CR>
 nnoremap 'fr :FloatermNew ranger<CR>
 nnoremap 'fg :FloatermNew lazygit<CR>
-let g:floaterm_autoclose = 1      " 任务完成自动关闭窗口
-let g:floaterm_width = 0.8      " 窗口宽度
-let g:floaterm_height = 0.8     " 窗口高度
+let g:floaterm_autoclose = 1 " 任务完成自动关闭窗口
+let g:floaterm_width = 0.8   " 窗口宽度
+let g:floaterm_height = 0.8  " 窗口高度
 
 " scrooloose/nerdcommenter
 let g:NERDSpaceDelims = 1     "自动加空格
@@ -73,7 +77,10 @@ let g:NERDSpaceDelims = 1     "自动加空格
 nnoremap <leader>fw :FixWhitespace<cr>
 
 " haya14busa/incsearch
-nnoremap /<cr> :<C-u>nohlsearch<CR>
+set hlsearch   " 高亮显示所有搜索到的内容
+set incsearch  " 光标立刻跳到搜索内容
+set nowrapscan " 搜索到最后匹配的位置后,再次搜索不回到第一个匹配处
+nnoremap // :<C-u>nohlsearch<CR>
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incearch-stay)
@@ -86,53 +93,11 @@ let g:vista_sidebar_width = '28'
 " 跳转到一个符号时，自动关闭vista窗口.
 let g:vista_close_on_jump = 0
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
-" 优先选择lsp作为标签来源，其次ctags
-let g:vista_cpp_executive = 'vim_lsp'
 let g:vista_default_executive = 'ctags'
-" let g:vista_fzf_preview = ['right:50%']
-" let g:vista_echo_cursor_strategy ='floating_win'
-let g:vista_sidebar_position = 'vertical topleft'
+" let g:vista_sidebar_position = 'vertical topleft'
+let g:vista_sidebar_position = 'vertical botright'
+let g:vista_echo_cursor_strategy ='floating_win'
 let g:vista#renderer#enable_icon = 1
-let g:vista#renderer#icons = {
-\    'func': "\uf794",
-\    'function': "\uf794",
-\    'functions': "\uf794",
-\    'var': "\uf5c0",
-\    'variable': "\uf5c0",
-\    'variables': "\uf5c0",
-\    'const': "\uf8ff",
-\    'constant': "\uf8ff",
-\    'constructor': "\uf976",
-\    'method': "\uf6a6",
-\    'package': "\ue612",
-\    'packages': "\ue612",
-\    'enum': "\uf702",
-\    'enummember': "\uf282",
-\    'enumerator': "\uf702",
-\    'module': "\uf136",
-\    'modules': "\uf136",
-\    'type': "\uf7fd",
-\    'typedef': "\uf7fd",
-\    'types': "\uf7fd",
-\    'field': "\uf30b",
-\    'fields': "\uf30b",
-\    'macro': "\uf8a3",
-\    'macros': "\uf8a3",
-\    'map': "\ufb44",
-\    'class': "\uf0e8",
-\    'augroup': "\ufb44",
-\    'struct': "\uf318",
-\    'union': "\ufacd",
-\    'member': "\uf02b",
-\    'target': "\uf893",
-\    'property': "\ufab6",
-\    'interface': "\uf7fe",
-\    'namespace': "\uf475",
-\    'subroutine': "\uf9af",
-\    'implementation': "\uf776",
-\    'typeParameter': "\uf278",
-\    'default': "\uf29c"
-\}
 
 " vim-easymotion
 let g:EasyMotion_smartcase = 1      "忽略大小写
@@ -146,7 +111,8 @@ map <leader>r <Plug>(easymotion-repeat)
 " Git相关
 " vim-fugitive
 nnoremap gw :Gwrite<cr>
-nnoremap gc :Gcommit -a -v<cr>
+" nnoremap gc :Gcommit -a -v<cr>
+nnoremap gc :Gcommit<CR>
 nnoremap gd :Gvdiff<cr>
 nnoremap gs :Gstatus<cr>
 nnoremap gm :Gmerge<cr>
@@ -174,10 +140,10 @@ endfunction
 "rhysd/git-messenger
 nnoremap gm :GitMessenger<CR>
 " vim-gitgutter
-nmap ]c <Plug>(GitGutterNextHunk)
-nmap [c <Plug>(GitGutterPrevHunk)
-let g:gitgutter_max_signs = 800     "更改显示标示行数限制
-let g:gitgutter_preview_win_floating = 1
+" nmap ]c <Plug>(GitGutterNextHunk)
+" nmap [c <Plug>(GitGutterPrevHunk)
+" let g:gitgutter_max_signs = 800     "更改显示标示行数限制
+" let g:gitgutter_preview_win_floating = 1
 " mbbill/undotree
 nnoremap <Leader>ut :UndotreeToggle<CR>
 let g:undotree_DiffAutoOpen = 1
@@ -226,6 +192,7 @@ let g:rainbow_active = 1
 
 " vim-airline/vim-airline
 nnoremap <silent> <C-D> :bprevious<CR>:bdelete #<CR>
+nnoremap <silent> <C-D> :tabclose<CR>
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
 nmap <leader>3 <Plug>AirlineSelectTab3
@@ -313,6 +280,7 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-actions',
   \ 'coc-spell-checker',
+  \ 'coc-git',
   \ 'coc-marketplace'
   \ ]
 " coc-marketplace
@@ -325,10 +293,6 @@ nnoremap 'tl :CocCommand translator.exportHistory<CR>
 " coc-explorer
 nnoremap 'e :CocCommand explorer<cr>
 
-" 基础配置
-filetype on                                     " 侦测文件类型
-filetype plugin on                              " 侦测类型开启插件
-filetype indent on                              " 侦测语言的智能缩
 " 窗口显示配色
 set t_Co=256                                            " 开启256色支持
 set background=dark                                     " 背景色
@@ -356,9 +320,6 @@ set numberwidth=3                                       " 默认占据4空间,�
 set belloff=all                                         " 所有事件下（包括错按esc，错按backspace）不发出声音
 set scrolloff=3                                         " 光标移动到buffer的顶部和底部时保持5行距离
 set completeopt=menu,preview                            " 代码补全
-" 语法
-syntax enable                                           " 开启语法高亮
-syntax on                                               " 自动语法高亮
 " 其他
 set ttimeoutlen=0                                       " <ESC>键响应时间
 set magic                                               " 设置魔术
@@ -384,10 +345,6 @@ set nofoldenable                                        " 禁用折叠代码
 set foldlevelstart=99                                   " 默认不折叠代码
 set foldmethod=indent                                   " indent方式折叠代码
 set nowrap                                              " 长度不够禁止折行
-" 搜索
-set hlsearch                                            " 高亮显示所有搜索到的内容
-set incsearch                                           " 光标立刻跳到搜索内容
-set nowrapscan                                          " 搜索到最后匹配的位置后,再次搜索不回到第一个匹配处
 " 缓存
 set nobackup                                            " 不要备份
 set nowritebackup                                       " 不要写入备份
@@ -409,9 +366,10 @@ nnoremap <Leader>ww <C-w>w
 nnoremap <Leader>wc <C-w>c
 nnoremap <Leader>ws <C-w>s
 nnoremap <Leader>wv <C-w>v
-nnoremap <Leader>whh <C-w>=
-nnoremap <Leader>wjj <C-w>+
-nnoremap <Leader>wkk <C-w>-
+map <up> :res +5<CR>
+map <down> :res -5<CR>
+map <left> :vertical resize-5<CR>
+map <right> :vertical resize+5<CR>
 " 文件相关
 nnoremap fd <esc>:w<CR>
 inoremap fd <esc>:w<CR>
