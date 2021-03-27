@@ -51,7 +51,7 @@
         "variable": "\ue71b"
     },
     // ---cspell
-    "cSpell.showStatus": false,
+    "cSpell.showStatus": true,
     // 开启语言
     "cSpell.enabledLanguageIds": [
         "c",
@@ -66,10 +66,6 @@
     "diagnostic.hintSign": "ஐ",
     "diagnostic-languageserver.filetypes": {},
     "diagnostic.refreshOnInsertMode": true,
-    // ---vimlsp
-    "vimlsp.diagnostic.enable": false,
-    "vimlsp.indexes.count": 1,
-    "vimlsp.suggest.fromVimruntime": true,
     // ---coc-explorer
     "explorer.position": "left",
     "explorer.icon.expanded": "▾",
@@ -88,11 +84,13 @@
     "git.removedSign.hlGroup": "GitGutterDelete",
     "git.topRemovedSign.hlGroup": "GitGutterDelete",
     "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
-    "git.addedSign.text": "█|",
-    "git.changedSign.text": "█⫶",
-    "git.removedSign.text": "█▁",
-    "git.topRemovedSign.text": "█▔",
-    "git.changeRemovedSign.text": "█▟",
+    "git.addedSign.text": "▏",
+    "git.changedSign.text": "⫶",
+    // "git.removedSign.text": "▁",
+    // "git.topRemovedSign.text": "▔",
+    "git.removedSign.text": "|",
+    "git.topRemovedSign.text": "▔",
+    "git.changeRemovedSign.text": "▋",
     // ---add your languageServer into this list
     "languageserver": {}
 }
