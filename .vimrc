@@ -48,7 +48,6 @@ Plug 'tpope/vim-fugitive'                       " git更改标识
 " Plug 'airblade/vim-gitgutter'                   " git命令封装
 Plug 'junegunn/gv.vim'                          " git提交树
 Plug 'mbbill/undotree'                          " git本地文件树
-Plug 'tveskag/nvim-blame-line'                  " git提交信息
 " 调试
 " Plug 'puremourning/vimspector'
 " Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python'}
@@ -111,8 +110,7 @@ map <leader>r <Plug>(easymotion-repeat)
 " Git相关
 " vim-fugitive
 nnoremap gw :Gwrite<cr>
-" nnoremap gc :Gcommit -a -v<cr>
-nnoremap gc :Gcommit<CR>
+nnoremap gc :Gcommit -a -v<cr>
 nnoremap gd :Gvdiff<cr>
 nnoremap gs :Gstatus<cr>
 nnoremap gm :Gmerge<cr>
@@ -163,9 +161,6 @@ if has("persistent_undo")
     set undodir=~/dotfiles/undodir
     set undofile
 endif
-" tveskag/nvim-blame-line
-nnoremap <silent> <leader>bl :ToggleBlameLine<CR>
-" autocmd BufEnter * EnableBlameLine
 
 " lfv89/vim-interestingwords
 nnoremap <silent> <Leader>iw :call InterestingWords('n')<CR>
@@ -292,6 +287,12 @@ nnoremap 't :CocCommand translator.popup<CR>
 nnoremap 'tl :CocCommand translator.exportHistory<CR>
 " coc-explorer
 nnoremap 'e :CocCommand explorer<cr>
+" coc-git
+nmap 'p <Plug>(coc-git-prevchunk)
+nmap 'n <Plug>(coc-git-nextchunk)
+nmap 'i <Plug>(coc-git-chunkinfo)
+nmap 'u <Plug>(coc-git-chunkUndo)
+nmap 'gb :CocCommand git.browserOpen<CR>
 
 " 窗口显示配色
 set t_Co=256                                            " 开启256色支持
