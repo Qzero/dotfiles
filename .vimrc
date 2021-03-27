@@ -288,10 +288,10 @@ nnoremap 'tl :CocCommand translator.exportHistory<CR>
 " coc-explorer
 nnoremap 'e :CocCommand explorer<cr>
 " coc-git
-nmap 'p <Plug>(coc-git-prevchunk)
-nmap 'n <Plug>(coc-git-nextchunk)
-nmap 'i <Plug>(coc-git-chunkinfo)
-nmap 'u <Plug>(coc-git-chunkUndo)
+nmap 'gp <Plug>(coc-git-prevchunk)
+nmap 'gn <Plug>(coc-git-nextchunk)
+nmap 'gi <Plug>(coc-git-chunkinfo)
+nmap 'gu <Plug>(coc-git-chunkUndo)
 nmap 'gb :CocCommand git.browserOpen<CR>
 
 " 窗口显示配色
