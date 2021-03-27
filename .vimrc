@@ -1,4 +1,13 @@
 let mapleader = ";"                             " 定义Leader键
+let g:python_host_prog='/usr/bin/python2.7'
+let g:python3_host_prog = '/usr/bin/python3'
+
+" Vim-Plug的首次下载安装
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'                       " 符号成对修改
@@ -36,6 +45,9 @@ Plug 'airblade/vim-gitgutter'                   " git命令封装
 Plug 'junegunn/gv.vim'                          " git提交树
 Plug 'mbbill/undotree'                          " git本地文件树
 Plug 'tveskag/nvim-blame-line'                  " git提交信息
+" 调试
+" Plug 'puremourning/vimspector'
+" Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python'}
 call plug#end()
 
 nnoremap <Leader><Leader>i :PlugInstall<CR>     " 安装插件
@@ -44,21 +56,24 @@ nnoremap <Leader><Leader>c :PlugClean<CR>       " 删除插件
 nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 " voldikss/vim-floaterm
 nnoremap 'fn :FloatermNew<CR>
 nnoremap 'ft :FloatermToggle<CR>
-let g:floaterm_autoclose=1      " 任务完成自动关闭窗口
+nnoremap 'fr :FloatermNew ranger<CR>
+nnoremap 'fg :FloatermNew lazygit<CR>
+let g:floaterm_autoclose = 1      " 任务完成自动关闭窗口
 let g:floaterm_width = 0.8      " 窗口宽度
 let g:floaterm_height = 0.8     " 窗口高度
 
 " scrooloose/nerdcommenter
-let g:NERDSpaceDelims=1     "自动加空格
+let g:NERDSpaceDelims = 1     "自动加空格
 
 " bronson/vim-trailing-whitespace
 nnoremap <leader>fw :FixWhitespace<cr>
 
 " haya14busa/incsearch
-nnoremap <Leader><cr> :<C-u>nohlsearch<CR>
+nnoremap /<cr> :<C-u>nohlsearch<CR>
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incearch-stay)
@@ -132,14 +147,13 @@ map <leader>r <Plug>(easymotion-repeat)
 " vim-fugitive
 nnoremap gw :Gwrite<cr>
 nnoremap gc :Gcommit -a -v<cr>
-nnoremap gb :Gblame<cr>
 nnoremap gd :Gvdiff<cr>
 nnoremap gs :Gstatus<cr>
 nnoremap gm :Gmerge<cr>
-" nnoremap gu :Gpush<cr>
 nnoremap gl :Glog<cr>
 nnoremap gv :GV<CR>
-" 异步执行git
+" nnoremap gu :Gpush<cr>
+" 异步执行gitpush
 nnoremap gp :Nrun git push<CR>
 command! -complete=file -nargs=* Nrun :call s:Terminal(<q-args>)
 function! s:Terminal(cmd)
@@ -406,3 +420,9 @@ nnoremap qq :qa!<CR>
 nnoremap rn :set relativenumber!<CR>
 nnoremap ev :edit $MYVIMRC<CR>
 nnoremap sm :source $MYVIMRC<CR>
+
+map <F8> :call CompilePY()<CR>
+function CompilePY()
+    exec "w"
+    exec "!python \"%\""
+endfunction
