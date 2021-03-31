@@ -6,6 +6,7 @@ filetype indent on  " 侦测语言的智能缩
 let mapleader = ";" " 定义Leader键
 let g:python_host_prog='/usr/bin/python2.7'
 let g:python3_host_prog = '/usr/bin/python3'
+
 " Vim-Plug的首次下载安装
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
 	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
@@ -33,11 +34,9 @@ Plug 'ybian/smartim'                            " 中文输入法无法输入命
 Plug 'lfv89/vim-interestingwords'               " 变量彩色凸显
 Plug 'brooth/far.vim'                           " 替换
 Plug 'Yggdroot/indentLine'                      " 缩进线
-" Plug 'tpope/vim-commentary'                     " 注释
 Plug 'scrooloose/nerdcommenter'                 " 注释
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全框架
-Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' } " cocPython插件
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'liuchengxu/vista.vim'                     " 大纲
@@ -88,14 +87,14 @@ map g/ <Plug>(incearch-stay)
 nnoremap <Leader>vs :Vista!!<CR>
 " 打开vista窗口后移动到它
 let g:vista_stay_on_open = 1
-let g:vista_sidebar_width = '28'
 " 跳转到一个符号时，自动关闭vista窗口.
 let g:vista_close_on_jump = 0
+let g:vista_sidebar_width = '28'
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 let g:vista_default_executive = 'ctags'
-" let g:vista_sidebar_position = 'vertical topleft'
-let g:vista_sidebar_position = 'vertical botright'
-let g:vista_echo_cursor_strategy ='floating_win'
+let g:vista_sidebar_position = 'vertical topleft'
+" let g:vista_sidebar_position = 'vertical botright'
+" let g:vista_echo_cursor_strategy ='floating_win'
 let g:vista#renderer#enable_icon = 1
 
 " vim-easymotion
@@ -186,8 +185,7 @@ let g:choosewin_overlay_enable = 0
 let g:rainbow_active = 1
 
 " vim-airline/vim-airline
-nnoremap <silent> <C-D> :bprevious<CR>:bdelete #<CR>
-nnoremap <silent> <C-D> :tabclose<CR>
+nnoremap <silent> <C-D> :bprevious<CR>:bd<CR>:bdelete #<CR>
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
 nmap <leader>3 <Plug>AirlineSelectTab3
@@ -200,6 +198,19 @@ nmap <leader>9 <Plug>AirlineSelectTab9
 let g:airline_powerline_fonts = 1            " 这个是安装字体后必须设置此项
 let g:airline_theme = 'jellybeans'           " luna,term,tomorrow,ubaryd,zenburn
 let g:airline#extensions#tabline#enabled = 1 " 顶部tabline
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#tabline#buffer_idx_format = {
+       \ '0': '0 ',
+       \ '1': '1 ',
+       \ '2': '2 ',
+       \ '3': '3 ',
+       \ '4': '4 ',
+       \ '5': '5 ',
+       \ '6': '6 ',
+       \ '7': '7 ',
+       \ '8': '8 ',
+       \ '9': '9 '
+       \}
 
 " startify
 let g:webdevicons_enable_startify = 1
@@ -266,9 +277,9 @@ nnoremap <silent> 'c  :<C-u>CocList commands<cr>
 let g:coc_global_extensions = [
   \ 'coc-explorer',
   \ 'coc-vimlsp',
+  \ 'coc-perl',
   \ 'coc-fzf-preview',
   \ 'coc-translator',
-  \ 'coc-pairs',
   \ 'coc-python',
   \ 'coc-diagnostic',
   \ 'coc-highlight',
@@ -276,6 +287,7 @@ let g:coc_global_extensions = [
   \ 'coc-actions',
   \ 'coc-spell-checker',
   \ 'coc-git',
+  \ 'coc-highlight',
   \ 'coc-marketplace'
   \ ]
 " coc-marketplace
@@ -294,7 +306,8 @@ nmap 'gi <Plug>(coc-git-chunkinfo)
 nmap 'gu <Plug>(coc-git-chunkUndo)
 nmap 'gb :CocCommand git.browserOpen<CR>
 
-" 窗口显示配色
+" vim配置
+" " 窗口显示配色
 set t_Co=256                                            " 开启256色支持
 set background=dark                                     " 背景色
 colorscheme railscasts                                  " 主题
@@ -321,19 +334,19 @@ set numberwidth=3                                       " 默认占据4空间,�
 set belloff=all                                         " 所有事件下（包括错按esc，错按backspace）不发出声音
 set scrolloff=3                                         " 光标移动到buffer的顶部和底部时保持5行距离
 set completeopt=menu,preview                            " 代码补全
-" 其他
+" " 其他
 set ttimeoutlen=0                                       " <ESC>键响应时间
 set magic                                               " 设置魔术
 set clipboard=unnamed                                   " 共享粘贴板
 set backspace=2                                         " 使用回车键正常处理indent,eol,start等
-" 编码
+" " 编码
 set encoding=utf-8                                      " 新文件的编码为 UTF-8
 set termencoding=utf-8                                  " 只影响普通模式 (非图形界面) 下的 Vim
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030 " 自动编码依次尝试
 set fileformat=unix                                     " unix的格式保存文件
 set updatetime=30                                       " 30毫秒更新
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
-" 缩进排版
+" " 缩进排版
 set smartindent                                         " 智能的选择对齐方式
 set expandtab                                           " 将制表符扩展为空格
 set smarttab                                            " 在行和段使用制表符
@@ -346,7 +359,7 @@ set nofoldenable                                        " 禁用折叠代码
 set foldlevelstart=99                                   " 默认不折叠代码
 set foldmethod=indent                                   " indent方式折叠代码
 set nowrap                                              " 长度不够禁止折行
-" 缓存
+" " 缓存
 set nobackup                                            " 不要备份
 set nowritebackup                                       " 不要写入备份
 set noswapfile                                          " 禁止生成临时文件交换文件
@@ -355,10 +368,7 @@ set autowrite                                           " 设置自动保存
 set confirm                                             " 在处理未保存或只读文件的时候，弹出确认
 
 " 快捷键
-"" 窗口选择与移动
-nnoremap H ^
-nnoremap L $
-" 窗口跳转
+" " 窗口跳转
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
@@ -367,11 +377,11 @@ nnoremap <Leader>ww <C-w>w
 nnoremap <Leader>wc <C-w>c
 nnoremap <Leader>ws <C-w>s
 nnoremap <Leader>wv <C-w>v
-map <up> :res +5<CR>
-map <down> :res -5<CR>
-map <left> :vertical resize-5<CR>
-map <right> :vertical resize+5<CR>
-" 文件相关
+nnoremap w<up> :res +5<CR>
+nnoremap w<down> :res -5<CR>
+nnoremap w<right> :vertical resize-5<CR>
+nnoremap w<left> :vertical resize+5<CR>
+" " 文件相关
 nnoremap fd <esc>:w<CR>
 inoremap fd <esc>:w<CR>
 nnoremap q :q<CR>
@@ -380,8 +390,8 @@ nnoremap rn :set relativenumber!<CR>
 nnoremap ev :edit $MYVIMRC<CR>
 nnoremap sm :source $MYVIMRC<CR>
 
-map <F8> :call CompilePY()<CR>
+nnoremap <F5> :call CompilePY()<CR>
 function CompilePY()
     exec "w"
-    exec "!python \"%\""
+    exec "!python3 \"%\""
 endfunction

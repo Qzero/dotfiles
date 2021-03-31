@@ -3,15 +3,22 @@
     "coc.preferences.extensionUpdateCheck": "daily",
     // 自动格式化
     "coc.preferences.formatOnSaveFiletypes": [
-        "json"
+        "json",
+        "python",
+        "vimlsp"
     ],
     "coc.preferences.hoverTarget": "float",
     "coc.preferences.enableFloatHighlight": false,
     "coc.preferences.messageLevel": "error",
+    "pairs.disableLanguages": [
+        "c",
+        "python"
+    ],
+    // coc-highlight
+    "highlight.colors.enable": true,
+    "highlight.colorNames.enable": true,
     // ---suggest
-    // 第二个字符开始建议
     "suggest.minTriggerInputLength": 2,
-    // 建议列表最大数
     "suggest.detailMaxLength": 100,
     "suggest.noselect": true,
     "suggest.enablePreselect": true,
@@ -56,7 +63,8 @@
     "cSpell.enabledLanguageIds": [
         "c",
         "python",
-        "markdown"
+        "markdown",
+        "vimlsp"
     ],
     // ---diagnostic
     "diagnostic.signOffset": 99999,
@@ -67,7 +75,7 @@
     "diagnostic-languageserver.filetypes": {},
     "diagnostic.refreshOnInsertMode": true,
     // ---coc-explorer
-    "explorer.position": "left",
+    "explorer.position": "right",
     "explorer.icon.expanded": "▾",
     "explorer.icon.shrinked": "▸",
     "explorer.width": 26,
@@ -76,7 +84,7 @@
     // git
     "git.enableGutters": true,
     "git.branchCharacter": "\uf418",
-    "git.addGBlameToBufferVar": false,
+    "git.addGBlameToBufferVar": true,
     "git.addGBlameToVirtualText": false,
     "git.virtualTextPrefix": " ❯❯❯ ",
     "git.addedSign.hlGroup": "GitGutterAdd",
@@ -86,11 +94,9 @@
     "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
     "git.addedSign.text": "▏",
     "git.changedSign.text": "⫶",
-    // "git.removedSign.text": "▁",
-    // "git.topRemovedSign.text": "▔",
-    "git.removedSign.text": "|",
-    "git.topRemovedSign.text": "▔",
-    "git.changeRemovedSign.text": "▋",
+    "git.removedSign.text": "▋",
+    "git.topRemovedSign.text": "‾",
+    "git.changeRemovedSign.text": "▋⫶",
     // ---add your languageServer into this list
     "languageserver": {}
 }
