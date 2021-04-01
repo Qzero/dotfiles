@@ -72,8 +72,8 @@
     "diagnostic.warningSign": "»",
     "diagnostic.infoSign": "ღ",
     "diagnostic.hintSign": "ஐ",
-    "diagnostic-languageserver.filetypes": {},
     "diagnostic.refreshOnInsertMode": true,
+    "diagnostic-languageserver.enable": true,
     // ---coc-explorer
     "explorer.position": "right",
     "explorer.icon.expanded": "▾",

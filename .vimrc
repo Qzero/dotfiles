@@ -185,7 +185,7 @@ let g:choosewin_overlay_enable = 0
 let g:rainbow_active = 1
 
 " vim-airline/vim-airline
-nnoremap <silent> <C-D> :bprevious<CR>:bd<CR>:bdelete #<CR>
+nnoremap <silent> <C-D> :bd<CR>:bdelete #<CR>:bprevious<CR>
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
 nmap <leader>3 <Plug>AirlineSelectTab3
