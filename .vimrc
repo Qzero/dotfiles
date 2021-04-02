@@ -60,10 +60,10 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 " voldikss/vim-floaterm
-nnoremap 'fn :FloatermNew<CR>
-nnoremap 'ft :FloatermToggle<CR>
-nnoremap 'fr :FloatermNew ranger<CR>
-nnoremap 'fg :FloatermNew lazygit<CR>
+nnoremap <Leader>fn :FloatermNew<CR>
+nnoremap <Leader>ft :FloatermToggle<CR>
+nnoremap <Leader>fr :FloatermNew ranger<CR>
+nnoremap <Leader>fg :FloatermNew lazygit<CR>
 let g:floaterm_autoclose = 1 " 任务完成自动关闭窗口
 let g:floaterm_width = 0.8   " 窗口宽度
 let g:floaterm_height = 0.8  " 窗口高度
@@ -141,8 +141,17 @@ nnoremap gm :GitMessenger<CR>
 " nmap [c <Plug>(GitGutterPrevHunk)
 " let g:gitgutter_max_signs = 800     "更改显示标示行数限制
 " let g:gitgutter_preview_win_floating = 1
+" highlight GitGutterAdd    guifg=#009900 ctermfg=2
+" highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+" highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+" let g:gitgutter_sign_added = ' ▏'
+" let g:gitgutter_sign_modified = ' ⫶'
+" let g:gitgutter_sign_removed = '▋'
+" let g:gitgutter_sign_removed_first_line = ' ‾'
+" let g:gitgutter_sign_removed_above_and_below = '¦'
+" let g:gitgutter_sign_modified_removed = ' ▋⫶'
 " mbbill/undotree
-nnoremap <Leader>ut :UndotreeToggle<CR>
+nnoremap ut :UndotreeToggle<CR>
 let g:undotree_DiffAutoOpen = 1
 let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_ShortIndicators = 1
@@ -389,9 +398,3 @@ nnoremap qq :qa!<CR>
 nnoremap rn :set relativenumber!<CR>
 nnoremap ev :edit $MYVIMRC<CR>
 nnoremap sm :source $MYVIMRC<CR>
-
-nnoremap <F5> :call CompilePY()<CR>
-function CompilePY()
-    exec "w"
-    exec "!python3 \"%\""
-endfunction

@@ -1,7 +1,6 @@
 {
-    // 插件每天自动更新
-    "coc.preferences.extensionUpdateCheck": "daily",
-    // 自动格式化
+    // coc
+    "coc.preferences.extensionUpdateCheck": "weekly",
     "coc.preferences.formatOnSaveFiletypes": [
         "json",
         "python",
@@ -10,10 +9,6 @@
     "coc.preferences.hoverTarget": "float",
     "coc.preferences.enableFloatHighlight": false,
     "coc.preferences.messageLevel": "error",
-    "pairs.disableLanguages": [
-        "c",
-        "python"
-    ],
     // coc-highlight
     "highlight.colors.enable": true,
     "highlight.colorNames.enable": true,
@@ -59,9 +54,7 @@
     },
     // ---cspell
     "cSpell.showStatus": true,
-    // 开启语言
     "cSpell.enabledLanguageIds": [
-        "c",
         "python",
         "markdown",
         "vimlsp"
@@ -81,6 +74,11 @@
     "explorer.width": 26,
     "explorer.icon.enableNerdfont": true,
     "explorer.file.showHiddenFiles": true,
+    // coc-translator
+    "translator.engines": [
+        "bing",
+        "youdao"
+    ],
     // git
     "git.enableGutters": true,
     "git.branchCharacter": "\uf418",
