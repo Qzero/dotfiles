@@ -231,9 +231,9 @@ let g:startify_bookmarks = [
   \ ]
 
 " ryanoasis/vim-devicons
-let g:webdevicons_enable = 1            " 加载插件
-let g:webdevicons_enable_nerdtree = 1   " nerdtree支持
-let g:webdevicons_enable_startify = 1   " startify支持
+let g:webdevicons_enable = 1                    " 加载插件
+let g:webdevicons_enable_nerdtree = 1           " nerdtree支持
+let g:webdevicons_enable_startify = 1           " startify支持
 let g:webdevicons_enable_airline_tabline = 1    " airline tab支持
 let g:webdevicons_enable_airline_statusline = 1 " airline statuslien支持
 
@@ -271,15 +271,9 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
-" coc-actions
-function! s:cocActionsOpenFromSelected(type) abort
-  execute 'CocCommand actions.open ' . a:type
-endfunction
-xmap 'a  <Plug>(coc-codeaction-selected)
-nmap 'aw  <Plug>(coc-codeaction-selected)
 " 诊断面板以及跳转
 nnoremap <silent> 'd  :<C-u>CocList diagnostics<cr>
-
+" 其他
 nnoremap <silent> 'p  :<C-u>CocList extensions<cr>
 nnoremap <silent> 'c  :<C-u>CocList commands<cr>
 " coc-extensions
@@ -293,7 +287,6 @@ let g:coc_global_extensions = [
   \ 'coc-diagnostic',
   \ 'coc-highlight',
   \ 'coc-json',
-  \ 'coc-actions',
   \ 'coc-spell-checker',
   \ 'coc-git',
   \ 'coc-highlight',
