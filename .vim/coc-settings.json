@@ -71,14 +71,9 @@
     "explorer.position": "right",
     "explorer.icon.expanded": "▾",
     "explorer.icon.shrinked": "▸",
-    "explorer.width": 26,
+    "explorer.width": 28,
     "explorer.icon.enableNerdfont": true,
     "explorer.file.showHiddenFiles": true,
-    // coc-translator
-    "translator.engines": [
-        "bing",
-        "youdao"
-    ],
     // git
     "git.enableGutters": true,
     "git.branchCharacter": "\uf418",

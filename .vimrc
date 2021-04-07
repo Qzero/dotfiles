@@ -20,7 +20,6 @@ Plug 'tpope/vim-repeat'                         " 重复操作
 Plug 'gcmt/wildfire.vim'                        " 代码块选择
 Plug 'jpo/vim-railscasts-theme'                 " 主题
 Plug 'roxma/vim-tmux-clipboard'                 " vim tmux共享剪贴板
-Plug 'haya14busa/incsearch.vim'                 " 搜索插件
 Plug 'farmergreg/vim-lastplace'                 " 打开文件跳转到最后一次位置
 Plug 'voldikss/vim-floaterm'                    " 浮动终端
 Plug 'mhinz/vim-startify'                       " 首页
@@ -73,15 +72,6 @@ let g:NERDSpaceDelims = 1     "自动加空格
 
 " bronson/vim-trailing-whitespace
 nnoremap <leader>fw :FixWhitespace<cr>
-
-" haya14busa/incsearch
-set hlsearch   " 高亮显示所有搜索到的内容
-set incsearch  " 光标立刻跳到搜索内容
-set nowrapscan " 搜索到最后匹配的位置后,再次搜索不回到第一个匹配处
-nnoremap // :<C-u>nohlsearch<CR>
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incearch-stay)
 
 " liuchengxu/vista
 nnoremap <Leader>vs :Vista!!<CR>
