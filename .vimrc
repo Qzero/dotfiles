@@ -15,6 +15,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'voldikss/vim-browser-search'
 Plug 'tpope/vim-surround'                       " 符号成对修改
 Plug 'tpope/vim-repeat'                         " 重复操作
 Plug 'gcmt/wildfire.vim'                        " 代码块选择
@@ -57,6 +58,21 @@ nnoremap <Leader><Leader>c :PlugClean<CR>       " 删除插件
 nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+" voldikss/vim-browser-search
+nmap <silent> <Leader>wg <Plug>SearchNormal
+vmap <silent> <Leader>wg <Plug>SearchVisual
+let g:browser_search_default_engine = 'google'
+let g:browser_search_engines =  {
+  \ 'baidu':'https://www.baidu.com/s?ie=UTF-8&wd=%s',
+  \ 'bing': 'https://www.bing.com/search?q=%s',
+  \ 'duckduckgo': 'https://duckduckgo.com/?q=%s',
+  \ 'github':'https://github.com/search?q=%s',
+  \ 'google':'https://google.com/search?q=%s',
+  \ 'stackoverflow':'https://stackoverflow.com/search?q=%s',
+  \ 'translate': 'https://translate.google.com/?sl=auto&tl=it&text=%s',
+  \ 'wikipedia': 'https://en.wikipedia.org/wiki/%s',
+  \ 'youtube':'https://www.youtube.com/results?search_query=%s&page=&utm_source=opensearch',
+\ }
 
 " voldikss/vim-floaterm
 nnoremap <Leader>fn :FloatermNew<CR>
@@ -270,13 +286,11 @@ nnoremap <silent> 'c  :<C-u>CocList commands<cr>
 let g:coc_global_extensions = [
   \ 'coc-explorer',
   \ 'coc-vimlsp',
-  \ 'coc-perl',
   \ 'coc-fzf-preview',
   \ 'coc-translator',
   \ 'coc-python',
   \ 'coc-diagnostic',
   \ 'coc-highlight',
-  \ 'coc-json',
   \ 'coc-spell-checker',
   \ 'coc-git',
   \ 'coc-highlight',
