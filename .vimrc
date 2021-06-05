@@ -7,15 +7,9 @@ let mapleader = ";" " 定义Leader键
 let g:python_host_prog='/usr/bin/python2.7'
 let g:python3_host_prog = '/usr/bin/python3'
 
-" Vim-Plug的首次下载安装
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 call plug#begin('~/.vim/plugged')
-Plug 'voldikss/vim-browser-search'
+Plug 'scrooloose/nerdtree'                      " 资源管理树
+Plug 'voldikss/vim-browser-search'              " web搜索
 Plug 'tpope/vim-surround'                       " 符号成对修改
 Plug 'tpope/vim-repeat'                         " 重复操作
 Plug 'gcmt/wildfire.vim'                        " 代码块选择
@@ -31,7 +25,7 @@ Plug 'easymotion/vim-easymotion'                " 超级跳转
 Plug 't9md/vim-choosewin'                       " 窗口选择
 Plug 'luochen1990/rainbow'                      " 彩虹括号
 Plug 'ybian/smartim'                            " 中文输入法无法输入命令
-Plug 'lfv89/vim-interestingwords'               " 变量彩色凸显
+Plug 'lfv89/vim-interestingwords'               " 单词彩色凸显
 Plug 'brooth/far.vim'                           " 替换
 Plug 'Yggdroot/indentLine'                      " 缩进线
 Plug 'scrooloose/nerdcommenter'                 " 注释
@@ -47,31 +41,50 @@ Plug 'tpope/vim-fugitive'                       " git更改标识
 " Plug 'airblade/vim-gitgutter'                   " git命令封装
 Plug 'junegunn/gv.vim'                          " git提交树
 Plug 'mbbill/undotree'                          " git本地文件树
-" 调试
-" Plug 'puremourning/vimspector'
-" Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python'}
 call plug#end()
 
 nnoremap <Leader><Leader>i :PlugInstall<CR>     " 安装插件
 nnoremap <Leader><Leader>u :PlugUpdate<CR>      " 更新插件
 nnoremap <Leader><Leader>c :PlugClean<CR>       " 删除插件
 nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
+nnoremap <Leader><Leader>s :PlugStatus<CR>
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+" mhinz/vim-startify
+nnoremap <Leader>si :Startify<CR>
+autocmd vimenter * Startify
+let g:webdevicons_enable_startify = 1
+let g:startify_bookmarks = [
+  \ {'a': '~/hejie.xyz/_config.yml'},
+  \ {'b': '~/Python/00.py'},
+  \ {'c': '~/dotfiles/.vimrc' }
+  \ ]
+
+" scrooloose/nerdtree
+nnoremap <Leader>nt :NERDTreeToggle<CR>
+nnoremap <Leader>ntf :NERDTreeFind<CR>
+let NERDTreeWinPos="right"                      "显示位置
+let NERDTreeShowHidden=0                        "是否显示隐藏文件
+let NERDTreeWinSize=25                          "设置宽度
+let NERDTreeShowBookmarks=1                     "显示书签列表
+let NERDTreeIgnore=['\.pyc','\~$','\.swp']      "忽略一下文件的显示
+let g:NERDTreeDirArrowExpandable = '+'          "修改默认箭头'▸' '▾'
+let g:NERDTreeDirArrowCollapsible = '-'
+autocmd vimenter * NERDTree                     "打开vim时自动打开NERDTree
+let NERDTreeAutoDeleteBuffer=1                  "删除文件时自动删除文件对应 buffer
+let NERDTreeMinimalUI=1                         "不显示冗余帮助信息
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NEDTree.isTabTree()) | q | endif
+
 " voldikss/vim-browser-search
-nmap <silent> <Leader>wg <Plug>SearchNormal
-vmap <silent> <Leader>wg <Plug>SearchVisual
+nmap <Leader>bs <Plug>SearchNormal
+vmap <Leader>bs <Plug>SearchVisual
 let g:browser_search_default_engine = 'google'
 let g:browser_search_engines =  {
-  \ 'baidu':'https://www.baidu.com/s?ie=UTF-8&wd=%s',
-  \ 'bing': 'https://www.bing.com/search?q=%s',
-  \ 'duckduckgo': 'https://duckduckgo.com/?q=%s',
   \ 'github':'https://github.com/search?q=%s',
   \ 'google':'https://google.com/search?q=%s',
   \ 'stackoverflow':'https://stackoverflow.com/search?q=%s',
   \ 'translate': 'https://translate.google.com/?sl=auto&tl=it&text=%s',
   \ 'wikipedia': 'https://en.wikipedia.org/wiki/%s',
-  \ 'youtube':'https://www.youtube.com/results?search_query=%s&page=&utm_source=opensearch',
 \ }
 
 " voldikss/vim-floaterm
@@ -84,7 +97,7 @@ let g:floaterm_width = 0.8   " 窗口宽度
 let g:floaterm_height = 0.8  " 窗口高度
 
 " scrooloose/nerdcommenter
-let g:NERDSpaceDelims = 1     "自动加空格
+let g:NERDSpaceDelims = 1     " 注释中加空格
 
 " bronson/vim-trailing-whitespace
 nnoremap <leader>fw :FixWhitespace<cr>
@@ -177,9 +190,9 @@ if has("persistent_undo")
 endif
 
 " lfv89/vim-interestingwords
-nnoremap <silent> <Leader>iw :call InterestingWords('n')<CR>
-nnoremap <silent> <Leader>IW :call UncolorAllWords()<CR>
-nnoremap <silent> <Leader>n :call WordNavigation('forward')<CR>
+nnoremap <Leader>iw :call InterestingWords('n')<CR>
+nnoremap <Leader>IW :call UncolorAllWords()<CR>
+nnoremap <Leader>n :call WordNavigation('forward')<CR>
 
 " Yggdroot/indentLine
 let g:indentLine_char = '┊'
@@ -227,15 +240,6 @@ let g:airline#extensions#tabline#buffer_idx_format = {
        \ '9': '9 '
        \}
 
-" startify
-let g:webdevicons_enable_startify = 1
-nnoremap <Leader>si :Startify<CR>
-let g:startify_bookmarks = [
-  \ {'c': '~/dotfiles/.vimrc' },
-  \ {'a': '~/hejie.xyz/_config.yml'},
-  \ {'b': '~/Python/00.py'}
-  \ ]
-
 " ryanoasis/vim-devicons
 let g:webdevicons_enable = 1                    " 加载插件
 let g:webdevicons_enable_nerdtree = 1           " nerdtree支持
@@ -244,28 +248,24 @@ let g:webdevicons_enable_airline_tabline = 1    " airline tab支持
 let g:webdevicons_enable_airline_statusline = 1 " airline statuslien支持
 
 " neoclide/coc.vim
-" 屏蔽乌干达儿童
+set hidden
 set shortmess+=c
-" set signcolumn=number
-" set signcolumn=yes
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 " tab键补全
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-" 确认补全
-if has('nvim')
-  inoremap <silent><expr> 'c coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 " 显示文档
 nnoremap <silent> 'h :call <SID>show_documentation()<CR>
 function! s:show_documentation()
@@ -278,10 +278,17 @@ function! s:show_documentation()
   endif
 endfunction
 " 诊断面板以及跳转
-nnoremap <silent> 'd  :<C-u>CocList diagnostics<cr>
+nnoremap 'd  :<C-u>CocList diagnostics<cr>
+nmap [d <Plug>(coc-diagnostic-prev)
+nmap ]d <Plug>(coc-diagnostic-next)
+" GoTo code navigation.
+nmap 'cd <Plug>(coc-definition)
+nmap 'cy <Plug>(coc-type-definition)
+nmap 'ci <Plug>(coc-implementation)
+nmap 'cr <Plug>(coc-references)
 " 其他
-nnoremap <silent> 'p  :<C-u>CocList extensions<cr>
-nnoremap <silent> 'c  :<C-u>CocList commands<cr>
+nnoremap 'p  :<C-u>CocList extensions<cr>
+nnoremap 'c  :<C-u>CocList commands<cr>
 " coc-extensions
 let g:coc_global_extensions = [
   \ 'coc-explorer',
@@ -293,13 +300,14 @@ let g:coc_global_extensions = [
   \ 'coc-highlight',
   \ 'coc-spell-checker',
   \ 'coc-git',
+  \ 'coc-pairs',
   \ 'coc-highlight',
   \ 'coc-marketplace'
   \ ]
 " coc-marketplace
 nnoremap 'm :CocList marketplace<CR>
 " coc-fzf-preview
-nnoremap 'fl :CocCommand fzf-preview.Lines<CR>
+nnoremap // :CocCommand fzf-preview.Lines<CR>
 " coc-translator
 nnoremap 't :CocCommand translator.popup<CR>
 nnoremap 'tl :CocCommand translator.exportHistory<CR>
@@ -338,20 +346,21 @@ set whichwrap+=<,>,h,l                                  " 光标键跨行
 set virtualedit=block,onemore                           " 允许光标出现在最后一个字符的后面
 set numberwidth=3                                       " 默认占据4空间,超过999行时更改
 set belloff=all                                         " 所有事件下（包括错按esc，错按backspace）不发出声音
-set scrolloff=3                                         " 光标移动到buffer的顶部和底部时保持5行距离
+set scrolloff=5                                         " 光标移动到buffer的顶部和底部时保持5行距离
 set completeopt=menu,preview                            " 代码补全
 " " 其他
 set ttimeoutlen=0                                       " <ESC>键响应时间
 set magic                                               " 设置魔术
 set clipboard=unnamed                                   " 共享粘贴板
 set backspace=2                                         " 使用回车键正常处理indent,eol,start等
+set t_ti= t_te=                                         " 退出vim后，内容显示在终端屏幕"
 " " 编码
 set encoding=utf-8                                      " 新文件的编码为 UTF-8
 set termencoding=utf-8                                  " 只影响普通模式 (非图形界面) 下的 Vim
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030 " 自动编码依次尝试
 set fileformat=unix                                     " unix的格式保存文件
-set updatetime=30                                       " 30毫秒更新
-autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
+set updatetime=300                                      " 30毫秒更新
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " " 缩进排版
 set smartindent                                         " 智能的选择对齐方式
 set expandtab                                           " 将制表符扩展为空格
@@ -375,18 +384,18 @@ set confirm                                             " 在处理未保存或�
 
 " 快捷键
 " " 窗口跳转
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
+nnoremap <S-j> <C-w>j
+nnoremap <S-k> <C-w>k
+nnoremap <S-h> <C-w>h
+nnoremap <S-l> <C-w>l
 nnoremap <Leader>ww <C-w>w
 nnoremap <Leader>wc <C-w>c
 nnoremap <Leader>ws <C-w>s
 nnoremap <Leader>wv <C-w>v
-nnoremap w<up> :res +5<CR>
-nnoremap w<down> :res -5<CR>
-nnoremap w<right> :vertical resize-5<CR>
-nnoremap w<left> :vertical resize+5<CR>
+nnoremap <S-up> :res +5<CR>
+nnoremap <S-down> :res -5<CR>
+nnoremap <S-right> :vertical resize-5<CR>
+nnoremap <S-left> :vertical resize+5<CR>
 " " 文件相关
 nnoremap fd <esc>:w<CR>
 inoremap fd <esc>:w<CR>
