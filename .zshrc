@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 DISABLE_UPDATE_PROMPT=true
-DISABLE_AUTO_UPDATE=true
+DISABLE_AUTO_UPDATE=false
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh

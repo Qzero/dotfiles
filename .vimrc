@@ -52,7 +52,7 @@ nnoremap <Leader><Leader>s :PlugStatus<CR>
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 " mhinz/vim-startify
 nnoremap <Leader>si :Startify<CR>
-autocmd vimenter * Startify
+" autocmd vimenter * Startify
 let g:webdevicons_enable_startify = 1
 let g:startify_bookmarks = [
   \ {'a': '~/hejie.xyz/_config.yml'},
@@ -70,7 +70,7 @@ let NERDTreeShowBookmarks=1                     "显示书签列表
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']      "忽略一下文件的显示
 let g:NERDTreeDirArrowExpandable = '+'          "修改默认箭头'▸' '▾'
 let g:NERDTreeDirArrowCollapsible = '-'
-autocmd vimenter * NERDTree                     "打开vim时自动打开NERDTree
+" autocmd vimenter * NERDTree                     "打开vim时自动打开NERDTree
 let NERDTreeAutoDeleteBuffer=1                  "删除文件时自动删除文件对应 buffer
 let NERDTreeMinimalUI=1                         "不显示冗余帮助信息
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NEDTree.isTabTree()) | q | endif
