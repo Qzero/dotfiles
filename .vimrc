@@ -50,9 +50,12 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 nnoremap <Leader><Leader>s :PlugStatus<CR>
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+"
+"
+"
 " mhinz/vim-startify
 nnoremap <Leader>si :Startify<CR>
-" autocmd vimenter * Startify
+autocmd vimenter * Startify
 let g:webdevicons_enable_startify = 1
 let g:startify_bookmarks = [
   \ {'a': '~/hejie.xyz/_config.yml'},
@@ -128,11 +131,13 @@ map <leader>r <Plug>(easymotion-repeat)
 " Git相关
 " vim-fugitive
 nnoremap gw :Gwrite<cr>
-nnoremap gc :Gcommit -a -v<cr>
+" nnoremap gc :Gcommit -a -v<cr>
+nnoremap gc :Git commit<cr>
 nnoremap gd :Gvdiff<cr>
 nnoremap gs :Gstatus<cr>
 nnoremap gm :Gmerge<cr>
-nnoremap gl :Glog<cr>
+" nnoremap gl :Glog<cr>
+nnoremap gl :Git log<cr>
 nnoremap gv :GV<CR>
 " nnoremap gu :Gpush<cr>
 " 异步执行gitpush
