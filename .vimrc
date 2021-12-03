@@ -50,9 +50,6 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 nnoremap <Leader><Leader>s :PlugStatus<CR>
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-"
-"
-"
 " mhinz/vim-startify
 nnoremap <Leader>si :Startify<CR>
 autocmd vimenter * Startify
