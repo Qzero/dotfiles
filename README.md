@@ -15,13 +15,13 @@
 - the_silver_searcher
 
 - nvim
-
  - coc.vim
-
  - vista
 
 - tmux
-
  - tpm
 
 - zsh
+
+- fish
+
