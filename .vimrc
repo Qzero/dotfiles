@@ -266,16 +266,11 @@ nnoremap 'c  :<C-u>CocList commands<cr>
 " coc-extensions
 let g:coc_global_extensions = [
   \ 'coc-explorer',
-  \ 'coc-vimlsp',
   \ 'coc-fzf-preview',
   \ 'coc-translator',
-  \ 'coc-python',
   \ 'coc-diagnostic',
-  \ 'coc-highlight',
   \ 'coc-spell-checker',
   \ 'coc-git',
-  \ 'coc-pairs',
-  \ 'coc-highlight',
   \ 'coc-marketplace'
   \ ]
 " coc-marketplace
