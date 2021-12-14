@@ -154,6 +154,8 @@ function! s:OnExit(job_id, status, event) dict
 endfunction
 "rhysd/git-messenger
 nnoremap gm :GitMessenger<CR>
+
+"mbbill/undotree
 nnoremap ut :UndotreeToggle<CR>
 let g:undotree_DiffAutoOpen = 1
 let g:undotree_SetFocusWhenToggle = 1
@@ -211,18 +213,6 @@ let g:airline_powerline_fonts = 1            " 这个是安装字体后必须设
 let g:airline_theme = 'jellybeans'           " luna,term,tomorrow,ubaryd,zenburn
 let g:airline#extensions#tabline#enabled = 1 " 顶部tabline
 let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline#extensions#tabline#buffer_idx_format = {
-       \ '0': '0 ',
-       \ '1': '1 ',
-       \ '2': '2 ',
-       \ '3': '3 ',
-       \ '4': '4 ',
-       \ '5': '5 ',
-       \ '6': '6 ',
-       \ '7': '7 ',
-       \ '8': '8 ',
-       \ '9': '9 '
-       \}
 
 " ryanoasis/vim-devicons
 let g:webdevicons_enable = 1                    " 加载插件
