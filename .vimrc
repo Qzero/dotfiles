@@ -4,8 +4,6 @@ filetype on         " 侦测文件类型
 filetype plugin on  " 侦测类型开启插件
 filetype indent on  " 侦测语言的智能缩
 let mapleader = ";" " 定义Leader键
-let g:python_host_prog='/usr/bin/python2.7'
-let g:python3_host_prog = '/usr/bin/python3'
 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'                      " 资源管理树
