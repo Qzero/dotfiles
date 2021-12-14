@@ -94,7 +94,7 @@ let g:floaterm_autoclose = 1 " 任务完成自动关闭窗口
 let g:floaterm_width = 0.8   " 窗口宽度
 let g:floaterm_height = 0.8  " 窗口高度
 
-" scrooloose/nerdcommenter
+" scrooloose/nerdcommente
 let g:NERDSpaceDelims = 1     " 注释中加空格
 
 " bronson/vim-trailing-whitespace
@@ -397,8 +397,8 @@ nnoremap <S-down> :res -5<CR>
 nnoremap <S-right> :vertical resize-5<CR>
 nnoremap <S-left> :vertical resize+5<CR>
 " " 文件相关
-nnoremap fd <esc>:w<CR>
-inoremap fd <esc>:w<CR>
+nnoremap fj <esc>:w<CR>
+inoremap fj <esc>:w<CR>
 nnoremap q :q<CR>
 nnoremap qq :qa!<CR>
 nnoremap rn :set relativenumber!<CR>
