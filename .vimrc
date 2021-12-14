@@ -273,6 +273,7 @@ let g:coc_global_extensions = [
   \ 'coc-diagnostic',
   \ 'coc-highlight',
   \ 'coc-spell-checker',
+  \ 'coc-git',
   \ 'coc-pairs',
   \ 'coc-highlight',
   \ 'coc-marketplace'
@@ -286,6 +287,12 @@ nnoremap 't :CocCommand translator.popup<CR>
 nnoremap 'tl :CocCommand translator.exportHistory<CR>
 " coc-explorer
 nnoremap 'e :CocCommand explorer<cr>
+" coc-git
+nmap 'gp <Plug>(coc-git-prevchunk)
+nmap 'gn <Plug>(coc-git-nextchunk)
+nmap 'gi <Plug>(coc-git-chunkinfo)
+nmap 'gu <Plug>(coc-git-chunkUndo)
+nmap 'gb :CocCommand git.browserOpen<CR>
 
 " vim配置
 " " 窗口显示配色
