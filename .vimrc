@@ -36,7 +36,6 @@ Plug 'bronson/vim-trailing-whitespace'          " 行尾空白
 " Git
 Plug 'rhysd/git-messenger.vim'                  " git提交查询
 Plug 'tpope/vim-fugitive'                       " git更改标识
-" Plug 'airblade/vim-gitgutter'                   " git命令封装
 Plug 'junegunn/gv.vim'                          " git提交树
 Plug 'mbbill/undotree'                          " git本地文件树
 call plug#end()
@@ -155,21 +154,6 @@ function! s:OnExit(job_id, status, event) dict
 endfunction
 "rhysd/git-messenger
 nnoremap gm :GitMessenger<CR>
-" vim-gitgutter
-" nmap ]c <Plug>(GitGutterNextHunk)
-" nmap [c <Plug>(GitGutterPrevHunk)
-" let g:gitgutter_max_signs = 800     "更改显示标示行数限制
-" let g:gitgutter_preview_win_floating = 1
-" highlight GitGutterAdd    guifg=#009900 ctermfg=2
-" highlight GitGutterChange guifg=#bbbb00 ctermfg=3
-" highlight GitGutterDelete guifg=#ff2222 ctermfg=1
-" let g:gitgutter_sign_added = ' ▏'
-" let g:gitgutter_sign_modified = ' ⫶'
-" let g:gitgutter_sign_removed = '▋'
-" let g:gitgutter_sign_removed_first_line = ' ‾'
-" let g:gitgutter_sign_removed_above_and_below = '¦'
-" let g:gitgutter_sign_modified_removed = ' ▋⫶'
-" mbbill/undotree
 nnoremap ut :UndotreeToggle<CR>
 let g:undotree_DiffAutoOpen = 1
 let g:undotree_SetFocusWhenToggle = 1
