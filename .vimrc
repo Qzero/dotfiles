@@ -5,7 +5,6 @@ filetype plugin on  " 侦测类型开启插件
 filetype indent on  " 侦测语言的智能缩
 let mapleader = ";" " 定义Leader键
 
-
 " 换电脑所有工具需要重新安装，测试是否能够正常推送，之后将删除
 
 call plug#begin('~/.vim/plugged')
