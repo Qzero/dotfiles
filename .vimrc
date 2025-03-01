@@ -5,6 +5,9 @@ filetype plugin on  " 侦测类型开启插件
 filetype indent on  " 侦测语言的智能缩
 let mapleader = ";" " 定义Leader键
 
+
+" 换电脑所有工具需要重新安装，测试是否能够正常推送，之后将删除
+
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'                      " 资源管理树
 Plug 'voldikss/vim-browser-search'              " web搜索
@@ -28,7 +31,8 @@ Plug 'brooth/far.vim'                           " 替换
 Plug 'Yggdroot/indentLine'                      " 缩进线
 Plug 'scrooloose/nerdcommenter'                 " 注释
 Plug 'junegunn/vim-easy-align'                  " 文本对齐
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全框架
+"Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全框架
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'liuchengxu/vista.vim'                     " 大纲
@@ -60,7 +64,7 @@ let g:startify_bookmarks = [
 " scrooloose/nerdtree
 nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader>ntf :NERDTreeFind<CR>
-let NERDTreeWinPos="right"                      "显示位置
+let NERDTreeWinPos="left"                       "显示位置
 let NERDTreeShowHidden=0                        "是否显示隐藏文件
 let NERDTreeWinSize=25                          "设置宽度
 let NERDTreeShowBookmarks=1                     "显示书签列表
@@ -294,7 +298,7 @@ nmap 'gb :CocCommand git.browserOpen<CR>
 set t_Co=256                                            " 开启256色支持
 set background=dark                                     " 背景色
 colorscheme railscasts                                  " 主题
-set guifont=Monaco:h18                                  " 默认字体和大小
+set guifont=Monaco:h26                                  " 默认字体和大小
 set showtabline=2                                       " 显示顶部标签栏
 set laststatus=2                                        " 显示状态栏
 set guioptions-=r                                       " 隐藏右侧滚动条
@@ -317,6 +321,7 @@ set numberwidth=3                                       " 默认占据4空间,�
 set belloff=all                                         " 所有事件下（包括错按esc，错按backspace）不发出声音
 set scrolloff=5                                         " 光标移动到buffer的顶部和底部时保持5行距离
 set completeopt=menu,preview                            " 代码补全
+set fillchars=eob:\                                     " 去除～符号
 " " 其他
 set ttimeoutlen=0                                       " <ESC>键响应时间
 set magic                                               " 设置魔术
