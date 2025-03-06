@@ -12,20 +12,12 @@ tap "universal-ctags/universal-ctags"
 brew "cask"
 
 ## brew 安装软件
-# Shell extension to jump to frequently used directories
-brew "autojump"
 # Reimplementation of ctags(1)
 brew "ctags"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# Distributed revision control system
-brew "git"
-# Simple terminal UI for git commands
-brew "lazygit"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
 # Platform built on V8 to build network applications
 brew "node"
 # Terminal multiplexer
@@ -34,6 +26,20 @@ brew "tmux"
 brew "vim"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Shell extension to jump to frequently used directories
+brew "autojump"
+# Distributed revision control system
+brew "git"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# git推送查询
+brew "tig"
+
+## cask 安装软件
+cask "microsoft-edge"
+cask "visual-studio-code"
 
 ## 该是 Mac App Store 安装的 app
 # DEMO
