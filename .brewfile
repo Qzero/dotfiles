@@ -3,14 +3,13 @@
 # 安装 mas，brew install mas
 # 批量安装软件命令， brew bundle --file="~/dotfiles/.brewfile"
 
+#----------------------------------------
 
 ## 软件仓作用
-# --------
 tap "homebrew/bundle"
+tap "universal-ctags/universal-ctags"
 # Emacs dependency management
 brew "cask"
-tap "universal-ctags/universal-ctags"
-
 
 ## brew 安装软件
 # Shell extension to jump to frequently used directories
