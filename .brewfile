@@ -22,6 +22,8 @@ brew "fzf"
 brew "node"
 # Terminal multiplexer
 brew "tmux"
+# tmux plugin manager
+brew "tpm"
 # Vi 'workalike' with many additional features
 brew "vim"
 # UNIX shell (command interpreter)
@@ -30,12 +32,12 @@ brew "zsh"
 brew "autojump"
 # Distributed revision control system
 brew "git"
+# git推送查询
+brew "tig"
 # Simple terminal UI for git commands
 brew "lazygit"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# git推送查询
-brew "tig"
 
 ## cask 安装软件
 cask "microsoft-edge"
