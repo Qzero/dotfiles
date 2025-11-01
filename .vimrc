@@ -36,6 +36,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'liuchengxu/vista.vim'                     " 大纲
 Plug 'bronson/vim-trailing-whitespace'          " 行尾空白
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' } "模糊搜索
 " Git
 Plug 'rhysd/git-messenger.vim'                  " git提交查询
 Plug 'tpope/vim-fugitive'                       " git更改标识
@@ -43,6 +44,11 @@ Plug 'junegunn/gv.vim'                          " git提交树
 Plug 'mbbill/undotree'                          " git本地文件树
 
 if has('nvim')
+
+Plug 'nvim-neo-tree/neo-tree.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'olimorris/codecompanion.nvim'
 
 endif
 
@@ -81,6 +87,16 @@ let NERDTreeAutoDeleteBuffer=1                  "删除文件时自动删除文�
 let NERDTreeMinimalUI=1                         "不显示冗余帮助信息
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NEDTree.isTabTree()) | q | endif
 
+" liuchengxu/vim-clap
+nnoremap <Leader>cf :Clap files<CR>
+nnoremap <leader>cb :Clap buffers<CR>
+let g:clap_theme = 'material_design_dark'
+
+" scrooloose/nerdcommenter
+" ;c加注释 ;cu解开注释
+" 注释的时候自动加个空格, 强迫症必配
+let g:NERDSpaceDelims=1
+
 " voldikss/vim-browser-search
 nmap <Leader>bs <Plug>SearchNormal
 vmap <Leader>bs <Plug>SearchVisual
@@ -105,16 +121,16 @@ let g:floaterm_height = 0.9  " 窗口高度
 " scrooloose/nerdcommente
 let g:NERDSpaceDelims = 1     " 注释中加空格
 
-" bronson/vim-trailing-whitespace
+" bronson/vm-trailing-whitespace
 nnoremap <leader>fw :FixWhitespace<cr>
 
-" liuchengxu/vista
+" liuchengxu/vista.vim
 nnoremap <Leader>vs :Vista!!<CR>
 " 打开vista窗口后移动到它
 let g:vista_stay_on_open = 1
 " 跳转到一个符号时，自动关闭vista窗口.
 let g:vista_close_on_jump = 0
-let g:vista_sidebar_width = '28'
+let g:vist_sidebar_width = '28'
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 let g:vista_default_executive = 'ctags'
 let g:vista_sidebar_position = 'vertical topleft'
