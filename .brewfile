@@ -6,42 +6,34 @@
 #----------------------------------------
 
 ## 软件仓作用
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
 tap "homebrew/bundle"
 tap "universal-ctags/universal-ctags"
-# Emacs dependency management
-brew "cask"
 
 ## brew 安装软件
-# Reimplementation of ctags(1)
+brew "mas"
 brew "ctags"
-# Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-# Command-line fuzzy finder written in Go
 brew "fzf"
-# Platform built on V8 to build network applications
 brew "node"
-# Terminal multiplexer
 brew "tmux"
-# tmux plugin manager
 brew "tpm"
-# Vi 'workalike' with many additional features
 brew "vim"
-# UNIX shell (command interpreter)
 brew "zsh"
-# Shell extension to jump to frequently used directories
 brew "autojump"
-# Distributed revision control system
 brew "git"
-# git推送查询
 brew "tig"
-# Simple terminal UI for git commands
 brew "lazygit"
-# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+brew "universal-ctags"
 
 ## cask 安装软件
 cask "microsoft-edge"
 cask "visual-studio-code"
+
+cask "--appdir=/Applications docker"
+
 
 ## 该是 Mac App Store 安装的 app
 # DEMO
