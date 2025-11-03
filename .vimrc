@@ -113,8 +113,8 @@ nnoremap <Leader>ft :FloatermToggle<CR>
 nnoremap <Leader>fr :FloatermNew ranger<CR>
 nnoremap <Leader>fg :FloatermNew lazygit<CR>
 let g:floaterm_autoclose = 1 " 任务完成自动关闭窗口
-let g:floaterm_width = 0.9   " 窗口宽度
-let g:floaterm_height = 0.9  " 窗口高度
+let g:floaterm_width = 0.8   " 窗口宽度
+let g:floaterm_height = 0.8  " 窗口高度
 
 " scrooloose/nerdcommente
 let g:NERDSpaceDelims = 1     " 注释中加空格
