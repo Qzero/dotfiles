@@ -161,7 +161,6 @@ let g:vista_fzf_preview = ['right:50%']
 " " you can add the following line to your vimrc
 " autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
 
-
 " vim-easymotion
 let g:EasyMotion_smartcase = 1      "忽略大小写
 map <Leader>ss <Plug>(easymotion-s2)
@@ -248,7 +247,7 @@ let g:choosewin_overlay_enable = 0
 let g:rainbow_active = 1
 
 " vim-airline/vim-airline
-nnoremap <silent> <C-D> :bd<CR>:bdelete #<CR>:bprevious<CR>
+nnoremap <silent> <C-D> :bd<CR>
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
 nmap <leader>3 <Plug>AirlineSelectTab3
@@ -350,6 +349,12 @@ set guioptions-=r                                       " 隐藏右侧滚动条
 set guioptions-=L                                       " 隐藏左侧滚动条
 set guioptions-=b                                       " 隐藏底部滚动条
 set number                                              " 显示行号
+" 插入模式下用绝对行号，普通模式下用绝对行号
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+augroup END
 set ruler                                               " 显示光标位置
 set cursorline                                          " 高亮行
 set splitbelow                                          " 允许在下部分割布局
@@ -375,7 +380,8 @@ set backspace=2                                         " 使用回车键正常�
 set t_ti= t_te=                                         " 退出vim后，内容显示在终端屏幕"
 " " 编码
 set encoding=utf-8                                      " 新文件的编码为 UTF-8
-set termencoding=utf-8                                  " 只影响普通模式 (非图形界面) 下的 Vim
+set fileencoding=utf-8                                  " 文件输入编码
+" set termencoding=utf-8                                  " 只影响普通模式 (非图形界面) 下的 Vim
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030 " 自动编码依次尝试
 set fileformat=unix                                     " unix的格式保存文件
 set updatetime=300                                      " 30毫秒更新
