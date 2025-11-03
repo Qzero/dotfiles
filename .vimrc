@@ -125,16 +125,42 @@ nnoremap <leader>fw :FixWhitespace<cr>
 " liuchengxu/vista.vim
 nnoremap <Leader>vs :Vista!!<CR>
 " 打开vista窗口后移动到它
-let g:vista_stay_on_open = 1
+let g:vista_stay_on_open = 0
 " 跳转到一个符号时，自动关闭vista窗口.
 let g:vista_close_on_jump = 0
 let g:vist_sidebar_width = '28'
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+"可使用echo g:vista#executives查看除ctags其他可执行命令
 let g:vista_default_executive = 'ctags'
-let g:vista_sidebar_position = 'vertical topleft'
-" let g:vista_sidebar_position = 'vertical botright'
-" let g:vista_echo_cursor_strategy ='floating_win'
+" 窗口打开方式 左边打开'vertical topleft'
+let g:vista_sidebar_position = 'vertical botright'
+" 显示预览窗口
+let g:vista_echo_cursor_strategy ='floating_win'
+" 类别符号开关
 let g:vista#renderer#enable_icon = 1
+" let g:vista#renderer#icons = {
+    " \   "function": "\uf794",
+    " \   "variable": "\uf71b",
+    " \  }
+" 配置不同文件的解释器
+let g:vista_executive_for = {
+    \ 'cpp': 'vim_lsp',
+    \ 'php': 'vim_lsp',
+    \ '.vimrc': 'vim_lsp',
+    \ }
+" fzf预览窗口
+let g:vista_fzf_preview = ['right:50%']
+
+" 状态栏栏式构造函数方法
+" function! NearestMethodOrFunction() abort
+  " return get(b:, 'vista_nearest_method_or_function', '')
+" endfunction
+" set statusline+=%{NearestMethodOrFunction()}
+" " By default vista.vim never run if you don't call it explicitly.
+" " If you want to show the nearest function in your statusline automatically,
+" " you can add the following line to your vimrc
+" autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
+
 
 " vim-easymotion
 let g:EasyMotion_smartcase = 1      "忽略大小写
