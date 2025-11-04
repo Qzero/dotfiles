@@ -71,6 +71,7 @@
     "explorer.width": 28,
     "explorer.icon.enableNerdfont": true,
     "explorer.file.showHiddenFiles": true,
+
     // git
     "git.enableGutters": true,
     "git.branchCharacter": "\uf418",

@@ -1,12 +1,12 @@
 syntax on           " 自动语法高亮
 syntax enable       " 开启语法高亮
-filetype on         " 侦测文件类型
-filetype plugin on  " 侦测类型开启插件
-filetype indent on  " 侦测语言的智能缩
+filetype plugin indent on
 let mapleader = ";" " 定义Leader键
 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'                      " 资源管理树
+" Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'voldikss/vim-browser-search'              " web搜索
 
 Plug 'tpope/vim-surround'                       " 符号成对修改
@@ -64,9 +64,6 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 nnoremap <Leader><Leader>s :PlugStatus<CR>
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-"junegunn/vim-easy-align
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
 
 " junegunn/fzf.vim
 nnoremap <Leader>fh :History:<cr>
@@ -95,17 +92,33 @@ let g:NERDTreeAutoDeleteBuffer=1
 let NERDTreeShowBookmarks=1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
-"打开vim时自动打开NERDTree
-" autocmd vimenter * NERDTree
 let NERDTreeAutoDeleteBuffer=1                  "删除文件时自动删除文件对应 buffer
 let NERDTreeMinimalUI=1                         "不显示冗余帮助信息
 " 当 Vim 启动时没有文件参数时，启动 NERDTree。
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 " nerdtree忽略类型
 let g:NERDTreeIgnore = ['\.vim$','\~$','\.beam','elm-stuff','deps','_build','.git','node_modules','tags','.pyc','.swp',]
 " 如果 NERDTree 是唯一剩下的窗口，则退出 Vim。
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" Xuyuanp/nerdtree-git-plugin
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'✹',
+                \ 'Staged'    :'✚',
+                \ 'Untracked' :'✭',
+                \ 'Renamed'   :'➜',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'✖',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
+let g:NERDTreeGitStatusUseNerdFonts = 1
+let g:NERDTreeGitStatusShowIgnored = 1
+let g:NERDTreeGitStatusUntrackedFilesMode = 'all'
+let g:NERDTreeGitStatusShowClean = 1
+let g:NERDTreeGitStatusConcealBrackets = 1
 
 " liuchengxu/vim-clap
 nnoremap <Leader>cf :Clap files<CR>
@@ -239,8 +252,10 @@ function g:Undotree_CustomMap()
 endfunc
 " 保存路径
 if has("persistent_undo")
-    set undodir=~/undodir
     set undofile
+    set undodir=~/undodir
+    set undolevels=1000
+    set undoreload=1000
 endif
 
 " lfv89/vim-interestingwords
@@ -267,6 +282,7 @@ let g:choosewin_overlay_enable = 0
 let g:rainbow_active = 1
 
 " vim-airline/vim-airline
+noremap <leader>b :bd<cr>
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
 nmap <leader>3 <Plug>AirlineSelectTab3
@@ -356,7 +372,7 @@ nnoremap 'm :CocList marketplace<CR>
 nnoremap // :CocCommand fzf-preview.Lines<CR>
 " coc-explorer
 nnoremap 'e :CocCommand explorer<cr>
-" autocmd vimenter * CocCommand explorer
+autocmd vimenter * CocCommand explorer
 
 " List all presets
 nmap <space>el <Cmd>CocList explPresets<CR>
@@ -465,3 +481,6 @@ nnoremap rn :set relativenumber!<CR>
 nnoremap erc :edit $MYVIMRC<CR>
 nnoremap ecc :CocConfig<CR>
 nnoremap sm :source $MYVIMRC<CR>
+" 在插入模式下任意位置直接切到新的一行
+inoremap <C-j> <C-o>o
+inoremap <C-l> <C-o>A
