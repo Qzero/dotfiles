@@ -215,7 +215,7 @@ map <leader>r <Plug>(easymotion-repeat)
 nnoremap gw :Gwrite<cr>
 " nnoremap gc :Gcommit -a -v<cr>
 nnoremap gc :Git commit<cr>
-nnoremap gd :Gvdiff<cr>
+nnoremap gd :Gdiffsplit<cr>
 nnoremap gs :Gstatus<cr>
 nnoremap gm :Gmerge<cr>
 " nnoremap gl :Glog<cr>
@@ -373,10 +373,10 @@ nnoremap 'd  :<C-u>CocList diagnostics<cr>
 nmap [g <Plug>(coc-diagnostic-prev)
 nmap ]g <Plug>(coc-diagnostic-next)
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> 'gd <Plug>(coc-definition)
+nmap <silent> 'gy <Plug>(coc-type-definition)
+nmap <silent> 'gi <Plug>(coc-implementation)
+nmap <silent> 'gr <Plug>(coc-references)
 
 " 其他
 nnoremap 'p  :<C-u>CocList extensions<cr>
