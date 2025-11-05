@@ -16,8 +16,7 @@ else
     echo "Homebrew 已安装。"
 fi
 # 2.1 通过brewfile恢复安装程序
-brew install mas # 命令行安装 app store工具
-brew bundle --file="~/dotfiles/.brewfile"
+brew bundle --file="$DOTFILES_DIR/dotfiles/.brewfile"
 
 # 3 dotfiles文件夹设置配置
 # 检查 dotfiles 目录是否存在

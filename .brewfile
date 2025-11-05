@@ -27,6 +27,7 @@ brew "tig"
 brew "lazygit"
 brew "neovim"
 brew "universal-ctags"
+brew "install ripgrep"
 
 ## cask 安装软件
 cask "microsoft-edge"
