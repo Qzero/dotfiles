@@ -4,41 +4,48 @@ filetype plugin indent on
 let mapleader = ";" " 定义Leader键
 
 call plug#begin('~/.vim/plugged')
+" 美化插件
+Plug 'mhinz/vim-startify'                       " 首页
+Plug 'ryanoasis/vim-devicons'                   " 文件图标
+Plug 'jpo/vim-railscasts-theme'                 " 主题
 Plug 'scrooloose/nerdtree'                      " 资源管理树
 " Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'voldikss/vim-browser-search'              " web搜索
-
-Plug 'tpope/vim-surround'                       " 符号成对修改
-Plug 'tpope/vim-repeat'                         " 重复操作
-
-Plug 'gcmt/wildfire.vim'                        " 代码块选择
-Plug 'jpo/vim-railscasts-theme'                 " 主题
-Plug 'roxma/vim-tmux-clipboard'                 " vim tmux共享剪贴板
-" Plug 'farmergreg/vim-lastplace'                 " 打开文件跳转到最后一次位置
-Plug 'voldikss/vim-floaterm'                    " 浮动终端
-Plug 'mhinz/vim-startify'                       " 首页
-Plug 'ryanoasis/vim-devicons'                   " 文件图标
-
 Plug 'vim-airline/vim-airline'                  " 状态栏
 Plug 'vim-airline/vim-airline-themes'           " 状态栏主题
-Plug 'easymotion/vim-easymotion'                " 超级跳转
-" Plug 't9md/vim-choosewin'                       " 窗口选择
-Plug 'luochen1990/rainbow'                      " 彩虹括号
-Plug 'ybian/smartim'                            " 中文输入法无法输入命令
-Plug 'lfv89/vim-interestingwords'               " 单词彩色凸显
+Plug 'voldikss/vim-browser-search'              " web搜索
+
+" 文本操作
+Plug 'tpope/vim-surround'                       " 符号成对修改
+Plug 'tpope/vim-repeat'                         " 重复操作
 " Plug 'brooth/far.vim'                           " 替换
+" Plug 'windwp/nvim-autopairs'                    " 括号配对插件
+Plug 'luochen1990/rainbow'                      " 彩虹括号
+Plug 'gcmt/wildfire.vim'                        " 代码块选择
+Plug 'junegunn/vim-easy-align'                  " 文本对齐
+Plug 'easymotion/vim-easymotion'                " 超级跳转
+
+" 功能插件
+" Plug 't9md/vim-choosewin'                       " 窗口选择
 Plug 'Yggdroot/indentLine'                      " 缩进线
 Plug 'scrooloose/nerdcommenter'                 " 注释
-Plug 'junegunn/vim-easy-align'                  " 文本对齐
-Plug 'windwp/nvim-autopairs'                    " 括号配对插件
+Plug 'lfv89/vim-interestingwords'               " 单词彩色凸显
+
+Plug 'liuchengxu/vista.vim'                     " 大纲
+Plug 'voldikss/vim-floaterm'                    " 浮动终端
+Plug 'bronson/vim-trailing-whitespace'          " 去除行尾空白
+Plug 'roxma/vim-tmux-clipboard'                 " vim tmux共享剪贴板
+Plug 'ybian/smartim'                            " 中文输入法输入命令
+" Plug 'farmergreg/vim-lastplace'                 " 打开文件跳转到最后一次位置
+
+" 补全搜索
 "Plug 'neoclide/coc.nvim', {'branch': 'release'} " 补全框架
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'liuchengxu/vista.vim'                     " 大纲
-Plug 'bronson/vim-trailing-whitespace'          " 去除行尾空白
+Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' } "模糊搜索
+
 " Git
 Plug 'rhysd/git-messenger.vim'                  " git提交查询
 Plug 'tpope/vim-fugitive'                       " git更改标识
@@ -66,6 +73,7 @@ nnoremap <Leader><Leader>s :PlugStatus<CR>
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 " junegunn/fzf.vim
+nnoremap <Leader>ff :Files<cr>
 nnoremap <Leader>fh :History:<cr>
 " 搭配fugitive.vim使用
 nnoremap <Leader>fc :Commits<cr>
@@ -123,7 +131,6 @@ let g:NERDTreeGitStatusConcealBrackets = 1
 " liuchengxu/vim-clap
 nnoremap <Leader>cf :Clap files<CR>
 " nnoremap <leader>cb :Clap buffers<CR>
-let g:clap_theme = 'material_design_dark'
 
 " scrooloose/nerdcommenter
 " ;c加注释 ;cu解开注释
@@ -169,6 +176,7 @@ let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 " let g:vista_fold_toggle_icons = ['▼', '▶']
 "可使用echo g:vista#executives查看除ctags其他
 let g:vista_default_executive = 'ctags'
+let g:vista_fzf_preview = ['right:50%']
 " 窗口打开方式 左边打开'vertical topleft' bot top left right
 let g:vista_sidebar_position = 'vertical topleft'
 " 显示预览窗口
@@ -186,7 +194,6 @@ let g:vista#renderer#icons = {
       \ 'func': 'ƒ','function': 'ƒ', 'functions': 'ƒ',
       \ 'var': 'ν','variable': 'ν','variables': 'ν',
       \ }
-
 " 配置不同文件的解释器
 let g:vista_executive_for = {
     \ 'cpp': 'vim_lsp',
@@ -303,8 +310,6 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:webdevicons_enable = 1                    " 加载插件
 let g:webdevicons_enable_nerdtree = 1           " nerdtree支持
 let g:webdevicons_enable_startify = 1           " startify支持
-" let g:webdevicons_enable_airline_tabline = 1    " airline tab支持
-" let g:webdevicons_enable_airline_statusline = 1 " airline statuslien支持
 
 " neoclide/coc.vim
 " set hidden
@@ -319,18 +324,22 @@ else
   set signcolumn=yes
 endif
 " tab键补全
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-"触发Tab补全
+" inoremap <silent><expr> <Tab>
+      " \ coc#pum#visible() ? coc#pum#next(1) :
+      " \ CheckBackspace() ? "\<Tab>" :
+      " \ coc#refresh()
+" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#next(1) : CheckBackspace() ? "\<Tab>" : coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+" 回车确认,u取消
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
-inoremap <silent><expr> <Tab>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
 
 " 显示文档
 nnoremap <silent> 'h :call <SID>show_documentation()<CR>
@@ -343,6 +352,22 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
+
+" 在光标悬停时高亮显示符号及其引用
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" 符号重命名
+nmap 'rn <Plug>(coc-rename)
+
+" 格式化选中代码
+xmap 'f  <Plug>(coc-format-selected)
+nmap 'f  <Plug>(coc-format-selected)
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s)
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+augroup end
+
 " 诊断面板以及跳转
 nnoremap 'd  :<C-u>CocList diagnostics<cr>
 nmap [g <Plug>(coc-diagnostic-prev)
@@ -358,24 +383,25 @@ nnoremap 'p  :<C-u>CocList extensions<cr>
 nnoremap 'c  :<C-u>CocList commands<cr>
 " coc-extensions 插件
 let g:coc_global_extensions = [
-  \ 'coc-explorer',
-  \ 'coc-fzf-preview',
-  \ 'coc-diagnostic',
-  \ 'coc-spell-checker',
-  \ 'coc-git',
-  \ 'coc-marketplace',
-  \ 'coc-translate'
-  \ ]
+    \ 'coc-explorer',
+    \ 'coc-fzf-preview',
+    \ 'coc-diagnostic',
+    \ 'coc-spell-checker',
+    \ 'coc-git',
+    \ 'coc-marketplace',
+    \ 'coc-code-translate',
+    \ 'coc-pairs'
+    \ ]
 " coc-marketplace
 nnoremap 'm :CocList marketplace<CR>
+
 " coc-fzf-preview
 nnoremap // :CocCommand fzf-preview.Lines<CR>
+nnoremap 'fc :CocCommand fzf-preview.Changes<cr>
+
 " coc-explorer
 nnoremap 'e :CocCommand explorer<cr>
 autocmd vimenter * CocCommand explorer
-
-" List all presets
-nmap <space>el <Cmd>CocList explPresets<CR>
 
 " coc-git
 nmap 'gp <Plug>(coc-git-prevchunk)
@@ -383,11 +409,6 @@ nmap 'gn <Plug>(coc-git-nextchunk)
 nmap 'gi <Plug>(coc-git-chunkinfo)
 nmap 'gu <Plug>(coc-git-chunkUndo)
 nmap 'gb :CocCommand git.browserOpen<CR>
-
-" coc-translate
-nnoremap 'tw <Plug>(coc-translate-word)
-vnoremap 'tw <Plug>(coc-translate-selected)
-nnoremap 'lt <Plug>(coc-translate-line)
 
 " 窗口显示配色
 set t_Co=256                                            " 开启256色支持
@@ -400,12 +421,6 @@ set guioptions-=r                                       " 隐藏右侧滚动条
 set guioptions-=L                                       " 隐藏左侧滚动条
 set guioptions-=b                                       " 隐藏底部滚动条
 set number                                              " 显示行号
-" 插入模式下用绝对行号，普通模式下用绝对行号
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
-  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
-augroup END
 set ruler                                               " 显示光标位置
 set cursorline                                          " 高亮行
 set splitbelow                                          " 允许在下部分割布局
@@ -448,7 +463,7 @@ set softtabstop=4                                       " 设置4个空格为制
 set sidescroll=1                                        " 向右滚动字符数
 set nofoldenable                                        " 禁用折叠代码
 set foldlevelstart=99                                   " 默认不折叠代码
-set foldmethod=manual                                   " indent方式折叠代码
+set foldmethod=indent                                   " indent方式折叠代码
 set nowrap                                              " 长度不够禁止折行
 " 缓存
 set nobackup                                            " 不要备份
