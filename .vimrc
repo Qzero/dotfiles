@@ -240,29 +240,26 @@ function! s:OnExit(job_id, status, event) dict
     execute 'silent! bd! '.self.buffer_nr
   endif
 endfunction
-"rhysd/git-messenger
+" rhysd/git-messenger
 nnoremap gm :GitMessenger<CR>
 
-"mbbill/undotree
-nnoremap ut :UndotreeToggle<CR>
+" mbbill/undotree
+nnoremap <Leader>ut :UndotreeToggle<CR>
 let g:undotree_DiffAutoOpen = 1
 let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_ShortIndicators = 1
-let g:undotree_WindowLayout = 2
-let g:undotree_DiffpanelHeight = 8
-let g:undotree_SplitWidth = 24
+let g:undotree_WindowLayout = 4
+let g:undotree_CustomUndotreeCmd = 'vertical 32 new'
 function g:Undotree_CustomMap()
-	nmap <buffer> u <plug>UndotreeNextState
-	nmap <buffer> e <plug>UndotreePreviousState
-	nmap <buffer> U 5<plug>UndotreeNextState
-	nmap <buffer> E 5<plug>UndotreePreviousState
+    nmap <buffer> J <plug>UndotreeNextState
+    nmap <buffer> K <plug>UndotreePreviousState
 endfunc
 " 保存路径
 if has("persistent_undo")
     set undofile
     set undodir=~/undodir
     set undolevels=1000
-    set undoreload=1000
+    set undoreload=10000
 endif
 
 " lfv89/vim-interestingwords
