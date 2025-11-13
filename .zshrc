@@ -66,6 +66,36 @@ zplug load
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# fzf 配置
+export FZF_DEFAULT_COMMAND="fd --hidden --follow -I --exclude={.git,.idea,.sass-cache,node_modules,build} --type f"
+export FZF_DEFAULT_OPTS="
+--color=dark
+--color=fg:#707a8c,bg:-1,hl:#3e9831,fg+:#cbccc6,bg+:#434c5e,hl+:#5fff87
+--color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7
+--height 60%
+--layout reverse
+--preview-window 'hidden:right:60%'
+--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -N -C {}) 2> /dev/null | head -500'
+--bind ',:toggle-preview'
+--border
+--cycle
+"
+export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
+export FZF_CTRL_T_OPTS=$FZF_DEFAULT_OPTS
+export FZF_CTRL_R_OPTS="
+--layout=reverse
+--sort
+--exact
+--preview 'echo {}'
+--preview-window down:3:hidden:wrap
+--bind ',:toggle-preview'
+--cycle
+"
+
+export FZF_ALT_C_OPTS="--preview 'tree -N -C {} | head -500'"
+export FZF_TMUX_OPTS="-d 60%"
+export FZF_COMPLETION_TRIGGER='**'
+
 # HomeBrew
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 export PATH="/usr/local/bin:$PATH"
@@ -73,4 +103,5 @@ export PATH="/usr/local/sbin:$PATH"
 # HomeBrew END
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+
 alias ctags="`brew --prefix`/bin/ctags"

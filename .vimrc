@@ -19,7 +19,6 @@ Plug 'voldikss/vim-browser-search'              " web搜索
 " 文本操作
 Plug 'tpope/vim-surround'                       " 符号成对修改
 Plug 'tpope/vim-repeat'                         " 重复操作
-Plug 'brooth/far.vim'                           " 替换
 " Plug 'windwp/nvim-autopairs'                    " 括号配对插件
 Plug 'luochen1990/rainbow'                      " 彩虹括号
 Plug 'gcmt/wildfire.vim'                        " 代码块选择
@@ -28,20 +27,16 @@ Plug 'easymotion/vim-easymotion'                " 超级跳转
 Plug 'terryma/vim-multiple-cursors'             " 多行文本操作
 Plug 'Chiel92/vim-autoformat'                   " 自动格式化文档
 
-
 " 功能插件
 " Plug 't9md/vim-choosewin'                       " 窗口选择
-Plug 'Yggdroot/indentLine'                      " 缩进线
-Plug 'scrooloose/nerdcommenter'                 " 注释
-Plug 'lfv89/vim-interestingwords'               " 单词彩色凸显
-Plug 'liuchengxu/vista.vim'                     " 大纲
-Plug 'ludovicchabant/vim-gutentags'             " 大纲管理工具
-Plug 'voldikss/vim-floaterm'                    " 浮动终端
-Plug 'bronson/vim-trailing-whitespace'          " 去除行尾空白
-Plug 'roxma/vim-tmux-clipboard'                 " vim tmux共享剪贴板
-Plug 'ybian/smartim'                            " 中文输入法输入命令
-" Plug 'farmergreg/vim-lastplace'                 " 打开文件跳转到最后一次位置
-Plug 'qpkorr/vim-renamer'       " 批量修改文件的神器, 使用:Ren 进行编辑与保存, 完成后退出即可
+Plug 'Yggdroot/indentLine'             " 缩进线
+Plug 'scrooloose/nerdcommenter'        " 注释
+Plug 'lfv89/vim-interestingwords'      " 单词彩色凸显
+Plug 'liuchengxu/vista.vim'            " 大纲
+Plug 'voldikss/vim-floaterm'           " 浮动终端
+Plug 'bronson/vim-trailing-whitespace' " 去除行尾空白
+Plug 'roxma/vim-tmux-clipboard'        " vim tmux共享剪贴板
+Plug 'ybian/smartim'                   " 中文输入法输入命令
 
 " 检查调试报错
 Plug 'dense-analysis/ale'       " 语法检查
@@ -62,16 +57,6 @@ Plug 'junegunn/gv.vim'                          " git提交树
 
 Plug 'mbbill/undotree'                          " 本地回溯
 
-" if has('nvim'" )
-
-" Plug 'nvim-neo-tree/neo-tree.nvim'
-" Plug 'nvim-lua/plenary.nvim'
-" Plug 'nvim-treesitter/nvim-treesitter'
-" Plug 'olimorris/codecompanion.nvim'
-
-" endif
-
-
 call plug#end()
 
 nnoremap <Leader><Leader>i :PlugInstall<CR>     " 安装插件
@@ -81,26 +66,6 @@ nnoremap <Leader><Leader>p :PlugUpgrade<CR>     " 更新插件管理器
 nnoremap <Leader><Leader>s :PlugStatus<CR>
 
 "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-" --- ludovicchabant/vim-gutentags
-"  参考文章https://zhuanlan.zhihu.com/p/36279445
-let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project'] " gutentags 搜索工程目录的标志, 当前文件路径向上递归直到碰到这些文件 / 目录名
-let g:gutentags_ctags_tagfile = '.tags' " 所生成的数据文件的名称
-let g:gutentags_modules = [] " 同时开启 ctags 和 gtags 支持:
-if executable('ctags')
-    let g:gutentags_modules += ['ctags']
-endif
-if executable('gtags-cscope') && executable('gtags')
-    let g:gutentags_modules += ['gtags_cscope']
-endif
-
-let g:gutentags_cache_dir = expand('~/.cache/tags') " 将自动生成的 ctags/gtags 文件全部放入 ~/.cache/tags 目录中
-" 配置 ctags 的参数, 老的 Exuberant-ctags 不能有 --extra=+q, 注意
-let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
-let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
-let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
-let g:gutentags_ctags_extra_args += ['--output-format=e-ctags'] " 如果使用 universal ctags 需要增加下面一行, 老的 Exuberant-ctags 不能加下一行
-let g:gutentags_auto_add_gtags_cscope = 0 " 禁用 gutentags 自动加载 gtags 数据库的行为
 
 " --- iamcco/markdown-preview.nvim
 nnoremap <Leader>mkp :MarkdownPreview<CR>
@@ -113,12 +78,6 @@ let g:mkdp_open_to_the_world = 0        " 开启公网链接, 0 为否
 let g:mkdp_browser = ''                 " 指定浏览器, 默认会跟随系统浏览器
 let g:mkdp_port = ''                    " 指定端口, 默认随机端口
 let g:mkdp_page_title = ' **${name}** ' " 指定浏览器窗口标题, 默认为 Markdown 文件名
-
-" --- brooth/far.vim
-nnoremap <Leader>fr :Faro<CR>
-
-" --- qpkorr/vim-renamer
-nmap <Leader>rn <Plug>RenamerStart
 
 " --- vim-multiple-cursors
 let g:multi_cursor_use_default_mapping=0
@@ -219,12 +178,12 @@ let g:fzf_tags_command = 'ctags -R'
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 " FZF 界面中，按下不同组合键时，文件或 Buffer 应以何种方式打开
 let g:fzf_action = {
-            \ 'ctrl-t': 'tab split',
-            \ 'ctrl-x': 'split',
-            \ 'ctrl-v': 'vsplit'
-            \}
+    \ 'ctrl-t': 'tab split',
+    \ 'ctrl-x': 'split',
+    \ 'ctrl-v': 'vsplit'
+    \}
 " " FZF 启动时,它会以一个弹出窗口的形式从底部出现占据屏幕高度的约60%
-let g:fzf_layout = { 'down': '~60%' }
+let g:fzf_layout = { 'up': '~60%' }
 
 " --- mhinz/vim-startify
 nnoremap <Leader>si :Startify<CR>
@@ -305,6 +264,22 @@ nnoremap <Leader>fg :FloatermNew lazygit<CR>
 let g:floaterm_autoclose = 2 " 任务完成自动关闭窗口
 let g:floaterm_width = 0.8   " 窗口宽度
 let g:floaterm_height = 0.8  " 窗口高度
+" 1. 定义一个函数，包含您所有的自定义高亮设置
+function! Floaterm_Set_Custom_Colors()
+  " 设置浮动终端的主体背景为黑色
+  " guibg: GUI/Neovim颜色，ctermbg: 256色终端颜色
+  hi Floaterm guibg=black ctermbg=0
+  " 设置浮动终端边框颜色：背景为橙色，前景/边框线为青色
+  hi FloatermBorder guibg=orange guifg=cyan ctermbg=166 ctermfg=6
+endfunction
+
+" 2. 使用 autocmd 确保在每次配色方案加载后都重新设置颜色
+augroup FloatermColors
+  " 清除旧的自动命令，避免重复执行
+  autocmd!
+  " 每当配色方案 (ColorScheme) 改变或加载时，执行我们的函数
+  autocmd ColorScheme * call Floaterm_Set_Custom_Colors()
+augroup end
 
 " --- scrooloose/nerdcommente
 let g:NERDSpaceDelims = 1     " 注释中加空格
@@ -325,7 +300,7 @@ let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 " let g:vista_fold_toggle_icons = ['▼', '▶']
 "可使用echo g:vista#executives查看除ctags其他
 let g:vista_default_executive = 'ctags'
-" 窗口打开方式 左边打开'vertical topleft' bot top left right
+ " 窗口打开方式 左边打开'vertical topleft' bot top left right
 let g:vista_sidebar_position = 'vertical topleft'
 " 显示预览窗口
 let g:vista_echo_cursor_strategy ='floating_win'
@@ -598,6 +573,8 @@ set splitright                                          " 允许在右侧分隔�
 set showtabline=2                                       " 显示顶部标签栏
 set list                                                " 显示尾部空白
 " set listchars=tab:»-⋮,eol:¶
+set listchars=tab:»■,trail:■
+  
 " set noeb                                                " 关闭错误的提示
 set belloff=all                                         " noeb增强，所有事件下（包括错按esc，错按backspace）不发出声音
 set completeopt=menu,preview                            " 代码补全
@@ -612,7 +589,7 @@ set matchtime=1                                         " 匹配括号高亮的�
 set fillchars=eob:\                                     " 去除～符号
 set cursorline                                          " 高亮行
 " autocmd InsertEnter,InsertLeave * set cursorline       " 插入模式下取消高亮行
-" --- Gui有用
+" --- GUI有用
 set guifont=Monaco:h26                                  " 默认字体和大小
 set guioptions-=r/L/b
 " set guioptions-=r                                       " 隐藏右侧滚动条
@@ -691,3 +668,7 @@ inoremap <C-j> <C-o>o
 inoremap <C-l> <C-o>A
 " 使用 Leader-t-v 创建一个垂直分割的临时文件
 nnoremap <Leader>vn :vnew<CR>
+
+" 调试python
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
